@@ -1,5 +1,6 @@
 #include <3ds.h>
 #include <citro3d.h>
+#include <citro2d.h>
 #include <tex3ds.h>
 #include <math.h>
 #include <stdio.h>
@@ -17,6 +18,7 @@
 #include "world_vertex.h"
 #include "world_index.h"
 #include "mw_ui.h"
+#include "mw_ui_texture.h"
 #include "mw_color_grade.h"
 #ifdef NFS_STREAMED_WORLD
 #include "streamed_world.h"
@@ -46,6 +48,7 @@ static bool stream_has_frame;
 /* A failed stage retains the complete old view. Pause until explicit reset or
    menu navigation; never repeat blocking SD work every frame on a bad asset. */
 static bool stream_blocked;
+static bool stream_load_announced;
 static WorldCollisionRuntime collision_world;
 static unsigned char collision_arena[1024*1024];
 static uint16_t collision_sections[147];
@@ -64,7 +67,11 @@ static unsigned char map_rgb[152*128*3];
 /* Rasterize off-screen. The displayed bottom buffer must never be cleared or
    repainted during LCD scanout, even when HUD updates are throttled. */
 static unsigned char ui_pixels[MW_UI_BYTES];
-static bool ui_pending;
+static bool ui_pending,ui_to_present,ui_gpu_ready,ui_texture_ready;
+static C3D_Tex ui_texture;
+static Tex3DS_SubTexture ui_subtexture={.width=320,.height=240,
+    .left=0,.top=1,.right=320.f/512,.bottom=1-240.f/256};
+static C3D_RenderTarget *ui_target;
 static C3D_RenderTarget *target;
 static DVLB_s *shader,*world_shader;
 static shaderProgram_s program,world_program;
@@ -244,6 +251,13 @@ static bool initialize(void)
     free(raw);
     if (!same_source) { snprintf(error,sizeof(error),"Map/collision source identity mismatch");return false; }
 #endif
+    snprintf(error,sizeof(error),"Cannot initialize bottom-screen presentation");
+    if (!C2D_Init(16)) return false;
+    ui_gpu_ready=true;ui_target=C2D_CreateScreenTarget(GFX_BOTTOM,GFX_LEFT);
+    if (!ui_target || !C3D_TexInit(&ui_texture,MW_UI_TEXTURE_WIDTH,MW_UI_TEXTURE_HEIGHT,GPU_RGBA8)) return false;
+    ui_texture_ready=true;
+    C3D_TexSetFilter(&ui_texture,GPU_NEAREST,GPU_NEAREST);
+    C3D_TexSetWrap(&ui_texture,GPU_CLAMP_TO_EDGE,GPU_CLAMP_TO_EDGE);
     C3D_CullFace(GPU_CULL_NONE);
     C3D_AlphaTest(true,GPU_GREATER,0);
     C3D_AlphaBlend(GPU_BLEND_ADD,GPU_BLEND_ADD,GPU_SRC_ALPHA,GPU_ONE_MINUS_SRC_ALPHA,GPU_ONE,GPU_ONE_MINUS_SRC_ALPHA);
@@ -423,6 +437,7 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
     (void)height;
     ui.streamed_map=true;
     if (screen==DRIVE && stream_blocked) ui.road_status=MW_UI_MAP_PAUSED;
+    else if (screen==DRIVE && !stream_has_frame) ui.road_status=MW_UI_MAP_LOADING;
 #else
     if (screen==DRIVE && !edge && road_edge_ahead(&road,car,height))
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
@@ -436,19 +451,21 @@ static void draw_ui(const MwUiModel *ui,const DriveState *car)
         road_map_render(&navigation,&road,car,map_rgb,152,128)) map=map_rgb;
     if (mw_ui_render(ui_pixels,sizeof(ui_pixels),ui,map)) ui_pending=true;
 }
-static void present_ui(void)
+static void upload_ui(void)
 {
     if (!ui_pending) return;
-    /* Complete the preceding bottom swap before reusing its old front buffer.
-       SYNCDRAW fences GPU work, and is not a bottom-screen VBlank contract. */
-    gspWaitForVBlank();
-    u16 width,height_px;u8 *framebuffer=gfxGetFramebuffer(GFX_BOTTOM,GFX_LEFT,&width,&height_px);
-    if (!framebuffer || width!=240 || height_px!=320 || gfxGetScreenFormat(GFX_BOTTOM)!=GSP_RGB565_OES) return;
-    memcpy(framebuffer,ui_pixels,sizeof(ui_pixels));
-    GSPGPU_FlushDataCache(framebuffer,sizeof(ui_pixels));
-    /* Citro3D swaps only its linked TOP render target. Bottom is CPU-rendered
-       and swapped exactly once here; never flip an untouched stale buffer. */
-    gfxScreenSwapBuffers(GFX_BOTTOM,false);ui_pending=false;
+    /* Called outside a frame: never modify the texture while a previous UI
+       draw reads it. Both LCD swaps now belong to the GPU completion queue. */
+    C3D_FrameSync();
+    if (!mw_ui_texture_pack(ui_texture.data,ui_texture.size,ui_pixels,sizeof(ui_pixels))) return;
+    C3D_TexFlush(&ui_texture);ui_pending=false;ui_to_present=true;
+}
+static void present_ui(void)
+{
+    if (!ui_to_present) return;
+    C2D_Prepare();C2D_SceneBegin(ui_target);
+    C2D_Image image={.tex=&ui_texture,.subtex=&ui_subtexture};
+    C2D_DrawImageAt(image,0,0,0,NULL,1,1);C2D_Flush();ui_to_present=false;
 }
 int main(void)
 {
@@ -458,6 +475,7 @@ int main(void)
     RoadPose pose={.height=height,.normal={0,1,0}};
     MwUiPanel panel=MW_UI_NAVIGATION;
     if (ok) {
+        gfxSetScreenFormat(GFX_BOTTOM,GSP_BGR8_OES);
         gfxSetDoubleBuffering(GFX_BOTTOM,true);
         MwUiModel ui=ui_model(screen,selected,&car,height,edge,panel,0);draw_ui(&ui,&car);
     }
@@ -501,7 +519,7 @@ int main(void)
         if (screen==QUIT) break;
         if (screen==DRIVE && (before!=DRIVE || (down&KEY_X))) {
 #ifdef NFS_STREAMED_WORLD
-            stream_has_frame=false;stream_blocked=false;
+            stream_has_frame=false;stream_blocked=false;stream_load_announced=false;
 #endif
             drive_reset(&car,road.spawn[0],road.spawn[2],road.heading);height=road.spawn[1];edge=false;
             wheel_motion_reset(&motion);
@@ -516,7 +534,7 @@ int main(void)
 #endif
         bool advance_drive=screen==DRIVE && before==DRIVE && dt>0 && !(down&KEY_X);
 #ifdef NFS_STREAMED_WORLD
-        advance_drive=advance_drive && !stream_blocked;
+        advance_drive=advance_drive && !stream_blocked && stream_has_frame;
 #endif
         if (advance_drive) {
             circlePosition pad;hidCircleRead(&pad);
@@ -567,13 +585,15 @@ int main(void)
 #endif
 #ifdef NFS_STREAMED_WORLD
         if (screen==DRIVE && !stream_blocked) {
-            if (!stream_has_frame) {
-                MwUiModel loading=ui_model(screen,selected,&car,height,edge,panel,held);
-                loading.road_status=MW_UI_MAP_LOADING;draw_ui(&loading,&car);present_ui();
+            /* Present a complete loading frame before any blocking asset IO. */
+            bool announce=!stream_has_frame && !stream_load_announced;
+            if (announce) { stream_load_announced=true;ui_changed=true; }
+            StreamedWorldResult result=announce?STREAMED_WORLD_OK:prepare_streamed_world(&car);
+            if (result==STREAMED_WORLD_OK && !announce) {
+                if (!stream_has_frame) ui_changed=true;
+                stream_has_frame=true;
             }
-            StreamedWorldResult result=prepare_streamed_world(&car);
-            if (result==STREAMED_WORLD_OK) stream_has_frame=true;
-            else {
+            else if (result!=STREAMED_WORLD_OK) {
                 StreamedWorldStats stats={0};streamed_world_stats(stream_world,&stats);
                 if (stream_collision_error) snprintf(error,sizeof(error),"Collision load (%d)",stream_collision_error);
                 else snprintf(error,sizeof(error),"Map load (%d): %.110s",(int)result,stats.detail);
@@ -597,6 +617,7 @@ int main(void)
            menu preview above the actionable bottom-screen load status. */
         if (screen==DRIVE && !stream_has_frame) render_screen=MENU;
 #endif
+        upload_ui();
         if (C3D_FrameBegin(C3D_FRAME_SYNCDRAW)) {
             render(render_screen,&car,height,rotation,display_motion,screen==GARAGE?garage_steering:0,&pose);
             present_ui();C3D_FrameEnd(0);++fps_frames;
@@ -609,7 +630,12 @@ int main(void)
     streamed_world_destroy(stream_world);
     mw_scene_pack_close(&scene_pack);
 #endif
-    if (gpu_ready) C3D_Fini();
+    if (gpu_ready) {
+        C3D_FrameSync();
+        if (ui_texture_ready) C3D_TexDelete(&ui_texture);
+        if (ui_gpu_ready) C2D_Fini();
+        C3D_Fini();
+    }
     free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);
     if (program_ready) shaderProgramFree(&program);
     if (world_program_ready) shaderProgramFree(&world_program);

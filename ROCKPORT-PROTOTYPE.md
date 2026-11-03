@@ -19,8 +19,9 @@ enable 804 MHz or L2 cache. Old 3DS hardware performance is unverified.
   sample. A centreline sweep stops movement through detected original walls.
   Render/collision source identities must match; failed loading pauses driving
   rather than repeating blocking SD reads every frame. X resets, or use MENU.
-- The bottom screen is rendered off-screen and double buffered. Completed HUD
-  images are swapped at VBlank; the visible image is never cleared/repainted.
+- The HUD is rasterized off-screen, then uploaded to one fenced GPU texture.
+  A GPU draw presents each complete update. Both LCD buffers are managed by
+  the GPU completion queue; the CPU never repaints a displayed framebuffer.
 - Original frontend fonts, logo and artwork, BMW career-start diffuse preview,
   original car normals and rolling/steering wheels are included.
 - Neutral colours are the default. DISPLAY includes optional **Piss filter**.

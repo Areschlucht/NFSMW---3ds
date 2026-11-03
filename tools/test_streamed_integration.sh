@@ -34,6 +34,8 @@ run_test test_streamed_world_runtime "$1" "$2"
 run_test test_streamed_world_boot "$1" "$2"
 run_test test_streamed_world_rollback "$1" "$2"
 run_test test_road_pose
+"$cc_bin" "${flags[@]}" tests/test_mw_ui_texture.c source_bmw/mw_ui_texture.c -o "$stream_test_dir/ui-texture"
+"$stream_test_dir/ui-texture"
 run_test test_driving_controller
 run_test test_streamed_world_drive "$6" "$2" "$3" "$4" --pack
 "$cc_bin" "${flags[@]}" tests/test_scene_normals.c source_bmw/nfs_scene.c -lm -o "$stream_test_dir/normals"
