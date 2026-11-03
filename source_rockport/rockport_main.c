@@ -467,6 +467,10 @@ static void present_ui(void)
        previously written depth mask portions of the complete HUD image. */
     C3D_RenderTargetClear(ui_target,C3D_CLEAR_ALL,0x000000ff,0);
     C2D_Prepare();C2D_SceneBegin(ui_target);
+    /* This is one opaque full-screen image, with no depth layering or alpha
+       rejection. Do not inherit either test from the car/world passes. */
+    C3D_DepthTest(false,GPU_ALWAYS,GPU_WRITE_COLOR);
+    C3D_AlphaTest(false,GPU_ALWAYS,0);
     C2D_Image image={.tex=&ui_texture,.subtex=&ui_subtexture};
     C2D_DrawImageAt(image,0,0,0,NULL,1,1);C2D_Flush();ui_to_present=false;
 }
