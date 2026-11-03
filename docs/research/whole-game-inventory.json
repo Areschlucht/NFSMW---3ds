@@ -1,0 +1,4587 @@
+{
+  "schema": 1,
+  "target": "Need for Speed Most Wanted (2005), USA GameCube",
+  "source_sha256": {
+    "dol": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+    "attributes": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+    "zdir": "d5726a00d086edb5f8a47ff4bffa4715f84b44441987fd323141a6dfaf1ba333"
+  },
+  "evidence_limits": [
+    "Collection counts are not playable-car/object/song counts",
+    "String presence does not prove a code path is reachable on GameCube",
+    "Path hash matches require payload/consumer verification; all duplicate directory records are retained",
+    "Barrier names identify candidates, not recovered visibility/collision masks",
+    "This audit changes no running game behaviour"
+  ],
+  "attribute_collection_counts": {
+    "0xaf1837ca": 1,
+    "acceltrans": 28,
+    "aivehicle": 23,
+    "aud_moment_strm": 45,
+    "aud_stitch_loop": 2,
+    "audioimpact": 131,
+    "audioscrape": 7,
+    "audiosystem": 9,
+    "brakes": 82,
+    "camerainfo": 66,
+    "chassis": 89,
+    "chopperspecs": 3,
+    "collisionreactions": 31,
+    "controller": 21,
+    "damagespecs": 14,
+    "ecar": 92,
+    "effects": 198,
+    "emitterdata": 205,
+    "emittergroup": 128,
+    "emitteruv": 4,
+    "engine": 80,
+    "engineaudio": 70,
+    "explosion": 1,
+    "fecooling": 1,
+    "fuelcell_effect": 4,
+    "fuelcell_emitter": 8,
+    "induction": 64,
+    "infractions": 8,
+    "junkman": 1,
+    "light_flares_cg": 22,
+    "milestonetypes": 30,
+    "music": 27,
+    "nos": 6,
+    "ocean": 1,
+    "presetride": 25,
+    "pursuitescalation": 1,
+    "pursuitlevels": 21,
+    "pursuitsupport": 21,
+    "pvehicle": 113,
+    "rigidbodyspecs": 22,
+    "shiftpattern": 25,
+    "simsurface": 47,
+    "smackable": 181,
+    "speech": 133,
+    "speechtune": 1,
+    "system": 1,
+    "tires": 86,
+    "trafficpattern": 10,
+    "transmission": 80,
+    "turbosfx": 18,
+    "visuallook": 5,
+    "visuallookeffect": 7,
+    "visuallooktransition": 1,
+    "world": 1
+  },
+  "physical_vehicle_profiles": [
+    {
+      "collection": "default",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cars",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trailers",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "choppers",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trailercon",
+      "model": "TRAILERCON",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trailerlog",
+      "model": "TRAILERLOG",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copheli",
+      "model": "COPHELI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "racers",
+      "model": "",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "trailercmt",
+      "model": "TRAILERCMT",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trailerb",
+      "model": "TRAILERB",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trailera",
+      "model": "TRAILERA",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trailercrate",
+      "model": "TRAILERCRATE",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "traffic",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "tractors",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cops",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "a3",
+      "model": "A3",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "clio",
+      "model": "CLIO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "sl65",
+      "model": "SL65",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "speedtest",
+      "model": "BMWM3GTR",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "db9",
+      "model": "DB9",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "bmwm3gtre46",
+      "model": "BMWM3GTRE46",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "monaro",
+      "model": "MONARO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "semi",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "gallardo",
+      "model": "GALLARDO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "eclipsegt",
+      "model": "ECLIPSEGT",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "slr",
+      "model": "SLR",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "challenge_traffic",
+      "model": "",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "911turbo",
+      "model": "911TURBO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "mustanggt",
+      "model": "MUSTANGGT",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "camaro",
+      "model": "CAMARO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "street",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "a4",
+      "model": "A4",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "elise",
+      "model": "ELISE",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "997s",
+      "model": "997S",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "bmwm3gtr",
+      "model": "BMWM3GTR",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "gti",
+      "model": "GTI",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "van",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "tt",
+      "model": "TT",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "viper",
+      "model": "VIPER",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "punto",
+      "model": "PUNTO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "sl500",
+      "model": "SL500",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "rx8",
+      "model": "RX8",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "lancerevo8",
+      "model": "LANCEREVO8",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copsport",
+      "model": "COPSPORT",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "supra",
+      "model": "SUPRA",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "carreragt",
+      "model": "CARRERAGT",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "truck",
+      "model": "",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cts",
+      "model": "CTS",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "is300",
+      "model": "IS300",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "imprezawrx",
+      "model": "IMPREZAWRX",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "corvettec6r",
+      "model": "CORVETTEC6R",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copgto",
+      "model": "COPGTO",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "gto",
+      "model": "GTO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "rx7",
+      "model": "RX7",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copsuv",
+      "model": "COPSUV",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copmidsize",
+      "model": "COPMIDSIZE",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "clk500",
+      "model": "CLK500",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "cobaltss",
+      "model": "COBALTSS",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "fordgt",
+      "model": "FORDGT",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "caymans",
+      "model": "CAYMANS",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "corvette",
+      "model": "CORVETTE",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "murcielago",
+      "model": "MURCIELAGO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "cs_trafcement",
+      "model": "CEMTR",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "trafstwag",
+      "model": "TRAFSTWAG",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_clio_traftaxi",
+      "model": "TAXI",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copsuvl",
+      "model": "COPSUVL",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafminivan",
+      "model": "TRAFMINIVAN",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "semicmt",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafficcoup",
+      "model": "TRAFFICCOUP",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_trafgarb",
+      "model": "GARB",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copsportghost",
+      "model": "COPSPORTGHOST",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_semi",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafnews",
+      "model": "TRAFNEWS",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copgtoghost",
+      "model": "COPGTOGHOST",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "m3gtre46careerstart",
+      "model": "BMWM3GTRE46",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "traf4dsedb",
+      "model": "TRAF4DSEDB",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "traf4dseda",
+      "model": "TRAF4DSEDA",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copsuvpatrol",
+      "model": "COPSUV",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafcourt",
+      "model": "TRAFCOURT",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_clio_trafpizza",
+      "model": "PIZZA",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "trafha",
+      "model": "TRAFHA",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_c6_copsporthench",
+      "model": "COPSPORTHENCH",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "cs_mustang_copsuv",
+      "model": "COPSUV",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "cs_cts_traffictruck",
+      "model": "PICKUPA",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "trafpizza",
+      "model": "TRAFPIZZA",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_cts_traf_minivan",
+      "model": "MINIVAN",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "traftaxi",
+      "model": "TRAFTAXI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copsporthench",
+      "model": "COPSPORTHENCH",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafpickupa",
+      "model": "TRAFPICKUPA",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "semicrate",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "rx8speedt",
+      "model": "RX8SPEEDT",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "semib",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_viper_copmidsize",
+      "model": "COPMIDSIZE",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "semilog",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "traf4dsedc",
+      "model": "TRAF4DSEDC",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafgarb",
+      "model": "TRAFGARB",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "semia",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "911gt2",
+      "model": "911GT2",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copcross",
+      "model": "COPSPORT",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "wrx_demo",
+      "model": "",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "trafcemtr",
+      "model": "TRAFCEMTR",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafcamper",
+      "model": "TRAFCAMPER",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copmidsize_nis_ld",
+      "model": "COPMIDSIZE",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "cs_gto_copgto",
+      "model": "COPGTO",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "traffire",
+      "model": "TRAFFIRE",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafdmptr",
+      "model": "TRAFDMPTR",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "semicon",
+      "model": "SEMI",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafsuva",
+      "model": "TRAFSUVA",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "mustang_demo",
+      "model": "MUSTANGGT",
+      "player_usable_parameter": true
+    },
+    {
+      "collection": "copghost",
+      "model": "COPGHOST",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafvanb",
+      "model": "TRAFVANB",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "copmidsize_nis",
+      "model": "COPMIDSIZEINT",
+      "player_usable_parameter": false
+    },
+    {
+      "collection": "trafamb",
+      "model": "TRAFAMB",
+      "player_usable_parameter": false
+    }
+  ],
+  "candidate_archive_ranges": [
+    {
+      "candidate_name": "CARS\\911GT2\\GEOMETRY.BIN",
+      "hash": "523d5ddb",
+      "archive": 1,
+      "offset_bytes": 196435968,
+      "bytes": 359040,
+      "directory_record_offset": 10560
+    },
+    {
+      "candidate_name": "CARS\\911GT2\\PREVINYL.BIN",
+      "hash": "b309ed28",
+      "archive": 1,
+      "offset_bytes": 196796416,
+      "bytes": 6528,
+      "directory_record_offset": 22488
+    },
+    {
+      "candidate_name": "CARS\\911GT2\\TEXTURES.BIN",
+      "hash": "2dc87e53",
+      "archive": 1,
+      "offset_bytes": 196804608,
+      "bytes": 63040,
+      "directory_record_offset": 5616
+    },
+    {
+      "candidate_name": "CARS\\911GT2\\VINYLS.BIN",
+      "hash": "64092c34",
+      "archive": 1,
+      "offset_bytes": 196868096,
+      "bytes": 1883456,
+      "directory_record_offset": 12432
+    },
+    {
+      "candidate_name": "CARS\\911TURBO\\GEOMETRY.BIN",
+      "hash": "89c70f1a",
+      "archive": 1,
+      "offset_bytes": 198752256,
+      "bytes": 1205888,
+      "directory_record_offset": 17544
+    },
+    {
+      "candidate_name": "CARS\\911TURBO\\PREVINYL.BIN",
+      "hash": "ea939e67",
+      "archive": 1,
+      "offset_bytes": 199958528,
+      "bytes": 6528,
+      "directory_record_offset": 29880
+    },
+    {
+      "candidate_name": "CARS\\911TURBO\\TEXTURES.BIN",
+      "hash": "65522f92",
+      "archive": 1,
+      "offset_bytes": 199966720,
+      "bytes": 63552,
+      "directory_record_offset": 12624
+    },
+    {
+      "candidate_name": "CARS\\911TURBO\\VINYLS.BIN",
+      "hash": "7aa781b3",
+      "archive": 1,
+      "offset_bytes": 200032256,
+      "bytes": 1898176,
+      "directory_record_offset": 15096
+    },
+    {
+      "candidate_name": "CARS\\997S\\GEOMETRY.BIN",
+      "hash": "d8dbf4af",
+      "archive": 1,
+      "offset_bytes": 201930752,
+      "bytes": 1475008,
+      "directory_record_offset": 27552
+    },
+    {
+      "candidate_name": "CARS\\997S\\PREVINYL.BIN",
+      "hash": "39a883fc",
+      "archive": 1,
+      "offset_bytes": 203407360,
+      "bytes": 7296,
+      "directory_record_offset": 7224
+    },
+    {
+      "candidate_name": "CARS\\997S\\TEXTURES.BIN",
+      "hash": "b4671527",
+      "archive": 1,
+      "offset_bytes": 203415552,
+      "bytes": 58496,
+      "directory_record_offset": 22584
+    },
+    {
+      "candidate_name": "CARS\\997S\\VINYLS.BIN",
+      "hash": "b6abfe08",
+      "archive": 1,
+      "offset_bytes": 203474944,
+      "bytes": 2054272,
+      "directory_record_offset": 22920
+    },
+    {
+      "candidate_name": "CARS\\A3\\GEOMETRY.BIN",
+      "hash": "94456fc7",
+      "archive": 1,
+      "offset_bytes": 114954240,
+      "bytes": 1452096,
+      "directory_record_offset": 18840
+    },
+    {
+      "candidate_name": "CARS\\A3\\PREVINYL.BIN",
+      "hash": "f511ff14",
+      "archive": 1,
+      "offset_bytes": 116408320,
+      "bytes": 7296,
+      "directory_record_offset": 31344
+    },
+    {
+      "candidate_name": "CARS\\A3\\TEXTURES.BIN",
+      "hash": "6fd0903f",
+      "archive": 1,
+      "offset_bytes": 116416512,
+      "bytes": 57536,
+      "directory_record_offset": 13800
+    },
+    {
+      "candidate_name": "CARS\\A3\\VINYLS.BIN",
+      "hash": "eacbd320",
+      "archive": 1,
+      "offset_bytes": 116475904,
+      "bytes": 2113856,
+      "directory_record_offset": 29928
+    },
+    {
+      "candidate_name": "CARS\\A4\\GEOMETRY.BIN",
+      "hash": "cf85a968",
+      "archive": 1,
+      "offset_bytes": 118591488,
+      "bytes": 1617408,
+      "directory_record_offset": 26448
+    },
+    {
+      "candidate_name": "CARS\\A4\\PREVINYL.BIN",
+      "hash": "305238b5",
+      "archive": 1,
+      "offset_bytes": 120209408,
+      "bytes": 7296,
+      "directory_record_offset": 5952
+    },
+    {
+      "candidate_name": "CARS\\A4\\TEXTURES.BIN",
+      "hash": "ab10c9e0",
+      "archive": 1,
+      "offset_bytes": 120217600,
+      "bytes": 44224,
+      "directory_record_offset": 21480
+    },
+    {
+      "candidate_name": "CARS\\A4\\VINYLS.BIN",
+      "hash": "1bbf3081",
+      "archive": 1,
+      "offset_bytes": 120262656,
+      "bytes": 2139392,
+      "directory_record_offset": 3288
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTRE46\\GEOMETRY.BIN",
+      "hash": "c0889415",
+      "archive": 1,
+      "offset_bytes": 128100352,
+      "bytes": 407680,
+      "directory_record_offset": 23976
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTRE46\\PREVINYL.BIN",
+      "hash": "21552362",
+      "archive": 1,
+      "offset_bytes": 128509952,
+      "bytes": 8192,
+      "directory_record_offset": 4224
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTRE46\\TEXTURES.BIN",
+      "hash": "9c13b48d",
+      "archive": 1,
+      "offset_bytes": 128518144,
+      "bytes": 73152,
+      "directory_record_offset": 19584
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTRE46\\VINYLS.BIN",
+      "hash": "13bd8bee",
+      "archive": 1,
+      "offset_bytes": 128591872,
+      "bytes": 2187392,
+      "directory_record_offset": 2448
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTR\\GEOMETRY.BIN",
+      "hash": "9ae2eea6",
+      "archive": 1,
+      "offset_bytes": 125462528,
+      "bytes": 370112,
+      "directory_record_offset": 19512
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTR\\PREVINYL.BIN",
+      "hash": "fbaf7df3",
+      "archive": 1,
+      "offset_bytes": 125833216,
+      "bytes": 8192,
+      "directory_record_offset": 32112
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTR\\TEXTURES.BIN",
+      "hash": "766e0f1e",
+      "archive": 1,
+      "offset_bytes": 125841408,
+      "bytes": 68224,
+      "directory_record_offset": 14592
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTR\\VINYLS.BIN",
+      "hash": "1fee0e3f",
+      "archive": 1,
+      "offset_bytes": 125911040,
+      "bytes": 2187904,
+      "directory_record_offset": 4104
+    },
+    {
+      "candidate_name": "CARS\\CAMARO\\GEOMETRY.BIN",
+      "hash": "5274ff06",
+      "archive": 1,
+      "offset_bytes": 130787328,
+      "bytes": 331776,
+      "directory_record_offset": 10608
+    },
+    {
+      "candidate_name": "CARS\\CAMARO\\PREVINYL.BIN",
+      "hash": "b3418e53",
+      "archive": 1,
+      "offset_bytes": 131119104,
+      "bytes": 6272,
+      "directory_record_offset": 22512
+    },
+    {
+      "candidate_name": "CARS\\CAMARO\\TEXTURES.BIN",
+      "hash": "2e001f7e",
+      "archive": 1,
+      "offset_bytes": 131127296,
+      "bytes": 59264,
+      "directory_record_offset": 5712
+    },
+    {
+      "candidate_name": "CARS\\CAMARO\\VINYLS.BIN",
+      "hash": "4900869f",
+      "archive": 1,
+      "offset_bytes": 131186688,
+      "bytes": 1906496,
+      "directory_record_offset": 9240
+    },
+    {
+      "candidate_name": "CARS\\CARRERAGT\\GEOMETRY.BIN",
+      "hash": "6b8733ae",
+      "archive": 1,
+      "offset_bytes": 133093376,
+      "bytes": 969280,
+      "directory_record_offset": 13248
+    },
+    {
+      "candidate_name": "CARS\\CARRERAGT\\PREVINYL.BIN",
+      "hash": "cc53c2fb",
+      "archive": 1,
+      "offset_bytes": 134064128,
+      "bytes": 8128,
+      "directory_record_offset": 25896
+    },
+    {
+      "candidate_name": "CARS\\CARRERAGT\\TEXTURES.BIN",
+      "hash": "47125426",
+      "archive": 1,
+      "offset_bytes": 134072320,
+      "bytes": 72704,
+      "directory_record_offset": 9096
+    },
+    {
+      "candidate_name": "CARS\\CARRERAGT\\VINYLS.BIN",
+      "hash": "232d7147",
+      "archive": 1,
+      "offset_bytes": 134146048,
+      "bytes": 1974912,
+      "directory_record_offset": 4536
+    },
+    {
+      "candidate_name": "CARS\\CAYMANS\\GEOMETRY.BIN",
+      "hash": "34141cff",
+      "archive": 1,
+      "offset_bytes": 136122368,
+      "bytes": 1583360,
+      "directory_record_offset": 6504
+    },
+    {
+      "candidate_name": "CARS\\CAYMANS\\PREVINYL.BIN",
+      "hash": "94e0ac4c",
+      "archive": 1,
+      "offset_bytes": 137707520,
+      "bytes": 3264,
+      "directory_record_offset": 18888
+    },
+    {
+      "candidate_name": "CARS\\CAYMANS\\TEXTURES.BIN",
+      "hash": "0f9f3d77",
+      "archive": 1,
+      "offset_bytes": 137711616,
+      "bytes": 56064,
+      "directory_record_offset": 1992
+    },
+    {
+      "candidate_name": "CARS\\CAYMANS\\VINYLS.BIN",
+      "hash": "6e1dd258",
+      "archive": 1,
+      "offset_bytes": 137768960,
+      "bytes": 2002368,
+      "directory_record_offset": 13560
+    },
+    {
+      "candidate_name": "CARS\\CEMTR\\GEOMETRY.BIN",
+      "hash": "9294eaae",
+      "archive": 1,
+      "offset_bytes": 139771904,
+      "bytes": 135168,
+      "directory_record_offset": 18576
+    },
+    {
+      "candidate_name": "CARS\\CEMTR\\PREVINYL.BIN",
+      "hash": "f36179fb",
+      "archive": 1,
+      "offset_bytes": 139907072,
+      "bytes": 0,
+      "directory_record_offset": 31032
+    },
+    {
+      "candidate_name": "CARS\\CEMTR\\TEXTURES.BIN",
+      "hash": "6e200b26",
+      "archive": 1,
+      "offset_bytes": 139907072,
+      "bytes": 10752,
+      "directory_record_offset": 13584
+    },
+    {
+      "candidate_name": "CARS\\CEMTR\\VINYLS.BIN",
+      "hash": "ed616847",
+      "archive": 1,
+      "offset_bytes": 139919360,
+      "bytes": 0,
+      "directory_record_offset": 30336
+    },
+    {
+      "candidate_name": "CARS\\CLIO\\GEOMETRY.BIN",
+      "hash": "0b55697a",
+      "archive": 1,
+      "offset_bytes": 139919360,
+      "bytes": 1554752,
+      "directory_record_offset": 1440
+    },
+    {
+      "candidate_name": "CARS\\CLIO\\PREVINYL.BIN",
+      "hash": "6c21f8c7",
+      "archive": 1,
+      "offset_bytes": 141475840,
+      "bytes": 0,
+      "directory_record_offset": 13344
+    },
+    {
+      "candidate_name": "CARS\\CLIO\\TEXTURES.BIN",
+      "hash": "e6e089f2",
+      "archive": 1,
+      "offset_bytes": 141475840,
+      "bytes": 61312,
+      "directory_record_offset": 29448
+    },
+    {
+      "candidate_name": "CARS\\CLIO\\VINYLS.BIN",
+      "hash": "4e1bc413",
+      "archive": 1,
+      "offset_bytes": 141537280,
+      "bytes": 2017472,
+      "directory_record_offset": 9960
+    },
+    {
+      "candidate_name": "CARS\\CLK500\\GEOMETRY.BIN",
+      "hash": "f8f35dc2",
+      "archive": 1,
+      "offset_bytes": 143556608,
+      "bytes": 1653568,
+      "directory_record_offset": 31728
+    },
+    {
+      "candidate_name": "CARS\\CLK500\\PREVINYL.BIN",
+      "hash": "59bfed0f",
+      "archive": 1,
+      "offset_bytes": 145211392,
+      "bytes": 3136,
+      "directory_record_offset": 11400
+    },
+    {
+      "candidate_name": "CARS\\CLK500\\TEXTURES.BIN",
+      "hash": "d47e7e3a",
+      "archive": 1,
+      "offset_bytes": 145215488,
+      "bytes": 56576,
+      "directory_record_offset": 27024
+    },
+    {
+      "candidate_name": "CARS\\CLK500\\VINYLS.BIN",
+      "hash": "49a0065b",
+      "archive": 1,
+      "offset_bytes": 145272832,
+      "bytes": 2274048,
+      "directory_record_offset": 9336
+    },
+    {
+      "candidate_name": "CARS\\COBALTSS\\GEOMETRY.BIN",
+      "hash": "673d136e",
+      "archive": 1,
+      "offset_bytes": 147548160,
+      "bytes": 1749504,
+      "directory_record_offset": 12840
+    },
+    {
+      "candidate_name": "CARS\\COBALTSS\\PREVINYL.BIN",
+      "hash": "c809a2bb",
+      "archive": 1,
+      "offset_bytes": 149299200,
+      "bytes": 7104,
+      "directory_record_offset": 25440
+    },
+    {
+      "candidate_name": "CARS\\COBALTSS\\TEXTURES.BIN",
+      "hash": "42c833e6",
+      "archive": 1,
+      "offset_bytes": 149307392,
+      "bytes": 59520,
+      "directory_record_offset": 8496
+    },
+    {
+      "candidate_name": "CARS\\COBALTSS\\VINYLS.BIN",
+      "hash": "e4686107",
+      "archive": 1,
+      "offset_bytes": 149368832,
+      "bytes": 2208320,
+      "directory_record_offset": 28752
+    },
+    {
+      "candidate_name": "CARS\\COPGHOST\\GEOMETRY.BIN",
+      "hash": "5a826bfa",
+      "archive": 1,
+      "offset_bytes": 258441216,
+      "bytes": 277824,
+      "directory_record_offset": 11496
+    },
+    {
+      "candidate_name": "CARS\\COPGHOST\\PREVINYL.BIN",
+      "hash": "bb4efb47",
+      "archive": 1,
+      "offset_bytes": 258719744,
+      "bytes": 0,
+      "directory_record_offset": 23448
+    },
+    {
+      "candidate_name": "CARS\\COPGHOST\\TEXTURES.BIN",
+      "hash": "360d8c72",
+      "archive": 1,
+      "offset_bytes": 258719744,
+      "bytes": 51136,
+      "directory_record_offset": 6744
+    },
+    {
+      "candidate_name": "CARS\\COPGHOST\\VINYLS.BIN",
+      "hash": "b1262693",
+      "archive": 1,
+      "offset_bytes": 258770944,
+      "bytes": 0,
+      "directory_record_offset": 22368
+    },
+    {
+      "candidate_name": "CARS\\COPGTOGHOST\\GEOMETRY.BIN",
+      "hash": "4c5781e4",
+      "archive": 1,
+      "offset_bytes": 259323904,
+      "bytes": 414144,
+      "directory_record_offset": 9648
+    },
+    {
+      "candidate_name": "CARS\\COPGTOGHOST\\PREVINYL.BIN",
+      "hash": "ad241131",
+      "archive": 1,
+      "offset_bytes": 259739648,
+      "bytes": 0,
+      "directory_record_offset": 22008
+    },
+    {
+      "candidate_name": "CARS\\COPGTOGHOST\\TEXTURES.BIN",
+      "hash": "27e2a25c",
+      "archive": 1,
+      "offset_bytes": 259739648,
+      "bytes": 64128,
+      "directory_record_offset": 5016
+    },
+    {
+      "candidate_name": "CARS\\COPGTOGHOST\\VINYLS.BIN",
+      "hash": "6008b9fd",
+      "archive": 1,
+      "offset_bytes": 259805184,
+      "bytes": 0,
+      "directory_record_offset": 12120
+    },
+    {
+      "candidate_name": "CARS\\COPGTO\\GEOMETRY.BIN",
+      "hash": "a006419f",
+      "archive": 1,
+      "offset_bytes": 258770944,
+      "bytes": 442752,
+      "directory_record_offset": 20208
+    },
+    {
+      "candidate_name": "CARS\\COPGTO\\PREVINYL.BIN",
+      "hash": "00d2d0ec",
+      "archive": 1,
+      "offset_bytes": 259215360,
+      "bytes": 0,
+      "directory_record_offset": 144
+    },
+    {
+      "candidate_name": "CARS\\COPGTO\\TEXTURES.BIN",
+      "hash": "7b916217",
+      "archive": 1,
+      "offset_bytes": 259215360,
+      "bytes": 78784,
+      "directory_record_offset": 15168
+    },
+    {
+      "candidate_name": "CARS\\COPGTO\\VINYLS.BIN",
+      "hash": "dffe4ef8",
+      "archive": 1,
+      "offset_bytes": 259295232,
+      "bytes": 28224,
+      "directory_record_offset": 28344
+    },
+    {
+      "candidate_name": "CARS\\COPHELI\\GEOMETRY.BIN",
+      "hash": "3cc09317",
+      "archive": 1,
+      "offset_bytes": 259805184,
+      "bytes": 70272,
+      "directory_record_offset": 7560
+    },
+    {
+      "candidate_name": "CARS\\COPHELI\\PREVINYL.BIN",
+      "hash": "9d8d2264",
+      "archive": 1,
+      "offset_bytes": 259876864,
+      "bytes": 0,
+      "directory_record_offset": 19872
+    },
+    {
+      "candidate_name": "CARS\\COPHELI\\TEXTURES.BIN",
+      "hash": "184bb38f",
+      "archive": 1,
+      "offset_bytes": 259876864,
+      "bytes": 33024,
+      "directory_record_offset": 2976
+    },
+    {
+      "candidate_name": "CARS\\COPHELI\\VINYLS.BIN",
+      "hash": "3c85e270",
+      "archive": 1,
+      "offset_bytes": 259911680,
+      "bytes": 0,
+      "directory_record_offset": 7536
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZEINT\\GEOMETRY.BIN",
+      "hash": "49b31255",
+      "archive": 1,
+      "offset_bytes": 260573184,
+      "bytes": 229952,
+      "directory_record_offset": 9384
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZEINT\\PREVINYL.BIN",
+      "hash": "aa7fa1a2",
+      "archive": 1,
+      "offset_bytes": 260804608,
+      "bytes": 0,
+      "directory_record_offset": 21336
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZEINT\\TEXTURES.BIN",
+      "hash": "253e32cd",
+      "archive": 1,
+      "offset_bytes": 260804608,
+      "bytes": 70656,
+      "directory_record_offset": 4752
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZEINT\\VINYLS.BIN",
+      "hash": "c7b37a2e",
+      "archive": 1,
+      "offset_bytes": 260876288,
+      "bytes": 0,
+      "directory_record_offset": 25392
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZE\\GEOMETRY.BIN",
+      "hash": "3da3356a",
+      "archive": 1,
+      "offset_bytes": 259911680,
+      "bytes": 606464,
+      "directory_record_offset": 7752
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZE\\PREVINYL.BIN",
+      "hash": "9e6fc4b7",
+      "archive": 1,
+      "offset_bytes": 260519936,
+      "bytes": 0,
+      "directory_record_offset": 19992
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZE\\TEXTURES.BIN",
+      "hash": "192e55e2",
+      "archive": 1,
+      "offset_bytes": 260519936,
+      "bytes": 52928,
+      "directory_record_offset": 3024
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZE\\VINYLS.BIN",
+      "hash": "75a5d403",
+      "archive": 1,
+      "offset_bytes": 260573184,
+      "bytes": 0,
+      "directory_record_offset": 14448
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTGHOST\\GEOMETRY.BIN",
+      "hash": "ed01f4d2",
+      "archive": 1,
+      "offset_bytes": 261472256,
+      "bytes": 461440,
+      "directory_record_offset": 30216
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTGHOST\\PREVINYL.BIN",
+      "hash": "4dce841f",
+      "archive": 1,
+      "offset_bytes": 261935104,
+      "bytes": 0,
+      "directory_record_offset": 9912
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTGHOST\\TEXTURES.BIN",
+      "hash": "c88d154a",
+      "archive": 1,
+      "offset_bytes": 261935104,
+      "bytes": 78016,
+      "directory_record_offset": 25512
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTGHOST\\VINYLS.BIN",
+      "hash": "2ffd996b",
+      "archive": 1,
+      "offset_bytes": 262014976,
+      "bytes": 0,
+      "directory_record_offset": 5880
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTHENCH\\GEOMETRY.BIN",
+      "hash": "1adbbb73",
+      "archive": 1,
+      "offset_bytes": 262014976,
+      "bytes": 487744,
+      "directory_record_offset": 3192
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTHENCH\\PREVINYL.BIN",
+      "hash": "7ba84ac0",
+      "archive": 1,
+      "offset_bytes": 262504448,
+      "bytes": 0,
+      "directory_record_offset": 15216
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTHENCH\\TEXTURES.BIN",
+      "hash": "f666dbeb",
+      "archive": 1,
+      "offset_bytes": 262504448,
+      "bytes": 81600,
+      "directory_record_offset": 31536
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTHENCH\\VINYLS.BIN",
+      "hash": "d5c343cc",
+      "archive": 1,
+      "offset_bytes": 262586368,
+      "bytes": 0,
+      "directory_record_offset": 27216
+    },
+    {
+      "candidate_name": "CARS\\COPSPORT\\GEOMETRY.BIN",
+      "hash": "7713a7cd",
+      "archive": 1,
+      "offset_bytes": 260876288,
+      "bytes": 461376,
+      "directory_record_offset": 14784
+    },
+    {
+      "candidate_name": "CARS\\COPSPORT\\PREVINYL.BIN",
+      "hash": "d7e0371a",
+      "archive": 1,
+      "offset_bytes": 261339136,
+      "bytes": 0,
+      "directory_record_offset": 27456
+    },
+    {
+      "candidate_name": "CARS\\COPSPORT\\TEXTURES.BIN",
+      "hash": "529ec845",
+      "archive": 1,
+      "offset_bytes": 261339136,
+      "bytes": 93568,
+      "directory_record_offset": 10632
+    },
+    {
+      "candidate_name": "CARS\\COPSPORT\\VINYLS.BIN",
+      "hash": "0e8051a6",
+      "archive": 1,
+      "offset_bytes": 261433344,
+      "bytes": 38592,
+      "directory_record_offset": 1872
+    },
+    {
+      "candidate_name": "CARS\\COPSUVL\\GEOMETRY.BIN",
+      "hash": "61fa9d9f",
+      "archive": 1,
+      "offset_bytes": 263120896,
+      "bytes": 429248,
+      "directory_record_offset": 12312
+    },
+    {
+      "candidate_name": "CARS\\COPSUVL\\PREVINYL.BIN",
+      "hash": "c2c72cec",
+      "archive": 1,
+      "offset_bytes": 263550976,
+      "bytes": 0,
+      "directory_record_offset": 24360
+    },
+    {
+      "candidate_name": "CARS\\COPSUVL\\TEXTURES.BIN",
+      "hash": "3d85be17",
+      "archive": 1,
+      "offset_bytes": 263550976,
+      "bytes": 40000,
+      "directory_record_offset": 7728
+    },
+    {
+      "candidate_name": "CARS\\COPSUVL\\VINYLS.BIN",
+      "hash": "a12baaf8",
+      "archive": 1,
+      "offset_bytes": 263591936,
+      "bytes": 0,
+      "directory_record_offset": 20352
+    },
+    {
+      "candidate_name": "CARS\\COPSUV\\GEOMETRY.BIN",
+      "hash": "748d0953",
+      "archive": 1,
+      "offset_bytes": 262586368,
+      "bytes": 492032,
+      "directory_record_offset": 14376
+    },
+    {
+      "candidate_name": "CARS\\COPSUV\\PREVINYL.BIN",
+      "hash": "d55998a0",
+      "archive": 1,
+      "offset_bytes": 263079936,
+      "bytes": 0,
+      "directory_record_offset": 27120
+    },
+    {
+      "candidate_name": "CARS\\COPSUV\\TEXTURES.BIN",
+      "hash": "501829cb",
+      "archive": 1,
+      "offset_bytes": 263079936,
+      "bytes": 39680,
+      "directory_record_offset": 10200
+    },
+    {
+      "candidate_name": "CARS\\COPSUV\\VINYLS.BIN",
+      "hash": "4d0799ac",
+      "archive": 1,
+      "offset_bytes": 263120896,
+      "bytes": 0,
+      "directory_record_offset": 9792
+    },
+    {
+      "candidate_name": "CARS\\CORVETTEC6R\\GEOMETRY.BIN",
+      "hash": "45e7794a",
+      "archive": 1,
+      "offset_bytes": 154929152,
+      "bytes": 381312,
+      "directory_record_offset": 8904
+    },
+    {
+      "candidate_name": "CARS\\CORVETTEC6R\\PREVINYL.BIN",
+      "hash": "a6b40897",
+      "archive": 1,
+      "offset_bytes": 155312128,
+      "bytes": 7104,
+      "directory_record_offset": 20832
+    },
+    {
+      "candidate_name": "CARS\\CORVETTEC6R\\TEXTURES.BIN",
+      "hash": "217299c2",
+      "archive": 1,
+      "offset_bytes": 155320320,
+      "bytes": 78720,
+      "directory_record_offset": 4248
+    },
+    {
+      "candidate_name": "CARS\\CORVETTEC6R\\VINYLS.BIN",
+      "hash": "ce479fe3",
+      "archive": 1,
+      "offset_bytes": 155400192,
+      "bytes": 1992256,
+      "directory_record_offset": 26232
+    },
+    {
+      "candidate_name": "CARS\\CORVETTE\\GEOMETRY.BIN",
+      "hash": "5e835d1f",
+      "archive": 1,
+      "offset_bytes": 151578624,
+      "bytes": 1271424,
+      "directory_record_offset": 12024
+    },
+    {
+      "candidate_name": "CARS\\CORVETTE\\PREVINYL.BIN",
+      "hash": "bf4fec6c",
+      "archive": 1,
+      "offset_bytes": 152850432,
+      "bytes": 7104,
+      "directory_record_offset": 23736
+    },
+    {
+      "candidate_name": "CARS\\CORVETTE\\TEXTURES.BIN",
+      "hash": "3a0e7d97",
+      "archive": 1,
+      "offset_bytes": 152858624,
+      "bytes": 58304,
+      "directory_record_offset": 7272
+    },
+    {
+      "candidate_name": "CARS\\CORVETTE\\VINYLS.BIN",
+      "hash": "3d7e8a78",
+      "archive": 1,
+      "offset_bytes": 152918016,
+      "bytes": 2009664,
+      "directory_record_offset": 7704
+    },
+    {
+      "candidate_name": "CARS\\CTS\\GEOMETRY.BIN",
+      "hash": "3c20d79d",
+      "archive": 1,
+      "offset_bytes": 157392896,
+      "bytes": 1329216,
+      "directory_record_offset": 7488
+    },
+    {
+      "candidate_name": "CARS\\CTS\\PREVINYL.BIN",
+      "hash": "9ced66ea",
+      "archive": 1,
+      "offset_bytes": 158724096,
+      "bytes": 3136,
+      "directory_record_offset": 19800
+    },
+    {
+      "candidate_name": "CARS\\CTS\\TEXTURES.BIN",
+      "hash": "17abf815",
+      "archive": 1,
+      "offset_bytes": 158728192,
+      "bytes": 58432,
+      "directory_record_offset": 2904
+    },
+    {
+      "candidate_name": "CARS\\CTS\\VINYLS.BIN",
+      "hash": "ffdf4d76",
+      "archive": 1,
+      "offset_bytes": 158787584,
+      "bytes": 2145408,
+      "directory_record_offset": 32688
+    },
+    {
+      "candidate_name": "CARS\\DB9\\GEOMETRY.BIN",
+      "hash": "c8ca6b92",
+      "archive": 1,
+      "offset_bytes": 160933888,
+      "bytes": 1516480,
+      "directory_record_offset": 25536
+    },
+    {
+      "candidate_name": "CARS\\DB9\\PREVINYL.BIN",
+      "hash": "2996fadf",
+      "archive": 1,
+      "offset_bytes": 162451456,
+      "bytes": 3200,
+      "directory_record_offset": 5112
+    },
+    {
+      "candidate_name": "CARS\\DB9\\TEXTURES.BIN",
+      "hash": "a4558c0a",
+      "archive": 1,
+      "offset_bytes": 162455552,
+      "bytes": 56256,
+      "directory_record_offset": 20616
+    },
+    {
+      "candidate_name": "CARS\\DB9\\VINYLS.BIN",
+      "hash": "adb9602b",
+      "archive": 1,
+      "offset_bytes": 162512896,
+      "bytes": 1841152,
+      "directory_record_offset": 22104
+    },
+    {
+      "candidate_name": "CARS\\ECLIPSEGT\\GEOMETRY.BIN",
+      "hash": "f1030053",
+      "archive": 1,
+      "offset_bytes": 164354048,
+      "bytes": 1492672,
+      "directory_record_offset": 30600
+    },
+    {
+      "candidate_name": "CARS\\ECLIPSEGT\\PREVINYL.BIN",
+      "hash": "51cf8fa0",
+      "archive": 1,
+      "offset_bytes": 165847040,
+      "bytes": 6912,
+      "directory_record_offset": 10440
+    },
+    {
+      "candidate_name": "CARS\\ECLIPSEGT\\TEXTURES.BIN",
+      "hash": "cc8e20cb",
+      "archive": 1,
+      "offset_bytes": 165855232,
+      "bytes": 64640,
+      "directory_record_offset": 25968
+    },
+    {
+      "candidate_name": "CARS\\ECLIPSEGT\\VINYLS.BIN",
+      "hash": "7593d0ac",
+      "archive": 1,
+      "offset_bytes": 165920768,
+      "bytes": 2062208,
+      "directory_record_offset": 14424
+    },
+    {
+      "candidate_name": "CARS\\ELISE\\GEOMETRY.BIN",
+      "hash": "9c576a85",
+      "archive": 1,
+      "offset_bytes": 167983104,
+      "bytes": 1725824,
+      "directory_record_offset": 19656
+    },
+    {
+      "candidate_name": "CARS\\ELISE\\PREVINYL.BIN",
+      "hash": "fd23f9d2",
+      "archive": 1,
+      "offset_bytes": 169709568,
+      "bytes": 6464,
+      "directory_record_offset": 32328
+    },
+    {
+      "candidate_name": "CARS\\ELISE\\TEXTURES.BIN",
+      "hash": "77e28afd",
+      "archive": 1,
+      "offset_bytes": 169717760,
+      "bytes": 55104,
+      "directory_record_offset": 14808
+    },
+    {
+      "candidate_name": "CARS\\ELISE\\VINYLS.BIN",
+      "hash": "c404065e",
+      "archive": 1,
+      "offset_bytes": 169773056,
+      "bytes": 1910016,
+      "directory_record_offset": 24456
+    },
+    {
+      "candidate_name": "CARS\\FORDGT\\GEOMETRY.BIN",
+      "hash": "914a5419",
+      "archive": 1,
+      "offset_bytes": 171683840,
+      "bytes": 1123712,
+      "directory_record_offset": 18168
+    },
+    {
+      "candidate_name": "CARS\\FORDGT\\PREVINYL.BIN",
+      "hash": "f216e366",
+      "archive": 1,
+      "offset_bytes": 172808192,
+      "bytes": 6528,
+      "directory_record_offset": 30864
+    },
+    {
+      "candidate_name": "CARS\\FORDGT\\TEXTURES.BIN",
+      "hash": "6cd57491",
+      "archive": 1,
+      "offset_bytes": 172816384,
+      "bytes": 72768,
+      "directory_record_offset": 13440
+    },
+    {
+      "candidate_name": "CARS\\FORDGT\\VINYLS.BIN",
+      "hash": "1a477af2",
+      "archive": 1,
+      "offset_bytes": 172890112,
+      "bytes": 1937472,
+      "directory_record_offset": 3144
+    },
+    {
+      "candidate_name": "CARS\\GALLARDO\\GEOMETRY.BIN",
+      "hash": "bed09379",
+      "archive": 1,
+      "offset_bytes": 174829568,
+      "bytes": 1385408,
+      "directory_record_offset": 23712
+    },
+    {
+      "candidate_name": "CARS\\GALLARDO\\PREVINYL.BIN",
+      "hash": "1f9d22c6",
+      "archive": 1,
+      "offset_bytes": 176216064,
+      "bytes": 3200,
+      "directory_record_offset": 3984
+    },
+    {
+      "candidate_name": "CARS\\GALLARDO\\TEXTURES.BIN",
+      "hash": "9a5bb3f1",
+      "archive": 1,
+      "offset_bytes": 176220160,
+      "bytes": 55488,
+      "directory_record_offset": 19464
+    },
+    {
+      "candidate_name": "CARS\\GALLARDO\\VINYLS.BIN",
+      "hash": "00766252",
+      "archive": 1,
+      "offset_bytes": 176277504,
+      "bytes": 1903168,
+      "directory_record_offset": 48
+    },
+    {
+      "candidate_name": "CARS\\GARB\\GEOMETRY.BIN",
+      "hash": "8bb43f6f",
+      "archive": 1,
+      "offset_bytes": 178182144,
+      "bytes": 115264,
+      "directory_record_offset": 17712
+    },
+    {
+      "candidate_name": "CARS\\GARB\\PREVINYL.BIN",
+      "hash": "ec80cebc",
+      "archive": 1,
+      "offset_bytes": 178298880,
+      "bytes": 0,
+      "directory_record_offset": 30168
+    },
+    {
+      "candidate_name": "CARS\\GARB\\TEXTURES.BIN",
+      "hash": "673f5fe7",
+      "archive": 1,
+      "offset_bytes": 178298880,
+      "bytes": 9984,
+      "directory_record_offset": 12864
+    },
+    {
+      "candidate_name": "CARS\\GARB\\VINYLS.BIN",
+      "hash": "9d7298c8",
+      "archive": 1,
+      "offset_bytes": 178309120,
+      "bytes": 0,
+      "directory_record_offset": 19848
+    },
+    {
+      "candidate_name": "CARS\\GTI\\GEOMETRY.BIN",
+      "hash": "1c732ed7",
+      "archive": 1,
+      "offset_bytes": 178309120,
+      "bytes": 1235584,
+      "directory_record_offset": 3384
+    },
+    {
+      "candidate_name": "CARS\\GTI\\PREVINYL.BIN",
+      "hash": "7d3fbe24",
+      "archive": 1,
+      "offset_bytes": 179546112,
+      "bytes": 3456,
+      "directory_record_offset": 15384
+    },
+    {
+      "candidate_name": "CARS\\GTI\\TEXTURES.BIN",
+      "hash": "f7fe4f4f",
+      "archive": 1,
+      "offset_bytes": 179550208,
+      "bytes": 47232,
+      "directory_record_offset": 31656
+    },
+    {
+      "candidate_name": "CARS\\GTI\\VINYLS.BIN",
+      "hash": "035e8e30",
+      "archive": 1,
+      "offset_bytes": 179599360,
+      "bytes": 2082432,
+      "directory_record_offset": 480
+    },
+    {
+      "candidate_name": "CARS\\GTO\\GEOMETRY.BIN",
+      "hash": "7ff4889d",
+      "archive": 1,
+      "offset_bytes": 181682176,
+      "bytes": 1394880,
+      "directory_record_offset": 15768
+    },
+    {
+      "candidate_name": "CARS\\GTO\\PREVINYL.BIN",
+      "hash": "e0c117ea",
+      "archive": 1,
+      "offset_bytes": 183078912,
+      "bytes": 7360,
+      "directory_record_offset": 28416
+    },
+    {
+      "candidate_name": "CARS\\GTO\\TEXTURES.BIN",
+      "hash": "5b7fa915",
+      "archive": 1,
+      "offset_bytes": 183087104,
+      "bytes": 64128,
+      "directory_record_offset": 11712
+    },
+    {
+      "candidate_name": "CARS\\GTO\\VINYLS.BIN",
+      "hash": "2912be76",
+      "archive": 1,
+      "offset_bytes": 183152640,
+      "bytes": 2092736,
+      "directory_record_offset": 5064
+    },
+    {
+      "candidate_name": "CARS\\IMPREZAWRX\\GEOMETRY.BIN",
+      "hash": "5bec9d8c",
+      "archive": 1,
+      "offset_bytes": 205531136,
+      "bytes": 1457920,
+      "directory_record_offset": 11808
+    },
+    {
+      "candidate_name": "CARS\\IMPREZAWRX\\PREVINYL.BIN",
+      "hash": "bcb92cd9",
+      "archive": 1,
+      "offset_bytes": 206989312,
+      "bytes": 7424,
+      "directory_record_offset": 23568
+    },
+    {
+      "candidate_name": "CARS\\IMPREZAWRX\\TEXTURES.BIN",
+      "hash": "3777be04",
+      "archive": 1,
+      "offset_bytes": 206997504,
+      "bytes": 62016,
+      "directory_record_offset": 6984
+    },
+    {
+      "candidate_name": "CARS\\IMPREZAWRX\\VINYLS.BIN",
+      "hash": "14d2cba5",
+      "archive": 1,
+      "offset_bytes": 207060992,
+      "bytes": 2195456,
+      "directory_record_offset": 2640
+    },
+    {
+      "candidate_name": "CARS\\IS300\\GEOMETRY.BIN",
+      "hash": "1d0b2422",
+      "archive": 1,
+      "offset_bytes": 209256448,
+      "bytes": 1390784,
+      "directory_record_offset": 3408
+    },
+    {
+      "candidate_name": "CARS\\IS300\\PREVINYL.BIN",
+      "hash": "7dd7b36f",
+      "archive": 1,
+      "offset_bytes": 210649088,
+      "bytes": 7424,
+      "directory_record_offset": 15456
+    },
+    {
+      "candidate_name": "CARS\\IS300\\TEXTURES.BIN",
+      "hash": "f896449a",
+      "archive": 1,
+      "offset_bytes": 210657280,
+      "bytes": 66176,
+      "directory_record_offset": 31680
+    },
+    {
+      "candidate_name": "CARS\\IS300\\VINYLS.BIN",
+      "hash": "7652b4bb",
+      "archive": 1,
+      "offset_bytes": 210724864,
+      "bytes": 2224896,
+      "directory_record_offset": 14568
+    },
+    {
+      "candidate_name": "CARS\\LANCEREVO8\\GEOMETRY.BIN",
+      "hash": "38b8214a",
+      "archive": 1,
+      "offset_bytes": 212951040,
+      "bytes": 1657600,
+      "directory_record_offset": 7128
+    },
+    {
+      "candidate_name": "CARS\\LANCEREVO8\\PREVINYL.BIN",
+      "hash": "9984b097",
+      "archive": 1,
+      "offset_bytes": 214609920,
+      "bytes": 7360,
+      "directory_record_offset": 19368
+    },
+    {
+      "candidate_name": "CARS\\LANCEREVO8\\TEXTURES.BIN",
+      "hash": "144341c2",
+      "archive": 1,
+      "offset_bytes": 214618112,
+      "bytes": 72960,
+      "directory_record_offset": 2496
+    },
+    {
+      "candidate_name": "CARS\\LANCEREVO8\\VINYLS.BIN",
+      "hash": "04ce47e3",
+      "archive": 1,
+      "offset_bytes": 214691840,
+      "bytes": 2114304,
+      "directory_record_offset": 552
+    },
+    {
+      "candidate_name": "CARS\\MINIVAN\\GEOMETRY.BIN",
+      "hash": "bb8e87e5",
+      "archive": 1,
+      "offset_bytes": 216807424,
+      "bytes": 78976,
+      "directory_record_offset": 23520
+    },
+    {
+      "candidate_name": "CARS\\MINIVAN\\PREVINYL.BIN",
+      "hash": "1c5b1732",
+      "archive": 1,
+      "offset_bytes": 216887296,
+      "bytes": 0,
+      "directory_record_offset": 3360
+    },
+    {
+      "candidate_name": "CARS\\MINIVAN\\TEXTURES.BIN",
+      "hash": "9719a85d",
+      "archive": 1,
+      "offset_bytes": 216887296,
+      "bytes": 4608,
+      "directory_record_offset": 19200
+    },
+    {
+      "candidate_name": "CARS\\MINIVAN\\VINYLS.BIN",
+      "hash": "1e144bbe",
+      "archive": 1,
+      "offset_bytes": 216893440,
+      "bytes": 0,
+      "directory_record_offset": 3576
+    },
+    {
+      "candidate_name": "CARS\\MONARO\\GEOMETRY.BIN",
+      "hash": "d30cbd5f",
+      "archive": 1,
+      "offset_bytes": 216893440,
+      "bytes": 1456576,
+      "directory_record_offset": 26880
+    },
+    {
+      "candidate_name": "CARS\\MONARO\\PREVINYL.BIN",
+      "hash": "33d94cac",
+      "archive": 1,
+      "offset_bytes": 218351616,
+      "bytes": 7360,
+      "directory_record_offset": 6456
+    },
+    {
+      "candidate_name": "CARS\\MONARO\\TEXTURES.BIN",
+      "hash": "ae97ddd7",
+      "archive": 1,
+      "offset_bytes": 218359808,
+      "bytes": 65472,
+      "directory_record_offset": 22176
+    },
+    {
+      "candidate_name": "CARS\\MONARO\\VINYLS.BIN",
+      "hash": "53b2dab8",
+      "archive": 1,
+      "offset_bytes": 218425344,
+      "bytes": 2180864,
+      "directory_record_offset": 10728
+    },
+    {
+      "candidate_name": "CARS\\MURCIELAGO\\GEOMETRY.BIN",
+      "hash": "23042dfb",
+      "archive": 1,
+      "offset_bytes": 220606464,
+      "bytes": 853952,
+      "directory_record_offset": 4512
+    },
+    {
+      "candidate_name": "CARS\\MURCIELAGO\\PREVINYL.BIN",
+      "hash": "83d0bd48",
+      "archive": 1,
+      "offset_bytes": 221460480,
+      "bytes": 6848,
+      "directory_record_offset": 16416
+    },
+    {
+      "candidate_name": "CARS\\MURCIELAGO\\TEXTURES.BIN",
+      "hash": "fe8f4e73",
+      "archive": 1,
+      "offset_bytes": 221468672,
+      "bytes": 48512,
+      "directory_record_offset": 32544
+    },
+    {
+      "candidate_name": "CARS\\MURCIELAGO\\VINYLS.BIN",
+      "hash": "3e9d7454",
+      "archive": 1,
+      "offset_bytes": 221517824,
+      "bytes": 2173824,
+      "directory_record_offset": 7800
+    },
+    {
+      "candidate_name": "CARS\\MUSTANGGT\\GEOMETRY.BIN",
+      "hash": "aea07dad",
+      "archive": 1,
+      "offset_bytes": 223692800,
+      "bytes": 1385152,
+      "directory_record_offset": 22200
+    },
+    {
+      "candidate_name": "CARS\\MUSTANGGT\\PREVINYL.BIN",
+      "hash": "0f6d0cfa",
+      "archive": 1,
+      "offset_bytes": 225079296,
+      "bytes": 7232,
+      "directory_record_offset": 1968
+    },
+    {
+      "candidate_name": "CARS\\MUSTANGGT\\TEXTURES.BIN",
+      "hash": "8a2b9e25",
+      "archive": 1,
+      "offset_bytes": 225087488,
+      "bytes": 68096,
+      "directory_record_offset": 17568
+    },
+    {
+      "candidate_name": "CARS\\MUSTANGGT\\VINYLS.BIN",
+      "hash": "a71e2f86",
+      "archive": 1,
+      "offset_bytes": 225157120,
+      "bytes": 2146112,
+      "directory_record_offset": 20880
+    },
+    {
+      "candidate_name": "CARS\\PICKUPA\\GEOMETRY.BIN",
+      "hash": "8d7bbae0",
+      "archive": 1,
+      "offset_bytes": 227303424,
+      "bytes": 71872,
+      "directory_record_offset": 17856
+    },
+    {
+      "candidate_name": "CARS\\PICKUPA\\PREVINYL.BIN",
+      "hash": "ee484a2d",
+      "archive": 1,
+      "offset_bytes": 227377152,
+      "bytes": 0,
+      "directory_record_offset": 30432
+    },
+    {
+      "candidate_name": "CARS\\PICKUPA\\TEXTURES.BIN",
+      "hash": "6906db58",
+      "archive": 1,
+      "offset_bytes": 227377152,
+      "bytes": 10560,
+      "directory_record_offset": 13056
+    },
+    {
+      "candidate_name": "CARS\\PICKUPA\\VINYLS.BIN",
+      "hash": "979283f9",
+      "archive": 1,
+      "offset_bytes": 227389440,
+      "bytes": 0,
+      "directory_record_offset": 19248
+    },
+    {
+      "candidate_name": "CARS\\PIZZA\\GEOMETRY.BIN",
+      "hash": "7837d9a1",
+      "archive": 1,
+      "offset_bytes": 227389440,
+      "bytes": 80320,
+      "directory_record_offset": 14856
+    },
+    {
+      "candidate_name": "CARS\\PIZZA\\PREVINYL.BIN",
+      "hash": "d90468ee",
+      "archive": 1,
+      "offset_bytes": 227471360,
+      "bytes": 0,
+      "directory_record_offset": 27648
+    },
+    {
+      "candidate_name": "CARS\\PIZZA\\TEXTURES.BIN",
+      "hash": "53c2fa19",
+      "archive": 1,
+      "offset_bytes": 227471360,
+      "bytes": 9984,
+      "directory_record_offset": 10752
+    },
+    {
+      "candidate_name": "CARS\\PIZZA\\VINYLS.BIN",
+      "hash": "b785fe7a",
+      "archive": 1,
+      "offset_bytes": 227481600,
+      "bytes": 0,
+      "directory_record_offset": 23016
+    },
+    {
+      "candidate_name": "CARS\\PUNTO\\GEOMETRY.BIN",
+      "hash": "31c73f69",
+      "archive": 1,
+      "offset_bytes": 227481600,
+      "bytes": 1314880,
+      "directory_record_offset": 6144
+    },
+    {
+      "candidate_name": "CARS\\PUNTO\\PREVINYL.BIN",
+      "hash": "9293ceb6",
+      "archive": 1,
+      "offset_bytes": 228798464,
+      "bytes": 0,
+      "directory_record_offset": 18552
+    },
+    {
+      "candidate_name": "CARS\\PUNTO\\TEXTURES.BIN",
+      "hash": "0d525fe1",
+      "archive": 1,
+      "offset_bytes": 228798464,
+      "bytes": 60864,
+      "directory_record_offset": 1704
+    },
+    {
+      "candidate_name": "CARS\\PUNTO\\VINYLS.BIN",
+      "hash": "68f15242",
+      "archive": 1,
+      "offset_bytes": 228859904,
+      "bytes": 2039040,
+      "directory_record_offset": 13032
+    },
+    {
+      "candidate_name": "CARS\\RX7\\GEOMETRY.BIN",
+      "hash": "05557934",
+      "archive": 1,
+      "offset_bytes": 230899712,
+      "bytes": 1392384,
+      "directory_record_offset": 672
+    },
+    {
+      "candidate_name": "CARS\\RX7\\PREVINYL.BIN",
+      "hash": "66220881",
+      "archive": 1,
+      "offset_bytes": 232292352,
+      "bytes": 6656,
+      "directory_record_offset": 12744
+    },
+    {
+      "candidate_name": "CARS\\RX7\\TEXTURES.BIN",
+      "hash": "e0e099ac",
+      "archive": 1,
+      "offset_bytes": 232300544,
+      "bytes": 65344,
+      "directory_record_offset": 28464
+    },
+    {
+      "candidate_name": "CARS\\RX7\\VINYLS.BIN",
+      "hash": "5b809d4d",
+      "archive": 1,
+      "offset_bytes": 232366080,
+      "bytes": 1856384,
+      "directory_record_offset": 11736
+    },
+    {
+      "candidate_name": "CARS\\RX8SPEEDT\\GEOMETRY.BIN",
+      "hash": "6d8b10ba",
+      "archive": 1,
+      "offset_bytes": 237842432,
+      "bytes": 379008,
+      "directory_record_offset": 13488
+    },
+    {
+      "candidate_name": "CARS\\RX8SPEEDT\\PREVINYL.BIN",
+      "hash": "ce57a007",
+      "archive": 1,
+      "offset_bytes": 238223360,
+      "bytes": 4352,
+      "directory_record_offset": 26280
+    },
+    {
+      "candidate_name": "CARS\\RX8SPEEDT\\TEXTURES.BIN",
+      "hash": "49163132",
+      "archive": 1,
+      "offset_bytes": 238229504,
+      "bytes": 57856,
+      "directory_record_offset": 9288
+    },
+    {
+      "candidate_name": "CARS\\RX8SPEEDT\\VINYLS.BIN",
+      "hash": "9c3e9b53",
+      "archive": 1,
+      "offset_bytes": 238288896,
+      "bytes": 118784,
+      "directory_record_offset": 19608
+    },
+    {
+      "candidate_name": "CARS\\RX8\\GEOMETRY.BIN",
+      "hash": "4095b2d5",
+      "archive": 1,
+      "offset_bytes": 234223616,
+      "bytes": 1497920,
+      "directory_record_offset": 7992
+    },
+    {
+      "candidate_name": "CARS\\RX8\\PREVINYL.BIN",
+      "hash": "a1624222",
+      "archive": 1,
+      "offset_bytes": 235722752,
+      "bytes": 7680,
+      "directory_record_offset": 20400
+    },
+    {
+      "candidate_name": "CARS\\RX8\\TEXTURES.BIN",
+      "hash": "1c20d34d",
+      "archive": 1,
+      "offset_bytes": 235730944,
+      "bytes": 58944,
+      "directory_record_offset": 3312
+    },
+    {
+      "candidate_name": "CARS\\RX8\\VINYLS.BIN",
+      "hash": "8c73faae",
+      "archive": 1,
+      "offset_bytes": 235790336,
+      "bytes": 2051904,
+      "directory_record_offset": 17784
+    },
+    {
+      "candidate_name": "CARS\\SEMI\\GEOMETRY.BIN",
+      "hash": "0d1bdda1",
+      "archive": 1,
+      "offset_bytes": 238407680,
+      "bytes": 84864,
+      "directory_record_offset": 1680
+    },
+    {
+      "candidate_name": "CARS\\SEMI\\TEXTURES.BIN",
+      "hash": "e8a6fe19",
+      "archive": 1,
+      "offset_bytes": 238493696,
+      "bytes": 22080,
+      "directory_record_offset": 29712
+    },
+    {
+      "candidate_name": "CARS\\SEMI\\VINYLS.BIN",
+      "hash": "fb99027a",
+      "archive": 1,
+      "offset_bytes": 238516224,
+      "bytes": 0,
+      "directory_record_offset": 32088
+    },
+    {
+      "candidate_name": "CARS\\SL500\\GEOMETRY.BIN",
+      "hash": "7e5d9727",
+      "archive": 1,
+      "offset_bytes": 238516224,
+      "bytes": 1790720,
+      "directory_record_offset": 15576
+    },
+    {
+      "candidate_name": "CARS\\SL500\\PREVINYL.BIN",
+      "hash": "df2a2674",
+      "archive": 1,
+      "offset_bytes": 240308224,
+      "bytes": 6848,
+      "directory_record_offset": 28296
+    },
+    {
+      "candidate_name": "CARS\\SL500\\TEXTURES.BIN",
+      "hash": "59e8b79f",
+      "archive": 1,
+      "offset_bytes": 240316416,
+      "bytes": 56832,
+      "directory_record_offset": 11448
+    },
+    {
+      "candidate_name": "CARS\\SL500\\VINYLS.BIN",
+      "hash": "eff2a280",
+      "archive": 1,
+      "offset_bytes": 240373760,
+      "bytes": 2004352,
+      "directory_record_offset": 30576
+    },
+    {
+      "candidate_name": "CARS\\SL65\\GEOMETRY.BIN",
+      "hash": "162089dd",
+      "archive": 1,
+      "offset_bytes": 242378752,
+      "bytes": 396672,
+      "directory_record_offset": 2760
+    },
+    {
+      "candidate_name": "CARS\\SL65\\PREVINYL.BIN",
+      "hash": "76ed192a",
+      "archive": 1,
+      "offset_bytes": 242776064,
+      "bytes": 6848,
+      "directory_record_offset": 14760
+    },
+    {
+      "candidate_name": "CARS\\SL65\\TEXTURES.BIN",
+      "hash": "f1abaa55",
+      "archive": 1,
+      "offset_bytes": 242784256,
+      "bytes": 57344,
+      "directory_record_offset": 30792
+    },
+    {
+      "candidate_name": "CARS\\SL65\\VINYLS.BIN",
+      "hash": "a5cd6fb6",
+      "archive": 1,
+      "offset_bytes": 242841600,
+      "bytes": 1853504,
+      "directory_record_offset": 20712
+    },
+    {
+      "candidate_name": "CARS\\SLR\\GEOMETRY.BIN",
+      "hash": "a9f78e04",
+      "archive": 1,
+      "offset_bytes": 244697088,
+      "bytes": 1221696,
+      "directory_record_offset": 21216
+    },
+    {
+      "candidate_name": "CARS\\SLR\\PREVINYL.BIN",
+      "hash": "0ac41d51",
+      "archive": 1,
+      "offset_bytes": 245919744,
+      "bytes": 7360,
+      "directory_record_offset": 1320
+    },
+    {
+      "candidate_name": "CARS\\SLR\\TEXTURES.BIN",
+      "hash": "8582ae7c",
+      "archive": 1,
+      "offset_bytes": 245927936,
+      "bytes": 56512,
+      "directory_record_offset": 16752
+    },
+    {
+      "candidate_name": "CARS\\SLR\\VINYLS.BIN",
+      "hash": "07f73e1d",
+      "archive": 1,
+      "offset_bytes": 245985280,
+      "bytes": 1975808,
+      "directory_record_offset": 984
+    },
+    {
+      "candidate_name": "CARS\\SUPRA\\GEOMETRY.BIN",
+      "hash": "9061ef3e",
+      "archive": 1,
+      "offset_bytes": 247961600,
+      "bytes": 1378880,
+      "directory_record_offset": 18072
+    },
+    {
+      "candidate_name": "CARS\\SUPRA\\PREVINYL.BIN",
+      "hash": "f12e7e8b",
+      "archive": 1,
+      "offset_bytes": 249341952,
+      "bytes": 6720,
+      "directory_record_offset": 30624
+    },
+    {
+      "candidate_name": "CARS\\SUPRA\\TEXTURES.BIN",
+      "hash": "6bed0fb6",
+      "archive": 1,
+      "offset_bytes": 249350144,
+      "bytes": 32064,
+      "directory_record_offset": 13296
+    },
+    {
+      "candidate_name": "CARS\\SUPRA\\VINYLS.BIN",
+      "hash": "b80408d7",
+      "archive": 1,
+      "offset_bytes": 249382912,
+      "bytes": 1990272,
+      "directory_record_offset": 23088
+    },
+    {
+      "candidate_name": "CARS\\TAXI\\GEOMETRY.BIN",
+      "hash": "7332df69",
+      "archive": 1,
+      "offset_bytes": 251373568,
+      "bytes": 75136,
+      "directory_record_offset": 14232
+    },
+    {
+      "candidate_name": "CARS\\TAXI\\PREVINYL.BIN",
+      "hash": "d3ff6eb6",
+      "archive": 1,
+      "offset_bytes": 251449344,
+      "bytes": 0,
+      "directory_record_offset": 26952
+    },
+    {
+      "candidate_name": "CARS\\TAXI\\TEXTURES.BIN",
+      "hash": "4ebdffe1",
+      "archive": 1,
+      "offset_bytes": 251449344,
+      "bytes": 9280,
+      "directory_record_offset": 10008
+    },
+    {
+      "candidate_name": "CARS\\TAXI\\VINYLS.BIN",
+      "hash": "1af4f242",
+      "archive": 1,
+      "offset_bytes": 251459584,
+      "bytes": 0,
+      "directory_record_offset": 3240
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDA\\GEOMETRY.BIN",
+      "hash": "e47f5df5",
+      "archive": 1,
+      "offset_bytes": 264140800,
+      "bytes": 38592,
+      "directory_record_offset": 28776
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDA\\TEXTURES.BIN",
+      "hash": "c00a7e6d",
+      "archive": 1,
+      "offset_bytes": 264179712,
+      "bytes": 5824,
+      "directory_record_offset": 23904
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDA\\VINYLS.BIN",
+      "hash": "cdb85dce",
+      "archive": 1,
+      "offset_bytes": 264185856,
+      "bytes": 0,
+      "directory_record_offset": 26160
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDB\\GEOMETRY.BIN",
+      "hash": "1fbf9796",
+      "archive": 1,
+      "offset_bytes": 264185856,
+      "bytes": 42048,
+      "directory_record_offset": 4032
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDB\\TEXTURES.BIN",
+      "hash": "fb4ab80e",
+      "archive": 1,
+      "offset_bytes": 264228864,
+      "bytes": 4480,
+      "directory_record_offset": 32064
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDB\\VINYLS.BIN",
+      "hash": "feabbb2f",
+      "archive": 1,
+      "offset_bytes": 264235008,
+      "bytes": 0,
+      "directory_record_offset": 32568
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDC\\GEOMETRY.BIN",
+      "hash": "5affd137",
+      "archive": 1,
+      "offset_bytes": 264235008,
+      "bytes": 44288,
+      "directory_record_offset": 11664
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDC\\TEXTURES.BIN",
+      "hash": "368af1af",
+      "archive": 1,
+      "offset_bytes": 264280064,
+      "bytes": 7040,
+      "directory_record_offset": 6816
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDC\\VINYLS.BIN",
+      "hash": "2f9f1890",
+      "archive": 1,
+      "offset_bytes": 264288256,
+      "bytes": 0,
+      "directory_record_offset": 5832
+    },
+    {
+      "candidate_name": "CARS\\TRAFAMB\\GEOMETRY.BIN",
+      "hash": "989b5930",
+      "archive": 1,
+      "offset_bytes": 264288256,
+      "bytes": 47872,
+      "directory_record_offset": 19296
+    },
+    {
+      "candidate_name": "CARS\\TRAFAMB\\TEXTURES.BIN",
+      "hash": "742679a8",
+      "archive": 1,
+      "offset_bytes": 264337408,
+      "bytes": 7360,
+      "directory_record_offset": 14352
+    },
+    {
+      "candidate_name": "CARS\\TRAFAMB\\VINYLS.BIN",
+      "hash": "d2964e49",
+      "archive": 1,
+      "offset_bytes": 264345600,
+      "bytes": 0,
+      "directory_record_offset": 26808
+    },
+    {
+      "candidate_name": "CARS\\TRAFCAMPER\\GEOMETRY.BIN",
+      "hash": "1ec18b78",
+      "archive": 1,
+      "offset_bytes": 264345600,
+      "bytes": 17408,
+      "directory_record_offset": 3744
+    },
+    {
+      "candidate_name": "CARS\\TRAFCAMPER\\TEXTURES.BIN",
+      "hash": "fa4cabf0",
+      "archive": 1,
+      "offset_bytes": 264364032,
+      "bytes": 8704,
+      "directory_record_offset": 31944
+    },
+    {
+      "candidate_name": "CARS\\TRAFCAMPER\\VINYLS.BIN",
+      "hash": "8b7b4e91",
+      "archive": 1,
+      "offset_bytes": 264374272,
+      "bytes": 0,
+      "directory_record_offset": 17688
+    },
+    {
+      "candidate_name": "CARS\\TRAFCEMTR\\GEOMETRY.BIN",
+      "hash": "a75f133b",
+      "archive": 1,
+      "offset_bytes": 264374272,
+      "bytes": 85888,
+      "directory_record_offset": 20952
+    },
+    {
+      "candidate_name": "CARS\\TRAFCEMTR\\TEXTURES.BIN",
+      "hash": "82ea33b3",
+      "archive": 1,
+      "offset_bytes": 264460288,
+      "bytes": 10816,
+      "directory_record_offset": 16176
+    },
+    {
+      "candidate_name": "CARS\\TRAFCEMTR\\VINYLS.BIN",
+      "hash": "c87e0994",
+      "archive": 1,
+      "offset_bytes": 264472576,
+      "bytes": 0,
+      "directory_record_offset": 25464
+    },
+    {
+      "candidate_name": "CARS\\TRAFCOURT\\GEOMETRY.BIN",
+      "hash": "f57cae0d",
+      "archive": 1,
+      "offset_bytes": 264472576,
+      "bytes": 47168,
+      "directory_record_offset": 31368
+    },
+    {
+      "candidate_name": "CARS\\TRAFCOURT\\TEXTURES.BIN",
+      "hash": "d107ce85",
+      "archive": 1,
+      "offset_bytes": 264521728,
+      "bytes": 6144,
+      "directory_record_offset": 26592
+    },
+    {
+      "candidate_name": "CARS\\TRAFCOURT\\VINYLS.BIN",
+      "hash": "c672c7e6",
+      "archive": 1,
+      "offset_bytes": 264527872,
+      "bytes": 0,
+      "directory_record_offset": 25032
+    },
+    {
+      "candidate_name": "CARS\\TRAFDMPTR\\GEOMETRY.BIN",
+      "hash": "50e3b707",
+      "archive": 1,
+      "offset_bytes": 264527872,
+      "bytes": 68864,
+      "directory_record_offset": 10272
+    },
+    {
+      "candidate_name": "CARS\\TRAFDMPTR\\TEXTURES.BIN",
+      "hash": "2c6ed77f",
+      "archive": 1,
+      "offset_bytes": 264597504,
+      "bytes": 16640,
+      "directory_record_offset": 5496
+    },
+    {
+      "candidate_name": "CARS\\TRAFDMPTR\\VINYLS.BIN",
+      "hash": "a0af4a60",
+      "archive": 1,
+      "offset_bytes": 264615936,
+      "bytes": 0,
+      "directory_record_offset": 20280
+    },
+    {
+      "candidate_name": "CARS\\TRAFFICCOUP\\GEOMETRY.BIN",
+      "hash": "cd04fcc9",
+      "archive": 1,
+      "offset_bytes": 264615936,
+      "bytes": 40768,
+      "directory_record_offset": 26016
+    },
+    {
+      "candidate_name": "CARS\\TRAFFICCOUP\\TEXTURES.BIN",
+      "hash": "a8901d41",
+      "archive": 1,
+      "offset_bytes": 264656896,
+      "bytes": 4672,
+      "directory_record_offset": 21024
+    },
+    {
+      "candidate_name": "CARS\\TRAFFICCOUP\\VINYLS.BIN",
+      "hash": "4ce037a2",
+      "archive": 1,
+      "offset_bytes": 264663040,
+      "bytes": 0,
+      "directory_record_offset": 9744
+    },
+    {
+      "candidate_name": "CARS\\TRAFFIRE\\GEOMETRY.BIN",
+      "hash": "4af50446",
+      "archive": 1,
+      "offset_bytes": 264663040,
+      "bytes": 60352,
+      "directory_record_offset": 9480
+    },
+    {
+      "candidate_name": "CARS\\TRAFFIRE\\TEXTURES.BIN",
+      "hash": "268024be",
+      "archive": 1,
+      "offset_bytes": 264724480,
+      "bytes": 6912,
+      "directory_record_offset": 4920
+    },
+    {
+      "candidate_name": "CARS\\TRAFFIRE\\VINYLS.BIN",
+      "hash": "bb3e3bdf",
+      "archive": 1,
+      "offset_bytes": 264732672,
+      "bytes": 0,
+      "directory_record_offset": 23424
+    },
+    {
+      "candidate_name": "CARS\\TRAFGARB\\GEOMETRY.BIN",
+      "hash": "ca650a5c",
+      "archive": 1,
+      "offset_bytes": 264732672,
+      "bytes": 58432,
+      "directory_record_offset": 25680
+    },
+    {
+      "candidate_name": "CARS\\TRAFGARB\\TEXTURES.BIN",
+      "hash": "a5f02ad4",
+      "archive": 1,
+      "offset_bytes": 264792064,
+      "bytes": 9984,
+      "directory_record_offset": 20736
+    },
+    {
+      "candidate_name": "CARS\\TRAFGARB\\VINYLS.BIN",
+      "hash": "f1a9c475",
+      "archive": 1,
+      "offset_bytes": 264802304,
+      "bytes": 0,
+      "directory_record_offset": 30768
+    },
+    {
+      "candidate_name": "CARS\\TRAFHA\\GEOMETRY.BIN",
+      "hash": "9cf3c289",
+      "archive": 1,
+      "offset_bytes": 264802304,
+      "bytes": 41920,
+      "directory_record_offset": 19824
+    },
+    {
+      "candidate_name": "CARS\\TRAFHA\\TEXTURES.BIN",
+      "hash": "787ee301",
+      "archive": 1,
+      "offset_bytes": 264845312,
+      "bytes": 8640,
+      "directory_record_offset": 14904
+    },
+    {
+      "candidate_name": "CARS\\TRAFHA\\VINYLS.BIN",
+      "hash": "92e28d62",
+      "archive": 1,
+      "offset_bytes": 264855552,
+      "bytes": 0,
+      "directory_record_offset": 18648
+    },
+    {
+      "candidate_name": "CARS\\TRAFMINIVAN\\GEOMETRY.BIN",
+      "hash": "2b8507b2",
+      "archive": 1,
+      "offset_bytes": 264855552,
+      "bytes": 39744,
+      "directory_record_offset": 5352
+    },
+    {
+      "candidate_name": "CARS\\TRAFMINIVAN\\TEXTURES.BIN",
+      "hash": "0710282a",
+      "archive": 1,
+      "offset_bytes": 264896512,
+      "bytes": 4608,
+      "directory_record_offset": 912
+    },
+    {
+      "candidate_name": "CARS\\TRAFMINIVAN\\VINYLS.BIN",
+      "hash": "32de744b",
+      "archive": 1,
+      "offset_bytes": 264902656,
+      "bytes": 0,
+      "directory_record_offset": 6360
+    },
+    {
+      "candidate_name": "CARS\\TRAFNEWS\\GEOMETRY.BIN",
+      "hash": "1ed7c85d",
+      "archive": 1,
+      "offset_bytes": 264902656,
+      "bytes": 58688,
+      "directory_record_offset": 3768
+    },
+    {
+      "candidate_name": "CARS\\TRAFNEWS\\TEXTURES.BIN",
+      "hash": "fa62e8d5",
+      "archive": 1,
+      "offset_bytes": 264962048,
+      "bytes": 11264,
+      "directory_record_offset": 31968
+    },
+    {
+      "candidate_name": "CARS\\TRAFNEWS\\VINYLS.BIN",
+      "hash": "22a30e36",
+      "archive": 1,
+      "offset_bytes": 264974336,
+      "bytes": 0,
+      "directory_record_offset": 4440
+    },
+    {
+      "candidate_name": "CARS\\TRAFPICKUPA\\GEOMETRY.BIN",
+      "hash": "fd723aad",
+      "archive": 1,
+      "offset_bytes": 264974336,
+      "bytes": 38080,
+      "directory_record_offset": 32352
+    },
+    {
+      "candidate_name": "CARS\\TRAFPICKUPA\\TEXTURES.BIN",
+      "hash": "d8fd5b25",
+      "archive": 1,
+      "offset_bytes": 265013248,
+      "bytes": 10560,
+      "directory_record_offset": 27624
+    },
+    {
+      "candidate_name": "CARS\\TRAFPICKUPA\\VINYLS.BIN",
+      "hash": "ac5cac86",
+      "archive": 1,
+      "offset_bytes": 265025536,
+      "bytes": 0,
+      "directory_record_offset": 21864
+    },
+    {
+      "candidate_name": "CARS\\TRAFPIZZA\\GEOMETRY.BIN",
+      "hash": "8d02022e",
+      "archive": 1,
+      "offset_bytes": 265025536,
+      "bytes": 43264,
+      "directory_record_offset": 17808
+    },
+    {
+      "candidate_name": "CARS\\TRAFPIZZA\\TEXTURES.BIN",
+      "hash": "688d22a6",
+      "archive": 1,
+      "offset_bytes": 265070592,
+      "bytes": 9984,
+      "directory_record_offset": 12960
+    },
+    {
+      "candidate_name": "CARS\\TRAFPIZZA\\VINYLS.BIN",
+      "hash": "92a29fc7",
+      "archive": 1,
+      "offset_bytes": 265080832,
+      "bytes": 0,
+      "directory_record_offset": 18624
+    },
+    {
+      "candidate_name": "CARS\\TRAFSTWAG\\GEOMETRY.BIN",
+      "hash": "f3894ee6",
+      "archive": 1,
+      "offset_bytes": 265080832,
+      "bytes": 46912,
+      "directory_record_offset": 31104
+    },
+    {
+      "candidate_name": "CARS\\TRAFSTWAG\\TEXTURES.BIN",
+      "hash": "cf146f5e",
+      "archive": 1,
+      "offset_bytes": 265127936,
+      "bytes": 8320,
+      "directory_record_offset": 26376
+    },
+    {
+      "candidate_name": "CARS\\TRAFSTWAG\\VINYLS.BIN",
+      "hash": "6eff5e7f",
+      "archive": 1,
+      "offset_bytes": 265138176,
+      "bytes": 0,
+      "directory_record_offset": 13752
+    },
+    {
+      "candidate_name": "CARS\\TRAFSUVA\\GEOMETRY.BIN",
+      "hash": "f2a0155f",
+      "archive": 1,
+      "offset_bytes": 265138176,
+      "bytes": 38400,
+      "directory_record_offset": 30960
+    },
+    {
+      "candidate_name": "CARS\\TRAFSUVA\\TEXTURES.BIN",
+      "hash": "ce2b35d7",
+      "archive": 1,
+      "offset_bytes": 265177088,
+      "bytes": 5952,
+      "directory_record_offset": 26184
+    },
+    {
+      "candidate_name": "CARS\\TRAFSUVA\\VINYLS.BIN",
+      "hash": "469032b8",
+      "archive": 1,
+      "offset_bytes": 265183232,
+      "bytes": 0,
+      "directory_record_offset": 9000
+    },
+    {
+      "candidate_name": "CARS\\TRAFTAXI\\GEOMETRY.BIN",
+      "hash": "b1e3aa56",
+      "archive": 1,
+      "offset_bytes": 265183232,
+      "bytes": 38912,
+      "directory_record_offset": 22416
+    },
+    {
+      "candidate_name": "CARS\\TRAFTAXI\\TEXTURES.BIN",
+      "hash": "8d6ecace",
+      "archive": 1,
+      "offset_bytes": 265222144,
+      "bytes": 9344,
+      "directory_record_offset": 17832
+    },
+    {
+      "candidate_name": "CARS\\TRAFTAXI\\VINYLS.BIN",
+      "hash": "6f2c1def",
+      "archive": 1,
+      "offset_bytes": 265232384,
+      "bytes": 0,
+      "directory_record_offset": 13776
+    },
+    {
+      "candidate_name": "CARS\\TRAFVANB\\GEOMETRY.BIN",
+      "hash": "d80b9167",
+      "archive": 1,
+      "offset_bytes": 265232384,
+      "bytes": 37248,
+      "directory_record_offset": 27480
+    },
+    {
+      "candidate_name": "CARS\\TRAFVANB\\TEXTURES.BIN",
+      "hash": "b396b1df",
+      "archive": 1,
+      "offset_bytes": 265271296,
+      "bytes": 5056,
+      "directory_record_offset": 22560
+    },
+    {
+      "candidate_name": "CARS\\TRAFVANB\\VINYLS.BIN",
+      "hash": "455d0cc0",
+      "archive": 1,
+      "offset_bytes": 265277440,
+      "bytes": 0,
+      "directory_record_offset": 8856
+    },
+    {
+      "candidate_name": "CARS\\TRAILERA\\GEOMETRY.BIN",
+      "hash": "687d38a7",
+      "archive": 1,
+      "offset_bytes": 263591936,
+      "bytes": 35584,
+      "directory_record_offset": 12912
+    },
+    {
+      "candidate_name": "CARS\\TRAILERA\\TEXTURES.BIN",
+      "hash": "4408591f",
+      "archive": 1,
+      "offset_bytes": 263628800,
+      "bytes": 24704,
+      "directory_record_offset": 8616
+    },
+    {
+      "candidate_name": "CARS\\TRAILERA\\VINYLS.BIN",
+      "hash": "02bbe400",
+      "archive": 1,
+      "offset_bytes": 263655424,
+      "bytes": 0,
+      "directory_record_offset": 432
+    },
+    {
+      "candidate_name": "CARS\\TRAILERB\\GEOMETRY.BIN",
+      "hash": "a3bd7248",
+      "archive": 1,
+      "offset_bytes": 263655424,
+      "bytes": 192896,
+      "directory_record_offset": 20544
+    },
+    {
+      "candidate_name": "CARS\\TRAILERB\\TEXTURES.BIN",
+      "hash": "7f4892c0",
+      "archive": 1,
+      "offset_bytes": 263849984,
+      "bytes": 9472,
+      "directory_record_offset": 15648
+    },
+    {
+      "candidate_name": "CARS\\TRAILERB\\VINYLS.BIN",
+      "hash": "33af4161",
+      "archive": 1,
+      "offset_bytes": 263860224,
+      "bytes": 0,
+      "directory_record_offset": 6432
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCMT\\GEOMETRY.BIN",
+      "hash": "4387964a",
+      "archive": 1,
+      "offset_bytes": 263860224,
+      "bytes": 62784,
+      "directory_record_offset": 8544
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCMT\\TEXTURES.BIN",
+      "hash": "1f12b6c2",
+      "archive": 1,
+      "offset_bytes": 263923712,
+      "bytes": 8192,
+      "directory_record_offset": 3792
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCMT\\VINYLS.BIN",
+      "hash": "bb3c7ce3",
+      "archive": 1,
+      "offset_bytes": 263931904,
+      "bytes": 0,
+      "directory_record_offset": 23400
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCON\\GEOMETRY.BIN",
+      "hash": "26951806",
+      "archive": 1,
+      "offset_bytes": 263931904,
+      "bytes": 43776,
+      "directory_record_offset": 4944
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCON\\TEXTURES.BIN",
+      "hash": "0220387e",
+      "archive": 1,
+      "offset_bytes": 263976960,
+      "bytes": 8128,
+      "directory_record_offset": 264
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCON\\VINYLS.BIN",
+      "hash": "34465f9f",
+      "archive": 1,
+      "offset_bytes": 263985152,
+      "bytes": 0,
+      "directory_record_offset": 6552
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCRATE\\GEOMETRY.BIN",
+      "hash": "e6b5d715",
+      "archive": 1,
+      "offset_bytes": 263985152,
+      "bytes": 53568,
+      "directory_record_offset": 29400
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCRATE\\TEXTURES.BIN",
+      "hash": "c240f78d",
+      "archive": 1,
+      "offset_bytes": 264040448,
+      "bytes": 8384,
+      "directory_record_offset": 24216
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCRATE\\VINYLS.BIN",
+      "hash": "37be0eee",
+      "archive": 1,
+      "offset_bytes": 264050688,
+      "bytes": 0,
+      "directory_record_offset": 7008
+    },
+    {
+      "candidate_name": "CARS\\TRAILERLOG\\GEOMETRY.BIN",
+      "hash": "f5b1d988",
+      "archive": 1,
+      "offset_bytes": 264050688,
+      "bytes": 77952,
+      "directory_record_offset": 31416
+    },
+    {
+      "candidate_name": "CARS\\TRAILERLOG\\TEXTURES.BIN",
+      "hash": "d13cfa00",
+      "archive": 1,
+      "offset_bytes": 264130560,
+      "bytes": 8512,
+      "directory_record_offset": 26640
+    },
+    {
+      "candidate_name": "CARS\\TRAILERLOG\\VINYLS.BIN",
+      "hash": "f2e0d8a1",
+      "archive": 1,
+      "offset_bytes": 264140800,
+      "bytes": 0,
+      "directory_record_offset": 31008
+    },
+    {
+      "candidate_name": "CARS\\TT\\GEOMETRY.BIN",
+      "hash": "55da02db",
+      "archive": 1,
+      "offset_bytes": 251459584,
+      "bytes": 1425600,
+      "directory_record_offset": 10944
+    },
+    {
+      "candidate_name": "CARS\\TT\\PREVINYL.BIN",
+      "hash": "b6a69228",
+      "archive": 1,
+      "offset_bytes": 252887040,
+      "bytes": 5952,
+      "directory_record_offset": 22896
+    },
+    {
+      "candidate_name": "CARS\\TT\\TEXTURES.BIN",
+      "hash": "31652353",
+      "archive": 1,
+      "offset_bytes": 252893184,
+      "bytes": 58880,
+      "directory_record_offset": 6048
+    },
+    {
+      "candidate_name": "CARS\\TT\\VINYLS.BIN",
+      "hash": "1e389134",
+      "archive": 1,
+      "offset_bytes": 252952576,
+      "bytes": 1882432,
+      "directory_record_offset": 3648
+    },
+    {
+      "candidate_name": "CARS\\VIPER\\GEOMETRY.BIN",
+      "hash": "1d10fe79",
+      "archive": 1,
+      "offset_bytes": 254836736,
+      "bytes": 1513856,
+      "directory_record_offset": 3432
+    },
+    {
+      "candidate_name": "CARS\\VIPER\\PREVINYL.BIN",
+      "hash": "7ddd8dc6",
+      "archive": 1,
+      "offset_bytes": 256352256,
+      "bytes": 7488,
+      "directory_record_offset": 15480
+    },
+    {
+      "candidate_name": "CARS\\VIPER\\TEXTURES.BIN",
+      "hash": "f89c1ef1",
+      "archive": 1,
+      "offset_bytes": 256360448,
+      "bytes": 65792,
+      "directory_record_offset": 31704
+    },
+    {
+      "candidate_name": "CARS\\VIPER\\VINYLS.BIN",
+      "hash": "6da00d52",
+      "archive": 1,
+      "offset_bytes": 256428032,
+      "bytes": 2005696,
+      "directory_record_offset": 13512
+    },
+    {
+      "candidate_name": "FRONTEND\\PLATFORMS\\CAREER_SAFEHOUSE.BIN",
+      "hash": "1ec09aca",
+      "archive": 1,
+      "offset_bytes": 88975360,
+      "bytes": 1528256,
+      "directory_record_offset": 3720
+    },
+    {
+      "candidate_name": "FRONTEND\\PLATFORMS\\CAR_LOT.BIN",
+      "hash": "2613369a",
+      "archive": 1,
+      "offset_bytes": 87947264,
+      "bytes": 1027040,
+      "directory_record_offset": 4824
+    },
+    {
+      "candidate_name": "FRONTEND\\PLATFORMS\\CUSTOMIZATION_SHOP.BIN",
+      "hash": "a679f888",
+      "archive": 1,
+      "offset_bytes": 90505216,
+      "bytes": 1376320,
+      "directory_record_offset": 20784
+    },
+    {
+      "candidate_name": "GLOBAL\\GAMEPLAY.BIN",
+      "hash": "51eafec3",
+      "archive": 1,
+      "offset_bytes": 267364352,
+      "bytes": 2103680,
+      "directory_record_offset": 10464
+    },
+    {
+      "candidate_name": "GLOBAL\\GAMEPLAY.BIN",
+      "hash": "51eafec3",
+      "archive": 1,
+      "offset_bytes": 277204992,
+      "bytes": 2103680,
+      "directory_record_offset": 10488
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_1.mpf",
+      "hash": "4268c649",
+      "archive": 1,
+      "offset_bytes": 335966208,
+      "bytes": 18112,
+      "directory_record_offset": 8256
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_1.mus",
+      "hash": "4268c6fb",
+      "archive": 2,
+      "offset_bytes": 225687552,
+      "bytes": 22730752,
+      "directory_record_offset": 8280
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_2.mpf",
+      "hash": "427adeca",
+      "archive": 1,
+      "offset_bytes": 335984640,
+      "bytes": 14212,
+      "directory_record_offset": 8304
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_2.mus",
+      "hash": "427adf7c",
+      "archive": 2,
+      "offset_bytes": 248418304,
+      "bytes": 22251264,
+      "directory_record_offset": 8328
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_3.mpf",
+      "hash": "428cf74b",
+      "archive": 1,
+      "offset_bytes": 335998976,
+      "bytes": 16332,
+      "directory_record_offset": 8352
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_3.mus",
+      "hash": "428cf7fd",
+      "archive": 2,
+      "offset_bytes": 270669824,
+      "bytes": 28529920,
+      "directory_record_offset": 8376
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_4.mpf",
+      "hash": "429f0fcc",
+      "archive": 1,
+      "offset_bytes": 336015360,
+      "bytes": 15700,
+      "directory_record_offset": 8424
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Mus_4.mus",
+      "hash": "429f107e",
+      "archive": 2,
+      "offset_bytes": 299200512,
+      "bytes": 31780096,
+      "directory_record_offset": 8448
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Music.mpf",
+      "hash": "105d0185",
+      "archive": 1,
+      "offset_bytes": 336031744,
+      "bytes": 8936,
+      "directory_record_offset": 2040
+    },
+    {
+      "candidate_name": "SOUND\\PFData\\MW_Music.mus",
+      "hash": "105d0237",
+      "archive": 3,
+      "offset_bytes": 0,
+      "bytes": 131595008,
+      "directory_record_offset": 2064
+    },
+    {
+      "candidate_name": "TRACKS\\PRECULLERBOOBOOSCRIPT.HOO",
+      "hash": "51ee2fba",
+      "archive": 1,
+      "offset_bytes": 299401216,
+      "bytes": 13471,
+      "directory_record_offset": 10536
+    }
+  ],
+  "original_group_strings": [
+    {
+      "text": "BARRIER_",
+      "file_offset": 4221892,
+      "address": "80409bc4"
+    },
+    {
+      "text": "BARRIERS_",
+      "file_offset": 4221904,
+      "address": "80409bd0"
+    },
+    {
+      "text": "BARRIERS_",
+      "file_offset": 4221923,
+      "address": "80409be3"
+    },
+    {
+      "text": "PLAYER_BARRIERS_",
+      "file_offset": 4221916,
+      "address": "80409bdc"
+    },
+    {
+      "text": "SCENERY_GROUP_",
+      "file_offset": 4221936,
+      "address": "80409bf0"
+    },
+    {
+      "text": "FREE_ROAM",
+      "file_offset": 4221952,
+      "address": "80409c00"
+    },
+    {
+      "text": "EnableBinBarriers",
+      "file_offset": 4107908,
+      "address": "803ede84"
+    },
+    {
+      "text": "DisableBarriers",
+      "file_offset": 4107884,
+      "address": "803ede6c"
+    }
+  ],
+  "conservative_group_string_xrefs": [
+    {
+      "instruction": "801bff80",
+      "origin": "801bff6c",
+      "target": "803ede6c",
+      "register": 5
+    },
+    {
+      "instruction": "801bffb0",
+      "origin": "801bff9c",
+      "target": "803ede84",
+      "register": 5
+    }
+  ],
+  "system_strings": {
+    "movies": [
+      {
+        "address": "803e1330",
+        "offset": 4055856,
+        "text": "%sMOVIES\\%s%s%s%s"
+      },
+      {
+        "address": "803e160c",
+        "offset": 4056588,
+        "text": "MOVIES\\attract_movie"
+      },
+      {
+        "address": "803e1624",
+        "offset": 4056612,
+        "text": "MOVIES\\drag_tutorial"
+      },
+      {
+        "address": "803e163c",
+        "offset": 4056636,
+        "text": "MOVIES\\ealogo"
+      },
+      {
+        "address": "803e164c",
+        "offset": 4056652,
+        "text": "MOVIES\\intro_movie"
+      },
+      {
+        "address": "803e1660",
+        "offset": 4056672,
+        "text": "MOVIES\\sprint_tutorial"
+      },
+      {
+        "address": "803e1678",
+        "offset": 4056696,
+        "text": "MOVIES\\tollbooth_tutorial"
+      },
+      {
+        "address": "803e1694",
+        "offset": 4056724,
+        "text": "MOVIES\\bounty_tutorial"
+      },
+      {
+        "address": "803e16ac",
+        "offset": 4056748,
+        "text": "MOVIES\\pursuit_tutorial"
+      },
+      {
+        "address": "803e16c4",
+        "offset": 4056772,
+        "text": "MOVIES\\speedtrap_tutorial"
+      },
+      {
+        "address": "803e16e0",
+        "offset": 4056800,
+        "text": "MOVIES\\psa"
+      },
+      {
+        "address": "803e16ec",
+        "offset": 4056812,
+        "text": "MOVIES\\blacklist_01"
+      },
+      {
+        "address": "803e1700",
+        "offset": 4056832,
+        "text": "MOVIES\\blacklist_02"
+      },
+      {
+        "address": "803e1714",
+        "offset": 4056852,
+        "text": "MOVIES\\blacklist_03"
+      },
+      {
+        "address": "803e1728",
+        "offset": 4056872,
+        "text": "MOVIES\\blacklist_04"
+      },
+      {
+        "address": "803e173c",
+        "offset": 4056892,
+        "text": "MOVIES\\blacklist_05"
+      },
+      {
+        "address": "803e1750",
+        "offset": 4056912,
+        "text": "MOVIES\\blacklist_06"
+      },
+      {
+        "address": "803e1764",
+        "offset": 4056932,
+        "text": "MOVIES\\blacklist_07"
+      },
+      {
+        "address": "803e1778",
+        "offset": 4056952,
+        "text": "MOVIES\\blacklist_08"
+      },
+      {
+        "address": "803e178c",
+        "offset": 4056972,
+        "text": "MOVIES\\blacklist_09"
+      },
+      {
+        "address": "803e17a0",
+        "offset": 4056992,
+        "text": "MOVIES\\blacklist_10"
+      },
+      {
+        "address": "803e17b4",
+        "offset": 4057012,
+        "text": "MOVIES\\blacklist_11"
+      },
+      {
+        "address": "803e17c8",
+        "offset": 4057032,
+        "text": "MOVIES\\blacklist_12"
+      },
+      {
+        "address": "803e17dc",
+        "offset": 4057052,
+        "text": "MOVIES\\blacklist_13"
+      },
+      {
+        "address": "803e17f0",
+        "offset": 4057072,
+        "text": "MOVIES\\blacklist_14"
+      },
+      {
+        "address": "803e1804",
+        "offset": 4057092,
+        "text": "MOVIES\\blacklist_15"
+      },
+      {
+        "address": "803e1818",
+        "offset": 4057112,
+        "text": "MOVIES\\storyfmv_bla134"
+      },
+      {
+        "address": "803e1830",
+        "offset": 4057136,
+        "text": "MOVIES\\storyfmv_bus12"
+      },
+      {
+        "address": "803e1848",
+        "offset": 4057160,
+        "text": "MOVIES\\storyfmv_cro06_coh06a"
+      },
+      {
+        "address": "803e1868",
+        "offset": 4057192,
+        "text": "MOVIES\\storyfmv_dda01"
+      },
+      {
+        "address": "803e1880",
+        "offset": 4057216,
+        "text": "MOVIES\\storyfmv_epi138"
+      },
+      {
+        "address": "803e1898",
+        "offset": 4057240,
+        "text": "MOVIES\\storyfmv_her136"
+      },
+      {
+        "address": "803e18b0",
+        "offset": 4057264,
+        "text": "MOVIES\\storyfmv_pin11"
+      },
+      {
+        "address": "803e18c8",
+        "offset": 4057288,
+        "text": "MOVIES\\storyfmv_pol17_mot21"
+      },
+      {
+        "address": "803e18e4",
+        "offset": 4057316,
+        "text": "MOVIES\\storyfmv_rap30"
+      },
+      {
+        "address": "803e18fc",
+        "offset": 4057340,
+        "text": "MOVIES\\storyfmv_raz08"
+      },
+      {
+        "address": "803e1914",
+        "offset": 4057364,
+        "text": "MOVIES\\storyfmv_roc02"
+      },
+      {
+        "address": "803e192c",
+        "offset": 4057388,
+        "text": "MOVIES\\storyfmv_saf25"
+      },
+      {
+        "address": "803e1944",
+        "offset": 4057412,
+        "text": "MOVIES\\storyfmv_rac01"
+      }
+    ],
+    "audio": [
+      {
+        "address": "803d629c",
+        "offset": 4010652,
+        "text": "CAR_01_ENG_MB_EE.abk"
+      },
+      {
+        "address": "803d62b4",
+        "offset": 4010676,
+        "text": "CAR_01_ENG_MB_SPU.abk"
+      },
+      {
+        "address": "803d62cc",
+        "offset": 4010700,
+        "text": "Eclipse_5Zigen_v1.gin"
+      },
+      {
+        "address": "803d62e4",
+        "offset": 4010724,
+        "text": "GIN_Mustang_Drag_DCL.gin"
+      },
+      {
+        "address": "803d687c",
+        "offset": 4012156,
+        "text": "SIREN_MB.abk"
+      },
+      {
+        "address": "803d68f8",
+        "offset": 4012280,
+        "text": "EA_Trax.fng"
+      },
+      {
+        "address": "803d6b98",
+        "offset": 4012952,
+        "text": "sound\\"
+      },
+      {
+        "address": "803d6ba0",
+        "offset": 4012960,
+        "text": "sound\\Engine\\"
+      },
+      {
+        "address": "803d6bb0",
+        "offset": 4012976,
+        "text": "sound\\evt_sys\\"
+      },
+      {
+        "address": "803d6bc0",
+        "offset": 4012992,
+        "text": "sound\\FE\\"
+      },
+      {
+        "address": "803d6bcc",
+        "offset": 4013004,
+        "text": "sound\\Global\\"
+      },
+      {
+        "address": "803d6bdc",
+        "offset": 4013020,
+        "text": "sound\\IG_Global\\"
+      },
+      {
+        "address": "803d6bf0",
+        "offset": 4013040,
+        "text": "sound\\NOS\\"
+      },
+      {
+        "address": "803d6bfc",
+        "offset": 4013052,
+        "text": "sound\\PFData\\"
+      },
+      {
+        "address": "803d6c0c",
+        "offset": 4013068,
+        "text": "sound\\Skids\\"
+      },
+      {
+        "address": "803d6c1c",
+        "offset": 4013084,
+        "text": "sound\\Speech\\"
+      },
+      {
+        "address": "803d6c2c",
+        "offset": 4013100,
+        "text": "sound\\Turbo\\"
+      },
+      {
+        "address": "803d6c3c",
+        "offset": 4013116,
+        "text": "sound\\Shifting\\"
+      },
+      {
+        "address": "803d6c4c",
+        "offset": 4013132,
+        "text": "sound\\FXEdit\\"
+      },
+      {
+        "address": "803d7358",
+        "offset": 4014936,
+        "text": "sound\\NISRevData\\%s.bin"
+      },
+      {
+        "address": "803d934c",
+        "offset": 4023116,
+        "text": "CAR_01_ENG_MB_EE.abk"
+      },
+      {
+        "address": "803d9364",
+        "offset": 4023140,
+        "text": "CAR_01_ENG_MB_SPU.abk"
+      },
+      {
+        "address": "803d937c",
+        "offset": 4023164,
+        "text": "Eclipse_5Zigen_v1.gin"
+      },
+      {
+        "address": "803d9394",
+        "offset": 4023188,
+        "text": "GIN_Mustang_Drag_DCL.gin"
+      },
+      {
+        "address": "803d994c",
+        "offset": 4024652,
+        "text": "TURBO_SML1_0_MB.abk"
+      },
+      {
+        "address": "803d9cac",
+        "offset": 4025516,
+        "text": "Test.gin"
+      },
+      {
+        "address": "803da2f0",
+        "offset": 4027120,
+        "text": "MW_Mus_1.mpf"
+      },
+      {
+        "address": "803da300",
+        "offset": 4027136,
+        "text": "MW_Mus_1.mus"
+      },
+      {
+        "address": "803da310",
+        "offset": 4027152,
+        "text": "MW_Mus_2.mpf"
+      },
+      {
+        "address": "803da320",
+        "offset": 4027168,
+        "text": "MW_Mus_2.mus"
+      },
+      {
+        "address": "803da330",
+        "offset": 4027184,
+        "text": "MW_Mus_3.mpf"
+      },
+      {
+        "address": "803da340",
+        "offset": 4027200,
+        "text": "MW_Mus_3.mus"
+      },
+      {
+        "address": "803da350",
+        "offset": 4027216,
+        "text": "MW_Mus_4.mpf"
+      },
+      {
+        "address": "803da360",
+        "offset": 4027232,
+        "text": "MW_Mus_4.mus"
+      },
+      {
+        "address": "803da384",
+        "offset": 4027268,
+        "text": "MW_Music.mpf"
+      },
+      {
+        "address": "803da394",
+        "offset": 4027284,
+        "text": "MW_Music.mus"
+      },
+      {
+        "address": "803dabb8",
+        "offset": 4029368,
+        "text": "SOUND\\MixMaps\\MAPOUTPUT.mxb"
+      },
+      {
+        "address": "803dabd4",
+        "offset": 4029396,
+        "text": "SOUND\\MixMaps\\MAPOUTPUTDRG.mxb"
+      },
+      {
+        "address": "803dabf4",
+        "offset": 4029428,
+        "text": "SOUND\\MixMaps\\MAPOUTPUT2CR.mxb"
+      },
+      {
+        "address": "803dac14",
+        "offset": 4029460,
+        "text": "SOUND\\MixMaps\\MAPOUTPUT2DR.mxb"
+      },
+      {
+        "address": "803dfc90",
+        "offset": 4050064,
+        "text": "EA_Trax_Jukebox.fng"
+      },
+      {
+        "address": "803e59bc",
+        "offset": 4073916,
+        "text": "EA_Trax.fng"
+      },
+      {
+        "address": "803e8270",
+        "offset": 4084336,
+        "text": "EA_Trax_Jukebox.fng"
+      },
+      {
+        "address": "803e84c4",
+        "offset": 4084932,
+        "text": "EA_TRAX.fng"
+      },
+      {
+        "address": "803f5f44",
+        "offset": 4140868,
+        "text": "Sound\\Speech\\CopSpeech*.big"
+      },
+      {
+        "address": "80413a2c",
+        "offset": 4262444,
+        "text": "%.*s%d.mus"
+      }
+    ],
+    "frontend": [
+      {
+        "address": "803c71b4",
+        "offset": 3948980,
+        "text": "MainMenu.fng"
+      },
+      {
+        "address": "803c7208",
+        "offset": 3949064,
+        "text": "PressStart.fng"
+      },
+      {
+        "address": "803c7a44",
+        "offset": 3951172,
+        "text": "Decals_BACKROOM.fng"
+      },
+      {
+        "address": "803d694c",
+        "offset": 4012364,
+        "text": "InGame_MC_Main_GC.fng"
+      },
+      {
+        "address": "803d6a28",
+        "offset": 4012584,
+        "text": "LS_EALogo.fng"
+      },
+      {
+        "address": "803d6a38",
+        "offset": 4012600,
+        "text": "LS_EA_hidef.fng"
+      },
+      {
+        "address": "803d6a48",
+        "offset": 4012616,
+        "text": "LS_PSA.fng"
+      },
+      {
+        "address": "803d6a54",
+        "offset": 4012628,
+        "text": "MW_LS_IntroFMV.fng"
+      },
+      {
+        "address": "803d6a68",
+        "offset": 4012648,
+        "text": "MW_LS_AttractFMV.fng"
+      },
+      {
+        "address": "803d6a80",
+        "offset": 4012672,
+        "text": "WS_LS_EALogo.fng"
+      },
+      {
+        "address": "803d6a94",
+        "offset": 4012692,
+        "text": "WS_LS_EA_hidef.fng"
+      },
+      {
+        "address": "803d6aa8",
+        "offset": 4012712,
+        "text": "WS_LS_PSA.fng"
+      },
+      {
+        "address": "803d6ab8",
+        "offset": 4012728,
+        "text": "WS_LS_IntroFMV.fng"
+      },
+      {
+        "address": "803d6acc",
+        "offset": 4012748,
+        "text": "WS_MW_LS_AttractFMV.fng"
+      },
+      {
+        "address": "803df9a8",
+        "offset": 4049320,
+        "text": "MainMenu.fng"
+      },
+      {
+        "address": "803e0b64",
+        "offset": 4053860,
+        "text": "MC_Main_GC.fng"
+      },
+      {
+        "address": "803e0d8c",
+        "offset": 4054412,
+        "text": "InGame_MC_Main_GC.fng"
+      },
+      {
+        "address": "803e14bc",
+        "offset": 4056252,
+        "text": "FadeScreenNoLoadingBar.fng"
+      },
+      {
+        "address": "803e5740",
+        "offset": 4073280,
+        "text": "MC_Main_GC.fng"
+      },
+      {
+        "address": "803e6274",
+        "offset": 4076148,
+        "text": "LS_EAlogo.fng"
+      },
+      {
+        "address": "803e6284",
+        "offset": 4076164,
+        "text": "LS_PSA.fng"
+      },
+      {
+        "address": "803e6290",
+        "offset": 4076176,
+        "text": "MW_LS_AttractFMV.fng"
+      },
+      {
+        "address": "803e62a8",
+        "offset": 4076200,
+        "text": "MW_LS_Splash.fng"
+      },
+      {
+        "address": "803e62bc",
+        "offset": 4076220,
+        "text": "MainMenu.fng"
+      },
+      {
+        "address": "803e62dc",
+        "offset": 4076252,
+        "text": "WS_LS_EA_hidef.fng"
+      },
+      {
+        "address": "803e6300",
+        "offset": 4076288,
+        "text": "LS_LangSelect.fng"
+      },
+      {
+        "address": "803e6398",
+        "offset": 4076440,
+        "text": "LS_EALogo.fng"
+      },
+      {
+        "address": "803e63b0",
+        "offset": 4076464,
+        "text": "LS_EA_hidef.fng"
+      },
+      {
+        "address": "803e63d0",
+        "offset": 4076496,
+        "text": "MW_LS_IntroFMV.fng"
+      },
+      {
+        "address": "803e6400",
+        "offset": 4076544,
+        "text": "WS_LS_EALogo.fng"
+      },
+      {
+        "address": "803e6414",
+        "offset": 4076564,
+        "text": "WS_LS_PSA.fng"
+      },
+      {
+        "address": "803e6424",
+        "offset": 4076580,
+        "text": "WS_LS_IntroFMV.fng"
+      },
+      {
+        "address": "803e6438",
+        "offset": 4076600,
+        "text": "WS_MW_LS_AttractFMV.fng"
+      },
+      {
+        "address": "803e6618",
+        "offset": 4077080,
+        "text": "Loading_Tips.fng"
+      },
+      {
+        "address": "803e7768",
+        "offset": 4081512,
+        "text": "WS_MW_LS_Splash.fng"
+      },
+      {
+        "address": "803e7c64",
+        "offset": 4082788,
+        "text": "PressStart.fng"
+      },
+      {
+        "address": "803e8158",
+        "offset": 4084056,
+        "text": "Decals_BACKROOM.fng"
+      },
+      {
+        "address": "803e82fc",
+        "offset": 4084476,
+        "text": "LS_THXMovie.fng"
+      },
+      {
+        "address": "803e830c",
+        "offset": 4084492,
+        "text": "loading_boot.fng"
+      },
+      {
+        "address": "803e8320",
+        "offset": 4084512,
+        "text": "Loading.fng"
+      },
+      {
+        "address": "803e832c",
+        "offset": 4084524,
+        "text": "WS_Loading.fng"
+      },
+      {
+        "address": "803e833c",
+        "offset": 4084540,
+        "text": "Loading_Controller.fng"
+      },
+      {
+        "address": "803e8354",
+        "offset": 4084564,
+        "text": "WS_Loading_Controller.fng"
+      },
+      {
+        "address": "803e8470",
+        "offset": 4084848,
+        "text": "InGame_MC_Main_GC.fng"
+      },
+      {
+        "address": "803efedc",
+        "offset": 4116188,
+        "text": "FadeScreenNoLoadingBar.fng"
+      },
+      {
+        "address": "803f0108",
+        "offset": 4116744,
+        "text": "WS_Loading_Controller.fng"
+      },
+      {
+        "address": "803f0124",
+        "offset": 4116772,
+        "text": "Loading_Controller.fng"
+      },
+      {
+        "address": "803f013c",
+        "offset": 4116796,
+        "text": "Loading_Tips.fng"
+      },
+      {
+        "address": "803f0150",
+        "offset": 4116816,
+        "text": "WS_Loading.fng"
+      },
+      {
+        "address": "803f0160",
+        "offset": 4116832,
+        "text": "Loading.fng"
+      },
+      {
+        "address": "803f06e0",
+        "offset": 4118240,
+        "text": "MainMenu.fng"
+      },
+      {
+        "address": "803f544c",
+        "offset": 4138060,
+        "text": "loading_boot.fng"
+      },
+      {
+        "address": "803f5460",
+        "offset": 4138080,
+        "text": "Loading_Controller.fng"
+      },
+      {
+        "address": "80435214",
+        "offset": 4399636,
+        "text": "loading_boot.fng"
+      },
+      {
+        "address": "80435225",
+        "offset": 4399653,
+        "text": "Global\\FEng_Screens\\Stripped\\loading_boot.fng"
+      }
+    ],
+    "game_flow": [
+      {
+        "address": "803d76b0",
+        "offset": 4015792,
+        "text": "MPursuitBreaker"
+      },
+      {
+        "address": "803d9620",
+        "offset": 4023840,
+        "text": "MPursuitBreaker"
+      },
+      {
+        "address": "803dff34",
+        "offset": 4050740,
+        "text": "MEnterFreeRoam"
+      },
+      {
+        "address": "803e0ee4",
+        "offset": 4054756,
+        "text": "CResumeCareer"
+      },
+      {
+        "address": "803e0ef4",
+        "offset": 4054772,
+        "text": "CStartNewCareer"
+      },
+      {
+        "address": "803e0f04",
+        "offset": 4054788,
+        "text": "CLoadCareer"
+      },
+      {
+        "address": "803e14e0",
+        "offset": 4056288,
+        "text": "MNotifyMovieFinished"
+      },
+      {
+        "address": "803e52f8",
+        "offset": 4072184,
+        "text": "MEnterFreeRoam"
+      },
+      {
+        "address": "803e6750",
+        "offset": 4077392,
+        "text": "MNotifyMovieFinished"
+      },
+      {
+        "address": "803ee830",
+        "offset": 4110384,
+        "text": "MNotifyMovieFinished"
+      },
+      {
+        "address": "803ee8d0",
+        "offset": 4110544,
+        "text": "MEnterFreeRoam"
+      },
+      {
+        "address": "803f0550",
+        "offset": 4117840,
+        "text": "MNotifyMovieFinished"
+      },
+      {
+        "address": "803f0a3c",
+        "offset": 4119100,
+        "text": "MEnterFreeRoam"
+      },
+      {
+        "address": "803f1118",
+        "offset": 4120856,
+        "text": "MPursuitBreaker"
+      },
+      {
+        "address": "80404958",
+        "offset": 4200792,
+        "text": "MNotifyMovieFinished"
+      },
+      {
+        "address": "804064c8",
+        "offset": 4207816,
+        "text": "MPursuitBreaker"
+      }
+    ]
+  },
+  "barrier_models": [
+    {
+      "hash": "2483f271",
+      "name": "XO_TRACKBARRIERTRAFFIC_1B_00",
+      "vertices": 8,
+      "indices": 12,
+      "batches": 2,
+      "linear_bytes": 312,
+      "source_declared_triangles": 4,
+      "emitted_triangles": 4,
+      "texture_hashes": [
+        "2c505700",
+        "a711c606"
+      ],
+      "catalog_key": "2483f271:92d70e39f593f24439009f984e2ef2232e7e91566d7cc2a539d279d48b3de2bc",
+      "path": "models/2483f271.wsm",
+      "bytes": 680,
+      "sha256": "4d6a952ef20c010b9adaf29b9463381f7693841f3cfd3bf957485fe7b3f5687b"
+    },
+    {
+      "hash": "24911b89",
+      "name": "XO_TRACKBARRIERTRAFFIC_1Z_00",
+      "vertices": 8,
+      "indices": 12,
+      "batches": 2,
+      "linear_bytes": 312,
+      "source_declared_triangles": 4,
+      "emitted_triangles": 4,
+      "texture_hashes": [
+        "2c505700",
+        "a711c606"
+      ],
+      "catalog_key": "24911b89:9dd50c4fb290bd31b9ae5e1cd69a77d8d4cedd72c0a9a4c0d60cad82b3ae7c90",
+      "path": "models/24911b89.wsm",
+      "bytes": 680,
+      "sha256": "06544d4bff9b56cc28d8a979e86c059d2bdae935f84d04e0ba08aed98a4f5d36"
+    },
+    {
+      "hash": "54a4fc3f",
+      "name": "XO_TRACKBARRIERPLAYER_1B_00",
+      "vertices": 8,
+      "indices": 12,
+      "batches": 2,
+      "linear_bytes": 312,
+      "source_declared_triangles": 4,
+      "emitted_triangles": 4,
+      "texture_hashes": [
+        "2c505700",
+        "a711c606"
+      ],
+      "catalog_key": "54a4fc3f:cfa7bdf0d5948ca8ca963a2d5b9f92c6f907e495b833868807a06f8a5eafb0c4",
+      "path": "models/54a4fc3f.wsm",
+      "bytes": 680,
+      "sha256": "c4268e623f3b8278a17b5442e3d41a0ceda28feff31c1cfee6a4120b340fc758"
+    },
+    {
+      "hash": "54b22557",
+      "name": "XO_TRACKBARRIERPLAYER_1Z_00",
+      "vertices": 8,
+      "indices": 12,
+      "batches": 2,
+      "linear_bytes": 312,
+      "source_declared_triangles": 4,
+      "emitted_triangles": 4,
+      "texture_hashes": [
+        "2c505700",
+        "a711c606"
+      ],
+      "catalog_key": "54b22557:24cbc74267b002d04e68b0d4ce451d427e4bc7b19f0ffec070fa636816669d9f",
+      "path": "models/54b22557.wsm",
+      "bytes": 680,
+      "sha256": "72c2a5b09a2c0d2204e18634ad8f22c6c9141b45fec588b82c011fc921ea2275"
+    },
+    {
+      "hash": "94854824",
+      "name": "XO_TRACKBARRIERLOCKED_1B_00",
+      "vertices": 8,
+      "indices": 12,
+      "batches": 2,
+      "linear_bytes": 312,
+      "source_declared_triangles": 4,
+      "emitted_triangles": 4,
+      "texture_hashes": [
+        "086fca34",
+        "a2b4af6d"
+      ],
+      "catalog_key": "94854824:c2187579b035a27b0c4406342e2a4a33ce92e2e5f42930a86c40ec9a694c5ef3",
+      "path": "models/94854824.wsm",
+      "bytes": 680,
+      "sha256": "2a33d95013f2a3c3409a506ff9a051164d534d16cbfee5e018fa44c665b97a51"
+    },
+    {
+      "hash": "9492713c",
+      "name": "XO_TRACKBARRIERLOCKED_1Z_00",
+      "vertices": 8,
+      "indices": 12,
+      "batches": 2,
+      "linear_bytes": 312,
+      "source_declared_triangles": 4,
+      "emitted_triangles": 4,
+      "texture_hashes": [
+        "086fca34",
+        "a2b4af6d"
+      ],
+      "catalog_key": "9492713c:a7823e581e7609a1341285719179bdbd4c2de5fb3a8c1564d8544b80437a46eb",
+      "path": "models/9492713c.wsm",
+      "bytes": 680,
+      "sha256": "a257e84994361cbd283c3e3b9f5821bc3fea05dbea08e259341b78b094c40619"
+    }
+  ],
+  "barrier_texture_variants": [
+    {
+      "hash": "2c505700",
+      "name": "SFX_TRACKBARRIERNEONARR",
+      "width": 64,
+      "height": 64,
+      "source_width": 64,
+      "source_height": 64,
+      "rgba_bytes": 16384,
+      "alpha_test": 2,
+      "blend": 1,
+      "quality": 0,
+      "identity": "9e7cd5174bfe68f698ec8fbda37686dbe6126ef1f7ec134581501b47392cc5f5",
+      "path": "textures/2c505700-9e7cd5174bfe68f698ec8fbda37686dbe6126ef1f7ec134581501b47392cc5f5.wtx",
+      "bytes": 16512,
+      "sha256": "8cb3b5efa0c4f37b9f7e2a4aed2f434f070e8ba0a9d8b1e26a40a50b2006389c"
+    },
+    {
+      "hash": "a711c606",
+      "name": "SFX_TRACKBARRIERNEONARR",
+      "width": 64,
+      "height": 64,
+      "source_width": 64,
+      "source_height": 64,
+      "rgba_bytes": 16384,
+      "alpha_test": 2,
+      "blend": 2,
+      "quality": 0,
+      "identity": "b9dc5edcec55e62d36c0bd23a50ff283e3a9679a63c5eceba6f78d028f700683",
+      "path": "textures/a711c606-b9dc5edcec55e62d36c0bd23a50ff283e3a9679a63c5eceba6f78d028f700683.wtx",
+      "bytes": 16512,
+      "sha256": "1b194714a23a4e1384d87286cfc2a0c36faa2bede24d49531e71b88018ae1e25"
+    },
+    {
+      "hash": "2c505700",
+      "name": "SFX_TRACKBARRIERNEONARR",
+      "width": 32,
+      "height": 32,
+      "source_width": 32,
+      "source_height": 32,
+      "rgba_bytes": 4096,
+      "alpha_test": 2,
+      "blend": 1,
+      "quality": 0,
+      "identity": "518d8666d0c12c1eb7e368ac2442e6c56742ae3884dfeef4bdceb0cff6cf9094",
+      "path": "textures/2c505700-518d8666d0c12c1eb7e368ac2442e6c56742ae3884dfeef4bdceb0cff6cf9094.wtx",
+      "bytes": 4224,
+      "sha256": "023b1b7fc2ba79e0d81e24db54e67d0e303739118121b7e3601eeb85573dc62d"
+    },
+    {
+      "hash": "a711c606",
+      "name": "SFX_TRACKBARRIERNEONARR",
+      "width": 32,
+      "height": 32,
+      "source_width": 32,
+      "source_height": 32,
+      "rgba_bytes": 4096,
+      "alpha_test": 2,
+      "blend": 2,
+      "quality": 0,
+      "identity": "34354ab9588db9e055f72fa6643c26832c9764bcdd3221a639181bea035ea169",
+      "path": "textures/a711c606-34354ab9588db9e055f72fa6643c26832c9764bcdd3221a639181bea035ea169.wtx",
+      "bytes": 4224,
+      "sha256": "2b04ae1c367b5e70df89d24d90d2cfa2d9da2822b162d84aa77d2f3dd0d7ef58"
+    },
+    {
+      "hash": "086fca34",
+      "name": "SFX_TRACKBARRIERLOCK",
+      "width": 128,
+      "height": 64,
+      "source_width": 128,
+      "source_height": 64,
+      "rgba_bytes": 32768,
+      "alpha_test": 2,
+      "blend": 2,
+      "quality": 0,
+      "identity": "b0951dec17a8bb846e94427b35d71b5ca636abf29853acb6bfbe25029772f51d",
+      "path": "textures/086fca34-b0951dec17a8bb846e94427b35d71b5ca636abf29853acb6bfbe25029772f51d.wtx",
+      "bytes": 32896,
+      "sha256": "4aadcc803e544879382ce57c335563f2ad884a98e993f5e630551293b37e2867"
+    },
+    {
+      "hash": "a2b4af6d",
+      "name": "SFX_TRACKBARRIERNEONLOC",
+      "width": 128,
+      "height": 64,
+      "source_width": 128,
+      "source_height": 64,
+      "rgba_bytes": 32768,
+      "alpha_test": 2,
+      "blend": 1,
+      "quality": 0,
+      "identity": "15b1d2a5fef31924f2731a6fb09f09c1988f17451228d6795b7bb57be8aa81e9",
+      "path": "textures/a2b4af6d-15b1d2a5fef31924f2731a6fb09f09c1988f17451228d6795b7bb57be8aa81e9.wtx",
+      "bytes": 32896,
+      "sha256": "118e10981ad40e3ebdfc7f4bde90f30a142053f0b3f6b289f786d2e772e3f560"
+    },
+    {
+      "hash": "086fca34",
+      "name": "SFX_TRACKBARRIERLOCK",
+      "width": 64,
+      "height": 32,
+      "source_width": 64,
+      "source_height": 32,
+      "rgba_bytes": 8192,
+      "alpha_test": 2,
+      "blend": 2,
+      "quality": 0,
+      "identity": "0fb3f59760a4db3c8f6358a56f19061234c545968ae9ac06c853b07442117904",
+      "path": "textures/086fca34-0fb3f59760a4db3c8f6358a56f19061234c545968ae9ac06c853b07442117904.wtx",
+      "bytes": 8320,
+      "sha256": "62bd3e90b0adbc1749784c44356c3efaa639af340e00569fabbcfd1c2fef1144"
+    },
+    {
+      "hash": "a2b4af6d",
+      "name": "SFX_TRACKBARRIERNEONLOC",
+      "width": 64,
+      "height": 32,
+      "source_width": 64,
+      "source_height": 32,
+      "rgba_bytes": 8192,
+      "alpha_test": 2,
+      "blend": 1,
+      "quality": 0,
+      "identity": "7a003df65a877ef2f03a381aa1cffe73644029bab9509127f2abbb185ae310f1",
+      "path": "textures/a2b4af6d-7a003df65a877ef2f03a381aa1cffe73644029bab9509127f2abbb185ae310f1.wtx",
+      "bytes": 8320,
+      "sha256": "facb92a25c53dd34a4b322175f1fc90ddcb4ed5871d510b1b5ad866b023b9178"
+    }
+  ],
+  "barrier_placement_occurrences": 8763,
+  "barrier_unique_source_instance_offsets": 8763,
+  "barrier_first_placements": [
+    {
+      "source_section": 141,
+      "source_instance_offset": 24587808,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        362.49993896484375,
+        2494.8955078125,
+        166.04046630859375
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24587872,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        325.1827087402344,
+        2499.92578125,
+        166.28721618652344
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24587936,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        367.4128723144531,
+        2486.849853515625,
+        166.0369873046875
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24588000,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        390.470458984375,
+        2472.894287109375,
+        165.92689514160156
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24588064,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        372.49603271484375,
+        2478.904541015625,
+        166.05288696289062
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24588128,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        382.64276123046875,
+        2474.530029296875,
+        166.06651306152344
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24588192,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        374.8529357910156,
+        2476.336181640625,
+        166.06802368164062
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    },
+    {
+      "source_section": 141,
+      "source_instance_offset": 24588256,
+      "source_object_offset": 24590848,
+      "source_translation": [
+        367.1198425292969,
+        2478.354248046875,
+        165.99842834472656
+      ],
+      "original_instance_flags_hex": "02808070",
+      "bound_slot_keys": [
+        "00000000",
+        "54a4fc3f",
+        "54a4fc3f",
+        "54b22557"
+      ]
+    }
+  ],
+  "barrier_all_placements_sha256": "4936b9440187a3e04d5f4e26c312a5eedda3f663b02b7f4f37e368a3fd4d9a66",
+  "production_cfiles": [
+    "rockport_main.c",
+    "nfs_scene.c",
+    "driving_controller.c",
+    "road_contact.c",
+    "wheel_motion.c",
+    "road_pose.c",
+    "road_map.c",
+    "world_visibility.c",
+    "chase_camera.c",
+    "world_vertex.c",
+    "world_index.c",
+    "mw_ui.c",
+    "mw_ui_texture.c",
+    "mw_color_grade.c",
+    "streamed_world.c",
+    "streamed_world_texture.c",
+    "world_streaming.c",
+    "world_streaming_scene.c",
+    "mw_lod_select.c",
+    "mw_gekko_math.c",
+    "streamed_drive.c",
+    "world_collision_runtime.c",
+    "world_collision_query.c",
+    "mw_scene_pack.c",
+    "streamed_world_pack.c"
+  ],
+  "original_physics_modules_linked": [],
+  "original_camera_modules_linked": [],
+  "audio_modules_linked": [],
+  "next_metadata_request": {
+    "entries": [
+      "GLOBAL\\GAMEPLAY.BIN",
+      "SOUND\\PFData\\MW_Mus_1.mpf",
+      "SOUND\\PFData\\MW_Mus_2.mpf",
+      "SOUND\\PFData\\MW_Mus_3.mpf",
+      "SOUND\\PFData\\MW_Mus_4.mpf",
+      "SOUND\\PFData\\MW_Music.mpf",
+      "TRACKS\\PRECULLERBOOBOOSCRIPT.HOO"
+    ],
+    "payload_records": [
+      {
+        "candidate_name": "GLOBAL\\GAMEPLAY.BIN",
+        "hash": "51eafec3",
+        "archive": 1,
+        "offset_bytes": 267364352,
+        "bytes": 2103680,
+        "directory_record_offset": 10464
+      },
+      {
+        "candidate_name": "GLOBAL\\GAMEPLAY.BIN",
+        "hash": "51eafec3",
+        "archive": 1,
+        "offset_bytes": 277204992,
+        "bytes": 2103680,
+        "directory_record_offset": 10488
+      },
+      {
+        "candidate_name": "SOUND\\PFData\\MW_Mus_1.mpf",
+        "hash": "4268c649",
+        "archive": 1,
+        "offset_bytes": 335966208,
+        "bytes": 18112,
+        "directory_record_offset": 8256
+      },
+      {
+        "candidate_name": "SOUND\\PFData\\MW_Mus_2.mpf",
+        "hash": "427adeca",
+        "archive": 1,
+        "offset_bytes": 335984640,
+        "bytes": 14212,
+        "directory_record_offset": 8304
+      },
+      {
+        "candidate_name": "SOUND\\PFData\\MW_Mus_3.mpf",
+        "hash": "428cf74b",
+        "archive": 1,
+        "offset_bytes": 335998976,
+        "bytes": 16332,
+        "directory_record_offset": 8352
+      },
+      {
+        "candidate_name": "SOUND\\PFData\\MW_Mus_4.mpf",
+        "hash": "429f0fcc",
+        "archive": 1,
+        "offset_bytes": 336015360,
+        "bytes": 15700,
+        "directory_record_offset": 8424
+      },
+      {
+        "candidate_name": "SOUND\\PFData\\MW_Music.mpf",
+        "hash": "105d0185",
+        "archive": 1,
+        "offset_bytes": 336031744,
+        "bytes": 8936,
+        "directory_record_offset": 2040
+      },
+      {
+        "candidate_name": "TRACKS\\PRECULLERBOOBOOSCRIPT.HOO",
+        "hash": "51ee2fba",
+        "archive": 1,
+        "offset_bytes": 299401216,
+        "bytes": 13471,
+        "directory_record_offset": 10536
+      }
+    ],
+    "total_payload_bytes": 4294123,
+    "original_archives_required": [
+      1
+    ]
+  },
+  "bmw_light_export_evidence": {
+    "scene_json_sha256": "a3ad75c8b438f8c39bc90a5dc084f9980e19faed2789bb44d3009859e1bd9706",
+    "lamp_parts_present": [
+      {
+        "name": "BMWM3GTRE46_KIT00_LEFT_BRAKELIGHT_B",
+        "triangles": 80
+      },
+      {
+        "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_B",
+        "triangles": 128
+      },
+      {
+        "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_GLASS_B",
+        "triangles": 31
+      },
+      {
+        "name": "BMWM3GTRE46_KIT00_RIGHT_BRAKELIGHT_B",
+        "triangles": 80
+      },
+      {
+        "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_B",
+        "triangles": 128
+      },
+      {
+        "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+        "triangles": 31
+      }
+    ],
+    "interpretation": "Lamp geometry is present; unresolved bindings still need original per-car state/context recovery.",
+    "exporter_unresolved_note": "Native paint palette/materials, remaining generated lights and fitted wheel placement",
+    "unresolved_texture_aliases_from_material_research": [
+      "02b52399",
+      "267d188c",
+      "a532fc46",
+      "a7e6ea53",
+      "d947f346",
+      "f68ef19f"
+    ],
+    "alias_evidence": "research/notes/materials-fidelity/findings.md"
+  }
+}

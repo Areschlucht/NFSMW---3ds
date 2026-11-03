@@ -19,3 +19,11 @@ are preserved under research/ and tools/; they are not whole-game fidelity claim
 At completed milestones, commit and push source/tests/tools/documentation to
 codex/v018-checkpoint-20261103. Do not force-push, overwrite the public main README,
 or publish an environment configuration/gameplay release just to make a backup.
+
+## Current whole-game scope (2026-11-03)
+
+Read FULL-GAME-REQUIREMENTS.md and docs/research/whole-game-audit.md before the next
+implementation pass. They supersede optional neutral/default filter preferences.
+Race-barrier activation/collision, crowded-view performance, full original audio,
+per-car lighting, frontend and progression are required. Research/tooling in this
+checkpoint does not change the shipped v0.18 runtime or establish full fidelity.
