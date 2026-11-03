@@ -1,0 +1,8 @@
+{
+  "original_ppc_matches": 4608,
+  "default_prototype_context": 0,
+  "limits": [
+    "Original normal contexts include0x10, but production prototype retains0 until collision/event ownership is recovered",
+    "This comparison checks the consumer, not the full scenery activation state machine"
+  ]
+}

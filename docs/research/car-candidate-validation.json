@@ -1,0 +1,1499 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "candidate_name": "CARS\\911GT2\\GEOMETRY.BIN",
+      "directory_record_offset": 10560,
+      "bytes": 359040,
+      "sha256": "e88fa14b1e3c8015d1113c9fcb8733399636bad840b9c839048b8ebd81d97a1f",
+      "status": "unsupported or rejected",
+      "reason": "911GT2_KIT00_BODY_B: decoded 3450 triangles, header 3456"
+    },
+    {
+      "candidate_name": "CARS\\911TURBO\\GEOMETRY.BIN",
+      "directory_record_offset": 17544,
+      "bytes": 1205888,
+      "sha256": "3262f2a2c72ac51159c534ade230ea6c7ef3ded0839d857d4497043ee02be6f6",
+      "status": "decoded",
+      "part_count": 74,
+      "triangles": 20144,
+      "lamp_parts": [
+        {
+          "name": "911TURBO_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 59
+        },
+        {
+          "name": "911TURBO_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 231
+        },
+        {
+          "name": "911TURBO_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 25
+        },
+        {
+          "name": "911TURBO_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 59
+        },
+        {
+          "name": "911TURBO_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 231
+        },
+        {
+          "name": "911TURBO_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 25
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\997S\\GEOMETRY.BIN",
+      "directory_record_offset": 27552,
+      "bytes": 1475008,
+      "sha256": "fdadae23d53cf3d136735d3c900770ca88d2cf4c93d06e78aaa6fbc9098d80e2",
+      "status": "decoded",
+      "part_count": 81,
+      "triangles": 23885,
+      "lamp_parts": [
+        {
+          "name": "997S_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 51
+        },
+        {
+          "name": "997S_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 186
+        },
+        {
+          "name": "997S_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 101
+        },
+        {
+          "name": "997S_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 51
+        },
+        {
+          "name": "997S_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 186
+        },
+        {
+          "name": "997S_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 101
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\A3\\GEOMETRY.BIN",
+      "directory_record_offset": 18840,
+      "bytes": 1452096,
+      "sha256": "3293b68178976e0a49bb10f9e2eaafd83750449e98d06035c8e868b645df4df8",
+      "status": "unsupported or rejected",
+      "reason": "A3_KIT02_BODY_B: decoded 2128 triangles, header 2130"
+    },
+    {
+      "candidate_name": "CARS\\A4\\GEOMETRY.BIN",
+      "directory_record_offset": 26448,
+      "bytes": 1617408,
+      "sha256": "5bb6c08bb93f1dc8ef0956c2ed269c74e6e9f8f43b3a1a324af53fa26557cd70",
+      "status": "unsupported or rejected",
+      "reason": "A4_KIT00_FRONT_TIRE_B: decoded 433 triangles, header 437"
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTRE46\\GEOMETRY.BIN",
+      "directory_record_offset": 23976,
+      "bytes": 407680,
+      "sha256": "03d1dc2ed47850a39c3cf75fd883783bcf03712ece3f43280f0160ee94c9fcae",
+      "status": "decoded",
+      "part_count": 25,
+      "triangles": 7007,
+      "lamp_parts": [
+        {
+          "name": "BMWM3GTRE46_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 80
+        },
+        {
+          "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 128
+        },
+        {
+          "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 31
+        },
+        {
+          "name": "BMWM3GTRE46_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 80
+        },
+        {
+          "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 128
+        },
+        {
+          "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 31
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\BMWM3GTR\\GEOMETRY.BIN",
+      "directory_record_offset": 19512,
+      "bytes": 370112,
+      "sha256": "291f62b6bf40c99da0d8c0d4c654de84a2828a59d3da1e979ddab1a0b6da4f07",
+      "status": "decoded",
+      "part_count": 24,
+      "triangles": 5973,
+      "lamp_parts": [
+        {
+          "name": "BMWM3GTR_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 80
+        },
+        {
+          "name": "BMWM3GTR_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 132
+        },
+        {
+          "name": "BMWM3GTR_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 31
+        },
+        {
+          "name": "BMWM3GTR_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 80
+        },
+        {
+          "name": "BMWM3GTR_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 132
+        },
+        {
+          "name": "BMWM3GTR_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 31
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\CAMARO\\GEOMETRY.BIN",
+      "directory_record_offset": 10608,
+      "bytes": 331776,
+      "sha256": "c454db611445c3b04878d7b1fd46273965d2e9f25e26b8267fe23357faaf8b0a",
+      "status": "decoded",
+      "part_count": 19,
+      "triangles": 5948,
+      "lamp_parts": [
+        {
+          "name": "CAMARO_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 200
+        },
+        {
+          "name": "CAMARO_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 12
+        },
+        {
+          "name": "CAMARO_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 200
+        },
+        {
+          "name": "CAMARO_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 12
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\CARRERAGT\\GEOMETRY.BIN",
+      "directory_record_offset": 13248,
+      "bytes": 969280,
+      "sha256": "8ad6df00b3c933624c2e4f2a443a79aaba80ddadd44ef9a628a6f1568c21919c",
+      "status": "decoded",
+      "part_count": 57,
+      "triangles": 16110,
+      "lamp_parts": [
+        {
+          "name": "CARRERAGT_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 21
+        },
+        {
+          "name": "CARRERAGT_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 91
+        },
+        {
+          "name": "CARRERAGT_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 25
+        },
+        {
+          "name": "CARRERAGT_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 21
+        },
+        {
+          "name": "CARRERAGT_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 91
+        },
+        {
+          "name": "CARRERAGT_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 25
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\CAYMANS\\GEOMETRY.BIN",
+      "directory_record_offset": 6504,
+      "bytes": 1583360,
+      "sha256": "969742c0d12769be36dce8229d8c0dde909c1c33ab3180c8c83f3d070dc38026",
+      "status": "decoded",
+      "part_count": 81,
+      "triangles": 25364,
+      "lamp_parts": [
+        {
+          "name": "CAYMANS_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 20
+        },
+        {
+          "name": "CAYMANS_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 243
+        },
+        {
+          "name": "CAYMANS_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 26
+        },
+        {
+          "name": "CAYMANS_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 20
+        },
+        {
+          "name": "CAYMANS_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 243
+        },
+        {
+          "name": "CAYMANS_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 26
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\CEMTR\\GEOMETRY.BIN",
+      "directory_record_offset": 18576,
+      "bytes": 135168,
+      "sha256": "b301c52d594151ae965bd5522deae0c54b8496ec1b592e23e0fac4c7fbd91518",
+      "status": "decoded",
+      "part_count": 5,
+      "triangles": 1371,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\CLIO\\GEOMETRY.BIN",
+      "directory_record_offset": 1440,
+      "bytes": 1554752,
+      "sha256": "46c2a34a447ebb0edd9966258dfd26720720cf748233164db8cb0c047a9e19a0",
+      "status": "unsupported or rejected",
+      "reason": "CLIO_KIT00_LEFT_HEADLIGHT_B: decoded 192 triangles, header 194"
+    },
+    {
+      "candidate_name": "CARS\\CLK500\\GEOMETRY.BIN",
+      "directory_record_offset": 31728,
+      "bytes": 1653568,
+      "sha256": "a05b4b501abf642face5b6956d74a1251242d41b0b764f0303c024ae5054c4bc",
+      "status": "unsupported or rejected",
+      "reason": "CLK500_KIT00_INTERIOR_B: decoded 567 triangles, header 572"
+    },
+    {
+      "candidate_name": "CARS\\COBALTSS\\GEOMETRY.BIN",
+      "directory_record_offset": 12840,
+      "bytes": 1749504,
+      "sha256": "db72c366790defe69e77edfa29b4c0cced6b8f25196627b6ae1d4c8e6d7e61a3",
+      "status": "unsupported or rejected",
+      "reason": "COBALTSS_KIT00_INTERIOR_B: decoded 473 triangles, header 474"
+    },
+    {
+      "candidate_name": "CARS\\COPGHOST\\GEOMETRY.BIN",
+      "directory_record_offset": 11496,
+      "bytes": 277824,
+      "sha256": "5df67a387acfe542f98963aecbbc778702f552d683497289d62ee62c3802d864",
+      "status": "unsupported or rejected",
+      "reason": "COPGHOST_KIT00_DAMAGE0_TRUNK_B: decoded 78 triangles, header 79"
+    },
+    {
+      "candidate_name": "CARS\\COPGTOGHOST\\GEOMETRY.BIN",
+      "directory_record_offset": 9648,
+      "bytes": 414144,
+      "sha256": "68871a28214c3d72b533dcc4b03e3b314e580a4ba3b6a2583c63971cb16e6d45",
+      "status": "decoded",
+      "part_count": 28,
+      "triangles": 5998,
+      "lamp_parts": [
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE0_LEFT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE0_LEFT_HEADLIGHT_B",
+          "triangles": 164
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE0_RIGHT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE0_RIGHT_HEADLIGHT_B",
+          "triangles": 164
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE1_LEFT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE1_LEFT_HEADLIGHT_B",
+          "triangles": 164
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE1_RIGHT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTOGHOST_KIT00_DAMAGE1_RIGHT_HEADLIGHT_B",
+          "triangles": 164
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\COPGTO\\GEOMETRY.BIN",
+      "directory_record_offset": 20208,
+      "bytes": 442752,
+      "sha256": "a64b2f426ddf45429a53c1a4928e80068cd00ec4d4135d6d482ed4ac13ef35d2",
+      "status": "decoded",
+      "part_count": 30,
+      "triangles": 6350,
+      "lamp_parts": [
+        {
+          "name": "COPGTO_KIT00_DAMAGE0_LEFT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE0_LEFT_HEADLIGHT_B",
+          "triangles": 164
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE0_RIGHT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE0_RIGHT_HEADLIGHT_B",
+          "triangles": 164
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE1_LEFT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE1_LEFT_HEADLIGHT_B",
+          "triangles": 164
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE1_RIGHT_BRAKELIGHT_B",
+          "triangles": 15
+        },
+        {
+          "name": "COPGTO_KIT00_DAMAGE1_RIGHT_HEADLIGHT_B",
+          "triangles": 164
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\COPHELI\\GEOMETRY.BIN",
+      "directory_record_offset": 7560,
+      "bytes": 70272,
+      "sha256": "0a8d30854a666b34588fd3b4ca6d514de77b52cebff466f9f2037537b0a5cb7a",
+      "status": "unsupported or rejected",
+      "reason": "COPHELI_KIT00_BODY_B: decoded 899 triangles, header 900"
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZEINT\\GEOMETRY.BIN",
+      "directory_record_offset": 9384,
+      "bytes": 229952,
+      "sha256": "9a3ee24eb66b2903fb12345f4f834c46f9b1f3f15ca1404deea67872f7cc6afe",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\COPMIDSIZE\\GEOMETRY.BIN",
+      "directory_record_offset": 7752,
+      "bytes": 606464,
+      "sha256": "16404230013ae6d7a1178faadef35bb6f590ccdb59fcc60be90b47346cea6818",
+      "status": "unsupported or rejected",
+      "reason": "COPMIDSIZE_KIT00_DAMAGE0_TRUNK_B: decoded 86 triangles, header 87"
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTGHOST\\GEOMETRY.BIN",
+      "directory_record_offset": 30216,
+      "bytes": 461440,
+      "sha256": "018453f84ede9e84c6d772d10b9fb87ada92beebc9e498e2fe22c4a0a5dcf67b",
+      "status": "unsupported or rejected",
+      "reason": "COPSPORTGHOST_KIT00_DAMAGE0_BODY_B: decoded 1613 triangles, header 1617"
+    },
+    {
+      "candidate_name": "CARS\\COPSPORTHENCH\\GEOMETRY.BIN",
+      "directory_record_offset": 3192,
+      "bytes": 487744,
+      "sha256": "4e18d1ab03966c00d83d65269fe4e0afb442cb6632d2a0fb0f980e67a1e0bb55",
+      "status": "unsupported or rejected",
+      "reason": "COPSPORTHENCH_KIT00_DAMAGE0_BODY_B: decoded 1613 triangles, header 1617"
+    },
+    {
+      "candidate_name": "CARS\\COPSPORT\\GEOMETRY.BIN",
+      "directory_record_offset": 14784,
+      "bytes": 461376,
+      "sha256": "be61454a8163729b19114ecfda2baca1d03bae68eb680c7555852d1ee80de481",
+      "status": "unsupported or rejected",
+      "reason": "COPSPORT_KIT00_DAMAGE0_BODY_B: decoded 1613 triangles, header 1617"
+    },
+    {
+      "candidate_name": "CARS\\COPSUVL\\GEOMETRY.BIN",
+      "directory_record_offset": 12312,
+      "bytes": 429248,
+      "sha256": "4fe2909aa7f8e92f1b8d97b1ee843821044b66b4922396bbf250a622794625c4",
+      "status": "decoded",
+      "part_count": 32,
+      "triangles": 5847,
+      "lamp_parts": [
+        {
+          "name": "COPSUVL_KIT00_DAMAGE0_LEFT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE0_LEFT_HEADLIGHT_B",
+          "triangles": 64
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE0_RIGHT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE0_RIGHT_HEADLIGHT_B",
+          "triangles": 64
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE1_LEFT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE1_LEFT_HEADLIGHT_B",
+          "triangles": 64
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE1_RIGHT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUVL_KIT00_DAMAGE1_RIGHT_HEADLIGHT_B",
+          "triangles": 64
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\COPSUV\\GEOMETRY.BIN",
+      "directory_record_offset": 14376,
+      "bytes": 492032,
+      "sha256": "dea99af878480188b6a8b319f4a9990b28fc799bba3f63aa30b42d6e625aaedb",
+      "status": "decoded",
+      "part_count": 33,
+      "triangles": 6867,
+      "lamp_parts": [
+        {
+          "name": "COPSUV_KIT00_DAMAGE0_LEFT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE0_LEFT_HEADLIGHT_B",
+          "triangles": 64
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE0_RIGHT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE0_RIGHT_HEADLIGHT_B",
+          "triangles": 64
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE1_LEFT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE1_LEFT_HEADLIGHT_B",
+          "triangles": 64
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE1_RIGHT_BRAKELIGHT_B",
+          "triangles": 12
+        },
+        {
+          "name": "COPSUV_KIT00_DAMAGE1_RIGHT_HEADLIGHT_B",
+          "triangles": 64
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\CORVETTEC6R\\GEOMETRY.BIN",
+      "directory_record_offset": 8904,
+      "bytes": 381312,
+      "sha256": "cf557db5fffd1f01d423010b4ac60a037b92f9e6a460bf3674945ea63881dd22",
+      "status": "decoded",
+      "part_count": 20,
+      "triangles": 6060,
+      "lamp_parts": [
+        {
+          "name": "CORVETTEC6R_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 14
+        },
+        {
+          "name": "CORVETTEC6R_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 155
+        },
+        {
+          "name": "CORVETTEC6R_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 67
+        },
+        {
+          "name": "CORVETTEC6R_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 14
+        },
+        {
+          "name": "CORVETTEC6R_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 155
+        },
+        {
+          "name": "CORVETTEC6R_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 67
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\CORVETTE\\GEOMETRY.BIN",
+      "directory_record_offset": 12024,
+      "bytes": 1271424,
+      "sha256": "70bf3fa8d40f34ffc60f3c32f36fd4b2957d613f6eb25b0c5f284e3fba53c808",
+      "status": "unsupported or rejected",
+      "reason": "CORVETTE_KIT03_DAMAGE0_FRONTLEFT_B: decoded 67 triangles, header 68"
+    },
+    {
+      "candidate_name": "CARS\\CTS\\GEOMETRY.BIN",
+      "directory_record_offset": 7488,
+      "bytes": 1329216,
+      "sha256": "bd07541764d47769334d06bd7b452a69b897aecbdffd54a45938878fb1e13b40",
+      "status": "unsupported or rejected",
+      "reason": "CTS_KIT00_LEFT_BRAKELIGHT_B: decoded 69 triangles, header 71"
+    },
+    {
+      "candidate_name": "CARS\\DB9\\GEOMETRY.BIN",
+      "directory_record_offset": 25536,
+      "bytes": 1516480,
+      "sha256": "44e5beef01254d9a5398971e720358ee726a9095511846926225d8aede5022c4",
+      "status": "unsupported or rejected",
+      "reason": "1261587"
+    },
+    {
+      "candidate_name": "CARS\\ECLIPSEGT\\GEOMETRY.BIN",
+      "directory_record_offset": 30600,
+      "bytes": 1492672,
+      "sha256": "44b0c63b8bbf42ced7ee1dc421fdd4109b204d2ec3df6948e24cedd6929ba7d3",
+      "status": "unsupported or rejected",
+      "reason": "ECLIPSEGT_KIT02_DAMAGE0_FRONTLEFT_B: decoded 90 triangles, header 91"
+    },
+    {
+      "candidate_name": "CARS\\ELISE\\GEOMETRY.BIN",
+      "directory_record_offset": 19656,
+      "bytes": 1725824,
+      "sha256": "592241deab1ce214c057c42f73ab1e7a2dac011111186d68474cdc5b837db273",
+      "status": "decoded",
+      "part_count": 77,
+      "triangles": 28680,
+      "lamp_parts": [
+        {
+          "name": "ELISE_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 84
+        },
+        {
+          "name": "ELISE_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 106
+        },
+        {
+          "name": "ELISE_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 26
+        },
+        {
+          "name": "ELISE_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 84
+        },
+        {
+          "name": "ELISE_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 106
+        },
+        {
+          "name": "ELISE_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 26
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\FORDGT\\GEOMETRY.BIN",
+      "directory_record_offset": 18168,
+      "bytes": 1123712,
+      "sha256": "3c706f581f1bd1e7257f8e9ddecb6989c33bffc7437341cf7f93c7f6a35fa774",
+      "status": "unsupported or rejected",
+      "reason": "FORDGT_KIT01_BODY_B: decoded 2965 triangles, header 2966"
+    },
+    {
+      "candidate_name": "CARS\\GALLARDO\\GEOMETRY.BIN",
+      "directory_record_offset": 23712,
+      "bytes": 1385408,
+      "sha256": "e39d67b15918e78c0756a51468e7f6a1adaa56f2453e92e31528344f5f30e168",
+      "status": "decoded",
+      "part_count": 72,
+      "triangles": 22005,
+      "lamp_parts": [
+        {
+          "name": "GALLARDO_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 16
+        },
+        {
+          "name": "GALLARDO_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 205
+        },
+        {
+          "name": "GALLARDO_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 10
+        },
+        {
+          "name": "GALLARDO_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 16
+        },
+        {
+          "name": "GALLARDO_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 205
+        },
+        {
+          "name": "GALLARDO_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\GARB\\GEOMETRY.BIN",
+      "directory_record_offset": 17712,
+      "bytes": 115264,
+      "sha256": "025ea3c9031038d6db07e60770da326e4a2d2c9f97602176b3bf89f754c1f008",
+      "status": "unsupported or rejected",
+      "reason": "GARB_KIT00_FRONT_TIRE_B: decoded 54 triangles, header 56"
+    },
+    {
+      "candidate_name": "CARS\\GTI\\GEOMETRY.BIN",
+      "directory_record_offset": 3384,
+      "bytes": 1235584,
+      "sha256": "e515a84eb1a101493e3640ee7b3ee5d1ab79260358ee586792199ebb5af99b22",
+      "status": "unsupported or rejected",
+      "reason": "GTI_KIT02_BODY_B: decoded 2115 triangles, header 2151"
+    },
+    {
+      "candidate_name": "CARS\\GTO\\GEOMETRY.BIN",
+      "directory_record_offset": 15768,
+      "bytes": 1394880,
+      "sha256": "d3a1491d89b414ad651c69ea0d1557f6a2a4db14d154981094d714538e1db4b8",
+      "status": "unsupported or rejected",
+      "reason": "GTO_KIT01_BODY_B: decoded 2235 triangles, header 2237"
+    },
+    {
+      "candidate_name": "CARS\\IMPREZAWRX\\GEOMETRY.BIN",
+      "directory_record_offset": 11808,
+      "bytes": 1457920,
+      "sha256": "a8a0c161ff7bfd20f935157e37bf0b9a28e55be7de6083ed0ebf6d6d6898992f",
+      "status": "decoded",
+      "part_count": 76,
+      "triangles": 23290,
+      "lamp_parts": [
+        {
+          "name": "IMPREZAWRX_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 84
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 67
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 226
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 30
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 84
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 67
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 226
+        },
+        {
+          "name": "IMPREZAWRX_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 30
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\IS300\\GEOMETRY.BIN",
+      "directory_record_offset": 3408,
+      "bytes": 1390784,
+      "sha256": "e3fa4c1dd3923579791965f2dbbd6df6aadb05d179912833fd950be7ba60df48",
+      "status": "decoded",
+      "part_count": 74,
+      "triangles": 23534,
+      "lamp_parts": [
+        {
+          "name": "IS300_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 125
+        },
+        {
+          "name": "IS300_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 26
+        },
+        {
+          "name": "IS300_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 111
+        },
+        {
+          "name": "IS300_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "IS300_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 125
+        },
+        {
+          "name": "IS300_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 26
+        },
+        {
+          "name": "IS300_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 111
+        },
+        {
+          "name": "IS300_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 39
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\LANCEREVO8\\GEOMETRY.BIN",
+      "directory_record_offset": 7128,
+      "bytes": 1657600,
+      "sha256": "d11fb6e9769f8257afa1a023f4a61896e6aedaec5019d1fa137f2b4ee10fb1c6",
+      "status": "decoded",
+      "part_count": 82,
+      "triangles": 27597,
+      "lamp_parts": [
+        {
+          "name": "LANCEREVO8_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 117
+        },
+        {
+          "name": "LANCEREVO8_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 21
+        },
+        {
+          "name": "LANCEREVO8_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 180
+        },
+        {
+          "name": "LANCEREVO8_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 16
+        },
+        {
+          "name": "LANCEREVO8_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 117
+        },
+        {
+          "name": "LANCEREVO8_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 21
+        },
+        {
+          "name": "LANCEREVO8_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 180
+        },
+        {
+          "name": "LANCEREVO8_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 16
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\MINIVAN\\GEOMETRY.BIN",
+      "directory_record_offset": 23520,
+      "bytes": 78976,
+      "sha256": "d2e2fe1e937655bb8462c9db82c88f621473c594427af60076a68b5944331d97",
+      "status": "decoded",
+      "part_count": 5,
+      "triangles": 1130,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\MONARO\\GEOMETRY.BIN",
+      "directory_record_offset": 26880,
+      "bytes": 1456576,
+      "sha256": "71fa9a77053427e1cb594456c347eac4c6acf06c12a25b02d710f00678ed7d15",
+      "status": "unsupported or rejected",
+      "reason": "MONARO_STYLE06_HOOD_B: decoded 268 triangles, header 272"
+    },
+    {
+      "candidate_name": "CARS\\MURCIELAGO\\GEOMETRY.BIN",
+      "directory_record_offset": 4512,
+      "bytes": 853952,
+      "sha256": "d7c1daa414b8b0b945a6011aba2a5ee1781734e4454fa0a8d65ae6210439ec64",
+      "status": "decoded",
+      "part_count": 60,
+      "triangles": 13494,
+      "lamp_parts": [
+        {
+          "name": "MURCIELAGO_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 18
+        },
+        {
+          "name": "MURCIELAGO_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 13
+        },
+        {
+          "name": "MURCIELAGO_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 255
+        },
+        {
+          "name": "MURCIELAGO_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 11
+        },
+        {
+          "name": "MURCIELAGO_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 18
+        },
+        {
+          "name": "MURCIELAGO_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 13
+        },
+        {
+          "name": "MURCIELAGO_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 255
+        },
+        {
+          "name": "MURCIELAGO_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 11
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\MUSTANGGT\\GEOMETRY.BIN",
+      "directory_record_offset": 22200,
+      "bytes": 1385152,
+      "sha256": "3f44c1d63d0c1221cd76b59f14f130433a85b277e298ab03382dc250492fb532",
+      "status": "decoded",
+      "part_count": 82,
+      "triangles": 22320,
+      "lamp_parts": [
+        {
+          "name": "MUSTANGGT_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 144
+        },
+        {
+          "name": "MUSTANGGT_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 17
+        },
+        {
+          "name": "MUSTANGGT_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 173
+        },
+        {
+          "name": "MUSTANGGT_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 7
+        },
+        {
+          "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 144
+        },
+        {
+          "name": "MUSTANGGT_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 17
+        },
+        {
+          "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 173
+        },
+        {
+          "name": "MUSTANGGT_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 7
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\PICKUPA\\GEOMETRY.BIN",
+      "directory_record_offset": 17856,
+      "bytes": 71872,
+      "sha256": "e4c9861f3caafebafa57b66facb7b656c2081801c8962e61bff261c425e0465b",
+      "status": "decoded",
+      "part_count": 4,
+      "triangles": 977,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\PIZZA\\GEOMETRY.BIN",
+      "directory_record_offset": 14856,
+      "bytes": 80320,
+      "sha256": "2de1a687957d98f4fa4802dd8c4abd46a48a694327c0adaae09ebdcf797ea971",
+      "status": "decoded",
+      "part_count": 5,
+      "triangles": 1068,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\PUNTO\\GEOMETRY.BIN",
+      "directory_record_offset": 6144,
+      "bytes": 1314880,
+      "sha256": "c76537ecdb1251939b4b60afd9255980f2db71e2ae3520d965abddc7edd7b66d",
+      "status": "decoded",
+      "part_count": 74,
+      "triangles": 21461,
+      "lamp_parts": [
+        {
+          "name": "PUNTO_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 171
+        },
+        {
+          "name": "PUNTO_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "PUNTO_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 169
+        },
+        {
+          "name": "PUNTO_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 38
+        },
+        {
+          "name": "PUNTO_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 171
+        },
+        {
+          "name": "PUNTO_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "PUNTO_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 169
+        },
+        {
+          "name": "PUNTO_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 38
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\RX7\\GEOMETRY.BIN",
+      "directory_record_offset": 672,
+      "bytes": 1392384,
+      "sha256": "c5d760583a1493bd52e86e3265a7156b9258f324ba9e4fdb753add345332da1d",
+      "status": "unsupported or rejected",
+      "reason": "RX7_KIT00_LEFT_BRAKELIGHT_B: decoded 90 triangles, header 95"
+    },
+    {
+      "candidate_name": "CARS\\RX8SPEEDT\\GEOMETRY.BIN",
+      "directory_record_offset": 13488,
+      "bytes": 379008,
+      "sha256": "e8007bfba2ce5d5a6b0981093b43d10ac22f521617b9f1228075023471d8e275",
+      "status": "decoded",
+      "part_count": 23,
+      "triangles": 6747,
+      "lamp_parts": [
+        {
+          "name": "RX8SPEEDT_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 98
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 176
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 17
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 98
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 176
+        },
+        {
+          "name": "RX8SPEEDT_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 17
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\RX8\\GEOMETRY.BIN",
+      "directory_record_offset": 7992,
+      "bytes": 1497920,
+      "sha256": "56cc4cc52e6d10efa4cedacf188a823f4a388d20cdd1b301d05e8fdc1d0ccdca",
+      "status": "decoded",
+      "part_count": 81,
+      "triangles": 23971,
+      "lamp_parts": [
+        {
+          "name": "RX8_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 98
+        },
+        {
+          "name": "RX8_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "RX8_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 176
+        },
+        {
+          "name": "RX8_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 17
+        },
+        {
+          "name": "RX8_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 98
+        },
+        {
+          "name": "RX8_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 39
+        },
+        {
+          "name": "RX8_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 176
+        },
+        {
+          "name": "RX8_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 17
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\SEMI\\GEOMETRY.BIN",
+      "directory_record_offset": 1680,
+      "bytes": 84864,
+      "sha256": "0c7161a11adbfeb8ad70ac89d7e0b958aac4649cc55eb84554e961e82c259c8e",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\SL500\\GEOMETRY.BIN",
+      "directory_record_offset": 15576,
+      "bytes": 1790720,
+      "sha256": "85f151c9ffec4a7815ef95461266b0fbf1181e0a07af48c924bf2a482dea739a",
+      "status": "unsupported or rejected",
+      "reason": "SL500_KIT00_DAMAGE0_REARLEFT_B: decoded 64 triangles, header 72"
+    },
+    {
+      "candidate_name": "CARS\\SL65\\GEOMETRY.BIN",
+      "directory_record_offset": 2760,
+      "bytes": 396672,
+      "sha256": "32f054c7debce49d9de95d911d28491c7b579ee20b50d660c0fdfa7b850d80fc",
+      "status": "unsupported or rejected",
+      "reason": "SL65_KIT00_INTERIOR_B: decoded 500 triangles, header 504"
+    },
+    {
+      "candidate_name": "CARS\\SLR\\GEOMETRY.BIN",
+      "directory_record_offset": 21216,
+      "bytes": 1221696,
+      "sha256": "3a471dbb2a4702ade95bbb1c041b0bae1c27ecf19628f16bb028dd8362342813",
+      "status": "unsupported or rejected",
+      "reason": "SLR_KIT00_DAMAGE0_FRONTLEFT_B: decoded 62 triangles, header 63"
+    },
+    {
+      "candidate_name": "CARS\\SUPRA\\GEOMETRY.BIN",
+      "directory_record_offset": 18072,
+      "bytes": 1378880,
+      "sha256": "e9d5547f631e4df11075763c85bb28afd965aa1afb2dd45ed9710292aca7ca8a",
+      "status": "decoded",
+      "part_count": 82,
+      "triangles": 24064,
+      "lamp_parts": [
+        {
+          "name": "SUPRA_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 108
+        },
+        {
+          "name": "SUPRA_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 14
+        },
+        {
+          "name": "SUPRA_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 103
+        },
+        {
+          "name": "SUPRA_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 45
+        },
+        {
+          "name": "SUPRA_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 108
+        },
+        {
+          "name": "SUPRA_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 14
+        },
+        {
+          "name": "SUPRA_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 103
+        },
+        {
+          "name": "SUPRA_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 45
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\TAXI\\GEOMETRY.BIN",
+      "directory_record_offset": 14232,
+      "bytes": 75136,
+      "sha256": "24e20fa293a66163ab5c2d7e5b057353c4f15ac7914b6bead4c34fdb2af98cb4",
+      "status": "unsupported or rejected",
+      "reason": "Unsupported draw record"
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDA\\GEOMETRY.BIN",
+      "directory_record_offset": 28776,
+      "bytes": 38592,
+      "sha256": "e686964733ab2d0053d8ae1517c6d71c81651b99138e9bb16274bf1baa28eb68",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDB\\GEOMETRY.BIN",
+      "directory_record_offset": 4032,
+      "bytes": 42048,
+      "sha256": "3c2b13ce65dde1e7944a010db5da42cb22591e11126bcc38a55fc2a16f0c8b34",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAF4DSEDC\\GEOMETRY.BIN",
+      "directory_record_offset": 11664,
+      "bytes": 44288,
+      "sha256": "98b6bff46931ebc0fbeffea442a520feb14c09e06e8012d31d142009b383db97",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFAMB\\GEOMETRY.BIN",
+      "directory_record_offset": 19296,
+      "bytes": 47872,
+      "sha256": "c4498f09dab42fa3675b0cd5705e8e0c6ec519c594ff06ed840e77a4e3a61e75",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFCAMPER\\GEOMETRY.BIN",
+      "directory_record_offset": 3744,
+      "bytes": 17408,
+      "sha256": "7e3a22f045e7aa221f15bc4006c9dedde2fd6d645b2aec4d2432ed7afd904cb5",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFCEMTR\\GEOMETRY.BIN",
+      "directory_record_offset": 20952,
+      "bytes": 85888,
+      "sha256": "326a7b9fc0df1a7eebefef04a28aa3984c5f45fe445e74a6be3ea6ce2e5db25c",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFCOURT\\GEOMETRY.BIN",
+      "directory_record_offset": 31368,
+      "bytes": 47168,
+      "sha256": "42304a779c52fad4feb6df2d5cfbfe9185829ddcb65e4a5bb7d412fbb64aac79",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFDMPTR\\GEOMETRY.BIN",
+      "directory_record_offset": 10272,
+      "bytes": 68864,
+      "sha256": "f5a02d6276e2e96771cbdc853400a22526c6c032db3e47c4da5bde18cd067fa3",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFFICCOUP\\GEOMETRY.BIN",
+      "directory_record_offset": 26016,
+      "bytes": 40768,
+      "sha256": "46d321e4f3af86cf73499fde66df76637699ca468f176c3fc8e580846996a992",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFFIRE\\GEOMETRY.BIN",
+      "directory_record_offset": 9480,
+      "bytes": 60352,
+      "sha256": "c04011e8b9d1eb7a020c8b3fcbac0dffbbbcdf5500a277eec88b390bdeeea3e2",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFGARB\\GEOMETRY.BIN",
+      "directory_record_offset": 25680,
+      "bytes": 58432,
+      "sha256": "e63b91d04d83c6b0abed6850c45e1c5ae18675b37b4853e711f680d818ddf3f6",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFHA\\GEOMETRY.BIN",
+      "directory_record_offset": 19824,
+      "bytes": 41920,
+      "sha256": "c290f40e1952a22dfd0d0184dd39ae306df54333fb92ea8a5502565c77b18d66",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFMINIVAN\\GEOMETRY.BIN",
+      "directory_record_offset": 5352,
+      "bytes": 39744,
+      "sha256": "994c18228644f994e5e579bd6e96d75b98bdbe7672563b1e96cedff96e761dc3",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFNEWS\\GEOMETRY.BIN",
+      "directory_record_offset": 3768,
+      "bytes": 58688,
+      "sha256": "9d47945f0402ca9a036a6ad998b9c32fa7a9a0b8eaeb96b89c16b373bed73fb0",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFPICKUPA\\GEOMETRY.BIN",
+      "directory_record_offset": 32352,
+      "bytes": 38080,
+      "sha256": "185ee98565184d83b589483216e175c94d1deb31c2b6094f172ce9a6fbacf1bb",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFPIZZA\\GEOMETRY.BIN",
+      "directory_record_offset": 17808,
+      "bytes": 43264,
+      "sha256": "8a720945cb0e7ddc8b1e4aec33068ca0fd0a158debc192613e4bc6b744040a4d",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFSTWAG\\GEOMETRY.BIN",
+      "directory_record_offset": 31104,
+      "bytes": 46912,
+      "sha256": "a9657e047df9d71e0d42d1ca593f697920939414eb3c8abfc6bb28421c110059",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFSUVA\\GEOMETRY.BIN",
+      "directory_record_offset": 30960,
+      "bytes": 38400,
+      "sha256": "18301576cd62f350eb32a0a4b46d7e4ab0c5346ed475f7f63a4ed8ef3ecc2c0f",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFTAXI\\GEOMETRY.BIN",
+      "directory_record_offset": 22416,
+      "bytes": 38912,
+      "sha256": "9b0741559f41c431af18121b84af4265630ed25038375b03c0c86296d3699eb6",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAFVANB\\GEOMETRY.BIN",
+      "directory_record_offset": 27480,
+      "bytes": 37248,
+      "sha256": "6563e969fdd2f3d5f6c20712c840de91cb6c609214e4f1bd30ac91fd992c4e72",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAILERA\\GEOMETRY.BIN",
+      "directory_record_offset": 12912,
+      "bytes": 35584,
+      "sha256": "a9afe0804e414ff3da4c09d41e3de6af01a57ccc01966ddf941f3595f8af6edb",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAILERB\\GEOMETRY.BIN",
+      "directory_record_offset": 20544,
+      "bytes": 192896,
+      "sha256": "1e0fb04e799b6060ef8cb0f8b3e0835d839962890473d3344a758f2ea1c08327",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCMT\\GEOMETRY.BIN",
+      "directory_record_offset": 8544,
+      "bytes": 62784,
+      "sha256": "5d4eeec684250c51961d4916434c7497394c346127debd003a82e463fd4ff09c",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCON\\GEOMETRY.BIN",
+      "directory_record_offset": 4944,
+      "bytes": 43776,
+      "sha256": "9b446ef85f4960309efd1bbed539f318a9a653a0099f902497e794d391fdfb49",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAILERCRATE\\GEOMETRY.BIN",
+      "directory_record_offset": 29400,
+      "bytes": 53568,
+      "sha256": "20ed24128e9715a101cb7c3ad0731be0b5479b7b347ebbb5707b61f7f003852d",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TRAILERLOG\\GEOMETRY.BIN",
+      "directory_record_offset": 31416,
+      "bytes": 77952,
+      "sha256": "641c6d9c889ccb59314fe33ee1afd4755d62fa8faa797374f0c630db8ecdb6ef",
+      "status": "no supported B parts selected",
+      "part_count": 0,
+      "triangles": 0,
+      "lamp_parts": []
+    },
+    {
+      "candidate_name": "CARS\\TT\\GEOMETRY.BIN",
+      "directory_record_offset": 10944,
+      "bytes": 1425600,
+      "sha256": "52c71c3cd1cbd9ab42a464e2c2bf91e17572299360d9640cd60769fb690eb397",
+      "status": "decoded",
+      "part_count": 83,
+      "triangles": 25459,
+      "lamp_parts": [
+        {
+          "name": "TT_KIT00_LEFT_BRAKELIGHT_B",
+          "triangles": 17
+        },
+        {
+          "name": "TT_KIT00_LEFT_BRAKELIGHT_GLASS_B",
+          "triangles": 16
+        },
+        {
+          "name": "TT_KIT00_LEFT_HEADLIGHT_B",
+          "triangles": 143
+        },
+        {
+          "name": "TT_KIT00_LEFT_HEADLIGHT_GLASS_B",
+          "triangles": 17
+        },
+        {
+          "name": "TT_KIT00_RIGHT_BRAKELIGHT_B",
+          "triangles": 17
+        },
+        {
+          "name": "TT_KIT00_RIGHT_BRAKELIGHT_GLASS_B",
+          "triangles": 16
+        },
+        {
+          "name": "TT_KIT00_RIGHT_HEADLIGHT_B",
+          "triangles": 143
+        },
+        {
+          "name": "TT_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+          "triangles": 17
+        }
+      ]
+    },
+    {
+      "candidate_name": "CARS\\VIPER\\GEOMETRY.BIN",
+      "directory_record_offset": 3432,
+      "bytes": 1513856,
+      "sha256": "2114c02b38cf7e28a744e4131aee0381130938e0bb4cc8c4072a9c23aaac00da",
+      "status": "unsupported or rejected",
+      "reason": "VIPER_KIT04_DAMAGE0_REARLEFT_B: decoded 61 triangles, header 62"
+    }
+  ],
+  "status_counts": {
+    "unsupported or rejected": 27,
+    "decoded": 28,
+    "no supported B parts selected": 28
+  },
+  "limits": [
+    "No additional cars are integrated into the playable build by this tool",
+    "LOD B decoding does not establish the original playable roster or complete mesh/attachment/material support"
+  ],
+  "extraction_summary": {
+    "records": 305,
+    "bytes": 135806976,
+    "all_source_archives_checked_against_receipt": true
+  }
+}

@@ -335,6 +335,9 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
     float projection=mw_lod_projection_raw(f->view.original_fov_turn);
     bool standard_up=fabsf(f->view.up_viewer[0])<1e-6f&&fabsf(f->view.up_viewer[2])<1e-6f&&f->view.up_viewer[1]>0;
     for(uint32_t s=0;s<f->section_count;s++)for(uint32_t i=0;i<f->sections[s]->view.instance_count;i++){
+        const uint8_t *source_instance=f->sections[s]->view.data+
+            f->sections[s]->view.instances+i*144+8;
+        if(!mw_lod_instance_visible(word(source_instance+24),f->view.original_context_flags))continue;
         /* Section open has validated these immutable records. Reject by the
            exact same bounds before decoding nine matrix elements/four LODs. */
         if(standard_up){

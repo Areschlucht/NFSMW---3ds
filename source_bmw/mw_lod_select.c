@@ -3,6 +3,11 @@
 #include <math.h>
 #include <limits.h>
 
+bool mw_lod_instance_visible(uint32_t instance_flags,uint32_t context_flags)
+{
+    return (((instance_flags&0xffu)^0x60u)&context_flags)==0;
+}
+
 static float original_sine(uint16_t angle)
 {
     float x=(float)angle*9.5873801910784095526e-5f,sign=1.0f;

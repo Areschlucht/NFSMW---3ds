@@ -45,3 +45,11 @@ through ZZDATA3.BIN. All 1,363 original ZDIR record ranges fit those source file
 See docs/research/archive-receipts.json. Do not request these archives or pieces
 again. Internal asset identities, format decoding and runtime integration still
 need recovery; source availability is not a whole-game implementation claim.
+
+Post-collection integration progress is in docs/research/current-integration-progress.md.
+Original render flag gate is now called by stage_draws; default prototype context
+stays zero until collision/event ownership is recovered (free-roam walls not fixed).
+Native BMW lamp bank and complete music extraction/decoder checks are reproducible
+from new tools and private originals. Car candidate geometry coverage and failures
+are measured without relaxing strict decoding. Do not claim audio/lights/cars are
+integrated from read-only exports. No new release ZIP was published in this pass.

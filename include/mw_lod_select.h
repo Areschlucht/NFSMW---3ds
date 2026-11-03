@@ -16,6 +16,10 @@ typedef struct {
    Returns original bound slot0,2,3 or -1 if none. Does not activate sections,
    invent model fallbacks or establish the upstream projected-score producer. */
 int mw_lod_select(const MwLodSelectInput *input);
+/* Original802BEAA8..802BEAC4 gate, using the same Drawcontext+84 word
+   as LOD. A zero context preserves the explicit prototype context. This
+   consumer does not recover event producers or collision ownership. */
+bool mw_lod_instance_visible(uint32_t instance_flags,uint32_t context_flags);
 /* Original802BEB24..802BEC38 producer uses instance TRANSLATION, not AABB
    center. All positions/radius must retain the same original source units.
    sqrt callback supplies the original sqrt stage if available. NULL uses

@@ -91,7 +91,7 @@ def inspect_stream_prefix(data, mpf):
     require(patches[0x80]==3 and 0x83 not in patches and 0xa0 not in patches,
             'Unobserved GSTR codec/version variant')
     samples,rate=patches[0x85],patches[0x84]
-    require(rate>0 and round(samples*1000/rate)==mpf['first_samples'][0]['duration_ms'],
+    require(rate>0 and samples*1000//rate==mpf['first_samples'][0]['duration_ms'],
             'SCHl sample duration differs from MPF')
     blocks=[];cursor=start;truncated=None
     while cursor+8<=len(data):
