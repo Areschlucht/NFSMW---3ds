@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "bundle_sha256": "071c5d31cc0218b7c7c2162de87a614e5cc9aecdd8ba43e5504f7e6f1d73d867",
+  "payloads": [
+    {
+      "entry": "GLOBAL\\GAMEPLAY.BIN",
+      "archive_offset": 267364352,
+      "bytes": 2103680,
+      "sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "entry": "GLOBAL\\GAMEPLAY.BIN",
+      "archive_offset": 277204992,
+      "bytes": 2103680,
+      "sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "entry": "SOUND\\PFData\\MW_Mus_1.mpf",
+      "archive_offset": 335966208,
+      "bytes": 18112,
+      "sha256": "a3a8b09cb667666c4eeb1f1f8041d0bfa3fb9797dfa5c777cc9dfff3f9aec506"
+    },
+    {
+      "entry": "SOUND\\PFData\\MW_Mus_2.mpf",
+      "archive_offset": 335984640,
+      "bytes": 14212,
+      "sha256": "eec760a69ff13163c33ffbd2a926d60e314ff8917ec327bfb5f19fac922ccf2f"
+    },
+    {
+      "entry": "SOUND\\PFData\\MW_Mus_3.mpf",
+      "archive_offset": 335998976,
+      "bytes": 16332,
+      "sha256": "d97c910815724fbafc5c42917f2b2a864fdebac798485a8395a18ec60090f376"
+    },
+    {
+      "entry": "SOUND\\PFData\\MW_Mus_4.mpf",
+      "archive_offset": 336015360,
+      "bytes": 15700,
+      "sha256": "555f58e9aecddf688ae91fe7a393d482af1548e9bb3e0b1990f30531b576aaa1"
+    },
+    {
+      "entry": "SOUND\\PFData\\MW_Music.mpf",
+      "archive_offset": 336031744,
+      "bytes": 8936,
+      "sha256": "778d91a03b2da4bd9a66ca68663e3b12d45f2085f5527e03766389b4666e3bbc"
+    },
+    {
+      "entry": "TRACKS\\PRECULLERBOOBOOSCRIPT.HOO",
+      "archive_offset": 299401216,
+      "bytes": 13471,
+      "sha256": "b65a4c856e7c33716d85b807a1b320b432ff0d935f54481be3b48839802cfca0"
+    }
+  ],
+  "total_payload_bytes": 4294123,
+  "disc_listing_entries": 8,
+  "gameplay_duplicates_byte_identical": true,
+  "unexpected_original_media_folders_in_listing": false
+}

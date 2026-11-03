@@ -27,3 +27,13 @@ implementation pass. They supersede optional neutral/default filter preferences.
 Race-barrier activation/collision, crowded-view performance, full original audio,
 per-car lighting, frontend and progression are required. Research/tooling in this
 checkpoint does not change the shipped v0.18 runtime or establish full fidelity.
+
+The small whole-game metadata bundle has arrived and passed original directory
+range and SHA checks. See docs/research/gameplay-packages-findings.md. Do not ask
+for it again. Parallel recovery reports cover event activation, BMW lamp bindings
+and music metadata; read their evidence/limits before integrating runtime changes.
+A bulk Windows collection helper now splits all four remaining ZZDATA archives
+into 47 uploadable 28-MiB-or-smaller pieces with per-archive/per-piece manifests.
+Original oversized archive attachments exceed the workspace downloader's 32-MiB
+limit. Use tools/reassemble_game_archives.py on complete received sets privately;
+never commit original payloads. This is collection/recovery tooling, not a release.

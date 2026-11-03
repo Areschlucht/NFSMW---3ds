@@ -1,0 +1,220 @@
+{
+  "schema": 1,
+  "source_sha256": {
+    "gameplay": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6",
+    "attributes": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+    "l2ra": "73d4a98efcd366e6dc1e13a3fdc1f1494e8763edac05b7f911dc66b62c2c072d",
+    "dol": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166"
+  },
+  "groups": 754,
+  "member_records": 14313,
+  "group_memberships": 14313,
+  "groups_with_literal_name_candidates": 736,
+  "field_reference_count": 7390,
+  "field_reference_counts": {
+    "0xe244f26b": 7390
+  },
+  "logical_instances_mapped_to_stream": 14313,
+  "members_with_multiple_stream_candidates": 3514,
+  "classification_table": [
+    [
+      "BARRIER_",
+      1
+    ],
+    [
+      "BARRIERS_",
+      1
+    ],
+    [
+      "PLAYER_BARRIERS_",
+      1
+    ],
+    [
+      "SCENERY_GROUP_",
+      1
+    ],
+    [
+      "FREE_ROAM",
+      0
+    ]
+  ],
+  "consumer_evidence": {
+    "classification_table_address": "8043707c",
+    "classifier": "802c117c",
+    "classifier_caller": "801fe9ac",
+    "case_sensitive_hash_function": "80062ecc",
+    "member_table_loader": "802bd5d4",
+    "member_index_resolver": "802bccc4",
+    "group_table_loader": "802bd234",
+    "group_lookup": "802bd374",
+    "gameplay_group_field_hash": "e244f26b",
+    "gameplay_apply_loop": "801a9960",
+    "gameplay_group_name_accessor": "801a98a8",
+    "gameplay_leading_star_accessor": "801a9900",
+    "group_state_setter": "802bd3a8",
+    "group_state_remover": "802bd48c",
+    "instance_flag_application": "802bccd8",
+    "set_formula": "member.flags = (member.flags & 0xfbef) | (arg != 0 ? 0x400 : 0)",
+    "remove_formula": "member.flags |= 0x10",
+    "application_formula": "instance.flags = (instance.flags & 0xffff0000) + member.flags",
+    "limits": [
+      "Bit0x400 can trigger transform mutation; it is not merely a visibility bit.",
+      "Multiple loaded provider occurrences can share logical scenery/instance IDs; preserve all source candidates.",
+      "Bit0x10 downstream draw/collision semantics and complete event/career producers remain integration gates.",
+      "Hash/name matches identify source groups but do not justify enabling all BARRIER-named objects.",
+      "GameCube loading mutates linked-list words; preserved source values are not host pointers."
+    ]
+  },
+  "group_examples": [
+    {
+      "hash": "454c22d2",
+      "id": 1,
+      "source_record_offset": 374904,
+      "unknown_link_words": [
+        11,
+        11
+      ],
+      "unknown_tail_word": 0,
+      "candidate_names": [],
+      "member_count": 7354
+    },
+    {
+      "hash": "2d9c192e",
+      "id": 2,
+      "source_record_offset": 389632,
+      "unknown_link_words": [
+        11,
+        11
+      ],
+      "unknown_tail_word": 1,
+      "candidate_names": [
+        "BARRIER_SPLINE_456"
+      ],
+      "member_count": 5
+    },
+    {
+      "hash": "2d9c1930",
+      "id": 3,
+      "source_record_offset": 389664,
+      "unknown_link_words": [
+        11,
+        11
+      ],
+      "unknown_tail_word": 1,
+      "candidate_names": [
+        "BARRIER_SPLINE_458"
+      ],
+      "member_count": 10
+    },
+    {
+      "hash": "2d9c190f",
+      "id": 4,
+      "source_record_offset": 389704,
+      "unknown_link_words": [
+        11,
+        11
+      ],
+      "unknown_tail_word": 1,
+      "candidate_names": [
+        "BARRIER_SPLINE_448"
+      ],
+      "member_count": 11
+    },
+    {
+      "hash": "2d9c1910",
+      "id": 5,
+      "source_record_offset": 389748,
+      "unknown_link_words": [
+        11,
+        11
+      ],
+      "unknown_tail_word": 1,
+      "candidate_names": [
+        "BARRIER_SPLINE_449"
+      ],
+      "member_count": 12
+    },
+    {
+      "hash": "2d9c1928",
+      "id": 6,
+      "source_record_offset": 389792,
+      "unknown_link_words": [
+        11,
+        11
+      ],
+      "unknown_tail_word": 1,
+      "candidate_names": [
+        "BARRIER_SPLINE_450"
+      ],
+      "member_count": 24
+    }
+  ],
+  "field_reference_examples": [
+    {
+      "package": "gpcore",
+      "collection": "race_bin_16",
+      "field": "0xe244f26b",
+      "text": "BARRIER_LOCKED_11",
+      "leading_star_state": false,
+      "original_bhash": "b112b338",
+      "matched_group": true,
+      "source_file_offset": 1445012,
+      "source_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "package": "gpcore",
+      "collection": "race_bin_16",
+      "field": "0xe244f26b",
+      "text": "BARRIER_LOCKED_12",
+      "leading_star_state": false,
+      "original_bhash": "b112b339",
+      "matched_group": true,
+      "source_file_offset": 1445012,
+      "source_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "package": "gpcore",
+      "collection": "race_bin_16",
+      "field": "0xe244f26b",
+      "text": "BARRIER_LOCKED_13",
+      "leading_star_state": false,
+      "original_bhash": "b112b33a",
+      "matched_group": true,
+      "source_file_offset": 1445012,
+      "source_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "package": "gpcore",
+      "collection": "race_bin_16",
+      "field": "0xe244f26b",
+      "text": "BARRIER_LOCKED_14",
+      "leading_star_state": false,
+      "original_bhash": "b112b33b",
+      "matched_group": true,
+      "source_file_offset": 1445012,
+      "source_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "package": "gpcore",
+      "collection": "race_bin_16",
+      "field": "0xe244f26b",
+      "text": "BARRIER_LOCKED_15",
+      "leading_star_state": false,
+      "original_bhash": "b112b33c",
+      "matched_group": true,
+      "source_file_offset": 1445012,
+      "source_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    },
+    {
+      "package": "gpcore",
+      "collection": "race_bin_15",
+      "field": "0xe244f26b",
+      "text": "BARRIER_LOCKED_11",
+      "leading_star_state": false,
+      "original_bhash": "b112b338",
+      "matched_group": true,
+      "source_file_offset": 1445740,
+      "source_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6"
+    }
+  ]
+}

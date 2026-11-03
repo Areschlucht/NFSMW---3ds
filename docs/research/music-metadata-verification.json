@@ -1,0 +1,508 @@
+{
+  "schema": 1,
+  "target": "USA GameCube NFS Most Wanted (2005)",
+  "limits": [
+    "No audio decoded or runtime changed by this inspector",
+    "Sample descriptors and nodes are not song counts",
+    "No node/event/router interpreter recovered",
+    "Checksum is the matching header word; the checksum algorithm is not recovered"
+  ],
+  "maps": {
+    "MW_MUSIC": {
+      "bytes": 8936,
+      "sha256": "778d91a03b2da4bd9a66ca68663e3b12d45f2085f5527e03766389b4666e3bbc",
+      "byte_order": "big",
+      "version": [
+        5,
+        1
+      ],
+      "counts": {
+        "tracks": 1,
+        "sections": 4,
+        "events": 58,
+        "routers": 0,
+        "variables": 4,
+        "nodes": 192
+      },
+      "table_offsets_hex": [
+        "00000048",
+        "000001c8",
+        "0000108c",
+        "00001100",
+        "000020d4",
+        "00002124",
+        "00002128",
+        "0000212c",
+        "00002140",
+        "000022e8"
+      ],
+      "table_region_sha256": [
+        "41c1a6d96d3943a2a85263b09ecdf11947bf7d5890339be47b976fba60f391d5",
+        "c7590ec49f6c9ecdf4bd34ec3a42db203d9bf41509e49e124fc42b0354e025f2",
+        "0e0f52b5a0e0f23347c5832cba4cccf705e2e95aea22320769f51d061fd13a24",
+        "0dff2de39eac91ffbc1f34c847c613872b28d5f0588bbaa8107e7de2235cf365",
+        "2770448bc6f59ed94864c307a0109a97f35216cfd90d70d76067c86a5145b091",
+        "009c88a13b5d8380dd27b397601a440412fd5a0f1a90aa72494c55c2f358f39c",
+        "4867c7a5d5cc87df20e94d886b73ad1deda0cd9aae615c8de178077458269028",
+        "589c5fb5b3829e0add1f4fe77c5a7eec491bb83d5191ce988dfc4fd81c2a91cd",
+        "6116ba7cc1e2d1b970a945a593988f59123636574d64c4b2f2aa5b917ca6b381"
+      ],
+      "node_pointer_count_checked": 192,
+      "streamed_sample_count": 53,
+      "track_checksum_hex": "b3f1409f",
+      "expected_paired_stream_bytes": 131595008,
+      "first_samples": [
+        {
+          "index": 0,
+          "stream_offset": 256,
+          "duration_ms": 30016
+        },
+        {
+          "index": 1,
+          "stream_offset": 775680,
+          "duration_ms": 133992
+        },
+        {
+          "index": 2,
+          "stream_offset": 4235904,
+          "duration_ms": 147746
+        },
+        {
+          "index": 3,
+          "stream_offset": 8051200,
+          "duration_ms": 154281
+        }
+      ],
+      "last_sample": {
+        "index": 52,
+        "stream_offset": 131443200,
+        "duration_ms": 5859
+      },
+      "duration_ms_range": [
+        300,
+        172470
+      ],
+      "all_sample_descriptors_sha256": "9ac2afd742fd62c4e0b0dc453bf1befa7d8fc0b7b50bb9e96b09b3d53449d642"
+    },
+    "MW_MUS_1": {
+      "bytes": 18112,
+      "sha256": "a3a8b09cb667666c4eeb1f1f8041d0bfa3fb9797dfa5c777cc9dfff3f9aec506",
+      "byte_order": "big",
+      "version": [
+        5,
+        1
+      ],
+      "counts": {
+        "tracks": 1,
+        "sections": 2,
+        "events": 14,
+        "routers": 26,
+        "variables": 2,
+        "nodes": 423
+      },
+      "table_offsets_hex": [
+        "00000048",
+        "00000398",
+        "00003558",
+        "00003574",
+        "00003980",
+        "000039a8",
+        "00003ab0",
+        "00003ab4",
+        "00003ac8",
+        "000046c0"
+      ],
+      "table_region_sha256": [
+        "31d71e751808b83f698cf4a8a14c7ef3893719928032be4dc698bd13c72b75b3",
+        "aab0257d45cc9cbe9186e501cbfa12ef5ca2fa87896bd6b6612e456bfaf383c8",
+        "50b7b173eb4158edbab8c315f6e29b5a0829b91e4fab310bd4ea176e4601b7d4",
+        "6a115b7a8f9883a9c9eaa1ea27f10824a9c290062d5b2251c5693cdef2374787",
+        "31ea2bf6933cf95aa0a5bf9e16bcafa26916e045784fb1787d614b10a4ac8f92",
+        "71efc7d00d01f3d4db2a93de1679236f014b0a34d0f77189d2120c9695bb1a0a",
+        "03ca0e3da7d0d975e40fd5c8adc478d57794ce383643b6a8da0815207b05242d",
+        "896a62ef1535e9e6561200158e017393c1923f91844659b108da891f578e908e",
+        "5a24cd3789556f98ffe30d1affb731e13497eeba498b4ad637ddf22a53600b78"
+      ],
+      "node_pointer_count_checked": 423,
+      "streamed_sample_count": 383,
+      "track_checksum_hex": "61c323f9",
+      "expected_paired_stream_bytes": 22730752,
+      "first_samples": [
+        {
+          "index": 0,
+          "stream_offset": 256,
+          "duration_ms": 1500
+        },
+        {
+          "index": 1,
+          "stream_offset": 39552,
+          "duration_ms": 1500
+        },
+        {
+          "index": 2,
+          "stream_offset": 78848,
+          "duration_ms": 1500
+        },
+        {
+          "index": 3,
+          "stream_offset": 118144,
+          "duration_ms": 1500
+        }
+      ],
+      "last_sample": {
+        "index": 382,
+        "stream_offset": 22652800,
+        "duration_ms": 3000
+      },
+      "duration_ms_range": [
+        300,
+        16050
+      ],
+      "all_sample_descriptors_sha256": "e4a1d55443ce2f50a9ebaa792e659fb745922ebfb9dabac0ae18b21f5e41cf5d"
+    },
+    "MW_MUS_2": {
+      "bytes": 14212,
+      "sha256": "eec760a69ff13163c33ffbd2a926d60e314ff8917ec327bfb5f19fac922ccf2f",
+      "byte_order": "big",
+      "version": [
+        5,
+        1
+      ],
+      "counts": {
+        "tracks": 1,
+        "sections": 2,
+        "events": 15,
+        "routers": 34,
+        "variables": 2,
+        "nodes": 324
+      },
+      "table_offsets_hex": [
+        "00000048",
+        "000002d0",
+        "000028c0",
+        "000028e0",
+        "00002d0c",
+        "00002d34",
+        "00002e94",
+        "00002e98",
+        "00002eac",
+        "00003784"
+      ],
+      "table_region_sha256": [
+        "842e19f243ad20cbd4085baac253513f6f546e0a9a8b08f95133d8e3d47442c0",
+        "bee5ea0a085d64f64c51a5315ce4dd61a9c77935a9510ddd7e16946278567330",
+        "32f1405232fdf2b195c8639a84643132be777959e42d2d871c1c46b3fee25791",
+        "5069a92429690ded696bdca125c4e07506eedffc12ec6c3b37bbb7d2bffc2baf",
+        "31ea2bf6933cf95aa0a5bf9e16bcafa26916e045784fb1787d614b10a4ac8f92",
+        "c73c993c072c51b5d3084bf39bc7e8bcd7fe0b5afcbc8f3a04196006d7cf7dda",
+        "7b18ab3aa78d62ebf424e764651398d99c567837e4cf61f082a36dd6c922bb30",
+        "bf23297f7364ab82e1ada9a8b6afb5f583092376c94f396bd0e3651133055cca",
+        "bb27a1f28e32119a1e040692511f455f6b7eeb3172aad0b8c92dea4c98df6933"
+      ],
+      "node_pointer_count_checked": 324,
+      "streamed_sample_count": 283,
+      "track_checksum_hex": "22e5949d",
+      "expected_paired_stream_bytes": 22251264,
+      "first_samples": [
+        {
+          "index": 0,
+          "stream_offset": 256,
+          "duration_ms": 1714
+        },
+        {
+          "index": 1,
+          "stream_offset": 45056,
+          "duration_ms": 3428
+        },
+        {
+          "index": 2,
+          "stream_offset": 134144,
+          "duration_ms": 1714
+        },
+        {
+          "index": 3,
+          "stream_offset": 178944,
+          "duration_ms": 1714
+        }
+      ],
+      "last_sample": {
+        "index": 282,
+        "stream_offset": 22206720,
+        "duration_ms": 1707
+      },
+      "duration_ms_range": [
+        300,
+        9830
+      ],
+      "all_sample_descriptors_sha256": "ae1a5e0850262eda85d2d321dd82ba4be5d2323bd8383a8a4ea92da59a5cd386"
+    },
+    "MW_MUS_3": {
+      "bytes": 16332,
+      "sha256": "d97c910815724fbafc5c42917f2b2a864fdebac798485a8395a18ec60090f376",
+      "byte_order": "big",
+      "version": [
+        5,
+        1
+      ],
+      "counts": {
+        "tracks": 1,
+        "sections": 2,
+        "events": 14,
+        "routers": 33,
+        "variables": 2,
+        "nodes": 369
+      },
+      "table_offsets_hex": [
+        "00000048",
+        "0000032c",
+        "00002fc0",
+        "00002fdc",
+        "000033f4",
+        "0000341c",
+        "0000357c",
+        "00003580",
+        "00003594",
+        "00003fcc"
+      ],
+      "table_region_sha256": [
+        "e271f7a0590c2a23887578ee239d9b7096c78018028b48008f3812727c5add3d",
+        "47b2f78218d599130ffd0586411c91261ce7ced9ab4d8becf45e659a4fae7c52",
+        "849b920177a419e426ddfef4713ef55d16cf746b837181d96587c65063b07d18",
+        "964e8a1270f4b864faa3af4c5326a63475ee33925089527cc3db5ae41ddf37f3",
+        "31ea2bf6933cf95aa0a5bf9e16bcafa26916e045784fb1787d614b10a4ac8f92",
+        "81a2ff8a5561e2498a8a9877b729a3efc2818b6172fbc7c9a89ba625c0580e02",
+        "0e46919c98ee83433acd73b65adaaf3a16785ba7266c2e85fdbf843276d88f17",
+        "7d5a558743a37aa3f36646bcec0463c7be695c21c64040e65a1faa191e9eb447",
+        "48e1177650216b102608aecfabe43efe046ac53db690dea436d17d9f1c1b8bdc"
+      ],
+      "node_pointer_count_checked": 369,
+      "streamed_sample_count": 327,
+      "track_checksum_hex": "31af95eb",
+      "expected_paired_stream_bytes": 28529920,
+      "first_samples": [
+        {
+          "index": 0,
+          "stream_offset": 256,
+          "duration_ms": 3428
+        },
+        {
+          "index": 1,
+          "stream_offset": 89344,
+          "duration_ms": 3428
+        },
+        {
+          "index": 2,
+          "stream_offset": 178432,
+          "duration_ms": 3428
+        },
+        {
+          "index": 3,
+          "stream_offset": 267520,
+          "duration_ms": 3428
+        }
+      ],
+      "last_sample": {
+        "index": 326,
+        "stream_offset": 28485248,
+        "duration_ms": 1708
+      },
+      "duration_ms_range": [
+        300,
+        10285
+      ],
+      "all_sample_descriptors_sha256": "0c1c6a65b57cca0229568b1cc81ce7038a0e6b3855a078bfe1d66dce762bb814"
+    },
+    "MW_MUS_4": {
+      "bytes": 15700,
+      "sha256": "555f58e9aecddf688ae91fe7a393d482af1548e9bb3e0b1990f30531b576aaa1",
+      "byte_order": "big",
+      "version": [
+        5,
+        1
+      ],
+      "counts": {
+        "tracks": 1,
+        "sections": 2,
+        "events": 13,
+        "routers": 28,
+        "variables": 2,
+        "nodes": 356
+      },
+      "table_offsets_hex": [
+        "00000048",
+        "00000310",
+        "00002e0c",
+        "00002e28",
+        "00003208",
+        "00003230",
+        "00003354",
+        "00003358",
+        "0000336c",
+        "00003d54"
+      ],
+      "table_region_sha256": [
+        "484d90af2cc011ceec6b78f2dd6fcbc750890bca7dd9e8cabda706a07337c071",
+        "a65c30383c3154ee923c776435c09ac55d2b7c4577606d2a92e2b380e2fd90e0",
+        "bd8cace697671b12eba2672e71e822b3f00c05179c7d6ad255355f3082b522cd",
+        "73d19d3643a55daac564a94ae707e0dfc53af41180bcd866a85ced3f2f5683ee",
+        "31ea2bf6933cf95aa0a5bf9e16bcafa26916e045784fb1787d614b10a4ac8f92",
+        "1280bf19f2c770efaf580f14b769d9cb368d1710e11d9e80009d861f644dab18",
+        "97819496461d7b76219a346248d46c18dd9dc65eca0f81e928e219ea999a191f",
+        "3832150260dfc79ba1310de90dad41237ac11142f51da2181e092089ad426b58",
+        "8da414f3f8e128595f0da5be6e6f5b5a98cca281effc1429ee591dc924a5ddb8"
+      ],
+      "node_pointer_count_checked": 356,
+      "streamed_sample_count": 317,
+      "track_checksum_hex": "ed743309",
+      "expected_paired_stream_bytes": 31780096,
+      "first_samples": [
+        {
+          "index": 0,
+          "stream_offset": 256,
+          "duration_ms": 3999
+        },
+        {
+          "index": 1,
+          "stream_offset": 104064,
+          "duration_ms": 3990
+        },
+        {
+          "index": 2,
+          "stream_offset": 207616,
+          "duration_ms": 4009
+        },
+        {
+          "index": 3,
+          "stream_offset": 311680,
+          "duration_ms": 3995
+        }
+      ],
+      "last_sample": {
+        "index": 316,
+        "stream_offset": 31728256,
+        "duration_ms": 1990
+      },
+      "duration_ms_range": [
+        300,
+        8898
+      ],
+      "all_sample_descriptors_sha256": "a891a58643c3de10ee20db18ef7a6e45cff946c3a2c77dbf798aecdaa9b4c49e"
+    }
+  },
+  "music_stream_prefix": {
+    "bytes": 65536,
+    "sha256": "143425ef163052629e688f13802f195ca36b7aeb06dceb9660e7d40379b71e86",
+    "checksum_word_match": true,
+    "first_stream_offset": 256,
+    "platform_header": "GSTR",
+    "explicit_patches_hex": {
+      "06": 101,
+      "80": 3,
+      "85": 720384,
+      "82": 2,
+      "84": 24000
+    },
+    "sample_rate": 24000,
+    "channels": 2,
+    "declared_samples": 720384,
+    "declared_duration_ms": 30016.0,
+    "codec_interpretation": "EA-XA R3: GSTR generic default with version patch 3; corroborate decoder separately",
+    "complete_prefix_blocks": [
+      {
+        "offset": 256,
+        "tag": "SCHl",
+        "bytes": 36
+      },
+      {
+        "offset": 292,
+        "tag": "SCCl",
+        "bytes": 12
+      },
+      {
+        "offset": 304,
+        "tag": "SCDl",
+        "bytes": 5456
+      },
+      {
+        "offset": 5760,
+        "tag": "SCDl",
+        "bytes": 5152
+      },
+      {
+        "offset": 10912,
+        "tag": "SCDl",
+        "bytes": 5180
+      },
+      {
+        "offset": 16092,
+        "tag": "SCDl",
+        "bytes": 5152
+      },
+      {
+        "offset": 21244,
+        "tag": "SCDl",
+        "bytes": 5180
+      },
+      {
+        "offset": 26424,
+        "tag": "SCDl",
+        "bytes": 5152
+      },
+      {
+        "offset": 31576,
+        "tag": "SCDl",
+        "bytes": 5152
+      },
+      {
+        "offset": 36728,
+        "tag": "SCDl",
+        "bytes": 5180
+      },
+      {
+        "offset": 41908,
+        "tag": "SCDl",
+        "bytes": 5152
+      },
+      {
+        "offset": 47060,
+        "tag": "SCDl",
+        "bytes": 5180
+      },
+      {
+        "offset": 52240,
+        "tag": "SCDl",
+        "bytes": 5152
+      },
+      {
+        "offset": 57392,
+        "tag": "SCDl",
+        "bytes": 5180
+      }
+    ],
+    "truncated_next_block": {
+      "offset": 62572,
+      "tag": "SCDl",
+      "declared_bytes": 5152,
+      "available_bytes": 2964
+    },
+    "whole_first_stream_available": false
+  },
+  "original_reader_evidence": {
+    "sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+    "PFDx_constant_references": [
+      {
+        "instruction": "80375600",
+        "origin": "803755fc",
+        "target": "50464478",
+        "register": 0
+      }
+    ],
+    "validated_reader_window": {
+      "begin": "803755f8",
+      "end_exclusive": "80375744",
+      "sha256": "4959640a237f3cad5f66f46aba623c2afcc2caf1e70943cdaadcd992f179abef"
+    },
+    "interpretation": "80375604 compares PFDx; 8037560c..1c checks version high halfword 0501; 80375698..80375740 resolves offsets14..34 against base"
+  },
+  "malformed_inputs_rejected": 20
+}

@@ -117,3 +117,13 @@ Exact GameCube boot/menu captures, event rules, media selection, runtime sound a
 render comparisons remain necessary. No GameCube playthrough was reviewed in this
 pass. This document is a system inventory and evidence boundary, not a claim that
 the entire original engine has been understood or reconstructed.
+
+## Input arrival update — 2026-11-03
+
+The requested metadata has now arrived. All eight payloads and original directory
+ranges validate; the gameplay duplicates are byte-identical. The packed gameplay
+directory and cross-package inheritance now load successfully. See
+[gameplay-packages-findings.md](gameplay-packages-findings.md) and accompanying
+verification reports. The earlier "next required inputs" section records why the
+request was made; do not request these same files again. Runtime integration and
+original consumer semantics remain separate work.

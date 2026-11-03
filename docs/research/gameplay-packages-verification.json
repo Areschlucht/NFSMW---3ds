@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "gameplay_sha256": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "packages": 272,
+  "collections": 6287,
+  "decoded_fields_with_original_byte_provenance": 89251,
+  "typed_reference_counts": {},
+  "rejected_mutations": [
+    "empty_directory",
+    "excessive_directory",
+    "names_beyond_file",
+    "name_not_at_boundary",
+    "bin_beyond_file",
+    "bin_overlaps_header",
+    "streams_overlap",
+    "truncated_payload"
+  ],
+  "limits": [
+    "Unresolved/null references are counted, not assigned invented targets",
+    "Layout/provenance checks do not prove runtime semantics or original consumer parity"
+  ]
+}
