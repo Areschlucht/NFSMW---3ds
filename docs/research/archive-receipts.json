@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "archives": {
+    "ZZDATA1.BIN": {
+      "status": "reassembled; every piece and whole-archive SHA256 match user manifest",
+      "bytes": 340240384,
+      "sha256": "470b7586d4fe53634c0078acfba716ecd1d1841cef4957a118a18f46f72c83b1",
+      "pieces_verified": 12,
+      "previously_supplied_payloads_matched": 8
+    }
+  },
+  "pending": {
+    "ZZDATA0.BIN": {
+      "manifest_received": true,
+      "pieces_required": 11
+    },
+    "ZZDATA2.BIN": {
+      "manifest_received": true,
+      "pieces_required": 12
+    },
+    "ZZDATA3.BIN": {
+      "manifest_received": true,
+      "pieces_required": 12
+    }
+  },
+  "limits": [
+    "Original data remains private and is not committed to Git",
+    "Successful reconstruction is an input milestone, not a playable-build change"
+  ]
+}
