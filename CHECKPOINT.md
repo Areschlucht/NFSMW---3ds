@@ -37,3 +37,11 @@ into 47 uploadable 28-MiB-or-smaller pieces with per-archive/per-piece manifests
 Original oversized archive attachments exceed the workspace downloader's 32-MiB
 limit. Use tools/reassemble_game_archives.py on complete received sets privately;
 never commit original payloads. This is collection/recovery tooling, not a release.
+
+All four original ZZDATA archives are now reconstructed and verified against the
+user's per-piece and whole-archive SHA256 manifests: 47 pieces, 1,332,729,856 bytes.
+Private canonical files: /workspace/port-research/original-archives/ZZDATA0.BIN
+through ZZDATA3.BIN. All 1,363 original ZDIR record ranges fit those source files.
+See docs/research/archive-receipts.json. Do not request these archives or pieces
+again. Internal asset identities, format decoding and runtime integration still
+need recovery; source availability is not a whole-game implementation claim.

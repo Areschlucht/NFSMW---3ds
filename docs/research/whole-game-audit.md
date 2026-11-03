@@ -127,3 +127,14 @@ directory and cross-package inheritance now load successfully. See
 verification reports. The earlier "next required inputs" section records why the
 request was made; do not request these same files again. Runtime integration and
 original consumer semantics remain separate work.
+
+## Complete source archive arrival
+
+All four original ZZDATA archives are now available privately under
+`/workspace/port-research/original-archives`, reconstructed from 47 pieces.
+Every piece and whole-archive checksum matched the user's manifests, and all
+1,363 SHA-pinned ZDIR directory record ranges fit their respective sources.
+See archive-receipts.json. This supersedes earlier requests for unavailable raw
+archive content: identify and decode internal car/audio/movie/event entries from
+these sources before asking for additional copies. Complete source availability
+does not establish completed decoders, original consumers or a playable full game.

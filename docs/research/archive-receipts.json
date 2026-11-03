@@ -19,16 +19,24 @@
       "bytes": 330981376,
       "sha256": "f915ad2838d0858fd1c1f015720e077ad33965b496dad92a3940dc5f654e6226",
       "pieces_verified": 12
-    }
-  },
-  "pending": {
+    },
     "ZZDATA3.BIN": {
-      "manifest_received": true,
-      "pieces_required": 12
+      "status": "reassembled; every piece and whole-archive SHA256 match user manifest",
+      "bytes": 346253312,
+      "sha256": "12d73dec20e33df7da33b79adaf0d2534a3f2bc7931de2a561a61c5bd7a85804",
+      "pieces_verified": 12
     }
   },
+  "pending": {},
   "limits": [
     "Original data remains private and is not committed to Git",
     "Successful reconstruction is an input milestone, not a playable-build change"
-  ]
+  ],
+  "collection_summary": {
+    "complete_archives": 4,
+    "verified_pieces": 47,
+    "total_archive_bytes": 1332729856,
+    "zdir_records_with_valid_source_ranges": 1363,
+    "zdir_sha256": "d5726a00d086edb5f8a47ff4bffa4715f84b44441987fd323141a6dfaf1ba333"
+  }
 }
