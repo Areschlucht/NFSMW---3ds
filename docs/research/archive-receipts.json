@@ -13,13 +13,15 @@
       "bytes": 315254784,
       "sha256": "60a7d0852ad1020d063efa0c599676ab2c3477e5dc788964aae6dafb1836e215",
       "pieces_verified": 11
+    },
+    "ZZDATA2.BIN": {
+      "status": "reassembled; every piece and whole-archive SHA256 match user manifest",
+      "bytes": 330981376,
+      "sha256": "f915ad2838d0858fd1c1f015720e077ad33965b496dad92a3940dc5f654e6226",
+      "pieces_verified": 12
     }
   },
   "pending": {
-    "ZZDATA2.BIN": {
-      "manifest_received": true,
-      "pieces_required": 12
-    },
     "ZZDATA3.BIN": {
       "manifest_received": true,
       "pieces_required": 12
