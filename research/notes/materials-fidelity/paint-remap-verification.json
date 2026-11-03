@@ -1,0 +1,20 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "reference_routines": [
+    "802e0a84",
+    "802e0890"
+  ],
+  "code_sha256": "b17038735a2e9d2da0a3f6cded4da10016c96e18e9d915979996af23008c065b",
+  "cases": 135,
+  "matched": 135,
+  "random_seed": "802e0a84",
+  "scope": "Original native numeric paint-word subset, not completed skin/GX output or canonical BMW palette",
+  "packing_consumer": "802e1c58..802e1c74",
+  "packing": "RED | GREEN<<8 | BLUE<<16 | GLOSS<<24",
+  "forced_previnyl_global": {
+    "address": "804388e4",
+    "file_offset": 4413668,
+    "original_u32": 0,
+    "caveat": "Static default zero; absence of simple stores does not prove runtime immutability"
+  }
+}

@@ -1,0 +1,84 @@
+802d65a0 lfs       f11, 0x35c(r31)
+802d65a4 ori       r4, r4, 0x57c2
+802d65a8 fadds     f0, f0, f12
+802d65ac lfs       f13, 0x378(r31)
+802d65b0 fadds     f0, f0, f11
+802d65b4 lfs       f12, 0x38c(r31)
+802d65b8 fadds     f0, f0, f13
+802d65bc lfs       f11, 0x390(r31)
+802d65c0 fadds     f0, f0, f12
+802d65c4 li        r5, 0
+802d65c8 fadds     f28, f0, f11
+802d65cc bl        0x80057250
+802d65d0 or.       r8, r3, r3
+802d65d4 bne       0x802d65e4
+802d65d8 li        r3, 4
+802d65dc bl        0x801e9c48
+802d65e0 mr        r8, r3
+802d65e4 lfs       f13, 0x358(r31)
+802d65e8 lis       r11, -0x7fbf
+802d65ec lfs       f0, 0x36c(r31)
+802d65f0 lis       r10, -0x7fbf
+802d65f4 lfs       f12, 0x360(r31)
+802d65f8 addi      r3, r1, 0x248
+802d65fc fadds     f0, f0, f13
+802d6600 lfs       f11, 0x378(r31)
+802d6604 fadds     f0, f0, f12
+802d6608 lfs       f13, 0x394(r31)
+802d660c fadds     f0, f0, f11
+802d6610 lfs       f12, 0x370(r31)
+802d6614 fadds     f0, f0, f13
+802d6618 lfs       f11, 0x37c(r31)
+802d661c lfs       f13, 0x388(r31)
+802d6620 mr        r28, r20
+802d6624 lwz       r9, 0x1c(r31)
+802d6628 fadds     f12, f12, f11
+802d662c lfs       f10, 0x364(r31)
+802d6630 fadds     f0, f0, f13
+802d6634 lfs       f11, -0x4fa4(r11)
+802d6638 li        r29, 0
+802d663c lfs       f13, -0x4fa0(r10)
+802d6640 fadds     f12, f12, f10
+802d6644 lfs       f31, 0(r8)
+802d6648 lfs       f29, 0xfc(r9)
+802d664c fmadds    f31, f31, f11, f0
+802d6650 fmadds    f29, f29, f13, f12
+802d6654 bl        0x80329e28
+802d6658 lis       r9, -0x7fbf
+802d665c lfs       f30, -0x4f9c(r9)
+802d6660 mr        r3, r22
+802d6664 mr        r4, r24
+802d6668 fmuls     f0, f28, f30
+802d666c fctiwz    f13, f0
+802d6670 stfd      f13, 0x398(r1)
+802d6674 lwz       r5, 0x39c(r1)
+802d6678 clrlwi    r5, r5, 0x10
+802d667c bl        0x8010b2ac
+802d6680 fmuls     f31, f31, f30
+802d6684 mr        r4, r24
+802d6688 fctiwz    f0, f31
+802d668c mr        r3, r23
+802d6690 stfd      f0, 0x398(r1)
+802d6694 lwz       r5, 0x39c(r1)
+802d6698 clrlwi    r5, r5, 0x10
+802d669c bl        0x8010b3a0
+802d66a0 mr        r5, r23
+802d66a4 mr        r4, r22
+802d66a8 mr        r3, r21
+802d66ac bl        0x8010ab28
+802d66b0 addi      r4, r1, 0x308
+802d66b4 mr        r3, r27
+802d66b8 bl        0x80329e5c
+802d66bc mr        r4, r21
+802d66c0 mr        r3, r27
+802d66c4 mr        r5, r18
+802d66c8 bl        0x8010ab28
+802d66cc lfs       f9, 0x344(r31)
+802d66d0 mr        r4, r27
+802d66d4 lfs       f11, 0x348(r31)
+802d66d8 mr        r3, r20
+802d66dc lfs       f10, 0x34c(r31)
+802d66e0 lfs       f0, 0x334(r31)
+802d66e4 lfs       f13, 0x338(r31)
+802d66e8 lfs       f12, 0x33c(r31)
+802d66ec fmadds    f0, f0, f29, f9

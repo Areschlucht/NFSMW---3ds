@@ -1,0 +1,142 @@
+[
+  {
+    "name": "STREAML2RA-first24MiB.BUN",
+    "size": 25165824,
+    "sha256": "a85f07f64f7e1f2538ae0544b1c531925073251a4ad07d6d8c366f9e1f3915eb",
+    "complete_prefix": 25165740,
+    "models": 2090,
+    "rejected": [
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XO_PHOTORADAR_1Z_MD_00",
+        "offset": 31128,
+        "reason": "Triangle count mismatch: decoded 77, header 80"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XO_PHOTORADAR_1C_MD_00",
+        "offset": 44600,
+        "reason": "Triangle count mismatch: decoded 129, header 132"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XO_PHOTORADAR_1B_MD_00",
+        "offset": 91132,
+        "reason": "Triangle count mismatch: decoded 229, header 232"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XB_HAPARTMENT2_1Z_JG_00",
+        "offset": 14215108,
+        "reason": "Triangle count mismatch: decoded 38, header 40"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XB_HAPARTMENT2_1Z_JG_00",
+        "offset": 15449796,
+        "reason": "Triangle count mismatch: decoded 38, header 40"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XB_HAPARTMENT2_1Z_JG_00",
+        "offset": 17867816,
+        "reason": "Triangle count mismatch: decoded 38, header 40"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XB_HAPARTMENT2_1Z_JG_00",
+        "offset": 20000580,
+        "reason": "Triangle count mismatch: decoded 38, header 40"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XB_SY_OFFICEB_1C_00",
+        "offset": 20673388,
+        "reason": "Triangle count mismatch: decoded 117, header 118"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "SOUND_TUNNEL_OVERPASS_00",
+        "offset": 21519456,
+        "reason": "Invalid geometry metadata/bounds"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "SOUND_TUNNEL_TURBINE_00",
+        "offset": 21519784,
+        "reason": "Invalid geometry metadata/bounds"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "SOUND_TUNNEL_WALKWAY_00",
+        "offset": 21520072,
+        "reason": "Invalid geometry metadata/bounds"
+      },
+      {
+        "source": "STREAML2RA-first24MiB.BUN",
+        "name": "XB_HYDROPLANTBLDA_1Z_RB_00",
+        "offset": 21881936,
+        "reason": "Triangle count mismatch: decoded 45, header 46"
+      }
+    ]
+  },
+  {
+    "name": "STREAML2RA-sectors161-176.BUN",
+    "size": 2421088,
+    "sha256": "9a5100cfb10e2e08265a0b6d937d43c95e1dea277663e5286528b1f2d4ff83a6",
+    "complete_prefix": 2421088,
+    "models": 569,
+    "rejected": []
+  },
+  {
+    "name": "STREAML2RA-sectors1161-1176.BUN",
+    "size": 969408,
+    "sha256": "5e4278fd16150c0d4d1dec1af5a384064b6b7e577f0c676f202ff427c6fb1824",
+    "complete_prefix": 969408,
+    "models": 320,
+    "rejected": [
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H4_R2",
+        "offset": 190568,
+        "reason": "Triangle count mismatch: decoded 42, header 48"
+      },
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_2",
+        "offset": 276796,
+        "reason": "Triangle count mismatch: decoded 169, header 173"
+      },
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R3",
+        "offset": 298380,
+        "reason": "Triangle count mismatch: decoded 107, header 108"
+      },
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R4",
+        "offset": 301232,
+        "reason": "Triangle count mismatch: decoded 122, header 123"
+      },
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R6",
+        "offset": 306996,
+        "reason": "Triangle count mismatch: decoded 224, header 227"
+      },
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R0",
+        "offset": 830532,
+        "reason": "Triangle count mismatch: decoded 106, header 107"
+      },
+      {
+        "source": "STREAML2RA-sectors1161-1176.BUN",
+        "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R5",
+        "offset": 843148,
+        "reason": "Triangle count mismatch: decoded 188, header 190"
+      }
+    ]
+  }
+]

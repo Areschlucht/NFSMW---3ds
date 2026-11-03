@@ -1,0 +1,148 @@
+{
+  "method": "64 segment-start/next-tick functional queries,65536 cellchecks,independent IEEE exponent reconstruction and randomized bit comparisons; no external implementation parsed.",
+  "oracle_commit": "86d554802d7560acf12b5c5a2b3acb344069b5ce",
+  "oracle_source_sha256": {
+    "FloatUtils.cpp": "e7bcd6a48701a361a84a9c0dfbf2ddb0c5c5219a1370838c05f99a5e8dff9dbb",
+    "FloatUtils.h": "8aad8c06eac7e14ac2876ddd56edc0562d28cd8c906ca6bfd9c72808810dbbe5",
+    "CommonTypes.h": "b714ae37337b4f9cd6e1863073bdd92fda8648e606c91657b104fdc856199b94"
+  },
+  "segments": [
+    [
+      [
+        67084288,
+        1956
+      ],
+      [
+        63082496,
+        1792
+      ],
+      [
+        59416576,
+        1648
+      ],
+      [
+        56041472,
+        1522
+      ],
+      [
+        52924416,
+        1412
+      ],
+      [
+        50032640,
+        1316
+      ],
+      [
+        47341568,
+        1228
+      ],
+      [
+        44826624,
+        1150
+      ],
+      [
+        42471424,
+        1082
+      ],
+      [
+        40259584,
+        1018
+      ],
+      [
+        38174720,
+        962
+      ],
+      [
+        36204544,
+        910
+      ],
+      [
+        34344960,
+        862
+      ],
+      [
+        32579584,
+        818
+      ],
+      [
+        30904320,
+        778
+      ],
+      [
+        29310976,
+        742
+      ]
+    ],
+    [
+      [
+        27781120,
+        1384
+      ],
+      [
+        24950784,
+        1267
+      ],
+      [
+        22358016,
+        1165
+      ],
+      [
+        19972096,
+        1077
+      ],
+      [
+        17768448,
+        999
+      ],
+      [
+        15724544,
+        930
+      ],
+      [
+        13819904,
+        869
+      ],
+      [
+        12042240,
+        814
+      ],
+      [
+        10375168,
+        764
+      ],
+      [
+        8810496,
+        720
+      ],
+      [
+        7335936,
+        680
+      ],
+      [
+        5945344,
+        643
+      ],
+      [
+        4628480,
+        609
+      ],
+      [
+        3381248,
+        579
+      ],
+      [
+        2197504,
+        550
+      ],
+      [
+        1071104,
+        523
+      ]
+    ]
+  ],
+  "normalized_cells": 65536,
+  "raw_ieee_vectors": 106195,
+  "bit_mismatches": 0,
+  "examples": [],
+  "runtime_source_sha256": "e37e03b0c6bddb19da74d136bb00b01a78b8034bbc7532dca8ebfc8d0f4de9cc"
+}

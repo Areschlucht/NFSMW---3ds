@@ -1,0 +1,1018 @@
+{
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "class_name": "visuallook",
+  "rows": [
+    {
+      "collection": "default",
+      "fields": {
+        "ColourBloomTint": {
+          "field_key": 114347346,
+          "field_name": "ColourBloomTint",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.8629999756813049,
+            0.9800000190734863,
+            0.07800000160932541,
+            1.0
+          ],
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278960,
+          "file_offset": 279088,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f5ced913f7ae1483d9fbe773f800000"
+        },
+        "ColourBloomIntensity": {
+          "field_key": 152301971,
+          "field_name": "ColourBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 1.5,
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278976,
+          "file_offset": 279104,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3fc00000"
+        },
+        "DetailMapIntensity": {
+          "field_key": 276565873,
+          "field_name": "DetailMapIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278984,
+          "file_offset": 279112,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000"
+        },
+        "ColourBloomCurve": {
+          "field_key": 491920535,
+          "field_name": "ColourBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003dcccccd00000000000000003ecb21633ed3dcb000000000000000003ee1642d3f8d3dc900000000000000003f8000003f8000000000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278896,
+          "file_offset": 279024,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003dcccccd00000000000000003ecb21633ed3dcb000000000000000003ee1642d3f8d3dc900000000000000003f8000003f8000000000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.10000000149011612,
+              0.0,
+              0.0
+            ],
+            [
+              0.39673909544944763,
+              0.41379308700561523,
+              0.0,
+              0.0
+            ],
+            [
+              0.44021740555763245,
+              1.1034480333328247,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "DetailMapCurve": {
+          "field_key": 1362585625,
+          "field_name": "DetailMapCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278768,
+          "file_offset": 278896,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.8999999761581421,
+              0.0,
+              0.0
+            ],
+            [
+              0.32692310214042664,
+              0.9473683834075928,
+              0.0,
+              0.0
+            ],
+            [
+              0.682692289352417,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.07894737273454666,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "Desaturation": {
+          "field_key": 1998306943,
+          "field_name": "Desaturation",
+          "type": "EA::Reflection::Float",
+          "value": 0.6269999742507935,
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278980,
+          "file_offset": 279108,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f208312"
+        },
+        "BlackBloomIntensity": {
+          "field_key": 2120261124,
+          "field_name": "BlackBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.25,
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278988,
+          "file_offset": 279116,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3e800000"
+        },
+        "BlackBloomCurve": {
+          "field_key": 2863451635,
+          "field_name": "BlackBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "bbb216443ec234f900000000000000003e21642d3ecb08d300000000000000003cb216433fa34f7200000000000000003f7a6f4e3f7b96110000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 278832,
+          "file_offset": 278960,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "bbb216443ec234f900000000000000003e21642d3ecb08d300000000000000003cb216433fa34f7200000000000000003f7a6f4e3f7b96110000000000000000",
+          "matrix_rows": [
+            [
+              -0.005434783175587654,
+              0.37931039929389954,
+              0.0,
+              0.0
+            ],
+            [
+              0.15760870277881622,
+              0.3965516984462738,
+              0.0,
+              0.0
+            ],
+            [
+              0.021739130839705467,
+              1.2758619785308838,
+              0.0,
+              0.0
+            ],
+            [
+              0.97826087474823,
+              0.9827585816383362,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        }
+      }
+    },
+    {
+      "collection": "sunset",
+      "fields": {
+        "ColourBloomTint": {
+          "field_key": 114347346,
+          "field_name": "ColourBloomTint",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.8799999952316284,
+            0.4699999988079071,
+            0.03999999910593033,
+            1.0
+          ],
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278736,
+          "file_offset": 278864,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f6147ae3ef0a3d73d23d70a3f800000"
+        },
+        "ColourBloomIntensity": {
+          "field_key": 152301971,
+          "field_name": "ColourBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 1.649999976158142,
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278752,
+          "file_offset": 278880,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3fd33333"
+        },
+        "DetailMapIntensity": {
+          "field_key": 276565873,
+          "field_name": "DetailMapIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278760,
+          "file_offset": 278888,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000"
+        },
+        "ColourBloomCurve": {
+          "field_key": 491920535,
+          "field_name": "ColourBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003eaf286d00000000000000003ee5aea63eca1af100000000000000003f204c913f650d7900000000000000003f8000003ed794350000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278672,
+          "file_offset": 278800,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003eaf286d00000000000000003ee5aea63eca1af100000000000000003f204c913f650d7900000000000000003f8000003ed794350000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.34210529923439026,
+              0.0,
+              0.0
+            ],
+            [
+              0.44859808683395386,
+              0.39473679661750793,
+              0.0,
+              0.0
+            ],
+            [
+              0.6261683106422424,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.42105260491371155,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "DetailMapCurve": {
+          "field_key": 1362585625,
+          "field_name": "DetailMapCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278544,
+          "file_offset": 278672,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.8999999761581421,
+              0.0,
+              0.0
+            ],
+            [
+              0.32692310214042664,
+              0.9473683834075928,
+              0.0,
+              0.0
+            ],
+            [
+              0.682692289352417,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.07894737273454666,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "Desaturation": {
+          "field_key": 1998306943,
+          "field_name": "Desaturation",
+          "type": "EA::Reflection::Float",
+          "value": 0.4000000059604645,
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278756,
+          "file_offset": 278884,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3ecccccd"
+        },
+        "BlackBloomIntensity": {
+          "field_key": 2120261124,
+          "field_name": "BlackBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.8999999761581421,
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278764,
+          "file_offset": 278892,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f666666"
+        },
+        "BlackBloomCurve": {
+          "field_key": 2863451635,
+          "field_name": "BlackBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000000000000000000000000000003dd20d203f286bc900000000000000003f09d89f3f86bca500000000000000003f8000003f8000000000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3470413391,
+          "stream": "bin",
+          "stream_offset": 278608,
+          "file_offset": 278736,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000000000000000000000000000003dd20d203f286bc900000000000000003f09d89f3f86bca500000000000000003f8000003f8000000000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.10256409645080566,
+              0.6578946709632874,
+              0.0,
+              0.0
+            ],
+            [
+              0.5384616255760193,
+              1.0526319742202759,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        }
+      }
+    },
+    {
+      "collection": "uves",
+      "fields": {
+        "ColourBloomTint": {
+          "field_key": 114347346,
+          "field_name": "ColourBloomTint",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.1899999976158142,
+            0.3919999897480011,
+            0.9800000190734863,
+            1.0
+          ],
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278288,
+          "file_offset": 278416,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3e428f5c3ec8b4393f7ae1483f800000"
+        },
+        "ColourBloomIntensity": {
+          "field_key": 152301971,
+          "field_name": "ColourBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 3.0,
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278304,
+          "file_offset": 278432,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "40400000"
+        },
+        "DetailMapIntensity": {
+          "field_key": 276565873,
+          "field_name": "DetailMapIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278312,
+          "file_offset": 278440,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000"
+        },
+        "ColourBloomCurve": {
+          "field_key": 491920535,
+          "field_name": "ColourBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003dcccccd00000000000000003ecb21633ed3dcb000000000000000003ee1642d3f8d3dc900000000000000003f8000003f8000000000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278224,
+          "file_offset": 278352,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003dcccccd00000000000000003ecb21633ed3dcb000000000000000003ee1642d3f8d3dc900000000000000003f8000003f8000000000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.10000000149011612,
+              0.0,
+              0.0
+            ],
+            [
+              0.39673909544944763,
+              0.41379308700561523,
+              0.0,
+              0.0
+            ],
+            [
+              0.44021740555763245,
+              1.1034480333328247,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "DetailMapCurve": {
+          "field_key": 1362585625,
+          "field_name": "DetailMapCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278096,
+          "file_offset": 278224,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.8999999761581421,
+              0.0,
+              0.0
+            ],
+            [
+              0.32692310214042664,
+              0.9473683834075928,
+              0.0,
+              0.0
+            ],
+            [
+              0.682692289352417,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.07894737273454666,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "Desaturation": {
+          "field_key": 1998306943,
+          "field_name": "Desaturation",
+          "type": "EA::Reflection::Float",
+          "value": 0.6269999742507935,
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278308,
+          "file_offset": 278436,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f208312"
+        },
+        "BlackBloomIntensity": {
+          "field_key": 2120261124,
+          "field_name": "BlackBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.25,
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278316,
+          "file_offset": 278444,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3e800000"
+        },
+        "BlackBloomCurve": {
+          "field_key": 2863451635,
+          "field_name": "BlackBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "bbb216443ec234f900000000000000003e21642d3ecb08d300000000000000003cb216433fa34f7200000000000000003f7a6f4e3f7b96110000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 1746661237,
+          "stream": "bin",
+          "stream_offset": 278160,
+          "file_offset": 278288,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "bbb216443ec234f900000000000000003e21642d3ecb08d300000000000000003cb216433fa34f7200000000000000003f7a6f4e3f7b96110000000000000000",
+          "matrix_rows": [
+            [
+              -0.005434783175587654,
+              0.37931039929389954,
+              0.0,
+              0.0
+            ],
+            [
+              0.15760870277881622,
+              0.3965516984462738,
+              0.0,
+              0.0
+            ],
+            [
+              0.021739130839705467,
+              1.2758619785308838,
+              0.0,
+              0.0
+            ],
+            [
+              0.97826087474823,
+              0.9827585816383362,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        }
+      }
+    },
+    {
+      "collection": "extreme_uves",
+      "fields": {
+        "ColourBloomTint": {
+          "field_key": 114347346,
+          "field_name": "ColourBloomTint",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.8600000143051147,
+            0.7599999904632568,
+            0.25999999046325684,
+            1.0
+          ],
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278512,
+          "file_offset": 278640,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f5c28f63f428f5c3e851eb83f800000"
+        },
+        "ColourBloomIntensity": {
+          "field_key": 152301971,
+          "field_name": "ColourBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 1.649999976158142,
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278528,
+          "file_offset": 278656,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3fd33333"
+        },
+        "DetailMapIntensity": {
+          "field_key": 276565873,
+          "field_name": "DetailMapIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278536,
+          "file_offset": 278664,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000"
+        },
+        "ColourBloomCurve": {
+          "field_key": 491920535,
+          "field_name": "ColourBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003eaf286d00000000000000003ee5aea63eca1af100000000000000003f204c913f650d7900000000000000003f8000003ed794350000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278448,
+          "file_offset": 278576,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003eaf286d00000000000000003ee5aea63eca1af100000000000000003f204c913f650d7900000000000000003f8000003ed794350000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.34210529923439026,
+              0.0,
+              0.0
+            ],
+            [
+              0.44859808683395386,
+              0.39473679661750793,
+              0.0,
+              0.0
+            ],
+            [
+              0.6261683106422424,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.42105260491371155,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "DetailMapCurve": {
+          "field_key": 1362585625,
+          "field_name": "DetailMapCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278320,
+          "file_offset": 278448,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003f66666600000000000000003ea762773f7286bc00000000000000003f2ec4ec3f650d7900000000000000003f8000003da1af290000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.8999999761581421,
+              0.0,
+              0.0
+            ],
+            [
+              0.32692310214042664,
+              0.9473683834075928,
+              0.0,
+              0.0
+            ],
+            [
+              0.682692289352417,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.07894737273454666,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "Desaturation": {
+          "field_key": 1998306943,
+          "field_name": "Desaturation",
+          "type": "EA::Reflection::Float",
+          "value": 0.4000000059604645,
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278532,
+          "file_offset": 278660,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3ecccccd"
+        },
+        "BlackBloomIntensity": {
+          "field_key": 2120261124,
+          "field_name": "BlackBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.8999999761581421,
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278540,
+          "file_offset": 278668,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f666666"
+        },
+        "BlackBloomCurve": {
+          "field_key": 2863451635,
+          "field_name": "BlackBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000000000000000000000000000003dd20d203f286bc900000000000000003f09d89f3f86bca500000000000000003f8000003f8000000000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3559458481,
+          "stream": "bin",
+          "stream_offset": 278384,
+          "file_offset": 278512,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000000000000000000000000000003dd20d203f286bc900000000000000003f09d89f3f86bca500000000000000003f8000003f8000000000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.10256409645080566,
+              0.6578946709632874,
+              0.0,
+              0.0
+            ],
+            [
+              0.5384616255760193,
+              1.0526319742202759,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        }
+      }
+    },
+    {
+      "collection": "copcam",
+      "fields": {
+        "ColourBloomTint": {
+          "field_key": 114347346,
+          "field_name": "ColourBloomTint",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.05000000074505806,
+            0.07999999821186066,
+            0.800000011920929,
+            1.0
+          ],
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279184,
+          "file_offset": 279312,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3d4ccccd3da3d70a3f4ccccd3f800000"
+        },
+        "ColourBloomIntensity": {
+          "field_key": 152301971,
+          "field_name": "ColourBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 1.649999976158142,
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279200,
+          "file_offset": 279328,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3fd33333"
+        },
+        "DetailMapIntensity": {
+          "field_key": 276565873,
+          "field_name": "DetailMapIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.1899999976158142,
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279208,
+          "file_offset": 279336,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3e428f5c"
+        },
+        "ColourBloomCurve": {
+          "field_key": 491920535,
+          "field_name": "ColourBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000003eaf286d00000000000000003ee5aea63eca1af100000000000000003f204c913f650d7900000000000000003f8000003ed794350000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279120,
+          "file_offset": 279248,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000003eaf286d00000000000000003ee5aea63eca1af100000000000000003f204c913f650d7900000000000000003f8000003ed794350000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.34210529923439026,
+              0.0,
+              0.0
+            ],
+            [
+              0.44859808683395386,
+              0.39473679661750793,
+              0.0,
+              0.0
+            ],
+            [
+              0.6261683106422424,
+              0.8947368264198303,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.42105260491371155,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "DetailMapCurve": {
+          "field_key": 1362585625,
+          "field_name": "DetailMapCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "3c0208213f69ee5800000000000000003e8e38e43f72c23600000000000000003f228a2a3f65846a00000000000000003f7df7e03df72c1c0000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 278992,
+          "file_offset": 279120,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3c0208213f69ee5800000000000000003e8e38e43f72c23600000000000000003f228a2a3f65846a00000000000000003f7df7e03df72c1c0000000000000000",
+          "matrix_rows": [
+            [
+              0.007936508394777775,
+              0.9137930870056152,
+              0.0,
+              0.0
+            ],
+            [
+              0.2777777910232544,
+              0.9482759237289429,
+              0.0,
+              0.0
+            ],
+            [
+              0.6349207162857056,
+              0.8965517282485962,
+              0.0,
+              0.0
+            ],
+            [
+              0.9920635223388672,
+              0.12068960070610046,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        },
+        "Desaturation": {
+          "field_key": 1998306943,
+          "field_name": "Desaturation",
+          "type": "EA::Reflection::Float",
+          "value": 0.2800000011920929,
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279204,
+          "file_offset": 279332,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3e8f5c29"
+        },
+        "BlackBloomIntensity": {
+          "field_key": 2120261124,
+          "field_name": "BlackBloomIntensity",
+          "type": "EA::Reflection::Float",
+          "value": 0.8999999761581421,
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279212,
+          "file_offset": 279340,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f666666"
+        },
+        "BlackBloomCurve": {
+          "field_key": 2863451635,
+          "field_name": "BlackBloomCurve",
+          "type": "Attrib::Types::Matrix",
+          "value": {
+            "raw_hex": "000000000000000000000000000000003dd20d203f286bc900000000000000003f09d89f3f86bca500000000000000003f8000003f8000000000000000000000",
+            "type": "Attrib::Types::Matrix"
+          },
+          "source_collection": 3999298723,
+          "stream": "bin",
+          "stream_offset": 279056,
+          "file_offset": 279184,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "000000000000000000000000000000003dd20d203f286bc900000000000000003f09d89f3f86bca500000000000000003f8000003f8000000000000000000000",
+          "matrix_rows": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.10256409645080566,
+              0.6578946709632874,
+              0.0,
+              0.0
+            ],
+            [
+              0.5384616255760193,
+              1.0526319742202759,
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "label_evidence": "Candidate label matches the original VLT field key exactly; interpretation additionally anchored by layout/consumer"
+        }
+      }
+    }
+  ],
+  "original_scope": "Bloom/desaturation/detail-map parameters and curves, not a recovered 3D RGB LUT",
+  "artistic_runtime_scope": "mw_color_grade_apply: one-stage RGB gains246/255,255/255,201/255; default disabled; no claim these are original coefficients",
+  "limitations": [
+    "Original final multi-pass bloom/scene blend and exact curve semantic binding are not transcribed here",
+    "Original material lighting/reflections and baked world vertex RGB are separate from optional artistic color grade"
+  ],
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "code_evidence": [
+    {
+      "name": "visuallook_class_getter",
+      "start": "802ec4cc",
+      "end_exclusive": "802ec4d8",
+      "file_offset": 3052748,
+      "sha256": "cfeb60d68a4dac21471639e08798acf9745a7c1d13f6e234e5af43b18dd58b99"
+    },
+    {
+      "name": "cubic_curve_leaf",
+      "start": "802e6548",
+      "end_exclusive": "802e65a8",
+      "file_offset": 3028296,
+      "sha256": "449cdd2d04fe109b5820fe2f1f92f4701927f394391e6b9d43d548ded274c023"
+    },
+    {
+      "name": "gc_64x64_lookup_loop",
+      "start": "8010f184",
+      "end_exclusive": "8010f2e0",
+      "file_offset": 1098116,
+      "sha256": "a8ca0f0e980f19fc8b01ae4c99faa609983451fdc49558119f6bff692d8efa6c"
+    }
+  ],
+  "curve_leaf": "802E6548 evaluates cubic Bernstein combination of Y values at offsets4,14,24,34; this leaf ignores X coordinates",
+  "gc_lookup": "8010F20C/22C call the curve leaf in nested64x64 loops with input grid0..63 dividedby64; texture population is live GC code, not proof of an RGB color LUT"
+}

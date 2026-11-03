@@ -1,0 +1,11 @@
+{
+  "original_dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "vectors": 9276,
+  "exact_slot_matches": true,
+  "scope": "Decision802BEC38..802BED60 only; projected-score producer/visibility/activation not validated here.",
+  "sources": {
+    "include/mw_lod_select.h": "8cf90f5e306694e3657d8bebb0d161edbcf276c16549cb6af26aac616d5e6b37",
+    "source_bmw/mw_lod_select.c": "c9866b673b4e225b6ae11a1d167b5ced7afcda271ec1d8e637ad6b2085bd7d46",
+    "tools/perf_lod_reference.py": "2cb663fd891d6a1381b62563ca7e741098fe11739cdcc1a208b39d82fccfb40b"
+  }
+}

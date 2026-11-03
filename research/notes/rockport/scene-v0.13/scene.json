@@ -1,0 +1,2839 @@
+{
+  "sectors": [
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148
+  ],
+  "models": [
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 34
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_R1",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 12
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_0",
+      "triangles": 49
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_1",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_2",
+      "triangles": 34
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 206
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A1_R1",
+      "triangles": 126
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 19
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 57
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R2",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R3",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A18_R1",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_0",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_1",
+      "triangles": 59
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 74
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 83
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_0",
+      "triangles": 32
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_R0",
+      "triangles": 20
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A18_R0",
+      "triangles": 6
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 200
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R2",
+      "triangles": 446
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R0",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R2",
+      "triangles": 41
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R3",
+      "triangles": 39
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_0",
+      "triangles": 30
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_1",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_2",
+      "triangles": 61
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_3",
+      "triangles": 38
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R0",
+      "triangles": 107
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R1",
+      "triangles": 95
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R2",
+      "triangles": 90
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R3",
+      "triangles": 111
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R0",
+      "triangles": 81
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R1",
+      "triangles": 105
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R2",
+      "triangles": 139
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_0",
+      "triangles": 82
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_1",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_2",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_3",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A4_0",
+      "triangles": 10
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A4_R0",
+      "triangles": 4
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A4_R0",
+      "triangles": 101
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A4_R1",
+      "triangles": 79
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R1",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R2",
+      "triangles": 106
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A5_R0",
+      "triangles": 30
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A5_0",
+      "triangles": 51
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 63
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_0",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_1",
+      "triangles": 21
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 222
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A5_R1",
+      "triangles": 180
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 62
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 16
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 50
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R3",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R4",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R5",
+      "triangles": 32
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R6",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 99
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_0",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_1",
+      "triangles": 50
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_2",
+      "triangles": 14
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 149
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 128
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 6
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R3",
+      "triangles": 257
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R4",
+      "triangles": 148
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_02_CHOP_A7_R0",
+      "triangles": 13
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A7_R0",
+      "triangles": 42
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_0",
+      "triangles": 15
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R0",
+      "triangles": 16
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R1",
+      "triangles": 66
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R2",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R0",
+      "triangles": 252
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R1",
+      "triangles": 173
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R2",
+      "triangles": 221
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_R0",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_0",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_1",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A8_R1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R0",
+      "triangles": 95
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R2",
+      "triangles": 254
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R3",
+      "triangles": 82
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XS_EDGEA_1B_00",
+      "triangles": 192
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XS_CASTROL_2B_00",
+      "triangles": 192
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XS_MEDIANPOLE_1B_00",
+      "triangles": 36
+    },
+    {
+      "name": "XB_CT_BBD01_1B_00",
+      "triangles": 318
+    },
+    {
+      "name": "XS_SPEED35_1B_00",
+      "triangles": 16
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XS_STOPSIGNB_1B_00",
+      "triangles": 32
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_2B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XS_SPEED45_1B_00",
+      "triangles": 16
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_MST_GENKK_2B_00",
+      "triangles": 170
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_CT_COLONIAL_WALL_01",
+      "triangles": 12
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_WALLHORSETRACK_BK_01",
+      "triangles": 114
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_HRSETRCKTICKETSA_1B_BK_00",
+      "triangles": 220
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_HORSETRACKSTANDS_1B_BK_00",
+      "triangles": 230
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_CP_PARKGARAGE_1B_LL_00",
+      "triangles": 387
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XB_MST_GENH_1B_00",
+      "triangles": 126
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_MST_GEND4_1B_00",
+      "triangles": 145
+    },
+    {
+      "name": "XB_MST_GENI_1B_00",
+      "triangles": 143
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_2B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XS_SPEED35_1B_00",
+      "triangles": 16
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_MST_GENJ_1B_00",
+      "triangles": 101
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XO_ROLLINGTIRE_1B_BK_00",
+      "triangles": 320
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XB_CT_TIRESHOPAWNING_1B_00",
+      "triangles": 23
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XB_CT_TIRESHOP03_1B_00",
+      "triangles": 96
+    },
+    {
+      "name": "XB_CT_TIRESHOP01_1B_00",
+      "triangles": 168
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XS_STOPSIGNB_1B_00",
+      "triangles": 32
+    },
+    {
+      "name": "XT_CT_FALLTREE2D_1B_JG_00",
+      "triangles": 144
+    },
+    {
+      "name": "XO_FLATTIRE_1B_LR_00",
+      "triangles": 22
+    },
+    {
+      "name": "XS_MEDIANPOLE_1B_00",
+      "triangles": 36
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_CT_TIRESHOP01_1B_00",
+      "triangles": 168
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XT_CT_FALLTREE2D_1B_JG_00",
+      "triangles": 144
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_2B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENH_1B_00",
+      "triangles": 126
+    },
+    {
+      "name": "XT_CT_TREELINE1Z_1A_00",
+      "triangles": 318
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_TREELINE1Z_1A_00",
+      "triangles": 318
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XT_CT_FALLTREEFILLERA_1B_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_TREELINE1Z_1A_00",
+      "triangles": 318
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_FALLTREEFILLERA_1B_00",
+      "triangles": 34
+    },
+    {
+      "name": "XS_MEDIANPOLEGREEN_1B_CK_00",
+      "triangles": 36
+    },
+    {
+      "name": "XS_MEDIANPOLEGREEN_1B_CK_00",
+      "triangles": 36
+    },
+    {
+      "name": "XT_CT_FALLTREEFILLERA_1B_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_TREELINE1Z_1A_00",
+      "triangles": 318
+    },
+    {
+      "name": "XW_PARKBARRIERFENCE_1B_MS_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    }
+  ],
+  "textures": [
+    {
+      "hash": "0052df43",
+      "name": "ARC_WHOUSE_DOOR_02",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "01d04555045933cd42b1d545338022339525862ef9dd64f611e71be3aed7f7ea"
+    },
+    {
+      "hash": "00fb279e",
+      "name": "OBJ_AIRSTREAM_01A_LR_00",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "9402a58dbc52232b6bca1336c3424c3fdcc2e57e512c24e8a6f85c71816cb5ee"
+    },
+    {
+      "hash": "022076aa",
+      "name": "ARC_WALLROCK_WINDOW",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a09f4e8b02320c555cbbc2a2c099971d71fe5053ff4154f6f427b7ec027fdb8f"
+    },
+    {
+      "hash": "0677f542",
+      "name": "ARC_LB_SLUMBLOCK_J_AL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "82343f424b9dee93dd205ad143d827c0b6474963027f060cf3b8f425f3c5db20"
+    },
+    {
+      "hash": "082449c0",
+      "name": "OBJ_IRONFIREESCAPEA_LL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "0bdf11d1e6c549a134b69fa5f59ac421083698812fbd54bafae724be568af06b"
+    },
+    {
+      "hash": "0ea71465",
+      "name": "OBJ_IP_TIRE",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6ef17528215dc14f3f8f4abc3f2f05d9287aad31c550c951d8a1410579223d06"
+    },
+    {
+      "hash": "156e7175",
+      "name": "TRNS_GRASSA_LD_GRASSA_0",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "2d13fd0f6c901c18851e82a007d3a29c626393fa624a5733f395c6e0ccaf5e8e"
+    },
+    {
+      "hash": "17ec8bc8",
+      "name": "SGN_BACKSIGN",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "72df1d5feff99a8748068fe815bca04499a764393b75b476c84fb05745f722fe"
+    },
+    {
+      "hash": "17f2b2e7",
+      "name": "SGN_BACK_001",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8d965675ed6b2d15cd7c66e8282b17c45cf909d37e226650f3ecf61517ed06d1"
+    },
+    {
+      "hash": "19e05f09",
+      "name": "ARC_TILESA_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e0f6319c9cbd735c9a890002e5e277ba9513311e989612f072186fc67e20d56b"
+    },
+    {
+      "hash": "1bde4c05",
+      "name": "ARC_CAMPUS_HERITAGE1_WA",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "796bab32c523c1f7d4774c40b7e1b9ecb489de6b2ffb0fe25b67f4bc330e4a3a"
+    },
+    {
+      "hash": "1ff171df",
+      "name": "OBJ_TELEPOLE_LITE_BRIGH",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0832538b8606345a3befbe1438fb895f47d27e718b4338f0083347b83abb06d4"
+    },
+    {
+      "hash": "267a10ec",
+      "name": "SGN_PARKA_LL",
+      "missing": false,
+      "width": 16,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0744c780f3b89427d80f3b491c1a02a1eef32d56916dd0c41e43a20b52cbcfc6"
+    },
+    {
+      "hash": "2815d80d",
+      "name": "OBJ_METAL01",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d24a006c239f851ce906eb9e0fc07ed0237cededceb542d24ff4b917e902e1f4"
+    },
+    {
+      "hash": "2f8824a9",
+      "name": "ARC_CAMPUS_PKD_LOT",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "63af094139f41925f108f51f588bac801ca6a3fce417afb4bae6f8c4565b4c60"
+    },
+    {
+      "hash": "3170524e",
+      "name": "SGN_LIGHT_001",
+      "missing": false,
+      "width": 32,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "09cdf780410d18055b9e688196d4c95d41e9d279ba24cdc9d0f9ad50074adeea"
+    },
+    {
+      "hash": "3405a420",
+      "name": "OBJ_FENCE_CHNLINK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 3,
+      "alpha_test_mode": 2,
+      "blend_mode": 1,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "9eabe5ac6a7d8072832a7314bac3103dad765f07e978995fa05b327ccdbcf285"
+    },
+    {
+      "hash": "35e03adc",
+      "name": "ARC_DOOR_WAREHOUSE02",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "067cd08d03dc1efe7731736ccf6ceed84c813a4ab70536a784b8d852bfd35c86"
+    },
+    {
+      "hash": "3b1ad9ac",
+      "name": "SGN_STOP",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "1858c0e67b51821921a8a8e63ee90cf488904d71a928edee31e7e502d2762c96"
+    },
+    {
+      "hash": "43309f2e",
+      "name": "ARC_CAMPUS_MBWALL_CONC1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "4b16351b2e62db6a825a434be540330a788ac3d36165120884a6875045953181"
+    },
+    {
+      "hash": "43309f2f",
+      "name": "ARC_CAMPUS_MBWALL_CONC2",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "f096e6c5860c7eea37be95b7472e20dc467b0f6417837edcb9e0bc20d02c71b0"
+    },
+    {
+      "hash": "438cc032",
+      "name": "ARC_GLASSAWNING",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "84c233081f9842fdda628bd26d66f41983824d8cc3873afdbc0961c5c6995de5"
+    },
+    {
+      "hash": "43f09e32",
+      "name": "ARC_PARKWALL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "daf7effb7088589f7c96585ddbda54e61c133aca3e23fe3377f6dca1f88e6296"
+    },
+    {
+      "hash": "48f10039",
+      "name": "XO_TIRE",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6fbcb4d3a9c38a340f5006b2105ba570a31f945ce3545aec25a1dd27521c1cc1"
+    },
+    {
+      "hash": "4921de2e",
+      "name": "TRNS_ALL_LA_PAVEMENTA_Y",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8ffef58a1b060537a5f96a3e402676d93b70d413140aa61611f6b08760b74f23"
+    },
+    {
+      "hash": "499d12a6",
+      "name": "ARC_CAMPUS_HERITAGE5_KB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6b41039d4839af067d5ec0900ce41c3fb8408ce0694b8108e32332d83b598c6d"
+    },
+    {
+      "hash": "49e9b8de",
+      "name": "ORG_CT_POPLARFLORA",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "b02e40d62786655934cd2eef875ffd68af174e493e208c44328dd7eca0d43059"
+    },
+    {
+      "hash": "5a202fad",
+      "name": "ARC_FRATRETWALL1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "674dd1f42d354e83935682219ee3a3ab397d88bfa106fe0c5b1d801f7d761f4e"
+    },
+    {
+      "hash": "5fa6f061",
+      "name": "TRNS_ALL_LZ_SIDEWALKA_D",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "33e6c752ab8a3d1089fe236390e81bca2d810c904c29417238094601c6dea415"
+    },
+    {
+      "hash": "6714390a",
+      "name": "ORG_CT_POPLARBARK",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "fb01ba3e59abb5d0019c695031dd642fd91fee5378075f7234f39700378bdca0"
+    },
+    {
+      "hash": "689cc9d9",
+      "name": "ARC_LB_WALLW01_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "107092f931dc8a7ab49cfe189345cd3c78500d1a64772a8cee77c193879e7481"
+    },
+    {
+      "hash": "6af91977",
+      "name": "TRNS_GRAVELA_LD_GRAVELA",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "444ee543b44944446791fc45aaf5cc849f1feca544f26d3595f0d9d0b14bc965"
+    },
+    {
+      "hash": "742db87e",
+      "name": "ARC_HRSETRCKTICKETSA_BK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0693b1a4f88bc00f85bd2b33dd23cf5c20f2a884b20dfb9f1a037d0343e30197"
+    },
+    {
+      "hash": "764dea79",
+      "name": "ARC_CONCRETE_C_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "92d159f8b5e0cafce306e7d1c29d84b5f1746868401b9985caa7aea52ef9b710"
+    },
+    {
+      "hash": "7e39544a",
+      "name": "TRN_PAINTEDCONCRETE",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "45c4353c08b845d45c6d43af1fa487f5ed22a110fbdb2fbe4a7deb9cc9cae20f"
+    },
+    {
+      "hash": "80f467de",
+      "name": "SGN_SPEEDLIMIT35",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "15e7cc894c054709424c28b06a1fb40537d063c66cdecbfed99e140d82441557"
+    },
+    {
+      "hash": "80f467ff",
+      "name": "SGN_SPEEDLIMIT45",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e19adccf1281dc21963853eae0cfcb73c03b5032f253631c14abb787154b2122"
+    },
+    {
+      "hash": "8730aa81",
+      "name": "TER_COBBLE1",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "47682c60148bc37ad292e2f40cacf42877f636cf2b4589e92f5e6570fb085a1f"
+    },
+    {
+      "hash": "8730aa82",
+      "name": "TER_COBBLE2",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a1965958cdcecb294276909245d35488ca2e8287752cfbacc2b5ca05b140b832"
+    },
+    {
+      "hash": "8747c92d",
+      "name": "ARC_CAMPUS_PKD_STALLS",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "40875e03ba617f3dafc4e6a0069878cc580e7cc1d9b20258884d1f38d42deb3a"
+    },
+    {
+      "hash": "89be1ee6",
+      "name": "ORG_TREE_DEC1TRUNK",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "845d4df1ff8eaca124936375f83b1398f6a39813255bac3db881f039be876cad"
+    },
+    {
+      "hash": "8caed148",
+      "name": "SFX_BLINKGREENLIGHT",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "1c910bae8ac200403c779e10783cb346a9cffa4f8bb56b21e675c4e7bffe5804"
+    },
+    {
+      "hash": "8f7432de",
+      "name": "ARC_SHOPFRONT_BA_LZ",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d8f2a0d2a67cefb57fcb9669f4e7ee746ccfd6d632b474129d6486404491c4d7"
+    },
+    {
+      "hash": "914a8455",
+      "name": "TRNS_ALL_LZ_PAVEMENTA_Y",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "16db3c0887aa5731195847de6e439c473b73e7f4ceb9c3b1dbede88ebe955094"
+    },
+    {
+      "hash": "9717031d",
+      "name": "MD_GRASSYTILE1024",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "67acd12bedb1449875b14015ce519c6b8872827c4e55e314a46ac3a54ac0f197"
+    },
+    {
+      "hash": "97fbd9bb",
+      "name": "TRNS_ALL_LZ_PAVEMENTA_P",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "454666a5538557d3d1d64168b34ee74f443a7565eb88a4a568786bd064dcadb3"
+    },
+    {
+      "hash": "9d9f58de",
+      "name": "ARC_UC_THSTAIRS_LV",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "045d044439754f2d8e73339fedbda3fdb0d488731945b0fcc6ba33b694e17f38"
+    },
+    {
+      "hash": "9ebb788a",
+      "name": "ARC_WINDOWHIGHLIGHTS_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e405c862eb66033fbdd4ef1bbfb0f2bb443c7702ffd2a9935aca3726c1d71941"
+    },
+    {
+      "hash": "9ed8f353",
+      "name": "SFX_BLINKORANGELIGHT",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "635faef135027e9e34a3c6b633699cca33a71b1fa1d8dd6be92fd643c4bbca74"
+    },
+    {
+      "hash": "aa180290",
+      "name": "OBJ_ROLLINGTIRE_A_BK",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "4e6184e666500daeb5cbab5fc263c58a697490d622b952286e0d4a89e70be435"
+    },
+    {
+      "hash": "ad0948d3",
+      "name": "SGN_BACKLARGESIGN",
+      "missing": false,
+      "width": 64,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c97a4402eef473888ad4142db29228e3f1d398ec24e12d5fdd40e44215ef0ee2"
+    },
+    {
+      "hash": "af05fd10",
+      "name": "ORG_CT_FALLTREE2_TRUNK",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8f19e6e31eb679a82b3846bad5b41722e801c0afa789ec93703af540ffae6c2c"
+    },
+    {
+      "hash": "b226bb1d",
+      "name": "ARC_SHINGLEOLD",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c5f5d8cd78aea3f9ac6e2f82138e2cbb3fd1f63bee97666cda5ea64cc682449e"
+    },
+    {
+      "hash": "b5832e8f",
+      "name": "ARC_SHINGLERED_LK",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "3843821767990ccab35e2b310839bb183bb8ab5c92b0b9bc4af6b270c6da94bd"
+    },
+    {
+      "hash": "b72aa8d3",
+      "name": "ARC_BOXROOF",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "13b4b4ad8c725c5df7b979258f0ab2db1ad0d96e37952c9be37d5183b952253d"
+    },
+    {
+      "hash": "b7bc8b97",
+      "name": "TRNS_ALL_LZ_SIDEWALKA_0",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d4b5bc62a7e3549db6bb9465007207d17e1cfb7443f535837d01438a491eb4fa"
+    },
+    {
+      "hash": "b81f130b",
+      "name": "ARC_A_CROSSBEAM_GR",
+      "missing": false,
+      "width": 16,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0df86ef25ed2b86e3869908e26322c57c0fa790786bab387b3424fd575dcb3d3"
+    },
+    {
+      "hash": "bc7cd196",
+      "name": "OBJ_ORANGEWHITE",
+      "missing": false,
+      "width": 16,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c866bd1f23da98438bb52cacb4a25603c17a8f8dd3f4040e4cc5b0c7d8933126"
+    },
+    {
+      "hash": "bcdde918",
+      "name": "ARC_LB_WALLW_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d719e33892829849a8deda4bfd55ee06935d99b3adf80c9c241730b06509af3c"
+    },
+    {
+      "hash": "bd126460",
+      "name": "ARC_BRICK01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a2307fdf3e964bb630e118132eb1ac97007d6f50f068c41d7dc08edcde77da85"
+    },
+    {
+      "hash": "be10f98a",
+      "name": "TRNS_ALL_LW_PAVEMENTA_I",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a4cc33e13e5e8b7bea88f9b372667dbd11aeacc5ee53aa26124a706a80928e8a"
+    },
+    {
+      "hash": "bf657865",
+      "name": "ORG_CT_TREELINE1",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "cac3128a22a72d2a2e31d34a1c8e92764cb5fb2e2b6dfe56e8eaabb6079dd728"
+    },
+    {
+      "hash": "bf657866",
+      "name": "ORG_CT_TREELINE2",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "3e7652c03985e4d27256a0974e06206192c6b1c5b1c299fbeb5d8e689c24cb54"
+    },
+    {
+      "hash": "bf77370a",
+      "name": "SGN_BYSIGNWARN",
+      "missing": false,
+      "width": 8,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6579ae00708a878a7df42fe8f2948648eab54defb5fecc61a1214f42bea26c40"
+    },
+    {
+      "hash": "c0bdee73",
+      "name": "ARC_CORNERSTOREWINDOW1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c102565044eef73504e162962ec1be300e395277988983e0f7f47bccbb882c42"
+    },
+    {
+      "hash": "c253203f",
+      "name": "SGN_LIGHTBACK_001",
+      "missing": false,
+      "width": 32,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "bf80d8c25a407f3fc1815144de1925e738751180056fb6273bbf7b16a6bc9f0c"
+    },
+    {
+      "hash": "c2975107",
+      "name": "ARC_BARRIERDIRTY",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6dcdbb10977ee0dfb9c6e1757f84a5e15de9e1858c3a00332e343adb90111f98"
+    },
+    {
+      "hash": "c34e5245",
+      "name": "ARC_STRIPMALL_WINDOWE_L",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "72d8593b76863ab7266aeb6712c119a9ede4612a3664bb94f304ff870004945a"
+    },
+    {
+      "hash": "c4cfac92",
+      "name": "ARC_LB_BBUILDING01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c2a170ffad2058ccfe0b4217b92a30b8801370492b29c5b748cb1bad899e8959"
+    },
+    {
+      "hash": "c567bac7",
+      "name": "ARC_CEILINGLIGHT",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e133ab0aeae480cada5bca333da2b4b78c9bdb7e25de466e94aa9670c3f7b1f1"
+    },
+    {
+      "hash": "c874ac8f",
+      "name": "ORG_CT_FALLTREETOP1",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "fba2cbc9655052aba483eba0cefe2413e23ae9a425019b94296d3ec106ea623c"
+    },
+    {
+      "hash": "c904085c",
+      "name": "ARC_WHOUSEK_01B",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e4a30fff1e8df3de9ae807bed2b27fbd145c35c3b742939b4638c478d031af25"
+    },
+    {
+      "hash": "c95fe138",
+      "name": "ARC_BRICKBROWN_WALL02",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "7a793a69700aa6ebf8a672adba07858873ebb618cc718010fa1b9762e22d212c"
+    },
+    {
+      "hash": "cc82c25a",
+      "name": "TRN_CT_HILLS_FIELDS",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "54afd24e491eda7362eede3497cec7747f9c88f253555c94ceadeecd8bbd5164"
+    },
+    {
+      "hash": "ccd8153f",
+      "name": "SGN_TRAFFICLIGHTS_POLE",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8310237a55beeccfaff0bc6c03a9ce1124489a5581f50b7b9c059a12bf6e9ca9"
+    },
+    {
+      "hash": "d1b2062c",
+      "name": "ARC_COLONIAL1ROOF",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "2015294d8f9486dd4aceb7f010bea312f43cbb0052aeaba8e8999f8e5a476bdf"
+    },
+    {
+      "hash": "d5a08d5f",
+      "name": "RO_GENFILL_CRK",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e982572a46b4a112b7ba23cf41ebcb1eda67d5c898856bb314390f5f7f662008"
+    },
+    {
+      "hash": "d785cd15",
+      "name": "ARC_LB_STRIPB",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "f50c0e75a3137c378673edaa2d46ac187cd949aa3c8f7e2079bbeca5a10d5131"
+    },
+    {
+      "hash": "d8289bd3",
+      "name": "ADS_EDGE_BB_A_EA",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "aa57fbbff195ce9b151de8611c83b54817e6234434f97a43e293b31f4a258632"
+    },
+    {
+      "hash": "d85a1224",
+      "name": "ARC_GENBLDINGB_E",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "972a8561c47cff999bdcae1c2f0fe19edf8c03bee90e3addfd889e1397bc4685"
+    },
+    {
+      "hash": "da3f830f",
+      "name": "ARC_CEILINGOFFICEA_RB",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "f97d1feea3beffbc77a2cecae33744ee9261fc79fb3e4a75479fd9d774a6fa6a"
+    },
+    {
+      "hash": "db34b2a4",
+      "name": "TRNS_ALL_LB_PAVEMENTA_N",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "acbd6f6b22e5e086b42192d040e97735a249164b1d5ba3423aeb9532a957b724"
+    },
+    {
+      "hash": "dbd32c25",
+      "name": "TRNS_ALL_LB_PAVEMENTA_W",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "f1a3abd29cce96e57b595368e8982bd1de5355f0599657eaf08afd3ee1cf4f6a"
+    },
+    {
+      "hash": "dbf97a3d",
+      "name": "ORG_CT_FALLTREE2",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "23799b1416872721f488cdeae57ede33afa2d07c5a0d57ed5b8bf075ac7eb729"
+    },
+    {
+      "hash": "dcc61b76",
+      "name": "ARC_FRATGATE4",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "339111e9df21c83556de988fb73e40bf1c3add7830ad1176ba6cc8752b2d6b3f"
+    },
+    {
+      "hash": "de43652f",
+      "name": "ARC_PIPE_CK",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "60aa1ad7e364ae26c504da6e1e1d6757da9d9beedb3d676ea1e1a187cceed3c6"
+    },
+    {
+      "hash": "df7f5c52",
+      "name": "ARC_LB_WALL01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "5f27869ff0c5b0744db60d81cd65d9bcb64299b802690e06e70d4a38c6bd1186"
+    },
+    {
+      "hash": "df7f608c",
+      "name": "ARC_LB_WALLPK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "7a213d7e2d0b6d7cd178ed095f4843185e58638ca3fccfc35e6526eac7a525fb"
+    },
+    {
+      "hash": "e4432887",
+      "name": "ARC_WALLHORSETRACKA_BK",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c5419be6497429a280e3bdc3bd13464ac0629d262154de351928cde5fd572be2"
+    },
+    {
+      "hash": "e443b4e8",
+      "name": "ARC_WALLHORSETRACKB_BK",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e6569ad98484e38493a7ec93bd16b1a0a59e7afe404a807911010b487dcea404"
+    },
+    {
+      "hash": "e4444149",
+      "name": "ARC_WALLHORSETRACKC_BK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "7b0b7c5485c326e779891616bc9699afb6b908640c1b7e293cf1813ed3fd0107"
+    },
+    {
+      "hash": "e444cdaa",
+      "name": "ARC_WALLHORSETRACKD_BK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "97956afb2202ea68e9cdd4a8ee2f90ce0c80390fcb1ec5d8dc22b135dfad6402"
+    },
+    {
+      "hash": "eaa61ef2",
+      "name": "ADS_CASTROL_BB_B",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "4afdbeebf537f2c46c95ae924696ef5385cad53dda8e8081c44a494a3a6bf964"
+    },
+    {
+      "hash": "f7b353a2",
+      "name": "ARC_BRICKWALLOLDA_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "594632e667e849b40e728ee622b6461cbe50c41873ba2b81023c5bde3fc0b34e"
+    },
+    {
+      "hash": "f91d60c8",
+      "name": "ARC_BRIDGEBEAM2",
+      "missing": false,
+      "width": 16,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "5e7d1caa5a818fd088b64af0a80c9d7d10b521b76317a10f614e829367c6e16b"
+    },
+    {
+      "hash": "fd8270ee",
+      "name": "ARC_LOBBYDOORSGRUNGE_A_",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6ff1f05ac62bc03b56d9d0e5d3ef6886638e0483592e4b6ed3526ec12f42fef2"
+    },
+    {
+      "hash": "fdb3c546",
+      "name": "ARC_LB_DOOR1",
+      "missing": false,
+      "width": 16,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6cb88dd3dea299f434031a014eef3c7162cb666631fc0442f03c6c1d164b76d8"
+    },
+    {
+      "hash": "fdb3c547",
+      "name": "ARC_LB_DOOR2",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "943f040adeedefdd55aa60eead4443563f671b6a76713d876f4cd304bae461e4"
+    },
+    {
+      "hash": "fec5fe73",
+      "name": "ARC_LB_STRIP",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "26d9b76485d94d108cad62d09a505886c5db487fbce09f3f81e276c6ae59521c"
+    },
+    {
+      "hash": "ff03dc21",
+      "name": "ARC_LB_WALLP",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "9d3ceebc70a2a4c53fd24b67ac2294c00241b6afc555b020b88944f7c278336d"
+    }
+  ],
+  "vertices": 58491,
+  "triangles": 19497,
+  "ground_triangles": 2930,
+  "origin": [
+    765.8517570495605,
+    178.14613819122314,
+    -2391.658215522766
+  ],
+  "scale": 0.0019397528642791822,
+  "spawn_source_world": [
+    385.99701176414084,
+    164.77468682383036,
+    -2441.7585243588155
+  ],
+  "spawn_local": [
+    -379.8547452854197,
+    -13.37145136739278,
+    -50.10030883604941
+  ],
+  "heading": 3.802601583655302,
+  "spawn_selection": {
+    "method": "Projected onto original navigation segment, checked against original road triangles",
+    "segment": 406,
+    "offset_from_old_spawn_m": 11.960035304931617,
+    "forward_run_m": 90,
+    "reverse_run_m": 118
+  },
+  "world_sha256": "223238ef83359f21a474a1709699db41e14e3215661a1567338a3a8ab7abc606",
+  "rejected": [],
+  "scenery_instances": [
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.004835605621337891
+    },
+    {
+      "name": "XS_EdgeA_1b_00",
+      "hash": "0eb93990",
+      "bounds_error": 0.003261566162109375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.002822399139404297
+    },
+    {
+      "name": "XS_Castrol_2b_00",
+      "hash": "44594673",
+      "bounds_error": 0.003261566162109375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0024890899658203125
+    },
+    {
+      "name": "XS_MedianPole_1b_00",
+      "hash": "c64c3118",
+      "bounds_error": 0.0037031173706054688
+    },
+    {
+      "name": "XB_CT_BBD01_1b_00",
+      "hash": "48752be8",
+      "bounds_error": 0.0058231353759765625
+    },
+    {
+      "name": "XS_Speed35_1b_00",
+      "hash": "704ce833",
+      "bounds_error": 0.0030517578125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004604816436767578
+    },
+    {
+      "name": "XS_StopSignB_1b_00",
+      "hash": "df19d973",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004845619201660156
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.003383636474609375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.00391387939453125
+    },
+    {
+      "name": "XW_DairyPlantBrick_2b_B",
+      "hash": "dfe303ae",
+      "bounds_error": 0.00251007080078125
+    },
+    {
+      "name": "XS_Speed45_1b_00",
+      "hash": "5c8ebd14",
+      "bounds_error": 0.0038299560546875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.002655029296875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.00392913818359375
+    },
+    {
+      "name": "XB_MST_GenKK_2b_00",
+      "hash": "49cfc38d",
+      "bounds_error": 0.0017852783203125
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0025773048400878906
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0027017593383789062
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0015463829040527344
+    },
+    {
+      "name": "XO_CT_Colonial_Wall_01",
+      "hash": "fa083ffb",
+      "bounds_error": 0.003814697265625
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004090785980224609
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0036439895629882812
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.00330352783203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_WallHorseTrack_BK_01",
+      "hash": "4041e77f",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0040836334228515625
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0028743743896484375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_HrseTrckTicketsA_1b_",
+      "hash": "c09b0293",
+      "bounds_error": 0.004422664642333984
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.003753662109375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_HorseTrackStands_1b_",
+      "hash": "7059d758",
+      "bounds_error": 0.004313468933105469
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0037064552307128906
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0038881301879882812
+    },
+    {
+      "name": "XB_CP_ParkGarage_1b_LL_",
+      "hash": "7c94b707",
+      "bounds_error": 0.0035648345947265625
+    },
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.0047454833984375
+    },
+    {
+      "name": "XB_MST_GenH_1b_00",
+      "hash": "6d87963e",
+      "bounds_error": 0.0032806396484375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0028772354125976562
+    },
+    {
+      "name": "XB_MST_GenD4_1b_00",
+      "hash": "e975638e",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XB_MST_GenI_1b_00",
+      "hash": "ba81d2ff",
+      "bounds_error": 0.0031585693359375
+    },
+    {
+      "name": "XW_DairyPlantBrick_2b_B",
+      "hash": "dfe303ae",
+      "bounds_error": 0.003631591796875
+    },
+    {
+      "name": "XS_Speed35_1b_00",
+      "hash": "704ce833",
+      "bounds_error": 0.0030364990234375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004558563232421875
+    },
+    {
+      "name": "XB_MST_GenJ_1b_00",
+      "hash": "077c0fc0",
+      "bounds_error": 0.002964019775390625
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.00380706787109375
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028619766235351562
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004153728485107422
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028619766235351562
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028314590454101562
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004397869110107422
+    },
+    {
+      "name": "XO_RollingTire_1b_BK_00",
+      "hash": "604a59ad",
+      "bounds_error": 0.003509044647216797
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.00414276123046875
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004397869110107422
+    },
+    {
+      "name": "XB_CT_TireShopAwning_1b",
+      "hash": "06362591",
+      "bounds_error": 0.005076408386230469
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004153728485107422
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.0037736892700195312
+    },
+    {
+      "name": "XB_CT_TireShop03_1b_00",
+      "hash": "acb55610",
+      "bounds_error": 0.003863811492919922
+    },
+    {
+      "name": "XB_CT_TireShop01_1b_00",
+      "hash": "12c0dc8e",
+      "bounds_error": 0.0027837753295898438
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0027365684509277344
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0029807090759277344
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028839111328125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.003990650177001953
+    },
+    {
+      "name": "XS_StopSignB_1b_00",
+      "hash": "df19d973",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XT_CT_FallTree2D_1b_JG_",
+      "hash": "00d6da46",
+      "bounds_error": 0.0036029815673828125
+    },
+    {
+      "name": "XO_FlatTire_1b_LR_00",
+      "hash": "752b308e",
+      "bounds_error": 0.0031461715698242188
+    },
+    {
+      "name": "XS_MedianPole_1b_00",
+      "hash": "c64c3118",
+      "bounds_error": 0.003448486328125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0017848014831542969
+    },
+    {
+      "name": "XB_CT_TireShop01_1b_00",
+      "hash": "12c0dc8e",
+      "bounds_error": 0.0026617050170898438
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.004127979278564453
+    },
+    {
+      "name": "XT_CT_FallTree2D_1b_JG_",
+      "hash": "00d6da46",
+      "bounds_error": 0.0024013519287109375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0030488967895507812
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.0042877197265625
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0036139488220214844
+    },
+    {
+      "name": "XW_DairyPlantBrick_2b_B",
+      "hash": "dfe303ae",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XB_MST_GenH_1b_00",
+      "hash": "6d87963e",
+      "bounds_error": 0.0025634765625
+    },
+    {
+      "name": "XT_CT_Treeline1Z_1a_00",
+      "hash": "ea912713",
+      "bounds_error": 0.006033897399902344
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0025920867919921875
+    },
+    {
+      "name": "XT_CT_Treeline1Z_1a_00",
+      "hash": "ea912713",
+      "bounds_error": 0.0054836273193359375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0019741058349609375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.004746437072753906
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.003913402557373047
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.004161834716796875
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.003981590270996094
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.004129886627197266
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0042858123779296875
+    },
+    {
+      "name": "XT_CT_FallTreeFillerA_1",
+      "hash": "1f77653f",
+      "bounds_error": 0.003033161163330078
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.004582405090332031
+    },
+    {
+      "name": "XT_CT_Treeline1Z_1a_00",
+      "hash": "ea912713",
+      "bounds_error": 0.0052337646484375
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.004519462585449219
+    },
+    {
+      "name": "XT_CT_FallTreeFillerA_1",
+      "hash": "1f77653f",
+      "bounds_error": 0.0027980804443359375
+    },
+    {
+      "name": "XS_MedianPoleGreen_1b_C",
+      "hash": "93f6ad76",
+      "bounds_error": 0.003615856170654297
+    },
+    {
+      "name": "XS_MedianPoleGreen_1b_C",
+      "hash": "93f6ad76",
+      "bounds_error": 0.003615856170654297
+    },
+    {
+      "name": "XT_CT_FallTreeFillerA_1",
+      "hash": "1f77653f",
+      "bounds_error": 0.0033321380615234375
+    },
+    {
+      "name": "XT_CT_Treeline1Z_1a_00",
+      "hash": "ea912713",
+      "bounds_error": 0.00685882568359375
+    },
+    {
+      "name": "XW_ParkBarrierFence_1b_",
+      "hash": "00b62b93",
+      "bounds_error": 0.0040302276611328125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.005489349365234375
+    }
+  ],
+  "scenery_skipped": {
+    "missing_model_or_bounds_mismatch": 122,
+    "race_barrier": 61,
+    "missing_texture": 1
+  },
+  "catalog_rejected": [
+    {
+      "source": "STREAML2RA-first8MiB.BUN",
+      "name": "XO_PHOTORADAR_1Z_MD_00",
+      "offset": 31128,
+      "reason": "Triangle count mismatch: decoded 77, header 80"
+    },
+    {
+      "source": "STREAML2RA-first8MiB.BUN",
+      "name": "XO_PHOTORADAR_1C_MD_00",
+      "offset": 44600,
+      "reason": "Triangle count mismatch: decoded 129, header 132"
+    },
+    {
+      "source": "STREAML2RA-first8MiB.BUN",
+      "name": "XO_PHOTORADAR_1B_MD_00",
+      "offset": 91132,
+      "reason": "Triangle count mismatch: decoded 229, header 232"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A10_R2",
+      "offset": 1222080,
+      "reason": "Triangle count mismatch: decoded 263, header 264"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "TRN_CT_ROAD_JUNCTION_01_CHOP_A14_R2",
+      "offset": 1859272,
+      "reason": "Triangle count mismatch: decoded 248, header 252"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "TRN_CT_TERRAIN_COLONIAL_02_CHOP_A18_R0",
+      "offset": 2235840,
+      "reason": "Triangle count mismatch: decoded 58, header 98"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "BLUESTRIPGASPILLAR_FRAG03",
+      "offset": 2281660,
+      "reason": "Triangle count mismatch: decoded 130, header 132"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "BLUESTRIPGASPILLAR_FRAG03",
+      "offset": 2456316,
+      "reason": "Triangle count mismatch: decoded 130, header 132"
+    },
+    {
+      "source": "STREAML2RA-sectors1141-1160.BUN",
+      "name": "TRN_CT_TERRAIN_HIGHLANDS_02_CHOP_G29_R0",
+      "offset": 1125384,
+      "reason": "Triangle count mismatch: decoded 72, header 98"
+    }
+  ],
+  "scenery_radius": 350.0,
+  "texture_budget": 128,
+  "free_drive": true,
+  "complete_scenery": true,
+  "vertex_color": "Original RGB; source alpha/material byte remains uninterpreted and is not used as opacity",
+  "limitations": "Original TRN meshes and validated nearby scenery instances; wheels, full original materials/engine/physics unresolved. Contact uses road render triangles; scenery has no collision."
+}

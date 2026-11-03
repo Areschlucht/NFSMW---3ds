@@ -1,0 +1,136 @@
+{
+  "strings": [
+    {
+      "address": 2151455692,
+      "offset": 3959756,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151611564,
+      "offset": 4115628,
+      "text": "ECollision"
+    },
+    {
+      "address": 2151612588,
+      "offset": 4116652,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151639980,
+      "offset": 4144044,
+      "text": "SimpleRigidBody"
+    },
+    {
+      "address": 2151641060,
+      "offset": 4145124,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151641104,
+      "offset": 4145168,
+      "text": "RigidBody"
+    },
+    {
+      "address": 2151655976,
+      "offset": 4160040,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151656052,
+      "offset": 4160116,
+      "text": "RigidBody::Mesh::Verts"
+    },
+    {
+      "address": 2151685448,
+      "offset": 4189512,
+      "text": "RigidBody"
+    },
+    {
+      "address": 2151685476,
+      "offset": 4189540,
+      "text": "SimpleRigidBody"
+    },
+    {
+      "address": 2151694584,
+      "offset": 4198648,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151735884,
+      "offset": 4239948,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    }
+  ],
+  "xrefs": [
+    {
+      "instruction": 2149408764,
+      "origin": 2149408760,
+      "target": 2151611564,
+      "register": 3,
+      "label": "ECollision"
+    },
+    {
+      "instruction": 2149640228,
+      "origin": 2149640220,
+      "target": 2151639980,
+      "register": 3,
+      "label": "SimpleRigidBody"
+    },
+    {
+      "instruction": 2149683292,
+      "origin": 2149683284,
+      "target": 2151639980,
+      "register": 3,
+      "label": "SimpleRigidBody"
+    },
+    {
+      "instruction": 2149686840,
+      "origin": 2149686832,
+      "target": 2151639980,
+      "register": 3,
+      "label": "SimpleRigidBody"
+    },
+    {
+      "instruction": 2149687064,
+      "origin": 2149687052,
+      "target": 2151641104,
+      "register": 3,
+      "label": "RigidBody"
+    },
+    {
+      "instruction": 2149784540,
+      "origin": 2149784532,
+      "target": 2151656052,
+      "register": 5,
+      "label": "RigidBody::Mesh::Verts"
+    },
+    {
+      "instruction": 2149995080,
+      "origin": 2149995064,
+      "target": 2151685448,
+      "register": 29,
+      "label": "RigidBody"
+    },
+    {
+      "instruction": 2149995092,
+      "origin": 2149995064,
+      "target": 2151685448,
+      "register": 3,
+      "label": "RigidBody"
+    },
+    {
+      "instruction": 2149995208,
+      "origin": 2149995200,
+      "target": 2151685448,
+      "register": 3,
+      "label": "RigidBody"
+    },
+    {
+      "instruction": 2149995260,
+      "origin": 2149995252,
+      "target": 2151685476,
+      "register": 3,
+      "label": "SimpleRigidBody"
+    }
+  ]
+}

@@ -1,0 +1,2439 @@
+{
+  "sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "classes": 56,
+  "collections": 2301,
+  "fixups": 10706,
+  "rows": [
+    {
+      "class_name": "chassis",
+      "class_key": 2946633968,
+      "collection": "bmwm3gtre46",
+      "parent": "default",
+      "fields": {
+        "WHEEL_BASE": {
+          "field_key": 756250017,
+          "field_name": "WHEEL_BASE",
+          "type": "EA::Reflection::Float",
+          "value": 2.7300000190734863,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33976,
+          "file_offset": 34104,
+          "original_bytes": "402eb852"
+        },
+        "DRAG_COEFFICIENT": {
+          "field_key": 1015416645,
+          "field_name": "DRAG_COEFFICIENT",
+          "type": "EA::Reflection::Float",
+          "value": 0.3199999928474426,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 34004,
+          "file_offset": 34132,
+          "original_bytes": "3ea3d70a"
+        },
+        "SHOCK_VALVING": {
+          "field_key": 1120152383,
+          "field_name": "SHOCK_VALVING",
+          "type": "AxlePair",
+          "value": [
+            20.0,
+            20.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33956,
+          "file_offset": 34084,
+          "original_bytes": "41a0000041a00000"
+        },
+        "RIDE_HEIGHT": {
+          "field_key": 1187088816,
+          "field_name": "RIDE_HEIGHT",
+          "type": "AxlePair",
+          "value": [
+            6.0,
+            6.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33916,
+          "file_offset": 34044,
+          "original_bytes": "40c0000040c00000"
+        },
+        "SHOCK_STIFFNESS": {
+          "field_key": 1270964753,
+          "field_name": "SHOCK_STIFFNESS",
+          "type": "AxlePair",
+          "value": [
+            60.0,
+            50.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33940,
+          "file_offset": 34068,
+          "original_bytes": "4270000042480000"
+        },
+        "SHOCK_BLOWOUT": {
+          "field_key": 1414753592,
+          "field_name": "SHOCK_BLOWOUT",
+          "type": "EA::Reflection::Float",
+          "value": 5.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33980,
+          "file_offset": 34108,
+          "original_bytes": "40a00000"
+        },
+        "SHOCK_EXT_STIFFNESS": {
+          "field_key": 1416103984,
+          "field_name": "SHOCK_EXT_STIFFNESS",
+          "type": "AxlePair",
+          "value": [
+            75.0,
+            77.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33932,
+          "file_offset": 34060,
+          "original_bytes": "42960000429a0000"
+        },
+        "SWAYBAR_STIFFNESS": {
+          "field_key": 1640658418,
+          "field_name": "SWAYBAR_STIFFNESS",
+          "type": "AxlePair",
+          "value": [
+            200.0,
+            200.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33964,
+          "file_offset": 34092,
+          "original_bytes": "4348000043480000"
+        },
+        "ROLL_CENTER": {
+          "field_key": 1728237561,
+          "field_name": "ROLL_CENTER",
+          "type": "EA::Reflection::Float",
+          "value": 9.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33972,
+          "file_offset": 34100,
+          "original_bytes": "41100000"
+        },
+        "TRAVEL": {
+          "field_key": 2114042221,
+          "field_name": "TRAVEL",
+          "type": "AxlePair",
+          "value": [
+            8.0,
+            8.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33908,
+          "file_offset": 34036,
+          "original_bytes": "4100000041000000"
+        },
+        "SPRING_STIFFNESS": {
+          "field_key": 2150499807,
+          "field_name": "SPRING_STIFFNESS",
+          "type": "AxlePair",
+          "value": [
+            650.0,
+            600.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33948,
+          "file_offset": 34076,
+          "original_bytes": "4422800044160000"
+        },
+        "AERO_CG": {
+          "field_key": 2691948152,
+          "field_name": "AERO_CG",
+          "type": "EA::Reflection::Float",
+          "value": 47.75,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33984,
+          "file_offset": 34112,
+          "original_bytes": "423f0000"
+        },
+        "SPRING_PROGRESSION": {
+          "field_key": 2696191938,
+          "field_name": "SPRING_PROGRESSION",
+          "type": "AxlePair",
+          "value": [
+            7.5,
+            7.5
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33900,
+          "file_offset": 34028,
+          "original_bytes": "40f0000040f00000"
+        },
+        "TRACK_WIDTH": {
+          "field_key": 2805509855,
+          "field_name": "TRACK_WIDTH",
+          "type": "AxlePair",
+          "value": [
+            1.6080000400543213,
+            1.6030000448226929
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33924,
+          "file_offset": 34052,
+          "original_bytes": "3fcdd2f23fcd2f1b"
+        },
+        "SHOCK_DIGRESSION": {
+          "field_key": 2853416571,
+          "field_name": "SHOCK_DIGRESSION",
+          "type": "AxlePair",
+          "value": [
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33892,
+          "file_offset": 34020,
+          "original_bytes": "3e4ccccd3e4ccccd"
+        },
+        "RENDER_MOTION": {
+          "field_key": 3017009109,
+          "field_name": "RENDER_MOTION",
+          "type": "EA::Reflection::Float",
+          "value": 1.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33988,
+          "file_offset": 34116,
+          "original_bytes": "3f800000"
+        },
+        "AERO_COEFFICIENT": {
+          "field_key": 3264941847,
+          "field_name": "AERO_COEFFICIENT",
+          "type": "EA::Reflection::Float",
+          "value": 0.30000001192092896,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33996,
+          "file_offset": 34124,
+          "original_bytes": "3e99999a"
+        },
+        "FRONT_AXLE": {
+          "field_key": 3637234760,
+          "field_name": "FRONT_AXLE",
+          "type": "EA::Reflection::Float",
+          "value": 1.4299999475479126,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 33992,
+          "file_offset": 34120,
+          "original_bytes": "3fb70a3d"
+        },
+        "FRONT_WEIGHT_BIAS": {
+          "field_key": 3849186852,
+          "field_name": "FRONT_WEIGHT_BIAS",
+          "type": "EA::Reflection::Float",
+          "value": 54.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 34000,
+          "file_offset": 34128,
+          "original_bytes": "42580000"
+        }
+      }
+    },
+    {
+      "class_name": "induction",
+      "class_key": 3374973250,
+      "collection": "bmwm3gtre46",
+      "parent": "default",
+      "fields": {
+        "SPOOL_TIME_DOWN": {
+          "field_key": 521502871,
+          "field_name": "SPOOL_TIME_DOWN",
+          "type": "EA::Reflection::Float",
+          "value": 0.25,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72944,
+          "file_offset": 73072,
+          "original_bytes": "3e800000"
+        },
+        "HIGH_BOOST": {
+          "field_key": 1902702424,
+          "field_name": "HIGH_BOOST",
+          "type": "EA::Reflection::Float",
+          "value": 0.20000000298023224,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72964,
+          "file_offset": 73092,
+          "original_bytes": "3e4ccccd"
+        },
+        "LOW_BOOST": {
+          "field_key": 2050064832,
+          "field_name": "LOW_BOOST",
+          "type": "EA::Reflection::Float",
+          "value": 0.20000000298023224,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72940,
+          "file_offset": 73068,
+          "original_bytes": "3e4ccccd"
+        },
+        "SPOOL_TIME_UP": {
+          "field_key": 2887519535,
+          "field_name": "SPOOL_TIME_UP",
+          "type": "EA::Reflection::Float",
+          "value": 2.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72956,
+          "file_offset": 73084,
+          "original_bytes": "40000000"
+        },
+        "PSI": {
+          "field_key": 3121249540,
+          "field_name": "PSI",
+          "type": "EA::Reflection::Float",
+          "value": 12.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72960,
+          "file_offset": 73088,
+          "original_bytes": "41400000"
+        },
+        "SPOOL": {
+          "field_key": 3474042759,
+          "field_name": "SPOOL",
+          "type": "EA::Reflection::Float",
+          "value": 0.20000000298023224,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72952,
+          "file_offset": 73080,
+          "original_bytes": "3e4ccccd"
+        },
+        "VACUUM": {
+          "field_key": 3995873903,
+          "field_name": "VACUUM",
+          "type": "EA::Reflection::Float",
+          "value": -0.05000000074505806,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 72948,
+          "file_offset": 73076,
+          "original_bytes": "bd4ccccd"
+        }
+      }
+    },
+    {
+      "class_name": "engine",
+      "class_key": 4059429831,
+      "collection": "bmwm3gtre46",
+      "parent": "default",
+      "fields": {
+        "ENGINE_BRAKING": {
+          "field_key": 2193971520,
+          "field_name": "ENGINE_BRAKING",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 3,
+            "count": 3,
+            "values": [
+              0.699999988079071,
+              0.800000011920929,
+              0.8999999761581421
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78284,
+          "file_offset": 78412,
+          "original_bytes": "00030003000400003f3333333f4ccccd3f666666"
+        },
+        "IDLE": {
+          "field_key": 2467907434,
+          "field_name": "IDLE",
+          "type": "EA::Reflection::Float",
+          "value": 800.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78316,
+          "file_offset": 78444,
+          "original_bytes": "44480000"
+        },
+        "SPEED_LIMITER": {
+          "field_key": 2732190900,
+          "field_name": "SPEED_LIMITER",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 0,
+            "values": []
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78268,
+          "file_offset": 78396,
+          "original_bytes": "00020000000400000000000000000000"
+        },
+        "TORQUE": {
+          "field_key": 2949474236,
+          "field_name": "TORQUE",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 9,
+            "count": 9,
+            "values": [
+              170.0,
+              251.0,
+              340.0,
+              428.0,
+              467.0,
+              452.0,
+              411.0,
+              375.0,
+              350.0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78224,
+          "file_offset": 78352,
+          "original_bytes": "0009000900040000432a0000437b000043aa000043d6000043e9800043e2000043cd800043bb800043af0000"
+        },
+        "MAX_RPM": {
+          "field_key": 3310753810,
+          "field_name": "MAX_RPM",
+          "type": "EA::Reflection::Float",
+          "value": 9500.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78308,
+          "file_offset": 78436,
+          "original_bytes": "46147000"
+        },
+        "FLYWHEEL_MASS": {
+          "field_key": 3434807877,
+          "field_name": "FLYWHEEL_MASS",
+          "type": "EA::Reflection::Float",
+          "value": 10.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78304,
+          "file_offset": 78432,
+          "original_bytes": "41200000"
+        },
+        "RED_LINE": {
+          "field_key": 3758817727,
+          "field_name": "RED_LINE",
+          "type": "EA::Reflection::Float",
+          "value": 8500.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 78312,
+          "file_offset": 78440,
+          "original_bytes": "4604d000"
+        }
+      }
+    },
+    {
+      "class_name": "transmission",
+      "class_key": 128426981,
+      "collection": "bmwm3gtre46",
+      "parent": "default",
+      "fields": {
+        "GEAR_RATIO": {
+          "field_key": 387205764,
+          "field_name": "GEAR_RATIO",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 9,
+            "count": 8,
+            "values": [
+              3.200000047683716,
+              0.0,
+              4.099999904632568,
+              2.5299999713897705,
+              1.6699999570846558,
+              1.2300000190734863,
+              1.0,
+              0.8299999833106995
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125092,
+          "file_offset": 125220,
+          "original_bytes": "0009000800040000404ccccd00000000408333334021eb853fd5c28f3f9d70a43f8000003f547ae100000000"
+        },
+        "DIFFERENTIAL": {
+          "field_key": 817227303,
+          "field_name": "DIFFERENTIAL",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 3,
+            "count": 3,
+            "values": [
+              0.800000011920929,
+              0.800000011920929,
+              0.0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125136,
+          "file_offset": 125264,
+          "original_bytes": "00030003000400003f4ccccd3f4ccccd00000000"
+        },
+        "GEAR_EFFICIENCY": {
+          "field_key": 1381034898,
+          "field_name": "GEAR_EFFICIENCY",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 9,
+            "count": 9,
+            "values": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125156,
+          "file_offset": 125284,
+          "original_bytes": "00090009000400003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f800000"
+        },
+        "TORQUE_CONVERTER": {
+          "field_key": 1405556716,
+          "field_name": "TORQUE_CONVERTER",
+          "type": "EA::Reflection::Float",
+          "value": 0.30000001192092896,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125200,
+          "file_offset": 125328,
+          "original_bytes": "3e99999a"
+        },
+        "TORQUE_SPLIT": {
+          "field_key": 1937894968,
+          "field_name": "TORQUE_SPLIT",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125204,
+          "file_offset": 125332,
+          "original_bytes": "00000000"
+        },
+        "OPTIMAL_SHIFT": {
+          "field_key": 2378261361,
+          "field_name": "OPTIMAL_SHIFT",
+          "type": "EA::Reflection::Float",
+          "value": 500.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125212,
+          "file_offset": 125340,
+          "original_bytes": "43fa0000"
+        },
+        "CLUTCH_SLIP": {
+          "field_key": 3479033065,
+          "field_name": "CLUTCH_SLIP",
+          "type": "EA::Reflection::Float",
+          "value": 0.800000011920929,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125208,
+          "file_offset": 125336,
+          "original_bytes": "3f4ccccd"
+        },
+        "SHIFT_SPEED": {
+          "field_key": 3716178697,
+          "field_name": "SHIFT_SPEED",
+          "type": "EA::Reflection::Float",
+          "value": 0.25,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125216,
+          "file_offset": 125344,
+          "original_bytes": "3e800000"
+        },
+        "FINAL_GEAR": {
+          "field_key": 3719506788,
+          "field_name": "FINAL_GEAR",
+          "type": "EA::Reflection::Float",
+          "value": 3.4000000953674316,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 125220,
+          "file_offset": 125348,
+          "original_bytes": "4059999a"
+        }
+      }
+    },
+    {
+      "class_name": "tires",
+      "class_key": 3174617546,
+      "collection": "bmwm3gtre46",
+      "parent": "default",
+      "fields": {
+        "SECTION_WIDTH": {
+          "field_key": 1365365486,
+          "field_name": "SECTION_WIDTH",
+          "type": "AxlePair",
+          "value": [
+            255.0,
+            255.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139952,
+          "file_offset": 140080,
+          "original_bytes": "437f0000437f0000"
+        },
+        "YAW_CONTROL": {
+          "field_key": 1690582091,
+          "field_name": "YAW_CONTROL",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 4,
+            "count": 4,
+            "values": [
+              0.30000001192092896,
+              0.6499999761581421,
+              1.0,
+              1.2000000476837158
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139888,
+          "file_offset": 140016,
+          "original_bytes": "00040004000400003e99999a3f2666663f8000003f99999a"
+        },
+        "DYNAMIC_GRIP": {
+          "field_key": 2868642227,
+          "field_name": "DYNAMIC_GRIP",
+          "type": "AxlePair",
+          "value": [
+            2.0,
+            2.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139920,
+          "file_offset": 140048,
+          "original_bytes": "4000000040000000"
+        },
+        "RIM_SIZE": {
+          "field_key": 3063463583,
+          "field_name": "RIM_SIZE",
+          "type": "AxlePair",
+          "value": [
+            19.0,
+            19.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139936,
+          "file_offset": 140064,
+          "original_bytes": "4198000041980000"
+        },
+        "YAW_SPEED": {
+          "field_key": 3255387911,
+          "field_name": "YAW_SPEED",
+          "type": "EA::Reflection::Float",
+          "value": 0.25,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139964,
+          "file_offset": 140092,
+          "original_bytes": "3e800000"
+        },
+        "ASPECT_RATIO": {
+          "field_key": 3741059970,
+          "field_name": "ASPECT_RATIO",
+          "type": "AxlePair",
+          "value": [
+            40.0,
+            40.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139928,
+          "file_offset": 140056,
+          "original_bytes": "4220000042200000"
+        },
+        "STATIC_GRIP": {
+          "field_key": 3960037734,
+          "field_name": "STATIC_GRIP",
+          "type": "AxlePair",
+          "value": [
+            2.200000047683716,
+            2.299999952316284
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139944,
+          "file_offset": 140072,
+          "original_bytes": "400ccccd40133333"
+        },
+        "GRIP_SCALE": {
+          "field_key": 4051156507,
+          "field_name": "GRIP_SCALE",
+          "type": "AxlePair",
+          "value": [
+            1.1749999523162842,
+            1.225000023841858
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139912,
+          "file_offset": 140040,
+          "original_bytes": "3f9666663f9ccccd"
+        },
+        "STEERING": {
+          "field_key": 4277521461,
+          "field_name": "STEERING",
+          "type": "EA::Reflection::Float",
+          "value": 0.8999999761581421,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 139960,
+          "file_offset": 140088,
+          "original_bytes": "3f666666"
+        }
+      }
+    },
+    {
+      "class_name": "brakes",
+      "class_key": 909445223,
+      "collection": "bmwm3gtre46",
+      "parent": "default",
+      "fields": {
+        "BRAKES": {
+          "field_key": 976712449,
+          "field_name": "BRAKES",
+          "type": "AxlePair",
+          "value": [
+            475.0,
+            600.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 148780,
+          "file_offset": 148908,
+          "original_bytes": "43ed800044160000"
+        },
+        "EBRAKE": {
+          "field_key": 3700840972,
+          "field_name": "EBRAKE",
+          "type": "EA::Reflection::Float",
+          "value": 925.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 148788,
+          "file_offset": 148916,
+          "original_bytes": "44674000"
+        },
+        "BRAKE_LOCK": {
+          "field_key": 4122919485,
+          "field_name": "BRAKE_LOCK",
+          "type": "AxlePair",
+          "value": [
+            1.0,
+            3.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 148772,
+          "file_offset": 148900,
+          "original_bytes": "3f80000040400000"
+        }
+      }
+    },
+    {
+      "class_name": "pvehicle",
+      "class_key": 1251470479,
+      "collection": "bmwm3gtre46",
+      "parent": "racers",
+      "fields": {
+        "transmission": {
+          "field_key": 128426981,
+          "field_name": "transmission",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "class_key": 128426981,
+                "collection_key": 1309171635,
+                "class_name": "transmission",
+                "collection_name": "bmwm3gtre46",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193788,
+          "file_offset": 193916,
+          "original_bytes": "00010001000c000007a7a3e54e085fb300000000"
+        },
+        "TrafficEngType": {
+          "field_key": 162501869,
+          "field_name": "TrafficEngType",
+          "type": "EA::Reflection::UInt8",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193693,
+          "file_offset": 193821,
+          "original_bytes": "00"
+        },
+        "TurboSND": {
+          "field_key": 245103462,
+          "field_name": "TurboSND",
+          "type": "UpgradeSpecs",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "raw_hex": "55624a85eec2271a0000000000000000",
+                "type": "UpgradeSpecs"
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193860,
+          "file_offset": 193988,
+          "original_bytes": "000100010010000055624a85eec2271a0000000000000000"
+        },
+        "CLASS": {
+          "field_key": 251059698,
+          "field_name": "CLASS",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "CAR",
+            "hash32": 862964431,
+            "hash64": 11124254194338198279
+          },
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 188736,
+          "file_offset": 188864,
+          "original_bytes": "9a614a403cad7307336fcacf00000000"
+        },
+        "BEHAVIOR_ORDER": {
+          "field_key": 273587478,
+          "field_name": "BEHAVIOR_ORDER",
+          "type": "Attrib::StringKey",
+          "value": {
+            "capacity": 8,
+            "count": 8,
+            "values": [
+              {
+                "text": "BEHAVIOR_MECHANIC_RIGIDBODY",
+                "hash32": 2342866945,
+                "hash64": 6537481499905279224
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_AI",
+                "hash32": 1334808604,
+                "hash64": 14225950780654978951
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_INPUT",
+                "hash32": 3287944388,
+                "hash64": 9765864581677597726
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_ENGINE",
+                "hash32": 2749444904,
+                "hash64": 1514983701074121816
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_SUSPENSION",
+                "hash32": 1360706939,
+                "hash64": 14683275372857884580
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_DAMAGE",
+                "hash32": 2240730851,
+                "hash64": 7872172261030185258
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_DRAW",
+                "hash32": 2989534689,
+                "hash64": 7784983139131206393
+              },
+              {
+                "text": "BEHAVIOR_MECHANIC_SOUND",
+                "hash32": 2602967043,
+                "hash64": 15357225848079861559
+              }
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 187640,
+          "file_offset": 187768,
+          "original_bytes": "00080008001000005ab9ccc97f8ac4f88ba5500100000000c56cbadcd92187874f8f901c00000000878752186376441ec3fa0cc40000000015064da63f079458a3e1332800000000cbc57928026f7fa4511abd7b000000006d3f92f67d63492a858ed6e3000000006c09d0eb1e522af9b230ade100000000d51fd38af23f47379b26200300000000"
+        },
+        "junkman": {
+          "field_key": 387397609,
+          "field_name": "junkman",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 387397609,
+            "collection_key": 4005701402,
+            "class_name": "junkman",
+            "collection_name": "default",
+            "runtime_pointer": 0
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 190012,
+          "file_offset": 190140,
+          "original_bytes": "171737e9eec2271a00000000"
+        },
+        "RiskCar_Tier": {
+          "field_key": 412178229,
+          "field_name": "RiskCar_Tier",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "raw_hex": "fb111fef99da653100000000ebcee74c8fe79512000000003f80000041780000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 187936,
+          "file_offset": 188064,
+          "original_bytes": "0001000100200000fb111fef99da653100000000ebcee74c8fe79512000000003f80000041780000"
+        },
+        "aivehicle": {
+          "field_key": 575756083,
+          "field_name": "aivehicle",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 575756083,
+            "collection_key": 2796276001,
+            "class_name": "aivehicle",
+            "collection_name": "racers",
+            "runtime_pointer": 0
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189856,
+          "file_offset": 189984,
+          "original_bytes": "22515733a6abc92100000000"
+        },
+        "OnBottomOut": {
+          "field_key": 822378172,
+          "field_name": "OnBottomOut",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 3,
+            "count": 3,
+            "values": [
+              {
+                "raw_hex": "fb111fef6ca26f9b00000000ebcee74c225dfd9e00000000000000003f800000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef772fb73600000000ebcee74cd2a6b86900000000000000003f800000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef999acd7800000000ebcee74c829d3c5c00000000000000003f800000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 188436,
+          "file_offset": 188564,
+          "original_bytes": "0003000300200000fb111fef6ca26f9b00000000ebcee74c225dfd9e00000000000000003f800000fb111fef772fb73600000000ebcee74cd2a6b86900000000000000003f800000fb111fef999acd7800000000ebcee74c829d3c5c00000000000000003f800000"
+        },
+        "brakes": {
+          "field_key": 909445223,
+          "field_name": "brakes",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "class_key": 909445223,
+                "collection_key": 1309171635,
+                "class_name": "brakes",
+                "collection_name": "bmwm3gtre46",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193896,
+          "file_offset": 194024,
+          "original_bytes": "00010001000c0000363508674e085fb300000000"
+        },
+        "VerbalType": {
+          "field_key": 915035212,
+          "field_name": "VerbalType",
+          "type": "Csis::Type_car_type",
+          "value": {
+            "raw_hex": "00000040",
+            "type": "Csis::Type_car_type"
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193680,
+          "file_offset": 193808,
+          "original_bytes": "00000040"
+        },
+        "MASS": {
+          "field_key": 1247170621,
+          "field_name": "MASS",
+          "type": "EA::Reflection::Float",
+          "value": 1300.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193672,
+          "file_offset": 193800,
+          "original_bytes": "44a28000"
+        },
+        "brakes_upgrades": {
+          "field_key": 1310097696,
+          "field_name": "brakes_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193668,
+          "file_offset": 193796,
+          "original_bytes": "00000000"
+        },
+        "engineaudio": {
+          "field_key": 1357557990,
+          "field_name": "engineaudio",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "class_key": 1357557990,
+                "collection_key": 2040510954,
+                "class_name": "engineaudio",
+                "collection_name": "tvr_cerb",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193916,
+          "file_offset": 194044,
+          "original_bytes": "00010001000c000050eab0e6799fb9ea00000000"
+        },
+        "BEHAVIOR_MECHANIC_SUSPENSION": {
+          "field_key": 1360706939,
+          "field_name": "BEHAVIOR_MECHANIC_SUSPENSION",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "SuspensionRacer",
+            "hash32": 1644814442,
+            "hash64": 13723770082128980568
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189936,
+          "file_offset": 190064,
+          "original_bytes": "be74a02d946e6a586209e06a00000000"
+        },
+        "BEHAVIOR_MECHANIC_EFFECTS": {
+          "field_key": 1505935025,
+          "field_name": "BEHAVIOR_MECHANIC_EFFECTS",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "EffectsCar",
+            "hash32": 2777760757,
+            "hash64": 902362089397125662
+          },
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 188752,
+          "file_offset": 188880,
+          "original_bytes": "0c85d58a154b821ea59143f500000000"
+        },
+        "RandomOpponent": {
+          "field_key": 1844489214,
+          "field_name": "RandomOpponent",
+          "type": "EA::Reflection::Bool",
+          "value": false,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 103240,
+          "file_offset": 460744,
+          "original_bytes": "00000000"
+        },
+        "OnScrapeWorld": {
+          "field_key": 1895863820,
+          "field_name": "OnScrapeWorld",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 3,
+            "count": 3,
+            "values": [
+              {
+                "raw_hex": "fb111fefeec2271a00000000ebcee74c811de8770000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef52e4201200000000ebcee74ccd5830000000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef212edb6500000000ebcee74cbe265db20000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 188120,
+          "file_offset": 188248,
+          "original_bytes": "0003000300200000fb111fefeec2271a00000000ebcee74c811de8770000000040a0000041f00000fb111fef52e4201200000000ebcee74ccd5830000000000040a0000041f00000fb111fef212edb6500000000ebcee74cbe265db20000000040a0000041f00000"
+        },
+        "induction_upgrades": {
+          "field_key": 1912792686,
+          "field_name": "induction_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193684,
+          "file_offset": 193812,
+          "original_bytes": "00000000"
+        },
+        "tires_upgrades": {
+          "field_key": 1974531947,
+          "field_name": "tires_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193676,
+          "file_offset": 193804,
+          "original_bytes": "00000000"
+        },
+        "engine_upgrades": {
+          "field_key": 1997069093,
+          "field_name": "engine_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193656,
+          "file_offset": 193784,
+          "original_bytes": "00000000"
+        },
+        "rigidbodyspecs": {
+          "field_key": 2089859896,
+          "field_name": "rigidbodyspecs",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2089859896,
+            "collection_key": 2796276001,
+            "class_name": "rigidbodyspecs",
+            "collection_name": "racers",
+            "runtime_pointer": 0
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189868,
+          "file_offset": 189996,
+          "original_bytes": "7c90bb38a6abc92100000000"
+        },
+        "WooshType": {
+          "field_key": 2121549312,
+          "field_name": "WooshType",
+          "type": "eDRIVE_BY_TYPE",
+          "value": {
+            "raw_hex": "00000009",
+            "type": "eDRIVE_BY_TYPE"
+          },
+          "source_collection": 2796276001,
+          "stream": "vlt",
+          "stream_offset": 100800,
+          "file_offset": 458304,
+          "original_bytes": "00000009"
+        },
+        "BEHAVIOR_MECHANIC_RESET": {
+          "field_key": 2148746607,
+          "field_name": "BEHAVIOR_MECHANIC_RESET",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "ResetCar",
+            "hash32": 888891067,
+            "hash64": 10178935617062308056
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189800,
+          "file_offset": 189928,
+          "original_bytes": "8d42d8036e9208d834fb66bb00000000"
+        },
+        "frontend": {
+          "field_key": 2240304930,
+          "field_name": "frontend",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2240304930,
+            "collection_key": 600590926,
+            "class_name": "frontend",
+            "collection_name": "m3_gtre46",
+            "runtime_pointer": 0
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193884,
+          "file_offset": 194012,
+          "original_bytes": "8588572223cc4a4e00000000"
+        },
+        "BEHAVIOR_MECHANIC_DAMAGE": {
+          "field_key": 2240730851,
+          "field_name": "BEHAVIOR_MECHANIC_DAMAGE",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "DamageRacer",
+            "hash32": 1793450140,
+            "hash64": 4784315685194882491
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189768,
+          "file_offset": 189896,
+          "original_bytes": "42654dc46d5eddbb6ae5e09c00000000"
+        },
+        "transmission_upgrades": {
+          "field_key": 2249082161,
+          "field_name": "transmission_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193660,
+          "file_offset": 193788,
+          "original_bytes": "00000000"
+        },
+        "TENSOR_SCALE": {
+          "field_key": 2257453021,
+          "field_name": "TENSOR_SCALE",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            1.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193616,
+          "file_offset": 193744,
+          "original_bytes": "3f800000400000003f80000000000000"
+        },
+        "ShiftSND": {
+          "field_key": 2330509024,
+          "field_name": "ShiftSND",
+          "type": "UpgradeSpecs",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "raw_hex": "db01b7544013b45d0000000000000000",
+                "type": "UpgradeSpecs"
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193764,
+          "file_offset": 193892,
+          "original_bytes": "0001000100100000db01b7544013b45d0000000000000000"
+        },
+        "BEHAVIOR_MECHANIC_RIGIDBODY": {
+          "field_key": 2342866945,
+          "field_name": "BEHAVIOR_MECHANIC_RIGIDBODY",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "RBVehicle",
+            "hash32": 822718479,
+            "hash64": 4400382570461273260
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 188224,
+          "file_offset": 188352,
+          "original_bytes": "3d114ca2342a1cac3109b00f00000000"
+        },
+        "MODEL": {
+          "field_key": 2420623840,
+          "field_name": "MODEL",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "BMWM3GTRE46",
+            "hash32": 3403933237,
+            "hash64": 12788995710974845846
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193632,
+          "file_offset": 193760,
+          "original_bytes": "b17ba3d712a66396cae3e63500000000"
+        },
+        "CollectionName": {
+          "field_key": 2627848441,
+          "field_name": "CollectionName",
+          "type": "EA::Reflection::Text",
+          "value": "bmwm3gtre46",
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193652,
+          "file_offset": 193780,
+          "original_bytes": "00000000"
+        },
+        "nos_upgrades": {
+          "field_key": 2647027329,
+          "field_name": "nos_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 3,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193664,
+          "file_offset": 193792,
+          "original_bytes": "00000003"
+        },
+        "BEHAVIOR_MECHANIC_ENGINE": {
+          "field_key": 2749444904,
+          "field_name": "BEHAVIOR_MECHANIC_ENGINE",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "EngineRacer",
+            "hash32": 2994771224,
+            "hash64": 12473044771258497816
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189784,
+          "file_offset": 189912,
+          "original_bytes": "ad1928226a67fb18b280951800000000"
+        },
+        "HornType": {
+          "field_key": 2759981311,
+          "field_name": "HornType",
+          "type": "EA::Reflection::UInt8",
+          "value": 5,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193692,
+          "file_offset": 193820,
+          "original_bytes": "05"
+        },
+        "DefaultPresetRide": {
+          "field_key": 2854741788,
+          "field_name": "DefaultPresetRide",
+          "type": "EA::Reflection::Text",
+          "value": "",
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193648,
+          "file_offset": 193776,
+          "original_bytes": "00000000"
+        },
+        "HandlingRating": {
+          "field_key": 2865488615,
+          "field_name": "HandlingRating",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              75.0,
+              100.0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193728,
+          "file_offset": 193856,
+          "original_bytes": "00020002000400004296000042c80000"
+        },
+        "chassis": {
+          "field_key": 2946633968,
+          "field_name": "chassis",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "class_key": 2946633968,
+                "collection_key": 1309171635,
+                "class_name": "chassis",
+                "collection_name": "bmwm3gtre46",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193744,
+          "file_offset": 193872,
+          "original_bytes": "00010001000c0000afa210f04e085fb300000000"
+        },
+        "nos": {
+          "field_key": 2976292708,
+          "field_name": "nos",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              {
+                "class_key": 2976292708,
+                "collection_key": 519821319,
+                "class_name": "nos",
+                "collection_name": "nos_base",
+                "runtime_pointer": 0
+              },
+              {
+                "class_key": 2976292708,
+                "collection_key": 1082290014,
+                "class_name": "nos",
+                "collection_name": "nos_top",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193696,
+          "file_offset": 193824,
+          "original_bytes": "00020002000c0000b1669f641efbd80700000000b1669f6440826f5e00000000"
+        },
+        "BEHAVIOR_MECHANIC_DRAW": {
+          "field_key": 2989534689,
+          "field_name": "BEHAVIOR_MECHANIC_DRAW",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "DrawRaceCar",
+            "hash32": 3259285508,
+            "hash64": 3572575075793657279
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189680,
+          "file_offset": 189808,
+          "original_bytes": "3194561a66185dbfc244c00400000000"
+        },
+        "tires": {
+          "field_key": 3174617546,
+          "field_name": "tires",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "class_key": 3174617546,
+                "collection_key": 1309171635,
+                "class_name": "tires",
+                "collection_name": "bmwm3gtre46",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193936,
+          "file_offset": 194064,
+          "original_bytes": "00010001000c0000bd38d1ca4e085fb300000000"
+        },
+        "damagespecs": {
+          "field_key": 3253777460,
+          "field_name": "damagespecs",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 3253777460,
+            "collection_key": 2796276001,
+            "class_name": "damagespecs",
+            "collection_name": "racers",
+            "runtime_pointer": 0
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189756,
+          "file_offset": 189884,
+          "original_bytes": "c1f0b434a6abc92100000000"
+        },
+        "BEHAVIOR_MECHANIC_INPUT": {
+          "field_key": 3287944388,
+          "field_name": "BEHAVIOR_MECHANIC_INPUT",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "PInput",
+            "hash32": 202292685,
+            "hash64": 16325287280736013442
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 188080,
+          "file_offset": 188208,
+          "original_bytes": "e28f124968790c820c0ebdcd00000000"
+        },
+        "induction": {
+          "field_key": 3374973250,
+          "field_name": "induction",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              {
+                "class_key": 3374973250,
+                "collection_key": 4005701402,
+                "class_name": "induction",
+                "collection_name": "default",
+                "runtime_pointer": 0
+              },
+              {
+                "class_key": 3374973250,
+                "collection_key": 1309171635,
+                "class_name": "induction",
+                "collection_name": "bmwm3gtre46",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193828,
+          "file_offset": 193956,
+          "original_bytes": "00020002000c0000c92a0142eec2271a00000000c92a01424e085fb300000000"
+        },
+        "OnTireBlow": {
+          "field_key": 3559815471,
+          "field_name": "OnTireBlow",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 3956205388,
+            "collection_key": 3194839775,
+            "class_name": "effects",
+            "collection_name": "carblowtire",
+            "runtime_pointer": 0
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189920,
+          "file_offset": 190048,
+          "original_bytes": "ebcee74cbe6d62df00000000"
+        },
+        "OnHitGround": {
+          "field_key": 3653684733,
+          "field_name": "OnHitGround",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 5,
+            "count": 5,
+            "values": [
+              {
+                "raw_hex": "fb111fefeec2271a00000000ebcee74c225dfd9e000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef6ca26f9b00000000ebcee74c225dfd9e000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef772fb73600000000ebcee74cd2a6b869000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef999acd7800000000ebcee74c829d3c5c000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef52e4201200000000ebcee74cd48cc48b000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 188540,
+          "file_offset": 188668,
+          "original_bytes": "0005000500200000fb111fefeec2271a00000000ebcee74c225dfd9e000000003f80000040a00000fb111fef6ca26f9b00000000ebcee74c225dfd9e000000003f80000040a00000fb111fef772fb73600000000ebcee74cd2a6b869000000003f80000040a00000fb111fef999acd7800000000ebcee74c829d3c5c000000003f80000040a00000fb111fef52e4201200000000ebcee74cd48cc48b000000003f80000040a00000"
+        },
+        "HitchHeat": {
+          "field_key": 3670744081,
+          "field_name": "HitchHeat",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "raw_hex": "fb111fef99da653100000000ebcee74c70f3712b0000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 187776,
+          "file_offset": 187904,
+          "original_bytes": "0001000100200000fb111fef99da653100000000ebcee74c70f3712b0000000040a0000041f00000"
+        },
+        "OnScrapeGround": {
+          "field_key": 3682744625,
+          "field_name": "OnScrapeGround",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 4,
+            "count": 4,
+            "values": [
+              {
+                "raw_hex": "fb111fefeec2271a00000000ebcee74c7f04fc8f0000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef212edb6500000000ebcee74c50fc29fc0000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef6ca26f9b00000000ebcee74cbe265db20000000040a0000041f00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef9339973800000000ebcee74c50fc29fc000000000000000000000000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 187504,
+          "file_offset": 187632,
+          "original_bytes": "0004000400200000fb111fefeec2271a00000000ebcee74c7f04fc8f0000000040a0000041f00000fb111fef212edb6500000000ebcee74c50fc29fc0000000040a0000041f00000fb111fef6ca26f9b00000000ebcee74cbe265db20000000040a0000041f00000fb111fef9339973800000000ebcee74c50fc29fc000000000000000000000000"
+        },
+        "OnHitWorld": {
+          "field_key": 3809899318,
+          "field_name": "OnHitWorld",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              {
+                "raw_hex": "fb111fefeec2271a00000000ebcee74c96ba88ff000000003f80000041f00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef52e4201200000000ebcee74cd48cc48b000000003f00000041f00000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 187976,
+          "file_offset": 188104,
+          "original_bytes": "0002000200200000fb111fefeec2271a00000000ebcee74c96ba88ff000000003f80000041f00000fb111fef52e4201200000000ebcee74cd48cc48b000000003f00000041f00000"
+        },
+        "0xeacb7696": {
+          "field_key": 3939202710,
+          "field_name": "0xeacb7696",
+          "type": "EA::Reflection::Bool",
+          "value": false,
+          "source_collection": 4005701402,
+          "stream": "vlt",
+          "stream_offset": 99824,
+          "file_offset": 457328,
+          "original_bytes": "00000000"
+        },
+        "PlayerUsable": {
+          "field_key": 4036605612,
+          "field_name": "PlayerUsable",
+          "type": "EA::Reflection::Bool",
+          "value": true,
+          "source_collection": 2796276001,
+          "stream": "vlt",
+          "stream_offset": 100992,
+          "file_offset": 458496,
+          "original_bytes": "00000001"
+        },
+        "engine": {
+          "field_key": 4059429831,
+          "field_name": "engine",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "capacity": 1,
+            "count": 1,
+            "values": [
+              {
+                "class_key": 4059429831,
+                "collection_key": 1309171635,
+                "class_name": "engine",
+                "collection_name": "bmwm3gtre46",
+                "runtime_pointer": 0
+              }
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193808,
+          "file_offset": 193936,
+          "original_bytes": "00010001000c0000f1f5fbc74e085fb300000000"
+        },
+        "chassis_upgrades": {
+          "field_key": 4129949229,
+          "field_name": "chassis_upgrades",
+          "type": "EA::Reflection::Int32",
+          "value": 0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 193688,
+          "file_offset": 193816,
+          "original_bytes": "00000000"
+        },
+        "BEHAVIOR_MECHANIC_AUDIO": {
+          "field_key": 4211825641,
+          "field_name": "BEHAVIOR_MECHANIC_AUDIO",
+          "type": "Attrib::StringKey",
+          "value": {
+            "text": "SoundRacer",
+            "hash32": 1049008088,
+            "hash64": 13752043518759956848
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 189840,
+          "file_offset": 189968,
+          "original_bytes": "bed912b8076671703e8697d800000000"
+        },
+        "OnBottomScrape": {
+          "field_key": 4228099434,
+          "field_name": "OnBottomScrape",
+          "type": "EffectLinkageRecord",
+          "value": {
+            "capacity": 3,
+            "count": 3,
+            "values": [
+              {
+                "raw_hex": "fb111fef6ca26f9b00000000ebcee74c225dfd9e000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef999acd7800000000ebcee74c829d3c5c000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              },
+              {
+                "raw_hex": "fb111fef772fb73600000000ebcee74cd2a6b869000000003f80000040a00000",
+                "type": "EffectLinkageRecord"
+              }
+            ]
+          },
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 188320,
+          "file_offset": 188448,
+          "original_bytes": "0003000300200000fb111fef6ca26f9b00000000ebcee74c225dfd9e000000003f80000040a00000fb111fef999acd7800000000ebcee74c829d3c5c000000003f80000040a00000fb111fef772fb73600000000ebcee74cd2a6b869000000003f80000040a00000"
+        }
+      }
+    },
+    {
+      "class_name": "ecar",
+      "class_key": 2780119991,
+      "collection": "bmwm3gtre46",
+      "parent": "racers",
+      "fields": {
+        "SlipFX": {
+          "field_key": 28054601,
+          "field_name": "SlipFX",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              1.0,
+              1.0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252468,
+          "file_offset": 252596,
+          "original_bytes": "00020002000400003f8000003f800000"
+        },
+        "BodyDive": {
+          "field_key": 149113105,
+          "field_name": "BodyDive",
+          "type": "CarBodyMotion",
+          "value": {
+            "raw_hex": "40e000003f80000040a00000",
+            "type": "CarBodyMotion"
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252456,
+          "file_offset": 252584,
+          "original_bytes": "40e000003f80000040a00000"
+        },
+        "0x0c2da793": {
+          "field_key": 204318611,
+          "field_name": "0x0c2da793",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 3337415564,
+            "class_name": "camerainfo",
+            "collection_name": "close",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249780,
+          "file_offset": 249908,
+          "original_bytes": "93c171e4c6eceb8c00000000"
+        },
+        "0x10204a90": {
+          "field_key": 270551696,
+          "field_name": "0x10204a90",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 852010495,
+            "class_name": "camerainfo",
+            "collection_name": "superfar",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249744,
+          "file_offset": 249872,
+          "original_bytes": "93c171e432c8a5ff00000000"
+        },
+        "RoadNoise": {
+          "field_key": 334200226,
+          "field_name": "RoadNoise",
+          "type": "EA::Reflection::Float",
+          "value": 0.5,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133272,
+          "file_offset": 490776,
+          "original_bytes": "3f000000"
+        },
+        "WheelWell": {
+          "field_key": 617289194,
+          "field_name": "WheelWell",
+          "type": "EA::Reflection::Float",
+          "value": 24.0,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133296,
+          "file_offset": 490800,
+          "original_bytes": "41c00000"
+        },
+        "ShiftAngle": {
+          "field_key": 618812691,
+          "field_name": "ShiftAngle",
+          "type": "EA::Reflection::Float",
+          "value": 2.25,
+          "source_collection": 2796276001,
+          "stream": "vlt",
+          "stream_offset": 132548,
+          "file_offset": 490052,
+          "original_bytes": "40100000"
+        },
+        "RideHeight": {
+          "field_key": 966175547,
+          "field_name": "RideHeight",
+          "type": "EA::Reflection::Float",
+          "value": -3.25,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252524,
+          "file_offset": 252652,
+          "original_bytes": "c0500000"
+        },
+        "WheelHopScale": {
+          "field_key": 1155869000,
+          "field_name": "WheelHopScale",
+          "type": "EA::Reflection::Float",
+          "value": 0.75,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133236,
+          "file_offset": 490740,
+          "original_bytes": "3f400000"
+        },
+        "0x4b675dc8": {
+          "field_key": 1265065416,
+          "field_name": "0x4b675dc8",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 688353012,
+            "class_name": "camerainfo",
+            "collection_name": "drift",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249696,
+          "file_offset": 249824,
+          "original_bytes": "93c171e429076ef400000000"
+        },
+        "EngineRev": {
+          "field_key": 1447523262,
+          "field_name": "EngineRev",
+          "type": "EA::Reflection::Float",
+          "value": 0.5,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133284,
+          "file_offset": 490788,
+          "original_bytes": "3f000000"
+        },
+        "0x585517f3": {
+          "field_key": 1481971699,
+          "field_name": "0x585517f3",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 525014854,
+            "class_name": "camerainfo",
+            "collection_name": "bumper",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249768,
+          "file_offset": 249896,
+          "original_bytes": "93c171e41f4b174600000000"
+        },
+        "TireOffsets": {
+          "field_key": 1580847625,
+          "field_name": "TireOffsets",
+          "type": "Attrib::Types::Vector4",
+          "value": {
+            "capacity": 4,
+            "count": 4,
+            "values": [
+              [
+                1.600000023841858,
+                0.9100000262260437,
+                0.0,
+                0.33000001311302185
+              ],
+              [
+                1.600000023841858,
+                -0.9100000262260437,
+                0.0,
+                0.33000001311302185
+              ],
+              [
+                -1.1299999952316284,
+                -0.9100000262260437,
+                0.0,
+                0.33000001311302185
+              ],
+              [
+                -1.1299999952316284,
+                0.9100000262260437,
+                0.0,
+                0.33000001311302185
+              ]
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252272,
+          "file_offset": 252400,
+          "original_bytes": "000400040010800000000000000000003fcccccd3f68f5c3000000003ea8f5c33fcccccdbf68f5c3000000003ea8f5c3bf90a3d7bf68f5c3000000003ea8f5c3bf90a3d73f68f5c3000000003ea8f5c3"
+        },
+        "NOSEffect": {
+          "field_key": 1624162581,
+          "field_name": "NOSEffect",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2879942240,
+            "collection_key": 1803097789,
+            "class_name": "emittergroup",
+            "collection_name": "fxcar_nos",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249792,
+          "file_offset": 249920,
+          "original_bytes": "aba86e606b7916bd00000000"
+        },
+        "BodySquat": {
+          "field_key": 1930522903,
+          "field_name": "BodySquat",
+          "type": "CarBodyMotion",
+          "value": {
+            "raw_hex": "40a000003f80000040600000",
+            "type": "CarBodyMotion"
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252444,
+          "file_offset": 252572,
+          "original_bytes": "40a000003f80000040600000"
+        },
+        "SteerSpeed": {
+          "field_key": 2033542243,
+          "field_name": "SteerSpeed",
+          "type": "EA::Reflection::Float",
+          "value": 180.0,
+          "source_collection": 4005701402,
+          "stream": "vlt",
+          "stream_offset": 132180,
+          "file_offset": 489684,
+          "original_bytes": "43340000"
+        },
+        "TireSkidWidthKitScale": {
+          "field_key": 2095592708,
+          "field_name": "TireSkidWidthKitScale",
+          "type": "Attrib::Types::Vector2",
+          "value": {
+            "capacity": 7,
+            "count": 7,
+            "values": [
+              [
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0
+              ],
+              [
+                1.0,
+                1.0
+              ]
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252352,
+          "file_offset": 252480,
+          "original_bytes": "00070007000800003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f8000003f800000"
+        },
+        "EngineVibrationFreq": {
+          "field_key": 2162579455,
+          "field_name": "EngineVibrationFreq",
+          "type": "EA::Reflection::Float",
+          "value": 10.0,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133320,
+          "file_offset": 490824,
+          "original_bytes": "41200000"
+        },
+        "CamberRear": {
+          "field_key": 2278792015,
+          "field_name": "CamberRear",
+          "type": "EA::Reflection::Float",
+          "value": 0.25,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252520,
+          "file_offset": 252648,
+          "original_bytes": "3e800000"
+        },
+        "CamberFront": {
+          "field_key": 2349018271,
+          "field_name": "CamberFront",
+          "type": "EA::Reflection::Float",
+          "value": 0.3499999940395355,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252512,
+          "file_offset": 252640,
+          "original_bytes": "3eb33333"
+        },
+        "FECompressions": {
+          "field_key": 2371611506,
+          "field_name": "FECompressions",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              0.27000001072883606,
+              0.27000001072883606
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252572,
+          "file_offset": 252700,
+          "original_bytes": "00020002000400003e8a3d713e8a3d71"
+        },
+        "TireSkidWidth": {
+          "field_key": 2408915088,
+          "field_name": "TireSkidWidth",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 4,
+            "count": 4,
+            "values": [
+              0.2750000059604645,
+              0.2750000059604645,
+              0.3149999976158142,
+              0.3149999976158142
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252484,
+          "file_offset": 252612,
+          "original_bytes": "00040004000400003e8ccccd3e8ccccd3ea147ae3ea147ae"
+        },
+        "WheelSpokeCount": {
+          "field_key": 2527627628,
+          "field_name": "WheelSpokeCount",
+          "type": "EA::Reflection::Int8",
+          "value": 8,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252556,
+          "file_offset": 252684,
+          "original_bytes": "08"
+        },
+        "CollectionName": {
+          "field_key": 2627848441,
+          "field_name": "CollectionName",
+          "type": "EA::Reflection::Text",
+          "value": "bmwm3gtre46",
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252508,
+          "file_offset": 252636,
+          "original_bytes": "00000000"
+        },
+        "MaxTireSteer": {
+          "field_key": 2841853918,
+          "field_name": "MaxTireSteer",
+          "type": "EA::Reflection::Float",
+          "value": 90.0,
+          "source_collection": 4005701402,
+          "stream": "vlt",
+          "stream_offset": 132336,
+          "file_offset": 489840,
+          "original_bytes": "42b40000"
+        },
+        "SkidFX": {
+          "field_key": 2914332416,
+          "field_name": "SkidFX",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              0.10000000149011612,
+              1.0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252416,
+          "file_offset": 252544,
+          "original_bytes": "00020002000400003dcccccd3f800000"
+        },
+        "ReflectionOffset": {
+          "field_key": 2921957144,
+          "field_name": "ReflectionOffset",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252516,
+          "file_offset": 252644,
+          "original_bytes": "00000000"
+        },
+        "MissShiftEffect": {
+          "field_key": 3063527358,
+          "field_name": "MissShiftEffect",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2879942240,
+            "collection_key": 2992440571,
+            "class_name": "emittergroup",
+            "collection_name": "fxcar_exhaust_bmw",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249756,
+          "file_offset": 249884,
+          "original_bytes": "aba86e60b25d04fb00000000"
+        },
+        "KitWheelOffsetRear": {
+          "field_key": 3435431132,
+          "field_name": "KitWheelOffsetRear",
+          "type": "EA::Reflection::UInt8",
+          "value": {
+            "capacity": 6,
+            "count": 6,
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252528,
+          "file_offset": 252656,
+          "original_bytes": "0006000600010000000000000000"
+        },
+        "0xccf03cb3": {
+          "field_key": 3438296243,
+          "field_name": "0xccf03cb3",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 418140358,
+            "class_name": "camerainfo",
+            "collection_name": "far",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249720,
+          "file_offset": 249848,
+          "original_bytes": "93c171e418ec50c600000000"
+        },
+        "0xd74c1435": {
+          "field_key": 3612087349,
+          "field_name": "0xd74c1435",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 4255558272,
+            "class_name": "camerainfo",
+            "collection_name": "bmwm3gtre46_hood",
+            "runtime_pointer": 0
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252560,
+          "file_offset": 252688,
+          "original_bytes": "93c171e4fda6aa8000000000"
+        },
+        "0xd76a6fad": {
+          "field_key": 3614076845,
+          "field_name": "0xd76a6fad",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2478928356,
+            "collection_key": 3668071106,
+            "class_name": "camerainfo",
+            "collection_name": "pursuit",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249804,
+          "file_offset": 249932,
+          "original_bytes": "93c171e4daa252c200000000"
+        },
+        "IsSkinned": {
+          "field_key": 3641715813,
+          "field_name": "IsSkinned",
+          "type": "EA::Reflection::Bool",
+          "value": true,
+          "source_collection": 2796276001,
+          "stream": "vlt",
+          "stream_offset": 132572,
+          "file_offset": 490076,
+          "original_bytes": "00000001"
+        },
+        "EngineBlownEffect": {
+          "field_key": 3654068643,
+          "field_name": "EngineBlownEffect",
+          "type": "Attrib::RefSpec",
+          "value": {
+            "class_key": 2879942240,
+            "collection_key": 3388724495,
+            "class_name": "emittergroup",
+            "collection_name": "fxcar_engineblow1",
+            "runtime_pointer": 0
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 249708,
+          "file_offset": 249836,
+          "original_bytes": "aba86e60c9fbd50f00000000"
+        },
+        "ShiftSpeed": {
+          "field_key": 3660041525,
+          "field_name": "ShiftSpeed",
+          "type": "EA::Reflection::Float",
+          "value": 8.0,
+          "source_collection": 2796276001,
+          "stream": "vlt",
+          "stream_offset": 132560,
+          "file_offset": 490064,
+          "original_bytes": "41000000"
+        },
+        "EngineRevAngle": {
+          "field_key": 3804640131,
+          "field_name": "EngineRevAngle",
+          "type": "EA::Reflection::Float",
+          "value": 0.800000011920929,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133212,
+          "file_offset": 490716,
+          "original_bytes": "3f4ccccd"
+        },
+        "EngineVibrationMin": {
+          "field_key": 3911145917,
+          "field_name": "EngineVibrationMin",
+          "type": "EA::Reflection::Float",
+          "value": 0.0,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133308,
+          "file_offset": 490812,
+          "original_bytes": "00000000"
+        },
+        "ExtraPitch": {
+          "field_key": 3914487746,
+          "field_name": "ExtraPitch",
+          "type": "EA::Reflection::Float",
+          "value": -0.5,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133332,
+          "file_offset": 490836,
+          "original_bytes": "bf000000"
+        },
+        "EngineVibrationMax": {
+          "field_key": 4182244952,
+          "field_name": "EngineVibrationMax",
+          "type": "EA::Reflection::Float",
+          "value": 0.15000000596046448,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133224,
+          "file_offset": 490728,
+          "original_bytes": "3e19999a"
+        },
+        "BodyRoll": {
+          "field_key": 4191783451,
+          "field_name": "BodyRoll",
+          "type": "CarBodyMotion",
+          "value": {
+            "raw_hex": "403000003f80000040800000",
+            "type": "CarBodyMotion"
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252432,
+          "file_offset": 252560,
+          "original_bytes": "403000003f80000040800000"
+        },
+        "EngineRevSpeed": {
+          "field_key": 4205657697,
+          "field_name": "EngineRevSpeed",
+          "type": "EA::Reflection::Float",
+          "value": 12.0,
+          "source_collection": 1309171635,
+          "stream": "vlt",
+          "stream_offset": 133260,
+          "file_offset": 490764,
+          "original_bytes": "41400000"
+        },
+        "KitWheelOffsetFront": {
+          "field_key": 4247812072,
+          "field_name": "KitWheelOffsetFront",
+          "type": "EA::Reflection::UInt8",
+          "value": {
+            "capacity": 6,
+            "count": 6,
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "source_collection": 1309171635,
+          "stream": "bin",
+          "stream_offset": 252542,
+          "file_offset": 252670,
+          "original_bytes": "0006000600010000000000000000"
+        }
+      }
+    }
+  ]
+}

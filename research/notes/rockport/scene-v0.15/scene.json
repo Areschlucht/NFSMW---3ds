@@ -1,0 +1,5070 @@
+{
+  "sectors": [
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    160,
+    163,
+    164,
+    165,
+    168,
+    169,
+    170
+  ],
+  "models": [
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 34
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_R1",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 12
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_0",
+      "triangles": 49
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_1",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_2",
+      "triangles": 34
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 206
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A1_R1",
+      "triangles": 126
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 19
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 57
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R2",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R3",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A18_R1",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_0",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_1",
+      "triangles": 59
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 74
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 83
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_0",
+      "triangles": 32
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_R0",
+      "triangles": 20
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A18_R0",
+      "triangles": 6
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 200
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R2",
+      "triangles": 446
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R0",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R2",
+      "triangles": 41
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R3",
+      "triangles": 39
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_0",
+      "triangles": 30
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_1",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_2",
+      "triangles": 61
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_3",
+      "triangles": 38
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R0",
+      "triangles": 107
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R1",
+      "triangles": 95
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R2",
+      "triangles": 90
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R3",
+      "triangles": 111
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R0",
+      "triangles": 81
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R1",
+      "triangles": 105
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R2",
+      "triangles": 139
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_0",
+      "triangles": 82
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_1",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_2",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_3",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A4_0",
+      "triangles": 10
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A4_R0",
+      "triangles": 4
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A4_R0",
+      "triangles": 101
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A4_R1",
+      "triangles": 79
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R1",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R2",
+      "triangles": 106
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A5_R0",
+      "triangles": 30
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A5_0",
+      "triangles": 51
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 63
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_0",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_1",
+      "triangles": 21
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 222
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A5_R1",
+      "triangles": 180
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 62
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 16
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 50
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R3",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R4",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R5",
+      "triangles": 32
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R6",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 99
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_0",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_1",
+      "triangles": 50
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_2",
+      "triangles": 14
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 149
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 128
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 6
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R3",
+      "triangles": 257
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R4",
+      "triangles": 148
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_02_CHOP_A7_R0",
+      "triangles": 13
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A7_R0",
+      "triangles": 42
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_0",
+      "triangles": 15
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R0",
+      "triangles": 16
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R1",
+      "triangles": 66
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R2",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R0",
+      "triangles": 252
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R1",
+      "triangles": 173
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R2",
+      "triangles": 221
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_R0",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_0",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_1",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A8_R1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R0",
+      "triangles": 95
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R2",
+      "triangles": 254
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R3",
+      "triangles": 82
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A20_0",
+      "triangles": 41
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A20_1",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A20_2",
+      "triangles": 40
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A20_R0",
+      "triangles": 41
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A20_R0",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A20_0",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A20_R0",
+      "triangles": 53
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A20_R1",
+      "triangles": 77
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A20_R2",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A20_R0",
+      "triangles": 403
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A20_R1",
+      "triangles": 181
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A20_R2",
+      "triangles": 80
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A23_0",
+      "triangles": 59
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A23_R0",
+      "triangles": 43
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A23_R0",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A23_R1",
+      "triangles": 58
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A23_R0",
+      "triangles": 171
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A23_R1",
+      "triangles": 229
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_0",
+      "triangles": 49
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_1",
+      "triangles": 58
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A24_R0",
+      "triangles": 37
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_R0",
+      "triangles": 56
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_R1",
+      "triangles": 44
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_R2",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_R3",
+      "triangles": 44
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A24_R4",
+      "triangles": 65
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A24_R0",
+      "triangles": 61
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A24_R1",
+      "triangles": 106
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A24_R2",
+      "triangles": 134
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A24_R3",
+      "triangles": 200
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A24_R4",
+      "triangles": 74
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A25_0",
+      "triangles": 53
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A25_1",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A25_2",
+      "triangles": 62
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A25_R0",
+      "triangles": 19
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A25_R0",
+      "triangles": 61
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A25_R1",
+      "triangles": 63
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A25_R2",
+      "triangles": 170
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A25_R0",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A25_R1",
+      "triangles": 312
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A25_R2",
+      "triangles": 165
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A28_0",
+      "triangles": 42
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A28_1",
+      "triangles": 78
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A28_2",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A28_R0",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A28_R0",
+      "triangles": 149
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A28_R1",
+      "triangles": 83
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A28_R2",
+      "triangles": 88
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A28_R0",
+      "triangles": 196
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A28_R1",
+      "triangles": 284
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A28_R2",
+      "triangles": 110
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A29_0",
+      "triangles": 37
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A29_1",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A29_R0",
+      "triangles": 66
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A29_R0",
+      "triangles": 92
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A29_0",
+      "triangles": 37
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A29_R0",
+      "triangles": 42
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A29_R1",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A29_R2",
+      "triangles": 62
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A29_R3",
+      "triangles": 22
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A29_R0",
+      "triangles": 141
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A29_R1",
+      "triangles": 297
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A29_R2",
+      "triangles": 172
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_0",
+      "triangles": 53
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_1",
+      "triangles": 53
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_2",
+      "triangles": 61
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_3",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_4",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_R0",
+      "triangles": 38
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_R1",
+      "triangles": 42
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_R2",
+      "triangles": 19
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_R3",
+      "triangles": 48
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A30_R4",
+      "triangles": 49
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XS_EDGEA_1B_00",
+      "triangles": 192
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XS_CASTROL_2B_00",
+      "triangles": 192
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICKEND_1B_BK_00",
+      "triangles": 20
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XS_MEDIANPOLE_1B_00",
+      "triangles": 36
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_CT_BBD01_1B_00",
+      "triangles": 318
+    },
+    {
+      "name": "XS_SPEED35_1B_00",
+      "triangles": 16
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XS_STOPSIGNB_1B_00",
+      "triangles": 32
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FENCECURVEAEND_1B_LL_00",
+      "triangles": 18
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XB_MST_GEND4_2B_00",
+      "triangles": 145
+    },
+    {
+      "name": "XB_MST_GENL_2B_00",
+      "triangles": 103
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XB_MST_GENB_2B_00",
+      "triangles": 187
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_2B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XS_SPEED45_1B_00",
+      "triangles": 16
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_MST_GENKK_2B_00",
+      "triangles": 170
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_CT_BBD01_2B_00",
+      "triangles": 318
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XB_WHOUSESTORAGEA_1B_BK_00",
+      "triangles": 226
+    },
+    {
+      "name": "XO_CT_COLONIAL_WALL_01",
+      "triangles": 12
+    },
+    {
+      "name": "XB_MST_GENJ_2B_00",
+      "triangles": 101
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GEND1_2B_00",
+      "triangles": 100
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEAEND_1B_LL_00",
+      "triangles": 18
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_DAIRYPLANTB_1B_BK_00",
+      "triangles": 120
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XB_CT_BBD03_2B_00",
+      "triangles": 258
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENA_2B_00",
+      "triangles": 169
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_WALLHORSETRACK_BK_01",
+      "triangles": 114
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_HRSETRCKTICKETSA_1B_BK_00",
+      "triangles": 220
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_CT_BBD03_1B_00",
+      "triangles": 258
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_DAIRYPLANTC_1B_BK_00",
+      "triangles": 120
+    },
+    {
+      "name": "XB_MST_GENI_2B_00",
+      "triangles": 143
+    },
+    {
+      "name": "XB_MST_GENJ_2B_00",
+      "triangles": 101
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENC_1B_00",
+      "triangles": 124
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XO_CONTAINERLARGEA_1B_GH_00",
+      "triangles": 130
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_HORSETRACKSTANDS_1B_BK_00",
+      "triangles": 230
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_CT_BBD03_1B_00",
+      "triangles": 258
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GEND4_2B_00",
+      "triangles": 145
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XB_MST_GENI_1B_00",
+      "triangles": 143
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XB_SMELTER_1B_LR_00",
+      "triangles": 14
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XO_BOLLARDA_1B_CK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XB_SMELTER_1B_LR_00",
+      "triangles": 14
+    },
+    {
+      "name": "XB_CP_PARKGARAGE_1B_LL_00",
+      "triangles": 387
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_TREELINE1_1B_00",
+      "triangles": 40
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENKK_1B_00",
+      "triangles": 170
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XO_OILCONTAINERC_1B_AL_00",
+      "triangles": 222
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XS_STOPSIGNB_1B_00",
+      "triangles": 32
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENF_2B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XB_MST_GENF_1B_00",
+      "triangles": 173
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XB_SMELTER_1B_LR_00",
+      "triangles": 14
+    },
+    {
+      "name": "XB_MST_GENKK_1B_00",
+      "triangles": 170
+    },
+    {
+      "name": "XB_MST_GENH_1B_00",
+      "triangles": 126
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_OILCONTAINERC_1B_AL_00",
+      "triangles": 222
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICKEND_1B_BK_00",
+      "triangles": 20
+    },
+    {
+      "name": "XB_MST_GEND4_1B_00",
+      "triangles": 145
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GEND1_1B_00",
+      "triangles": 100
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XB_MST_GENI_1B_00",
+      "triangles": 143
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_2B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FENCECURVEAEND_1B_LL_00",
+      "triangles": 18
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XS_SPEED35_1B_00",
+      "triangles": 16
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XB_MST_GENH_2B_00",
+      "triangles": 126
+    },
+    {
+      "name": "XB_MST_GENJ_1B_00",
+      "triangles": 101
+    },
+    {
+      "name": "XB_SMELTER_1B_LR_00",
+      "triangles": 14
+    },
+    {
+      "name": "XW_FENCECURVEAEND_1B_LL_00",
+      "triangles": 18
+    },
+    {
+      "name": "XW_FRATFENCEA_2B_00",
+      "triangles": 24
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XW_FRATFENCEA_2B_00",
+      "triangles": 24
+    },
+    {
+      "name": "XB_MST_GENA_1B_00",
+      "triangles": 169
+    },
+    {
+      "name": "XB_SMELTER_1B_LR_00",
+      "triangles": 14
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FRATFENCEA_2B_00",
+      "triangles": 24
+    },
+    {
+      "name": "XO_OILCONTAINERC_1B_AL_00",
+      "triangles": 222
+    },
+    {
+      "name": "XO_CT_CAMPUSSMACKTREEB_1B_JG_00",
+      "triangles": 57
+    },
+    {
+      "name": "XB_DAIRYPLANT_1B_BK_00",
+      "triangles": 314
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_CT_CAMPUSSMACKTREEB_1B_JG_00",
+      "triangles": 57
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XB_DAIRYPLANTB_1B_BK_00",
+      "triangles": 120
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XB_MST_GENA_1B_00",
+      "triangles": 169
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XO_CT_CAMPUSSMACKTREEB_1B_JG_00",
+      "triangles": 57
+    },
+    {
+      "name": "XO_ROLLINGTIRE_1B_BK_00",
+      "triangles": 320
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XO_IRONPIPECROSSA_1B_LL_00",
+      "triangles": 166
+    },
+    {
+      "name": "XB_CT_TIRESHOPAWNING_1B_00",
+      "triangles": 23
+    },
+    {
+      "name": "XB_TOWERSTORAGERUSTYA_1B_RB_00",
+      "triangles": 114
+    },
+    {
+      "name": "XB_CT_TIRESHOPPOST_1B_00",
+      "triangles": 84
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_HEDGE3_1B_00",
+      "triangles": 28
+    },
+    {
+      "name": "XW_FENCECURVEA8M_1B_LL_00",
+      "triangles": 66
+    },
+    {
+      "name": "XB_CT_TIRESHOP03_1B_00",
+      "triangles": 96
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GEND1_1B_00",
+      "triangles": 100
+    },
+    {
+      "name": "XB_VATRUSTYA_1B_RB_00",
+      "triangles": 72
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XO_TIREPILEA_1B_00",
+      "triangles": 200
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XS_STOPSIGNB_1B_00",
+      "triangles": 32
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREE2D_1B_JG_00",
+      "triangles": 144
+    },
+    {
+      "name": "XB_MST_GENI_2B_00",
+      "triangles": 143
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XO_IRONPIPECROSSA_1B_LL_00",
+      "triangles": 166
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_HEDGE3_1B_00",
+      "triangles": 28
+    },
+    {
+      "name": "XT_CT_FALLTREE2D_1B_JG_00",
+      "triangles": 144
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XB_MST_GENC_1B_00",
+      "triangles": 124
+    },
+    {
+      "name": "XO_LIGHTPOSTB_1B_00",
+      "triangles": 138
+    },
+    {
+      "name": "XT_HEDGE3_1B_00",
+      "triangles": 28
+    },
+    {
+      "name": "XO_STREETLIGHTD2_1B_00",
+      "triangles": 102
+    },
+    {
+      "name": "XS_MEDIANPOLE_1B_00",
+      "triangles": 36
+    },
+    {
+      "name": "XO_LIGHTPOSTA_1B_00",
+      "triangles": 57
+    },
+    {
+      "name": "XO_IRONPIPECROSSA_1B_LL_00",
+      "triangles": 166
+    },
+    {
+      "name": "XT_HEDGE3_1B_00",
+      "triangles": 28
+    },
+    {
+      "name": "XW_FRATFENCEA_2B_00",
+      "triangles": 24
+    },
+    {
+      "name": "XW_CHAINFENCEAPOST_1B_MS_00",
+      "triangles": 14
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_CHAINFENCEAPOST_1B_MS_00",
+      "triangles": 14
+    },
+    {
+      "name": "XW_FRATFENCEA_2B_00",
+      "triangles": 24
+    },
+    {
+      "name": "XB_MST_GENL_1B_00",
+      "triangles": 103
+    },
+    {
+      "name": "XB_DAIRYPLANTC_1B_BK_00",
+      "triangles": 120
+    },
+    {
+      "name": "XT_HEDGE3_1B_00",
+      "triangles": 28
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XW_FRATFENCEA_2B_00",
+      "triangles": 24
+    },
+    {
+      "name": "XT_HEDGE3_1B_00",
+      "triangles": 28
+    },
+    {
+      "name": "XB_MST_GEND1_1B_00",
+      "triangles": 100
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XW_DAIRYPLANTBRICK_1B_BK_00",
+      "triangles": 34
+    },
+    {
+      "name": "XT_CT_FALLTREES_1B_JG_00",
+      "triangles": 142
+    },
+    {
+      "name": "XO_IRONPIPECROSSA_1B_LL_00",
+      "triangles": 166
+    }
+  ],
+  "textures": [
+    {
+      "hash": "022076aa",
+      "name": "ARC_WALLROCK_WINDOW",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a09f4e8b02320c555cbbc2a2c099971d71fe5053ff4154f6f427b7ec027fdb8f"
+    },
+    {
+      "hash": "0677f542",
+      "name": "ARC_LB_SLUMBLOCK_J_AL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "82343f424b9dee93dd205ad143d827c0b6474963027f060cf3b8f425f3c5db20"
+    },
+    {
+      "hash": "082449c0",
+      "name": "OBJ_IRONFIREESCAPEA_LL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "0bdf11d1e6c549a134b69fa5f59ac421083698812fbd54bafae724be568af06b"
+    },
+    {
+      "hash": "0c01ff51",
+      "name": "ARC_SHACK_A_SA",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "5d4d98f1d5e102f367d988690fb8e324d8bacb0c1b1048b5fcfe0f078e1c3eae"
+    },
+    {
+      "hash": "108e3ad6",
+      "name": "ARC_LB_GASNEWWALL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e2cd9b4ac534256cb22e56d393e589b577914a3401b626fa9472e5c503f2ad4e"
+    },
+    {
+      "hash": "156e7175",
+      "name": "TRNS_GRASSA_LD_GRASSA_0",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "2d13fd0f6c901c18851e82a007d3a29c626393fa624a5733f395c6e0ccaf5e8e"
+    },
+    {
+      "hash": "17ec8bc8",
+      "name": "SGN_BACKSIGN",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "72df1d5feff99a8748068fe815bca04499a764393b75b476c84fb05745f722fe"
+    },
+    {
+      "hash": "17f2b2e7",
+      "name": "SGN_BACK_001",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8d965675ed6b2d15cd7c66e8282b17c45cf909d37e226650f3ecf61517ed06d1"
+    },
+    {
+      "hash": "19e05f09",
+      "name": "ARC_TILESA_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e0f6319c9cbd735c9a890002e5e277ba9513311e989612f072186fc67e20d56b"
+    },
+    {
+      "hash": "1bde4c05",
+      "name": "ARC_CAMPUS_HERITAGE1_WA",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "796bab32c523c1f7d4774c40b7e1b9ecb489de6b2ffb0fe25b67f4bc330e4a3a"
+    },
+    {
+      "hash": "1ff171df",
+      "name": "OBJ_TELEPOLE_LITE_BRIGH",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0832538b8606345a3befbe1438fb895f47d27e718b4338f0083347b83abb06d4"
+    },
+    {
+      "hash": "267a10ec",
+      "name": "SGN_PARKA_LL",
+      "missing": false,
+      "width": 16,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0744c780f3b89427d80f3b491c1a02a1eef32d56916dd0c41e43a20b52cbcfc6"
+    },
+    {
+      "hash": "2815d80d",
+      "name": "OBJ_METAL01",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d24a006c239f851ce906eb9e0fc07ed0237cededceb542d24ff4b917e902e1f4"
+    },
+    {
+      "hash": "2a0d6474",
+      "name": "ARC_HOSPITAL_CONCGLASS2",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "55381890562d3af2d2136615ecf119f595f5747229222b1bc2fe8e9e40ab8bcd"
+    },
+    {
+      "hash": "2f8824a9",
+      "name": "ARC_CAMPUS_PKD_LOT",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "63af094139f41925f108f51f588bac801ca6a3fce417afb4bae6f8c4565b4c60"
+    },
+    {
+      "hash": "30affd8f",
+      "name": "ARC_TRELLISRUSTYB_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "772ac6b0a9e560e115f4e4ac73a266445bc34e668b1c3ecdbf95492bcb72162a"
+    },
+    {
+      "hash": "3170524e",
+      "name": "SGN_LIGHT_001",
+      "missing": false,
+      "width": 32,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "09cdf780410d18055b9e688196d4c95d41e9d279ba24cdc9d0f9ad50074adeea"
+    },
+    {
+      "hash": "35e03adc",
+      "name": "ARC_DOOR_WAREHOUSE02",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "067cd08d03dc1efe7731736ccf6ceed84c813a4ab70536a784b8d852bfd35c86"
+    },
+    {
+      "hash": "3b1ad9ac",
+      "name": "SGN_STOP",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "1858c0e67b51821921a8a8e63ee90cf488904d71a928edee31e7e502d2762c96"
+    },
+    {
+      "hash": "43309f2e",
+      "name": "ARC_CAMPUS_MBWALL_CONC1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "4b16351b2e62db6a825a434be540330a788ac3d36165120884a6875045953181"
+    },
+    {
+      "hash": "43309f2f",
+      "name": "ARC_CAMPUS_MBWALL_CONC2",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "f096e6c5860c7eea37be95b7472e20dc467b0f6417837edcb9e0bc20d02c71b0"
+    },
+    {
+      "hash": "43f09e32",
+      "name": "ARC_PARKWALL",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "daf7effb7088589f7c96585ddbda54e61c133aca3e23fe3377f6dca1f88e6296"
+    },
+    {
+      "hash": "47dca16e",
+      "name": "ARC_TOWERHAZERDLIGHTS",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 5,
+      "alpha_test_mode": 0,
+      "blend_mode": 2,
+      "alpha_policy": "source alpha: original additive SRCALPHA/ONE blending",
+      "source_rgba_sha256": "899a235d7aac33968476defebc24dd15dad6277a7ee329929ed18a3af173e398"
+    },
+    {
+      "hash": "48f10039",
+      "name": "XO_TIRE",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6fbcb4d3a9c38a340f5006b2105ba570a31f945ce3545aec25a1dd27521c1cc1"
+    },
+    {
+      "hash": "4921de2e",
+      "name": "TRNS_ALL_LA_PAVEMENTA_Y",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8ffef58a1b060537a5f96a3e402676d93b70d413140aa61611f6b08760b74f23"
+    },
+    {
+      "hash": "499d12a6",
+      "name": "ARC_CAMPUS_HERITAGE5_KB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6b41039d4839af067d5ec0900ce41c3fb8408ce0694b8108e32332d83b598c6d"
+    },
+    {
+      "hash": "49e9b8de",
+      "name": "ORG_CT_POPLARFLORA",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "b02e40d62786655934cd2eef875ffd68af174e493e208c44328dd7eca0d43059"
+    },
+    {
+      "hash": "4b46c03f",
+      "name": "ARC_STRIPMALL_DOORC_LR",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "88412b2a696f58fc3656bbd31b01737a6540d4630d360c77b810eb47a340e4d7"
+    },
+    {
+      "hash": "4b474ca0",
+      "name": "ARC_STRIPMALL_DOORD_LR",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "45f2ab6b840bcc5f992949aa913ebb3163187883136f53c1a2ce3bc91c2308ef"
+    },
+    {
+      "hash": "4d535637",
+      "name": "ARC_LI_STST01",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e2bf6d4b515e9eff584d6d0313ddd4f413ab41b658fccf6d0fab4ada2cf5627e"
+    },
+    {
+      "hash": "545847cb",
+      "name": "ARC_BARRIER_GREEN",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "aa12240584870c660d3e21e5d2fac5acb7a3fa132341227e56ebd76afc601236"
+    },
+    {
+      "hash": "5a202fad",
+      "name": "ARC_FRATRETWALL1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "674dd1f42d354e83935682219ee3a3ab397d88bfa106fe0c5b1d801f7d761f4e"
+    },
+    {
+      "hash": "5a202faf",
+      "name": "ARC_FRATRETWALL3",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d5252b0cb0db6e14ea66284842649bac22ca853a0a57f59be43d48bd56e1830b"
+    },
+    {
+      "hash": "5af4daa3",
+      "name": "ARC_STEELGUIRDER_01",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "94267af4828aac65bc92b8c9ce6aac37db7c5f5846c009d299c6df7797f2122c"
+    },
+    {
+      "hash": "5fa6f061",
+      "name": "TRNS_ALL_LZ_SIDEWALKA_D",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "33e6c752ab8a3d1089fe236390e81bca2d810c904c29417238094601c6dea415"
+    },
+    {
+      "hash": "63344935",
+      "name": "ORG_CT_HEDGELP",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "ae870c6ebb908670e40ff38f2e51a8caf0dbcb7d6cd68932fe00f7165d1ca210"
+    },
+    {
+      "hash": "689cc9d9",
+      "name": "ARC_LB_WALLW01_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "107092f931dc8a7ab49cfe189345cd3c78500d1a64772a8cee77c193879e7481"
+    },
+    {
+      "hash": "6af91977",
+      "name": "TRNS_GRAVELA_LD_GRAVELA",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "444ee543b44944446791fc45aaf5cc849f1feca544f26d3595f0d9d0b14bc965"
+    },
+    {
+      "hash": "73797333",
+      "name": "ARC_FRATFENCE1",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "bae7938f514a2ebecffd21a342d241fd4ea8e767dcd086fca668ea2b140f865a"
+    },
+    {
+      "hash": "742db87e",
+      "name": "ARC_HRSETRCKTICKETSA_BK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0693b1a4f88bc00f85bd2b33dd23cf5c20f2a884b20dfb9f1a037d0343e30197"
+    },
+    {
+      "hash": "764d5d0c",
+      "name": "ARC_CONCRETE_B_BC",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "bc99435f08970b3c6de62959eb8970b4fd12460efa088c41b0bfab8221300764"
+    },
+    {
+      "hash": "764dea79",
+      "name": "ARC_CONCRETE_C_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "92d159f8b5e0cafce306e7d1c29d84b5f1746868401b9985caa7aea52ef9b710"
+    },
+    {
+      "hash": "7e39544a",
+      "name": "TRN_PAINTEDCONCRETE",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "45c4353c08b845d45c6d43af1fa487f5ed22a110fbdb2fbe4a7deb9cc9cae20f"
+    },
+    {
+      "hash": "80f467de",
+      "name": "SGN_SPEEDLIMIT35",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "15e7cc894c054709424c28b06a1fb40537d063c66cdecbfed99e140d82441557"
+    },
+    {
+      "hash": "80f467ff",
+      "name": "SGN_SPEEDLIMIT45",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e19adccf1281dc21963853eae0cfcb73c03b5032f253631c14abb787154b2122"
+    },
+    {
+      "hash": "8730aa81",
+      "name": "TER_COBBLE1",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "47682c60148bc37ad292e2f40cacf42877f636cf2b4589e92f5e6570fb085a1f"
+    },
+    {
+      "hash": "8730aa82",
+      "name": "TER_COBBLE2",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a1965958cdcecb294276909245d35488ca2e8287752cfbacc2b5ca05b140b832"
+    },
+    {
+      "hash": "8747c92d",
+      "name": "ARC_CAMPUS_PKD_STALLS",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "40875e03ba617f3dafc4e6a0069878cc580e7cc1d9b20258884d1f38d42deb3a"
+    },
+    {
+      "hash": "89be1ee6",
+      "name": "ORG_TREE_DEC1TRUNK",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "845d4df1ff8eaca124936375f83b1398f6a39813255bac3db881f039be876cad"
+    },
+    {
+      "hash": "8f7432de",
+      "name": "ARC_SHOPFRONT_BA_LZ",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d8f2a0d2a67cefb57fcb9669f4e7ee746ccfd6d632b474129d6486404491c4d7"
+    },
+    {
+      "hash": "8fc1c98d",
+      "name": "ARC_METALROOF_GREEN",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e2eed046479c2c1117d2e5796a053a0b07c9926e52f41f4e65fd22f55590e557"
+    },
+    {
+      "hash": "914a8455",
+      "name": "TRNS_ALL_LZ_PAVEMENTA_Y",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "16db3c0887aa5731195847de6e439c473b73e7f4ceb9c3b1dbede88ebe955094"
+    },
+    {
+      "hash": "9717031d",
+      "name": "MD_GRASSYTILE1024",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "67acd12bedb1449875b14015ce519c6b8872827c4e55e314a46ac3a54ac0f197"
+    },
+    {
+      "hash": "97fbd9bb",
+      "name": "TRNS_ALL_LZ_PAVEMENTA_P",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "454666a5538557d3d1d64168b34ee74f443a7565eb88a4a568786bd064dcadb3"
+    },
+    {
+      "hash": "985f07e4",
+      "name": "ARC_OILREFCONTAINER_A_A",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "320f9e3abe2dbe65f31801bf292be5e156858e35bb538460580526b24811131d"
+    },
+    {
+      "hash": "985f9445",
+      "name": "ARC_OILREFCONTAINER_B_A",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "084b209747cb588453ed447bd7112a6f4e0c9c686b0b83f04aff472510faf62b"
+    },
+    {
+      "hash": "9d9f58de",
+      "name": "ARC_UC_THSTAIRS_LV",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "045d044439754f2d8e73339fedbda3fdb0d488731945b0fcc6ba33b694e17f38"
+    },
+    {
+      "hash": "9e163bea",
+      "name": "ARC_CONCFREEWAY",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "bc91082c53716fa0642cccdc5071a52d7c62f02820decb8956914ab8ea7f3085"
+    },
+    {
+      "hash": "9ebb788a",
+      "name": "ARC_WINDOWHIGHLIGHTS_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e405c862eb66033fbdd4ef1bbfb0f2bb443c7702ffd2a9935aca3726c1d71941"
+    },
+    {
+      "hash": "9ed8f353",
+      "name": "SFX_BLINKORANGELIGHT",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "635faef135027e9e34a3c6b633699cca33a71b1fa1d8dd6be92fd643c4bbca74"
+    },
+    {
+      "hash": "a48f7f5d",
+      "name": "ARC_ROOF_A_SA",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "24c65668ee3aad9bd05909a3e5779df3c1b849dc064d5a1768203fc6d705baa5"
+    },
+    {
+      "hash": "a4900bbe",
+      "name": "ARC_ROOF_B_SA",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e1d7c83384dbef4ccc02627d9d0069a7d580123055a03f3ecbf78330d647b56b"
+    },
+    {
+      "hash": "a6a9ea55",
+      "name": "ARC_PIPES_01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e5d3ff664f85e320f3fdc365d09e51f72713976eafa3a37dfbcefb57ed3adc7a"
+    },
+    {
+      "hash": "aa180290",
+      "name": "OBJ_ROLLINGTIRE_A_BK",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "4e6184e666500daeb5cbab5fc263c58a697490d622b952286e0d4a89e70be435"
+    },
+    {
+      "hash": "ad0948d3",
+      "name": "SGN_BACKLARGESIGN",
+      "missing": false,
+      "width": 64,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c97a4402eef473888ad4142db29228e3f1d398ec24e12d5fdd40e44215ef0ee2"
+    },
+    {
+      "hash": "af05fd10",
+      "name": "ORG_CT_FALLTREE2_TRUNK",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8f19e6e31eb679a82b3846bad5b41722e801c0afa789ec93703af540ffae6c2c"
+    },
+    {
+      "hash": "b226bb1d",
+      "name": "ARC_SHINGLEOLD",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c5f5d8cd78aea3f9ac6e2f82138e2cbb3fd1f63bee97666cda5ea64cc682449e"
+    },
+    {
+      "hash": "b5832e8f",
+      "name": "ARC_SHINGLERED_LK",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "3843821767990ccab35e2b310839bb183bb8ab5c92b0b9bc4af6b270c6da94bd"
+    },
+    {
+      "hash": "b72aa8d3",
+      "name": "ARC_BOXROOF",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "13b4b4ad8c725c5df7b979258f0ab2db1ad0d96e37952c9be37d5183b952253d"
+    },
+    {
+      "hash": "b7bc8b97",
+      "name": "TRNS_ALL_LZ_SIDEWALKA_0",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d4b5bc62a7e3549db6bb9465007207d17e1cfb7443f535837d01438a491eb4fa"
+    },
+    {
+      "hash": "b81f130b",
+      "name": "ARC_A_CROSSBEAM_GR",
+      "missing": false,
+      "width": 16,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0df86ef25ed2b86e3869908e26322c57c0fa790786bab387b3424fd575dcb3d3"
+    },
+    {
+      "hash": "bcd51f99",
+      "name": "ARC_LB_WALLG_02",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "bb9437d21c6c8e6d14b88fd6dc17655924d492e5eaea28ac4fca6db436dfcafa"
+    },
+    {
+      "hash": "bcdde918",
+      "name": "ARC_LB_WALLW_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "d719e33892829849a8deda4bfd55ee06935d99b3adf80c9c241730b06509af3c"
+    },
+    {
+      "hash": "bd126460",
+      "name": "ARC_BRICK01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a2307fdf3e964bb630e118132eb1ac97007d6f50f068c41d7dc08edcde77da85"
+    },
+    {
+      "hash": "be10f98a",
+      "name": "TRNS_ALL_LW_PAVEMENTA_I",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a4cc33e13e5e8b7bea88f9b372667dbd11aeacc5ee53aa26124a706a80928e8a"
+    },
+    {
+      "hash": "bf657865",
+      "name": "ORG_CT_TREELINE1",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "cac3128a22a72d2a2e31d34a1c8e92764cb5fb2e2b6dfe56e8eaabb6079dd728"
+    },
+    {
+      "hash": "bf657866",
+      "name": "ORG_CT_TREELINE2",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "3e7652c03985e4d27256a0974e06206192c6b1c5b1c299fbeb5d8e689c24cb54"
+    },
+    {
+      "hash": "bf77370a",
+      "name": "SGN_BYSIGNWARN",
+      "missing": false,
+      "width": 8,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6579ae00708a878a7df42fe8f2948648eab54defb5fecc61a1214f42bea26c40"
+    },
+    {
+      "hash": "c0bdee73",
+      "name": "ARC_CORNERSTOREWINDOW1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c102565044eef73504e162962ec1be300e395277988983e0f7f47bccbb882c42"
+    },
+    {
+      "hash": "c253203f",
+      "name": "SGN_LIGHTBACK_001",
+      "missing": false,
+      "width": 32,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "bf80d8c25a407f3fc1815144de1925e738751180056fb6273bbf7b16a6bc9f0c"
+    },
+    {
+      "hash": "c34dc5e4",
+      "name": "ARC_STRIPMALL_WINDOWD_L",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "bf6a5fff16a104f27243ad44cb14d4e3af49e9e8a57fe8f8f413731f3c17bf1d"
+    },
+    {
+      "hash": "c34e5245",
+      "name": "ARC_STRIPMALL_WINDOWE_L",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "72d8593b76863ab7266aeb6712c119a9ede4612a3664bb94f304ff870004945a"
+    },
+    {
+      "hash": "c42945c7",
+      "name": "ARC_ABANFACTC",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "206d4d90bd2f0aa30b62bd21e15f7f654ccfe49e6bad4b7434b594c5bbcbc73e"
+    },
+    {
+      "hash": "c4cfac92",
+      "name": "ARC_LB_BBUILDING01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c2a170ffad2058ccfe0b4217b92a30b8801370492b29c5b748cb1bad899e8959"
+    },
+    {
+      "hash": "c567bac7",
+      "name": "ARC_CEILINGLIGHT",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e133ab0aeae480cada5bca333da2b4b78c9bdb7e25de466e94aa9670c3f7b1f1"
+    },
+    {
+      "hash": "c874ac8f",
+      "name": "ORG_CT_FALLTREETOP1",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "fba2cbc9655052aba483eba0cefe2413e23ae9a425019b94296d3ec106ea623c"
+    },
+    {
+      "hash": "c904085c",
+      "name": "ARC_WHOUSEK_01B",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e4a30fff1e8df3de9ae807bed2b27fbd145c35c3b742939b4638c478d031af25"
+    },
+    {
+      "hash": "c95e82e1",
+      "name": "ARC_WHOUSEP_01B",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8262cac851cce9b45cc81e014268768887e7db29aaab6c52a4ea3b6e59661bc9"
+    },
+    {
+      "hash": "cb7f1f0e",
+      "name": "OBJ_SMLBLK_001",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "b0f7eb6db55be4150b7c3003a024b252bad39371df22def24bcbab01569c6bb3"
+    },
+    {
+      "hash": "cc82c25a",
+      "name": "TRN_CT_HILLS_FIELDS",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "54afd24e491eda7362eede3497cec7747f9c88f253555c94ceadeecd8bbd5164"
+    },
+    {
+      "hash": "ccd8153f",
+      "name": "SGN_TRAFFICLIGHTS_POLE",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "8310237a55beeccfaff0bc6c03a9ce1124489a5581f50b7b9c059a12bf6e9ca9"
+    },
+    {
+      "hash": "cf6b8c89",
+      "name": "ARC_LB_WALLW01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "3c24e96cd9006146cc8f0ca6f021b68e368376684bd7e8443d9a83bb54d96e48"
+    },
+    {
+      "hash": "d01deb69",
+      "name": "ARC_REFINERY_WALL02",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "19560c53aa67e54d169a7ec9720f415d419d37f51f24c757fd0e3b95fccd45a7"
+    },
+    {
+      "hash": "d1b2062c",
+      "name": "ARC_COLONIAL1ROOF",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "2015294d8f9486dd4aceb7f010bea312f43cbb0052aeaba8e8999f8e5a476bdf"
+    },
+    {
+      "hash": "d34989a0",
+      "name": "ARC_TARPBLUE_A_CK",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "0f796b9af965de060b0aa3ce7b89b22970b982b599c7b77cf6213d6b4ee4d934"
+    },
+    {
+      "hash": "d366c94d",
+      "name": "ARC_POST_METALA",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "11c1945c55911f43b001bca7e71ae8ab512ad328d51468b3f4c4bd517a808f42"
+    },
+    {
+      "hash": "d5a08d5f",
+      "name": "RO_GENFILL_CRK",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e982572a46b4a112b7ba23cf41ebcb1eda67d5c898856bb314390f5f7f662008"
+    },
+    {
+      "hash": "d785cd15",
+      "name": "ARC_LB_STRIPB",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "f50c0e75a3137c378673edaa2d46ac187cd949aa3c8f7e2079bbeca5a10d5131"
+    },
+    {
+      "hash": "d8289bd3",
+      "name": "ADS_EDGE_BB_A_EA",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "aa57fbbff195ce9b151de8611c83b54817e6234434f97a43e293b31f4a258632"
+    },
+    {
+      "hash": "d85a1224",
+      "name": "ARC_GENBLDINGB_E",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "972a8561c47cff999bdcae1c2f0fe19edf8c03bee90e3addfd889e1397bc4685"
+    },
+    {
+      "hash": "da3f830f",
+      "name": "ARC_CEILINGOFFICEA_RB",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "f97d1feea3beffbc77a2cecae33744ee9261fc79fb3e4a75479fd9d774a6fa6a"
+    },
+    {
+      "hash": "db34b2a4",
+      "name": "TRNS_ALL_LB_PAVEMENTA_N",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "acbd6f6b22e5e086b42192d040e97735a249164b1d5ba3423aeb9532a957b724"
+    },
+    {
+      "hash": "dbd32c25",
+      "name": "TRNS_ALL_LB_PAVEMENTA_W",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "f1a3abd29cce96e57b595368e8982bd1de5355f0599657eaf08afd3ee1cf4f6a"
+    },
+    {
+      "hash": "dcc61b76",
+      "name": "ARC_FRATGATE4",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 2,
+      "alpha_test_mode": 1,
+      "blend_mode": 0,
+      "alpha_policy": "source alpha: original blending or alpha test enabled",
+      "source_rgba_sha256": "339111e9df21c83556de988fb73e40bf1c3add7830ad1176ba6cc8752b2d6b3f"
+    },
+    {
+      "hash": "de43652f",
+      "name": "ARC_PIPE_CK",
+      "missing": false,
+      "width": 16,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "60aa1ad7e364ae26c504da6e1e1d6757da9d9beedb3d676ea1e1a187cceed3c6"
+    },
+    {
+      "hash": "df064019",
+      "name": "OBJ_POLE_001",
+      "missing": false,
+      "width": 8,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "88da388281e207672da9c249343a0239b4e9cacf00303033b56196bf51f1c275"
+    },
+    {
+      "hash": "df7f5c52",
+      "name": "ARC_LB_WALL01",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "5f27869ff0c5b0744db60d81cd65d9bcb64299b802690e06e70d4a38c6bd1186"
+    },
+    {
+      "hash": "df7f608c",
+      "name": "ARC_LB_WALLPK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "7a213d7e2d0b6d7cd178ed095f4843185e58638ca3fccfc35e6526eac7a525fb"
+    },
+    {
+      "hash": "dfd5e8d0",
+      "name": "OBJ_LGT_001",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "1785e6c60fa6e56ce105183ddc2ca6a2a7dd27b04522a98eb99bfe3e0e0e2a95"
+    },
+    {
+      "hash": "e034565f",
+      "name": "ARC_TOWERRUSTY_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c956614092023827f60b669fc9dcb0625691ae7cdfe9393e8918d510b8789a82"
+    },
+    {
+      "hash": "e2e4fad3",
+      "name": "ARC_PETROTECHSIGN",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "5d51021017bbc39c193ead9e3bca8388fc9c5523a4ccc4a3256a3c39cedebbd4"
+    },
+    {
+      "hash": "e4432887",
+      "name": "ARC_WALLHORSETRACKA_BK",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "c5419be6497429a280e3bdc3bd13464ac0629d262154de351928cde5fd572be2"
+    },
+    {
+      "hash": "e443b4e8",
+      "name": "ARC_WALLHORSETRACKB_BK",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "e6569ad98484e38493a7ec93bd16b1a0a59e7afe404a807911010b487dcea404"
+    },
+    {
+      "hash": "e4444149",
+      "name": "ARC_WALLHORSETRACKC_BK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "7b0b7c5485c326e779891616bc9699afb6b908640c1b7e293cf1813ed3fd0107"
+    },
+    {
+      "hash": "e444cdaa",
+      "name": "ARC_WALLHORSETRACKD_BK",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "97956afb2202ea68e9cdd4a8ee2f90ce0c80390fcb1ec5d8dc22b135dfad6402"
+    },
+    {
+      "hash": "eaa61ef2",
+      "name": "ADS_CASTROL_BB_B",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "4afdbeebf537f2c46c95ae924696ef5385cad53dda8e8081c44a494a3a6bf964"
+    },
+    {
+      "hash": "f7b353a2",
+      "name": "ARC_BRICKWALLOLDA_RB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "594632e667e849b40e728ee622b6461cbe50c41873ba2b81023c5bde3fc0b34e"
+    },
+    {
+      "hash": "f7d6b83c",
+      "name": "ARC_CONCRETE02_D_JG",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "a95913f980ce4316cb7a778dfff12afac5fd9fb163db6ba9c00fb029c88128c5"
+    },
+    {
+      "hash": "f808a5d6",
+      "name": "ARC_BRIDGEBEAM",
+      "missing": false,
+      "width": 8,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "73fefca3ec3da0b00a45230083ec7158d83f03d46c04e43a2fe89c6880987b90"
+    },
+    {
+      "hash": "f91d60c8",
+      "name": "ARC_BRIDGEBEAM2",
+      "missing": false,
+      "width": 16,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "5e7d1caa5a818fd088b64af0a80c9d7d10b521b76317a10f614e829367c6e16b"
+    },
+    {
+      "hash": "fc9a4f11",
+      "name": "OBJ_SHOEBOX",
+      "missing": false,
+      "width": 8,
+      "height": 16,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "7df97979111149d8821eb9b5cc46f423ba3f636b48104b3a1284308e18dbcef7"
+    },
+    {
+      "hash": "fd8270ee",
+      "name": "ARC_LOBBYDOORSGRUNGE_A_",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6ff1f05ac62bc03b56d9d0e5d3ef6886638e0483592e4b6ed3526ec12f42fef2"
+    },
+    {
+      "hash": "fdb3c546",
+      "name": "ARC_LB_DOOR1",
+      "missing": false,
+      "width": 16,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "6cb88dd3dea299f434031a014eef3c7162cb666631fc0442f03c6c1d164b76d8"
+    },
+    {
+      "hash": "fdb3c547",
+      "name": "ARC_LB_DOOR2",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "943f040adeedefdd55aa60eead4443563f671b6a76713d876f4cd304bae461e4"
+    },
+    {
+      "hash": "fdb3c549",
+      "name": "ARC_LB_DOOR4",
+      "missing": false,
+      "width": 16,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "587ab9715d2f6a88880fef428bf25c16608686423b98babc8d4dca4706cc5b2c"
+    },
+    {
+      "hash": "fec5fe73",
+      "name": "ARC_LB_STRIP",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 0,
+      "alpha_test_mode": 0,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "26d9b76485d94d108cad62d09a505886c5db487fbce09f3f81e276c6ae59521c"
+    },
+    {
+      "hash": "ff03dc21",
+      "name": "ARC_LB_WALLP",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "9d3ceebc70a2a4c53fd24b67ac2294c00241b6afc555b020b88944f7c278336d"
+    },
+    {
+      "hash": "ff03dc23",
+      "name": "ARC_LB_WALLR",
+      "missing": false,
+      "width": 32,
+      "height": 64,
+      "flags": 0,
+      "alpha_test_mode": 2,
+      "blend_mode": 0,
+      "alpha_policy": "opaque: original blending and alpha test disabled",
+      "source_rgba_sha256": "891c20069633ed48154ab66723f7bcb8fe5f17816b854c0c5fa0b40538095d37"
+    }
+  ],
+  "vertices": 112077,
+  "triangles": 37359,
+  "ground_triangles": 5483,
+  "origin": [
+    737.4037551879883,
+    177.28937530517578,
+    -2388.2535400390625
+  ],
+  "scale": 0.00183831101472869,
+  "spawn_source_world": [
+    385.99701176414084,
+    164.77468682383036,
+    -2441.7585243588155
+  ],
+  "spawn_local": [
+    -351.40674342384744,
+    -12.514688481345416,
+    -53.50498431975302
+  ],
+  "heading": 3.802601583655302,
+  "spawn_selection": {
+    "method": "Projected onto original navigation segment, checked against original road triangles",
+    "segment": 406,
+    "offset_from_old_spawn_m": 11.960035304931617,
+    "forward_run_m": 90,
+    "reverse_run_m": 118
+  },
+  "world_sha256": "223238ef83359f21a474a1709699db41e14e3215661a1567338a3a8ab7abc606",
+  "rejected": [],
+  "world_sources": [
+    {
+      "base_sector": 141,
+      "name": "STREAML2RA-sectors141-160.BUN",
+      "sha256": "223238ef83359f21a474a1709699db41e14e3215661a1567338a3a8ab7abc606"
+    },
+    {
+      "base_sector": 161,
+      "name": "STREAML2RA-sectors161-176.BUN",
+      "sha256": "9a5100cfb10e2e08265a0b6d937d43c95e1dea277663e5286528b1f2d4ff83a6"
+    }
+  ],
+  "scenery_instances": [
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.004835605621337891
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004485130310058594
+    },
+    {
+      "name": "XS_EdgeA_1b_00",
+      "hash": "0eb93990",
+      "bounds_error": 0.003261566162109375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.002716064453125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.002716064453125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00269317626953125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00275421142578125
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004296302795410156
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.002822399139404297
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0025787353515625
+    },
+    {
+      "name": "XS_Castrol_2b_00",
+      "hash": "44594673",
+      "bounds_error": 0.003261566162109375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0027923583984375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0024890899658203125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0025482177734375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0037822723388671875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0030517578125
+    },
+    {
+      "name": "XW_DairyPlantBrickEND_1",
+      "hash": "3cb3e284",
+      "bounds_error": 0.00307464599609375
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004317283630371094
+    },
+    {
+      "name": "XS_MedianPole_1b_00",
+      "hash": "c64c3118",
+      "bounds_error": 0.0037031173706054688
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00334930419921875
+    },
+    {
+      "name": "XB_CT_BBD01_1b_00",
+      "hash": "48752be8",
+      "bounds_error": 0.0058231353759765625
+    },
+    {
+      "name": "XS_Speed35_1b_00",
+      "hash": "704ce833",
+      "bounds_error": 0.0030517578125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004604816436767578
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0037078857421875
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0033092498779296875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0027313232421875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00334930419921875
+    },
+    {
+      "name": "XS_StopSignB_1b_00",
+      "hash": "df19d973",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002166748046875
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003307342529296875
+    },
+    {
+      "name": "XW_FenceCurveAEnd_1b_LL",
+      "hash": "e1373293",
+      "bounds_error": 0.003981590270996094
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.002685546875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004845619201660156
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0037469863891601562
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00323486328125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004133701324462891
+    },
+    {
+      "name": "XB_MST_GenD4_2b_00",
+      "hash": "e9877c0f",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XB_MST_GenL_2b_00",
+      "hash": "a182a1c3",
+      "bounds_error": 0.0033254623413085938
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004511833190917969
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00272369384765625
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.003383636474609375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0039386749267578125
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002166748046875
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.00391387939453125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004284858703613281
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0033092498779296875
+    },
+    {
+      "name": "XB_MST_GenB_2b_00",
+      "hash": "9fbc4239",
+      "bounds_error": 0.00286865234375
+    },
+    {
+      "name": "XW_DairyPlantBrick_2b_B",
+      "hash": "dfe303ae",
+      "bounds_error": 0.00251007080078125
+    },
+    {
+      "name": "XS_Speed45_1b_00",
+      "hash": "5c8ebd14",
+      "bounds_error": 0.0038299560546875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032176971435546875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.002655029296875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.00392913818359375
+    },
+    {
+      "name": "XB_MST_GenKK_2b_00",
+      "hash": "49cfc38d",
+      "bounds_error": 0.0017852783203125
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0025773048400878906
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0035800933837890625
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.002899169921875
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.00453948974609375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0027017593383789062
+    },
+    {
+      "name": "XB_CT_BBD01_2b_00",
+      "hash": "48874469",
+      "bounds_error": 0.0029168128967285156
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0015463829040527344
+    },
+    {
+      "name": "XB_WHouseStorageA_1b_BK",
+      "hash": "bd8d82a6",
+      "bounds_error": 0.0036163330078125
+    },
+    {
+      "name": "XO_CT_Colonial_Wall_01",
+      "hash": "fa083ffb",
+      "bounds_error": 0.003814697265625
+    },
+    {
+      "name": "XB_MST_GenJ_2b_00",
+      "hash": "078e2841",
+      "bounds_error": 0.003040313720703125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032367706298828125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003200531005859375
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002166748046875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004090785980224609
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.0036487579345703125
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.0040569305419921875
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0030689239501953125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0035533905029296875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00305938720703125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_MST_GenD1_2b_00",
+      "hash": "0298c5cc",
+      "bounds_error": 0.004622459411621094
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0033397674560546875
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0036439895629882812
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0034465789794921875
+    },
+    {
+      "name": "XW_FenceCurveAEnd_1b_LL",
+      "hash": "e1373293",
+      "bounds_error": 0.004711151123046875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0039386749267578125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.00330352783203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0052204132080078125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00335693359375
+    },
+    {
+      "name": "XB_DairyPlantB_1b_BK_00",
+      "hash": "9fbc836f",
+      "bounds_error": 0.0031499862670898438
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.00389862060546875
+    },
+    {
+      "name": "XB_CT_BBD03_2b_00",
+      "hash": "e27bbdeb",
+      "bounds_error": 0.003996372222900391
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032978057861328125
+    },
+    {
+      "name": "XB_MST_GenA_2b_00",
+      "hash": "52c20578",
+      "bounds_error": 0.0036163330078125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_WallHorseTrack_BK_01",
+      "hash": "4041e77f",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0040836334228515625
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0028743743896484375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0051975250244140625
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032024383544921875
+    },
+    {
+      "name": "XB_HrseTrckTicketsA_1b_",
+      "hash": "c09b0293",
+      "bounds_error": 0.004422664642333984
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002166748046875
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.005491733551025391
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004273414611816406
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003997802734375
+    },
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.003753662109375
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_CT_BBD03_1b_00",
+      "hash": "e269a56a",
+      "bounds_error": 0.0037384033203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_DairyPlantC_1b_BK_00",
+      "hash": "a3c71490",
+      "bounds_error": 0.0032491683959960938
+    },
+    {
+      "name": "XB_MST_GenI_2b_00",
+      "hash": "ba93eb80",
+      "bounds_error": 0.00447845458984375
+    },
+    {
+      "name": "XB_MST_GenJ_2b_00",
+      "hash": "078e2841",
+      "bounds_error": 0.0032196044921875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032749176025390625
+    },
+    {
+      "name": "XB_MST_GenC_1b_00",
+      "hash": "eca46679",
+      "bounds_error": 0.0046215057373046875
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.005153179168701172
+    },
+    {
+      "name": "XO_ContainerLargeA_1b_G",
+      "hash": "0811a8b3",
+      "bounds_error": 0.004370689392089844
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XB_HorseTrackStands_1b_",
+      "hash": "7059d758",
+      "bounds_error": 0.004313468933105469
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0033054351806640625
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0031585693359375
+    },
+    {
+      "name": "XB_CT_BBD03_1b_00",
+      "hash": "e269a56a",
+      "bounds_error": 0.00372314453125
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XB_MST_GenD4_2b_00",
+      "hash": "e9877c0f",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004893779754638672
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.0037064552307128906
+    },
+    {
+      "name": "XB_MST_GenI_1b_00",
+      "hash": "ba81d2ff",
+      "bounds_error": 0.0027031898498535156
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.002777099609375
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0021820068359375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0039005279541015625
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003802776336669922
+    },
+    {
+      "name": "XB_Smelter_1b_LR_00",
+      "hash": "f5668742",
+      "bounds_error": 0.005082130432128906
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0034427642822265625
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004218101501464844
+    },
+    {
+      "name": "XO_BollardA_1b_CK_00",
+      "hash": "f110b704",
+      "bounds_error": 0.0027618408203125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003951072692871094
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0039615631103515625
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0038881301879882812
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003948211669921875
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0038471221923828125
+    },
+    {
+      "name": "XB_Smelter_1b_LR_00",
+      "hash": "f5668742",
+      "bounds_error": 0.005082130432128906
+    },
+    {
+      "name": "XB_CP_ParkGarage_1b_LL_",
+      "hash": "7c94b707",
+      "bounds_error": 0.0035648345947265625
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0031909942626953125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004046440124511719
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004021167755126953
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0031909942626953125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.002838134765625
+    },
+    {
+      "name": "XT_CT_Treeline1_1b_00",
+      "hash": "ba39867a",
+      "bounds_error": 0.004224300384521484
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003922462463378906
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0037384033203125
+    },
+    {
+      "name": "XB_MST_GenKK_1b_00",
+      "hash": "49bdab0c",
+      "bounds_error": 0.0019059181213378906
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0031909942626953125
+    },
+    {
+      "name": "XO_OilContainerC_1b_AL_",
+      "hash": "6b9b92ac",
+      "bounds_error": 0.003577709197998047
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0038352012634277344
+    },
+    {
+      "name": "XS_StopSignB_1b_00",
+      "hash": "df19d973",
+      "bounds_error": 0.0034027099609375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00272369384765625
+    },
+    {
+      "name": "XB_MST_GenF_2b_00",
+      "hash": "d3a5353d",
+      "bounds_error": 0.00505828857421875
+    },
+    {
+      "name": "XB_MST_GenF_1b_00",
+      "hash": "d3931cbc",
+      "bounds_error": 0.0047454833984375
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0038557052612304688
+    },
+    {
+      "name": "XB_Smelter_1b_LR_00",
+      "hash": "f5668742",
+      "bounds_error": 0.005082130432128906
+    },
+    {
+      "name": "XB_MST_GenKK_1b_00",
+      "hash": "49bdab0c",
+      "bounds_error": 0.002746105194091797
+    },
+    {
+      "name": "XB_MST_GenH_1b_00",
+      "hash": "6d87963e",
+      "bounds_error": 0.0032806396484375
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002574443817138672
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002574443817138672
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003871917724609375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032634735107421875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0038318634033203125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0028772354125976562
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0033664703369140625
+    },
+    {
+      "name": "XO_OilContainerC_1b_AL_",
+      "hash": "6b9b92ac",
+      "bounds_error": 0.003352642059326172
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0030689239501953125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0038013458251953125
+    },
+    {
+      "name": "XW_DairyPlantBrickEND_1",
+      "hash": "3cb3e284",
+      "bounds_error": 0.0030059814453125
+    },
+    {
+      "name": "XB_MST_GenD4_1b_00",
+      "hash": "e975638e",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0030059814453125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0039997100830078125
+    },
+    {
+      "name": "XB_MST_GenD1_1b_00",
+      "hash": "0286ad4b",
+      "bounds_error": 0.004877567291259766
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002960205078125
+    },
+    {
+      "name": "XB_MST_GenI_1b_00",
+      "hash": "ba81d2ff",
+      "bounds_error": 0.0031585693359375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0031299591064453125
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.003923892974853516
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00281524658203125
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0029320716857910156
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004517555236816406
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0036983489990234375
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0039215087890625
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00299072265625
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004095554351806641
+    },
+    {
+      "name": "XW_DairyPlantBrick_2b_B",
+      "hash": "dfe303ae",
+      "bounds_error": 0.003631591796875
+    },
+    {
+      "name": "XW_FenceCurveAEnd_1b_LL",
+      "hash": "e1373293",
+      "bounds_error": 0.004845142364501953
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.004085540771484375
+    },
+    {
+      "name": "XS_Speed35_1b_00",
+      "hash": "704ce833",
+      "bounds_error": 0.0030364990234375
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0036034584045410156
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0035400390625
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00281524658203125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.004558563232421875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00260162353515625
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.003947257995605469
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.0032196044921875
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0034694671630859375
+    },
+    {
+      "name": "XB_MST_GenH_2b_00",
+      "hash": "6d99aebf",
+      "bounds_error": 0.0025787353515625
+    },
+    {
+      "name": "XB_MST_GenJ_1b_00",
+      "hash": "077c0fc0",
+      "bounds_error": 0.002964019775390625
+    },
+    {
+      "name": "XB_Smelter_1b_LR_00",
+      "hash": "f5668742",
+      "bounds_error": 0.004837989807128906
+    },
+    {
+      "name": "XW_FenceCurveAEnd_1b_LL",
+      "hash": "e1373293",
+      "bounds_error": 0.003520965576171875
+    },
+    {
+      "name": "XW_FratFenceA_2b_00",
+      "hash": "4816578e",
+      "bounds_error": 0.005580425262451172
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.0046710968017578125
+    },
+    {
+      "name": "XW_FratFenceA_2b_00",
+      "hash": "4816578e",
+      "bounds_error": 0.005336284637451172
+    },
+    {
+      "name": "XB_MST_GenA_1b_00",
+      "hash": "52afecf7",
+      "bounds_error": 0.003833770751953125
+    },
+    {
+      "name": "XB_Smelter_1b_LR_00",
+      "hash": "f5668742",
+      "bounds_error": 0.005828857421875
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.004433631896972656
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003238677978515625
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00286102294921875
+    },
+    {
+      "name": "XW_FratFenceA_2b_00",
+      "hash": "4816578e",
+      "bounds_error": 0.004139900207519531
+    },
+    {
+      "name": "XO_OilContainerC_1b_AL_",
+      "hash": "6b9b92ac",
+      "bounds_error": 0.003352642059326172
+    },
+    {
+      "name": "XO_CT_CampusSmackTreeB_",
+      "hash": "23c3bda6",
+      "bounds_error": 0.004938602447509766
+    },
+    {
+      "name": "XB_DairyPlant_1b_BK_00",
+      "hash": "eb0a3eed",
+      "bounds_error": 0.0025877952575683594
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.00380706787109375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0027518272399902344
+    },
+    {
+      "name": "XO_CT_CampusSmackTreeB_",
+      "hash": "23c3bda6",
+      "bounds_error": 0.0023012161254882812
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028619766235351562
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0039157867431640625
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004153728485107422
+    },
+    {
+      "name": "XB_DairyPlantB_1b_BK_00",
+      "hash": "9fbc836f",
+      "bounds_error": 0.0036821365356445312
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028619766235351562
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028314590454101562
+    },
+    {
+      "name": "XB_MST_GenA_1b_00",
+      "hash": "52afecf7",
+      "bounds_error": 0.0036163330078125
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004397869110107422
+    },
+    {
+      "name": "XO_CT_CampusSmackTreeB_",
+      "hash": "23c3bda6",
+      "bounds_error": 0.004954338073730469
+    },
+    {
+      "name": "XO_RollingTire_1b_BK_00",
+      "hash": "604a59ad",
+      "bounds_error": 0.003509044647216797
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.00414276123046875
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004397869110107422
+    },
+    {
+      "name": "XO_IronPipeCrossA_1b_LL",
+      "hash": "eaab53de",
+      "bounds_error": 0.002441883087158203
+    },
+    {
+      "name": "XB_CT_TireShopAwning_1b",
+      "hash": "06362591",
+      "bounds_error": 0.005076408386230469
+    },
+    {
+      "name": "XB_TowerStorageRustyA_1",
+      "hash": "3902226a",
+      "bounds_error": 0.00438690185546875
+    },
+    {
+      "name": "XB_CT_TireShopPost_1b_0",
+      "hash": "a1e1ce53",
+      "bounds_error": 0.004153728485107422
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.0037736892700195312
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00279998779296875
+    },
+    {
+      "name": "XT_Hedge3_1b_00",
+      "hash": "f640110b",
+      "bounds_error": 0.0023393630981445312
+    },
+    {
+      "name": "XW_FenceCurveA8M_1b_LL_",
+      "hash": "8890f381",
+      "bounds_error": 0.005298614501953125
+    },
+    {
+      "name": "XB_CT_TireShop03_1b_00",
+      "hash": "acb55610",
+      "bounds_error": 0.003863811492919922
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.002803325653076172
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.003170490264892578
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0032100677490234375
+    },
+    {
+      "name": "XB_MST_GenD1_1b_00",
+      "hash": "0286ad4b",
+      "bounds_error": 0.004227638244628906
+    },
+    {
+      "name": "XB_VatRustyA_1b_RB_00",
+      "hash": "4ac1f0af",
+      "bounds_error": 0.0016922950744628906
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0027365684509277344
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0029807090759277344
+    },
+    {
+      "name": "XO_TirePileA_1b_00",
+      "hash": "99ecbb35",
+      "bounds_error": 0.0028839111328125
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.003990650177001953
+    },
+    {
+      "name": "XS_StopSignB_1b_00",
+      "hash": "df19d973",
+      "bounds_error": 0.00341796875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003841400146484375
+    },
+    {
+      "name": "XT_CT_FallTree2D_1b_JG_",
+      "hash": "00d6da46",
+      "bounds_error": 0.0036029815673828125
+    },
+    {
+      "name": "XB_MST_GenI_2b_00",
+      "hash": "ba93eb80",
+      "bounds_error": 0.0048065185546875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00287628173828125
+    },
+    {
+      "name": "XO_IronPipeCrossA_1b_LL",
+      "hash": "eaab53de",
+      "bounds_error": 0.002441883087158203
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0028228759765625
+    },
+    {
+      "name": "XT_Hedge3_1b_00",
+      "hash": "f640110b",
+      "bounds_error": 0.0020952224731445312
+    },
+    {
+      "name": "XT_CT_FallTree2D_1b_JG_",
+      "hash": "00d6da46",
+      "bounds_error": 0.0024771690368652344
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0026922225952148438
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003810882568359375
+    },
+    {
+      "name": "XB_MST_GenC_1b_00",
+      "hash": "eca46679",
+      "bounds_error": 0.004075050354003906
+    },
+    {
+      "name": "XO_LightPostB_1b_00",
+      "hash": "e70e5976",
+      "bounds_error": 0.004239082336425781
+    },
+    {
+      "name": "XT_Hedge3_1b_00",
+      "hash": "f640110b",
+      "bounds_error": 0.0019898414611816406
+    },
+    {
+      "name": "XO_StreetLightD2_1b_00",
+      "hash": "2fc6951b",
+      "bounds_error": 0.00414276123046875
+    },
+    {
+      "name": "XS_MedianPole_1b_00",
+      "hash": "c64c3118",
+      "bounds_error": 0.003448486328125
+    },
+    {
+      "name": "XO_LightPostA_1b_00",
+      "hash": "9a141cb5",
+      "bounds_error": 0.002166748046875
+    },
+    {
+      "name": "XO_IronPipeCrossA_1b_LL",
+      "hash": "eaab53de",
+      "bounds_error": 0.002441883087158203
+    },
+    {
+      "name": "XT_Hedge3_1b_00",
+      "hash": "f640110b",
+      "bounds_error": 0.0023789405822753906
+    },
+    {
+      "name": "XW_FratFenceA_2b_00",
+      "hash": "4816578e",
+      "bounds_error": 0.005309581756591797
+    },
+    {
+      "name": "XW_ChainFenceAPost_1b_M",
+      "hash": "22ca2d88",
+      "bounds_error": 0.0035429000854492188
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0031256675720214844
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00360107421875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.0037670135498046875
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003772735595703125
+    },
+    {
+      "name": "XW_ChainFenceAPost_1b_M",
+      "hash": "22ca2d88",
+      "bounds_error": 0.0031681060791015625
+    },
+    {
+      "name": "XW_FratFenceA_2b_00",
+      "hash": "4816578e",
+      "bounds_error": 0.004500865936279297
+    },
+    {
+      "name": "XB_MST_GenL_1b_00",
+      "hash": "a1708942",
+      "bounds_error": 0.003520488739013672
+    },
+    {
+      "name": "XB_DairyPlantC_1b_BK_00",
+      "hash": "a3c71490",
+      "bounds_error": 0.0039615631103515625
+    },
+    {
+      "name": "XT_Hedge3_1b_00",
+      "hash": "f640110b",
+      "bounds_error": 0.0027971267700195312
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.003490447998046875
+    },
+    {
+      "name": "XW_FratFenceA_2b_00",
+      "hash": "4816578e",
+      "bounds_error": 0.004928112030029297
+    },
+    {
+      "name": "XT_Hedge3_1b_00",
+      "hash": "f640110b",
+      "bounds_error": 0.0021123886108398438
+    },
+    {
+      "name": "XB_MST_GenD1_1b_00",
+      "hash": "0286ad4b",
+      "bounds_error": 0.004612922668457031
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0030117034912109375
+    },
+    {
+      "name": "XW_DairyPlantBrick_1b_B",
+      "hash": "f3a12ecd",
+      "bounds_error": 0.00350189208984375
+    },
+    {
+      "name": "XT_CT_FallTreeS_1b_JG_0",
+      "hash": "8327aaa3",
+      "bounds_error": 0.0017848014831542969
+    },
+    {
+      "name": "XO_IronPipeCrossA_1b_LL",
+      "hash": "eaab53de",
+      "bounds_error": 0.0028829574584960938
+    }
+  ],
+  "scenery_skipped": {
+    "race_barrier": 137,
+    "texture_budget": 157,
+    "triangle_budget": 200,
+    "missing_texture": 0
+  },
+  "catalog_rejected": [
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XO_PHOTORADAR_1Z_MD_00",
+      "offset": 31128,
+      "reason": "Triangle count mismatch: decoded 77, header 80"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XO_PHOTORADAR_1C_MD_00",
+      "offset": 44600,
+      "reason": "Triangle count mismatch: decoded 129, header 132"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XO_PHOTORADAR_1B_MD_00",
+      "offset": 91132,
+      "reason": "Triangle count mismatch: decoded 229, header 232"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XB_HAPARTMENT2_1Z_JG_00",
+      "offset": 14215108,
+      "reason": "Triangle count mismatch: decoded 38, header 40"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XB_HAPARTMENT2_1Z_JG_00",
+      "offset": 15449796,
+      "reason": "Triangle count mismatch: decoded 38, header 40"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XB_HAPARTMENT2_1Z_JG_00",
+      "offset": 17867816,
+      "reason": "Triangle count mismatch: decoded 38, header 40"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XB_HAPARTMENT2_1Z_JG_00",
+      "offset": 20000580,
+      "reason": "Triangle count mismatch: decoded 38, header 40"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XB_SY_OFFICEB_1C_00",
+      "offset": 20673388,
+      "reason": "Triangle count mismatch: decoded 117, header 118"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "SOUND_TUNNEL_OVERPASS_00",
+      "offset": 21519456,
+      "reason": "Invalid geometry metadata/bounds"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "SOUND_TUNNEL_TURBINE_00",
+      "offset": 21519784,
+      "reason": "Invalid geometry metadata/bounds"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "SOUND_TUNNEL_WALKWAY_00",
+      "offset": 21520072,
+      "reason": "Invalid geometry metadata/bounds"
+    },
+    {
+      "source": "STREAML2RA-first24MiB.BUN",
+      "name": "XB_HYDROPLANTBLDA_1Z_RB_00",
+      "offset": 21881936,
+      "reason": "Triangle count mismatch: decoded 45, header 46"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A10_R2",
+      "offset": 1222080,
+      "reason": "Triangle count mismatch: decoded 263, header 264"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "TRN_CT_ROAD_JUNCTION_01_CHOP_A14_R2",
+      "offset": 1859272,
+      "reason": "Triangle count mismatch: decoded 248, header 252"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "TRN_CT_TERRAIN_COLONIAL_02_CHOP_A18_R0",
+      "offset": 2235840,
+      "reason": "Triangle count mismatch: decoded 58, header 98"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "BLUESTRIPGASPILLAR_FRAG03",
+      "offset": 2281660,
+      "reason": "Triangle count mismatch: decoded 130, header 132"
+    },
+    {
+      "source": "STREAML2RA-sectors141-160.BUN",
+      "name": "BLUESTRIPGASPILLAR_FRAG03",
+      "offset": 2456316,
+      "reason": "Triangle count mismatch: decoded 130, header 132"
+    },
+    {
+      "source": "STREAML2RA-sectors1141-1160.BUN",
+      "name": "TRN_CT_TERRAIN_HIGHLANDS_02_CHOP_G29_R0",
+      "offset": 1125384,
+      "reason": "Triangle count mismatch: decoded 72, header 98"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H4_R2",
+      "offset": 190568,
+      "reason": "Triangle count mismatch: decoded 42, header 48"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_2",
+      "offset": 276796,
+      "reason": "Triangle count mismatch: decoded 169, header 173"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R3",
+      "offset": 298380,
+      "reason": "Triangle count mismatch: decoded 107, header 108"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R4",
+      "offset": 301232,
+      "reason": "Triangle count mismatch: decoded 122, header 123"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R6",
+      "offset": 306996,
+      "reason": "Triangle count mismatch: decoded 224, header 227"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R0",
+      "offset": 830532,
+      "reason": "Triangle count mismatch: decoded 106, header 107"
+    },
+    {
+      "source": "STREAML2RA-sectors1161-1176.BUN",
+      "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R5",
+      "offset": 843148,
+      "reason": "Triangle count mismatch: decoded 188, header 190"
+    }
+  ],
+  "scenery_radius": 350.0,
+  "texture_budget": 128,
+  "cell_size": 64.0,
+  "batches": 1046,
+  "free_drive": true,
+  "complete_scenery": true,
+  "vertex_color": "Original RGB; source alpha/material byte remains uninterpreted and is not used as opacity",
+  "limitations": "Original TRN meshes and validated nearby scenery instances; wheels, full original materials/engine/physics unresolved. Contact uses road render triangles; scenery has no collision."
+}

@@ -1,0 +1,210 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "preset_source_sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+  "preset": "M3GTRCAREERSTART",
+  "preset_file_offset": 385560,
+  "preset_record_sha256": "a2a8886ffa182bf66b6fb21e215ef7182870bf2ca7333c227655589f96372369",
+  "visual_model": "BMWM3GTRE46",
+  "frontend_key64": "0000000023cc4a4e",
+  "frontend_collection_key": "23cc4a4e",
+  "pvehicle_key64": "0000000039dae0f8",
+  "pvehicle_collection_key": "39dae0f8",
+  "raw_48_5f": "4e4acc2300000000f8e0da39000000000000000000000000",
+  "uninterpreted_58_5f": "0000000000000000",
+  "physical_class": "pvehicle",
+  "physical_collection": "m3gtre46careerstart",
+  "physical_model": {
+    "text": "BMWM3GTRE46",
+    "hash32": 3403933237,
+    "hash64": 12788995710974845846
+  },
+  "original_reference": {
+    "loader": "802DB494",
+    "serialized_key_offset": "50",
+    "runtime_key_read_offset": "54",
+    "consumers": [
+      {
+        "consumer_start": "801651e0",
+        "collection_lookup_call": "801651ec",
+        "class_key": "4a97ec8f",
+        "collection_key": "39dae0f8"
+      },
+      {
+        "consumer_start": "801a2004",
+        "collection_lookup_call": "801a205c",
+        "class_key": "4a97ec8f",
+        "collection_key": "39dae0f8"
+      }
+    ]
+  },
+  "physics_references": {
+    "transmission": {
+      "field_key": 128426981,
+      "field_name": "transmission",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "capacity": 1,
+        "count": 1,
+        "values": [
+          {
+            "class_key": 128426981,
+            "collection_key": 970645752,
+            "class_name": "transmission",
+            "collection_name": "m3gtre46careerstart",
+            "runtime_pointer": 0
+          }
+        ]
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212220,
+      "file_offset": 212348,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "00010001000c000007a7a3e539dae0f800000000"
+    },
+    "brakes": {
+      "field_key": 909445223,
+      "field_name": "brakes",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "capacity": 1,
+        "count": 1,
+        "values": [
+          {
+            "class_key": 909445223,
+            "collection_key": 970645752,
+            "class_name": "brakes",
+            "collection_name": "m3gtre46careerstart",
+            "runtime_pointer": 0
+          }
+        ]
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212336,
+      "file_offset": 212464,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "00010001000c00003635086739dae0f800000000"
+    },
+    "frontend": {
+      "field_key": 2240304930,
+      "field_name": "frontend",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "class_key": 2240304930,
+        "collection_key": 600590926,
+        "class_name": "frontend",
+        "collection_name": "0x23cc4a4e",
+        "runtime_pointer": 0
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212304,
+      "file_offset": 212432,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "8588572223cc4a4e00000000"
+    },
+    "chassis": {
+      "field_key": 2946633968,
+      "field_name": "chassis",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "capacity": 1,
+        "count": 1,
+        "values": [
+          {
+            "class_key": 2946633968,
+            "collection_key": 970645752,
+            "class_name": "chassis",
+            "collection_name": "m3gtre46careerstart",
+            "runtime_pointer": 0
+          }
+        ]
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212316,
+      "file_offset": 212444,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "00010001000c0000afa210f039dae0f800000000"
+    },
+    "tires": {
+      "field_key": 3174617546,
+      "field_name": "tires",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "capacity": 1,
+        "count": 1,
+        "values": [
+          {
+            "class_key": 3174617546,
+            "collection_key": 970645752,
+            "class_name": "tires",
+            "collection_name": "m3gtre46careerstart",
+            "runtime_pointer": 0
+          }
+        ]
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212176,
+      "file_offset": 212304,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "00010001000c0000bd38d1ca39dae0f800000000"
+    },
+    "induction": {
+      "field_key": 3374973250,
+      "field_name": "induction",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "capacity": 1,
+        "count": 1,
+        "values": [
+          {
+            "class_key": 3374973250,
+            "collection_key": 4005701402,
+            "class_name": "induction",
+            "collection_name": "default",
+            "runtime_pointer": 0
+          }
+        ]
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212260,
+      "file_offset": 212388,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "00010001000c0000c92a0142eec2271a00000000"
+    },
+    "engine": {
+      "field_key": 4059429831,
+      "field_name": "engine",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "capacity": 1,
+        "count": 1,
+        "values": [
+          {
+            "class_key": 4059429831,
+            "collection_key": 970645752,
+            "class_name": "engine",
+            "collection_name": "m3gtre46careerstart",
+            "runtime_pointer": 0
+          }
+        ]
+      },
+      "source_collection": 970645752,
+      "stream": "bin",
+      "stream_offset": 212240,
+      "file_offset": 212368,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "00010001000c0000f1f5fbc739dae0f800000000"
+    }
+  },
+  "limitations": [
+    "Proves this original preset chooses the named pvehicle profile; it does not select arbitrary profiles by visualmodel",
+    "RefSpec upgrade indices still require their own original consumer rules",
+    "Source presets with zero profile keys take fallback behavior not covered here"
+  ]
+}

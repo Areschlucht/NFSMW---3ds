@@ -88,7 +88,7 @@ def verify(dol,attributes):
     def layout(row):return bytes(db.bin[row['layout']:row['layout']+db.classes[row['class_key']]['base_size']])
     def bits(v):return struct.pack('>f',v)
     with tempfile.TemporaryDirectory(prefix='mw-enginestep-') as tmp:
-        so=Path(tmp)/'engine.so';subprocess.run(['cc','-std=c11','-O2','-Wall','-Wextra','-Werror','-fno-fast-math','-ffp-contract=off','-shared','-fPIC','-I'+str(root/'include'),*[str(root/f'source_bmw/{m}.c') for m in ['mw_physics_transmission_engine','mw_physics_transmission','mw_physics_transmission_policy','mw_physics_engine']],'-lm','-o',str(so)],check=True)
+        so=Path(tmp)/'engine.so';subprocess.run(['cc','-std=c11','-O2','-Wall','-Wextra','-Werror','-fno-fast-math','-ffp-contract=off','-shared','-fPIC','-I'+str(root/'include'),*[str(root/f'source_bmw/{m}.c') for m in ['mw_physics_transmission_engine','mw_physics_transmission','mw_physics_transmission_policy','mw_physics_transmission_auto','mw_physics_transmission_nos','mw_physics_engine']],'-lm','-o',str(so)],check=True)
         lib=C.CDLL(str(so));step=lib.mw_physics_transmission_engine_mechanical_step;step.argtypes=[C.POINTER(Params),C.POINTER(Input),C.POINTER(State),C.POINTER(Wheel)];step.restype=C.c_bool
         profiles=[]
         for name in ['bmwm3gtre46','m3gtre46careerstart']:

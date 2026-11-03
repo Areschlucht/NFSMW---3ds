@@ -1,0 +1,622 @@
+{
+  "cases": 47,
+  "gpu_bytes_compared_per_policy": 1279488,
+  "actual_c_reference_policy_all_tex3ds_bytes_exact": true,
+  "actual_c_production_policy_all_source_preserving_bytes_exact": true,
+  "production_tex3ds_changed_bytes": 14161,
+  "bounds_guards_and_source_immutability_passed": true,
+  "source_sha256": "5d6258d9e277538ebe529add32c14193baeb2b086e470522aa0c2b0342a7c28b",
+  "rows": [
+    {
+      "name": "synthetic-8x8",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "d6f4c9288db8b0b8c9618b6e69e72c9283236e0efe7afccb7c48892437e5e4d4"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 1,
+        "gpu_sha256": "35b21440bfe74d2af4bc6999b6ceb988f8ed9ad64b809f2ce5f475d90c9b2544"
+      }
+    },
+    {
+      "name": "synthetic-8x16",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "f2a9654117913a5e336aeaad5ed175698e1712a8afcc6993e1f14890001be004"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 1,
+        "gpu_sha256": "151d5321e19c951420afaf82649f41dcee8f1ccbeb24025e084b72b49d48698f"
+      }
+    },
+    {
+      "name": "synthetic-8x32",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "67a5b5d3dda6835e88165c0cf6952607a0a6bdb4f1be2d7e432ff45f9ba8200e"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 1,
+        "gpu_sha256": "3802b3d972d9e71ed2969c639362db281033f1335ebbb3d1a68562c316e48921"
+      }
+    },
+    {
+      "name": "synthetic-8x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "5def98014190cd9991d7eefd65de32ff7bbf8014896e7435123b19a66da50e72"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 7,
+        "gpu_sha256": "68d094bc9ea13e6c037f69e6236ebf1cbf21f55dfef5440d8b5f347784582319"
+      }
+    },
+    {
+      "name": "synthetic-8x128",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ae123cfe0b566716e9f0e35904254e44be8a18b512657f176a774f24fe590ab7"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 13,
+        "gpu_sha256": "c87a6fe0f5cd3c16ea08b5724414c620cb538ab23045f00daf7373503530c22f"
+      }
+    },
+    {
+      "name": "synthetic-16x8",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ed3fa4f993806cb8a601b75620d94702a4ea01818a72746136903432a8161396"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 1,
+        "gpu_sha256": "2b414406f7d3e97f451e9bdb7c6ed4b1a231f1d0019ea8146b5252adf0117749"
+      }
+    },
+    {
+      "name": "synthetic-16x16",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "e7f5f487a10ad731ad8e71aeeea187c4994b04220afe7f027f1ec4e7d7cee47d"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 1,
+        "gpu_sha256": "7412a4fc273e6e6807441e61f43b95c2bc9889ae5ecb524266b8a5e29a1abf45"
+      }
+    },
+    {
+      "name": "synthetic-16x32",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "e15e87ceb3abbcb7d3eeb36bf253ed455090ff8a51a62efc1103e6bed7a2d8db"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 7,
+        "gpu_sha256": "f6516100dce1a9da026f3aba91f66112e34dd24ae037a4f4f7dd8ef9f8b311fe"
+      }
+    },
+    {
+      "name": "synthetic-16x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "49a10dc1d7610eb2e583ac37412cb23d96d3b05faf333a8b318ca900092d5220"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 13,
+        "gpu_sha256": "8d4447935aeabb839bd85aea82f69d38a361497dad7a71dbd6a05e76c43ad62f"
+      }
+    },
+    {
+      "name": "synthetic-16x128",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "7dd9241f778f4cfe0ead36bfb46509658cc758ba1ad2f4d3e89d62545712b14e"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 25,
+        "gpu_sha256": "76aca6c3a1823d36448ccdcc21bd799eca253338c993f0930fa50305041cb46d"
+      }
+    },
+    {
+      "name": "synthetic-16x256",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "74bb305f70319ba94afa73579f901ec239c1775045344722e62022e9df37e97b"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 46,
+        "gpu_sha256": "dc3027ba474254f4cf4a8900358feecce1c9a187e0f184ffa234c7bb86472be1"
+      }
+    },
+    {
+      "name": "synthetic-32x8",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "17a947e7872d79d723172f82fc305d3aa678a5a2dcbba5662fd6204d38fe9272"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 4,
+        "gpu_sha256": "6f05ce791c97381cb83fba0be59743e8eb98962a990f61cee7a22744a428cf54"
+      }
+    },
+    {
+      "name": "synthetic-32x16",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "95e6775ce08657ae4579e84d646187055572906cb1e2ec31b5ebf739cf88c605"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 4,
+        "gpu_sha256": "8f5226c28b7f4dd4e1eaf3993a3fb30d87aeb129c00f9c5bae29f03fa85b7f14"
+      }
+    },
+    {
+      "name": "synthetic-32x32",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "b9a7b442e6243d0cc027e063bfd1df81da7023d8fcdd23463d84fd5728900133"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 10,
+        "gpu_sha256": "a2a3b6175c3b95f27c3861522db645cbb02d711d99e07f0b0daa2ba2433c088c"
+      }
+    },
+    {
+      "name": "synthetic-32x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "891231835d4b568d3d22fed36ac1effeb8faef68421eba7ef86c2b5c56a0bef9"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 25,
+        "gpu_sha256": "70e331439e6bcacce95fdc9713ebc091384fc2a44ba58f742b5c0f65b2cf4a1e"
+      }
+    },
+    {
+      "name": "synthetic-32x128",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "8fd3c631630704af6a2ce84cadbe0d00b2538f0ffe29539ac7ff053670211ead"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 46,
+        "gpu_sha256": "1e1e6e027c7e0520ed3eeb52a4cecefef85c720fef2d1d77b14be7a0cabc01a3"
+      }
+    },
+    {
+      "name": "synthetic-32x256",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "5ece3643ee5f32645f04b51b117496c4a7a632084fff180d7e1bf5f9adb9f7c0"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 94,
+        "gpu_sha256": "9be829d795e11100c82aebeb5e7931cac760a492bf9c81daad2b9e68ab482686"
+      }
+    },
+    {
+      "name": "synthetic-64x8",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "4d6d476b51d0de740f215ecdfec7fffd0851b36b117291c6471fd8a24bed8f62"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 7,
+        "gpu_sha256": "1c076a9e7c0d91a5db7ec9247703668c39b591b1b5c3748ebe1c4128d1dd1c13"
+      }
+    },
+    {
+      "name": "synthetic-64x16",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "a87c00feac0644e567474fd51c357373f77b677c8d60c823d731cbf6a2f6c395"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 13,
+        "gpu_sha256": "0b3391044b94a3ce43d627f8f7fe86885632d122548119137f59ee404e0dd55b"
+      }
+    },
+    {
+      "name": "synthetic-64x32",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "c39f61b3dfc4ab376f74abe0f1e820fc9c7b83d17daa559579575e9b371d6351"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 25,
+        "gpu_sha256": "c2ee26c0484097911f1e179a8623aeeb7aa9221d096cff194088253393a0b283"
+      }
+    },
+    {
+      "name": "synthetic-64x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "8314a772ddafed382d4e24bcb2a2bb4d8fd6834c29567e0d91bedb04863f7a8d"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 49,
+        "gpu_sha256": "ee0c30ea88a569781d4640c3a42fb20be48fc4f21e3e494e108d0bb82d3e9249"
+      }
+    },
+    {
+      "name": "synthetic-64x128",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ce27f49c8ebb816fb63d503d7fd0a2d853aad317c230605205ed1b1d50bf1a47"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 94,
+        "gpu_sha256": "0d8a63306a97d6d61c46536e2925c7aaac9915db25df59f797c8c99ca06146a3"
+      }
+    },
+    {
+      "name": "synthetic-64x256",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "57c066811644e7267411562fc05f187cb79f7f5c545f2705749e7191ffaac5a7"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 190,
+        "gpu_sha256": "0ea667d6d0a636e480404d0538d8d9f8328214b8c013c0f7b7d921e7aeaea7f1"
+      }
+    },
+    {
+      "name": "synthetic-128x8",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "45013b63dd5c63280e5ef09573d838a91c531fd6064350fc5afa1fd7b8171283"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 13,
+        "gpu_sha256": "d50ec174027dc9ba2c7559613e3b6fa24f8e93f05cfa2fb799423a239f95e74e"
+      }
+    },
+    {
+      "name": "synthetic-128x16",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "fc9c4950b5ac18bb41cafe1d69541902a54dc1299e8d29c82abb41106cb55a2a"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 22,
+        "gpu_sha256": "eedde7e209215451e15a41586717258e1e59d90f8000201fcd0ec6f2c92a1469"
+      }
+    },
+    {
+      "name": "synthetic-128x32",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "c5cb8c591eba0726bee0fcfde1af4d70941fc3de958f34ac6397ca0fe98da398"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 49,
+        "gpu_sha256": "1439d1c707ab293660a4b85e956e21453c80d2498e466ca4d159a2d104101b3e"
+      }
+    },
+    {
+      "name": "synthetic-128x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "d3d33e9de3f1483ce458a41f99c5eb3630a507b045e1902fe1979599335c4315"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 94,
+        "gpu_sha256": "71c990460b6bb1304c6b977f9e319141409c8abf13a49e66194b71b6918cb6ea"
+      }
+    },
+    {
+      "name": "synthetic-128x128",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "08fb07a85d27084b9799e42b624c0d2ba66e3112f1c01c2abbfe1da4da08cbe3"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 190,
+        "gpu_sha256": "5065869e2807945f8af9dafefb760135490ef91527d8bdbd0af5ce7657b9922e"
+      }
+    },
+    {
+      "name": "synthetic-128x256",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ba1b8ed3139fc1d18e9472a2155751af3aaedc013c0fff0a24c36cb9176f7fd6"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 382,
+        "gpu_sha256": "65b25999564cb77fb815524a3d26a121d008f3eba41cd018d0bb0755bceadc69"
+      }
+    },
+    {
+      "name": "synthetic-256x16",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "4ea0865cf3d28bb58307d2dd3105f1bb776759b7af859ec39840645a3204616f"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 46,
+        "gpu_sha256": "111a8e73c0492e6c2e94988679e87551e7d1026127adc68cb73d1827e0553d9b"
+      }
+    },
+    {
+      "name": "synthetic-256x32",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "b71588c8dde27b2c40927e3aefd80f564ac5ff50e147dc5130916750059f56ab"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 94,
+        "gpu_sha256": "be68d0b31d159a4108154aa8d21783b7e91e7d45735e6f5d73a1d49b3de3c2d2"
+      }
+    },
+    {
+      "name": "synthetic-256x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ff72be9f771ac80fcae3be218b01afd6ea9a5e86482df01188e34c115a298e93"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 190,
+        "gpu_sha256": "ee73abe35d5e5e6c64b1a4a410a509b064c6c8b7861e27a11ec590709044a8e8"
+      }
+    },
+    {
+      "name": "synthetic-256x128",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "acf581ccc5da165f5181fd8e58110156181e075cca882c61ba982a5ffa61a7b0"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 382,
+        "gpu_sha256": "01cbce33abbe269868038a0428da0625f8f68349a709cf83f078e3982294ef37"
+      }
+    },
+    {
+      "name": "synthetic-256x256",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "39006ed44367989fbfdd2cc196e59d0f7e24f7f82da65c7c0888a3fbb70b2c75"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 764,
+        "gpu_sha256": "24559b7f7dfd6863159ad38efb66880bd572be3bdb6444e9cfa879509175dc3e"
+      }
+    },
+    {
+      "name": "synthetic-512x64",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "5bbfb43df6bde717e1547597fb288253013ae38894024e2aff73d3d1c53a717c"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 380,
+        "gpu_sha256": "df0a7498376bc35f0176ed9a35f3a2ff113a77aa4d850450fc296cab617312e4"
+      }
+    },
+    {
+      "name": "original-0043bfef-4935bfa1c2ee3966fde94c89a0445423223adadff395cfe1561a55fc411469ff",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "7fd096f45e1de0c152b3252f25ddc9c23a50d3dba31238f0e1a254e053179771"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "7fd096f45e1de0c152b3252f25ddc9c23a50d3dba31238f0e1a254e053179771"
+      }
+    },
+    {
+      "name": "original-0043bff0-27f9677cb184b0f4cdb99cf8d05bb1a14afcaa101858d4228cd14895eb99ccd1",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "eaf512e2e9020ca24ccd64d5ee45388c89434281464d11de818e2e5396e17e7e"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "eaf512e2e9020ca24ccd64d5ee45388c89434281464d11de818e2e5396e17e7e"
+      }
+    },
+    {
+      "name": "original-0052df43-8750baee257d0bf5568ca9defa8e14a6e81825f9c8126ddabbd3d306b0474e93",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ba870dbb0bd25c67cf873cbedc93162ee9d3438d8d263cb51832329eb84583bc"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ba870dbb0bd25c67cf873cbedc93162ee9d3438d8d263cb51832329eb84583bc"
+      }
+    },
+    {
+      "name": "original-005fa675-4a492a6ab09c5cddfe3ff65e62b0e2f6d54cb28ff69d00b276ceb031a968b174",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "feb5fbe9308c46fc72b760721cb89062e396239d5a0065deb9159c10015fed1c"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "feb5fbe9308c46fc72b760721cb89062e396239d5a0065deb9159c10015fed1c"
+      }
+    },
+    {
+      "name": "original-00872ff6-a4825c49feb161bb53e9a5394b4f97702ad077f446ac607c547ebac9cec387d4",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ac73be27baa757aaed7029dfe2edb20181cd2a4feac4c54684c8c13f7b682c09"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "ac73be27baa757aaed7029dfe2edb20181cd2a4feac4c54684c8c13f7b682c09"
+      }
+    },
+    {
+      "name": "original-01b3cda8-7e19bab6cfaff9d28be07201e1928f08f9a58cba68555bcbf3fa717a28c6eea2",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "5a3153a0cdc85236fc8dfc20e7b3e5310abd98ff7ceb64f8218da863d8975b9d"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "5a3153a0cdc85236fc8dfc20e7b3e5310abd98ff7ceb64f8218da863d8975b9d"
+      }
+    },
+    {
+      "name": "original-082449c0-1145bbfecd6db31a1704ad0dd6c20dac660ca95e687060d7b7aa81cd2ba6b905",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "9696ccbf05e3025fd4605a633f5812c0b7c51f62b4e66e1cb674a3a7a803af42"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "9696ccbf05e3025fd4605a633f5812c0b7c51f62b4e66e1cb674a3a7a803af42"
+      }
+    },
+    {
+      "name": "original-086fca34-0fb3f59760a4db3c8f6358a56f19061234c545968ae9ac06c853b07442117904",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "34d3ddca1aceaeced0f029239de450c618003f3261ffc61aadaf93e099e54a4b"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "34d3ddca1aceaeced0f029239de450c618003f3261ffc61aadaf93e099e54a4b"
+      }
+    },
+    {
+      "name": "original-0a082df4-097823b2fee6110be9c986ede0cc21e520b0db99e6465943bdf3a8451b6138ff",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "a9dad7ad93077724240615bae5cf8497d1e532348502953464156b649de81187"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 1098,
+        "gpu_sha256": "ac8ad43a9cfa1069380d27505baf9f55952f17a850fe4f9629834e41252e8d67"
+      }
+    },
+    {
+      "name": "original-1a8a292b-4847ccf095282456babf197c6bc9201cff6f234f888c6376269fa0cfac1af40d",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "8aa5ba85bc41adc40ce6051a5f91f49f8f98355c5e5e1cb411d500fd4adbaf33"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 9780,
+        "gpu_sha256": "76f3352b82e4bc5d0fa39a2672fd23e070df0786f484fd53ca9c2b13f3c5ecdf"
+      }
+    },
+    {
+      "name": "original-47dca16e-09400aa3b9ded307096dc37006ff6e179ec677e40faa9c067bbdaafe31261e42",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "f20930618c0b25502c8fe735d21769f3ba44eaf88bc6040ee1c809d5f6e836a3"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "f20930618c0b25502c8fe735d21769f3ba44eaf88bc6040ee1c809d5f6e836a3"
+      }
+    },
+    {
+      "name": "original-6ebf6f28-4abef59551aaddbd3292e999a857bb080b0577722b3180ff189bd87f6995c8d9",
+      "reference_zero_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "b01fcdf4980fa8b8d8f5b1f6ec61dd09d8930e73d6da45d6d61a548520c97965"
+      },
+      "production_preserve_rgb": {
+        "exact_policy_bytes": true,
+        "tex3ds_changed_bytes": 0,
+        "gpu_sha256": "b01fcdf4980fa8b8d8f5b1f6ec61dd09d8930e73d6da45d6d61a548520c97965"
+      }
+    }
+  ]
+}

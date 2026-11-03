@@ -1,0 +1,20 @@
+{
+  "neutral_toggle_restores_pixels": null,
+  "neutral_vs_v017": null,
+  "warm_changes_pixels": [
+    0,
+    0,
+    400,
+    240
+  ],
+  "neutral_sky": [
+    113,
+    134,
+    153
+  ],
+  "warm_sky": [
+    109,
+    134,
+    121
+  ]
+}

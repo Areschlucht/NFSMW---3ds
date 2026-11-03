@@ -1,0 +1,40 @@
+{
+  "version": "0.8",
+  "tests": {
+    "python": 43,
+    "native_scene_v1_v2_asan_ubsan": "pass",
+    "native_road_asan_ubsan": "pass",
+    "strict_arm_build": "pass",
+    "legacy_bmw_strict_build": "pass"
+  },
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "emulator_checks": [
+    "startup",
+    "original world vertex colours",
+    "static tires",
+    "acceleration",
+    "braking",
+    "reverse",
+    "steering",
+    "reset restores identical viewport",
+    "garage",
+    "controls",
+    "menu/exit",
+    "legacy NFM v1 GPU rendering"
+  ],
+  "world_vertices": 35832,
+  "world_triangles": 11944,
+  "car_triangles": 7704,
+  "car_textures": 19,
+  "car_placeholders": 7,
+  "wheels": "Provisional arch-fitted attachments, original front tire mesh reused four times, static",
+  "arch_fit_rms_m": [
+    0.00263400174486849,
+    0.0027767927554586376,
+    0.00263400174486849,
+    0.003050022740860128
+  ],
+  "ground_asset": "bit-identical to v0.7",
+  "hardware_test": "not requested; user is on phone",
+  "sha256": "a88a4fe8b80cd0adcf5c100d722f7e54aa05fc2900e1072bafe3cb37a75a444d"
+}

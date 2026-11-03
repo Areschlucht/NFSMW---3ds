@@ -1,0 +1,201 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "original_address": "0x80083680",
+  "routine_sha256": "0ebebb46aaf8e605cc45f2a23b63f5ba632df458828a61039f0031c8cca7105d",
+  "attribute_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "source_rows": [
+    {
+      "name": "default",
+      "collection_key": 4005701402,
+      "fields": {
+        "WALL_FRICTION": {
+          "field_key": 1369199537,
+          "field_name": "WALL_FRICTION",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              0.30000001192092896,
+              0.20000000298023224
+            ]
+          },
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 66576,
+          "file_offset": 66704,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00020002000400003e99999a3e4ccccd"
+        },
+        "WORLD_MOMENT_SCALE": {
+          "field_key": 76521565,
+          "field_name": "WORLD_MOMENT_SCALE",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 66400,
+          "file_offset": 66528,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "3f8000003f8000003f80000000000000"
+        },
+        "WALL_ELASTICITY": {
+          "field_key": 3191844528,
+          "field_name": "WALL_ELASTICITY",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_collection": 4005701402,
+          "stream": "bin",
+          "stream_offset": 66480,
+          "file_offset": 66608,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000000000000000000000000000"
+        }
+      }
+    },
+    {
+      "name": "cars",
+      "collection_key": 3823062013,
+      "fields": {
+        "WALL_FRICTION": {
+          "field_key": 1369199537,
+          "field_name": "WALL_FRICTION",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              0.20000000298023224,
+              0.10000000149011612
+            ]
+          },
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 69024,
+          "file_offset": 69152,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00020002000400003e4ccccd3dcccccd"
+        },
+        "WORLD_MOMENT_SCALE": {
+          "field_key": 76521565,
+          "field_name": "WORLD_MOMENT_SCALE",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            2.0,
+            2.5,
+            1000000.0,
+            0.0
+          ],
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 68848,
+          "file_offset": 68976,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "40000000402000004974240000000000"
+        },
+        "WALL_ELASTICITY": {
+          "field_key": 3191844528,
+          "field_name": "WALL_ELASTICITY",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.0,
+            0.0,
+            0.15000000596046448,
+            0.0
+          ],
+          "source_collection": 3823062013,
+          "stream": "bin",
+          "stream_offset": 68928,
+          "file_offset": 69056,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000000000003e19999a00000000"
+        }
+      }
+    },
+    {
+      "name": "racers",
+      "collection_key": 2796276001,
+      "fields": {
+        "WALL_FRICTION": {
+          "field_key": 1369199537,
+          "field_name": "WALL_FRICTION",
+          "type": "EA::Reflection::Float",
+          "value": {
+            "capacity": 2,
+            "count": 2,
+            "values": [
+              0.550000011920929,
+              0.30000001192092896
+            ]
+          },
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 72016,
+          "file_offset": 72144,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00020002000400003f0ccccd3e99999a"
+        },
+        "WORLD_MOMENT_SCALE": {
+          "field_key": 76521565,
+          "field_name": "WORLD_MOMENT_SCALE",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            3.0,
+            1.5,
+            3.0,
+            0.0
+          ],
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 71840,
+          "file_offset": 71968,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "404000003fc000004040000000000000"
+        },
+        "WALL_ELASTICITY": {
+          "field_key": 3191844528,
+          "field_name": "WALL_ELASTICITY",
+          "type": "Attrib::Types::Vector4",
+          "value": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_collection": 2796276001,
+          "stream": "bin",
+          "stream_offset": 71920,
+          "file_offset": 72048,
+          "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+          "original_bytes": "00000000000000000000000000000000"
+        }
+      }
+    }
+  ],
+  "source_surface_rows": 47,
+  "cases": 3666,
+  "branches": {
+    "0": 983,
+    "2": 1423,
+    "1": 1260
+  },
+  "nonboundary_failures": 0,
+  "failures": [],
+  "threshold_branch_differences": 0,
+  "threshold_examples": [],
+  "maximum_component_error": 0,
+  "original_math_failures": 0,
+  "original_math_maximum_error": 0,
+  "original_math_examples": [],
+  "limitations": "Bounded tangent-correction producer only. Portable sqrtf versus pinned Gekko reciprocal-estimate/Newton model; near-threshold branch differences reported explicitly. No body effective-mass/inertia solver, shape selection or integration claim."
+}

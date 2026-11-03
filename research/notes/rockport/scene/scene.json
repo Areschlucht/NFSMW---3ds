@@ -1,0 +1,579 @@
+{
+  "sectors": [
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148
+  ],
+  "models": [
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 34
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_R1",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 12
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_0",
+      "triangles": 49
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_1",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A1_2",
+      "triangles": 34
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A1_R0",
+      "triangles": 206
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A1_R1",
+      "triangles": 126
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 19
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 57
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R2",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_R3",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A18_R1",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_0",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_1",
+      "triangles": 59
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 74
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 83
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_0",
+      "triangles": 32
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A2_1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_STADIUM_01_CHOP_A2_R0",
+      "triangles": 20
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A18_R0",
+      "triangles": 6
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R0",
+      "triangles": 200
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R1",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A2_R2",
+      "triangles": 446
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R0",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R2",
+      "triangles": 41
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_R3",
+      "triangles": 39
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_0",
+      "triangles": 30
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_1",
+      "triangles": 47
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_2",
+      "triangles": 61
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A3_3",
+      "triangles": 38
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R0",
+      "triangles": 107
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R1",
+      "triangles": 95
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R2",
+      "triangles": 90
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A3_R3",
+      "triangles": 111
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R0",
+      "triangles": 81
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R1",
+      "triangles": 105
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_R2",
+      "triangles": 139
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_0",
+      "triangles": 82
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_1",
+      "triangles": 72
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_2",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A4_3",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A4_0",
+      "triangles": 10
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A4_R0",
+      "triangles": 4
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A4_R0",
+      "triangles": 101
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A4_R1",
+      "triangles": 79
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R1",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_R2",
+      "triangles": 106
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A5_R0",
+      "triangles": 30
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A5_0",
+      "triangles": 51
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 63
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_0",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A5_1",
+      "triangles": 21
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A5_R0",
+      "triangles": 222
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A5_R1",
+      "triangles": 180
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 62
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 16
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 50
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R3",
+      "triangles": 46
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R4",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R5",
+      "triangles": 32
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_R6",
+      "triangles": 45
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 98
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 36
+    },
+    {
+      "name": "TRN_CT_TERRAIN_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 99
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_0",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_1",
+      "triangles": 50
+    },
+    {
+      "name": "TRN_CT_PROPS_COLONIAL_01_CHOP_A6_2",
+      "triangles": 14
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R0",
+      "triangles": 149
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R1",
+      "triangles": 128
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R2",
+      "triangles": 6
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R3",
+      "triangles": 257
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A6_R4",
+      "triangles": 148
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_02_CHOP_A7_R0",
+      "triangles": 13
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A7_R0",
+      "triangles": 42
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_0",
+      "triangles": 15
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R0",
+      "triangles": 16
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R1",
+      "triangles": 66
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A7_R2",
+      "triangles": 55
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R0",
+      "triangles": 252
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R1",
+      "triangles": 173
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A7_R2",
+      "triangles": 221
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_R0",
+      "triangles": 29
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_0",
+      "triangles": 54
+    },
+    {
+      "name": "TRN_CT_PROPS_CITYCENTER_01_CHOP_A8_1",
+      "triangles": 60
+    },
+    {
+      "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A8_R1",
+      "triangles": 35
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R0",
+      "triangles": 95
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R2",
+      "triangles": 254
+    },
+    {
+      "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_A8_R3",
+      "triangles": 82
+    }
+  ],
+  "textures": [
+    {
+      "hash": "022076aa",
+      "name": "ARC_WALLROCK_WINDOW",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "156e7175",
+      "name": "TRNS_GRASSA_LD_GRASSA_0",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 0
+    },
+    {
+      "hash": "2f8824a9",
+      "name": "ARC_CAMPUS_PKD_LOT",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "43309f2e",
+      "name": "ARC_CAMPUS_MBWALL_CONC1",
+      "missing": false,
+      "width": 64,
+      "height": 32,
+      "flags": 0
+    },
+    {
+      "hash": "4921de2e",
+      "name": "TRNS_ALL_LA_PAVEMENTA_Y",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "499d12a6",
+      "name": "ARC_CAMPUS_HERITAGE5_KB",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "5fa6f061",
+      "name": "TRNS_ALL_LZ_SIDEWALKA_D",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "6af91977",
+      "name": "TRNS_GRAVELA_LD_GRAVELA",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "7e39544a",
+      "name": "TRN_PAINTEDCONCRETE",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 3
+    },
+    {
+      "hash": "8730aa81",
+      "name": "TER_COBBLE1",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "8730aa82",
+      "name": "TER_COBBLE2",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "8747c92d",
+      "name": "ARC_CAMPUS_PKD_STALLS",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 3
+    },
+    {
+      "hash": "914a8455",
+      "name": "TRNS_ALL_LZ_PAVEMENTA_Y",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "9717031d",
+      "name": "MD_GRASSYTILE1024",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "97fbd9bb",
+      "name": "TRNS_ALL_LZ_PAVEMENTA_P",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "9d9f58de",
+      "name": "ARC_UC_THSTAIRS_LV",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0
+    },
+    {
+      "hash": "b7bc8b97",
+      "name": "TRNS_ALL_LZ_SIDEWALKA_0",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "be10f98a",
+      "name": "TRNS_ALL_LW_PAVEMENTA_I",
+      "missing": false,
+      "width": 64,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "cc82c25a",
+      "name": "TRN_CT_HILLS_FIELDS",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "d5a08d5f",
+      "name": "RO_GENFILL_CRK",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "db34b2a4",
+      "name": "TRNS_ALL_LB_PAVEMENTA_N",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "dbd32c25",
+      "name": "TRNS_ALL_LB_PAVEMENTA_W",
+      "missing": false,
+      "width": 32,
+      "height": 128,
+      "flags": 3
+    }
+  ],
+  "vertices": 20976,
+  "triangles": 6992,
+  "ground_triangles": 2930,
+  "origin": [
+    771.6856384277344,
+    166.17621612548828,
+    -2388.2535400390625
+  ],
+  "scale": 0.0019619549113207516,
+  "spawn_source_world": [
+    376.55466715494794,
+    164.77691141764322,
+    -2434.4182942708335
+  ],
+  "spawn_local": [
+    -395.13097127278644,
+    -1.3993047078450616,
+    -46.164754231770985
+  ],
+  "heading": 0.6610089300655086,
+  "world_sha256": "223238ef83359f21a474a1709699db41e14e3215661a1567338a3a8ab7abc606",
+  "rejected": [],
+  "limitations": "Original road/terrain/props TRN meshes only; no instanced buildings, walls, wheels, original materials, engine or physics. Contact uses road render triangles, not recovered collision tables."
+}

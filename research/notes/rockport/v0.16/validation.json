@@ -1,0 +1,84 @@
+{
+  "version": "0.16",
+  "python_tests": 63,
+  "native_asan_ubsan": [
+    "road grid parity, boundaries, holes, overpasses/ties, cap/fallback and cleanup",
+    "world vertex exact packing/layout",
+    "handbrake tap/release/recovery, brake hold, 18/20/120Hz consistency",
+    "real original-road supported drift",
+    "wheel rig, rear-phase locking and failure atomicity",
+    "camera, road pose/contact, map/framebuffer, expansion seams"
+  ],
+  "strict_builds": [
+    "Rockport",
+    "legacy BMW"
+  ],
+  "world_shader_source_instructions": {
+    "previous": 28,
+    "current": 13
+  },
+  "world_gpu_vertex_bytes": {
+    "previous": 48,
+    "current": 36
+  },
+  "world_gpu_buffer_bytes": {
+    "previous": 5379696,
+    "current": 4034772
+  },
+  "road_grid": {
+    "columns": 33,
+    "rows": 20,
+    "references": 7620,
+    "average_centroid_candidates": 80.88,
+    "max_centroid_candidates": 187,
+    "linear_candidates": 5483,
+    "real_map_query_equivalence_checks": 35254
+  },
+  "drift_native_example": {
+    "entry_speed_mps": 14,
+    "tap_seconds": 0.35,
+    "steering": 0.8,
+    "entry_slip_deg": 15.9,
+    "slip_after_release_0_3s_deg": 18.4,
+    "real_road_supported": true
+  },
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "wheel_roll": [
+      158,
+      118,
+      278,
+      171
+    ],
+    "shader_vs_v015": null,
+    "dense_shader_vs_v015": null
+  },
+  "emulator": "Azahar 2126.2 / Mesa llvmpipe",
+  "emulator_checked": [
+    "world/car shader state switching",
+    "handbrake sliding/release/countersteering",
+    "acceleration/braking/edge/reverse",
+    "exact driving/camera reset",
+    "garage rolling/reset",
+    "controls/menu/exit"
+  ],
+  "prior_hardware_feedback": {
+    "version": "0.15",
+    "stock_fps_user_report": "18\u201340",
+    "combined_804MHz_L2_fps_user_report": "50\u201360",
+    "crowded_gpu_ms_user_report": 22,
+    "world_draw_calls_user_report": "about200"
+  },
+  "new_hardware_result": null,
+  "assets": "Same world/road/textures/car/rig as v0.15; compact world GPU format is runtime-only",
+  "limitations": [
+    "Original physics parameters/systems not yet recovered",
+    "Partial map; scenery/camera collision absent",
+    "Actual stock-clock FPS improvement awaits hardware comparison",
+    "No Old3DS validation"
+  ],
+  "zip_sha256": "dba049cc1c8aaf1fc62f19de9c7cfb80a47b8ecb8272b7a2d979fce45dfbc7ec",
+  "tested_binary_sha256": "70115c83d5c5659b5bdf78663412b1e06462180bfc38a4b344edc0813723c0a3",
+  "zip_payload_check": "pass"
+}

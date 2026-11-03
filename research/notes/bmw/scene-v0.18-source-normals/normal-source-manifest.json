@@ -1,0 +1,807 @@
+{
+  "source_geometry_sha256": "03d1dc2ed47850a39c3cf75fd883783bcf03712ece3f43280f0160ee94c9fcae",
+  "reference_nfm_sha256": "c4dc51512f5982748f949e573ffda1fbaadbf06a97049b864ce1533b8eebe75f",
+  "reference_nfm_payload_crc32": "94e3c943",
+  "vertex_count": 23112,
+  "bitwise_position_uv_matches": 23112,
+  "normals_sha256": "c4d2909a448aa16666077964250cafad74cbff6aae267230d48d54f078eda499",
+  "provenance_sha256": "7c1e819ed57de47b2fd8c60ee72dcad9c2d2b38d395b155a882b8b245c3ca8df",
+  "normal_layout": "per expanded NFMvertex3float32LE xyz,12bytes; no normalization or smoothing",
+  "provenance_layout": "pervertex5uint32LE(partindex,sourcefaceindex,cornerindex,normalindex,originalshaderhash)",
+  "source_format": {
+    "gx_vat": 2,
+    "gx_attr": 10,
+    "component_count": "XYZ",
+    "component_type": "S8",
+    "fractional_bits": 6,
+    "array_stride": 4
+  },
+  "viewer_basis": "source(nx,ny,nz)\u2192viewer(nx,nz,-ny); fittedwheel pretransform=(-side*nx,-side*ny,nz), side+1left/-1right",
+  "source_normal_length": [
+    0.9828857782697845,
+    1.0074187699884294
+  ],
+  "parts": [
+    {
+      "index": 0,
+      "name": "BMWM3GTRE46_BASE_B",
+      "wheel_group": 0,
+      "source_normals": 153,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 1,
+      "name": "BMWM3GTRE46_KIT00_BODY_B",
+      "wheel_group": 0,
+      "source_normals": 3952,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 2,
+      "name": "BMWM3GTRE46_KIT00_FRONT_LEFT_WINDOW_B",
+      "wheel_group": 0,
+      "source_normals": 9,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 3,
+      "name": "BMWM3GTRE46_KIT00_FRONT_RIGHT_WINDOW_B",
+      "wheel_group": 0,
+      "source_normals": 9,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 4,
+      "name": "BMWM3GTRE46_KIT00_FRONT_WINDOW_B",
+      "wheel_group": 0,
+      "source_normals": 40,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 5,
+      "name": "BMWM3GTRE46_KIT00_INTERIOR_B",
+      "wheel_group": 0,
+      "source_normals": 674,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        -1.7484555314695172e-07,
+        0.0,
+        0.0,
+        1.7484555314695172e-07,
+        1.0,
+        -1.7484555314695172e-07,
+        0.0,
+        3.057096744263528e-14,
+        1.7484555314695172e-07,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 6,
+      "name": "BMWM3GTRE46_KIT00_LEFT_BRAKELIGHT_B",
+      "wheel_group": 0,
+      "source_normals": 54,
+      "wheel_side": null,
+      "source_transform": [
+        6.464663471206222e-08,
+        0.9999997019767761,
+        8.6463529669345e-09,
+        0.0,
+        -1.4024627148501168e-07,
+        3.0031646502948206e-08,
+        0.9999999403953552,
+        0.0,
+        0.9999997615814209,
+        -7.192989670556926e-08,
+        -4.276818010851002e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 7,
+      "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_B",
+      "wheel_group": 0,
+      "source_normals": 147,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 8,
+      "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_GLASS_B",
+      "wheel_group": 0,
+      "source_normals": 30,
+      "wheel_side": null,
+      "source_transform": [
+        1.6292068494294654e-07,
+        -1.0,
+        4.470347647611561e-08,
+        0.0,
+        -1.6292069915380125e-07,
+        4.470345160711986e-08,
+        1.0,
+        0.0,
+        1.0,
+        1.6292068494294654e-07,
+        1.6292068494294654e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 9,
+      "name": "BMWM3GTRE46_KIT00_REAR_LEFT_WINDOW_B",
+      "wheel_group": 0,
+      "source_normals": 24,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 10,
+      "name": "BMWM3GTRE46_KIT00_REAR_RIGHT_WINDOW_B",
+      "wheel_group": 0,
+      "source_normals": 24,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 11,
+      "name": "BMWM3GTRE46_KIT00_REAR_WINDOW_B",
+      "wheel_group": 0,
+      "source_normals": 44,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 12,
+      "name": "BMWM3GTRE46_KIT00_RIGHT_BRAKELIGHT_B",
+      "wheel_group": 0,
+      "source_normals": 54,
+      "wheel_side": null,
+      "source_transform": [
+        1.629206423103824e-07,
+        -0.9999998211860657,
+        4.470345160711986e-08,
+        0.0,
+        -1.7863040113752504e-07,
+        4.4703462265260896e-08,
+        1.0,
+        0.0,
+        0.9999999403953552,
+        1.6292067073209182e-07,
+        1.4762117928057705e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 13,
+      "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_B",
+      "wheel_group": 0,
+      "source_normals": 145,
+      "wheel_side": null,
+      "source_transform": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -1.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 14,
+      "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+      "wheel_group": 0,
+      "source_normals": 30,
+      "wheel_side": null,
+      "source_transform": [
+        1.6292068494294654e-07,
+        1.0,
+        4.470347292340193e-08,
+        0.0,
+        -1.6236361943811062e-07,
+        -4.470345515983354e-08,
+        0.9999999403953552,
+        0.0,
+        0.9999999403953552,
+        -1.6292071336465597e-07,
+        1.6236361943811062e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 15,
+      "name": "PROVISIONAL_TIRE_FRONT_LEFT",
+      "wheel_group": 1,
+      "source_normals": 633,
+      "wheel_side": 1,
+      "source_transform": [
+        1.0,
+        -8.742277657347586e-08,
+        -8.742277657347586e-08,
+        0.0,
+        8.742279078433057e-08,
+        1.0,
+        8.742277657347586e-08,
+        0.0,
+        8.74227694680485e-08,
+        -8.742278367890322e-08,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 16,
+      "name": "PROVISIONAL_TIRE_REAR_LEFT",
+      "wheel_group": 2,
+      "source_normals": 633,
+      "wheel_side": 1,
+      "source_transform": [
+        1.0,
+        -8.742277657347586e-08,
+        -8.742277657347586e-08,
+        0.0,
+        8.742279078433057e-08,
+        1.0,
+        8.742277657347586e-08,
+        0.0,
+        8.74227694680485e-08,
+        -8.742278367890322e-08,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 17,
+      "name": "PROVISIONAL_TIRE_FRONT_RIGHT",
+      "wheel_group": 3,
+      "source_normals": 633,
+      "wheel_side": -1,
+      "source_transform": [
+        1.0,
+        -8.742277657347586e-08,
+        -8.742277657347586e-08,
+        0.0,
+        8.742279078433057e-08,
+        1.0,
+        8.742277657347586e-08,
+        0.0,
+        8.74227694680485e-08,
+        -8.742278367890322e-08,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "index": 18,
+      "name": "PROVISIONAL_TIRE_REAR_RIGHT",
+      "wheel_group": 4,
+      "source_normals": 633,
+      "wheel_side": -1,
+      "source_transform": [
+        1.0,
+        -8.742277657347586e-08,
+        -8.742277657347586e-08,
+        0.0,
+        8.742279078433057e-08,
+        1.0,
+        8.742277657347586e-08,
+        0.0,
+        8.74227694680485e-08,
+        -8.742278367890322e-08,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "first": 0,
+      "count": 468,
+      "texture": "7b220ddf",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "471a1dca": 468
+      }
+    },
+    {
+      "first": 468,
+      "count": 1077,
+      "texture": "1b049702",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "3ed70c43": 744,
+        "010cb64a": 333
+      }
+    },
+    {
+      "first": 1545,
+      "count": 2325,
+      "texture": "e7b0e36c",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "54949afd": 618,
+        "12c9453c": 540,
+        "2e65e067": 258,
+        "0fedee40": 909
+      }
+    },
+    {
+      "first": 3870,
+      "count": 960,
+      "texture": "cc772afb",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "dcd01662": 960
+      }
+    },
+    {
+      "first": 4830,
+      "count": 7071,
+      "texture": "de3ad3c6",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "d6d6080a": 7071
+      }
+    },
+    {
+      "first": 11901,
+      "count": 6,
+      "texture": "4c95c6f8",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "4c95c6f8": 6
+      }
+    },
+    {
+      "first": 11907,
+      "count": 60,
+      "texture": "23ef5d6c",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "02a05578": 60
+      }
+    },
+    {
+      "first": 11967,
+      "count": 141,
+      "texture": "bd1f0e0a",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "52bf4c34": 141
+      }
+    },
+    {
+      "first": 12108,
+      "count": 24,
+      "texture": "721aff7c",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "b57ab98e": 24
+      }
+    },
+    {
+      "first": 12132,
+      "count": 2178,
+      "texture": "2590276c",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "2787edab": 2178
+      }
+    },
+    {
+      "first": 14310,
+      "count": 240,
+      "texture": "d947f346",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "05bc3a3c": 84,
+        "12c9453c": 156
+      }
+    },
+    {
+      "first": 14550,
+      "count": 384,
+      "texture": "a7e6ea53",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "b51b3acf": 60,
+        "12c9453c": 261,
+        "54949afd": 63
+      }
+    },
+    {
+      "first": 14934,
+      "count": 93,
+      "texture": "267d188c",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "a6348ee3": 93
+      }
+    },
+    {
+      "first": 15027,
+      "count": 240,
+      "texture": "02b52399",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "05bc3a3c": 84,
+        "12c9453c": 156
+      }
+    },
+    {
+      "first": 15267,
+      "count": 384,
+      "texture": "a532fc46",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "b51b3acf": 60,
+        "12c9453c": 261,
+        "54949afd": 63
+      }
+    },
+    {
+      "first": 15651,
+      "count": 93,
+      "texture": "f68ef19f",
+      "wheel_group": 0,
+      "original_shader_corner_counts": {
+        "a6348ee3": 93
+      }
+    },
+    {
+      "first": 15744,
+      "count": 1716,
+      "texture": "e7b4b9f4",
+      "wheel_group": 1,
+      "original_shader_corner_counts": {
+        "78743ca1": 240,
+        "22719fa9": 1410,
+        "0fedee40": 6,
+        "010cb64a": 60
+      }
+    },
+    {
+      "first": 17460,
+      "count": 6,
+      "texture": "e38806e3",
+      "wheel_group": 1,
+      "original_shader_corner_counts": {
+        "010cb64a": 6
+      }
+    },
+    {
+      "first": 17466,
+      "count": 120,
+      "texture": "03c906ef",
+      "wheel_group": 1,
+      "original_shader_corner_counts": {
+        "78743ca1": 120
+      }
+    },
+    {
+      "first": 17586,
+      "count": 1716,
+      "texture": "e7b4b9f4",
+      "wheel_group": 2,
+      "original_shader_corner_counts": {
+        "78743ca1": 240,
+        "22719fa9": 1410,
+        "0fedee40": 6,
+        "010cb64a": 60
+      }
+    },
+    {
+      "first": 19302,
+      "count": 6,
+      "texture": "e38806e3",
+      "wheel_group": 2,
+      "original_shader_corner_counts": {
+        "010cb64a": 6
+      }
+    },
+    {
+      "first": 19308,
+      "count": 120,
+      "texture": "03c906ef",
+      "wheel_group": 2,
+      "original_shader_corner_counts": {
+        "78743ca1": 120
+      }
+    },
+    {
+      "first": 19428,
+      "count": 1716,
+      "texture": "e7b4b9f4",
+      "wheel_group": 3,
+      "original_shader_corner_counts": {
+        "78743ca1": 240,
+        "22719fa9": 1410,
+        "0fedee40": 6,
+        "010cb64a": 60
+      }
+    },
+    {
+      "first": 21144,
+      "count": 6,
+      "texture": "e38806e3",
+      "wheel_group": 3,
+      "original_shader_corner_counts": {
+        "010cb64a": 6
+      }
+    },
+    {
+      "first": 21150,
+      "count": 120,
+      "texture": "03c906ef",
+      "wheel_group": 3,
+      "original_shader_corner_counts": {
+        "78743ca1": 120
+      }
+    },
+    {
+      "first": 21270,
+      "count": 1716,
+      "texture": "e7b4b9f4",
+      "wheel_group": 4,
+      "original_shader_corner_counts": {
+        "78743ca1": 240,
+        "22719fa9": 1410,
+        "0fedee40": 6,
+        "010cb64a": 60
+      }
+    },
+    {
+      "first": 22986,
+      "count": 6,
+      "texture": "e38806e3",
+      "wheel_group": 4,
+      "original_shader_corner_counts": {
+        "010cb64a": 6
+      }
+    },
+    {
+      "first": 22992,
+      "count": 120,
+      "texture": "03c906ef",
+      "wheel_group": 4,
+      "original_shader_corner_counts": {
+        "78743ca1": 120
+      }
+    }
+  ],
+  "limitations": [
+    "Wheel attachment positions remain the existing fitted rig, not original axle metadata",
+    "Current scene batches merge original shader hashes; source normals alone do not establish original material/lighting",
+    "Header transforms are not reapplied; current source positions are baked and bitwise match the reference"
+  ],
+  "patch_contract": "Root may replace only bytes12..23 of each NFMv1vertex with normals.bin then update payloadCRC and wheelrigbinding; firstvalidate fullreferenceSHA/count/order",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "original_code": [
+    {
+      "name": "VAT2_normal_format",
+      "start": "8010e458",
+      "end_exclusive": "8010e470",
+      "file_offset": 1094744,
+      "sha256": "997c65f56626fab1b446d8c31c552089482dff12f30599238910ffe97b929897"
+    },
+    {
+      "name": "normal_pointer",
+      "start": "80116d4c",
+      "end_exclusive": "80116da4",
+      "file_offset": 1129804,
+      "sha256": "e79f7d0381103547c51af379525df5219c4823d50446d2ec8c7528276450a47c"
+    },
+    {
+      "name": "normal_array_bind",
+      "start": "801170a8",
+      "end_exclusive": "801170c0",
+      "file_offset": 1130664,
+      "sha256": "15d04702564f0f412962f919678bb6e7d5a4bdc369b39eaa436ac15db61c1023"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "instruction": 2147771652,
+    "origin": 2147771648,
+    "target": 2151483152,
+    "register": 3
+  },
+  {
+    "instruction": 2147913672,
+    "origin": 2147913656,
+    "target": 2151490040,
+    "register": 6
+  },
+  {
+    "instruction": 2148010884,
+    "origin": 2148010876,
+    "target": 2151490040,
+    "register": 29
+  },
+  {
+    "instruction": 2148010892,
+    "origin": 2148010876,
+    "target": 2151490040,
+    "register": 3
+  },
+  {
+    "instruction": 2148016772,
+    "origin": 2148016768,
+    "target": 2151489936,
+    "register": 3
+  },
+  {
+    "instruction": 2149315368,
+    "origin": 2149315356,
+    "target": 2151601864,
+    "register": 4
+  },
+  {
+    "instruction": 2149315376,
+    "origin": 2149315364,
+    "target": 2151601884,
+    "register": 6
+  },
+  {
+    "instruction": 2149315748,
+    "origin": 2149315740,
+    "target": 2151602108,
+    "register": 4
+  },
+  {
+    "instruction": 2149406224,
+    "origin": 2149406216,
+    "target": 2151611408,
+    "register": 5
+  },
+  {
+    "instruction": 2149406292,
+    "origin": 2149406288,
+    "target": 2151611408,
+    "register": 3
+  },
+  {
+    "instruction": 2149406604,
+    "origin": 2149406600,
+    "target": 2151611444,
+    "register": 3
+  },
+  {
+    "instruction": 2149661116,
+    "origin": 2149661108,
+    "target": 2151640872,
+    "register": 3
+  }
+]

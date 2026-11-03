@@ -1,0 +1,44 @@
+{
+  "build": "v0.6",
+  "python_tests": 34,
+  "strict_arm_build": "pass",
+  "road_contact_asan_ubsan": "pass",
+  "source_sectors": [
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148
+  ],
+  "world_triangles": 6992,
+  "ground_triangles": 2930,
+  "world_textures_recovered": 22,
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "checked": [
+    "startup",
+    "original world textured rendering",
+    "accelerate",
+    "brake",
+    "reverse",
+    "steer",
+    "handbrake input",
+    "reset restores identical viewport",
+    "return to menu",
+    "garage",
+    "controls",
+    "clean exit"
+  ],
+  "final_hud_build_rechecked": [
+    "startup",
+    "drive/reset",
+    "accelerate",
+    "stable speed display",
+    "menu and exit"
+  ],
+  "physical_performance": "not measured",
+  "artifact": "dist/nfsmw-rockport-prototype-v0.6.zip",
+  "sha256": "28f7ac09e733e0085a1cec348494a1cc953595eb672bfe5adf0855392cf882e1"
+}

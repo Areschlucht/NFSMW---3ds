@@ -1,0 +1,60 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "brake_collections": 82,
+  "lock_and_free_spin_cases": 11480,
+  "rear_grip_assist_cases": 1028,
+  "comparison": "exact float32 bits and integer state",
+  "lock_va": "0x802462D0",
+  "spin_transition_va": "0x802463B0",
+  "free_spin_va": "0x8024644C",
+  "bmw_rear_handbrake_trace": [
+    {
+      "initial_omega": -1000,
+      "contact_force_argument": 10000.0,
+      "locked": 0,
+      "result_omega": -1000.0
+    },
+    {
+      "initial_omega": -20,
+      "contact_force_argument": 100000.0,
+      "locked": 0,
+      "result_omega": -20.0
+    },
+    {
+      "initial_omega": -0.001,
+      "contact_force_argument": 10000.0,
+      "locked": 1,
+      "result_omega": 0.0
+    },
+    {
+      "initial_omega": 0,
+      "contact_force_argument": 0.0,
+      "locked": 1,
+      "result_omega": 0.0
+    },
+    {
+      "initial_omega": 0.001,
+      "contact_force_argument": 100000.0,
+      "locked": 0,
+      "result_omega": 0.0010000000474974513
+    },
+    {
+      "initial_omega": 20,
+      "contact_force_argument": 0.0,
+      "locked": 1,
+      "result_omega": 0.0
+    },
+    {
+      "initial_omega": 1000,
+      "contact_force_argument": 0.0,
+      "locked": 0,
+      "result_omega": 1000.0
+    }
+  ],
+  "limitations": [
+    "contact tire solver and input routing are not emulated here",
+    "initialized calibration globals, not arbitrary game-time tuning states",
+    "no whole-vehicle handling fidelity claim"
+  ]
+}

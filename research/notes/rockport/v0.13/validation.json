@@ -1,0 +1,49 @@
+{
+  "version": "0.13",
+  "python_tests": 56,
+  "strict_arm_build": "pass",
+  "native_scene_asan_ubsan": "pass",
+  "native_road_contact_asan_ubsan": "pass",
+  "emulator": "Azahar 2126.2 / llvmpipe software OpenGL",
+  "emulator_fps": "App: 60 FPS at 100% speed in captured run; not physical console measurement",
+  "checked": [
+    "restored solid walls",
+    "dark asphalt and lane markings",
+    "foliage/fence alpha retained",
+    "acceleration",
+    "road-edge stop",
+    "reverse",
+    "driving reset",
+    "garage rolling and reset",
+    "controls/menu/exit"
+  ],
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "wheel_roll": [
+      158,
+      118,
+      278,
+      171
+    ]
+  },
+  "world_textures": 100,
+  "corrected_images": 35,
+  "solid_textures": 91,
+  "alpha_tested_textures": 8,
+  "blended_textures": 1,
+  "world_triangles": 19497,
+  "world_geometry_matches_v012": true,
+  "road_asset_matches_v012": true,
+  "car_assets_unchanged": true,
+  "hardware_feedback": "User reports v0.12 ran very well on New 3DS without overclocking, like earlier tested builds; no direct FPS measurement",
+  "limitations": [
+    "Full layered/reflective/night material effects unresolved",
+    "Original alpha-test threshold not reproduced",
+    "Transparent depth sorting unfinished",
+    "Missing scenery and scenery collisions unresolved"
+  ],
+  "zip_sha256": "04907c1f8d17f364b05eb85ae74d4a934a5007d681f0369f44d9170b40441c6a",
+  "binary_sha256": "440ee057ab6e89d24f7ce0e7ba455e95f27cd0f91f884cb888ce87a4d4a8fc55",
+  "zip_integrity_and_assets": "pass"
+}

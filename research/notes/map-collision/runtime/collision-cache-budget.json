@@ -1,0 +1,15 @@
+{
+  "nwc_sha256": "3db8a855c9b862d02d6095cc89c85736dfcd5534a00602b3a66680cfbc9acc7d",
+  "dependency_rows": 435,
+  "single_viewpoint_maximum_bytes": 380848,
+  "single_viewpoint_maximum_dependency_id": 730,
+  "single_viewpoint_median_bytes": 149456,
+  "single_viewpoint_p95_bytes": 270368,
+  "two_viewpoint_maximum_bytes": 684608,
+  "two_viewpoint_maximum_dependency_ids": [
+    717,
+    730
+  ],
+  "two_mib_arena_covers_all_normal_original_dependency_plans": true,
+  "limitations": "Collision cache only, original normal-mode dependencies plus resident banks. Excludes render geometry/textures/car/audio/UI and future dynamic special groups. No permanent all-world allocation required."
+}

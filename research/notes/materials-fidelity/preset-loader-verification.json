@@ -1,0 +1,27 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "loader_start": "802db494",
+  "cases": [
+    {
+      "records": 1,
+      "matched": true,
+      "compared_bytes": 648
+    },
+    {
+      "records": 2,
+      "matched": true,
+      "compared_bytes": 1296
+    },
+    {
+      "records": 5,
+      "matched": true,
+      "compared_bytes": 3240
+    },
+    {
+      "records": 32,
+      "matched": true,
+      "compared_bytes": 20736
+    }
+  ],
+  "scope": "Synthetic record transformations compared against original PPC loader; canonical record contents still require original preset chunk"
+}

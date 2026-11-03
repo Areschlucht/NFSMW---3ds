@@ -1,0 +1,88 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "consumer_va": "0x802460B0",
+  "initialization_range": [
+    "0x80265868",
+    "0x802659A0"
+  ],
+  "original_sample_range": [
+    "0x8041F288",
+    "0x8041F330"
+  ],
+  "tire_collections": 86,
+  "float_bit_cases": 11352,
+  "comparison": "exact IEEE754 float32 bits",
+  "bmw_rear_trace": [
+    {
+      "angle_degrees": 0,
+      "wheel_scale": 1.0,
+      "force_result": 0.0,
+      "float32_be": "00000000"
+    },
+    {
+      "angle_degrees": 0.001,
+      "wheel_scale": 1.0,
+      "force_result": 2.8481249809265137,
+      "float32_be": "403647ae"
+    },
+    {
+      "angle_degrees": 1,
+      "wheel_scale": 0.5,
+      "force_result": 1424.0625,
+      "float32_be": "44b20200"
+    },
+    {
+      "angle_degrees": 2,
+      "wheel_scale": 1.0,
+      "force_result": 5696.25,
+      "float32_be": "45b20200"
+    },
+    {
+      "angle_degrees": 4,
+      "wheel_scale": 0.5,
+      "force_result": 3981.250244140625,
+      "float32_be": "4578d401"
+    },
+    {
+      "angle_degrees": 6,
+      "wheel_scale": 1.5,
+      "force_result": 12954.375,
+      "float32_be": "464a6980"
+    },
+    {
+      "angle_degrees": 8,
+      "wheel_scale": 1.0,
+      "force_result": 8856.75,
+      "float32_be": "460a6300"
+    },
+    {
+      "angle_degrees": 10,
+      "wheel_scale": 1.5,
+      "force_result": 13615.875,
+      "float32_be": "4654bf80"
+    },
+    {
+      "angle_degrees": 12,
+      "wheel_scale": 1.0,
+      "force_result": 9310.0,
+      "float32_be": "46117800"
+    },
+    {
+      "angle_degrees": 20,
+      "wheel_scale": 1.0,
+      "force_result": 9310.0,
+      "float32_be": "46117800"
+    },
+    {
+      "angle_degrees": 60.84345505221563,
+      "wheel_scale": 1.0,
+      "force_result": 9310.0,
+      "float32_be": "46117800"
+    }
+  ],
+  "limitations": [
+    "original initialized curve data; later runtime tuning not modeled",
+    "upstream scalar force stage only; combined-slip saturation and contact dynamics remain separate"
+  ]
+}

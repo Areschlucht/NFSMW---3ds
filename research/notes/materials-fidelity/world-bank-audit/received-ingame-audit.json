@@ -1,0 +1,321 @@
+{
+  "wanted": [
+    "2d5ad26a",
+    "61a56b42",
+    "6dc61680",
+    "7e2734a8",
+    "7e2734a9",
+    "8b335c76",
+    "8c58916b",
+    "8de70662"
+  ],
+  "banks": [
+    {
+      "path": "/workspace/attachments/03d43516-a501-4217-aca3-3713a3cbaf39/GLOBAL-INGAMEB.BUN",
+      "bytes": 115832,
+      "sha256": "040eee391c818842b6dab39f2fa546fd97421311e312b0f4cbac2226127f1506",
+      "texture_key_count": 46,
+      "matched": []
+    },
+    {
+      "path": "/workspace/attachments/3716fced-9974-45db-bfd3-3d43e8d65ca1/GLOBAL-INGAMEA.BUN",
+      "bytes": 200704,
+      "sha256": "0e3543f534cb94b113168a1b5f6b7a7224b32d12986fb18253b937f16c293d79",
+      "texture_key_count": 128,
+      "matched": [
+        {
+          "hash": "2d5ad26a",
+          "reference_word1": "00000000",
+          "package_name": "INGAME",
+          "key_file_offset": 396,
+          "package_offset": 0,
+          "package_bytes": 107136,
+          "package_complete": true
+        },
+        {
+          "hash": "8c58916b",
+          "reference_word1": "00000000",
+          "package_name": "INGAME",
+          "key_file_offset": 660,
+          "package_offset": 0,
+          "package_bytes": 107136,
+          "package_complete": true
+        }
+      ]
+    },
+    {
+      "path": "/workspace/attachments/5eb50459-e78b-4b4a-83bf-9026bd60c9f9/GLOBAL-INGAMEB_VM_NGC.BUN",
+      "bytes": 657088,
+      "sha256": "4164d8be4fd215d682b803202055abc10ffcb28a56942645e6554b3e7dac57fc",
+      "texture_key_count": 0,
+      "matched": []
+    },
+    {
+      "path": "/workspace/attachments/46e2fcd5-c36a-4605-ab91-27da56fd730e/GLOBAL-INGAMEMEMORYFILE.BIN",
+      "bytes": 79599,
+      "sha256": "2b0f10340f8f3fa0849d4aa463bfcbfb4993ed1db94c400136676407ce919da2",
+      "memory_entries": [
+        {
+          "key": "f9f11de1",
+          "directory_offset": 16,
+          "offset": 528,
+          "logical_bytes": 15547,
+          "stored_bytes": 15547,
+          "original_address": "00941000",
+          "sha256": "a90ac15b8c202b98b3729f83290aa177a2b51925d3b1ed29bde38e2bab77bf12",
+          "textures": []
+        },
+        {
+          "key": "f9f114f1",
+          "directory_offset": 36,
+          "offset": 16080,
+          "logical_bytes": 5136,
+          "stored_bytes": 5136,
+          "original_address": "00946000",
+          "sha256": "df9cbefc9eb5a0a09df1fcbe2579aa2775046f1a0b39c36cf3626f34c625b8a8",
+          "textures": []
+        },
+        {
+          "key": "059cb8d8",
+          "directory_offset": 56,
+          "offset": 21216,
+          "logical_bytes": 484,
+          "stored_bytes": 484,
+          "original_address": "00948000",
+          "sha256": "2ee0d06885528fe929edf9597e7f592023c2a792a3eba67ca806271b999a6827",
+          "textures": []
+        },
+        {
+          "key": "059cc78e",
+          "directory_offset": 76,
+          "offset": 21712,
+          "logical_bytes": 892,
+          "stored_bytes": 892,
+          "original_address": "00949000",
+          "sha256": "7cfe83461b55c6a20ee24b4f5c62eb8c4c9231a71975ec5c83ccc2d9571ef649",
+          "textures": []
+        },
+        {
+          "key": "059cafe8",
+          "directory_offset": 96,
+          "offset": 22608,
+          "logical_bytes": 156,
+          "stored_bytes": 156,
+          "original_address": "0094b000",
+          "sha256": "7eb4bb060fbf7e584c422c261ff35d8eff01b9df339bfd558a30d68cb582c55b",
+          "textures": []
+        },
+        {
+          "key": "aab5b207",
+          "directory_offset": 116,
+          "offset": 22768,
+          "logical_bytes": 192,
+          "stored_bytes": 192,
+          "original_address": "0094c000",
+          "sha256": "979f44f66d55a1315eeb4d2e805717f490ac73e83b9a016598c43e588c8ae8e2",
+          "textures": []
+        },
+        {
+          "key": "0565cc4e",
+          "directory_offset": 136,
+          "offset": 22960,
+          "logical_bytes": 176,
+          "stored_bytes": 176,
+          "original_address": "0094d000",
+          "sha256": "4ff3d1f95426902f295298c6b16a456669aa5c7a29daae69476307ed39dc9e44",
+          "textures": []
+        },
+        {
+          "key": "b2211f80",
+          "directory_offset": 156,
+          "offset": 23136,
+          "logical_bytes": 336,
+          "stored_bytes": 336,
+          "original_address": "0094e000",
+          "sha256": "8c8386e96e66107242fd0774439306d69bdc4c99b2172a22e3b42901c5f7b0a7",
+          "textures": []
+        },
+        {
+          "key": "85bd8d11",
+          "directory_offset": 176,
+          "offset": 23472,
+          "logical_bytes": 240,
+          "stored_bytes": 240,
+          "original_address": "0094f000",
+          "sha256": "3c27eb6e65ed33e9fdb2c4a6d5abdff7b0d0192240f3e0913a7e931ee1a33da5",
+          "textures": []
+        },
+        {
+          "key": "1c4fbd37",
+          "directory_offset": 196,
+          "offset": 23712,
+          "logical_bytes": 196,
+          "stored_bytes": 196,
+          "original_address": "00950000",
+          "sha256": "27ee13d02321e2b63ee1eb2ed1f72c845dcc39bfc8fa630ec5ebbfc1e0183dc0",
+          "textures": []
+        },
+        {
+          "key": "64404f61",
+          "directory_offset": 216,
+          "offset": 23920,
+          "logical_bytes": 160,
+          "stored_bytes": 160,
+          "original_address": "00951000",
+          "sha256": "5365a7bc586a1ac92a3c2f6773c26bcf5cf0d74b12fe0c81962d36c5b12f2628",
+          "textures": []
+        },
+        {
+          "key": "ab4e9cb4",
+          "directory_offset": 236,
+          "offset": 24080,
+          "logical_bytes": 160,
+          "stored_bytes": 160,
+          "original_address": "00952000",
+          "sha256": "8f84343e662d1a2e3b00e71c7709d71942f5cc4c06c624c25bece1d7c6e08970",
+          "textures": []
+        },
+        {
+          "key": "2a8f7f1a",
+          "directory_offset": 256,
+          "offset": 24240,
+          "logical_bytes": 196,
+          "stored_bytes": 196,
+          "original_address": "00953000",
+          "sha256": "42cc1f869263d347e3eba92d3cbb25cc90f623605b46182ef38dac3575fda29b",
+          "textures": []
+        },
+        {
+          "key": "58d1b8d7",
+          "directory_offset": 276,
+          "offset": 24448,
+          "logical_bytes": 256,
+          "stored_bytes": 256,
+          "original_address": "00954000",
+          "sha256": "e335d89830b6f71f704b9582605ebe793e10e431ad4d3dc5260d66460faa26d6",
+          "textures": []
+        },
+        {
+          "key": "43bc69c2",
+          "directory_offset": 296,
+          "offset": 24704,
+          "logical_bytes": 256,
+          "stored_bytes": 256,
+          "original_address": "00955000",
+          "sha256": "e335d89830b6f71f704b9582605ebe793e10e431ad4d3dc5260d66460faa26d6",
+          "textures": []
+        },
+        {
+          "key": "3a0f2f2c",
+          "directory_offset": 316,
+          "offset": 24960,
+          "logical_bytes": 192,
+          "stored_bytes": 192,
+          "original_address": "00956000",
+          "sha256": "2f757a7732792a7a32f0f649e02d93bcd68c020a93979834dec41bf9ab5f835e",
+          "textures": []
+        },
+        {
+          "key": "1f164861",
+          "directory_offset": 336,
+          "offset": 25152,
+          "logical_bytes": 192,
+          "stored_bytes": 192,
+          "original_address": "00957000",
+          "sha256": "b5745c4c3aed070100411ec0d11b84595a4836cd0cd4894126d09581adc82f5d",
+          "textures": []
+        },
+        {
+          "key": "8f11660f",
+          "directory_offset": 356,
+          "offset": 25344,
+          "logical_bytes": 196,
+          "stored_bytes": 196,
+          "original_address": "00958000",
+          "sha256": "53e6b0292c9994a92f7a046dc3e995cd517db1561b879ea1cc55aacf7f809293",
+          "textures": []
+        },
+        {
+          "key": "bffff2fa",
+          "directory_offset": 376,
+          "offset": 25552,
+          "logical_bytes": 196,
+          "stored_bytes": 196,
+          "original_address": "00959000",
+          "sha256": "dcb25d1a9dc61172c305b121b79186cd19808e0fbdcff1d0ac580feb0e5e96e0",
+          "textures": []
+        },
+        {
+          "key": "1d783e3a",
+          "directory_offset": 396,
+          "offset": 25760,
+          "logical_bytes": 296,
+          "stored_bytes": 296,
+          "original_address": "0095a000",
+          "sha256": "cbbabff75a101f84c6d81d49a030858e7c7cefc79487cb19dcb45099cbd0f111",
+          "textures": []
+        },
+        {
+          "key": "88c08663",
+          "directory_offset": 416,
+          "offset": 26064,
+          "logical_bytes": 10008,
+          "stored_bytes": 10008,
+          "original_address": "0095c000",
+          "sha256": "9e1d3dbce7ebf523b86d033d4d1084e5a1849b7f93ce4cc209037eeda7088a33",
+          "textures": []
+        },
+        {
+          "key": "369034ca",
+          "directory_offset": 436,
+          "offset": 36080,
+          "logical_bytes": 10008,
+          "stored_bytes": 10008,
+          "original_address": "0095f000",
+          "sha256": "cd46a6f006967aaf8d2901486ed5aab1881829143778fae14c34b738e6eb3cbc",
+          "textures": []
+        },
+        {
+          "key": "38e55d6b",
+          "directory_offset": 456,
+          "offset": 46096,
+          "logical_bytes": 10008,
+          "stored_bytes": 10008,
+          "original_address": "00962000",
+          "sha256": "2668fa5bc92c79a7340761e6f1196859a9f5045bbce4a1cb517010699db320e8",
+          "textures": []
+        },
+        {
+          "key": "c25ece40",
+          "directory_offset": 476,
+          "offset": 56112,
+          "logical_bytes": 10008,
+          "stored_bytes": 10008,
+          "original_address": "00966000",
+          "sha256": "12a4c68cd45b3f23a67a1b5d0a77c8045b78f2993e686661175d11c864a8fcf0",
+          "textures": []
+        },
+        {
+          "key": "51ee2fba",
+          "directory_offset": 496,
+          "offset": 66128,
+          "logical_bytes": 13471,
+          "stored_bytes": 13471,
+          "original_address": "00969000",
+          "sha256": "b65a4c856e7c33716d85b807a1b320b432ff0d935f54481be3b48839802cfca0",
+          "textures": []
+        }
+      ],
+      "texture_key_count": 0,
+      "matched": []
+    }
+  ],
+  "unresolved": [
+    "61a56b42",
+    "6dc61680",
+    "7e2734a8",
+    "7e2734a9",
+    "8b335c76",
+    "8de70662"
+  ]
+}

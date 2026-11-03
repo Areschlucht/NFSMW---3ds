@@ -1,0 +1,3382 @@
+{
+  "banks": [
+    {
+      "path": "/workspace/attachments/747309ca-6443-4119-8b61-2e36ee3bf586/GLOBAL-GLOBALA.BUN",
+      "bytes": 89588,
+      "sha256": "980351c79b54ea5f4f4d368a0a4e542b44a74f30c48386c1b60858a4fe5e50e2",
+      "models": [],
+      "textures": [
+        {
+          "hash": "0cd55e13",
+          "package_offset": 0,
+          "package_bytes": 82560
+        },
+        {
+          "hash": "522d4938",
+          "package_offset": 0,
+          "package_bytes": 82560
+        },
+        {
+          "hash": "545570c6",
+          "package_offset": 0,
+          "package_bytes": 82560
+        },
+        {
+          "hash": "94b4e685",
+          "package_offset": 0,
+          "package_bytes": 82560
+        },
+        {
+          "hash": "c6afdd7e",
+          "package_offset": 0,
+          "package_bytes": 82560
+        }
+      ]
+    },
+    {
+      "path": "/workspace/attachments/85875135-c339-4aea-9553-be7e652717b8/GLOBAL-GLOBALB.BUN",
+      "bytes": 225776,
+      "sha256": "b1329f35739503b13cff4838766f511b1f5e8fec28d37112da9efbc63cb0438a",
+      "models": [
+        {
+          "hash": "0c7395a8",
+          "name": "STD_CUBE",
+          "offset": 197456,
+          "bytes": 560,
+          "raw_sha256": "ed7d3135afba228163626f572bf8f259a041d0d92a261645944c047032d2cfd5"
+        }
+      ],
+      "textures": [
+        {
+          "hash": "000004e5",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "0018ed48",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "028feadd",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "03c906ef",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "054f9862",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "0a155545",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "0e55b9c1",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "0fe608e6",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1150840e",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "14025bd8",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "19006835",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1a091045",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1a6d3d2c",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1a7afe27",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1b049702",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1b5c9962",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "1f3bdb88",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "22129d6b",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "236bd9ce",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "2521e5eb",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "30e7076e",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "317ec0f4",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "31f92a2f",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "32283a11",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "3394fe62",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "33f5d651",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "39375faa",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "397a3a31",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "39949433",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "3a015595",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "421696af",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "427b4565",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "43b6310f",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "443bac6f",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "44bfac86",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "450a616a",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "47599637",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "4c95c6f8",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "4d0b03ad",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "5155010c",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "566b4cf4",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "5fbba846",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "66994f4a",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "66c9a7b6",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "6784a80e",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "68100815",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "6948e2b3",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "69c032b9",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "69c032ba",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "721aff7c",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "74ce8c0b",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "7811c146",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "7811c147",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "7811c148",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "7811c149",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "7b220ddf",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "7ce9e521",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "831b7ebe",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "87807869",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "8868656f",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "88d8e8a2",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "88e8de9e",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "895ec0ae",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "896efc91",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "8a21b882",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "8c283c65",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "8c76cd0f",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "8f8d5fdb",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "9129e7fb",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "92386331",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "950fcebc",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "982b9803",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "9e8d9cb6",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "a56ee487",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "a9904684",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "aaab31e9",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "b3e5d8e5",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "b4e6456b",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "badb4475",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "bd1f0e0a",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "bf30889b",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "c2c29d11",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "c43959d2",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "c4f4ebea",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "c62c4dd1",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "cc772afb",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "cffb7033",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "d195be56",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "d353ecad",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "d5c78df8",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "e2a5c626",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "e2c7c5e2",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "e38806e3",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "e43d65fb",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "e621b2ef",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "e9638d3e",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "f731b36d",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "fb29b297",
+          "package_offset": 0,
+          "package_bytes": 174464
+        },
+        {
+          "hash": "000005bc",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "000005bd",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "00000682",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "00000683",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "00148e38",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "02959349",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "03b7f86d",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "0b30961b",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "3100b5f4",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "54a68051",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "5ad486a0",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "6851aaf5",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "6fb79a55",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "79ad657f",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "7a8b6bd0",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "907f27cf",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "93bf34e9",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "fbb0b78e",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        },
+        {
+          "hash": "ff6a47e7",
+          "package_offset": 174720,
+          "package_bytes": 22528
+        }
+      ]
+    },
+    {
+      "path": "/workspace/attachments/04491c7a-49d8-4bf8-99fa-1ca503b60c96/GLOBAL-DYNTEX-266086400.BIN",
+      "bytes": 1274240,
+      "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+      "models": [],
+      "textures": [
+        {
+          "hash": "03c8bd74",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "03c8bd75",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "05ffdbfe",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0764b24b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "07fbf7a5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b7723",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b79bd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b7d0a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b80ad",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b81cd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b846e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b8ece",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b90ab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b96bc",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087babfb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bb8d4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bb9bf",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bbc0d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0ac0314c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0b2bc312",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0b6f436c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0f79d48d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1113b973",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1113b974",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "15cb8f71",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "16611a8a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1adfd464",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1cf05b6d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "25932522",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "309ff046",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "31cda915",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "320305f7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "3275e8b1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "32d511e9",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "35700c5e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "35700c5f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "3f9e1600",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "40108eb2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403b90c2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403b9a9a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403c1d23",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403c26fb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403ca984",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403cb35c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4301e90d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4301f2e5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4302756e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "43027f46",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "430301cf",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "43030ba7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "45930f16",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "45af4da7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "49bc41f2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4b248544",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "55b1de10",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5721ee9d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "58a7a821",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "58d85ebe",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5cdb9fb8",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5db11364",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "65ecf04e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "6b5489ac",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7a0a986b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7acfed7a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7ddaf6ea",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7ddaf6eb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "84480355",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "85d2674f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "8ee0e6e3",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "940fed15",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "94d70856",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "94d70857",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "a8e758bd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419e678",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419e912",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419ec5f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f002",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f122",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f3c3",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419fe23",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a0000",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a0611",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a1b50",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2829",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2914",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2b62",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b511476b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bab91800",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bab91801",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7913b5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc791d8d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc79a016",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc79a9ee",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7a2c77",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7a364f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c29e3798",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c5702180",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c7f79922",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87146fa",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8714994",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8714ce1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715084",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87151a4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715445",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715ea5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8716082",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8716693",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8717bd2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87188ab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8718996",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8718be4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ca4ad415",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "cb1c8029",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "cbffbfc2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ccfa2e81",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce183c96",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce183f30",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18427d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce184620",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce184740",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce1849e1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce185441",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18561e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce185c2f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18716e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce187e47",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce187f32",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce188180",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "d2c1a964",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "d7bb64f2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe8fdbc",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe90794",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe98a1d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe993f5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbea167e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbea2056",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de38d700",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de38d701",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de634915",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "df7b27a7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "df7b27a8",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ebb4a01e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ec3c0443",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ec3c0444",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ed543bab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ed543bac",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f00c0ae5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f1237593",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f17fe458",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f43b323a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f71430ed",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        }
+      ]
+    },
+    {
+      "path": "/workspace/attachments/761ae068-9824-40a3-9bf3-80fd71d5d6bc/GLOBAL-DYNTEX-279683072.BIN",
+      "bytes": 1274240,
+      "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+      "models": [],
+      "textures": [
+        {
+          "hash": "03c8bd74",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "03c8bd75",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "05ffdbfe",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0764b24b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "07fbf7a5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b7723",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b79bd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b7d0a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b80ad",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b81cd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b846e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b8ece",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b90ab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b96bc",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087babfb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bb8d4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bb9bf",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bbc0d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0ac0314c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0b2bc312",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0b6f436c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0f79d48d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1113b973",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1113b974",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "15cb8f71",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "16611a8a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1adfd464",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1cf05b6d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "25932522",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "309ff046",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "31cda915",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "320305f7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "3275e8b1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "32d511e9",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "35700c5e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "35700c5f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "3f9e1600",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "40108eb2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403b90c2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403b9a9a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403c1d23",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403c26fb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403ca984",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403cb35c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4301e90d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4301f2e5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4302756e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "43027f46",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "430301cf",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "43030ba7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "45930f16",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "45af4da7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "49bc41f2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4b248544",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "55b1de10",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5721ee9d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "58a7a821",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "58d85ebe",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5cdb9fb8",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5db11364",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "65ecf04e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "6b5489ac",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7a0a986b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7acfed7a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7ddaf6ea",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7ddaf6eb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "84480355",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "85d2674f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "8ee0e6e3",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "940fed15",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "94d70856",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "94d70857",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "a8e758bd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419e678",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419e912",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419ec5f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f002",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f122",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f3c3",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419fe23",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a0000",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a0611",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a1b50",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2829",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2914",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2b62",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b511476b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bab91800",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bab91801",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7913b5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc791d8d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc79a016",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc79a9ee",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7a2c77",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7a364f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c29e3798",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c5702180",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c7f79922",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87146fa",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8714994",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8714ce1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715084",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87151a4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715445",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715ea5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8716082",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8716693",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8717bd2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87188ab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8718996",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8718be4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ca4ad415",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "cb1c8029",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "cbffbfc2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ccfa2e81",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce183c96",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce183f30",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18427d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce184620",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce184740",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce1849e1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce185441",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18561e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce185c2f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18716e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce187e47",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce187f32",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce188180",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "d2c1a964",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "d7bb64f2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe8fdbc",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe90794",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe98a1d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe993f5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbea167e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbea2056",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de38d700",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de38d701",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de634915",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "df7b27a7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "df7b27a8",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ebb4a01e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ec3c0443",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ec3c0444",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ed543bab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ed543bac",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f00c0ae5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f1237593",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f17fe458",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f43b323a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f71430ed",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        }
+      ]
+    },
+    {
+      "path": "/workspace/attachments/24ed84d3-a9eb-425d-8bcb-e2cb7e2d4835/GLOBAL-DYNTEX-299415552.BIN",
+      "bytes": 1274240,
+      "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+      "models": [],
+      "textures": [
+        {
+          "hash": "03c8bd74",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "03c8bd75",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "05ffdbfe",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0764b24b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "07fbf7a5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b7723",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b79bd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b7d0a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b80ad",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b81cd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b846e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b8ece",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b90ab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087b96bc",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087babfb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bb8d4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bb9bf",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "087bbc0d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0ac0314c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0b2bc312",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0b6f436c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "0f79d48d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1113b973",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1113b974",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "15cb8f71",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "16611a8a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1adfd464",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "1cf05b6d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "25932522",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "309ff046",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "31cda915",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "320305f7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "3275e8b1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "32d511e9",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "35700c5e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "35700c5f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "3f9e1600",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "40108eb2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403b90c2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403b9a9a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403c1d23",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403c26fb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403ca984",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "403cb35c",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4301e90d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4301f2e5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4302756e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "43027f46",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "430301cf",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "43030ba7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "45930f16",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "45af4da7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "49bc41f2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "4b248544",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "55b1de10",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5721ee9d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "58a7a821",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "58d85ebe",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5cdb9fb8",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "5db11364",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "65ecf04e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "6b5489ac",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7a0a986b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7acfed7a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7ddaf6ea",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "7ddaf6eb",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "84480355",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "85d2674f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "8ee0e6e3",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "940fed15",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "94d70856",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "94d70857",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "a8e758bd",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419e678",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419e912",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419ec5f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f002",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f122",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419f3c3",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b419fe23",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a0000",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a0611",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a1b50",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2829",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2914",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b41a2b62",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "b511476b",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bab91800",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bab91801",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7913b5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc791d8d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc79a016",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc79a9ee",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7a2c77",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "bc7a364f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c29e3798",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c5702180",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c7f79922",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87146fa",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8714994",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8714ce1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715084",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87151a4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715445",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8715ea5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8716082",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8716693",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8717bd2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c87188ab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8718996",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "c8718be4",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ca4ad415",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "cb1c8029",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "cbffbfc2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ccfa2e81",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce183c96",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce183f30",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18427d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce184620",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce184740",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce1849e1",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce185441",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18561e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce185c2f",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce18716e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce187e47",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce187f32",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ce188180",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "d2c1a964",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "d7bb64f2",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe8fdbc",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe90794",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe98a1d",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbe993f5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbea167e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "dbea2056",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de38d700",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de38d701",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "de634915",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "df7b27a7",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "df7b27a8",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ebb4a01e",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ec3c0443",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ec3c0444",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ed543bab",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "ed543bac",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f00c0ae5",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f1237593",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f17fe458",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f43b323a",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        },
+        {
+          "hash": "f71430ed",
+          "package_offset": 0,
+          "package_bytes": 1274240
+        }
+      ]
+    }
+  ],
+  "resolved_model_hashes": [],
+  "resolved_texture_hashes": [
+    "3394fe62",
+    "94d70856",
+    "de38d700"
+  ],
+  "unresolved_model_hashes": [
+    "1cc60869",
+    "3304471a",
+    "479469b7",
+    "4d01433e",
+    "50e7a8ad",
+    "56b52d28",
+    "59a7bd7f",
+    "62875f94",
+    "75b39647",
+    "7abb1591",
+    "94558dc0",
+    "9c39989e",
+    "a9da1869",
+    "ae3545bd",
+    "de0e2594",
+    "dfa69084",
+    "eea01836",
+    "f390cd1a",
+    "fa98b2b6",
+    "fb5305b5",
+    "fb5fa26c"
+  ],
+  "unresolved_texture_hashes": [
+    "003d2b24",
+    "010ad1b3",
+    "0395b6e6",
+    "03b7367c",
+    "04a3506a",
+    "05e8cbc2",
+    "06c528e6",
+    "06eb673d",
+    "06ee3a6d",
+    "08217d56",
+    "09f8d204",
+    "0a421670",
+    "0a8922ec",
+    "0aeed3d1",
+    "0b43ab7c",
+    "0c151c29",
+    "0c1d3ad9",
+    "0cb21113",
+    "0dfee2bd",
+    "10eb5bff",
+    "10f7a61e",
+    "115bf973",
+    "11fd5d09",
+    "12c8db2c",
+    "13a6f022",
+    "140a8913",
+    "147917ef",
+    "14f086ef",
+    "14f61fb1",
+    "1522f022",
+    "158ff03b",
+    "15caf9df",
+    "160a29cf",
+    "1672e978",
+    "169a4530",
+    "1719d9d8",
+    "17776ed8",
+    "177b1856",
+    "179634c0",
+    "179f44b8",
+    "17c8a2cf",
+    "19035965",
+    "1a73dd9a",
+    "1a8bc1ae",
+    "1ba2784c",
+    "1be7d177",
+    "1c33d960",
+    "1db6fd23",
+    "1dc86e2f",
+    "1e52e05f",
+    "1ee544e3",
+    "2086aaa2",
+    "20c8030d",
+    "20d6e344",
+    "2153afb2",
+    "21c5161c",
+    "21da0853",
+    "21f7bfbe",
+    "22d82cd5",
+    "232c0be5",
+    "2384c4eb",
+    "239e63bb",
+    "24578ec4",
+    "25627894",
+    "257795ec",
+    "2580b989",
+    "25dd8a86",
+    "25eb7b86",
+    "265c0d6e",
+    "27aa2166",
+    "28685b63",
+    "2898df90",
+    "28fde088",
+    "2cbfbf08",
+    "2d4a34bd",
+    "2d5ad26a",
+    "2de22693",
+    "2e430efe",
+    "2f0252a5",
+    "2f82c006",
+    "2fe2ab50",
+    "302b553c",
+    "302d7a8c",
+    "30bfc005",
+    "317fcce5",
+    "31e95170",
+    "337911e9",
+    "3435e65d",
+    "34edceb9",
+    "3508e910",
+    "351c8a51",
+    "3569980a",
+    "35b0d855",
+    "3601aa73",
+    "360bf1bc",
+    "367e5485",
+    "36e3e4e2",
+    "382d2909",
+    "3856cdf7",
+    "38eb46a4",
+    "3901af8d",
+    "39c8ea11",
+    "3a1a388d",
+    "3bc09f81",
+    "3cd6559a",
+    "3d16587e",
+    "3dd631e4",
+    "3e92fffd",
+    "422e740e",
+    "4303e584",
+    "4348dbe9",
+    "447deb24",
+    "44bf37c0",
+    "450ced45",
+    "458c2686",
+    "45fa5beb",
+    "484f848c",
+    "48f0e800",
+    "49d2a667",
+    "49f2c938",
+    "4a1166a0",
+    "4b05b3ab",
+    "4b487a31",
+    "4b640ffb",
+    "4bb58c68",
+    "4bf803a1",
+    "4c0c005c",
+    "4d2736c1",
+    "4d5df6f4",
+    "4da5cf73",
+    "4dacb2dd",
+    "50b5acdf",
+    "51274ba0",
+    "51f16aac",
+    "52652319",
+    "53cb49e5",
+    "542580a7",
+    "54439306",
+    "5507563c",
+    "558d20d2",
+    "55de923f",
+    "5694154e",
+    "57479243",
+    "57822c12",
+    "57c6866a",
+    "57cd3968",
+    "57cd729f",
+    "581f2d92",
+    "598c0ebe",
+    "598eab30",
+    "59a9d7bd",
+    "5bff005e",
+    "5c231380",
+    "5d94e5e2",
+    "5dc50789",
+    "5ef4f9fa",
+    "5fca2b7b",
+    "5fda0619",
+    "5ff04e9b",
+    "60b7cf8d",
+    "611db770",
+    "613c9bc8",
+    "61489a75",
+    "61a56b42",
+    "63a7b75b",
+    "63ad9afb",
+    "63e49380",
+    "643bba40",
+    "64f66146",
+    "65aff28e",
+    "65b7983e",
+    "65c5f54a",
+    "674594ab",
+    "6871c254",
+    "6a15d6f8",
+    "6a36b91a",
+    "6af0366e",
+    "6cdd051e",
+    "6d5b4064",
+    "6d982bd3",
+    "6da87dc8",
+    "6dc61680",
+    "6e444e64",
+    "6eeb0f9f",
+    "6fa3d64f",
+    "6fb1fa2b",
+    "70a13912",
+    "70cec336",
+    "71dc1db5",
+    "71edaacf",
+    "7231b334",
+    "732670f6",
+    "73464fdb",
+    "73c068bf",
+    "74053ae5",
+    "7442d370",
+    "7486dbd5",
+    "74c18215",
+    "75c69178",
+    "75ed1a2f",
+    "7624ee11",
+    "763e7c8f",
+    "7684c969",
+    "768b411b",
+    "77255c4f",
+    "786b8617",
+    "7a8fbcc7",
+    "7ba1d6e5",
+    "7be7200c",
+    "7ca2c597",
+    "7ce0b047",
+    "7e16a782",
+    "7e2734a8",
+    "7e2734a9",
+    "7e7b5460",
+    "7ef2fc6d",
+    "7f0593ed",
+    "7fec9e95",
+    "83144f59",
+    "8322b7eb",
+    "8362e6f4",
+    "8490dfee",
+    "8497bafe",
+    "85158f6b",
+    "85364d7a",
+    "861567b6",
+    "86e49c15",
+    "8727fb12",
+    "876426cf",
+    "87fc2719",
+    "88680b64",
+    "887096f2",
+    "8b335c76",
+    "8baaa5aa",
+    "8c58916b",
+    "8d11637e",
+    "8d7c74aa",
+    "8de70662",
+    "8e8e480a",
+    "9000f974",
+    "904f6a95",
+    "90f1e91f",
+    "913d8fef",
+    "915a5fd5",
+    "916c5ac1",
+    "9183b3b3",
+    "92397f7f",
+    "92aa09a3",
+    "935bf71d",
+    "93c18362",
+    "93c54701",
+    "95da89f0",
+    "96cbe215",
+    "984f0b0d",
+    "986ef142",
+    "99c89897",
+    "99e7d26d",
+    "9a0f783d",
+    "9aa2c734",
+    "9b6b9e28",
+    "9b7bb0ef",
+    "9c0c94a1",
+    "9ce4cc64",
+    "9cf5c87b",
+    "9d8d9835",
+    "9f75cbd3",
+    "a1340c45",
+    "a21c8992",
+    "a22233f2",
+    "a295b932",
+    "a2e125b4",
+    "a49ecc87",
+    "a502cdd4",
+    "a5188af4",
+    "a5a97a3f",
+    "a5f76c99",
+    "a5f89593",
+    "a66834c2",
+    "a77411a5",
+    "a7862fce",
+    "a7ca68f0",
+    "a88145ba",
+    "a881b04d",
+    "a8f36b39",
+    "aa32d4fe",
+    "aa3c767d",
+    "aa884167",
+    "ac6a2388",
+    "acc9714f",
+    "aea863ee",
+    "af048368",
+    "af3cbe10",
+    "af5c6f13",
+    "b063420a",
+    "b073f1f5",
+    "b10b1731",
+    "b13c7c28",
+    "b2350c9f",
+    "b2a3d295",
+    "b2bf60d7",
+    "b40d6b9a",
+    "b51df332",
+    "b5944610",
+    "b5e2688a",
+    "b64b3f8d",
+    "b65e5b88",
+    "b675ecfe",
+    "b6b9845b",
+    "b73ae1cc",
+    "b7661f65",
+    "b767f1ee",
+    "b7e79926",
+    "b941362d",
+    "b949d4b0",
+    "b9b6c0b2",
+    "b9bb4806",
+    "ba3cc1c7",
+    "bc103aff",
+    "becea69d",
+    "bf3b23e6",
+    "bf8e36fc",
+    "c09d9d75",
+    "c0fe6ae4",
+    "c13c3baa",
+    "c144eed5",
+    "c1853972",
+    "c1ba03a8",
+    "c2d8097a",
+    "c353c037",
+    "c391644b",
+    "c3b2bd91",
+    "c3f722cf",
+    "c3f86403",
+    "c3fa680b",
+    "c5a8fe6a",
+    "c5cfb15f",
+    "c5e68cec",
+    "c6295e02",
+    "c680fa7c",
+    "c765bd68",
+    "c9907a82",
+    "ca247c33",
+    "ca38e3dd",
+    "cb2cb82d",
+    "cb9bbd21",
+    "ccb9e4d8",
+    "cd2a45b4",
+    "cd7b5084",
+    "ce08e86a",
+    "ce81a2db",
+    "cebb10b3",
+    "cf0f0d79",
+    "d042c6bf",
+    "d059eadc",
+    "d3beea92",
+    "d40cd332",
+    "d5b76c7d",
+    "d6a74dcb",
+    "d711eb56",
+    "d83830a1",
+    "d8f6c262",
+    "d97a7da0",
+    "dcff80d4",
+    "de549c96",
+    "de685cc3",
+    "e03922d2",
+    "e05ae2fd",
+    "e11626bc",
+    "e1622a98",
+    "e1c71389",
+    "e306192a",
+    "e3a17502",
+    "e5390352",
+    "e5c1be0a",
+    "e6f2eb9d",
+    "e73e9cee",
+    "e81a6cef",
+    "e85b4f4f",
+    "e8fd1741",
+    "e946dbee",
+    "e96e81be",
+    "ea445700",
+    "ea50a0a7",
+    "eb07fc97",
+    "ebf18da7",
+    "ec66ffc7",
+    "ec7ff051",
+    "ed2d0063",
+    "ee6cfc72",
+    "efb24dd9",
+    "efe04b3e",
+    "efe3eca0",
+    "f1248337",
+    "f2bb60f6",
+    "f3cb66db",
+    "f556673d",
+    "f5853ea8",
+    "f5c61251",
+    "f5fc3ff6",
+    "f6877cfc",
+    "f7f41cac",
+    "f80a8327",
+    "f87ff4a2",
+    "f925c797",
+    "fb49cf70",
+    "fbcf7f40",
+    "fbe71692",
+    "fbe970b0",
+    "fc2e5e12",
+    "fd614ca5",
+    "fe5ff8cb",
+    "fedac631",
+    "ff7bc0aa"
+  ],
+  "unresolved_consumed_texture_hashes": [
+    "2d5ad26a",
+    "61a56b42",
+    "6dc61680",
+    "7e2734a8",
+    "7e2734a9",
+    "8b335c76",
+    "8c58916b",
+    "8de70662"
+  ],
+  "limitations": "Reference availability only; source geometry/material decoding and activation are separate checks"
+}

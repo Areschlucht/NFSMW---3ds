@@ -45,6 +45,11 @@ int main(int argc,char **argv){
         unsigned char *data=malloc((size_t)bytes);assert(data);assert(fread(data,1,(size_t)bytes,file)==(size_t)bytes);fclose(file);
         if(type=='M'){
             WorldStreamingSceneModel m;assert(world_streaming_scene_model_open(data,(size_t)bytes,&m)==WORLD_SCENE_OK);
+            if(!m.index_count){
+                assert(!m.vertex_count&&!m.batch_count&&data[60]==1&&bytes==416);
+                assert(world_streaming_scene_model_expand(&m,NULL,0,NULL,0)==WORLD_SCENE_OK);
+                models++;data[12]^=1;assert(world_streaming_scene_model_open(data,(size_t)bytes,&m)==WORLD_SCENE_INVALID&&!m.data);free(data);continue;
+            }
             WorldVertex *v=malloc(m.vertex_count*sizeof(*v));uint16_t *ix=malloc(m.index_count*sizeof(*ix));assert(v&&ix);
             assert(world_streaming_scene_model_expand(&m,v,m.vertex_count,ix,m.index_count)==WORLD_SCENE_OK);
             float origin[3]={m.bounds[0],m.bounds[1],m.bounds[2]},scale=.25f;

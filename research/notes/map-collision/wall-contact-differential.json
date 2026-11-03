@@ -1,0 +1,20 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "full_wall_contact_address": "0x802f3e6c",
+  "routine_sha256": "f6d9436b68fd27ef178b254136f59f2549ffcf3e2c546c182ee4136d24d3c170",
+  "cases": 3870,
+  "hits": 2072,
+  "source_wall_flags": {
+    "2": 3732,
+    "18": 66,
+    "6": 72
+  },
+  "failure_count": 0,
+  "failures": [],
+  "maximum_world_point_error": 0,
+  "maximum_world_normal_error": 0,
+  "maximum_reference_instructions": 3710,
+  "limitations": "Original segment-wall contact output, no rigid-body response/impulses. Source identity CI and on-disc material tokens (original materialfixup consumers traced separately); scene activation/load-time flag mutations remain caller responsibilities.",
+  "implementation_sha256": "966701d679f9479257379887a33c710d6988ca78f889fca3bba862a5f5e8d6e2",
+  "header_sha256": "0edcc05fa7c4c0d7fa7c55816faf928dba34d613303fac1df21ee62cbcc47371"
+}

@@ -1,0 +1,368 @@
+{
+  "scope": "OriginalLOD scalarprimitive, FOV producer and callback-qualified projectedscore. Notentireworldrenderer.",
+  "decision": {
+    "original_dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+    "vectors": 9276,
+    "exact_slot_matches": true,
+    "scope": "Decision802BEC38..802BED60 only; projected-score producer/visibility/activation not validated here.",
+    "sources": {
+      "include/mw_lod_select.h": "8cf90f5e306694e3657d8bebb0d161edbcf276c16549cb6af26aac616d5e6b37",
+      "source_bmw/mw_lod_select.c": "c9866b673b4e225b6ae11a1d167b5ced7afcda271ec1d8e637ad6b2085bd7d46",
+      "tools/perf_lod_reference.py": "2cb663fd891d6a1381b62563ca7e741098fe11739cdcc1a208b39d82fccfb40b"
+    }
+  },
+  "projection": {
+    "vectors": 65536,
+    "bit_exact_mismatches": 0,
+    "examples": [],
+    "original_dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+    "abi_only_skipped": {
+      "0x800fff1c": "0xf3e10010",
+      "0x800fff78": "0xe3e10010"
+    }
+  },
+  "score": {
+    "vectors": 9510,
+    "sqrtf_score_mismatches": 85,
+    "original_sqrt_callback_score_mismatches": 0,
+    "native_gekko_callback_score_mismatches": 0,
+    "native_examples": [],
+    "sqrtf_examples": [
+      [
+        [
+          0.0,
+          48.66667175292969,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        128.0,
+        17,
+        18
+      ],
+      [
+        [
+          0.0,
+          30.774192810058594,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        128.0,
+        31,
+        30
+      ],
+      [
+        [
+          0.0,
+          14.827587127685547,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        128.0,
+        86,
+        87
+      ],
+      [
+        [
+          0.0,
+          91.33334350585938,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        256.0,
+        17,
+        18
+      ],
+      [
+        [
+          0.0,
+          47.32075881958008,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        365.0,
+        52,
+        53
+      ],
+      [
+        [
+          0.0,
+          31.17241668701172,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        365.0,
+        86,
+        87
+      ],
+      [
+        [
+          0.0,
+          186.7058868408203,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        512.0,
+        17,
+        16
+      ],
+      [
+        [
+          0.0,
+          176.6666717529297,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        512.0,
+        18,
+        17
+      ],
+      [
+        [
+          0.0,
+          102.00000762939453,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        512.0,
+        31,
+        32
+      ],
+      [
+        [
+          0.0,
+          63.9622688293457,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        512.0,
+        52,
+        53
+      ],
+      [
+        [
+          0.0,
+          199.54840087890625,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        1000.0,
+        30,
+        31
+      ],
+      [
+        [
+          0.0,
+          119.20755004882812,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        1000.0,
+        53,
+        52
+      ],
+      [
+        [
+          0.0,
+          119.20755767822266,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        0.0,
+        1000.0,
+        52,
+        53
+      ],
+      [
+        [
+          0.0,
+          59.70588302612305,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        1.0,
+        128.0,
+        17,
+        16
+      ],
+      [
+        [
+          0.0,
+          15.960000991821289,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        1.0,
+        128.0,
+        99,
+        100
+      ]
+    ],
+    "scope": "Original PPC producer uses external pinned Dolphin estimate only. Independent portable mw_gekko_sqrt_newton2 callback also compared; sqrtf remains a separate approximate control."
+  },
+  "armv6k_compile": {
+    "passed": true,
+    "text_bytes": 1148,
+    "data_bytes": 0,
+    "bss_bytes": 0
+  },
+  "default_sqrtf_1to1": false,
+  "production_build_modified": false,
+  "source_hashes": {
+    "tools/perf_lod_score_verify.py": "41ff92389e52673387cbf743c684dd8eda134f8274b730baee436a8f4557fd8f",
+    "tools/perf_lod_disasm.py": "e12769a03bdce053277b9005e8c1df3605dd4f48e38fdbe2885f9b4e771131fd",
+    "tools/perf_lod.md": "39db0c1b685b34e7c42eec85c07c735db5072bc10ae8a3b843b99eff3da47579",
+    "tools/perf_lod_verify.py": "8ff325b91977b1595930bfd9bce7c818ea1a55da0ddaf8ab45fcba0c32a17c19",
+    "tools/perf_lod_projection_verify.py": "93c45262acfca2d63e07b68986ae22a3fb5e7a02a74cf039032c1e6b8f68988e",
+    "tools/perf_lod_reference.py": "2cb663fd891d6a1381b62563ca7e741098fe11739cdcc1a208b39d82fccfb40b",
+    "include/mw_lod_select.h": "8cf90f5e306694e3657d8bebb0d161edbcf276c16549cb6af26aac616d5e6b37",
+    "source_bmw/mw_lod_select.c": "c9866b673b4e225b6ae11a1d167b5ced7afcda271ec1d8e637ad6b2085bd7d46"
+  },
+  "portable_gekko_callback_9510_scores_match": true
+}

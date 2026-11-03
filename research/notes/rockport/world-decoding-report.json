@@ -1,0 +1,50 @@
+[
+  {
+    "file": "STREAML2RA-sectors141-160.BUN",
+    "bytes": 2679680,
+    "sha256": "223238ef83359f21a474a1709699db41e14e3215661a1567338a3a8ab7abc606",
+    "decoded_models": 646,
+    "triangles": 54970,
+    "rejected": [
+      {
+        "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A10_R2",
+        "offset": 1222080,
+        "reason": "Triangle count mismatch: decoded 263, header 264"
+      },
+      {
+        "name": "TRN_CT_ROAD_JUNCTION_01_CHOP_A14_R2",
+        "offset": 1859272,
+        "reason": "Triangle count mismatch: decoded 248, header 252"
+      },
+      {
+        "name": "TRN_CT_TERRAIN_COLONIAL_02_CHOP_A18_R0",
+        "offset": 2235840,
+        "reason": "Triangle count mismatch: decoded 58, header 98"
+      },
+      {
+        "name": "BLUESTRIPGASPILLAR_FRAG03",
+        "offset": 2281660,
+        "reason": "Triangle count mismatch: decoded 130, header 132"
+      },
+      {
+        "name": "BLUESTRIPGASPILLAR_FRAG03",
+        "offset": 2456316,
+        "reason": "Triangle count mismatch: decoded 130, header 132"
+      }
+    ]
+  },
+  {
+    "file": "STREAML2RA-sectors1141-1160.BUN",
+    "bytes": 1137136,
+    "sha256": "a1564a6898ecbe98be81c171b44331523d2df52a18c1381a95e372403eb55b5c",
+    "decoded_models": 442,
+    "triangles": 29203,
+    "rejected": [
+      {
+        "name": "TRN_CT_TERRAIN_HIGHLANDS_02_CHOP_G29_R0",
+        "offset": 1125384,
+        "reason": "Triangle count mismatch: decoded 72, header 98"
+      }
+    ]
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "parts": [
+    {
+      "name": "BMWM3GTRE46_BASE_B",
+      "triangles": 202
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_BODY_B",
+      "triangles": 3640
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_FRONT_LEFT_WINDOW_B",
+      "triangles": 7
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_FRONT_RIGHT_WINDOW_B",
+      "triangles": 7
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_FRONT_WINDOW_B",
+      "triangles": 56
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_INTERIOR_B",
+      "triangles": 726
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_LEFT_BRAKELIGHT_B",
+      "triangles": 80
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_B",
+      "triangles": 128
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_GLASS_B",
+      "triangles": 31
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_REAR_LEFT_WINDOW_B",
+      "triangles": 33
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_REAR_RIGHT_WINDOW_B",
+      "triangles": 33
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_REAR_WINDOW_B",
+      "triangles": 66
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_RIGHT_BRAKELIGHT_B",
+      "triangles": 80
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_B",
+      "triangles": 128
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+      "triangles": 31
+    }
+  ],
+  "textures": [
+    {
+      "hash": "02b52399",
+      "name": "UNRESOLVED_02b52399",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "1b049702",
+      "name": "WINDOW_MASK",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "23ef5d6c",
+      "name": "BMWM3GTRE46_BADGING",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "2590276c",
+      "name": "BMWM3GTRE46_INTERIOR",
+      "missing": false,
+      "width": 256,
+      "height": 256,
+      "flags": 0
+    },
+    {
+      "hash": "267d188c",
+      "name": "UNRESOLVED_267d188c",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "4c95c6f8",
+      "name": "LICENSEPLATE",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "721aff7c",
+      "name": "CARBONFIBRE",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "7b220ddf",
+      "name": "WINDOW_FRONT",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "a532fc46",
+      "name": "UNRESOLVED_a532fc46",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "a7e6ea53",
+      "name": "UNRESOLVED_a7e6ea53",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "bd1f0e0a",
+      "name": "CARBOTTOM",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0
+    },
+    {
+      "hash": "cc772afb",
+      "name": "DOORLINE",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 3
+    },
+    {
+      "hash": "d947f346",
+      "name": "UNRESOLVED_d947f346",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "de3ad3c6",
+      "name": "UNRESOLVED_de3ad3c6",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "e7b0e36c",
+      "name": "BMWM3GTRE46_MISC",
+      "missing": false,
+      "width": 256,
+      "height": 256,
+      "flags": 0
+    },
+    {
+      "hash": "f68ef19f",
+      "name": "UNRESOLVED_f68ef19f",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    }
+  ],
+  "vertices": 15744,
+  "triangles": 5248,
+  "source_bounds": [
+    [
+      -2.1083984375,
+      -0.005859375,
+      -0.92578125
+    ],
+    [
+      2.43017578125,
+      1.22509765625,
+      0.92578125
+    ]
+  ],
+  "unresolved": "Generated BMWM3GTRE46_SKIN1, some lights, wheel/driver placement and game materials",
+  "scene": "Static body/interior/windows/lights, no wheel or brake instances"
+}

@@ -1,0 +1,16 @@
+{
+  "source_sha256": "58fdd0adb8bdf1ebc3545ee679076c768acb3c52308c4b916ca960b4a0ac5552",
+  "ground_cases": 201,
+  "ground_hits": 160,
+  "wall_cases": 207,
+  "wall_hits": 126,
+  "failure_count": 0,
+  "failures": [],
+  "maximum_ground_gap_error": 0,
+  "maximum_ground_query_normal_error": 0,
+  "maximum_wall_world_point_error": 0,
+  "maximum_wall_world_normal_error": 0,
+  "largest_single_package_cache_bytes": 63568,
+  "host_research_seconds": 15.279304799987585,
+  "limitations": "Exact containing section activated, original per-instance results aggregated in source CI order; outer original collision spatial-list tie order and body response are not proven. Ground sqrtf differs from original pinned Gekko estimate model. Includes original load-time wallflags mutation and exact source-alias provenance."
+}

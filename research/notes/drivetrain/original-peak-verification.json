@@ -1,0 +1,35 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "peak_float_bit_cases": 284,
+  "upper_limit_cases": 80,
+  "upper_selector": {
+    "vtable": "803FDFC8",
+    "slot": "70",
+    "implementation": "80269F0C",
+    "result": 1,
+    "field": "RED_LINE"
+  },
+  "bmw": [
+    {
+      "engine": "bmwm3gtre46",
+      "induction": "default",
+      "raw_torque": 467.0,
+      "peak_torque_rpm": 5150.0,
+      "minimum_omega": 83.77581024169922,
+      "maximum_omega": 890.1179809570312
+    },
+    {
+      "engine": "m3gtre46careerstart",
+      "induction": "default",
+      "raw_torque": 239.0,
+      "peak_torque_rpm": 5150.0,
+      "minimum_omega": 83.77581024169922,
+      "maximum_omega": 890.1179809570312
+    }
+  ],
+  "limitations": [
+    "EngineRacer startup tuning pointerNULL; optional non-NULL tuning requires separate port",
+    "Peak is sampled induction-adjusted torque, not peak horsepower"
+  ]
+}

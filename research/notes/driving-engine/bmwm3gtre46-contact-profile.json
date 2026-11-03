@@ -1,0 +1,516 @@
+{
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "physical_profile": {
+    "name": "bmwm3gtre46",
+    "key": 1309171635
+  },
+  "surface": "unknown",
+  "component_selections": {
+    "tires": {
+      "upgrade_index": 0,
+      "reference": {
+        "class_key": 3174617546,
+        "collection_key": 1309171635,
+        "class_name": "tires",
+        "collection_name": "bmwm3gtre46",
+        "runtime_pointer": 0
+      },
+      "field_provenance": {
+        "field_key": 3174617546,
+        "field_name": "tires",
+        "type": "Attrib::RefSpec",
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "values": [
+            {
+              "class_key": 3174617546,
+              "collection_key": 1309171635,
+              "class_name": "tires",
+              "collection_name": "bmwm3gtre46",
+              "runtime_pointer": 0
+            }
+          ]
+        },
+        "source_collection": 1309171635,
+        "stream": "bin",
+        "stream_offset": 193936,
+        "file_offset": 194064,
+        "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+        "original_bytes": "00010001000c0000bd38d1ca4e085fb300000000"
+      }
+    },
+    "brakes": {
+      "upgrade_index": 0,
+      "reference": {
+        "class_key": 909445223,
+        "collection_key": 1309171635,
+        "class_name": "brakes",
+        "collection_name": "bmwm3gtre46",
+        "runtime_pointer": 0
+      },
+      "field_provenance": {
+        "field_key": 909445223,
+        "field_name": "brakes",
+        "type": "Attrib::RefSpec",
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "values": [
+            {
+              "class_key": 909445223,
+              "collection_key": 1309171635,
+              "class_name": "brakes",
+              "collection_name": "bmwm3gtre46",
+              "runtime_pointer": 0
+            }
+          ]
+        },
+        "source_collection": 1309171635,
+        "stream": "bin",
+        "stream_offset": 193896,
+        "file_offset": 194024,
+        "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+        "original_bytes": "00010001000c0000363508674e085fb300000000"
+      }
+    },
+    "chassis": {
+      "upgrade_index": 0,
+      "reference": {
+        "class_key": 2946633968,
+        "collection_key": 1309171635,
+        "class_name": "chassis",
+        "collection_name": "bmwm3gtre46",
+        "runtime_pointer": 0
+      },
+      "field_provenance": {
+        "field_key": 2946633968,
+        "field_name": "chassis",
+        "type": "Attrib::RefSpec",
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "values": [
+            {
+              "class_key": 2946633968,
+              "collection_key": 1309171635,
+              "class_name": "chassis",
+              "collection_name": "bmwm3gtre46",
+              "runtime_pointer": 0
+            }
+          ]
+        },
+        "source_collection": 1309171635,
+        "stream": "bin",
+        "stream_offset": 193744,
+        "file_offset": 193872,
+        "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+        "original_bytes": "00010001000c0000afa210f04e085fb300000000"
+      }
+    }
+  },
+  "parameters": {
+    "static_grip": [
+      2.200000047683716,
+      2.299999952316284
+    ],
+    "dynamic_grip": [
+      2.0,
+      2.0
+    ],
+    "grip_scale": [
+      1.1749999523162842,
+      1.225000023841858
+    ],
+    "normal_brakes": [
+      475.0,
+      600.0
+    ],
+    "handbrake": 925.0,
+    "brake_lock": [
+      1.0,
+      3.0
+    ],
+    "calibration": [
+      4.0,
+      10.0,
+      1.2000000476837158,
+      100.0,
+      10.0
+    ],
+    "surface_lateral_grip": 1.0,
+    "surface_drive_grip": 1.0,
+    "surface_rolling_resistance": 1.0
+  },
+  "chassis_raw": {
+    "SPRING_STIFFNESS": [
+      650.0,
+      600.0
+    ],
+    "SPRING_PROGRESSION": [
+      7.5,
+      7.5
+    ],
+    "SHOCK_STIFFNESS": [
+      60.0,
+      50.0
+    ],
+    "SHOCK_EXT_STIFFNESS": [
+      75.0,
+      77.0
+    ],
+    "SHOCK_VALVING": [
+      20.0,
+      20.0
+    ],
+    "SHOCK_DIGRESSION": [
+      0.20000000298023224,
+      0.20000000298023224
+    ],
+    "SWAYBAR_STIFFNESS": [
+      200.0,
+      200.0
+    ],
+    "TRAVEL": [
+      8.0,
+      8.0
+    ],
+    "RIDE_HEIGHT": [
+      6.0,
+      6.0
+    ],
+    "SHOCK_BLOWOUT": 5.0,
+    "TRACK_WIDTH": [
+      1.6080000400543213,
+      1.6030000448226929
+    ],
+    "FRONT_AXLE": 1.4299999475479126,
+    "WHEEL_BASE": 2.7300000190734863,
+    "FRONT_WEIGHT_BIAS": 54.0
+  },
+  "provenance": {
+    "tires/0x4e085fb3/STATIC_GRIP": {
+      "field_key": 3960037734,
+      "field_name": "STATIC_GRIP",
+      "type": "AxlePair",
+      "value": [
+        2.200000047683716,
+        2.299999952316284
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 139944,
+      "file_offset": 140072,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "400ccccd40133333"
+    },
+    "tires/0x4e085fb3/DYNAMIC_GRIP": {
+      "field_key": 2868642227,
+      "field_name": "DYNAMIC_GRIP",
+      "type": "AxlePair",
+      "value": [
+        2.0,
+        2.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 139920,
+      "file_offset": 140048,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "4000000040000000"
+    },
+    "tires/0x4e085fb3/GRIP_SCALE": {
+      "field_key": 4051156507,
+      "field_name": "GRIP_SCALE",
+      "type": "AxlePair",
+      "value": [
+        1.1749999523162842,
+        1.225000023841858
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 139912,
+      "file_offset": 140040,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f9666663f9ccccd"
+    },
+    "brakes/0x4e085fb3/BRAKES": {
+      "field_key": 976712449,
+      "field_name": "BRAKES",
+      "type": "AxlePair",
+      "value": [
+        475.0,
+        600.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 148780,
+      "file_offset": 148908,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "43ed800044160000"
+    },
+    "brakes/0x4e085fb3/EBRAKE": {
+      "field_key": 3700840972,
+      "field_name": "EBRAKE",
+      "type": "EA::Reflection::Float",
+      "value": 925.0,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 148788,
+      "file_offset": 148916,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "44674000"
+    },
+    "brakes/0x4e085fb3/BRAKE_LOCK": {
+      "field_key": 4122919485,
+      "field_name": "BRAKE_LOCK",
+      "type": "AxlePair",
+      "value": [
+        1.0,
+        3.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 148772,
+      "file_offset": 148900,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f80000040400000"
+    },
+    "simsurface/0x5a0a54bd/LATERAL_GRIP": {
+      "field_key": 1558698920,
+      "field_name": "LATERAL_GRIP",
+      "type": "EA::Reflection::Float",
+      "value": 1.0,
+      "source_collection": 1510626493,
+      "stream": "bin",
+      "stream_offset": 346316,
+      "file_offset": 346444,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f800000"
+    },
+    "simsurface/0x5a0a54bd/DRIVE_GRIP": {
+      "field_key": 3331266498,
+      "field_name": "DRIVE_GRIP",
+      "type": "EA::Reflection::Float",
+      "value": 1.0,
+      "source_collection": 1510626493,
+      "stream": "bin",
+      "stream_offset": 346312,
+      "file_offset": 346440,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f800000"
+    },
+    "simsurface/0x5a0a54bd/ROLLING_RESISTANCE": {
+      "field_key": 2670395794,
+      "field_name": "ROLLING_RESISTANCE",
+      "type": "EA::Reflection::Float",
+      "value": 1.0,
+      "source_collection": 1510626493,
+      "stream": "bin",
+      "stream_offset": 346304,
+      "file_offset": 346432,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f800000"
+    },
+    "chassis/0x4e085fb3/SPRING_STIFFNESS": {
+      "field_key": 2150499807,
+      "field_name": "SPRING_STIFFNESS",
+      "type": "AxlePair",
+      "value": [
+        650.0,
+        600.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33948,
+      "file_offset": 34076,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "4422800044160000"
+    },
+    "chassis/0x4e085fb3/SPRING_PROGRESSION": {
+      "field_key": 2696191938,
+      "field_name": "SPRING_PROGRESSION",
+      "type": "AxlePair",
+      "value": [
+        7.5,
+        7.5
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33900,
+      "file_offset": 34028,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "40f0000040f00000"
+    },
+    "chassis/0x4e085fb3/SHOCK_STIFFNESS": {
+      "field_key": 1270964753,
+      "field_name": "SHOCK_STIFFNESS",
+      "type": "AxlePair",
+      "value": [
+        60.0,
+        50.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33940,
+      "file_offset": 34068,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "4270000042480000"
+    },
+    "chassis/0x4e085fb3/SHOCK_EXT_STIFFNESS": {
+      "field_key": 1416103984,
+      "field_name": "SHOCK_EXT_STIFFNESS",
+      "type": "AxlePair",
+      "value": [
+        75.0,
+        77.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33932,
+      "file_offset": 34060,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "42960000429a0000"
+    },
+    "chassis/0x4e085fb3/SHOCK_VALVING": {
+      "field_key": 1120152383,
+      "field_name": "SHOCK_VALVING",
+      "type": "AxlePair",
+      "value": [
+        20.0,
+        20.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33956,
+      "file_offset": 34084,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "41a0000041a00000"
+    },
+    "chassis/0x4e085fb3/SHOCK_DIGRESSION": {
+      "field_key": 2853416571,
+      "field_name": "SHOCK_DIGRESSION",
+      "type": "AxlePair",
+      "value": [
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33892,
+      "file_offset": 34020,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3e4ccccd3e4ccccd"
+    },
+    "chassis/0x4e085fb3/SWAYBAR_STIFFNESS": {
+      "field_key": 1640658418,
+      "field_name": "SWAYBAR_STIFFNESS",
+      "type": "AxlePair",
+      "value": [
+        200.0,
+        200.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33964,
+      "file_offset": 34092,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "4348000043480000"
+    },
+    "chassis/0x4e085fb3/TRAVEL": {
+      "field_key": 2114042221,
+      "field_name": "TRAVEL",
+      "type": "AxlePair",
+      "value": [
+        8.0,
+        8.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33908,
+      "file_offset": 34036,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "4100000041000000"
+    },
+    "chassis/0x4e085fb3/RIDE_HEIGHT": {
+      "field_key": 1187088816,
+      "field_name": "RIDE_HEIGHT",
+      "type": "AxlePair",
+      "value": [
+        6.0,
+        6.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33916,
+      "file_offset": 34044,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "40c0000040c00000"
+    },
+    "chassis/0x4e085fb3/SHOCK_BLOWOUT": {
+      "field_key": 1414753592,
+      "field_name": "SHOCK_BLOWOUT",
+      "type": "EA::Reflection::Float",
+      "value": 5.0,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33980,
+      "file_offset": 34108,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "40a00000"
+    },
+    "chassis/0x4e085fb3/TRACK_WIDTH": {
+      "field_key": 2805509855,
+      "field_name": "TRACK_WIDTH",
+      "type": "AxlePair",
+      "value": [
+        1.6080000400543213,
+        1.6030000448226929
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33924,
+      "file_offset": 34052,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3fcdd2f23fcd2f1b"
+    },
+    "chassis/0x4e085fb3/FRONT_AXLE": {
+      "field_key": 3637234760,
+      "field_name": "FRONT_AXLE",
+      "type": "EA::Reflection::Float",
+      "value": 1.4299999475479126,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33992,
+      "file_offset": 34120,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3fb70a3d"
+    },
+    "chassis/0x4e085fb3/WHEEL_BASE": {
+      "field_key": 756250017,
+      "field_name": "WHEEL_BASE",
+      "type": "EA::Reflection::Float",
+      "value": 2.7300000190734863,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 33976,
+      "file_offset": 34104,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "402eb852"
+    },
+    "chassis/0x4e085fb3/FRONT_WEIGHT_BIAS": {
+      "field_key": 3849186852,
+      "field_name": "FRONT_WEIGHT_BIAS",
+      "type": "EA::Reflection::Float",
+      "value": 54.0,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 34000,
+      "file_offset": 34128,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "42580000"
+    }
+  },
+  "selection_status": "Explicit analysis profile; not proof of original gameplay/spawn selection"
+}

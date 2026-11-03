@@ -1,0 +1,259 @@
+{
+  "file": "brakes-geometry.bin",
+  "bytes": 6080,
+  "sha256": "d95baa36b180c0dba10debff4f8de2dab5f3aa96faa606485478928a113a8ff5",
+  "chunks": [
+    {
+      "offset": 0,
+      "id": "80134000",
+      "payload_bytes": 5632,
+      "children": [
+        {
+          "offset": 8,
+          "id": "00000000",
+          "payload_bytes": 0
+        },
+        {
+          "offset": 16,
+          "id": "80134001",
+          "payload_bytes": 304,
+          "children": [
+            {
+              "offset": 24,
+              "id": "00134002",
+              "payload_bytes": 144
+            },
+            {
+              "offset": 176,
+              "id": "00134003",
+              "payload_bytes": 32
+            },
+            {
+              "offset": 216,
+              "id": "00134004",
+              "payload_bytes": 96
+            },
+            {
+              "offset": 320,
+              "id": "80134008",
+              "payload_bytes": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "offset": 328,
+          "id": "00000000",
+          "payload_bytes": 48
+        },
+        {
+          "offset": 384,
+          "id": "80134010",
+          "payload_bytes": 1100,
+          "children": [
+            {
+              "offset": 392,
+              "id": "00134011",
+              "payload_bytes": 176
+            },
+            {
+              "offset": 576,
+              "id": "00134012",
+              "payload_bytes": 16
+            },
+            {
+              "offset": 600,
+              "id": "00134013",
+              "payload_bytes": 16
+            },
+            {
+              "offset": 624,
+              "id": "80134100",
+              "payload_bytes": 860,
+              "children": [
+                {
+                  "offset": 632,
+                  "id": "00134800",
+                  "payload_bytes": 36
+                },
+                {
+                  "offset": 676,
+                  "id": "00134801",
+                  "payload_bytes": 100
+                },
+                {
+                  "offset": 784,
+                  "id": "00134802",
+                  "payload_bytes": 700
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "offset": 1492,
+          "id": "00000000",
+          "payload_bytes": 36
+        },
+        {
+          "offset": 1536,
+          "id": "80134010",
+          "payload_bytes": 1228,
+          "children": [
+            {
+              "offset": 1544,
+              "id": "00134011",
+              "payload_bytes": 176
+            },
+            {
+              "offset": 1728,
+              "id": "00134012",
+              "payload_bytes": 24
+            },
+            {
+              "offset": 1760,
+              "id": "00134013",
+              "payload_bytes": 24
+            },
+            {
+              "offset": 1792,
+              "id": "80134100",
+              "payload_bytes": 972,
+              "children": [
+                {
+                  "offset": 1800,
+                  "id": "00134800",
+                  "payload_bytes": 36
+                },
+                {
+                  "offset": 1844,
+                  "id": "00134801",
+                  "payload_bytes": 196
+                },
+                {
+                  "offset": 2048,
+                  "id": "00134802",
+                  "payload_bytes": 716
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "offset": 2772,
+          "id": "00000000",
+          "payload_bytes": 36
+        },
+        {
+          "offset": 2816,
+          "id": "80134010",
+          "payload_bytes": 1236,
+          "children": [
+            {
+              "offset": 2824,
+              "id": "00134011",
+              "payload_bytes": 176
+            },
+            {
+              "offset": 3008,
+              "id": "00134012",
+              "payload_bytes": 24
+            },
+            {
+              "offset": 3040,
+              "id": "00134013",
+              "payload_bytes": 24
+            },
+            {
+              "offset": 3072,
+              "id": "80134100",
+              "payload_bytes": 980,
+              "children": [
+                {
+                  "offset": 3080,
+                  "id": "00134800",
+                  "payload_bytes": 36
+                },
+                {
+                  "offset": 3124,
+                  "id": "00134801",
+                  "payload_bytes": 180
+                },
+                {
+                  "offset": 3312,
+                  "id": "00134802",
+                  "payload_bytes": 740
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "offset": 4060,
+          "id": "00000000",
+          "payload_bytes": 28
+        },
+        {
+          "offset": 4096,
+          "id": "80134010",
+          "payload_bytes": 1536,
+          "children": [
+            {
+              "offset": 4104,
+              "id": "00134011",
+              "payload_bytes": 176
+            },
+            {
+              "offset": 4288,
+              "id": "00134012",
+              "payload_bytes": 24
+            },
+            {
+              "offset": 4320,
+              "id": "00134013",
+              "payload_bytes": 24
+            },
+            {
+              "offset": 4352,
+              "id": "80134100",
+              "payload_bytes": 1280,
+              "children": [
+                {
+                  "offset": 4360,
+                  "id": "00134800",
+                  "payload_bytes": 36
+                },
+                {
+                  "offset": 4404,
+                  "id": "00134801",
+                  "payload_bytes": 212
+                },
+                {
+                  "offset": 4624,
+                  "id": "00134802",
+                  "payload_bytes": 1008
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offset": 5640,
+      "id": "00000000",
+      "payload_bytes": 368
+    },
+    {
+      "offset": 6016,
+      "id": "00000000",
+      "payload_bytes": 56
+    }
+  ],
+  "object_name_candidates": [
+    "EBRAKE_KIT00_B",
+    "EBRAKE_STYLE01_B",
+    "EBRAKE_STYLE02_B",
+    "EBRAKE_STYLE03_B"
+  ]
+}

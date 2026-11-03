@@ -1,0 +1,944 @@
+[
+  {
+    "instruction": "0x802da8ac",
+    "high_instruction": "0x802da8a4",
+    "target": "0x8040b30c",
+    "text": "VINYL_L1_COLOR01"
+  },
+  {
+    "instruction": "0x802da8c0",
+    "high_instruction": "0x802da8bc",
+    "target": "0x8040b320",
+    "text": "VINYL_L1_COLOR03"
+  },
+  {
+    "instruction": "0x802da8d0",
+    "high_instruction": "0x802da8cc",
+    "target": "0x8040b334",
+    "text": "VINYL_L2_COLOR11"
+  },
+  {
+    "instruction": "0x802daea4",
+    "high_instruction": "0x802dae9c",
+    "target": "0x8040b39c",
+    "text": "%s_KIT%02d_"
+  },
+  {
+    "instruction": "0x802daee4",
+    "high_instruction": "0x802daed4",
+    "target": "0x8040b3a8",
+    "text": "DAMAGE0_FRONT"
+  },
+  {
+    "instruction": "0x802daf18",
+    "high_instruction": "0x802daf10",
+    "target": "0x8040b3b8",
+    "text": "DAMAGE0_REAR"
+  },
+  {
+    "instruction": "0x802daf4c",
+    "high_instruction": "0x802daf44",
+    "target": "0x8040b3c8",
+    "text": "DAMAGE0_FRONTLEFT"
+  },
+  {
+    "instruction": "0x802daf80",
+    "high_instruction": "0x802daf78",
+    "target": "0x8040b3dc",
+    "text": "DAMAGE0_FRONTRIGHT"
+  },
+  {
+    "instruction": "0x802dafb4",
+    "high_instruction": "0x802dafac",
+    "target": "0x8040b3f0",
+    "text": "DAMAGE0_REARLEFT"
+  },
+  {
+    "instruction": "0x802dafe8",
+    "high_instruction": "0x802dafe0",
+    "target": "0x8040b404",
+    "text": "DAMAGE0_REARRIGHT"
+  },
+  {
+    "instruction": "0x802db04c",
+    "high_instruction": "0x802db044",
+    "target": "0x8040b39c",
+    "text": "%s_KIT%02d_"
+  },
+  {
+    "instruction": "0x802db08c",
+    "high_instruction": "0x802db07c",
+    "target": "0x8040b418",
+    "text": "DECAL_LEFT_DOOR_RECT_MEDIUM"
+  },
+  {
+    "instruction": "0x802db0c0",
+    "high_instruction": "0x802db0b8",
+    "target": "0x8040b434",
+    "text": "DECAL_RIGHT_DOOR_RECT_MEDIUM"
+  },
+  {
+    "instruction": "0x802db0f4",
+    "high_instruction": "0x802db0ec",
+    "target": "0x8040b454",
+    "text": "DECAL_LEFT_QUARTER_RECT_MEDIUM"
+  },
+  {
+    "instruction": "0x802db128",
+    "high_instruction": "0x802db120",
+    "target": "0x8040b474",
+    "text": "DECAL_RIGHT_QUARTER_RECT_MEDIUM"
+  },
+  {
+    "instruction": "0x802db1cc",
+    "high_instruction": "0x802db1c0",
+    "target": "0x8040b494",
+    "text": "CALIPER"
+  },
+  {
+    "instruction": "0x802db324",
+    "high_instruction": "0x802db318",
+    "target": "0x8040b4a8",
+    "text": "DUMMY_SKIN%d"
+  },
+  {
+    "instruction": "0x802db350",
+    "high_instruction": "0x802db344",
+    "target": "0x8040b4b8",
+    "text": "DUMMY_WHEEL%d"
+  },
+  {
+    "instruction": "0x802db378",
+    "high_instruction": "0x802db370",
+    "target": "0x8040b4c8",
+    "text": "DUMMY_SPINNER%d"
+  },
+  {
+    "instruction": "0x802db81c",
+    "high_instruction": "0x802db814",
+    "target": "0x8040b5a0",
+    "text": "%s_SKIN1"
+  },
+  {
+    "instruction": "0x802db83c",
+    "high_instruction": "0x802db838",
+    "target": "0x8040b5ac",
+    "text": "%s_SKIN1B"
+  },
+  {
+    "instruction": "0x802db860",
+    "high_instruction": "0x802db85c",
+    "target": "0x8040b5b8",
+    "text": "GLOBAL_SKIN1"
+  },
+  {
+    "instruction": "0x802db88c",
+    "high_instruction": "0x802db880",
+    "target": "0x8040b5c8",
+    "text": "_WHEEL"
+  },
+  {
+    "instruction": "0x802db8b0",
+    "high_instruction": "0x802db8ac",
+    "target": "0x8040b5d0",
+    "text": "SPINNER_TEXTURE"
+  },
+  {
+    "instruction": "0x802db8ec",
+    "high_instruction": "0x802db8e8",
+    "target": "0x8040b5e0",
+    "text": "SPOILER_SKIN1"
+  },
+  {
+    "instruction": "0x802db8fc",
+    "high_instruction": "0x802db8f8",
+    "target": "0x8040b5f0",
+    "text": "ROOF_SKIN"
+  },
+  {
+    "instruction": "0x802dba7c",
+    "high_instruction": "0x802dba74",
+    "target": "0x8040b5fc",
+    "text": "%s_SKIN2"
+  },
+  {
+    "instruction": "0x802dbaa0",
+    "high_instruction": "0x802dba98",
+    "target": "0x8040b608",
+    "text": "%s_SKIN3"
+  },
+  {
+    "instruction": "0x802dbac4",
+    "high_instruction": "0x802dbabc",
+    "target": "0x8040b614",
+    "text": "%s_SKIN4"
+  },
+  {
+    "instruction": "0x802dbb4c",
+    "high_instruction": "0x802dbb48",
+    "target": "0x8040b620",
+    "text": "%s_KIT00_HEADLIGHT"
+  },
+  {
+    "instruction": "0x802dbb70",
+    "high_instruction": "0x802dbb6c",
+    "target": "0x8040b634",
+    "text": "%s_KIT00_BRAKELIGHT"
+  },
+  {
+    "instruction": "0x802dbc14",
+    "high_instruction": "0x802dbc0c",
+    "target": "0x8040b648",
+    "text": "HEADLIGHT_LEFT"
+  },
+  {
+    "instruction": "0x802dbc28",
+    "high_instruction": "0x802dbc24",
+    "target": "0x8040b658",
+    "text": "HEADLIGHT_RIGHT"
+  },
+  {
+    "instruction": "0x802dbc38",
+    "high_instruction": "0x802dbc34",
+    "target": "0x8040b668",
+    "text": "HEADLIGHT_GLASS_LEFT"
+  },
+  {
+    "instruction": "0x802dbc48",
+    "high_instruction": "0x802dbc44",
+    "target": "0x8040b680",
+    "text": "HEADLIGHT_GLASS_RIGHT"
+  },
+  {
+    "instruction": "0x802dbc58",
+    "high_instruction": "0x802dbc54",
+    "target": "0x8040b698",
+    "text": "BRAKELIGHT_LEFT"
+  },
+  {
+    "instruction": "0x802dbc68",
+    "high_instruction": "0x802dbc64",
+    "target": "0x8040b6a8",
+    "text": "BRAKELIGHT_RIGHT"
+  },
+  {
+    "instruction": "0x802dbc78",
+    "high_instruction": "0x802dbc74",
+    "target": "0x8040b6bc",
+    "text": "BRAKELIGHT_CENTRE"
+  },
+  {
+    "instruction": "0x802dbc88",
+    "high_instruction": "0x802dbc84",
+    "target": "0x8040b6d0",
+    "text": "BRAKELIGHT_GLASS_LEFT"
+  },
+  {
+    "instruction": "0x802dbc98",
+    "high_instruction": "0x802dbc94",
+    "target": "0x8040b6e8",
+    "text": "BRAKELIGHT_GLASS_RIGHT"
+  },
+  {
+    "instruction": "0x802dbca8",
+    "high_instruction": "0x802dbca4",
+    "target": "0x8040b700",
+    "text": "BRAKELIGHT_GLASS_CENTRE"
+  },
+  {
+    "instruction": "0x802dbcb8",
+    "high_instruction": "0x802dbcb0",
+    "target": "0x8040b718",
+    "text": "_OFF"
+  },
+  {
+    "instruction": "0x802dbcec",
+    "high_instruction": "0x802dbce4",
+    "target": "0x8040b724",
+    "text": "_DAMAGE0"
+  },
+  {
+    "instruction": "0x802dbd04",
+    "high_instruction": "0x802dbcfc",
+    "target": "0x8040b730",
+    "text": "_GLASS_OFF"
+  },
+  {
+    "instruction": "0x802dbd1c",
+    "high_instruction": "0x802dbd14",
+    "target": "0x8040b73c",
+    "text": "_GLASS_ON"
+  },
+  {
+    "instruction": "0x802dbd34",
+    "high_instruction": "0x802dbd2c",
+    "target": "0x8040b748",
+    "text": "_GLASS_DAMAGE0"
+  },
+  {
+    "instruction": "0x802dbe7c",
+    "high_instruction": "0x802dbe74",
+    "target": "0x8040b758",
+    "text": "%s_MISC"
+  },
+  {
+    "instruction": "0x802dbea0",
+    "high_instruction": "0x802dbe98",
+    "target": "0x8040b760",
+    "text": "%s_MISC_N"
+  },
+  {
+    "instruction": "0x802dbec4",
+    "high_instruction": "0x802dbebc",
+    "target": "0x8040b76c",
+    "text": "%s_INTERIOR"
+  },
+  {
+    "instruction": "0x802dbee8",
+    "high_instruction": "0x802dbee0",
+    "target": "0x8040b778",
+    "text": "%s_INTERIOR_N"
+  },
+  {
+    "instruction": "0x802dbf0c",
+    "high_instruction": "0x802dbf04",
+    "target": "0x8040b788",
+    "text": "%s_BADGING"
+  },
+  {
+    "instruction": "0x802dbf30",
+    "high_instruction": "0x802dbf28",
+    "target": "0x8040b794",
+    "text": "%s_BADGING_N"
+  },
+  {
+    "instruction": "0x802dbf54",
+    "high_instruction": "0x802dbf4c",
+    "target": "0x8040b7a4",
+    "text": "%s_DRIVER"
+  },
+  {
+    "instruction": "0x802dbf78",
+    "high_instruction": "0x802dbf70",
+    "target": "0x8040b7b0",
+    "text": "%s_ENGINE"
+  },
+  {
+    "instruction": "0x802dbf9c",
+    "high_instruction": "0x802dbf94",
+    "target": "0x8040b7bc",
+    "text": "%s_BADGING_EU"
+  },
+  {
+    "instruction": "0x802dbfc0",
+    "high_instruction": "0x802dbfb8",
+    "target": "0x8040b7cc",
+    "text": "%s_LICENSE_PLATE"
+  },
+  {
+    "instruction": "0x802dc0e0",
+    "high_instruction": "0x802dc0d8",
+    "target": "0x8040b7e4",
+    "text": "%s_SIDELIGHT"
+  },
+  {
+    "instruction": "0x802dc118",
+    "high_instruction": "0x802dc110",
+    "target": "0x8040b7f4",
+    "text": "%s_DOOR_HANDLE"
+  },
+  {
+    "instruction": "0x802dc14c",
+    "high_instruction": "0x802dc148",
+    "target": "0x8040b804",
+    "text": "%s_LOGO"
+  },
+  {
+    "instruction": "0x802dc194",
+    "high_instruction": "0x802dc190",
+    "target": "0x8040b80c",
+    "text": "AUDIO_SKIN"
+  },
+  {
+    "instruction": "0x802dc1bc",
+    "high_instruction": "0x802dc1b4",
+    "target": "0x8040b818",
+    "text": "%s_SHADOW%s"
+  },
+  {
+    "instruction": "0x802dc220",
+    "high_instruction": "0x802dc214",
+    "target": "0x8040b82c",
+    "text": "%s_NEON"
+  },
+  {
+    "instruction": "0x802dc254",
+    "high_instruction": "0x802dc24c",
+    "target": "0x8040b834",
+    "text": "%s_TIRE"
+  },
+  {
+    "instruction": "0x802dc278",
+    "high_instruction": "0x802dc270",
+    "target": "0x8040b83c",
+    "text": "%s_TIRE_N"
+  },
+  {
+    "instruction": "0x802dc29c",
+    "high_instruction": "0x802dc294",
+    "target": "0x8040b848",
+    "text": "%s_RIM"
+  },
+  {
+    "instruction": "0x802dc2c0",
+    "high_instruction": "0x802dc2b8",
+    "target": "0x8040b850",
+    "text": "%s_RIM_BLUR"
+  },
+  {
+    "instruction": "0x802dc2e4",
+    "high_instruction": "0x802dc2dc",
+    "target": "0x8040b85c",
+    "text": "%s_TREAD"
+  },
+  {
+    "instruction": "0x802dc30c",
+    "high_instruction": "0x802dc300",
+    "target": "0x8040b868",
+    "text": "%s_TREAD_N"
+  },
+  {
+    "instruction": "0x802dcc90",
+    "high_instruction": "0x802dcc8c",
+    "target": "0x8040c9f8",
+    "text": "WHEELS"
+  },
+  {
+    "instruction": "0x802dcd00",
+    "high_instruction": "0x802dccfc",
+    "target": "0x8040b5c8",
+    "text": "_WHEEL"
+  },
+  {
+    "instruction": "0x802dd1b4",
+    "high_instruction": "0x802dd1ac",
+    "target": "0x8040ca14",
+    "text": "%s(%d)"
+  },
+  {
+    "instruction": "0x802dd224",
+    "high_instruction": "0x802dd21c",
+    "target": "0x8040ca1c",
+    "text": "CarLoadedTexturePackSlotPool"
+  },
+  {
+    "instruction": "0x802dd240",
+    "high_instruction": "0x802dd238",
+    "target": "0x8040ca3c",
+    "text": "CarLoadedSolidPackSlotPool"
+  },
+  {
+    "instruction": "0x802dd260",
+    "high_instruction": "0x802dd258",
+    "target": "0x8040ca58",
+    "text": "CarLoadedSkinLayerSlotPool"
+  },
+  {
+    "instruction": "0x802dd280",
+    "high_instruction": "0x802dd278",
+    "target": "0x8040ca74",
+    "text": "CarLoadedRideInfoSlotPool"
+  },
+  {
+    "instruction": "0x802dd450",
+    "high_instruction": "0x802dd44c",
+    "target": "0x8040caa4",
+    "text": "Cars"
+  },
+  {
+    "instruction": "0x802decac",
+    "high_instruction": "0x802deca4",
+    "target": "0x8040b348",
+    "text": "CARS\\%s\\TEXTURES.BIN"
+  },
+  {
+    "instruction": "0x802def98",
+    "high_instruction": "0x802def90",
+    "target": "0x8040b348",
+    "text": "CARS\\%s\\TEXTURES.BIN"
+  },
+  {
+    "instruction": "0x802deff4",
+    "high_instruction": "0x802deff0",
+    "target": "0x8040caf8",
+    "text": "CARS\\%s\\PREVINYL.BIN"
+  },
+  {
+    "instruction": "0x802df018",
+    "high_instruction": "0x802df014",
+    "target": "0x8040b360",
+    "text": "CARS\\%s\\VINYLS.BIN"
+  },
+  {
+    "instruction": "0x802e007c",
+    "high_instruction": "0x802e0074",
+    "target": "0x8040cbfc",
+    "text": "CARS\\TEXTURES.BIN"
+  },
+  {
+    "instruction": "0x802e1820",
+    "high_instruction": "0x802e1818",
+    "target": "0x8040b5c8",
+    "text": "_WHEEL"
+  },
+  {
+    "instruction": "0x802e18dc",
+    "high_instruction": "0x802e18d8",
+    "target": "0x8040b5d0",
+    "text": "SPINNER_TEXTURE"
+  },
+  {
+    "instruction": "0x802e1938",
+    "high_instruction": "0x802e1934",
+    "target": "0x8040b5d0",
+    "text": "SPINNER_TEXTURE"
+  },
+  {
+    "instruction": "0x802e7cdc",
+    "high_instruction": "0x802e7cd8",
+    "target": "0x8040bc8c",
+    "text": "HOOD"
+  },
+  {
+    "instruction": "0x802ea378",
+    "high_instruction": "0x802ea374",
+    "target": "0x8040b8a0",
+    "text": "BASE"
+  },
+  {
+    "instruction": "0x802ea3a8",
+    "high_instruction": "0x802ea3a0",
+    "target": "0x8040b8a8",
+    "text": "DAMAGE_FRONT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea3dc",
+    "high_instruction": "0x802ea3d4",
+    "target": "0x8040b8bc",
+    "text": "DAMAGE_BODY"
+  },
+  {
+    "instruction": "0x802ea410",
+    "high_instruction": "0x802ea408",
+    "target": "0x8040b8c8",
+    "text": "DAMAGE_COP_LIGHTS"
+  },
+  {
+    "instruction": "0x802ea444",
+    "high_instruction": "0x802ea43c",
+    "target": "0x8040b8dc",
+    "text": "DAMAGE_COP_SPOILER"
+  },
+  {
+    "instruction": "0x802ea478",
+    "high_instruction": "0x802ea470",
+    "target": "0x8040b8f0",
+    "text": "DAMAGE_FRONT_WHEEL"
+  },
+  {
+    "instruction": "0x802ea4ac",
+    "high_instruction": "0x802ea4a4",
+    "target": "0x8040b904",
+    "text": "DAMAGE_LEFT_BRAKELIGHT"
+  },
+  {
+    "instruction": "0x802ea4e0",
+    "high_instruction": "0x802ea4d8",
+    "target": "0x8040b91c",
+    "text": "DAMAGE_RIGHT_BRAKELIGHT"
+  },
+  {
+    "instruction": "0x802ea514",
+    "high_instruction": "0x802ea50c",
+    "target": "0x8040b934",
+    "text": "DAMAGE_LEFT_HEADLIGHT"
+  },
+  {
+    "instruction": "0x802ea548",
+    "high_instruction": "0x802ea540",
+    "target": "0x8040b94c",
+    "text": "DAMAGE_RIGHT_HEADLIGHT"
+  },
+  {
+    "instruction": "0x802ea57c",
+    "high_instruction": "0x802ea574",
+    "target": "0x8040b964",
+    "text": "DAMAGE_HOOD"
+  },
+  {
+    "instruction": "0x802ea5b0",
+    "high_instruction": "0x802ea5a8",
+    "target": "0x8040b970",
+    "text": "DAMAGE_BUSHGUARD"
+  },
+  {
+    "instruction": "0x802ea5e4",
+    "high_instruction": "0x802ea5dc",
+    "target": "0x8040b984",
+    "text": "DAMAGE_FRONT_BUMPER"
+  },
+  {
+    "instruction": "0x802ea614",
+    "high_instruction": "0x802ea60c",
+    "target": "0x8040b998",
+    "text": "DAMAGE_RIGHT_DOOR"
+  },
+  {
+    "instruction": "0x802ea648",
+    "high_instruction": "0x802ea640",
+    "target": "0x8040b9ac",
+    "text": "DAMAGE_RIGHT_REAR_DOOR"
+  },
+  {
+    "instruction": "0x802ea67c",
+    "high_instruction": "0x802ea674",
+    "target": "0x8040b9c4",
+    "text": "DAMAGE_TRUNK"
+  },
+  {
+    "instruction": "0x802ea6b0",
+    "high_instruction": "0x802ea6a8",
+    "target": "0x8040b9d4",
+    "text": "DAMAGE_REAR_BUMPER"
+  },
+  {
+    "instruction": "0x802ea6e4",
+    "high_instruction": "0x802ea6dc",
+    "target": "0x8040b9e8",
+    "text": "DAMAGE_REAR_LEFT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea718",
+    "high_instruction": "0x802ea710",
+    "target": "0x8040ba00",
+    "text": "DAMAGE_FRONT_LEFT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea74c",
+    "high_instruction": "0x802ea744",
+    "target": "0x8040ba1c",
+    "text": "DAMAGE_FRONT_RIGHT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea780",
+    "high_instruction": "0x802ea778",
+    "target": "0x8040ba38",
+    "text": "DAMAGE_REAR_RIGHT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea7b4",
+    "high_instruction": "0x802ea7ac",
+    "target": "0x8040ba54",
+    "text": "DAMAGE_LEFT_DOOR"
+  },
+  {
+    "instruction": "0x802ea7e8",
+    "high_instruction": "0x802ea7e0",
+    "target": "0x8040ba68",
+    "text": "DAMAGE_LEFT_REAR_DOOR"
+  },
+  {
+    "instruction": "0x802ea81c",
+    "high_instruction": "0x802ea814",
+    "target": "0x8040ba80",
+    "text": "BODY"
+  },
+  {
+    "instruction": "0x802ea850",
+    "high_instruction": "0x802ea848",
+    "target": "0x8040ba88",
+    "text": "FRONT_BRAKE"
+  },
+  {
+    "instruction": "0x802ea884",
+    "high_instruction": "0x802ea87c",
+    "target": "0x8040ba94",
+    "text": "FRONT_LEFT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea8b8",
+    "high_instruction": "0x802ea8b0",
+    "target": "0x8040baa8",
+    "text": "FRONT_RIGHT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea8ec",
+    "high_instruction": "0x802ea8e4",
+    "target": "0x8040babc",
+    "text": "FRONT_WINDOW"
+  },
+  {
+    "instruction": "0x802ea920",
+    "high_instruction": "0x802ea918",
+    "target": "0x8040bacc",
+    "text": "INTERIOR"
+  },
+  {
+    "instruction": "0x802ea954",
+    "high_instruction": "0x802ea94c",
+    "target": "0x8040bad8",
+    "text": "LEFT_BRAKELIGHT"
+  },
+  {
+    "instruction": "0x802ea988",
+    "high_instruction": "0x802ea980",
+    "target": "0x8040bae8",
+    "text": "LEFT_BRAKELIGHT_GLASS"
+  },
+  {
+    "instruction": "0x802ea9bc",
+    "high_instruction": "0x802ea9b4",
+    "target": "0x8040bb00",
+    "text": "LEFT_HEADLIGHT"
+  },
+  {
+    "instruction": "0x802ea9f0",
+    "high_instruction": "0x802ea9e8",
+    "target": "0x8040bb10",
+    "text": "LEFT_HEADLIGHT_GLASS"
+  },
+  {
+    "instruction": "0x802eaa24",
+    "high_instruction": "0x802eaa1c",
+    "target": "0x8040bb28",
+    "text": "LEFT_SIDE_MIRROR"
+  },
+  {
+    "instruction": "0x802eaa58",
+    "high_instruction": "0x802eaa50",
+    "target": "0x8040bb3c",
+    "text": "REAR_BRAKE"
+  },
+  {
+    "instruction": "0x802eaa8c",
+    "high_instruction": "0x802eaa84",
+    "target": "0x8040bb48",
+    "text": "REAR_LEFT_WINDOW"
+  },
+  {
+    "instruction": "0x802eaac0",
+    "high_instruction": "0x802eaab8",
+    "target": "0x8040bb5c",
+    "text": "REAR_RIGHT_WINDOW"
+  },
+  {
+    "instruction": "0x802eaaf4",
+    "high_instruction": "0x802eaaec",
+    "target": "0x8040bb70",
+    "text": "REAR_WINDOW"
+  },
+  {
+    "instruction": "0x802eab28",
+    "high_instruction": "0x802eab20",
+    "target": "0x8040bb7c",
+    "text": "RIGHT_BRAKELIGHT"
+  },
+  {
+    "instruction": "0x802eab5c",
+    "high_instruction": "0x802eab54",
+    "target": "0x8040bb90",
+    "text": "RIGHT_BRAKELIGHT_GLASS"
+  },
+  {
+    "instruction": "0x802eab90",
+    "high_instruction": "0x802eab88",
+    "target": "0x8040bba8",
+    "text": "RIGHT_HEADLIGHT"
+  },
+  {
+    "instruction": "0x802eabc4",
+    "high_instruction": "0x802eabbc",
+    "target": "0x8040bbb8",
+    "text": "RIGHT_HEADLIGHT_GLASS"
+  },
+  {
+    "instruction": "0x802eabf8",
+    "high_instruction": "0x802eabf0",
+    "target": "0x8040bbd0",
+    "text": "RIGHT_SIDE_MIRROR"
+  },
+  {
+    "instruction": "0x802eac2c",
+    "high_instruction": "0x802eac28",
+    "target": "0x8040bbe4",
+    "text": "DRIVER"
+  },
+  {
+    "instruction": "0x802eac64",
+    "high_instruction": "0x802eac60",
+    "target": "0x8040bbec",
+    "text": "SPOILER"
+  },
+  {
+    "instruction": "0x802eac9c",
+    "high_instruction": "0x802eac98",
+    "target": "0x8040bbf4",
+    "text": "UNIVERSAL_SPOILER_BASE"
+  },
+  {
+    "instruction": "0x802eacd4",
+    "high_instruction": "0x802eacd0",
+    "target": "0x8040b3a8",
+    "text": "DAMAGE0_FRONT"
+  },
+  {
+    "instruction": "0x802ead0c",
+    "high_instruction": "0x802ead08",
+    "target": "0x8040b3c8",
+    "text": "DAMAGE0_FRONTLEFT"
+  },
+  {
+    "instruction": "0x802ead44",
+    "high_instruction": "0x802ead40",
+    "target": "0x8040b3dc",
+    "text": "DAMAGE0_FRONTRIGHT"
+  },
+  {
+    "instruction": "0x802ead7c",
+    "high_instruction": "0x802ead78",
+    "target": "0x8040b3b8",
+    "text": "DAMAGE0_REAR"
+  },
+  {
+    "instruction": "0x802eadb4",
+    "high_instruction": "0x802eadb0",
+    "target": "0x8040b3f0",
+    "text": "DAMAGE0_REARLEFT"
+  },
+  {
+    "instruction": "0x802eadec",
+    "high_instruction": "0x802eade8",
+    "target": "0x8040b404",
+    "text": "DAMAGE0_REARRIGHT"
+  },
+  {
+    "instruction": "0x802eae24",
+    "high_instruction": "0x802eae20",
+    "target": "0x8040bc0c",
+    "text": "ATTACHMENT0"
+  },
+  {
+    "instruction": "0x802eae5c",
+    "high_instruction": "0x802eae58",
+    "target": "0x8040bc18",
+    "text": "ATTACHMENT1"
+  },
+  {
+    "instruction": "0x802eae94",
+    "high_instruction": "0x802eae90",
+    "target": "0x8040bc24",
+    "text": "ATTACHMENT2"
+  },
+  {
+    "instruction": "0x802eaecc",
+    "high_instruction": "0x802eaec8",
+    "target": "0x8040bc30",
+    "text": "ATTACHMENT3"
+  },
+  {
+    "instruction": "0x802eaf04",
+    "high_instruction": "0x802eaf00",
+    "target": "0x8040bc3c",
+    "text": "ATTACHMENT4"
+  },
+  {
+    "instruction": "0x802eaf3c",
+    "high_instruction": "0x802eaf38",
+    "target": "0x8040bc48",
+    "text": "ATTACHMENT5"
+  },
+  {
+    "instruction": "0x802eaf74",
+    "high_instruction": "0x802eaf70",
+    "target": "0x8040bc54",
+    "text": "ATTACHMENT6"
+  },
+  {
+    "instruction": "0x802eafac",
+    "high_instruction": "0x802eafa8",
+    "target": "0x8040bc60",
+    "text": "ATTACHMENT7"
+  },
+  {
+    "instruction": "0x802eafe4",
+    "high_instruction": "0x802eafe0",
+    "target": "0x8040bc6c",
+    "text": "ATTACHMENT8"
+  },
+  {
+    "instruction": "0x802eb01c",
+    "high_instruction": "0x802eb018",
+    "target": "0x8040bc78",
+    "text": "ATTACHMENT9"
+  },
+  {
+    "instruction": "0x802eb054",
+    "high_instruction": "0x802eb050",
+    "target": "0x8040bc84",
+    "text": "ROOF"
+  },
+  {
+    "instruction": "0x802eb08c",
+    "high_instruction": "0x802eb088",
+    "target": "0x8040bc8c",
+    "text": "HOOD"
+  },
+  {
+    "instruction": "0x802eb0c4",
+    "high_instruction": "0x802eb0c0",
+    "target": "0x8040bc94",
+    "text": "HEADLIGHT"
+  },
+  {
+    "instruction": "0x802eb0fc",
+    "high_instruction": "0x802eb0f8",
+    "target": "0x8040bca0",
+    "text": "BRAKELIGHT"
+  },
+  {
+    "instruction": "0x802eb1a4",
+    "high_instruction": "0x802eb1a0",
+    "target": "0x8040bcc4",
+    "text": "SPINNER"
+  },
+  {
+    "instruction": "0x802eb1dc",
+    "high_instruction": "0x802eb1d8",
+    "target": "0x8040bccc",
+    "text": "LICENSE_PLATE"
+  },
+  {
+    "instruction": "0x802eb47c",
+    "high_instruction": "0x802eb474",
+    "target": "0x8040c224",
+    "text": "WINDOW_TINT"
+  },
+  {
+    "instruction": "0x802eb4b4",
+    "high_instruction": "0x802eb4ac",
+    "target": "0x8040c230",
+    "text": "CUSTOM_HUD"
+  },
+  {
+    "instruction": "0x802eb55c",
+    "high_instruction": "0x802eb554",
+    "target": "0x8040c27c",
+    "text": "WHEEL_MANUFACTURER"
+  },
+  {
+    "instruction": "0x802eb594",
+    "high_instruction": "0x802eb58c",
+    "target": "0x8040c290",
+    "text": "MISC"
+  }
+]

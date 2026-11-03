@@ -23,6 +23,16 @@ def verify_original_geometry(assets,manifest,stream):
                 asset=(assets/record['path']).read_bytes()
                 start,length=struct.unpack_from('<2I',asset,220);prefix=start%32
                 raw=bytes(prefix)+original[start:start+length]
+                if record.get('empty_source'):
+                    parts={k:(prefix+a,prefix+b) for k,a,b in chunks(raw[prefix:])}
+                    h=(parts[0x134011][0]+15)&~15
+                    if asset[256:]!=raw[h:h+160] or struct.unpack_from('<4I',asset,16)!=(0,0,0,0):
+                        raise ValueError('Empty source header/counts changed')
+                    a,b=parts[0x80134100];geometry={k:(a+c,a+d) for k,c,d in chunks(raw[a:b])}
+                    ms,me=geometry[0x134800];ms=(ms+15)&~15;metadata=raw[ms:me]
+                    if metadata[:2]!=b'\0\x16' or any(metadata[2:]):
+                        raise ValueError('Empty geometry is not exact original zero-draw metadata')
+                    continue
                 model=decode_model(raw,prefix,len(raw),allow_triangle_statistic_mismatch=True)
                 parts={k:(prefix+a,prefix+b) for k,a,b in chunks(raw[prefix:])}
                 a,b=parts[0x80134100];geometry={k:(a+c,a+d) for k,c,d in chunks(raw[a:b])}

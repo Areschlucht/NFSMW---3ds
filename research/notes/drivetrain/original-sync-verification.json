@@ -1,0 +1,17 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "float_bit_cases": {
+    "sync": 4096,
+    "cap": 4096
+  },
+  "original_ranges": [
+    "802565C0..802568A0",
+    "80256A08..80256B8C"
+  ],
+  "wheel_interface": "Actual original Racer vtable803FE938 and its signed this adjustments",
+  "vehicle_speed_getter": "Actual Vehicle vtable803F8728.slot138\u21928022E1D0 readsVehicle+128",
+  "limitations": [
+    "Vehicle+128 producer remains separate; explicit supplied source scalar",
+    "Call ordering relative to original engine torque update remains a higher-level integration gate"
+  ]
+}

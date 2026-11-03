@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "archive": "/workspace/port-research/hardware-optimization/scene-pack/native-checkpoint-v1.mwp",
+  "archive_bytes": 104060544,
+  "archive_sha256": "1cb0658c6b6adaf0923e1289a23827fd1edf4ced23c9a9aa7d2b63f34ba5d2b1",
+  "source_sha256": "58fdd0adb8bdf1ebc3545ee679076c768acb3c52308c4b916ca960b4a0ac5552",
+  "scene_manifest_sha256": "3aaa0b0ae70fc378f2fe49f0808b98ad34f9e2e414da4ed416865092bae889c3",
+  "entries": 17238,
+  "index_normal_heap_bytes": 1103232,
+  "payload_bytes": 102049292,
+  "alignment_padding_bytes": 907892,
+  "kind_counts": {
+    "1": 13538,
+    "2": 997,
+    "3": 2703
+  },
+  "max_asset_bytes": 471664,
+  "gpu_allocation_claim": false,
+  "native_full_payload_asan_ubsan_comparison": "17238/17238 byte exact",
+  "fixture_tests_passed": 6,
+  "armv6k_strict_compile": {
+    "text_and_rodata_bytes": 2823,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "crc_table_bytes_included": 1024
+  },
+  "production_renderer_modified": false,
+  "empty_wsm_regeneration_pending": true,
+  "source_files_sha256": {
+    "include/mw_scene_pack.h": "c2815fc99f1d57896a09768d2379cc007912f8a93c338d9356c6c2071e498437",
+    "source_bmw/mw_scene_pack.c": "d07857a9217651fbbca6e8ce0b38367c01d601af23ab87046a5f6143ca90c693",
+    "tools/perf_scene_pack.py": "f0054ae4c559621c9caa180102994d59cea889722787382216ef314de635fa50",
+    "tools/perf_scene_pack_test.c": "b6b16f00878059219d9213222cacda2ec4e1657b9f3232246dab5dc1ceb3b445",
+    "tests/test_perf_scene_pack.py": "722cac9adccecca0245a52efddca06ca7e3016eea11cfb1b863fc4bef8e79667",
+    "tools/perf_scene_pack.md": "959189d9ebdebb8359e23f8337eda6da9803dfabd898d085bb660c2821320f53"
+  }
+}

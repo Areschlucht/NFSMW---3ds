@@ -1,0 +1,67 @@
+[
+  {
+    "package": "GLOBALMESSAGE",
+    "name": "MW_LOGO",
+    "hash": "0cd55e13",
+    "width": 256,
+    "height": 64,
+    "native_format": "00000008",
+    "pixel_offset": 4096,
+    "image_bytes": 8192,
+    "palette_bytes": 512,
+    "png": "000_MW_LOGO.png",
+    "rgba_sha256": "f621d740b62a7d1bbd0c26a428bf53676c813cafe308182ea5cb733ca0f46cf6"
+  },
+  {
+    "package": "GLOBALMESSAGE",
+    "name": "COP_LIGHT",
+    "hash": "522d4938",
+    "width": 64,
+    "height": 16,
+    "native_format": "00000008",
+    "pixel_offset": 12288,
+    "image_bytes": 512,
+    "palette_bytes": 512,
+    "png": "001_COP_LIGHT.png",
+    "rgba_sha256": "83f59699873fc1d591b7a83d8a2b715129c4544011d6f503f010d79647fab007"
+  },
+  {
+    "package": "GLOBALMESSAGE",
+    "name": "FONT_MW_BODY",
+    "hash": "545570c6",
+    "width": 256,
+    "height": 256,
+    "native_format": "00000009",
+    "pixel_offset": 12800,
+    "image_bytes": 65536,
+    "palette_bytes": 512,
+    "png": "002_FONT_MW_BODY.png",
+    "rgba_sha256": "46a7410f70e54343600ed9741fbbbfec1b0ad7eea5e0843d0cde052852b243bc"
+  },
+  {
+    "package": "GLOBALMESSAGE",
+    "name": "COP_LIGHT_FLASH",
+    "hash": "94b4e685",
+    "width": 64,
+    "height": 64,
+    "native_format": "80000009",
+    "pixel_offset": 78336,
+    "image_bytes": 4096,
+    "palette_bytes": 512,
+    "png": "003_COP_LIGHT_FLASH.png",
+    "rgba_sha256": "2cd68111ae6023951b45af5f440acd3e59b7140b47cd6628b1e40c49efe0258f"
+  },
+  {
+    "package": "GLOBALMESSAGE",
+    "name": "BASEPOLY",
+    "hash": "c6afdd7e",
+    "width": 16,
+    "height": 16,
+    "native_format": "00000008",
+    "pixel_offset": 82432,
+    "image_bytes": 128,
+    "palette_bytes": 512,
+    "png": "004_BASEPOLY.png",
+    "rgba_sha256": "5f4ecdb7b71c3e403983fe405cddcdc2f2576b655fdb3e80d94a6f7c32e58bc2"
+  }
+]

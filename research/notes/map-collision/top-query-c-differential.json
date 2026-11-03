@@ -1,0 +1,12 @@
+{
+  "cases": 1336,
+  "hits": 802,
+  "failure_count": 0,
+  "failures": [],
+  "maximum_gap_error": 2.384185791015625e-07,
+  "maximum_triangle_vertex_error": 0,
+  "maximum_reference_instructions": 12908,
+  "limitations": "Original frsqrte is hooked to checksum-pinned Dolphin Gekko estimate model at commit86d554802d7560acf12b5c5a2b3acb344069b5ce; reconstruction uses ordinary sqrt. Paired-single interpreter uses binary64 intermediate then binary32, not exact Gekko FMA ties. Emulator reference, not console trace. No collision response or original wheel-contact consumer linkage.",
+  "implementation_sha256": "966701d679f9479257379887a33c710d6988ca78f889fca3bba862a5f5e8d6e2",
+  "header_sha256": "0edcc05fa7c4c0d7fa7c55816faf928dba34d613303fac1df21ee62cbcc47371"
+}

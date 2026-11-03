@@ -1,0 +1,56 @@
+{
+  "version": "0.12",
+  "python_tests": 51,
+  "native_scene_asan_ubsan": "pass; 100 textures, 58491 vertices; invalid texture limit rejected",
+  "native_road_contact_asan_ubsan": "pass",
+  "native_road_pose_asan_ubsan": "pass; four spawn contacts; 600-step real-map drive",
+  "native_road_map_asan_ubsan": "pass",
+  "strict_arm_build": "pass",
+  "legacy_bmw_strict_build": "pass",
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "checked": [
+    "startup and denser scenery rendering",
+    "acceleration",
+    "road-edge stop",
+    "reverse",
+    "driving reset",
+    "garage rolling and reset",
+    "controls/menu/exit"
+  ],
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "wheel_roll": [
+      158,
+      118,
+      278,
+      171
+    ]
+  },
+  "world_triangles": 19497,
+  "world_textures": 100,
+  "scenery_instances": 129,
+  "scenery_omissions": {
+    "missing_model_or_bounds_mismatch": 122,
+    "race_barrier": 61,
+    "missing_texture": 1
+  },
+  "spawn_selection": {
+    "method": "Projected onto original navigation segment, checked against original road triangles",
+    "segment": 406,
+    "offset_from_old_spawn_m": 11.960035304931617,
+    "forward_run_m": 90,
+    "reverse_run_m": 118
+  },
+  "hardware_test": "not requested; no new hardware FPS claim",
+  "limitations": [
+    "Some building walls incorrectly transparent",
+    "Road materials too light/stretched",
+    "Missing nearby models remain omitted",
+    "No original engine, full physics or scenery collision"
+  ],
+  "zip_sha256": "498abfb9459e477ef94369477858c588ac939b1545e7bf631ef1dbb3054e1ea0",
+  "binary_sha256": "6f2c1fe3ecd97849c6a12eebf0580d0ba5d0da0460ea5bffb4debe4c3960ed09",
+  "zip_files": 128,
+  "zip_assets_match_validated_inputs": true
+}

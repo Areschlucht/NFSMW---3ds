@@ -1,0 +1,50 @@
+{
+  "version": "0.9",
+  "python_tests": 48,
+  "strict_arm_build": "pass",
+  "native_wheel_rig_motion_asan_ubsan": "pass",
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "checks": [
+    "independent wheel rolling with paused camera",
+    "front steering with paused camera",
+    "exact garage reset",
+    "neutral wheel restoration",
+    "acceleration",
+    "braking",
+    "reverse",
+    "driving reset",
+    "menus/controls/exit"
+  ],
+  "image_checks": {
+    "roll-0": [
+      159,
+      118,
+      278,
+      171
+    ],
+    "roll-9": [
+      158,
+      118,
+      278,
+      171
+    ],
+    "reset": null,
+    "steer": [
+      259,
+      118,
+      280,
+      145
+    ],
+    "neutral": null,
+    "drive-reset": null
+  },
+  "car_triangles": 7704,
+  "world_triangles": 11944,
+  "car_batches": 28,
+  "wheel_radius_m": 0.3291015625,
+  "geometry_placement": "provisional body-arch fit",
+  "rim_orientation": "TIRE_BACK plane now inboard",
+  "physics": "unchanged; animation follows accepted motion",
+  "hardware_test": "not requested; user is on phone",
+  "sha256": "e5d96f77ca702e7bd7cf01a932c593b154d50972aae9de0b6c9326199d3dbf1d"
+}

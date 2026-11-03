@@ -30,6 +30,10 @@ typedef struct {
     StreamedWorldLodMode lod_mode;
     uint8_t alpha_reference; /* Original initialized source value40. */
     bool comparison_zero_transparent_rgb; /* OFFLINE Tex3DS reference only; productionfalse. */
+    bool boot_global_provider_bank; /* Explicit export namespace sections/0.wsi;
+        original boot-global resources, never original tracksection0. */
+    uint32_t original_missing_texture_hash; /* 0disabled or actual66994F4A
+        DEFAULTALPHA only; applies to final registryLOOKUPmiss, never bad IO/CRC. */
 } StreamedWorldConfig;
 typedef struct {
     double camera_viewer[3]; /* Absolute unscaled VIEWER=(sourceX,sourceZ,-sourceY). */
@@ -44,6 +48,8 @@ typedef struct {
     uint32_t resident_models,resident_textures,normal_used,normal_budget;
     uint32_t linear_used,linear_budget,scratch_bytes;
     uint32_t asset_queries,asset_reads,model_uploads,texture_uploads,arena_allocations;
+    uint32_t boot_provider_banks;
+    uint32_t texture_fallback_bindings; /* Visible original-batch lookup misses. */
     StreamedWorldResult result;
     char detail[160];
 } StreamedWorldStats;

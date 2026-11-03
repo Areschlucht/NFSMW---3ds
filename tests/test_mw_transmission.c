@@ -147,5 +147,33 @@ int main(void)
     MwPhysicsTransmissionSpeedWheel wheels_saved[4];memcpy(wheels_saved,coupled,sizeof coupled);
     assert(!mw_physics_transmission_engine_mechanical_step(&ep,&ei,&es,coupled));
     assert(!memcmp(&es_saved,&es,sizeof es) && !memcmp(wheels_saved,coupled,sizeof coupled));
+    MwPhysicsTransmissionAutomaticParams automatic_params={&tables,gears,4,.25f,1000};
+    MwPhysicsTransmissionAutomaticInput automatic_input={.seconds=.1f,.raw_throttle=1,
+        .applied_throttle=1,.input_present=1,.automatic_enabled=1,
+        .contacted={1,1,1,1},.longitudinal_slip={0,0,0,4}};
+    MwPhysicsTransmissionAutomaticState automatic_state={{2,0,0},0,2,0};
+    MwPhysicsTransmissionGearEvent gear_event;
+    assert(mw_physics_transmission_automatic_step(&automatic_params,&automatic_input,&automatic_state,&gear_event));
+    assert(automatic_state.shift.gear_slot==2 && !gear_event.accepted);
+    automatic_input.longitudinal_slip[3]=-10;
+    assert(mw_physics_transmission_automatic_step(&automatic_params,&automatic_input,&automatic_state,&gear_event));
+    assert(automatic_state.shift.gear_slot==3 && gear_event.accepted && gear_event.previous_gear==2);
+    assert(fabsf(automatic_state.shift.shift_delay-.4f)<.000001f && automatic_state.shift.clutch_state==2);
+    automatic_state.cooldown=.5f;automatic_state.request=1;automatic_input.automatic_enabled=0;
+    assert(mw_physics_transmission_automatic_step(&automatic_params,&automatic_input,&automatic_state,&gear_event));
+    assert(automatic_state.cooldown==.4f);
+    MwPhysicsTransmissionEngineStepParams step_params={.mechanical=ep,.nos=nos,.shift_speed=.25f};
+    MwPhysicsTransmissionEngineStepInput step_input={.external=ei,.raw_throttle=1,
+        .input_present=1,.automatic_enabled=1};
+    MwPhysicsTransmissionEngineStepState step_state={.mechanical={.gear_slot=1,
+        .clutch={2,0,0},.engine_omega=104.719765f,.reported_rpm=1000},.nos={1,0}};
+    memset(coupled,0,sizeof coupled);
+    assert(mw_physics_transmission_engine_step(&step_params,&step_input,&step_state,coupled,&gear_event));
+    assert(step_state.mechanical.gear_slot==2 && step_state.mechanical.clutch.mode==1);
+    assert(!gear_event.accepted && step_state.induction_boost==0 && step_state.scale_100==1);
+    MwPhysicsTransmissionEngineStepState saved_step=step_state;
+    step_params.induction.high_boost=.1f;
+    assert(!mw_physics_transmission_engine_step(&step_params,&step_input,&step_state,coupled,&gear_event));
+    assert(!memcmp(&saved_step,&step_state,sizeof saved_step));
     return 0;
 }

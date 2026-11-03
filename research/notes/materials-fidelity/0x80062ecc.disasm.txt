@@ -1,0 +1,27 @@
+80062ecc mr        r11, r3
+80062ed0 lbz       r9, 0(r11)
+80062ed4 li        r3, -1
+80062ed8 cmpwi     r9, 0
+80062edc beqlr     
+80062ee0 slwi      r0, r3, 5
+80062ee4 add       r3, r3, r0
+80062ee8 add       r3, r9, r3
+80062eec lbzu      r9, 1(r11)
+80062ef0 cmpwi     r9, 0
+80062ef4 bne       0x80062ee0
+80062ef8 blr       
+80062efc mr        r11, r3
+80062f00 lbz       r9, 0(r11)
+80062f04 mr        r3, r4
+80062f08 cmpwi     r9, 0
+80062f0c beqlr     
+80062f10 slwi      r0, r3, 5
+80062f14 add       r3, r3, r0
+80062f18 add       r3, r9, r3
+80062f1c lbzu      r9, 1(r11)
+80062f20 cmpwi     r9, 0
+80062f24 bne       0x80062f10
+80062f28 blr       
+80062f2c li        r9, 0
+80062f30 or.       r3, r3, r3
+80062f34 beq       0x80062f54

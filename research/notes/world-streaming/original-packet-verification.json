@@ -1,0 +1,2381 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "stream_sha256": "58fdd0adb8bdf1ebc3545ee679076c768acb3c52308c4b916ca960b4a0ac5552",
+  "original_entry": "8011773c",
+  "original_stop": "801181c0",
+  "counts": {
+    "draw_occurrences": 4826,
+    "model_occurrences": 168
+  },
+  "unique_packet_cases": 3330,
+  "geometry_checks": [
+    {
+      "section": 2400,
+      "offset": 31128,
+      "hash": "08f9b4f2",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 80,
+        "emitted_position_index_triangles": 77,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 71,
+      "faces": 77,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2400,
+      "offset": 44600,
+      "hash": "1e7e3f9b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 129,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 113,
+      "faces": 129,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2400,
+      "offset": 91132,
+      "hash": "d18402da",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 232,
+        "emitted_position_index_triangles": 229,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 147,
+      "faces": 229,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2413,
+      "offset": 14215108,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2422,
+      "offset": 15449796,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2435,
+      "offset": 17867816,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2459,
+      "offset": 20000580,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2465,
+      "offset": 20673388,
+      "hash": "f8a89923",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 118,
+        "emitted_position_index_triangles": 117,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 98,
+      "faces": 117,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2212,
+      "offset": 21881936,
+      "hash": "1607336c",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 46,
+        "emitted_position_index_triangles": 45,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 55,
+      "faces": 45,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 150,
+      "offset": 25767360,
+      "hash": "4aea2fa3",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 264,
+        "emitted_position_index_triangles": 263,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 173,
+      "faces": 263,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 154,
+      "offset": 26404552,
+      "hash": "18041c88",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 252,
+        "emitted_position_index_triangles": 248,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 152,
+      "faces": 248,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 158,
+      "offset": 26781120,
+      "hash": "7fb33c41",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 98,
+        "emitted_position_index_triangles": 58,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 40,
+      "faces": 58,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 158,
+      "offset": 26826940,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 159,
+      "offset": 27001596,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 255,
+      "offset": 30828568,
+      "hash": "0d47df11",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 19,
+        "emitted_position_index_triangles": 18,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 22,
+      "faces": 18,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 258,
+      "offset": 31133992,
+      "hash": "3ce4dfdc",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 56,
+        "emitted_position_index_triangles": 55,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 40,
+      "faces": 55,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 258,
+      "offset": 31135468,
+      "hash": "3ce4dfde",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 55,
+        "emitted_position_index_triangles": 54,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 42,
+      "faces": 54,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 258,
+      "offset": 31138360,
+      "hash": "3ce4dfe0",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 54,
+        "emitted_position_index_triangles": 53,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 53,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 258,
+      "offset": 31142868,
+      "hash": "3ce4dfe3",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 62,
+        "emitted_position_index_triangles": 61,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 56,
+      "faces": 61,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 349,
+      "offset": 32462664,
+      "hash": "21c539dd",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 159,
+        "emitted_position_index_triangles": 157,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 91,
+      "faces": 157,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 446,
+      "offset": 34055916,
+      "hash": "eb4bd033",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 328,
+        "emitted_position_index_triangles": 326,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 199,
+      "faces": 326,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 470,
+      "offset": 36385980,
+      "hash": "ed9843ae",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 223,
+        "emitted_position_index_triangles": 221,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 142,
+      "faces": 221,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 470,
+      "offset": 36434044,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 472,
+      "offset": 36635548,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 475,
+      "offset": 36992512,
+      "hash": "be658176",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 61,
+        "emitted_position_index_triangles": 48,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 42,
+      "faces": 48,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 475,
+      "offset": 37010236,
+      "hash": "a310ff37",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 175,
+        "emitted_position_index_triangles": 173,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 109,
+      "faces": 173,
+      "zero_area_faces_with_distinct_position_indices": 4
+    },
+    {
+      "section": 478,
+      "offset": 37544860,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 542,
+      "offset": 37841260,
+      "hash": "eb5bb735",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 101,
+        "emitted_position_index_triangles": 96,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 65,
+      "faces": 96,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 542,
+      "offset": 37844080,
+      "hash": "eb5bb736",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 185,
+        "emitted_position_index_triangles": 184,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 113,
+      "faces": 184,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 544,
+      "offset": 38578208,
+      "hash": "e093f126",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 64,
+        "emitted_position_index_triangles": 62,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 68,
+      "faces": 62,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 545,
+      "offset": 38657468,
+      "hash": "ef5cd659",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 166,
+        "emitted_position_index_triangles": 165,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 123,
+      "faces": 165,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 545,
+      "offset": 38666620,
+      "hash": "5708e6e5",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 289,
+        "emitted_position_index_triangles": 287,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 184,
+      "faces": 287,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 547,
+      "offset": 39067400,
+      "hash": "1c51d278",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 409,
+        "emitted_position_index_triangles": 405,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 252,
+      "faces": 405,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 649,
+      "offset": 40285852,
+      "hash": "a81af09c",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 48,
+        "emitted_position_index_triangles": 46,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 40,
+      "faces": 46,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 652,
+      "offset": 40956612,
+      "hash": "d067789f",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 65,
+        "emitted_position_index_triangles": 63,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 63,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 652,
+      "offset": 40962628,
+      "hash": "d06778a1",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 129,
+        "emitted_position_index_triangles": 125,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 100,
+      "faces": 125,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 760,
+      "offset": 44755928,
+      "hash": "3fef022b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 167,
+        "emitted_position_index_triangles": 165,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 106,
+      "faces": 165,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 769,
+      "offset": 45529896,
+      "hash": "4899a68a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 98,
+        "emitted_position_index_triangles": 72,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 72,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 769,
+      "offset": 45625820,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 844,
+      "offset": 46774632,
+      "hash": "9b0317ec",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 48,
+        "emitted_position_index_triangles": 42,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 49,
+      "faces": 42,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 844,
+      "offset": 46834784,
+      "hash": "55c5f29d",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 95,
+        "emitted_position_index_triangles": 93,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 64,
+      "faces": 93,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 849,
+      "offset": 47494712,
+      "hash": "d699778c",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 206,
+        "emitted_position_index_triangles": 180,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 111,
+      "faces": 180,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 850,
+      "offset": 47626524,
+      "hash": "9b00ac87",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 173,
+        "emitted_position_index_triangles": 169,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 106,
+      "faces": 169,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 850,
+      "offset": 47648108,
+      "hash": "fb1641ba",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 108,
+        "emitted_position_index_triangles": 107,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 82,
+      "faces": 107,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 850,
+      "offset": 47650960,
+      "hash": "fb1641bb",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 123,
+        "emitted_position_index_triangles": 122,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 89,
+      "faces": 122,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 850,
+      "offset": 47656724,
+      "hash": "fb1641bd",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 227,
+        "emitted_position_index_triangles": 224,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 163,
+      "faces": 224,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 856,
+      "offset": 48641312,
+      "hash": "29dd2373",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 73,
+        "emitted_position_index_triangles": 69,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 48,
+      "faces": 69,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 856,
+      "offset": 48644644,
+      "hash": "658190fb",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 46,
+        "emitted_position_index_triangles": 45,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 34,
+      "faces": 45,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 856,
+      "offset": 48652676,
+      "hash": "65819101",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 42,
+        "emitted_position_index_triangles": 41,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 41,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 944,
+      "offset": 49840388,
+      "hash": "f57143cc",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 195,
+        "emitted_position_index_triangles": 194,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 152,
+      "faces": 194,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 949,
+      "offset": 50663380,
+      "hash": "3b4a6f0f",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 44,
+        "emitted_position_index_triangles": 43,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 57,
+      "faces": 43,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 957,
+      "offset": 51851304,
+      "hash": "ab7719da",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 80,
+        "emitted_position_index_triangles": 64,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 51,
+      "faces": 64,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 962,
+      "offset": 52490820,
+      "hash": "a35d1ada",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 107,
+        "emitted_position_index_triangles": 106,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 91,
+      "faces": 106,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 962,
+      "offset": 52503436,
+      "hash": "a35d1adf",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 190,
+        "emitted_position_index_triangles": 188,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 160,
+      "faces": 188,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 963,
+      "offset": 52730116,
+      "hash": "2f710b43",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 30,
+        "emitted_position_index_triangles": 19,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 18,
+      "faces": 19,
+      "zero_area_faces_with_distinct_position_indices": 3
+    },
+    {
+      "section": 969,
+      "offset": 53445580,
+      "hash": "e2bc7ac6",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 180,
+        "emitted_position_index_triangles": 132,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 94,
+      "faces": 132,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 969,
+      "offset": 53494076,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1049,
+      "offset": 54315444,
+      "hash": "c5db37e1",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 57,
+        "emitted_position_index_triangles": 55,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 46,
+      "faces": 55,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1160,
+      "offset": 56271880,
+      "hash": "4899a68a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 98,
+        "emitted_position_index_triangles": 72,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 72,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1164,
+      "offset": 56475752,
+      "hash": "9b0317ec",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 48,
+        "emitted_position_index_triangles": 42,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 49,
+      "faces": 42,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1165,
+      "offset": 56561980,
+      "hash": "9b00ac87",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 173,
+        "emitted_position_index_triangles": 169,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 106,
+      "faces": 169,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1165,
+      "offset": 56583564,
+      "hash": "fb1641ba",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 108,
+        "emitted_position_index_triangles": 107,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 82,
+      "faces": 107,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1165,
+      "offset": 56586416,
+      "hash": "fb1641bb",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 123,
+        "emitted_position_index_triangles": 122,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 89,
+      "faces": 122,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1165,
+      "offset": 56592180,
+      "hash": "fb1641bd",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 227,
+        "emitted_position_index_triangles": 224,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 163,
+      "faces": 224,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1174,
+      "offset": 57115716,
+      "hash": "a35d1ada",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 107,
+        "emitted_position_index_triangles": 106,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 91,
+      "faces": 106,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1174,
+      "offset": 57128332,
+      "hash": "a35d1adf",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 190,
+        "emitted_position_index_triangles": 188,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 160,
+      "faces": 188,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1177,
+      "offset": 57279412,
+      "hash": "c5db37e1",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 57,
+        "emitted_position_index_triangles": 55,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 46,
+      "faces": 55,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1356,
+      "offset": 58022248,
+      "hash": "bff30efd",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 105,
+        "emitted_position_index_triangles": 103,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 74,
+      "faces": 103,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1356,
+      "offset": 58028696,
+      "hash": "bff30eff",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 97,
+        "emitted_position_index_triangles": 95,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 63,
+      "faces": 95,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1561,
+      "offset": 61505044,
+      "hash": "e1cf9949",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 57,
+        "emitted_position_index_triangles": 55,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 51,
+      "faces": 55,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1566,
+      "offset": 62146004,
+      "hash": "8873fe06",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 98,
+        "emitted_position_index_triangles": 96,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 65,
+      "faces": 96,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1570,
+      "offset": 62574736,
+      "hash": "bcce5280",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 18,
+        "emitted_position_index_triangles": 16,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 14,
+      "faces": 16,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1570,
+      "offset": 62581832,
+      "hash": "2ff322fb",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 102,
+        "emitted_position_index_triangles": 99,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 83,
+      "faces": 99,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1574,
+      "offset": 63184088,
+      "hash": "5b8e9706",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 120,
+        "emitted_position_index_triangles": 118,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 93,
+      "faces": 118,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1574,
+      "offset": 63188452,
+      "hash": "5b8e9707",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 142,
+        "emitted_position_index_triangles": 140,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 109,
+      "faces": 140,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1575,
+      "offset": 63289416,
+      "hash": "5b6c13f3",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 18,
+        "emitted_position_index_triangles": 16,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 18,
+      "faces": 16,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1579,
+      "offset": 63645116,
+      "hash": "e1d047b2",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 17,
+        "emitted_position_index_triangles": 16,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 17,
+      "faces": 16,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1645,
+      "offset": 64231760,
+      "hash": "0bd34f9d",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 27,
+        "emitted_position_index_triangles": 21,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 22,
+      "faces": 21,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1645,
+      "offset": 64249044,
+      "hash": "be658173",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 84,
+        "emitted_position_index_triangles": 69,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 48,
+      "faces": 69,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1645,
+      "offset": 64251360,
+      "hash": "be658174",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 54,
+        "emitted_position_index_triangles": 36,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 31,
+      "faces": 36,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1645,
+      "offset": 64253116,
+      "hash": "be658175",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 108,
+        "emitted_position_index_triangles": 88,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 61,
+      "faces": 88,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1645,
+      "offset": 64255604,
+      "hash": "be658177",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 299,
+        "emitted_position_index_triangles": 270,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 160,
+      "faces": 270,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1645,
+      "offset": 64270520,
+      "hash": "be65817b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 175,
+        "emitted_position_index_triangles": 158,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 99,
+      "faces": 158,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1646,
+      "offset": 64525456,
+      "hash": "ed2d5fca",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 92,
+        "emitted_position_index_triangles": 91,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 69,
+      "faces": 91,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1646,
+      "offset": 64550652,
+      "hash": "330c1c21",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 54,
+        "emitted_position_index_triangles": 52,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 40,
+      "faces": 52,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1655,
+      "offset": 66044980,
+      "hash": "bed762cb",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 59,
+        "emitted_position_index_triangles": 58,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 46,
+      "faces": 58,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1656,
+      "offset": 66116204,
+      "hash": "20e101f9",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 96,
+        "emitted_position_index_triangles": 94,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 62,
+      "faces": 94,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1656,
+      "offset": 66120016,
+      "hash": "20e101fb",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 68,
+        "emitted_position_index_triangles": 64,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 44,
+      "faces": 64,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1660,
+      "offset": 66604988,
+      "hash": "ff6fe186",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 164,
+        "emitted_position_index_triangles": 162,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 100,
+      "faces": 162,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1664,
+      "offset": 66946496,
+      "hash": "1a902425",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 46,
+        "emitted_position_index_triangles": 45,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 35,
+      "faces": 45,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1670,
+      "offset": 67777432,
+      "hash": "707ed04a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 58,
+        "emitted_position_index_triangles": 57,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 39,
+      "faces": 57,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1670,
+      "offset": 67787700,
+      "hash": "8294ca60",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 63,
+        "emitted_position_index_triangles": 61,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 57,
+      "faces": 61,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1673,
+      "offset": 68472156,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1678,
+      "offset": 69216360,
+      "hash": "179745ae",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 43,
+        "emitted_position_index_triangles": 42,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 48,
+      "faces": 42,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1678,
+      "offset": 69219896,
+      "hash": "51871a5d",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 30,
+        "emitted_position_index_triangles": 28,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 29,
+      "faces": 28,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1741,
+      "offset": 69381024,
+      "hash": "f87a0e24",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 25,
+        "emitted_position_index_triangles": 24,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 23,
+      "faces": 24,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1741,
+      "offset": 69416232,
+      "hash": "f87a1268",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 180,
+        "emitted_position_index_triangles": 178,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 126,
+      "faces": 178,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1742,
+      "offset": 69707024,
+      "hash": "7ddac067",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 80,
+        "emitted_position_index_triangles": 79,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 61,
+      "faces": 79,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1742,
+      "offset": 69733328,
+      "hash": "7ddac088",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 78,
+        "emitted_position_index_triangles": 77,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 62,
+      "faces": 77,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1747,
+      "offset": 70872052,
+      "hash": "ed4004b2",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 131,
+        "emitted_position_index_triangles": 127,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 90,
+      "faces": 127,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1748,
+      "offset": 71138996,
+      "hash": "331f4d61",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 95,
+        "emitted_position_index_triangles": 93,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 64,
+      "faces": 93,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1748,
+      "offset": 71141412,
+      "hash": "331f4d62",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 67,
+        "emitted_position_index_triangles": 65,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 65,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1754,
+      "offset": 72043864,
+      "hash": "9672f54c",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 75,
+        "emitted_position_index_triangles": 73,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 50,
+      "faces": 73,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1763,
+      "offset": 73304156,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1842,
+      "offset": 73587872,
+      "hash": "b2e6510f",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 174,
+        "emitted_position_index_triangles": 170,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 106,
+      "faces": 170,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1848,
+      "offset": 74530720,
+      "hash": "5dfcfd7e",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 109,
+        "emitted_position_index_triangles": 107,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 69,
+      "faces": 107,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1851,
+      "offset": 74837764,
+      "hash": "45286b20",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 56,
+        "emitted_position_index_triangles": 55,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 47,
+      "faces": 55,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1851,
+      "offset": 74839868,
+      "hash": "45286b21",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 91,
+        "emitted_position_index_triangles": 89,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 72,
+      "faces": 89,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1860,
+      "offset": 76193480,
+      "hash": "2179cc5b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 257,
+        "emitted_position_index_triangles": 255,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 155,
+      "faces": 255,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1862,
+      "offset": 76378456,
+      "hash": "1f395ca5",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 89,
+        "emitted_position_index_triangles": 88,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 64,
+      "faces": 88,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1864,
+      "offset": 76629136,
+      "hash": "36e2b5e1",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 5,
+        "emitted_position_index_triangles": 4,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 6,
+      "faces": 4,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1865,
+      "offset": 76808236,
+      "hash": "37f4d113",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 65,
+        "emitted_position_index_triangles": 64,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 46,
+      "faces": 64,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1872,
+      "offset": 77943336,
+      "hash": "01f32110",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 75,
+        "emitted_position_index_triangles": 74,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 59,
+      "faces": 74,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1872,
+      "offset": 77960052,
+      "hash": "8c8599af",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 19,
+        "emitted_position_index_triangles": 17,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 16,
+      "faces": 17,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1872,
+      "offset": 77976952,
+      "hash": "9cb5485b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 22,
+        "emitted_position_index_triangles": 20,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 24,
+      "faces": 20,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1875,
+      "offset": 78360496,
+      "hash": "1d2b66ae",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 149,
+        "emitted_position_index_triangles": 147,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 94,
+      "faces": 147,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1875,
+      "offset": 78364068,
+      "hash": "1d2b66af",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 67,
+        "emitted_position_index_triangles": 65,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 46,
+      "faces": 65,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1877,
+      "offset": 78706432,
+      "hash": "03e85fe1",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 146,
+        "emitted_position_index_triangles": 145,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 107,
+      "faces": 145,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1949,
+      "offset": 79775656,
+      "hash": "8eac822a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 28,
+        "emitted_position_index_triangles": 27,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 23,
+      "faces": 27,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1949,
+      "offset": 79779640,
+      "hash": "93625839",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 46,
+        "emitted_position_index_triangles": 44,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 39,
+      "faces": 44,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1951,
+      "offset": 79871984,
+      "hash": "e250463f",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 47,
+        "emitted_position_index_triangles": 44,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 33,
+      "faces": 44,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1954,
+      "offset": 80237352,
+      "hash": "dcdf3498",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 90,
+        "emitted_position_index_triangles": 86,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 59,
+      "faces": 86,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1956,
+      "offset": 80452080,
+      "hash": "217e9e4c",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 33,
+        "emitted_position_index_triangles": 32,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 27,
+      "faces": 32,
+      "zero_area_faces_with_distinct_position_indices": 1
+    },
+    {
+      "section": 2042,
+      "offset": 81059408,
+      "hash": "11ec964b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 182,
+        "emitted_position_index_triangles": 180,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 125,
+      "faces": 180,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2046,
+      "offset": 81365124,
+      "hash": "a9d2c772",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 142,
+        "emitted_position_index_triangles": 141,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 95,
+      "faces": 141,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2047,
+      "offset": 81390952,
+      "hash": "16f93bb0",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 42,
+        "emitted_position_index_triangles": 41,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 36,
+      "faces": 41,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2049,
+      "offset": 81672172,
+      "hash": "ec6efd67",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 186,
+        "emitted_position_index_triangles": 185,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 127,
+      "faces": 185,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2053,
+      "offset": 82052460,
+      "hash": "79a60132",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 151,
+        "emitted_position_index_triangles": 133,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 86,
+      "faces": 133,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2063,
+      "offset": 82695104,
+      "hash": "79b819b1",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 109,
+        "emitted_position_index_triangles": 108,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 71,
+      "faces": 108,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 181,
+      "offset": 83399000,
+      "hash": "25d20260",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 33,
+        "emitted_position_index_triangles": 32,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 29,
+      "faces": 32,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 181,
+      "offset": 83401152,
+      "hash": "26624f4c",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 58,
+        "emitted_position_index_triangles": 57,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 56,
+      "faces": 57,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 218,
+      "offset": 83815908,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 223,
+      "offset": 84195268,
+      "hash": "2f710b43",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 30,
+        "emitted_position_index_triangles": 19,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 18,
+      "faces": 19,
+      "zero_area_faces_with_distinct_position_indices": 3
+    },
+    {
+      "section": 417,
+      "offset": 85998852,
+      "hash": "2f710b43",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 30,
+        "emitted_position_index_triangles": 19,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 18,
+      "faces": 19,
+      "zero_area_faces_with_distinct_position_indices": 3
+    },
+    {
+      "section": 423,
+      "offset": 86434968,
+      "hash": "f323a2a6",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 111,
+        "emitted_position_index_triangles": 109,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 73,
+      "faces": 109,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 781,
+      "offset": 86901580,
+      "hash": "a98e4507",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 28,
+        "emitted_position_index_triangles": 26,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 25,
+      "faces": 26,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1104,
+      "offset": 88618160,
+      "hash": "be658176",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 61,
+        "emitted_position_index_triangles": 48,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 42,
+      "faces": 48,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1105,
+      "offset": 88871260,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1118,
+      "offset": 90782872,
+      "hash": "3fef022b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 167,
+        "emitted_position_index_triangles": 165,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 106,
+      "faces": 165,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1120,
+      "offset": 91101052,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1124,
+      "offset": 91428672,
+      "hash": "55c5f29d",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 95,
+        "emitted_position_index_triangles": 93,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 64,
+      "faces": 93,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1402,
+      "offset": 93373392,
+      "hash": "0bd34f9d",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 27,
+        "emitted_position_index_triangles": 21,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 22,
+      "faces": 21,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1402,
+      "offset": 93390676,
+      "hash": "be658173",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 84,
+        "emitted_position_index_triangles": 69,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 48,
+      "faces": 69,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1402,
+      "offset": 93392992,
+      "hash": "be658174",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 54,
+        "emitted_position_index_triangles": 36,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 31,
+      "faces": 36,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1402,
+      "offset": 93394748,
+      "hash": "be658175",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 108,
+        "emitted_position_index_triangles": 88,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 61,
+      "faces": 88,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1402,
+      "offset": 93397236,
+      "hash": "be658177",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 299,
+        "emitted_position_index_triangles": 270,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 160,
+      "faces": 270,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1402,
+      "offset": 93412152,
+      "hash": "be65817b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 175,
+        "emitted_position_index_triangles": 158,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 99,
+      "faces": 158,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1407,
+      "offset": 94058332,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1412,
+      "offset": 94671264,
+      "hash": "42e66178",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 117,
+        "emitted_position_index_triangles": 101,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 71,
+      "faces": 101,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1413,
+      "offset": 94927068,
+      "hash": "c755259a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 130,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 67,
+      "faces": 130,
+      "zero_area_faces_with_distinct_position_indices": 15
+    },
+    {
+      "section": 1536,
+      "offset": 96476656,
+      "hash": "0d47df11",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 19,
+        "emitted_position_index_triangles": 18,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 22,
+      "faces": 18,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1608,
+      "offset": 97223620,
+      "hash": "a5d12e52",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 19,
+        "emitted_position_index_triangles": 6,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 8,
+      "faces": 6,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1716,
+      "offset": 97703200,
+      "hash": "42e66178",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 117,
+        "emitted_position_index_triangles": 101,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 71,
+      "faces": 101,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1884,
+      "offset": 98419048,
+      "hash": "07835f36",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 23,
+        "emitted_position_index_triangles": 21,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 21,
+      "faces": 21,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1889,
+      "offset": 98607312,
+      "hash": "69baffb8",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 459,
+        "emitted_position_index_triangles": 453,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 279,
+      "faces": 453,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 1892,
+      "offset": 98728080,
+      "hash": "1d2f273a",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 769,
+        "emitted_position_index_triangles": 768,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 921,
+      "faces": 768,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2017,
+      "offset": 99432200,
+      "hash": "79a832b4",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 305,
+        "emitted_position_index_triangles": 263,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 154,
+      "faces": 263,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2017,
+      "offset": 99438728,
+      "hash": "79a832b5",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 57,
+        "emitted_position_index_triangles": 53,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 44,
+      "faces": 53,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2017,
+      "offset": 99440636,
+      "hash": "79a832b6",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 146,
+        "emitted_position_index_triangles": 124,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 81,
+      "faces": 124,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2017,
+      "offset": 99450648,
+      "hash": "79a832b9",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 391,
+        "emitted_position_index_triangles": 373,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 223,
+      "faces": 373,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2100,
+      "offset": 100212184,
+      "hash": "08f9b4f2",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 80,
+        "emitted_position_index_triangles": 77,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 71,
+      "faces": 77,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2100,
+      "offset": 100225656,
+      "hash": "1e7e3f9b",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 132,
+        "emitted_position_index_triangles": 129,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 113,
+      "faces": 129,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2100,
+      "offset": 100272188,
+      "hash": "d18402da",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 232,
+        "emitted_position_index_triangles": 229,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 147,
+      "faces": 229,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2113,
+      "offset": 101472900,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2122,
+      "offset": 102321860,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2135,
+      "offset": 103791128,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2159,
+      "offset": 105111876,
+      "hash": "3a3d69d7",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 40,
+        "emitted_position_index_triangles": 38,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 38,
+      "faces": 38,
+      "zero_area_faces_with_distinct_position_indices": 0
+    },
+    {
+      "section": 2165,
+      "offset": 105560772,
+      "hash": "f8a89923",
+      "status": "consumed_checks_pass",
+      "diagnostic": {
+        "declared_triangles": 118,
+        "emitted_position_index_triangles": 117,
+        "note": "Original header retained as a statistic discrepancy; all later strict checks passed"
+      },
+      "positions": 98,
+      "faces": 117,
+      "zero_area_faces_with_distinct_position_indices": 0
+    }
+  ],
+  "geometry_summary": {
+    "consumed_checks_pass": 168
+  },
+  "case_classes": {
+    "32:00:raw": 347,
+    "32:80:list": 40,
+    "1:80:list": 552,
+    "1:00:raw": 1865,
+    "1:90:list": 22,
+    "1:10:raw": 49,
+    "1:14:raw": 387,
+    "1:94:list": 2,
+    "1:82:list": 21,
+    "1:02:raw": 45
+  },
+  "conclusion": "Original index emission and listed consumed-geometry checks verified; header triangle-count discrepancy retained. This does not establish materials, LOD selection or placement."
+}

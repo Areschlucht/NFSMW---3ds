@@ -1,0 +1,93 @@
+{
+  "container": "nfsmw-vertex20-emulator",
+  "accurate_multiply": true,
+  "images": {
+    "hardware-vs-baseline-project-start.png": "196e7ca50981339c04e553b2a757c259357ce0a6b9886874b58e15233ea09130",
+    "hardware-vs-uv32-project-start.png": "9a49fbcaa5ee963242c84c4490755d0597ad1d37c9bdf00ce216bd3ad42976aa",
+    "hardware-vs-color24-project-start.png": "d5b1159c2177b1e99bfb8699efe7c05f4693f3201f393051d9da7372e0a1a54a",
+    "hardware-vs-baseline-project-dense.png": "d3fb08f94a86f83df0a8b69ee423c2190993d5bf3c2e8e886bd805a18ca4d07f",
+    "hardware-vs-uv32-project-dense.png": "f66a93df69c193a28fecb8c3c733315ddc6d07ad521845a50b3e0e0a74fc4ea0",
+    "hardware-vs-color24-project-dense.png": "ca5cad5204bd24fc01846de5eb478cf123f8eec5f44955dbd82323a6cad11ac4",
+    "software-vs-baseline-project-start.png": "4e091319ebbe8f712d61dcc519fdfcdfcd7d56128af00adfbc9f8806cbb7f50d",
+    "software-vs-uv32-project-start.png": "7607c211a3a34be4899985e5e61d7328b797406c9f641ef937d258770b5e73b6",
+    "software-vs-color24-project-start.png": "de88bbf3160b3042484ed5dbb31e74575fe105c839ddfdcd32513748fff6b904",
+    "software-vs-baseline-project-dense.png": "732eba679547c221f87f05fe27c79f50df89f574fc37d6c33da04b1e882e8801",
+    "software-vs-uv32-project-dense.png": "9e930c48ab011e683ff3a93f85cec4f4d6a8f6d7e482120ae1e29db8b4c2eb0e",
+    "software-vs-color24-project-dense.png": "c8df4bc5c268462fd520f42888745b25cee3ead8b2623f51e86c79160114f1a6"
+  },
+  "comparisons": {
+    "hardware-vs-start-uv32-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "hardware-vs-start-color24-project": {
+      "bbox": [
+        66,
+        231,
+        67,
+        232
+      ],
+      "changed_pixels": 1,
+      "total_pixels": 96000,
+      "max_channel_difference": 1,
+      "mean_absolute_channel_difference": 3.4722222222222224e-06
+    },
+    "hardware-vs-dense-uv32-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "hardware-vs-dense-color24-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "software-vs-start-uv32-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "software-vs-start-color24-project": {
+      "bbox": [
+        66,
+        68,
+        248,
+        232
+      ],
+      "changed_pixels": 3,
+      "total_pixels": 96000,
+      "max_channel_difference": 1,
+      "mean_absolute_channel_difference": 1.0416666666666666e-05
+    },
+    "software-vs-dense-uv32-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "software-vs-dense-color24-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    }
+  },
+  "hardware_fps_claim": false,
+  "crop": [
+    312,
+    192,
+    712,
+    432
+  ]
+}

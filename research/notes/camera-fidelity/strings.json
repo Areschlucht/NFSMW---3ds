@@ -1,0 +1,262 @@
+[
+  {
+    "address": 2151443312,
+    "offset": 3947376,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151444480,
+    "offset": 3948544,
+    "text": "SelectCarCameraMover"
+  },
+  {
+    "address": 2151453180,
+    "offset": 3957244,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151478784,
+    "offset": 3982848,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151483152,
+    "offset": 3987216,
+    "text": "CameraCutMoment"
+  },
+  {
+    "address": 2151488232,
+    "offset": 3992296,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151489936,
+    "offset": 3994000,
+    "text": "MICECameraFinished"
+  },
+  {
+    "address": 2151490040,
+    "offset": 3994104,
+    "text": "CameraAI"
+  },
+  {
+    "address": 2151490387,
+    "offset": 3994451,
+    "text": "LCameraMessagePort"
+  },
+  {
+    "address": 2151490408,
+    "offset": 3994472,
+    "text": "CameraAnchor"
+  },
+  {
+    "address": 2151490424,
+    "offset": 3994488,
+    "text": "CubicCameraMover"
+  },
+  {
+    "address": 2151490444,
+    "offset": 3994508,
+    "text": "RearViewMirrorCameraMover"
+  },
+  {
+    "address": 2151490604,
+    "offset": 3994668,
+    "text": "TrackCarCameraMover"
+  },
+  {
+    "address": 2151490632,
+    "offset": 3994696,
+    "text": "TrackCopCameraMover"
+  },
+  {
+    "address": 2151490704,
+    "offset": 3994768,
+    "text": "ShowcaseCameraMover"
+  },
+  {
+    "address": 2151490748,
+    "offset": 3994812,
+    "text": "DebugWorldCameraMover"
+  },
+  {
+    "address": 2151492484,
+    "offset": 3996548,
+    "text": "NisCameras"
+  },
+  {
+    "address": 2151492496,
+    "offset": 3996560,
+    "text": "FmvCameras"
+  },
+  {
+    "address": 2151492508,
+    "offset": 3996572,
+    "text": "ReplayCameras"
+  },
+  {
+    "address": 2151492524,
+    "offset": 3996588,
+    "text": "GenericCameras"
+  },
+  {
+    "address": 2151505768,
+    "offset": 4009832,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151518592,
+    "offset": 4022656,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151525108,
+    "offset": 4029172,
+    "text": "FX_Camera"
+  },
+  {
+    "address": 2151537060,
+    "offset": 4041124,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151544472,
+    "offset": 4048536,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151564720,
+    "offset": 4068784,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151596432,
+    "offset": 4100496,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151601864,
+    "offset": 4105928,
+    "text": "SetGenericCamera"
+  },
+  {
+    "address": 2151601884,
+    "offset": 4105948,
+    "text": "Camera"
+  },
+  {
+    "address": 2151602108,
+    "offset": 4106172,
+    "text": "DetachCameraFromRacer"
+  },
+  {
+    "address": 2151604964,
+    "offset": 4109028,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151606588,
+    "offset": 4110652,
+    "text": "eFE_CameraScreen"
+  },
+  {
+    "address": 2151610904,
+    "offset": 4114968,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151611408,
+    "offset": 4115472,
+    "text": "ECameraPhotoFinish"
+  },
+  {
+    "address": 2151611444,
+    "offset": 4115508,
+    "text": "ECameraShake"
+  },
+  {
+    "address": 2151615916,
+    "offset": 4119980,
+    "text": "MICECameraFinished"
+  },
+  {
+    "address": 2151618492,
+    "offset": 4122556,
+    "text": "CAMERAACTION_CHANGE"
+  },
+  {
+    "address": 2151618512,
+    "offset": 4122576,
+    "text": "CAMERAACTION_DEBUG"
+  },
+  {
+    "address": 2151618532,
+    "offset": 4122596,
+    "text": "CAMERAACTION_ENABLE_ICE"
+  },
+  {
+    "address": 2151618556,
+    "offset": 4122620,
+    "text": "CAMERAACTION_LOOKBACK"
+  },
+  {
+    "address": 2151618580,
+    "offset": 4122644,
+    "text": "CAMERAACTION_PULLBACK"
+  },
+  {
+    "address": 2151619900,
+    "offset": 4123964,
+    "text": "DEBUGACTION_TOGGLEDEMOCAMERAS"
+  },
+  {
+    "address": 2151631772,
+    "offset": 4135836,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151633020,
+    "offset": 4137084,
+    "text": "CameraUpdate"
+  },
+  {
+    "address": 2151640124,
+    "offset": 4144188,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151640872,
+    "offset": 4144936,
+    "text": "CameraMessagePort"
+  },
+  {
+    "address": 2151657600,
+    "offset": 4161664,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151686712,
+    "offset": 4190776,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151694688,
+    "offset": 4198752,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151702368,
+    "offset": 4206432,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151716136,
+    "offset": 4220200,
+    "text": "Attrib::Gen::camerainfo"
+  },
+  {
+    "address": 2151719016,
+    "offset": 4223080,
+    "text": "Attrib::Gen::camerainfo"
+  }
+]

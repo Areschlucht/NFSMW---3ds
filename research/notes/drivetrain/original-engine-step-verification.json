@@ -1,0 +1,18 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "original_whole_function": "8025762C..802584A8",
+  "whole_engine_state_cases": 1536,
+  "stateful_continuation_steps": 512,
+  "physical_collections": [
+    "bmwm3gtre46",
+    "m3gtre46careerstart"
+  ],
+  "nos_collection": "1efbd807 (explicit selected test input; upgrade choice not claimed)",
+  "limitations": [
+    "Only disabled induction and empty RPM limiter supported; positive induction/nonempty limiter rejected",
+    "Active rev modulation deadline rejected; raw rev-block boolean supported",
+    "External raw input/automatic-enabled/tuningNULL/recharge-inhibit/event-dispatch callbacks supplied explicitly",
+    "Optional event allocation disabled; source-derived physical upgrade and scheduler remain gates"
+  ]
+}

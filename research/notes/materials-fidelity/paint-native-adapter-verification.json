@@ -1,0 +1,13 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "decode_function": "8026c080",
+  "decode_loop": "8026c0b4..8026c11c",
+  "encode_function": "8026c130",
+  "encode_loop": "8026c144..8026c1c0",
+  "native_decode_cases": 65536,
+  "native_encode_roundtrip_cases": 65536,
+  "arbitrary_cpu_encode_cases": 256,
+  "all_matched": true,
+  "code_sha256": "c1172e65e96d582a71d681f8d89068e03acf09b9c8361f2264b9afbb0b5bedb3",
+  "scope": "All65536nativeRGB5A3halfwords and256arbitraryCPUwords compared with original scalar loops; entry afterallocation/exit beforecleanup, no instructionreplacement"
+}

@@ -1,0 +1,33 @@
+{
+  "full_name": "STREAML2RA.BUN",
+  "source_archive": "ZZDATA3.BIN",
+  "archive_offset": 131596288,
+  "bytes": 109279744,
+  "existing_prefix_bytes": 25165824,
+  "parts": [
+    {
+      "Source": "ZZDATA3.BIN",
+      "ArchiveSize": 346253312,
+      "Name": "STREAML2RA-24-52MiB.bin",
+      "Offset": 156762112,
+      "Size": 29360128,
+      "stream_offset": 25165824
+    },
+    {
+      "Source": "ZZDATA3.BIN",
+      "ArchiveSize": 346253312,
+      "Name": "STREAML2RA-52-80MiB.bin",
+      "Offset": 186122240,
+      "Size": 29360128,
+      "stream_offset": 54525952
+    },
+    {
+      "Source": "ZZDATA3.BIN",
+      "ArchiveSize": 346253312,
+      "Name": "STREAML2RA-80MiB-end.bin",
+      "Offset": 215482368,
+      "Size": 25393664,
+      "stream_offset": 83886080
+    }
+  ]
+}

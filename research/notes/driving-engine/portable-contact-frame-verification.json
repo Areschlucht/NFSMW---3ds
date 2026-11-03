@@ -1,0 +1,20 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "dolphin_commit": "86d554802d7560acf12b5c5a2b3acb344069b5ce",
+  "reference_ranges": [
+    "0x8021C750..0x8021C7D8",
+    "0x8024AA28..0x8024AA8C",
+    "0x8024ACFC..0x8024AD3C",
+    "0x8024AF4C..0x8024AFD4"
+  ],
+  "paired_model_float_bit_cases": 2051,
+  "world_force_float_bit_cases": 2051,
+  "point_velocity_float_bit_cases": 2048,
+  "force_moment_float_bit_cases": 2048,
+  "runtime_default_max_projection_error": 0,
+  "limitations": [
+    "paired reference uses shared bounded binary64-to-float model; no console FMA-tie/subnormal/FPSCR claim",
+    "original sqrt callbacks cross-check independent runtime Gekko stage",
+    "steered direction producer remains separate; point velocity producer now executes actual original slice"
+  ]
+}

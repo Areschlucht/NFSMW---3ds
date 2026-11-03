@@ -1,0 +1,16 @@
+{
+  "package": "GLOBAL",
+  "name": "DEFAULTALPHA",
+  "hash": "66994f4a",
+  "width": 8,
+  "height": 8,
+  "native_format": "00000008",
+  "pixel_offset": 111232,
+  "compression": null,
+  "alpha_test_mode": 2,
+  "blend_mode": 2,
+  "image_bytes": 32,
+  "palette_bytes": 512,
+  "source_sha256": "b1329f35739503b13cff4838766f511b1f5e8fec28d37112da9efbc63cb0438a",
+  "rgba_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+}

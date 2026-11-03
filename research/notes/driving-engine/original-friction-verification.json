@@ -1,0 +1,13 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "range": [
+    "0x80246A38",
+    "0x80246B14"
+  ],
+  "float_bit_cases": 8192,
+  "comparison": "exact IEEE754 float32 bits",
+  "limitations": [
+    "magnitude supplied identically to both implementations; no host-vs-Gekko sqrt claim",
+    "combined-force limit stage only; upstream force and downstream contact integration remain separate"
+  ]
+}

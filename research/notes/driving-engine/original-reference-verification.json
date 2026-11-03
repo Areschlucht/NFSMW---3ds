@@ -1,0 +1,141 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "original_curve_va": "0x802240AC",
+  "original_hash_va": "0x801956E8",
+  "original_tire_diameter_va": "0x80224268",
+  "emulator_abi_nops": {
+    "0x802240b4": "0xf3a10028",
+    "0x802240b8": "0xf3c10030",
+    "0x802240bc": "0xf3e10038",
+    "0x80224254": "0xe3a10028",
+    "0x80224258": "0xe3c10030",
+    "0x8022425c": "0xe3e10038",
+    "0x802555d4": "0xf3810018",
+    "0x802555d8": "0xf3a10020",
+    "0x802555dc": "0xf3c10028",
+    "0x802555e0": "0xf3e10030",
+    "0x80255710": "0xe3810018",
+    "0x80255714": "0xe3a10020",
+    "0x80255718": "0xe3c10028",
+    "0x8025571c": "0xe3e10030",
+    "0x80246454": "0xf3c10010",
+    "0x80246458": "0xf3e10018",
+    "0x80246570": "0xe3c10010",
+    "0x80246574": "0xe3e10018",
+    "0x80246588": "0xf2410010",
+    "0x80246cc0": "0xe2410010",
+    "0x8024658c": "0xf2610018",
+    "0x80246cc4": "0xe2610018",
+    "0x80246590": "0xf2810020",
+    "0x80246cc8": "0xe2810020",
+    "0x80246594": "0xf2a10028",
+    "0x80246ccc": "0xe2a10028",
+    "0x80246598": "0xf2c10030",
+    "0x80246cd0": "0xe2c10030",
+    "0x8024659c": "0xf2e10038",
+    "0x80246cd4": "0xe2e10038",
+    "0x802465a0": "0xf3010040",
+    "0x80246cd8": "0xe3010040",
+    "0x802465a4": "0xf3210048",
+    "0x80246cdc": "0xe3210048",
+    "0x802465a8": "0xf3410050",
+    "0x80246ce0": "0xe3410050",
+    "0x802465ac": "0xf3610058",
+    "0x80246ce4": "0xe3610058",
+    "0x802465b0": "0xf3810060",
+    "0x80246ce8": "0xe3810060",
+    "0x802465b4": "0xf3a10068",
+    "0x80246cec": "0xe3a10068",
+    "0x802465b8": "0xf3c10070",
+    "0x80246cf0": "0xe3c10070",
+    "0x802465bc": "0xf3e10078",
+    "0x80246cf4": "0xe3e10078",
+    "0x802460b8": "0xf3a10028",
+    "0x80246214": "0xe3a10028",
+    "0x802460bc": "0xf3c10030",
+    "0x80246218": "0xe3c10030",
+    "0x802460c0": "0xf3e10038",
+    "0x8024621c": "0xe3e10038"
+  },
+  "hash_cases": 262,
+  "engine_collections": 80,
+  "curve_float_bit_cases": 2640,
+  "bmw_trace": [
+    {
+      "rpm": 0.0,
+      "raw_torque": 170.0,
+      "float32_be": "432a0000"
+    },
+    {
+      "rpm": 799.0,
+      "raw_torque": 170.0,
+      "float32_be": "432a0000"
+    },
+    {
+      "rpm": 800.0,
+      "raw_torque": 170.0,
+      "float32_be": "432a0000"
+    },
+    {
+      "rpm": 801.0,
+      "raw_torque": 170.07447814941406,
+      "float32_be": "432a1311"
+    },
+    {
+      "rpm": 8499.0,
+      "raw_torque": 373.0115051269531,
+      "float32_be": "43ba8179"
+    },
+    {
+      "rpm": 8500.0,
+      "raw_torque": 372.988525390625,
+      "float32_be": "43ba7e88"
+    },
+    {
+      "rpm": 8501.0,
+      "raw_torque": 372.988525390625,
+      "float32_be": "43ba7e88"
+    },
+    {
+      "rpm": 9500.0,
+      "raw_torque": 372.988525390625,
+      "float32_be": "43ba7e88"
+    },
+    {
+      "rpm": 10500.0,
+      "raw_torque": 372.988525390625,
+      "float32_be": "43ba7e88"
+    }
+  ],
+  "tire_collections": 86,
+  "tire_float_bit_cases": 344,
+  "bmw_tire_trace": [
+    {
+      "front_selector": 0,
+      "diameter_m": 0.6866000294685364,
+      "float32_be": "3f2fc505"
+    },
+    {
+      "front_selector": 1,
+      "diameter_m": 0.6866000294685364,
+      "float32_be": "3f2fc505"
+    },
+    {
+      "front_selector": 2,
+      "diameter_m": 0.6866000294685364,
+      "float32_be": "3f2fc505"
+    },
+    {
+      "front_selector": -1,
+      "diameter_m": 0.6866000294685364,
+      "float32_be": "3f2fc505"
+    }
+  ],
+  "comparison": "exact IEEE754 float32 bits",
+  "limitations": [
+    "scalar torque curve only; no force or handling model claim",
+    "paired-single callee-save spills/reloads omitted only in reference emulator",
+    "invalid metadata is rejected rather than emulating original invalid memory accesses"
+  ]
+}

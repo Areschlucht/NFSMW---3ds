@@ -1,0 +1,42 @@
+{
+  "verdict": "No blocking correctness defect found in the reviewed indexed-world candidate.",
+  "scope": "Read-only independent review; no Docker, emulator, or shared-source mutation.",
+  "sources": {
+    "include/world_index.h": "0bcfbf70b96ee8d8a42fa21b72563b5c1684bafb4bbef2e595ebeace9085b20c",
+    "source_bmw/world_index.c": "90e876986fe893de73f365b214817378daa489840d9e7e33f2c5f9ddef2a0b73",
+    "include/world_vertex.h": "21ff17d381e8f700f0657ee0514959f75a5a5f8fcf44191ac46986651e685961",
+    "source_bmw/world_vertex.c": "0b781755e6ed566b989cf3d6e75c2f453ae9ca4f29f34babd756478571c6cb6e",
+    "source_rockport/rockport_main.c": "87baf86425103b678bd333bb80aa0bcf7213b7588c4bfa90b4e3d3eb8477469f",
+    "tests/test_world_index.c": "dbf99f0e7c32f1f62bcf25f306acb662d7efb61167f05dbeb7898229fff32f57"
+  },
+  "native_checks": [
+    "ASan/UBSan production test: exact ordered reconstruction of all112077 corners and1046 material batches",
+    "u16 index65535 native boundary; >65536 unique failure leaves empty output",
+    "signed zero/one-bit colour retained; source unchanged",
+    "three independent allocator failure injections: calloc table, malloc unique vertices, malloc indices; all allocations balanced",
+    "96 crafted FNV same-bucket inputs force actual WORLD_INDEX_BUDGET path; outputs empty and no live allocations"
+  ],
+  "integration_review": [
+    "NFS_EXPERIMENTAL_WORLD_INDEX gates candidate; normal v0.16 DrawArrays remains available",
+    "same linear allocation owns vertices and u16 suffix; GPU buffer and suffix/end128-byte aligned; zeroed padding; wholeblockflush",
+    "scene batch.first/count remain original corner/index offsets, not unique-vertex offsets",
+    "C3D_DrawElements argument order primitive,count,C3D_UNSIGNED_SHORT,indices+first is correct",
+    "fallback gpu_bytes remains full expanded size when encoder or indexed linear allocation fails",
+    "CPU encoder temporary data freed after copying; only one GPU allocation freed; interior indices pointer is not freed separately",
+    "world-only dedup matches attributes actually read by world shader; car path remains unindexed"
+  ],
+  "sdk_correspondence": {
+    "basis": "Pinned SDK details provided by hardware_optimization specialist in response to independent review query.",
+    "vertex_offset": "DrawElements explicitly writes0 to GPUREG_VERTEX_OFFSET0x022A, preventing prior car DrawArrays(first>0) carryover.",
+    "primitive_restart": "DrawElements writes1 to GPUREG_RESTART_PRIMITIVE0x025F before each draw.",
+    "actual_scene_maxindex": 50175,
+    "actual_scene_max_merged_draw_count": 10707
+  },
+  "limitations": [
+    "No actual GPU/hardware execution performed by this reviewer. Root owns emulator checks.",
+    "GPU cache reuse, bandwidth benefit and FPS improvement remain hardware assumptions until measured.",
+    "Native65536-unique test does not prove hardware0xffff index semantics; current scene avoids boundary.",
+    "Future world shader attributes must be represented in the dedup key; current world consumes exact XYZ/UV/RGBA only.",
+    "GPU allocation-failure branch reviewed structurally; CPU encoder allocation failures injected, not GPU allocator failures."
+  ]
+}

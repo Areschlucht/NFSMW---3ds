@@ -1,0 +1,38 @@
+{
+  "scope": "Original-source two-screen UI adaptation; host render previews, not emulator captures",
+  "pack": {
+    "path": "/workspace/port-research/ui-dual-screen/v0.18-original-art/ui.nui",
+    "bytes": 328968,
+    "sha256": "b8bee03d7491f54c0f8854c1bfea1bfdc3056540d518075bc26661530d0e4be2",
+    "format": "NUI2",
+    "allocation": "one context + copied payload, about331.5KB; no render allocations"
+  },
+  "source_evidence": "/workspace/port-research/ui-dual-screen/v0.18-original-art/ui.json",
+  "checks": {
+    "host": "strict C11 -O2 -Wall -Wextra -Werror and ASan/UBSan passed with art and fallback",
+    "ARM": "pinned devkitARM strict ARMv6K hard-float object compile passed",
+    "decoder_rejections": [
+      "short file",
+      "wrong magic",
+      "CRC corruption",
+      "CRC-valid oversized glyph",
+      "CRC-valid required space missing",
+      "CRC-valid duplicate glyph",
+      "bad atlas offset"
+    ],
+    "render": "framebuffer guards in all six modes, invalid mode/undersized buffer no-write",
+    "touch": "five explicit menu actions, gaps/exclusive boundaries, Display toggle and BACK, DRIVE three buttons"
+  },
+  "integration_review": "Root model mapping, startup decode/free, controller5-row selection, Display controller/touch handling reviewed; actual root runtime emulator verification pending",
+  "limits": [
+    "Original FNTG atlas/advances recovered, kerning not applied",
+    "New two-screen composition and selection styling, not recovered frontend state machine",
+    "Physical hardware UI cost unmeasured"
+  ],
+  "sources": {
+    "include/mw_ui.h": "d56a8d3c857df6df671353555481eb33242784dcd6b0614d166438eb59946ece",
+    "source_bmw/mw_ui.c": "911f65965457ac0630d745bd8feac113135aa718fdd643117280acdf55b93074",
+    "tools/ui_build_assets.py": "1ffe673c41409a7438ed422d013092ddf526fd5d6cfe4e2d988b55631001130a",
+    "tools/ui_preview.c": "f0bc298317ca3cb07a37ddf67ba845f8174aa886f893e9fd942ada0e28baff52"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "purpose": "Emulator inspection only; packaged spawn unchanged",
+  "source_world": [
+    291.7110262714386,
+    173.33086215620017,
+    -2608.8343622158186
+  ],
+  "heading": 0.4280674791823819,
+  "selection": {
+    "method": "Projected onto original navigation segment, checked against original road triangles",
+    "segment": 3281,
+    "offset_from_old_spawn_m": 6.045403584732999,
+    "forward_run_m": 160,
+    "reverse_run_m": 111
+  }
+}

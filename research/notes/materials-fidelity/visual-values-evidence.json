@@ -1,0 +1,184 @@
+{
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "ecar_class_key": "a5b543b7",
+  "collection_key": "4e085fb3",
+  "required_layout_bin_offset": 252272,
+  "fields": {
+    "TireOffsets": {
+      "field_key": 1580847625,
+      "field_name": "TireOffsets",
+      "type": "Attrib::Types::Vector4",
+      "value": {
+        "capacity": 4,
+        "count": 4,
+        "values": [
+          [
+            1.600000023841858,
+            0.9100000262260437,
+            0.0,
+            0.33000001311302185
+          ],
+          [
+            1.600000023841858,
+            -0.9100000262260437,
+            0.0,
+            0.33000001311302185
+          ],
+          [
+            -1.1299999952316284,
+            -0.9100000262260437,
+            0.0,
+            0.33000001311302185
+          ],
+          [
+            -1.1299999952316284,
+            0.9100000262260437,
+            0.0,
+            0.33000001311302185
+          ]
+        ]
+      },
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 252272,
+      "file_offset": 252400,
+      "original_bytes": "000400040010800000000000000000003fcccccd3f68f5c3000000003ea8f5c33fcccccdbf68f5c3000000003ea8f5c3bf90a3d7bf68f5c3000000003ea8f5c3bf90a3d73f68f5c3000000003ea8f5c3"
+    },
+    "RideHeight": {
+      "field_key": 966175547,
+      "field_name": "RideHeight",
+      "type": "EA::Reflection::Float",
+      "value": -3.25,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 252524,
+      "file_offset": 252652,
+      "original_bytes": "c0500000"
+    },
+    "FECompressions": {
+      "field_key": 2371611506,
+      "field_name": "FECompressions",
+      "type": "EA::Reflection::Float",
+      "value": {
+        "capacity": 2,
+        "count": 2,
+        "values": [
+          0.27000001072883606,
+          0.27000001072883606
+        ]
+      },
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 252572,
+      "file_offset": 252700,
+      "original_bytes": "00020002000400003e8a3d713e8a3d71"
+    },
+    "IsSkinned": {
+      "field_key": 3641715813,
+      "field_name": "IsSkinned",
+      "type": "EA::Reflection::Bool",
+      "value": true,
+      "source_collection": 2796276001,
+      "stream": "vlt",
+      "stream_offset": 132572,
+      "file_offset": 490076,
+      "original_bytes": "00000001"
+    },
+    "KitWheelOffsetFront": {
+      "field_key": 4247812072,
+      "field_name": "KitWheelOffsetFront",
+      "type": "EA::Reflection::UInt8",
+      "value": {
+        "capacity": 6,
+        "count": 6,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 252542,
+      "file_offset": 252670,
+      "original_bytes": "0006000600010000000000000000"
+    },
+    "KitWheelOffsetRear": {
+      "field_key": 3435431132,
+      "field_name": "KitWheelOffsetRear",
+      "type": "EA::Reflection::UInt8",
+      "value": {
+        "capacity": 6,
+        "count": 6,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 252528,
+      "file_offset": 252656,
+      "original_bytes": "0006000600010000000000000000"
+    }
+  },
+  "constants": {
+    "8040aeec": {
+      "file_offset": 4226796,
+      "original_bytes": "3dcccccd",
+      "float32": 0.10000000149011612
+    },
+    "8040aef0": {
+      "file_offset": 4226800,
+      "original_bytes": "3f000000",
+      "float32": 0.5
+    },
+    "8040b05c": {
+      "file_offset": 4227164,
+      "original_bytes": "3c8ef998",
+      "float32": 0.01745299994945526
+    },
+    "8040b060": {
+      "file_offset": 4227168,
+      "original_bytes": "3cd013a9",
+      "float32": 0.02539999969303608
+    }
+  },
+  "code_ranges": [
+    {
+      "name": "wheel_initialization",
+      "start": "802d3d54",
+      "end_exclusive": "802d3dfc",
+      "file_offset": 2952532,
+      "sha256": "6359ee8083b73d00c31ff0ec6e99463db9588b267751a87843987f3815d7edd6"
+    },
+    {
+      "name": "ride_height_consumer",
+      "start": "802d6624",
+      "end_exclusive": "802d6654",
+      "file_offset": 2962980,
+      "sha256": "80b5320f391384471645e18e70d61c057987360761a59ddcdea9146b10c9fcd6"
+    },
+    {
+      "name": "wheel_roll_consumer",
+      "start": "802d56bc",
+      "end_exclusive": "802d56d4",
+      "file_offset": 2959036,
+      "sha256": "672ce29e32f2c91e4a4b73fce699a07d8a40fe28d07046d67d2d9f3e172124fc"
+    }
+  ],
+  "interpretation": {
+    "tire_offsets": "Original code copies xyz directly from ecar layout+0x10+16*i to visual object+0x78+16*i; fourth component is clamped to >=0.1, copied to visual radius array+0xb8, then cleared in vector. Wheel roll update divides input by that radius. Geometry mounting origin and final wheel matrix remain unrecovered.",
+    "ride_height": "Original visual consumer loads ecar layout+0xfc then uses float32 0.0254 multiplication in FMADD at 0x802d6650. This establishes inches-to-metres conversion for this visual field, not all suspension attributes.",
+    "physical_radius": "Separate original helper 0x80224268 computes tire specification diameter; caller 0x802d3df0 multiplies by 0.5. Driving specialist owns its independently verified transcription. Do not conflate with TireOffsets artwork radius.",
+    "fe_compressions": "Values are original; semantic use/units not proven here."
+  }
+}

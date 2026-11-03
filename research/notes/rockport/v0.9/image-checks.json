@@ -1,0 +1,18 @@
+{
+  "garage-rolled": [
+    159,
+    118,
+    279,
+    172
+  ],
+  "garage-steered": [
+    259,
+    118,
+    281,
+    145
+  ],
+  "garage-reset": null,
+  "garage-neutral": null,
+  "garage-reset-again": null,
+  "drive_reset_equal": true
+}

@@ -1,0 +1,116 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "scope": "Verified original GC normal/firstlit-channel/baseTEV subset; not a complete car reflection shader",
+  "normal": {
+    "vat2_config_call": "8010e46c\u21928033bf80",
+    "arguments": [
+      2,
+      10,
+      0,
+      1,
+      6
+    ],
+    "meaning": [
+      "VAT2",
+      "NRM",
+      "XYZ",
+      "S8",
+      "6fractionalbits"
+    ],
+    "array_bind_call": "801170bc\u21928033c764",
+    "array_stride": 4,
+    "source_pointer": "geometryBlobBase+metadata[0x10]"
+  },
+  "lit_channel": {
+    "caller": "8011717c..80117190",
+    "selector_call": "8010cddc(3,0,0)",
+    "color_channel_call": "8010ce58\u21928033e460",
+    "arguments": [
+      2,
+      0,
+      0,
+      0,
+      7,
+      0,
+      2
+    ],
+    "meaning": [
+      "COLOR0",
+      "enabled",
+      "ambientregister",
+      "materialregister",
+      "lights0|1|2",
+      "diffuseCLAMP",
+      "attenuationNONE"
+    ],
+    "alpha_channel_call": "8010ce80\u21928033e460",
+    "mask_table_address": "8041b470",
+    "mask_table_first5": [
+      0,
+      1,
+      3,
+      7,
+      15
+    ],
+    "ambient_input": "80466fd8 RGBfloat\u2192truncate/clamp0..255 via8010a47c\u2192GXSetChanAmbColor8033e254 in8010a538",
+    "light_input_consumer": "8010a5a8 loads3GXlights; positions80467018, directionvectors80466fe8, colorrecords80467058, scaling8041b150",
+    "producer_pending": "8010a788 transforms/fillsruntime light arrays; actual active view/environment inputs not captured from full original game"
+  },
+  "base_tev": {
+    "selector": "8010d030(0,0,0)",
+    "stages": 1,
+    "color_input_call": "8010d0fc\u21928033fb34",
+    "color_inputs": [
+      15,
+      8,
+      10,
+      15
+    ],
+    "color_meaning": [
+      "ZERO",
+      "TEXC",
+      "RASC",
+      "ZERO"
+    ],
+    "formula": "texture0.rgb * raster0.rgb",
+    "alpha_input_call": "8010d130\u21928033fb78",
+    "alpha_inputs": [
+      7,
+      4,
+      6,
+      7
+    ],
+    "alpha_meaning": [
+      "ZERO",
+      "TEXA",
+      "KONST",
+      "ZERO"
+    ],
+    "k_alpha_selection": 28,
+    "constant_default_address": "8041b410",
+    "constant_default_hex": "ffffffff",
+    "order_call": "8010d0ac\u21928033ff40",
+    "order_arguments": [
+      0,
+      0,
+      0,
+      4
+    ],
+    "uv_generation_call": "8010d0c8\u21928033c7b8",
+    "uv_generation_arguments": [
+      0,
+      1,
+      4,
+      30,
+      0,
+      125
+    ],
+    "uv_limit": "UsesTexMtx0; do not silently equate original runtime UVmatrix with identity"
+  },
+  "remaining": [
+    "Frame-specific3light/ambientproducer inputs",
+    "Finalmaterialcachedcoefficient consumers and any reflection/specular environment stages",
+    "GXmaterialregistersource and glossmask/environment coordinate routing"
+  ],
+  "implementation_boundary": "Source normals and canonicalpaint can improve fidelity now. A fixed invented light or genericPBR stage must not be labelled original. PICAstage0texture\u00d7primary already represents the recovered basic combine."
+}

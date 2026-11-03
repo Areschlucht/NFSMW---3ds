@@ -1,0 +1,45 @@
+{
+  "version": "0.10",
+  "python_tests": 48,
+  "native_road_pose_asan_ubsan": "pass",
+  "native_road_contact_asan_ubsan": "pass",
+  "strict_arm_build": "pass",
+  "real_spawn": {
+    "contacts": 4,
+    "pitch_degrees": -1.897,
+    "roll_degrees": 0.022
+  },
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "wheel_roll": [
+      159,
+      118,
+      278,
+      171
+    ],
+    "slope_change_from_v0.9": [
+      174,
+      136,
+      226,
+      191
+    ]
+  },
+  "checks": [
+    "hills/banking pose",
+    "accepted travel",
+    "braking",
+    "reverse",
+    "steering",
+    "wheel preview",
+    "driving/garage exact reset",
+    "menus/controls/exit"
+  ],
+  "limitations": [
+    "rigid alignment, not spring suspension",
+    "provisional wheel pivots",
+    "no new physical-console FPS evidence"
+  ],
+  "sha256": "d09eb6ba9a38294468306507fc6b5c93f97056f096926958e7b01e408f027a9e"
+}

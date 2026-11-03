@@ -1,0 +1,116 @@
+800fc5b0 bl         0x800fc6ac
+800fc5b4 cmpw       r31, r29
+800fc5b8 blt        0x800fc588
+800fc5bc lwz        r0, 0x24(r1)
+800fc5c0 mtlr       r0
+800fc5c4 lmw        r27, 0xc(r1)
+800fc5c8 addi       r1, r1, 0x20
+800fc5cc blr        
+800fc5d0 stwu       r1, -0x18(r1)
+800fc5d4 mflr       r0
+800fc5d8 stmw       r29, 0xc(r1)
+800fc5dc stw        r0, 0x1c(r1)
+800fc5e0 mr         r30, r3
+800fc5e4 mr         r31, r4
+800fc5e8 mr         r29, r5
+800fc5ec or.        r3, r6, r6
+800fc5f0 bne        0x800fc608
+800fc5f4 lwz        r4, 0x24(r31)
+800fc5f8 mr         r3, r30
+800fc5fc bl         0x800fc9a8
+800fc600 or.        r3, r3, r3
+800fc604 beq        0x800fc634
+800fc608 stw        r31, 4(r3)
+800fc60c lis        r11, -0x7fba
+800fc610 addi       r3, r11, 0x2864
+800fc614 lwz        r9, 0x2864(r11)
+800fc618 lwz        r4, 0x24(r31)
+800fc61c addi       r9, r9, 1
+800fc620 stw        r9, 0x2864(r11)
+800fc624 bl         0x8011691c
+800fc628 lbz        r9, 0(r3)
+800fc62c addi       r9, r9, 1
+800fc630 stb        r9, 0(r3)
+800fc634 lwz        r4, 0x2c(r31)
+800fc638 cmpwi      r4, 0
+800fc63c beq        0x800fc650
+800fc640 mr         r3, r30
+800fc644 bl         0x800fcaa0
+800fc648 stw        r3, 0x6c(r31)
+800fc64c b          0x800fc654
+800fc650 stw        r31, 0x6c(r31)
+800fc654 li         r0, 0
+800fc658 stw        r30, 0x68(r31)
+800fc65c stw        r0, 0x74(r31)
+800fc660 mr         r4, r29
+800fc664 stw        r0, 0x70(r31)
+800fc668 mr         r3, r31
+800fc66c bl         0x8026c004
+800fc670 lwz        r9, 0x24(r31)
+800fc674 lis        r0, 0x6699
+800fc678 ori        r0, r0, 0x4f4a
+800fc67c cmpw       r9, r0
+800fc680 bne        0x800fc68c
+800fc684 lis        r9, -0x7fbe
+800fc688 stw        r31, -0x548c(r9)
+800fc68c lis        r9, -0x7fbe
+800fc690 li         r0, 1
+800fc694 stw        r0, -0x59e4(r9)
+800fc698 lwz        r0, 0x1c(r1)
+800fc69c mtlr       r0
+800fc6a0 lmw        r29, 0xc(r1)
+800fc6a4 addi       r1, r1, 0x18
+800fc6a8 blr        
+800fc6ac stwu       r1, -0x10(r1)
+800fc6b0 mflr       r0
+800fc6b4 stw        r31, 0xc(r1)
+800fc6b8 stw        r0, 0x14(r1)
+800fc6bc mr         r0, r3
+800fc6c0 mr         r31, r4
+800fc6c4 or.        r3, r6, r6
+800fc6c8 bne        0x800fc6e0
+800fc6cc lwz        r4, 0x24(r31)
+800fc6d0 mr         r3, r0
+800fc6d4 bl         0x800fc9a8
+800fc6d8 or.        r3, r3, r3
+800fc6dc beq        0x800fc710
+800fc6e0 li         r0, 0
+800fc6e4 lis        r11, -0x7fba
+800fc6e8 stw        r0, 4(r3)
+800fc6ec addi       r3, r11, 0x2864
+800fc6f0 lwz        r9, 0x2864(r11)
+800fc6f4 lwz        r4, 0x24(r31)
+800fc6f8 addi       r9, r9, -1
+800fc6fc stw        r9, 0x2864(r11)
+800fc700 bl         0x8011691c
+800fc704 lbz        r9, 0(r3)
+800fc708 addi       r9, r9, -1
+800fc70c stb        r9, 0(r3)
+800fc710 lis        r9, -0x7fbe
+800fc714 lwz        r0, -0x548c(r9)
+800fc718 cmpw       r31, r0
+800fc71c bne        0x800fc728
+800fc720 li         r0, 0
+800fc724 stw        r0, -0x548c(r9)
+800fc728 lwz        r0, 0x14(r1)
+800fc72c mtlr       r0
+800fc730 lwz        r31, 0xc(r1)
+800fc734 addi       r1, r1, 0x10
+800fc738 blr        
+800fc73c stwu       r1, -0x28(r1)
+800fc740 mflr       r0
+800fc744 stmw       r25, 0xc(r1)
+800fc748 stw        r0, 0x2c(r1)
+800fc74c mr         r28, r3
+800fc750 li         r10, 0
+800fc754 lwz        r0, 0x18(r28)
+800fc758 mr         r26, r4
+800fc75c mr         r30, r5
+800fc760 li         r25, 0
+800fc764 cmpw       r10, r0
+800fc768 li         r29, 0
+800fc76c bge        0x800fc828
+800fc770 add        r27, r30, r6
+800fc774 lwz        r9, 0x14(r28)
+800fc778 slwi       r11, r29, 3
+800fc77c lwz        r0, 0x74(r9)

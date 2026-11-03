@@ -1,0 +1,12 @@
+Handbrake tap: 15.9 deg entry, 18.4 deg after release, recovered grip.
+Driving controller checks passed (map-independent prototype; not game integration).
+Camera checks passed: stationary, yaw lag/wrap, settling, reset, 30/120 Hz and invalid input.
+Visibility checks passed: six planes, crossing/tangent boxes, rotated camera, projected points and invalid input.
+Road grid: 33x20 cells, 7620 references, 80.88 average/187 max centroid candidates instead of 5483; 35254 indexed/linear height+normal queries match exactly.
+Real original-road handbrake tap/release retains supported contact and >8 deg slip.
+Grid equivalence, bounds, holes, boundaries, invalid input, memory cap and cleanup passed.
+Real spawn: 4 contacts, pitch 1.956 deg, roll 0.479 deg
+Road pose checks passed: flat/hill/bank/combined slopes at four headings, missing contacts, limits, invalid input and real map.
+Real road map: 16107 covered pixels, 2.06 meters/pixel
+Map checks passed: original coverage, heading arrows, ahead/reverse edge prediction, stationary behavior and invalid input.
+Wheel checks passed: car/rig binding, forward/reverse rolling, blocked travel, angle wrapping, reset and corruption.

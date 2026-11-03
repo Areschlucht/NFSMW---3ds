@@ -1,0 +1,2130 @@
+80071fb8  stwu r1, -0x210(r1)
+80071fbc  mflr r0
+80071fc0  mfcr r12
+80071fc4  xvmaddasp vs31, vs1, vs0
+80071fc8  stmw r18, 0x1d0(r1)
+80071fcc  stw r0, 0x214(r1)
+80071fd0  stw r12, 0x1cc(r1)
+80071fd4  mr r31, r3
+80071fd8  mr r27, r5
+80071fdc  mr r29, r6
+80071fe0  mr r30, r8
+80071fe4  mr r28, r9
+80071fe8  mr r26, r10
+80071fec  mr r25, r7
+80071ff0  li r5, 1
+80071ff4  bl 0x80065b68
+80071ff8  lis r9, -0x7fc3
+80071ffc  li r0, 0
+80072000  addi r9, r9, 0x3398
+80072004  xori r30, r30, 1
+80072008  stw r0, 0xa8(r31)
+8007200c  lis r10, -0x7fb8
+80072010  stw r9, 8(r31)
+80072014  lis r11, -0x7fc3
+80072018  stw r30, 0xa0(r31)
+8007201c  li r8, 1
+80072020  stw r28, 0xa4(r31)
+80072024  mr r4, r29
+80072028  stw r26, 0xac(r31)
+8007202c  mr r3, r27
+80072030  stw r27, 0x80(r31)
+80072034  stw r29, 0x98(r31)
+80072038  stw r29, 0x9c(r31)
+8007203c  lfs f0, 0x2550(r11)
+80072040  lwz r9, 0xc0(r10)
+80072044  addi r9, r9, -0x1f40
+80072048  stw r9, 0xb4(r31)
+8007204c  lwz r11, 0xc0(r10)
+80072050  addi r11, r11, -0x1900
+80072054  stw r11, 0xb8(r31)
+80072058  lwz r9, 0xc0(r10)
+8007205c  stfs f0, 0xc0(r31)
+80072060  addi r9, r9, -0x1770
+80072064  stw r8, 0xb0(r31)
+80072068  stw r9, 0xbc(r31)
+8007206c  bl 0x800687c8
+80072070  lwz r0, 0x98(r31)
+80072074  mr r20, r3
+80072078  lis r9, -0x7fba
+8007207c  mulli r3, r0, 0x14
+80072080  addi r9, r9, -0x5348
+80072084  addi r8, r1, 8
+80072088  lwzux r4, r3, r9
+8007208c  lfs f13, 4(r3)
+80072090  lfs f12, 0xc(r3)
+80072094  fneg f13, f13
+80072098  fmuls f1, f12, f13
+8007209c  fmr f0, f1
+800720a0  fctiwz f11, f0
+800720a4  stfd f11, 0x1c0(r1)
+800720a8  lwz r6, 0x1c4(r1)
+800720ac  cmpwi r6, 0
+800720b0  bge 0x800720c8
+800720b4  lwz r4, 0x10(r3)
+800720b8  li r5, 0xb0
+800720bc  mr r3, r8
+800720c0  bl 0x8005e0c8
+800720c4  b 0x80072150
+800720c8  addi r0, r4, -1
+800720cc  cmpw r6, r0
+800720d0  blt 0x800720f4
+800720d4  mulli r4, r4, 0xb0
+800720d8  lwz r0, 0x10(r3)
+800720dc  mr r3, r8
+800720e0  li r5, 0xb0
+800720e4  addi r4, r4, -0xb0
+800720e8  add r4, r0, r4
+800720ec  bl 0x8005e0c8
+800720f0  b 0x80072150
+800720f4  xoris r0, r6, 0x8000
+800720f8  stw r0, 0x1c4(r1)
+800720fc  lis r11, 0x4330
+80072100  lis r10, -0x7fc3
+80072104  stw r11, 0x1c0(r1)
+80072108  lfd f13, 0x2558(r10)
+8007210c  lfd f0, 0x1c0(r1)
+80072110  fsub f0, f0, f13
+80072114  frsp f13, f0
+80072118  fcmpu cr0, f13, f1
+8007211c  cror cr0un, cr0eq, cr0lt
+80072120  bso 0x80072130
+80072124  lis r9, -0x7fc3
+80072128  lfs f0, 0x2560(r9)
+8007212c  fsubs f13, f13, f0
+80072130  mulli r6, r6, 0xb0
+80072134  lwz r0, 0x10(r3)
+80072138  fsubs f1, f1, f13
+8007213c  mr r4, r8
+80072140  addi r5, r6, 0xb0
+80072144  add r6, r0, r6
+80072148  add r5, r0, r5
+8007214c  bl 0x80071bb8
+80072150  li r3, 0x2c
+80072154  li r29, 1
+80072158  bl 0x80208610
+8007215c  li r30, 0
+80072160  lfs f0, 0x10(r1)
+80072164  lis r11, -0x7fc3
+80072168  lfs f31, 0x2550(r11)
+8007216c  mr r9, r3
+80072170  stfs f0, 0x24(r9)
+80072174  addi r28, r1, 0xa8
+80072178  stw r9, 0x84(r31)
+8007217c  addi r27, r1, 0xb8
+80072180  addi r26, r1, 0xf8
+80072184  addi r24, r1, 0x138
+80072188  addi r22, r1, 0x158
+8007218c  addi r23, r1, 0x148
+80072190  addi r21, r1, 0x168
+80072194  addi r19, r1, 0x188
+80072198  addi r18, r1, 0x198
+8007219c  sth r30, 0x28(r9)
+800721a0  sth r29, 0x2a(r9)
+800721a4  li r3, 0x84
+800721a8  stfs f31, 0(r9)
+800721ac  cmpwi cr4, r25, 0
+800721b0  stfs f31, 4(r9)
+800721b4  addi r25, r31, 0xe4
+800721b8  stfs f31, 8(r9)
+800721bc  stfs f31, 0xc(r9)
+800721c0  stfs f31, 0x20(r9)
+800721c4  stfs f31, 0x10(r9)
+800721c8  stfs f31, 0x14(r9)
+800721cc  stfs f31, 0x18(r9)
+800721d0  stfs f31, 0x1c(r9)
+800721d4  bl 0x80208610
+800721d8  lfs f0, 8(r1)
+800721dc  mr r9, r3
+800721e0  sth r30, 0x28(r9)
+800721e4  li r3, 0x84
+800721e8  stfs f0, 0x7c(r9)
+800721ec  stfs f0, 0x24(r9)
+800721f0  sth r29, 0x2a(r9)
+800721f4  stfs f0, 0x50(r9)
+800721f8  sth r30, 0x54(r9)
+800721fc  sth r29, 0x56(r9)
+80072200  sth r30, 0x80(r9)
+80072204  sth r29, 0x82(r9)
+80072208  stfs f31, 0(r9)
+8007220c  stfs f31, 4(r9)
+80072210  stfs f31, 8(r9)
+80072214  stfs f31, 0xc(r9)
+80072218  stfs f31, 0x20(r9)
+8007221c  stfs f31, 0x10(r9)
+80072220  stfs f31, 0x14(r9)
+80072224  stfs f31, 0x18(r9)
+80072228  stfs f31, 0x1c(r9)
+8007222c  stfs f31, 0x2c(r9)
+80072230  stfs f31, 0x30(r9)
+80072234  stfs f31, 0x34(r9)
+80072238  stfs f31, 0x38(r9)
+8007223c  stfs f31, 0x4c(r9)
+80072240  stfs f31, 0x3c(r9)
+80072244  stfs f31, 0x40(r9)
+80072248  stfs f31, 0x44(r9)
+8007224c  stfs f31, 0x48(r9)
+80072250  stfs f31, 0x58(r9)
+80072254  stfs f31, 0x5c(r9)
+80072258  stfs f31, 0x60(r9)
+8007225c  stfs f31, 0x64(r9)
+80072260  stfs f31, 0x78(r9)
+80072264  stfs f31, 0x68(r9)
+80072268  stw r9, 0x88(r31)
+8007226c  stfs f31, 0x6c(r9)
+80072270  stfs f31, 0x70(r9)
+80072274  stfs f31, 0x74(r9)
+80072278  bl 0x80208610
+8007227c  lfs f0, 0xc(r1)
+80072280  mr r9, r3
+80072284  sth r30, 0x28(r9)
+80072288  li r3, 0x84
+8007228c  stfs f0, 0x7c(r9)
+80072290  stfs f0, 0x24(r9)
+80072294  sth r29, 0x2a(r9)
+80072298  stfs f0, 0x50(r9)
+8007229c  sth r30, 0x54(r9)
+800722a0  sth r29, 0x56(r9)
+800722a4  sth r30, 0x80(r9)
+800722a8  sth r29, 0x82(r9)
+800722ac  stfs f31, 0(r9)
+800722b0  stfs f31, 4(r9)
+800722b4  stfs f31, 8(r9)
+800722b8  stfs f31, 0xc(r9)
+800722bc  stfs f31, 0x20(r9)
+800722c0  stfs f31, 0x10(r9)
+800722c4  stfs f31, 0x14(r9)
+800722c8  stfs f31, 0x18(r9)
+800722cc  stfs f31, 0x1c(r9)
+800722d0  stfs f31, 0x2c(r9)
+800722d4  stfs f31, 0x30(r9)
+800722d8  stfs f31, 0x34(r9)
+800722dc  stfs f31, 0x38(r9)
+800722e0  stfs f31, 0x4c(r9)
+800722e4  stfs f31, 0x3c(r9)
+800722e8  stfs f31, 0x40(r9)
+800722ec  stfs f31, 0x44(r9)
+800722f0  stfs f31, 0x48(r9)
+800722f4  stfs f31, 0x58(r9)
+800722f8  stfs f31, 0x5c(r9)
+800722fc  stfs f31, 0x60(r9)
+80072300  stfs f31, 0x64(r9)
+80072304  stfs f31, 0x78(r9)
+80072308  stfs f31, 0x68(r9)
+8007230c  stw r9, 0x8c(r31)
+80072310  stfs f31, 0x6c(r9)
+80072314  stfs f31, 0x70(r9)
+80072318  stfs f31, 0x74(r9)
+8007231c  bl 0x80208610
+80072320  lfs f12, 0xa8(r1)
+80072324  mr r9, r3
+80072328  lfs f13, 4(r28)
+8007232c  li r3, 0x84
+80072330  lfs f0, 8(r28)
+80072334  stfs f12, 0x24(r9)
+80072338  stfs f13, 0x50(r9)
+8007233c  stfs f0, 0x7c(r9)
+80072340  sth r30, 0x28(r9)
+80072344  sth r29, 0x2a(r9)
+80072348  sth r30, 0x54(r9)
+8007234c  sth r29, 0x56(r9)
+80072350  stfs f31, 0(r9)
+80072354  stfs f31, 4(r9)
+80072358  stfs f31, 8(r9)
+8007235c  stfs f31, 0xc(r9)
+80072360  stfs f31, 0x20(r9)
+80072364  stfs f31, 0x10(r9)
+80072368  stfs f31, 0x14(r9)
+8007236c  stfs f31, 0x18(r9)
+80072370  stfs f31, 0x1c(r9)
+80072374  stfs f31, 0x2c(r9)
+80072378  stfs f31, 0x30(r9)
+8007237c  stfs f31, 0x34(r9)
+80072380  stfs f31, 0x38(r9)
+80072384  stfs f31, 0x4c(r9)
+80072388  stfs f31, 0x3c(r9)
+8007238c  stfs f31, 0x40(r9)
+80072390  stfs f31, 0x44(r9)
+80072394  stfs f31, 0x48(r9)
+80072398  stfs f31, 0x58(r9)
+8007239c  stfs f31, 0x5c(r9)
+800723a0  stfs f31, 0x60(r9)
+800723a4  stfs f31, 0x64(r9)
+800723a8  stfs f31, 0x78(r9)
+800723ac  sth r30, 0x80(r9)
+800723b0  stw r9, 0x90(r31)
+800723b4  sth r29, 0x82(r9)
+800723b8  stfs f31, 0x68(r9)
+800723bc  stfs f31, 0x6c(r9)
+800723c0  stfs f31, 0x70(r9)
+800723c4  stfs f31, 0x74(r9)
+800723c8  bl 0x80208610
+800723cc  lfs f12, 8(r28)
+800723d0  mr r9, r3
+800723d4  lfs f0, 0xa8(r1)
+800723d8  lis r3, -0x7fb8
+800723dc  lfs f13, 4(r28)
+800723e0  li r4, 0x2c
+800723e4  stfs f0, 0x24(r9)
+800723e8  li r5, 0
+800723ec  stfs f13, 0x50(r9)
+800723f0  addi r3, r3, -0x61c
+800723f4  stfs f12, 0x7c(r9)
+800723f8  sth r30, 0x28(r9)
+800723fc  sth r29, 0x2a(r9)
+80072400  sth r30, 0x54(r9)
+80072404  sth r29, 0x56(r9)
+80072408  stfs f31, 0(r9)
+8007240c  stfs f31, 4(r9)
+80072410  stfs f31, 8(r9)
+80072414  stfs f31, 0xc(r9)
+80072418  stfs f31, 0x20(r9)
+8007241c  stfs f31, 0x10(r9)
+80072420  stfs f31, 0x14(r9)
+80072424  stfs f31, 0x18(r9)
+80072428  stfs f31, 0x1c(r9)
+8007242c  stfs f31, 0x2c(r9)
+80072430  stfs f31, 0x30(r9)
+80072434  stfs f31, 0x34(r9)
+80072438  stfs f31, 0x38(r9)
+8007243c  stfs f31, 0x4c(r9)
+80072440  stfs f31, 0x3c(r9)
+80072444  stfs f31, 0x40(r9)
+80072448  stfs f31, 0x44(r9)
+8007244c  stfs f31, 0x48(r9)
+80072450  stfs f31, 0x58(r9)
+80072454  stfs f31, 0x5c(r9)
+80072458  stfs f31, 0x60(r9)
+8007245c  stfs f31, 0x64(r9)
+80072460  stfs f31, 0x78(r9)
+80072464  sth r30, 0x80(r9)
+80072468  sth r29, 0x82(r9)
+8007246c  stfs f31, 0x74(r9)
+80072470  stw r9, 0x94(r31)
+80072474  stfs f31, 0x68(r9)
+80072478  stfs f31, 0x6c(r9)
+8007247c  stfs f31, 0x70(r9)
+80072480  bl 0x80192a0c
+80072484  mr r30, r3
+80072488  li r4, 0x10
+8007248c  li r5, 5
+80072490  bl 0x802091fc
+80072494  addi r29, r30, 8
+80072498  lis r9, -0x7fc3
+8007249c  li r3, 0x50
+800724a0  addi r9, r9, 0x2d80
+800724a4  stw r9, 4(r30)
+800724a8  bl 0x80208610
+800724ac  li r9, 4
+800724b0  cmpwi r9, 0
+800724b4  addi r9, r9, -1
+800724b8  bne 0x800724b0
+800724bc  stw r3, 0(r29)
+800724c0  li r4, 0
+800724c4  li r5, 0x50
+800724c8  lwz r3, 8(r30)
+800724cc  bl 0x8005e168
+800724d0  lwz r9, 8(r30)
+800724d4  mr r5, r20
+800724d8  mr r3, r31
+800724dc  mr r4, r27
+800724e0  lfs f12, 0(r9)
+800724e4  addi r6, r1, 8
+800724e8  lfs f13, 4(r9)
+800724ec  li r7, 1
+800724f0  lfs f0, 8(r9)
+800724f4  stfs f12, 0x1c(r30)
+800724f8  stfs f13, 0x20(r30)
+800724fc  stfs f0, 0x24(r30)
+80072500  lfs f12, 8(r9)
+80072504  lfs f0, 0(r9)
+80072508  lfs f13, 4(r9)
+8007250c  stfs f0, 0xc(r30)
+80072510  stfs f13, 0x10(r30)
+80072514  stfs f12, 0x14(r30)
+80072518  stw r30, 0(r25)
+8007251c  bl 0x8007381c
+80072520  mr r4, r27
+80072524  mr r3, r26
+80072528  bl 0x8010b5fc
+8007252c  lwz r0, 0xa4(r31)
+80072530  cmpwi r0, 0
+80072534  beq 0x80072598
+80072538  lfs f10, 0xf8(r1)
+8007253c  lfs f8, 0xfc(r1)
+80072540  lfs f7, 0x108(r1)
+80072544  fneg f10, f10
+80072548  lfs f9, 0x10c(r1)
+8007254c  fneg f8, f8
+80072550  lfs f11, 0x118(r1)
+80072554  fneg f7, f7
+80072558  lfs f12, 0x11c(r1)
+8007255c  fneg f9, f9
+80072560  lfs f13, 0x128(r1)
+80072564  fneg f11, f11
+80072568  lfs f0, 0x12c(r1)
+8007256c  fneg f12, f12
+80072570  fneg f13, f13
+80072574  stfs f10, 0xf8(r1)
+80072578  fneg f0, f0
+8007257c  stfs f8, 0xfc(r1)
+80072580  stfs f7, 0x108(r1)
+80072584  stfs f9, 0x10c(r1)
+80072588  stfs f11, 0x118(r1)
+8007258c  stfs f12, 0x11c(r1)
+80072590  stfs f13, 0x128(r1)
+80072594  stfs f0, 0x12c(r1)
+80072598  lwz r5, 0x8c(r31)
+8007259c  mr r7, r26
+800725a0  lwz r6, 0x84(r31)
+800725a4  mr r3, r31
+800725a8  lwz r8, 0x80(r31)
+800725ac  lwz r4, 0x88(r31)
+800725b0  bl 0x80068010
+800725b4  lwz r3, 0x88(r31)
+800725b8  mr r4, r24
+800725bc  bl 0x802083c4
+800725c0  lwz r3, 0x8c(r31)
+800725c4  mr r4, r22
+800725c8  bl 0x802083c4
+800725cc  lwz r3, 0x88(r31)
+800725d0  mr r4, r23
+800725d4  bl 0x802083e0
+800725d8  lwz r3, 0x8c(r31)
+800725dc  mr r4, r21
+800725e0  bl 0x802083e0
+800725e4  lfs f11, 0x138(r1)
+800725e8  addi r4, r1, 0x188
+800725ec  lfs f10, 0x13c(r1)
+800725f0  addi r3, r1, 0x178
+800725f4  lfs f9, 0x140(r1)
+800725f8  lfs f13, 0x148(r1)
+800725fc  lfs f12, 0x14c(r1)
+80072600  lfs f0, 0x150(r1)
+80072604  fsubs f13, f13, f11
+80072608  fsubs f12, f12, f10
+8007260c  stfs f13, 0x188(r1)
+80072610  fsubs f0, f0, f9
+80072614  stfs f12, 0x18c(r1)
+80072618  stfs f0, 0x190(r1)
+8007261c  bl 0x80041b14
+80072620  lfs f11, 0x138(r1)
+80072624  addi r4, r1, 0x198
+80072628  lfs f10, 0x13c(r1)
+8007262c  addi r3, r1, 0x188
+80072630  lfs f9, 0x140(r1)
+80072634  lfs f13, 0x158(r1)
+80072638  lfs f12, 0x15c(r1)
+8007263c  lfs f0, 0x160(r1)
+80072640  fsubs f13, f13, f11
+80072644  fsubs f12, f12, f10
+80072648  stfs f13, 0x198(r1)
+8007264c  fsubs f0, f0, f9
+80072650  stfs f12, 0x19c(r1)
+80072654  stfs f0, 0x1a0(r1)
+80072658  bl 0x80041b14
+8007265c  lfs f9, 0x150(r1)
+80072660  addi r4, r1, 0x1a8
+80072664  lfs f13, 0x168(r1)
+80072668  addi r3, r1, 0x198
+8007266c  lfs f12, 0x16c(r1)
+80072670  lfs f0, 0x170(r1)
+80072674  lfs f11, 0x148(r1)
+80072678  lfs f10, 0x14c(r1)
+8007267c  fsubs f0, f0, f9
+80072680  fsubs f13, f13, f11
+80072684  stfs f0, 0x1b0(r1)
+80072688  fsubs f12, f12, f10
+8007268c  stfs f13, 0x1a8(r1)
+80072690  stfs f12, 0x1ac(r1)
+80072694  bl 0x80041b14
+80072698  mr r3, r19
+8007269c  mr r4, r3
+800726a0  bl 0x80060ac0
+800726a4  mr r3, r18
+800726a8  mr r4, r3
+800726ac  bl 0x80060ac0
+800726b0  lis r9, -0x7fc3
+800726b4  lfs f9, 0x2550(r9)
+800726b8  stfs f9, 0xcc(r31)
+800726bc  stfs f9, 0xc8(r31)
+800726c0  stfs f9, 0xc4(r31)
+800726c4  stfs f9, 0xd8(r31)
+800726c8  stfs f9, 0xd4(r31)
+800726cc  stfs f9, 0xe0(r31)
+800726d0  stfs f9, 0xdc(r31)
+800726d4  beq cr4, 0x8007278c
+800726d8  lfs f0, 0x17c(r1)
+800726dc  lis r9, -0x7fc3
+800726e0  lfs f13, 0x178(r1)
+800726e4  lis r11, -0x7fc3
+800726e8  fmuls f0, f0, f0
+800726ec  lfs f12, 0x180(r1)
+800726f0  lfs f11, 0x2564(r9)
+800726f4  fmadds f13, f13, f13, f0
+800726f8  fmadds f10, f12, f12, f13
+800726fc  lis r9, -0x7fc3
+80072700  fcmpu cr0, f10, f11
+80072704  lfs f8, 0x2568(r11)
+80072708  lfs f11, 0x2560(r9)
+8007270c  cror cr0un, cr0eq, cr0lt
+80072710  bso 0x80072740
+80072714  frsqrte f13, f10
+80072718  fmuls f0, f13, f13
+8007271c  fmuls f12, f13, f8
+80072720  fnmsubs f0, f10, f0, f11
+80072724  fmadds f13, f0, f12, f13
+80072728  fmuls f0, f13, f13
+8007272c  fmuls f12, f13, f8
+80072730  fnmsubs f0, f10, f0, f11
+80072734  fmadds f13, f0, f12, f13
+80072738  fmuls f13, f13, f10
+8007273c  b 0x80072744
+80072740  fmr f13, f9
+80072744  lis r9, -0x7fc3
+80072748  lfs f0, 0x256c(r9)
+8007274c  fcmpu cr0, f13, f0
+80072750  bgt 0x8007278c
+80072754  lfs f11, 0x19c(r1)
+80072758  lis r9, -0x7fc3
+8007275c  lfs f12, 0x18c(r1)
+80072760  lfs f13, 0x188(r1)
+80072764  lfs f9, 0x198(r1)
+80072768  fmuls f12, f12, f11
+8007276c  lfs f0, 0x190(r1)
+80072770  lfs f10, 0x1a0(r1)
+80072774  fmadds f13, f13, f9, f12
+80072778  lfs f11, 0x2570(r9)
+8007277c  fmadds f0, f0, f10, f13
+80072780  fcmpu cr0, f0, f11
+80072784  cror cr0un, cr0eq, cr0gt
+80072788  bso 0x8007286c
+8007278c  lwz r9, 0x94(r31)
+80072790  li r0, 0
+80072794  lfs f0, 8(r9)
+80072798  lfs f13, 0xc(r9)
+8007279c  lfs f12, 0x34(r9)
+800727a0  lfs f11, 0x38(r9)
+800727a4  lfs f10, 0x60(r9)
+800727a8  lfs f9, 0x64(r9)
+800727ac  stfs f0, 0(r9)
+800727b0  stfs f9, 0x5c(r9)
+800727b4  stfs f13, 4(r9)
+800727b8  stfs f12, 0x2c(r9)
+800727bc  stfs f11, 0x30(r9)
+800727c0  stfs f10, 0x58(r9)
+800727c4  sth r0, 0x80(r9)
+800727c8  sth r0, 0x28(r9)
+800727cc  sth r0, 0x54(r9)
+800727d0  lwz r11, 0x84(r31)
+800727d4  lfs f0, 8(r11)
+800727d8  lfs f13, 0xc(r11)
+800727dc  stfs f0, 0(r11)
+800727e0  stfs f13, 4(r11)
+800727e4  sth r0, 0x28(r11)
+800727e8  lwz r9, 0x88(r31)
+800727ec  lfs f0, 8(r9)
+800727f0  lfs f13, 0xc(r9)
+800727f4  lfs f12, 0x34(r9)
+800727f8  lfs f11, 0x38(r9)
+800727fc  lfs f10, 0x60(r9)
+80072800  stfs f0, 0(r9)
+80072804  stfs f13, 4(r9)
+80072808  stfs f12, 0x2c(r9)
+8007280c  stfs f11, 0x30(r9)
+80072810  sth r0, 0x28(r9)
+80072814  sth r0, 0x54(r9)
+80072818  stfs f10, 0x58(r9)
+8007281c  lfs f0, 0x64(r9)
+80072820  sth r0, 0x80(r9)
+80072824  stfs f0, 0x5c(r9)
+80072828  lwz r11, 0x8c(r31)
+8007282c  lfs f0, 8(r11)
+80072830  lfs f13, 0xc(r11)
+80072834  lfs f12, 0x34(r11)
+80072838  lfs f11, 0x38(r11)
+8007283c  lfs f10, 0x60(r11)
+80072840  lfs f9, 0x64(r11)
+80072844  sth r0, 0x80(r11)
+80072848  stfs f0, 0(r11)
+8007284c  stfs f13, 4(r11)
+80072850  stfs f12, 0x2c(r11)
+80072854  stfs f11, 0x30(r11)
+80072858  stfs f10, 0x58(r11)
+8007285c  stfs f9, 0x5c(r11)
+80072860  sth r0, 0x28(r11)
+80072864  sth r0, 0x54(r11)
+80072868  b 0x80072878
+8007286c  lis r9, -0x7fc3
+80072870  lfs f0, 0x2560(r9)
+80072874  stfs f0, 0xc0(r31)
+80072878  mr r3, r31
+8007287c  lwz r0, 0x214(r1)
+80072880  lwz r12, 0x1cc(r1)
+80072884  mtlr r0
+80072888  lmw r18, 0x1d0(r1)
+8007288c  .gekko e3e10208
+80072890  mtcrf 8, r12
+80072894  addi r1, r1, 0x210
+80072898  blr 
+8007289c  stwu r1, -0x10(r1)
+800728a0  mflr r0
+800728a4  stmw r30, 8(r1)
+800728a8  stw r0, 0x14(r1)
+800728ac  mr r31, r3
+800728b0  lis r9, -0x7fc3
+800728b4  addi r9, r9, 0x3398
+800728b8  lwz r3, 0x94(r31)
+800728bc  mr r30, r4
+800728c0  stw r9, 8(r31)
+800728c4  bl 0x80208634
+800728c8  lwz r3, 0x84(r31)
+800728cc  bl 0x80208634
+800728d0  lwz r3, 0x88(r31)
+800728d4  bl 0x80208634
+800728d8  lwz r3, 0x8c(r31)
+800728dc  bl 0x80208634
+800728e0  lwz r3, 0x90(r31)
+800728e4  bl 0x80208634
+800728e8  lwz r11, 0xe4(r31)
+800728ec  cmpwi r11, 0
+800728f0  beq 0x80072910
+800728f4  lwz r9, 4(r11)
+800728f8  li r4, 3
+800728fc  lha r3, 8(r9)
+80072900  lwz r0, 0xc(r9)
+80072904  add r3, r11, r3
+80072908  mtlr r0
+8007290c  blrl 
+80072910  mr r3, r31
+80072914  mr r4, r30
+80072918  bl 0x80065ce8
+8007291c  lwz r0, 0x14(r1)
+80072920  mtlr r0
+80072924  lmw r30, 8(r1)
+80072928  addi r1, r1, 0x10
+8007292c  blr 
+80072930  lis r9, -0x7fc3
+80072934  lfs f1, 0x2574(r9)
+80072938  blr 
+8007293c  stwu r1, -8(r1)
+80072940  mflr r0
+80072944  stw r0, 0xc(r1)
+80072948  lwz r3, 0x9c(r3)
+8007294c  bl 0x80071f2c
+80072950  lwz r0, 0xc(r1)
+80072954  mtlr r0
+80072958  addi r1, r1, 8
+8007295c  blr 
+80072960  stwu r1, -8(r1)
+80072964  mflr r0
+80072968  stw r0, 0xc(r1)
+8007296c  lwz r4, 0xa4(r3)
+80072970  lwz r3, 0x9c(r3)
+80072974  bl 0x80071f58
+80072978  lwz r0, 0xc(r1)
+8007297c  mtlr r0
+80072980  addi r1, r1, 8
+80072984  blr 
+80072988  li r3, 0
+8007298c  blr 
+80072990  lis r9, -0x7fc3
+80072994  lfs f0, 0xc0(r3)
+80072998  lfs f13, 0x2578(r9)
+8007299c  fcmpu cr0, f0, f13
+800729a0  bgtlr 
+800729a4  li r0, 1
+800729a8  stw r0, 0xa8(r3)
+800729ac  blr 
+800729b0  stwu r1, -0x18(r1)
+800729b4  mflr r0
+800729b8  stmw r29, 0xc(r1)
+800729bc  stw r0, 0x1c(r1)
+800729c0  mr r30, r3
+800729c4  mr r31, r4
+800729c8  lwz r3, 0x9c(r30)
+800729cc  cmpw r31, r3
+800729d0  beq 0x80072a1c
+800729d4  bl 0x80071f2c
+800729d8  mr r29, r3
+800729dc  mr r3, r31
+800729e0  bl 0x80071f2c
+800729e4  addi r11, r30, 0xa8
+800729e8  cmpwi r3, 0
+800729ec  li r10, 0
+800729f0  beq 0x800729fc
+800729f4  cmpwi r29, 0
+800729f8  bne 0x80072a00
+800729fc  li r10, 1
+80072a00  lwz r0, 0(r11)
+80072a04  li r9, 1
+80072a08  or. r8, r0, r10
+80072a0c  bne 0x80072a14
+80072a10  li r9, 0
+80072a14  stw r9, 0(r11)
+80072a18  stw r31, 0x98(r30)
+80072a1c  lwz r0, 0x1c(r1)
+80072a20  mtlr r0
+80072a24  lmw r29, 0xc(r1)
+80072a28  addi r1, r1, 0x18
+80072a2c  blr 
+80072a30  lwz r9, 0x94(r3)
+80072a34  li r10, 0
+80072a38  lis r8, -0x7fbe
+80072a3c  lis r7, -0x7fc3
+80072a40  lfs f0, 8(r9)
+80072a44  li r6, 1
+80072a48  lfs f13, 0xc(r9)
+80072a4c  lfs f12, 0x34(r9)
+80072a50  lfs f11, 0x38(r9)
+80072a54  lfs f10, 0x60(r9)
+80072a58  lfs f9, 0x64(r9)
+80072a5c  stfs f0, 0(r9)
+80072a60  stfs f9, 0x5c(r9)
+80072a64  stfs f13, 4(r9)
+80072a68  stfs f12, 0x2c(r9)
+80072a6c  stfs f11, 0x30(r9)
+80072a70  stfs f10, 0x58(r9)
+80072a74  sth r10, 0x80(r9)
+80072a78  sth r10, 0x28(r9)
+80072a7c  sth r10, 0x54(r9)
+80072a80  lwz r11, 0x84(r3)
+80072a84  lfs f0, 8(r11)
+80072a88  lfs f13, 0xc(r11)
+80072a8c  stfs f0, 0(r11)
+80072a90  stfs f13, 4(r11)
+80072a94  sth r10, 0x28(r11)
+80072a98  lwz r9, 0x88(r3)
+80072a9c  lfs f0, 8(r9)
+80072aa0  lfs f13, 0xc(r9)
+80072aa4  lfs f12, 0x34(r9)
+80072aa8  lfs f11, 0x38(r9)
+80072aac  lfs f10, 0x60(r9)
+80072ab0  stfs f0, 0(r9)
+80072ab4  stfs f13, 4(r9)
+80072ab8  stfs f12, 0x2c(r9)
+80072abc  stfs f11, 0x30(r9)
+80072ac0  sth r10, 0x28(r9)
+80072ac4  sth r10, 0x54(r9)
+80072ac8  stfs f10, 0x58(r9)
+80072acc  lfs f0, 0x64(r9)
+80072ad0  sth r10, 0x80(r9)
+80072ad4  stfs f0, 0x5c(r9)
+80072ad8  lwz r11, 0x8c(r3)
+80072adc  lfs f0, 8(r11)
+80072ae0  lfs f13, 0xc(r11)
+80072ae4  lfs f12, 0x34(r11)
+80072ae8  lfs f11, 0x38(r11)
+80072aec  lfs f10, 0x60(r11)
+80072af0  lfs f9, 0x64(r11)
+80072af4  stfs f0, 0(r11)
+80072af8  stfs f13, 4(r11)
+80072afc  stfs f12, 0x2c(r11)
+80072b00  stfs f11, 0x30(r11)
+80072b04  stfs f10, 0x58(r11)
+80072b08  stfs f9, 0x5c(r11)
+80072b0c  sth r10, 0x80(r11)
+80072b10  sth r10, 0x28(r11)
+80072b14  sth r10, 0x54(r11)
+80072b18  lwz r9, 0x90(r3)
+80072b1c  lfs f0, 8(r9)
+80072b20  lfs f13, 0xc(r9)
+80072b24  lfs f12, 0x34(r9)
+80072b28  lfs f11, 0x38(r9)
+80072b2c  lfs f10, 0x60(r9)
+80072b30  stfs f0, 0(r9)
+80072b34  lfs f9, 0x64(r9)
+80072b38  stfs f13, 4(r9)
+80072b3c  stfs f12, 0x2c(r9)
+80072b40  stfs f11, 0x30(r9)
+80072b44  stfs f10, 0x58(r9)
+80072b48  sth r10, 0x28(r9)
+80072b4c  sth r10, 0x54(r9)
+80072b50  stfs f9, 0x5c(r9)
+80072b54  sth r10, 0x80(r9)
+80072b58  lwz r0, -0x1334(r8)
+80072b5c  lwz r9, 0x1c(r3)
+80072b60  lfs f0, 0x257c(r7)
+80072b64  stw r0, 0x288(r9)
+80072b68  stw r6, 0x27c(r9)
+80072b6c  stfs f0, 0xdc(r3)
+80072b70  stfs f0, 0xd8(r3)
+80072b74  stfs f0, 0xd4(r3)
+80072b78  stfs f0, 0xe0(r3)
+80072b7c  blr 
+80072b80  stwu r1, -0x170(r1)
+80072b84  mflr r0
+80072b88  xsmaddmdp f27, f1, f0
+80072b8c  xxpermdi vs28, vs1, vs0, 1
+80072b90  .gekko f3a10158
+80072b94  .gekko f3c10160
+80072b98  .gekko f3e10168
+80072b9c  stmw r25, 0x12c(r1)
+80072ba0  stw r0, 0x174(r1)
+80072ba4  lis r9, -0x7fc3
+80072ba8  lis r10, -0x7fb8
+80072bac  lfs f28, 0x2580(r9)
+80072bb0  addi r10, r10, 0x92c
+80072bb4  lis r11, -0x7fc3
+80072bb8  lis r9, -0x7fc3
+80072bbc  lis r8, -0x7fc3
+80072bc0  lfs f27, 0x2588(r11)
+80072bc4  lfs f30, 0x258c(r9)
+80072bc8  addi r26, r10, 0x1f8
+80072bcc  lfs f29, 0x2584(r8)
+80072bd0  mr r27, r3
+80072bd4  lwz r28, 0x1f8(r10)
+80072bd8  addi r25, r1, 0x18
+80072bdc  lwz r0, 8(r26)
+80072be0  lwz r9, 0(r26)
+80072be4  slwi r0, r0, 2
+80072be8  add r9, r9, r0
+80072bec  cmpw r28, r9
+80072bf0  beq 0x80072fa0
+80072bf4  lwz r31, 0(r28)
+80072bf8  lwz r9, 4(r31)
+80072bfc  lha r3, 0x118(r9)
+80072c00  lwz r0, 0x11c(r9)
+80072c04  add r3, r31, r3
+80072c08  mtlr r0
+80072c0c  blrl 
+80072c10  cmpwi r3, 0
+80072c14  beq 0x80072f98
+80072c18  lwz r9, 4(r31)
+80072c1c  lha r3, 0xc0(r9)
+80072c20  lwz r0, 0xc4(r9)
+80072c24  add r3, r31, r3
+80072c28  mtlr r0
+80072c2c  blrl 
+80072c30  cmpwi r3, 0
+80072c34  bne 0x80072f98
+80072c38  lwz r9, 4(r31)
+80072c3c  lha r3, 0x18(r9)
+80072c40  lwz r0, 0x1c(r9)
+80072c44  add r3, r31, r3
+80072c48  mtlr r0
+80072c4c  blrl 
+80072c50  or. r30, r3, r3
+80072c54  beq 0x80072f98
+80072c58  lwz r9, 4(r30)
+80072c5c  lwz r0, 0xec(r9)
+80072c60  lha r3, 0xe8(r9)
+80072c64  mtlr r0
+80072c68  add r3, r30, r3
+80072c6c  blrl 
+80072c70  lwz r9, 0x80(r27)
+80072c74  lwz r0, 0x8c(r9)
+80072c78  cmpw r3, r0
+80072c7c  beq 0x80072f98
+80072c80  lwz r9, 4(r30)
+80072c84  lha r3, 0xa8(r9)
+80072c88  lwz r0, 0xac(r9)
+80072c8c  add r3, r30, r3
+80072c90  mtlr r0
+80072c94  blrl 
+80072c98  or. r29, r3, r3
+80072c9c  beq 0x80072f98
+80072ca0  lwz r9, 4(r31)
+80072ca4  addi r30, r1, 0x58
+80072ca8  lwz r0, 0x24(r9)
+80072cac  lha r3, 0x20(r9)
+80072cb0  mtlr r0
+80072cb4  add r3, r31, r3
+80072cb8  blrl 
+80072cbc  mr r9, r3
+80072cc0  lfs f13, 0(r9)
+80072cc4  addi r3, r1, 0x48
+80072cc8  stfs f13, 0x18(r1)
+80072ccc  lfs f0, 4(r9)
+80072cd0  stfs f0, 0x1c(r1)
+80072cd4  lfs f13, 8(r9)
+80072cd8  stfs f13, 0x20(r1)
+80072cdc  stfs f28, 0xc(r25)
+80072ce0  lwz r0, 0x18(r1)
+80072ce4  lwz r9, 0x1c(r1)
+80072ce8  lwz r11, 0x20(r1)
+80072cec  lwz r10, 0x24(r1)
+80072cf0  stw r0, 8(r1)
+80072cf4  stw r9, 0xc(r1)
+80072cf8  stw r11, 0x10(r1)
+80072cfc  stw r10, 0x14(r1)
+80072d00  lwz r9, 4(r29)
+80072d04  lwz r0, 0xa4(r9)
+80072d08  lha r4, 0xa0(r9)
+80072d0c  mtlr r0
+80072d10  add r4, r29, r4
+80072d14  blrl 
+80072d18  lwz r9, 4(r29)
+80072d1c  mr r4, r30
+80072d20  lha r3, 0x88(r9)
+80072d24  lwz r0, 0x8c(r9)
+80072d28  add r3, r29, r3
+80072d2c  mtlr r0
+80072d30  blrl 
+80072d34  addi r6, r1, 0xd8
+80072d38  addi r5, r1, 0x98
+80072d3c  mr r3, r6
+80072d40  cmpw r30, r5
+80072d44  bne 0x80072db4
+80072d48  mr r4, r30
+80072d4c  li r11, 0
+80072d50  mr r10, r3
+80072d54  slwi r0, r11, 2
+80072d58  lfsx f0, r4, r0
+80072d5c  addi r11, r11, 1
+80072d60  cmpwi r11, 0xf
+80072d64  stfsx f0, r10, r0
+80072d68  ble 0x80072d54
+80072d6c  li r11, 0
+80072d70  slwi r0, r11, 4
+80072d74  slwi r7, r11, 2
+80072d78  add r8, r5, r0
+80072d7c  li r10, 0
+80072d80  addi r0, r11, 1
+80072d84  slwi r9, r10, 4
+80072d88  slwi r11, r10, 2
+80072d8c  add r9, r6, r9
+80072d90  addi r10, r10, 1
+80072d94  lfsx f0, r9, r7
+80072d98  cmpwi r10, 3
+80072d9c  stfsx f0, r8, r11
+80072da0  ble 0x80072d84
+80072da4  mr r11, r0
+80072da8  cmpwi r11, 3
+80072dac  ble 0x80072d70
+80072db0  b 0x80072df8
+80072db4  li r9, 0
+80072db8  slwi r0, r9, 4
+80072dbc  slwi r7, r9, 2
+80072dc0  add r8, r5, r0
+80072dc4  li r10, 0
+80072dc8  addi r0, r9, 1
+80072dcc  slwi r9, r10, 4
+80072dd0  slwi r11, r10, 2
+80072dd4  add r9, r30, r9
+80072dd8  addi r10, r10, 1
+80072ddc  lfsx f0, r9, r7
+80072de0  cmpwi r10, 3
+80072de4  stfsx f0, r8, r11
+80072de8  ble 0x80072dcc
+80072dec  mr r9, r0
+80072df0  cmpwi r9, 3
+80072df4  ble 0x80072db8
+80072df8  lwz r9, 4(r29)
+80072dfc  mr r4, r3
+80072e00  lha r3, 0x70(r9)
+80072e04  lwz r0, 0x74(r9)
+80072e08  add r3, r29, r3
+80072e0c  mtlr r0
+80072e10  blrl 
+80072e14  lfs f11, 0xd8(r1)
+80072e18  lfs f10, 0xe0(r1)
+80072e1c  lfs f9, 0xdc(r1)
+80072e20  fneg f11, f11
+80072e24  stfs f10, 0xe8(r1)
+80072e28  stfs f11, 0xec(r1)
+80072e2c  stfs f9, 0xf0(r1)
+80072e30  lwz r9, 0x1c(r27)
+80072e34  lfs f13, 0x54(r9)
+80072e38  lfs f12, 0x50(r9)
+80072e3c  fmuls f13, f13, f11
+80072e40  lfs f0, 0x58(r9)
+80072e44  fmadds f12, f12, f10, f13
+80072e48  fmadds f0, f0, f9, f12
+80072e4c  fabs f0, f0
+80072e50  fcmpu cr0, f0, f27
+80072e54  cror cr0un, cr0eq, cr0gt
+80072e58  bso 0x80072f98
+80072e5c  lwz r30, 0x80(r27)
+80072e60  addi r4, r1, 0x118
+80072e64  addi r3, r1, 0x108
+80072e68  lfs f0, 0(r30)
+80072e6c  lfs f13, 4(r30)
+80072e70  lfs f12, 8(r30)
+80072e74  fmuls f0, f0, f30
+80072e78  fmuls f13, f13, f30
+80072e7c  stfs f0, 0x118(r1)
+80072e80  fmuls f12, f12, f30
+80072e84  stfs f13, 0x11c(r1)
+80072e88  stfs f12, 0x120(r1)
+80072e8c  bl 0x80041b14
+80072e90  lfs f12, 0x108(r1)
+80072e94  addi r4, r1, 0x118
+80072e98  lfs f11, 0x10c(r1)
+80072e9c  addi r3, r1, 0xf8
+80072ea0  lfs f10, 0x110(r1)
+80072ea4  lfs f9, 0x20(r30)
+80072ea8  lfs f0, 0x18(r30)
+80072eac  lfs f13, 0x1c(r30)
+80072eb0  fadds f9, f9, f10
+80072eb4  fadds f0, f0, f12
+80072eb8  stfs f9, 0x120(r1)
+80072ebc  fadds f13, f13, f11
+80072ec0  stfs f0, 0x118(r1)
+80072ec4  stfs f13, 0x11c(r1)
+80072ec8  bl 0x80041b14
+80072ecc  lfs f0, 0xfc(r1)
+80072ed0  addi r3, r1, 0x18
+80072ed4  lfs f12, 0x100(r1)
+80072ed8  addi r4, r1, 8
+80072edc  lfs f13, 0xf8(r1)
+80072ee0  fneg f0, f0
+80072ee4  addi r5, r1, 0x28
+80072ee8  stfs f0, 0x18(r1)
+80072eec  stfs f12, 0x1c(r1)
+80072ef0  stfs f13, 0x20(r1)
+80072ef4  stfs f28, 0x24(r1)
+80072ef8  bl 0x80193178
+80072efc  addi r3, r1, 0x28
+80072f00  bl 0x801933f0
+80072f04  bl 0x80193420
+80072f08  lwz r9, 4(r29)
+80072f0c  fmr f31, f1
+80072f10  lha r3, 0x30(r9)
+80072f14  lwz r0, 0x34(r9)
+80072f18  add r3, r29, r3
+80072f1c  mtlr r0
+80072f20  blrl 
+80072f24  fcmpu cr0, f31, f1
+80072f28  cror cr0un, cr0eq, cr0gt
+80072f2c  bso 0x80072f98
+80072f30  addi r3, r1, 0x28
+80072f34  addi r4, r1, 0x98
+80072f38  addi r5, r1, 0x38
+80072f3c  bl 0x801935e8
+80072f40  lfs f0, 0x38(r1)
+80072f44  fmr f13, f0
+80072f48  fcmpu cr0, f0, f29
+80072f4c  cror cr0un, cr0eq, cr0gt
+80072f50  bso 0x80072f58
+80072f54  fneg f13, f13
+80072f58  lfs f0, 0x48(r1)
+80072f5c  fcmpu cr0, f13, f0
+80072f60  cror cr0un, cr0eq, cr0gt
+80072f64  bso 0x80072f98
+80072f68  lfs f0, 0x40(r1)
+80072f6c  fmr f13, f0
+80072f70  fcmpu cr0, f0, f29
+80072f74  cror cr0un, cr0eq, cr0gt
+80072f78  bso 0x80072f80
+80072f7c  fneg f13, f13
+80072f80  lfs f0, 0x50(r1)
+80072f84  fcmpu cr0, f13, f0
+80072f88  cror cr0un, cr0eq, cr0gt
+80072f8c  bso 0x80072f98
+80072f90  li r3, 1
+80072f94  b 0x80072fa4
+80072f98  addi r28, r28, 4
+80072f9c  b 0x80072bdc
+80072fa0  li r3, 0
+80072fa4  lwz r0, 0x174(r1)
+80072fa8  mtlr r0
+80072fac  lmw r25, 0x12c(r1)
+80072fb0  .gekko e3610148
+80072fb4  .gekko e3810150
+80072fb8  .gekko e3a10158
+80072fbc  .gekko e3c10160
+80072fc0  .gekko e3e10168
+80072fc4  addi r1, r1, 0x170
+80072fc8  blr 
+80072fcc  stwu r1, -0x48(r1)
+80072fd0  mflr r0
+80072fd4  mfcr r12
+80072fd8  xxsel vs29, vs1, vs0, vs0
+80072fdc  xxsel vs30, vs1, vs0, v0
+80072fe0  xssubsp f31, f1, f0
+80072fe4  stmw r29, 0x24(r1)
+80072fe8  stw r0, 0x4c(r1)
+80072fec  stw r12, 0x20(r1)
+80072ff0  mr r30, r3
+80072ff4  mr r31, r5
+80072ff8  or. r4, r4, r4
+80072ffc  beq 0x80073194
+80073000  lha r3, 0(r4)
+80073004  bl 0x80071f2c
+80073008  cmpwi r3, 0
+8007300c  beq 0x80073194
+80073010  cmpwi cr4, r31, 0
+80073014  bne cr4, 0x80073028
+80073018  mr r3, r30
+8007301c  bl 0x80072988
+80073020  cmpwi r3, 0
+80073024  bne 0x800731f0
+80073028  lwz r9, 0x80(r30)
+8007302c  addi r31, r1, 8
+80073030  lis r11, -0x7fc3
+80073034  lfs f0, 0(r9)
+80073038  addi r29, r9, 0x48
+8007303c  lfs f13, 4(r9)
+80073040  lfs f9, 8(r9)
+80073044  stfs f0, 8(r1)
+80073048  stfs f13, 0xc(r1)
+8007304c  stfs f9, 8(r31)
+80073050  lfs f29, 0x2590(r11)
+80073054  lfs f13, 0xc(r1)
+80073058  lfs f11, 0x4c(r9)
+8007305c  lfs f0, 8(r1)
+80073060  lfs f10, 0x48(r9)
+80073064  fmuls f13, f13, f11
+80073068  lfs f12, 0x50(r9)
+8007306c  fmadds f0, f0, f10, f13
+80073070  fmadds f0, f9, f12, f0
+80073074  fcmpu cr0, f0, f29
+80073078  cror cr0un, cr0eq, cr0gt
+8007307c  bso 0x8007309c
+80073080  lis r9, -0x7fc3
+80073084  mr r3, r31
+80073088  lfs f1, 0x2594(r9)
+8007308c  mr r4, r31
+80073090  mr r5, r29
+80073094  fmuls f1, f0, f1
+80073098  bl 0x80060d50
+8007309c  lwz r9, 0x80(r30)
+800730a0  lis r3, -0x7fba
+800730a4  addi r3, r3, -0x5350
+800730a8  lfs f1, 0x10(r9)
+800730ac  bl 0x802090b4
+800730b0  fmr f31, f1
+800730b4  mr r4, r31
+800730b8  mr r3, r31
+800730bc  bl 0x80060ac0
+800730c0  lfs f0, 8(r1)
+800730c4  lis r9, -0x7fc3
+800730c8  lfs f13, 0xc(r1)
+800730cc  mr r4, r31
+800730d0  lfs f12, 8(r31)
+800730d4  fmuls f0, f0, f31
+800730d8  lfs f30, 0x2598(r9)
+800730dc  fmuls f13, f13, f31
+800730e0  stfs f0, 8(r1)
+800730e4  fmuls f12, f12, f31
+800730e8  stfs f13, 0xc(r1)
+800730ec  fsubs f1, f30, f31
+800730f0  stfs f12, 8(r31)
+800730f4  mr r5, r29
+800730f8  mr r3, r31
+800730fc  bl 0x80060d50
+80073100  lis r9, -0x7fb8
+80073104  lwz r10, 0xb4(r30)
+80073108  lwz r0, 0xc0(r9)
+8007310c  lis r8, 0x4330
+80073110  lis r9, -0x7fc3
+80073114  subf r0, r10, r0
+80073118  lfd f13, 0x25a0(r9)
+8007311c  xoris r0, r0, 0x8000
+80073120  lis r9, -0x7fc3
+80073124  stw r0, 0x1c(r1)
+80073128  lis r10, -0x7fc3
+8007312c  lfs f10, 0x25a8(r9)
+80073130  mr r4, r31
+80073134  stw r8, 0x18(r1)
+80073138  lfs f11, 0x25ac(r10)
+8007313c  lfd f0, 0x18(r1)
+80073140  lfs f12, 0x10(r1)
+80073144  fsub f0, f0, f13
+80073148  lwz r9, 0x80(r30)
+8007314c  frsp f0, f0
+80073150  lwz r3, 0x90(r30)
+80073154  fmuls f0, f0, f10
+80073158  fmuls f0, f0, f11
+8007315c  fsubs f0, f30, f0
+80073160  fsel f0, f0, f0, f29
+80073164  fsubs f13, f30, f0
+80073168  fsel f13, f13, f0, f30
+8007316c  fmuls f12, f12, f13
+80073170  stfs f12, 0x10(r1)
+80073174  lfs f0, 0x50(r9)
+80073178  fmuls f0, f0, f0
+8007317c  fsubs f30, f30, f0
+80073180  fmuls f12, f12, f30
+80073184  stfs f12, 0x10(r1)
+80073188  bl 0x8020836c
+8007318c  beq cr4, 0x800731f0
+80073190  b 0x800731ac
+80073194  lwz r4, 0x80(r30)
+80073198  cmpwi r4, 0
+8007319c  beq 0x800731f0
+800731a0  lwz r3, 0x90(r30)
+800731a4  addi r4, r4, 0x48
+800731a8  bl 0x8020836c
+800731ac  lwz r9, 0x90(r30)
+800731b0  li r0, 0
+800731b4  lfs f0, 8(r9)
+800731b8  lfs f13, 0xc(r9)
+800731bc  lfs f12, 0x34(r9)
+800731c0  lfs f11, 0x38(r9)
+800731c4  lfs f10, 0x60(r9)
+800731c8  lfs f9, 0x64(r9)
+800731cc  sth r0, 0x80(r9)
+800731d0  stfs f0, 0(r9)
+800731d4  stfs f13, 4(r9)
+800731d8  stfs f12, 0x2c(r9)
+800731dc  stfs f11, 0x30(r9)
+800731e0  stfs f10, 0x58(r9)
+800731e4  stfs f9, 0x5c(r9)
+800731e8  sth r0, 0x28(r9)
+800731ec  sth r0, 0x54(r9)
+800731f0  lwz r0, 0x4c(r1)
+800731f4  lwz r12, 0x20(r1)
+800731f8  mtlr r0
+800731fc  lmw r29, 0x24(r1)
+80073200  .gekko e3a10030
+80073204  .gekko e3c10038
+80073208  .gekko e3e10040
+8007320c  mtcrf 8, r12
+80073210  addi r1, r1, 0x48
+80073214  blr 
+80073218  stwu r1, -0x28(r1)
+8007321c  mflr r0
+80073220  stmw r28, 0x18(r1)
+80073224  stw r0, 0x2c(r1)
+80073228  mr r28, r3
+8007322c  mr r31, r4
+80073230  lwz r9, 8(r28)
+80073234  lha r3, 0x50(r9)
+80073238  lwz r0, 0x54(r9)
+8007323c  add r3, r28, r3
+80073240  mtlr r0
+80073244  blrl 
+80073248  cmpwi r3, 0
+8007324c  beq 0x800732d8
+80073250  mr r3, r31
+80073254  addi r29, r31, 0x10
+80073258  bl 0x80329e28
+8007325c  addi r30, r31, 0x20
+80073260  lwz r9, 0x90(r28)
+80073264  addi r11, r1, 8
+80073268  mr r4, r11
+8007326c  mr r3, r31
+80073270  lfs f0, 0(r9)
+80073274  lfs f13, 0x2c(r9)
+80073278  lfs f12, 0x58(r9)
+8007327c  stfs f0, 8(r1)
+80073280  stfs f13, 0xc(r1)
+80073284  stfs f12, 8(r11)
+80073288  bl 0x80060ac0
+8007328c  mr r4, r30
+80073290  mr r5, r31
+80073294  mr r3, r29
+80073298  bl 0x80060e14
+8007329c  mr r3, r30
+800732a0  mr r5, r29
+800732a4  mr r4, r31
+800732a8  bl 0x80060e14
+800732ac  lwz r11, 0x80(r28)
+800732b0  lis r9, -0x7fc3
+800732b4  lfs f12, 0x25b0(r9)
+800732b8  lfs f11, 0x20(r11)
+800732bc  lfs f0, 0x18(r11)
+800732c0  lfs f13, 0x1c(r11)
+800732c4  stfs f12, 0x3c(r31)
+800732c8  stfs f0, 0x30(r31)
+800732cc  stfs f13, 0x34(r31)
+800732d0  stfs f11, 0x38(r31)
+800732d4  b 0x800733bc
+800732d8  lwz r9, 0x80(r28)
+800732dc  lis r11, -0x7fc3
+800732e0  lis r10, -0x7fc3
+800732e4  lfs f0, 0x48(r9)
+800732e8  lfs f13, 0x4c(r9)
+800732ec  lfs f12, 0x50(r9)
+800732f0  lfs f11, 0x54(r9)
+800732f4  stfs f0, 0(r31)
+800732f8  stfs f13, 4(r31)
+800732fc  stfs f12, 8(r31)
+80073300  stfs f11, 0xc(r31)
+80073304  lfs f9, 0x58(r9)
+80073308  lfs f8, 0x5c(r9)
+8007330c  lfs f6, 0x60(r9)
+80073310  lfs f4, 0x64(r9)
+80073314  stfs f9, 0x10(r31)
+80073318  stfs f8, 0x14(r31)
+8007331c  stfs f6, 0x18(r31)
+80073320  stfs f4, 0x1c(r31)
+80073324  lfs f10, 0x68(r9)
+80073328  lfs f7, 0x6c(r9)
+8007332c  lfs f5, 0x70(r9)
+80073330  lfs f3, 0x74(r9)
+80073334  stfs f10, 0x20(r31)
+80073338  stfs f7, 0x24(r31)
+8007333c  stfs f5, 0x28(r31)
+80073340  stfs f3, 0x2c(r31)
+80073344  lfs f0, 0x18(r9)
+80073348  lfs f13, 0x1c(r9)
+8007334c  lfs f12, 0x20(r9)
+80073350  lfs f11, 0x25b0(r11)
+80073354  stfs f0, 0x30(r31)
+80073358  stfs f13, 0x34(r31)
+8007335c  stfs f12, 0x38(r31)
+80073360  stfs f11, 0x3c(r31)
+80073364  lwz r9, 0x80(r28)
+80073368  lfs f13, 0x25b4(r10)
+8007336c  lfs f0, 0x70(r9)
+80073370  fcmpu cr0, f0, f13
+80073374  cror cr0un, cr0eq, cr0gt
+80073378  bso 0x800733bc
+8007337c  fneg f0, f9
+80073380  stfs f0, 0x10(r31)
+80073384  fneg f13, f8
+80073388  fneg f12, f6
+8007338c  stfs f13, 0x14(r31)
+80073390  fneg f0, f4
+80073394  stfs f12, 0x18(r31)
+80073398  stfs f0, 0x1c(r31)
+8007339c  fneg f13, f10
+800733a0  fneg f12, f7
+800733a4  stfs f13, 0x20(r31)
+800733a8  fneg f11, f5
+800733ac  stfs f12, 0x24(r31)
+800733b0  fneg f0, f3
+800733b4  stfs f11, 0x28(r31)
+800733b8  stfs f0, 0x2c(r31)
+800733bc  lwz r0, 0x2c(r1)
+800733c0  mtlr r0
+800733c4  lmw r28, 0x18(r1)
+800733c8  addi r1, r1, 0x28
+800733cc  blr 
+800733d0  stwu r1, -0x38(r1)
+800733d4  mflr r0
+800733d8  stmw r28, 0x28(r1)
+800733dc  stw r0, 0x3c(r1)
+800733e0  lis r9, -0x7fc3
+800733e4  lis r11, -0x7fc3
+800733e8  lfs f1, 0x25b8(r9)
+800733ec  mr r29, r3
+800733f0  lis r9, -0x7fbf
+800733f4  lfs f2, 0x25bc(r11)
+800733f8  addi r3, r1, 8
+800733fc  li r0, 5
+80073400  addi r30, r9, 0x6f88
+80073404  mr r31, r4
+80073408  mr r28, r3
+8007340c  stw r0, 8(r1)
+80073410  bl 0x80042614
+80073414  stw r30, 0x18(r1)
+80073418  lfs f0, 0xc(r1)
+8007341c  lwz r9, 0x80(r29)
+80073420  lfs f12, 0x14(r1)
+80073424  lfs f13, 0x38(r9)
+80073428  lwz r4, 8(r1)
+8007342c  fsubs f13, f13, f0
+80073430  fmuls f1, f12, f13
+80073434  fmr f0, f1
+80073438  fctiwz f11, f0
+8007343c  stfd f11, 0x20(r1)
+80073440  lwz r6, 0x24(r1)
+80073444  cmpwi r6, 0
+80073448  bge 0x80073460
+8007344c  mr r4, r30
+80073450  mr r3, r31
+80073454  li r5, 4
+80073458  bl 0x8005e0c8
+8007345c  b 0x800734e4
+80073460  addi r0, r4, -1
+80073464  cmpw r6, r0
+80073468  blt 0x80073488
+8007346c  slwi r4, r4, 2
+80073470  mr r3, r31
+80073474  addi r4, r4, -4
+80073478  li r5, 4
+8007347c  add r4, r4, r30
+80073480  bl 0x8005e0c8
+80073484  b 0x800734e4
+80073488  xoris r0, r6, 0x8000
+8007348c  stw r0, 0x24(r1)
+80073490  lis r11, 0x4330
+80073494  lis r10, -0x7fc3
+80073498  stw r11, 0x20(r1)
+8007349c  lfd f13, 0x25c0(r10)
+800734a0  lfd f0, 0x20(r1)
+800734a4  fsub f0, f0, f13
+800734a8  frsp f13, f0
+800734ac  fcmpu cr0, f13, f1
+800734b0  cror cr0un, cr0eq, cr0lt
+800734b4  bso 0x800734c4
+800734b8  lis r9, -0x7fc3
+800734bc  lfs f0, 0x25c8(r9)
+800734c0  fsubs f13, f13, f0
+800734c4  slwi r6, r6, 2
+800734c8  fsubs f1, f1, f13
+800734cc  addi r5, r6, 4
+800734d0  mr r3, r28
+800734d4  add r6, r6, r30
+800734d8  add r5, r5, r30
+800734dc  mr r4, r31
+800734e0  bl 0x8020905c
+800734e4  lwz r9, 0x80(r29)
+800734e8  lfs f0, 0xc(r1)
+800734ec  addi r3, r31, 4
+800734f0  lfs f13, 0x3c(r9)
+800734f4  lfs f12, 0x14(r1)
+800734f8  fsubs f13, f13, f0
+800734fc  lwz r4, 8(r1)
+80073500  fmuls f1, f12, f13
+80073504  fmr f0, f1
+80073508  fctiwz f11, f0
+8007350c  stfd f11, 0x20(r1)
+80073510  lwz r6, 0x24(r1)
+80073514  cmpwi r6, 0
+80073518  bge 0x8007352c
+8007351c  lwz r4, 0x18(r1)
+80073520  li r5, 4
+80073524  bl 0x8005e0c8
+80073528  b 0x800735b4
+8007352c  addi r0, r4, -1
+80073530  cmpw r6, r0
+80073534  blt 0x80073554
+80073538  slwi r4, r4, 2
+8007353c  lwz r0, 0x18(r1)
+80073540  addi r4, r4, -4
+80073544  li r5, 4
+80073548  add r4, r0, r4
+8007354c  bl 0x8005e0c8
+80073550  b 0x800735b4
+80073554  xoris r0, r6, 0x8000
+80073558  stw r0, 0x24(r1)
+8007355c  lis r11, 0x4330
+80073560  lis r10, -0x7fc3
+80073564  stw r11, 0x20(r1)
+80073568  lfd f13, 0x25c0(r10)
+8007356c  lfd f0, 0x20(r1)
+80073570  fsub f0, f0, f13
+80073574  frsp f13, f0
+80073578  fcmpu cr0, f13, f1
+8007357c  cror cr0un, cr0eq, cr0lt
+80073580  bso 0x80073590
+80073584  lis r9, -0x7fc3
+80073588  lfs f0, 0x25c8(r9)
+8007358c  fsubs f13, f13, f0
+80073590  slwi r6, r6, 2
+80073594  lwz r0, 0x18(r1)
+80073598  addi r5, r6, 4
+8007359c  mr r4, r3
+800735a0  fsubs f1, f1, f13
+800735a4  add r6, r0, r6
+800735a8  add r5, r0, r5
+800735ac  mr r3, r28
+800735b0  bl 0x8020905c
+800735b4  lwz r9, 0x80(r29)
+800735b8  lfs f0, 0xc(r1)
+800735bc  addi r8, r31, 8
+800735c0  lfs f13, 0x40(r9)
+800735c4  lfs f12, 0x14(r1)
+800735c8  fsubs f13, f13, f0
+800735cc  lwz r4, 8(r1)
+800735d0  fmuls f1, f12, f13
+800735d4  fmr f0, f1
+800735d8  fctiwz f11, f0
+800735dc  stfd f11, 0x20(r1)
+800735e0  lwz r6, 0x24(r1)
+800735e4  cmpwi r6, 0
+800735e8  bge 0x800735f8
+800735ec  lwz r4, 0x18(r1)
+800735f0  mr r3, r8
+800735f4  b 0x80073618
+800735f8  addi r0, r4, -1
+800735fc  cmpw r6, r0
+80073600  blt 0x80073624
+80073604  slwi r4, r4, 2
+80073608  lwz r0, 0x18(r1)
+8007360c  addi r4, r4, -4
+80073610  mr r3, r8
+80073614  add r4, r0, r4
+80073618  li r5, 4
+8007361c  bl 0x8005e0c8
+80073620  b 0x80073684
+80073624  xoris r0, r6, 0x8000
+80073628  stw r0, 0x24(r1)
+8007362c  lis r11, 0x4330
+80073630  lis r10, -0x7fc3
+80073634  stw r11, 0x20(r1)
+80073638  lfd f13, 0x25c0(r10)
+8007363c  lfd f0, 0x20(r1)
+80073640  fsub f0, f0, f13
+80073644  frsp f13, f0
+80073648  fcmpu cr0, f13, f1
+8007364c  cror cr0un, cr0eq, cr0lt
+80073650  bso 0x80073660
+80073654  lis r9, -0x7fc3
+80073658  lfs f0, 0x25c8(r9)
+8007365c  fsubs f13, f13, f0
+80073660  slwi r6, r6, 2
+80073664  lwz r0, 0x18(r1)
+80073668  addi r5, r6, 4
+8007366c  fsubs f1, f1, f13
+80073670  add r6, r0, r6
+80073674  mr r3, r28
+80073678  mr r4, r8
+8007367c  add r5, r0, r5
+80073680  bl 0x8020905c
+80073684  lis r9, -0x7fc3
+80073688  lfs f0, 0(r31)
+8007368c  lfs f13, 0x25bc(r9)
+80073690  lfs f12, 4(r31)
+80073694  lfs f11, 8(r31)
+80073698  fmuls f0, f0, f13
+8007369c  fmuls f12, f12, f13
+800736a0  stfs f0, 0(r31)
+800736a4  fmuls f11, f11, f13
+800736a8  stfs f12, 4(r31)
+800736ac  stfs f11, 8(r31)
+800736b0  lwz r0, 0x3c(r1)
+800736b4  mtlr r0
+800736b8  lmw r28, 0x28(r1)
+800736bc  addi r1, r1, 0x38
+800736c0  blr 
+800736c4  stwu r1, -0x50(r1)
+800736c8  mflr r0
+800736cc  stmw r27, 0x3c(r1)
+800736d0  stw r0, 0x54(r1)
+800736d4  mr r30, r3
+800736d8  lis r9, -0x7fc3
+800736dc  lwz r11, 0x80(r30)
+800736e0  mr r29, r4
+800736e4  lfs f1, 0x25cc(r9)
+800736e8  lfs f2, 0x14(r11)
+800736ec  fcmpu cr0, f2, f1
+800736f0  cror cr0un, cr0eq, cr0lt
+800736f4  bso 0x80073808
+800736f8  lis r9, -0x7fba
+800736fc  addi r27, r1, 8
+80073700  li r0, 5
+80073704  addi r28, r9, -0x52bc
+80073708  stw r0, 8(r1)
+8007370c  mr r3, r27
+80073710  bl 0x80042614
+80073714  lwz r9, 0x80(r30)
+80073718  stw r28, 0x18(r1)
+8007371c  addi r31, r1, 0x20
+80073720  lfs f0, 0xc(r1)
+80073724  lfs f13, 0x10(r9)
+80073728  lfs f12, 0x14(r1)
+8007372c  fsubs f13, f13, f0
+80073730  lwz r4, 8(r1)
+80073734  fmuls f1, f12, f13
+80073738  fmr f0, f1
+8007373c  fctiwz f11, f0
+80073740  stfd f11, 0x30(r1)
+80073744  lwz r6, 0x34(r1)
+80073748  cmpwi r6, 0
+8007374c  bge 0x80073764
+80073750  mr r4, r28
+80073754  mr r3, r31
+80073758  li r5, 8
+8007375c  bl 0x8005e0c8
+80073760  b 0x800737e8
+80073764  addi r0, r4, -1
+80073768  cmpw r6, r0
+8007376c  blt 0x8007378c
+80073770  slwi r4, r4, 3
+80073774  mr r3, r31
+80073778  addi r4, r4, -8
+8007377c  li r5, 8
+80073780  add r4, r4, r28
+80073784  bl 0x8005e0c8
+80073788  b 0x800737e8
+8007378c  xoris r0, r6, 0x8000
+80073790  stw r0, 0x34(r1)
+80073794  lis r11, 0x4330
+80073798  lis r10, -0x7fc3
+8007379c  stw r11, 0x30(r1)
+800737a0  lfd f13, 0x25d0(r10)
+800737a4  lfd f0, 0x30(r1)
+800737a8  fsub f0, f0, f13
+800737ac  frsp f13, f0
+800737b0  fcmpu cr0, f13, f1
+800737b4  cror cr0un, cr0eq, cr0lt
+800737b8  bso 0x800737c8
+800737bc  lis r9, -0x7fc3
+800737c0  lfs f0, 0x25d8(r9)
+800737c4  fsubs f13, f13, f0
+800737c8  slwi r6, r6, 3
+800737cc  fsubs f1, f1, f13
+800737d0  addi r5, r6, 8
+800737d4  mr r3, r27
+800737d8  add r6, r6, r28
+800737dc  add r5, r5, r28
+800737e0  mr r4, r31
+800737e4  bl 0x80208fa4
+800737e8  lfs f11, 4(r31)
+800737ec  lfs f12, 0x20(r1)
+800737f0  lfs f13, 0(r29)
+800737f4  lfs f0, 8(r29)
+800737f8  fmuls f13, f13, f12
+800737fc  fmuls f0, f0, f11
+80073800  stfs f13, 0(r29)
+80073804  stfs f0, 8(r29)
+80073808  lwz r0, 0x54(r1)
+8007380c  mtlr r0
+80073810  lmw r27, 0x3c(r1)
+80073814  addi r1, r1, 0x50
+80073818  blr 
+8007381c  stwu r1, -0x118(r1)
+80073820  mflr r0
+80073824  mfcr r12
+80073828  xsmaddadp f30, f1, f0
+8007382c  xxsldwi vs31, vs1, vs0, 1
+80073830  stmw r26, 0xf0(r1)
+80073834  stw r0, 0x11c(r1)
+80073838  stw r12, 0xec(r1)
+8007383c  mr r31, r3
+80073840  mr r27, r5
+80073844  lha r3, 0(r27)
+80073848  mr r28, r4
+8007384c  mr r29, r6
+80073850  mr r30, r7
+80073854  bl 0x80071f2c
+80073858  lwz r9, 0x80(r31)
+8007385c  mr r26, r3
+80073860  lwz r0, 0xc4(r9)
+80073864  cmpwi r0, 0
+80073868  beq 0x80073878
+8007386c  lis r9, -0x7fb8
+80073870  lwz r0, 0xc0(r9)
+80073874  stw r0, 0xb4(r31)
+80073878  mr r3, r31
+8007387c  bl 0x80072b80
+80073880  cmpwi r3, 0
+80073884  beq 0x80073894
+80073888  lis r9, -0x7fb8
+8007388c  lwz r0, 0xc0(r9)
+80073890  stw r0, 0xb8(r31)
+80073894  mr r5, r30
+80073898  mr r3, r31
+8007389c  addi r30, r1, 8
+800738a0  mr r4, r27
+800738a4  bl 0x80072fcc
+800738a8  mr r3, r31
+800738ac  mr r4, r28
+800738b0  bl 0x80073218
+800738b4  mr r4, r28
+800738b8  mr r3, r30
+800738bc  bl 0x8010b5fc
+800738c0  lis r9, -0x7fc3
+800738c4  lwz r0, 0xa0(r31)
+800738c8  lfs f11, 0x25dc(r9)
+800738cc  addi r3, r1, 0x48
+800738d0  cmpwi r0, 0
+800738d4  stfs f11, 0x48(r1)
+800738d8  stfs f11, 0x4c(r1)
+800738dc  stfs f11, 0x50(r1)
+800738e0  stfs f11, 0x54(r1)
+800738e4  beq 0x80073910
+800738e8  lwz r9, 0xe4(r31)
+800738ec  mr r4, r30
+800738f0  mr r5, r3
+800738f4  lfs f12, 0x24(r9)
+800738f8  lfs f0, 0x1c(r9)
+800738fc  lfs f13, 0x20(r9)
+80073900  stfs f0, 0x48(r1)
+80073904  stfs f13, 0x4c(r1)
+80073908  stfs f12, 0x50(r1)
+8007390c  bl 0x8005e050
+80073910  lis r9, -0x7fb6
+80073914  li r11, 0
+80073918  lwz r0, 0x5fe0(r9)
+8007391c  cmpwi r0, 0
+80073920  bne 0x80073934
+80073924  lis r9, -0x7fbd
+80073928  lwz r0, 0x7288(r9)
+8007392c  cmpwi r0, 0
+80073930  beq 0x80073938
+80073934  li r11, 1
+80073938  cmpwi r11, 0
+8007393c  beq 0x8007396c
+80073940  lis r9, -0x7fba
+80073944  lis r10, -0x7fba
+80073948  addi r11, r9, -0x5274
+8007394c  lfs f13, -0x5274(r9)
+80073950  lfs f12, 8(r11)
+80073954  lfs f0, 4(r11)
+80073958  stfs f13, 0x58(r1)
+8007395c  stfs f0, 0x5c(r1)
+80073960  stfs f12, 0x60(r1)
+80073964  lhz r30, -0x5264(r10)
+80073968  b 0x800739d0
+8007396c  mr r3, r31
+80073970  bl 0x80072988
+80073974  cmpwi r3, 0
+80073978  beq 0x800739a8
+8007397c  lis r9, -0x7fba
+80073980  lis r10, -0x7fba
+80073984  addi r11, r9, -0x5260
+80073988  lfs f13, -0x5260(r9)
+8007398c  lfs f12, 8(r11)
+80073990  lfs f0, 4(r11)
+80073994  stfs f13, 0x58(r1)
+80073998  stfs f0, 0x5c(r1)
+8007399c  stfs f12, 0x60(r1)
+800739a0  lhz r30, -0x5250(r10)
+800739a4  b 0x800739d0
+800739a8  lfs f12, 4(r27)
+800739ac  mr r3, r31
+800739b0  lfs f13, 0xc(r27)
+800739b4  addi r4, r1, 0x58
+800739b8  lfs f0, 8(r27)
+800739bc  stfs f12, 0x58(r1)
+800739c0  stfs f13, 0x5c(r1)
+800739c4  stfs f0, 0x60(r1)
+800739c8  bl 0x800736c4
+800739cc  lhz r30, 2(r27)
+800739d0  mr r3, r30
+800739d4  cmpwi cr4, r26, 0
+800739d8  bl 0x8005ce20
+800739dc  fmr f31, f1
+800739e0  mr r3, r30
+800739e4  bl 0x8005cf28
+800739e8  fdivs f31, f31, f1
+800739ec  beq cr4, 0x800739fc
+800739f0  lis r9, -0x7fc3
+800739f4  lfs f9, 0x25dc(r9)
+800739f8  b 0x80073a0c
+800739fc  lis r9, -0x7fc3
+80073a00  lfs f13, 0x58(r1)
+80073a04  lfs f0, 0x25e0(r9)
+80073a08  fadds f9, f13, f0
+80073a0c  beq cr4, 0x80073a20
+80073a10  lfs f13, 0x58(r1)
+80073a14  lfs f0, 0x60(r1)
+80073a18  fmadds f31, f31, f13, f0
+80073a1c  b 0x80073a28
+80073a20  lfs f0, 0x60(r1)
+80073a24  fsubs f31, f0, f31
+80073a28  lfs f11, 0x40(r29)
+80073a2c  lis r9, -0x7fc3
+80073a30  lfs f12, 0x48(r1)
+80073a34  addi r30, r1, 0x78
+80073a38  lfs f13, 0x44(r29)
+80073a3c  addi r4, r29, 0x50
+80073a40  fmuls f11, f11, f12
+80073a44  lfs f0, 0x48(r29)
+80073a48  lfs f10, 0x4c(r1)
+80073a4c  addi r5, r29, 0x60
+80073a50  lfs f12, 0x50(r1)
+80073a54  mr r3, r30
+80073a58  lfs f30, 0x25dc(r9)
+80073a5c  fmuls f13, f13, f10
+80073a60  fmuls f0, f0, f12
+80073a64  stfs f9, 0x68(r1)
+80073a68  stfs f31, 0x70(r1)
+80073a6c  stfs f11, 0x78(r1)
+80073a70  stfs f13, 0x7c(r1)
+80073a74  stfs f0, 0x80(r1)
+80073a78  stfs f30, 0x6c(r1)
+80073a7c  bl 0x80071ec4
+80073a80  mr r3, r31
+80073a84  bl 0x80072988
+80073a88  cmpwi r3, 0
+80073a8c  beq 0x80073abc
+80073a90  lis r9, -0x7fc3
+80073a94  lfs f0, 0x58(r1)
+80073a98  lfs f13, 0x25e4(r9)
+80073a9c  lfs f12, 0x5c(r1)
+80073aa0  lfs f11, 0x60(r1)
+80073aa4  fmuls f0, f0, f13
+80073aa8  fmuls f12, f12, f13
+80073aac  stfs f0, 0x58(r1)
+80073ab0  fmuls f11, f11, f13
+80073ab4  stfs f12, 0x5c(r1)
+80073ab8  stfs f11, 0x60(r1)
+80073abc  lfs f10, 0x78(r1)
+80073ac0  mr r4, r30
+80073ac4  lfs f13, 0x7c(r1)
+80073ac8  addi r30, r1, 0x88
+80073acc  lfs f0, 0x80(r1)
+80073ad0  addi r28, r1, 0x98
+80073ad4  lfs f12, 0x58(r1)
+80073ad8  lfs f11, 0x5c(r1)
+80073adc  lfs f9, 0x60(r1)
+80073ae0  fadds f10, f10, f12
+80073ae4  lwz r3, 0x88(r31)
+80073ae8  fadds f13, f13, f11
+80073aec  fadds f0, f0, f9
+80073af0  stfs f10, 0x78(r1)
+80073af4  stfs f13, 0x7c(r1)
+80073af8  stfs f0, 0x80(r1)
+80073afc  bl 0x8020836c
+80073b00  lfs f12, 0x70(r29)
+80073b04  addi r4, r29, 0x80
+80073b08  lfs f11, 0x48(r1)
+80073b0c  addi r5, r29, 0x90
+80073b10  lfs f13, 0x74(r29)
+80073b14  mr r3, r30
+80073b18  fmuls f12, f12, f11
+80073b1c  lfs f0, 0x78(r29)
+80073b20  lfs f10, 0x4c(r1)
+80073b24  lfs f11, 0x50(r1)
+80073b28  fmuls f13, f13, f10
+80073b2c  stfs f12, 0x88(r1)
+80073b30  fmuls f0, f0, f11
+80073b34  stfs f13, 0x8c(r1)
+80073b38  stfs f0, 0x90(r1)
+80073b3c  bl 0x80071ec4
+80073b40  lfs f12, 0x88(r1)
+80073b44  mr r4, r30
+80073b48  lfs f0, 0x8c(r1)
+80073b4c  lfs f13, 0x90(r1)
+80073b50  lfs f11, 0x68(r1)
+80073b54  lfs f10, 0x6c(r1)
+80073b58  lfs f9, 0x70(r1)
+80073b5c  fadds f12, f12, f11
+80073b60  lwz r3, 0x8c(r31)
+80073b64  fadds f0, f0, f10
+80073b68  fadds f13, f13, f9
+80073b6c  stfs f0, 0x8c(r1)
+80073b70  stfs f12, 0x88(r1)
+80073b74  stfs f13, 0x90(r1)
+80073b78  bl 0x8020836c
+80073b7c  lis r9, -0x7fc3
+80073b80  lha r0, 0x18(r27)
+80073b84  lfs f0, 0x25e0(r9)
+80073b88  cmpwi r0, 0
+80073b8c  stfs f30, 0x98(r1)
+80073b90  stfs f0, 0xa0(r1)
+80073b94  stfs f30, 0x9c(r1)
+80073b98  beq 0x80073c40
+80073b9c  lwz r9, 0xe4(r31)
+80073ba0  addi r4, r1, 0xc8
+80073ba4  lfs f12, 0x10(r29)
+80073ba8  addi r3, r1, 0xb8
+80073bac  lfs f9, 0x24(r9)
+80073bb0  lfs f11, 0x1c(r9)
+80073bb4  lfs f10, 0x20(r9)
+80073bb8  lfs f13, 0x14(r29)
+80073bbc  fmuls f12, f12, f11
+80073bc0  lfs f0, 0x18(r29)
+80073bc4  fmuls f13, f13, f10
+80073bc8  stfs f12, 0xc8(r1)
+80073bcc  fmuls f0, f0, f9
+80073bd0  stfs f13, 0xcc(r1)
+80073bd4  stfs f0, 0xd0(r1)
+80073bd8  bl 0x80041b14
+80073bdc  lfs f13, 0x98(r1)
+80073be0  addi r4, r1, 0xc8
+80073be4  lfs f12, 0x9c(r1)
+80073be8  addi r3, r1, 0xa8
+80073bec  lfs f0, 0xa0(r1)
+80073bf0  lfs f11, 0xb8(r1)
+80073bf4  lfs f10, 0xbc(r1)
+80073bf8  lfs f9, 0xc0(r1)
+80073bfc  fadds f13, f13, f11
+80073c00  fadds f12, f12, f10
+80073c04  stfs f13, 0xc8(r1)
+80073c08  fadds f0, f0, f9
+80073c0c  stfs f12, 0xcc(r1)
+80073c10  stfs f0, 0xd0(r1)
+80073c14  bl 0x80041b14
+80073c18  lfs f12, 0xa8(r1)
+80073c1c  addi r5, r29, 0x30
+80073c20  lfs f13, 0xac(r1)
+80073c24  mr r3, r28
+80073c28  lfs f0, 0xb0(r1)
+80073c2c  addi r4, r29, 0x20
+80073c30  stfs f12, 0x98(r1)
+80073c34  stfs f13, 0x9c(r1)
+80073c38  stfs f0, 0xa0(r1)
+80073c3c  bl 0x80071ec4
+80073c40  lwz r4, 0x80(r31)
+80073c44  lis r9, -0x7fc3
+80073c48  lfs f13, 0x25e8(r9)
+80073c4c  lfs f0, 0x10(r4)
+80073c50  fcmpu cr0, f0, f13
+80073c54  cror cr0un, cr0eq, cr0lt
+80073c58  bso 0x80073c9c
+80073c5c  mr r5, r4
+80073c60  mr r3, r31
+80073c64  addi r4, r4, 0x18
+80073c68  bl 0x80067258
+80073c6c  lfs f9, 8(r3)
+80073c70  lfs f11, 0(r3)
+80073c74  lfs f10, 4(r3)
+80073c78  lfs f12, 0x98(r1)
+80073c7c  lfs f13, 0x9c(r1)
+80073c80  lfs f0, 0xa0(r1)
+80073c84  fadds f12, f12, f11
+80073c88  fadds f13, f13, f10
+80073c8c  stfs f12, 0x98(r1)
+80073c90  fadds f0, f0, f9
+80073c94  stfs f13, 0x9c(r1)
+80073c98  stfs f0, 0xa0(r1)
+80073c9c  mr r4, r28
+80073ca0  mr r3, r28
+80073ca4  bl 0x80060ac0
+80073ca8  lwz r3, 0x94(r31)
+80073cac  mr r4, r28
+80073cb0  bl 0x8020836c
+80073cb4  lhz r4, 0x10(r27)
+80073cb8  beq cr4, 0x80073cec
+80073cbc  lwz r9, 0x80(r31)
+80073cc0  lwz r0, 0xb4(r9)
+80073cc4  cmpwi r0, 0
+80073cc8  beq 0x80073cec
+80073ccc  lfs f0, 0x10(r9)
+80073cd0  fcmpu cr0, f0, f30
+80073cd4  cror cr0un, cr0eq, cr0lt
+80073cd8  bso 0x80073cec
+80073cdc  lis r9, -0x7fba
+80073ce0  lhz r0, -0x524e(r9)
+80073ce4  add r0, r4, r0
+80073ce8  clrlwi r4, r0, 0x10
+80073cec  lis r0, 0x4330
+80073cf0  stw r4, 0xe4(r1)
+80073cf4  lis r9, -0x7fc3
+80073cf8  lfd f13, 0x25f0(r9)
+80073cfc  stw r0, 0xe0(r1)
+80073d00  lwz r9, 0x84(r31)
+80073d04  lfd f0, 0xe0(r1)
+80073d08  lfs f12, 0(r9)
+80073d0c  fsub f0, f0, f13
+80073d10  frsp f0, f0
+80073d14  fcmpu cr0, f0, f12
+80073d18  stfs f0, 8(r9)
+80073d1c  beq 0x80073d28
+80073d20  li r0, 2
+80073d24  sth r0, 0x28(r9)
+80073d28  lwz r0, 0xa8(r31)
+80073d2c  xori r3, r26, 1
+80073d30  cmpwi r0, 0
+80073d34  bne 0x80073d40
+80073d38  cmpwi r3, 0
+80073d3c  beq 0x80073e1c
+80073d40  lwz r9, 0x94(r31)
+80073d44  li r0, 0
+80073d48  lfs f0, 8(r9)
+80073d4c  lfs f13, 0xc(r9)
+80073d50  lfs f12, 0x34(r9)
+80073d54  lfs f11, 0x38(r9)
+80073d58  lfs f10, 0x60(r9)
+80073d5c  lfs f9, 0x64(r9)
+80073d60  stfs f0, 0(r9)
+80073d64  stfs f9, 0x5c(r9)
+80073d68  stfs f13, 4(r9)
+80073d6c  stfs f12, 0x2c(r9)
+80073d70  stfs f11, 0x30(r9)
+80073d74  stfs f10, 0x58(r9)
+80073d78  sth r0, 0x80(r9)
+80073d7c  sth r0, 0x28(r9)
+80073d80  sth r0, 0x54(r9)
+80073d84  lwz r11, 0x84(r31)
+80073d88  lfs f0, 8(r11)
+80073d8c  lfs f13, 0xc(r11)
+80073d90  stfs f0, 0(r11)
+80073d94  stfs f13, 4(r11)
+80073d98  sth r0, 0x28(r11)
+80073d9c  lwz r9, 0x88(r31)
+80073da0  lfs f0, 8(r9)
+80073da4  lfs f13, 0xc(r9)
+80073da8  lfs f12, 0x34(r9)
+80073dac  lfs f11, 0x38(r9)
+80073db0  lfs f10, 0x60(r9)
+80073db4  stfs f0, 0(r9)
+80073db8  stfs f13, 4(r9)
+80073dbc  stfs f12, 0x2c(r9)
+80073dc0  stfs f11, 0x30(r9)
+80073dc4  sth r0, 0x28(r9)
+80073dc8  sth r0, 0x54(r9)
+80073dcc  stfs f10, 0x58(r9)
+80073dd0  lfs f0, 0x64(r9)
+80073dd4  sth r0, 0x80(r9)
+80073dd8  stfs f0, 0x5c(r9)
+80073ddc  lwz r11, 0x8c(r31)
+80073de0  lfs f0, 8(r11)
+80073de4  lfs f13, 0xc(r11)
+80073de8  lfs f12, 0x34(r11)
+80073dec  lfs f11, 0x38(r11)
+80073df0  lfs f10, 0x60(r11)
+80073df4  lfs f9, 0x64(r11)
+80073df8  sth r0, 0x80(r11)
+80073dfc  stfs f0, 0(r11)
+80073e00  stfs f13, 4(r11)
+80073e04  stfs f12, 0x2c(r11)
+80073e08  stfs f11, 0x30(r11)
+80073e0c  stfs f10, 0x58(r11)
+80073e10  stfs f9, 0x5c(r11)
+80073e14  sth r0, 0x28(r11)
+80073e18  sth r0, 0x54(r11)
+80073e1c  lwz r0, 0xa8(r31)
+80073e20  cmpwi r0, 0
+80073e24  beq 0x80073e2c
+80073e28  bl 0x802c2270
+80073e2c  lwz r0, 0x11c(r1)
+80073e30  lwz r12, 0xec(r1)
+80073e34  mtlr r0
+80073e38  lmw r26, 0xf0(r1)
+80073e3c  .gekko e3c10108
+80073e40  .gekko e3e10110
+80073e44  mtcrf 8, r12
+80073e48  addi r1, r1, 0x118
+80073e4c  blr 
+80073e50  stwu r1, -0x220(r1)
+80073e54  mflr r0
+80073e58  mfcr r12
+80073e5c  xxsel vs27, vs1, vs0, v7
+80073e60  xvaddsp vs28, vs1, vs0
+80073e64  xvmaddasp vs29, vs1, vs0
+80073e68  xxsldwi vs30, vs1, vs0, 2
+80073e6c  xvcmpeqsp vs31, vs1, vs0
+80073e70  stmw r25, 0x1dc(r1)
+80073e74  stw r0, 0x224(r1)
+80073e78  stw r12, 0x1d8(r1)
+80073e7c  mr r31, r3
+80073e80  fmr f28, f1
+80073e84  lis r3, -0x7fb8
+80073e88  addi r3, r3, -0x11c
+80073e8c  bl 0x801ff510
+80073e90  cmpwi r3, 0
+80073e94  beq 0x80073ea4
+80073e98  lwz r0, 0xb0(r31)
+80073e9c  cmpwi r0, 0
+80073ea0  beq 0x80074ce0
+80073ea4  lis r9, -0x7fc3
+80073ea8  lfs f0, 0xc0(r31)
+80073eac  lfs f31, 0x25f8(r9)
+80073eb0  li r0, 0
+80073eb4  stw r0, 0xb0(r31)
+80073eb8  fcmpu cr0, f0, f31
+80073ebc  cror cr0un, cr0eq, cr0lt
+80073ec0  bso 0x80073ecc
+80073ec4  fsubs f0, f0, f28
+80073ec8  stfs f0, 0xc0(r31)
+80073ecc  lwz r0, 0x98(r31)
+80073ed0  lwz r3, 0x80(r31)
+80073ed4  mr r4, r0
+80073ed8  stw r0, 0x9c(r31)
+80073edc  bl 0x800687c8
+80073ee0  lwz r0, 0x9c(r31)
+80073ee4  mr r29, r3
+80073ee8  lwz r9, 0x80(r31)
+80073eec  lis r10, -0x7fc3
+80073ef0  mulli r3, r0, 0x14
+80073ef4  lfs f13, 0x25fc(r10)
+80073ef8  lfs f0, 0x10(r9)
+80073efc  lis r11, -0x7fba
+80073f00  addi r11, r11, -0x5348
+80073f04  lis r10, -0x7fc3
+80073f08  lfs f9, 0x2600(r10)
+80073f0c  fmuls f0, f0, f13
+80073f10  lwzux r4, r3, r11
+80073f14  fsel f0, f0, f0, f31
+80073f18  fsubs f13, f9, f0
+80073f1c  lfs f30, 0xa4(r9)
+80073f20  lfs f11, 4(r3)
+80073f24  fsel f13, f13, f0, f9
+80073f28  lfs f12, 0xc(r3)
+80073f2c  addi r8, r1, 8
+80073f30  fsubs f13, f13, f11
+80073f34  lfs f29, 0xa8(r9)
+80073f38  fmuls f1, f12, f13
+80073f3c  fmr f0, f1
+80073f40  fctiwz f10, f0
+80073f44  stfd f10, 0x1d0(r1)
+80073f48  lwz r6, 0x1d4(r1)
+80073f4c  cmpwi r6, 0
+80073f50  bge 0x80073f68
+80073f54  lwz r4, 0x10(r3)
+80073f58  li r5, 0xb0
+80073f5c  mr r3, r8
+80073f60  bl 0x8005e0c8
+80073f64  b 0x80073fe8
+80073f68  addi r0, r4, -1
+80073f6c  cmpw r6, r0
+80073f70  blt 0x80073f94
+80073f74  mulli r4, r4, 0xb0
+80073f78  lwz r0, 0x10(r3)
+80073f7c  mr r3, r8
+80073f80  li r5, 0xb0
+80073f84  addi r4, r4, -0xb0
+80073f88  add r4, r0, r4
+80073f8c  bl 0x8005e0c8
+80073f90  b 0x80073fe8
+80073f94  xoris r0, r6, 0x8000
+80073f98  stw r0, 0x1d4(r1)
+80073f9c  lis r11, 0x4330
+80073fa0  lis r10, -0x7fc3
+80073fa4  stw r11, 0x1d0(r1)
+80073fa8  lfd f13, 0x2608(r10)
+80073fac  lfd f0, 0x1d0(r1)
+80073fb0  fsub f0, f0, f13
+80073fb4  frsp f0, f0
+80073fb8  fcmpu cr0, f0, f1
+80073fbc  cror cr0un, cr0eq, cr0lt
+80073fc0  bso 0x80073fc8
+80073fc4  fsubs f0, f0, f9
+80073fc8  mulli r6, r6, 0xb0
+80073fcc  lwz r0, 0x10(r3)
+80073fd0  fsubs f1, f1, f0
+80073fd4  mr r4, r8
+80073fd8  addi r5, r6, 0xb0
+80073fdc  add r6, r0, r6
+80073fe0  add r5, r0, r5
+80073fe4  bl 0x80071bb8
+80073fe8  lis r9, -0x7fb6
+80073fec  li r11, 0
+80073ff0  lwz r0, 0x5fdc(r9)
+80073ff4  cmpwi r0, 0
+80073ff8  bne 0x8007400c
+80073ffc  lis r9, -0x7fbd
+80074000  lwz r0, 0x728c(r9)
+80074004  cmpwi r0, 0
+80074008  beq 0x80074010
+8007400c  li r11, 1
+80074010  cmpwi r11, 0
+80074014  bne 0x80074048
+80074018  lis r9, -0x7fb6
+8007401c  li r11, 0
+80074020  lwz r0, 0x5fe0(r9)
+80074024  cmpwi r0, 0
+80074028  bne 0x8007403c
+8007402c  lis r9, -0x7fbd
+80074030  lwz r0, 0x7288(r9)
+80074034  cmpwi r0, 0
+80074038  beq 0x80074040
+8007403c  li r11, 1
+80074040  cmpwi r11, 0
+80074044  beq 0x80074068
+80074048  lis r9, -0x7fc3
+8007404c  lfs f0, 0x25f8(r9)
+80074050  stfs f0, 0x50(r1)
+80074054  stfs f0, 0xb8(r1)
+80074058  stfs f0, 0xbc(r1)
+8007405c  stfs f0, 0xc0(r1)
+80074060  stfs f0, 0x48(r1)
+80074064  stfs f0, 0x4c(r1)
+80074068  lis r9, -0x7fc3
+8007406c  lfs f0, 0xc0(r31)
+80074070  lfs f31, 0x25f8(r9)
+80074074  addi r4, r1, 0xb8
+80074078  fcmpu cr0, f0, f31
+8007407c  stfs f31, 0xb8(r1)
+80074080  stfs f31, 0xbc(r1)
+80074084  stfs f31, 0xc0(r1)
+80074088  bgt 0x80074094
+8007408c  mr r3, r31
+80074090  bl 0x800733d0
+80074094  lwz r30, 0xe4(r31)
+80074098  lbz r9, 2(r30)
+8007409c  lbz r0, 1(r30)
+800740a0  cmplw r9, r0
+800740a4  bge 0x800740b0
+800740a8  addi r0, r9, 1
+800740ac  stb r0, 2(r30)
+800740b0  lbz r9, 3(r30)
+800740b4  lwz r10, 8(r30)
+800740b8  lis r5, 0x4330
+800740bc  slwi r9, r9, 4
+800740c0  lfs f10, 0xc(r30)
+800740c4  lfsx f0, r9, r10
+800740c8  add r11, r9, r10
+800740cc  lfs f12, 4(r11)
+800740d0  lis r6, -0x7fc3
+800740d4  fsubs f10, f10, f0
+800740d8  lfs f11, 8(r11)
+800740dc  lfs f13, 0x10(r30)
+800740e0  lis r7, -0x7fc3
+800740e4  lfs f0, 0x14(r30)
+800740e8  addi r3, r1, 0xc8
+800740ec  fsubs f13, f13, f12
+800740f0  stfs f10, 0xc(r30)
+800740f4  fsubs f0, f0, f11
+800740f8  stfs f13, 0x10(r30)
+800740fc  stfs f0, 0x14(r30)

@@ -1,0 +1,148 @@
+8010f170 .byte      0xf3, 0xa1, 0x00, 0x68
+8010f174 xxsel      vs30, vs1, vs0, vs1
+8010f178 xxsel      vs31, vs1, vs0, v1
+8010f17c stmw       r19, 0x1c(r1)
+8010f180 stw        r0, 0x84(r1)
+8010f184 lis        r9, -0x7fc2
+8010f188 lis        r11, -0x7fc2
+8010f18c lis        r10, -0x7fc2
+8010f190 mr         r30, r3
+8010f194 lfd        f27, -0xe10(r9)
+8010f198 addi       r26, r30, 4
+8010f19c lfs        f26, -0xe08(r11)
+8010f1a0 addi       r27, r30, 0x44
+8010f1a4 lfs        f29, -0xe04(r10)
+8010f1a8 li         r29, 0
+8010f1ac lis        r19, -0x7fbe
+8010f1b0 lis        r20, -0x7fbe
+8010f1b4 lis        r21, -0x7fbe
+8010f1b8 lis        r22, -0x7fbe
+8010f1bc lis        r23, -0x7fb9
+8010f1c0 lis        r24, 0x4330
+8010f1c4 lis        r25, -0x7fc2
+8010f1c8 xoris      r0, r29, 0x8000
+8010f1cc stw        r0, 0x14(r1)
+8010f1d0 li         r31, 0
+8010f1d4 addi       r28, r29, 1
+8010f1d8 stw        r24, 0x10(r1)
+8010f1dc lfd        f0, 0x10(r1)
+8010f1e0 fsub       f0, f0, f27
+8010f1e4 frsp       f28, f0
+8010f1e8 xoris      r0, r31, 0x8000
+8010f1ec stw        r0, 0x14(r1)
+8010f1f0 mr         r3, r26
+8010f1f4 fmuls      f31, f28, f26
+8010f1f8 stw        r24, 0x10(r1)
+8010f1fc lfd        f1, 0x10(r1)
+8010f200 fsub       f1, f1, f27
+8010f204 frsp       f1, f1
+8010f208 fmuls      f1, f1, f26
+8010f20c bl         0x802e6548
+8010f210 fmr        f30, f1
+8010f214 fcmpu      cr0, f30, f29
+8010f218 cror       cr0un, cr0eq, cr0lt
+8010f21c bso        0x8010f224
+8010f220 lfs        f30, -0xe00(r25)
+8010f224 fmr        f1, f31
+8010f228 mr         r3, r27
+8010f22c bl         0x802e6548
+8010f230 fcmpu      cr0, f1, f29
+8010f234 cror       cr0un, cr0eq, cr0lt
+8010f238 bso        0x8010f240
+8010f23c lfs        f1, -0xe00(r25)
+8010f240 lfs        f0, 0x84(r30)
+8010f244 lfs        f10, -0x4b30(r19)
+8010f248 mr         r9, r11
+8010f24c fsubs      f12, f29, f0
+8010f250 lfs        f9, 0x88(r30)
+8010f254 fmadds     f0, f30, f0, f12
+8010f258 lfs        f13, -0x4b2c(r20)
+8010f25c fmuls      f0, f0, f10
+8010f260 lwz        r0, -0x4f08(r21)
+8010f264 fmuls      f31, f1, f9
+8010f268 cmpwi      r0, 0
+8010f26c fctiwz     f11, f0
+8010f270 stfd       f11, 0x10(r1)
+8010f274 fmuls      f13, f31, f13
+8010f278 lwz        r11, 0x14(r1)
+8010f27c fctiwz     f12, f13
+8010f280 stfd       f12, 0x10(r1)
+8010f284 clrlwi     r11, r11, 0x18
+8010f288 lwz        r9, 0x14(r1)
+8010f28c clrlwi     r10, r9, 0x18
+8010f290 beq        0x8010f298
+8010f294 li         r11, 0
+8010f298 lwz        r0, -0x4f00(r22)
+8010f29c cmpwi      r0, 0
+8010f2a0 beq        0x8010f2a8
+8010f2a4 li         r10, 0
+8010f2a8 slwi       r9, r31, 6
+8010f2ac slwi       r0, r10, 8
+8010f2b0 slwi       r11, r11, 0x10
+8010f2b4 add        r9, r9, r29
+8010f2b8 lwz        r10, 0x23d8(r23)
+8010f2bc or         r11, r11, r0
+8010f2c0 slwi       r9, r9, 2
+8010f2c4 addi       r31, r31, 1
+8010f2c8 stwx       r11, r9, r10
+8010f2cc cmpwi      r31, 0x3f
+8010f2d0 ble        0x8010f1e8
+8010f2d4 mr         r29, r28
+8010f2d8 cmpwi      r29, 0x3f
+8010f2dc ble        0x8010f1c8
+8010f2e0 lis        r9, -0x7fb9
+8010f2e4 lis        r11, -0x7fb9
+8010f2e8 lwz        r3, 0x23d4(r9)
+8010f2ec lwz        r11, 0x23d8(r11)
+8010f2f0 li         r9, 0
+8010f2f4 addi       r28, r9, 4
+8010f2f8 li         r9, 0
+8010f2fc mr         r8, r11
+8010f300 addi       r29, r9, 4
+8010f304 addi       r31, r8, 0x10
+8010f308 li         r6, 0
+8010f30c li         r9, 0
+8010f310 addi       r30, r3, 0x40
+8010f314 addi       r4, r9, 1
+8010f318 li         r7, 0
+8010f31c addi       r5, r8, 0x100
+8010f320 slwi       r11, r7, 2
+8010f324 add        r10, r3, r6
+8010f328 lbzx       r0, r8, r11
+8010f32c addi       r7, r7, 1
+8010f330 add        r11, r8, r11
+8010f334 cmpwi      r7, 3
+8010f338 stbx       r0, r3, r6
+8010f33c addi       r6, r6, 2
+8010f340 lbz        r0, 1(r11)
+8010f344 stb        r0, 1(r10)
+8010f348 lbz        r9, 2(r11)
+8010f34c stb        r9, 0x20(r10)
+8010f350 lbz        r0, 3(r11)
+8010f354 stb        r0, 0x21(r10)
+8010f358 ble        0x8010f320
+8010f35c mr         r9, r4
+8010f360 mr         r8, r5
+8010f364 cmpwi      r9, 3
+8010f368 ble        0x8010f314
+8010f36c li         r4, 0x40
+8010f370 bl         0x8032301c
+8010f374 mr         r9, r29
+8010f378 mr         r3, r30
+8010f37c mr         r11, r31
+8010f380 cmpwi      r9, 0x40
+8010f384 blt        0x8010f2fc
+8010f388 mr         r9, r28
+8010f38c addi       r11, r31, 0x300
+8010f390 cmpwi      r9, 0x40
+8010f394 blt        0x8010f2f4
+8010f398 bl         0x8031f4f0
+8010f39c lwz        r0, 0x84(r1)
+8010f3a0 mtlr       r0
+8010f3a4 lmw        r19, 0x1c(r1)
+8010f3a8 .byte      0xe3, 0x41, 0x00, 0x50
+8010f3ac .byte      0xe3, 0x61, 0x00, 0x58
+8010f3b0 .byte      0xe3, 0x81, 0x00, 0x60
+8010f3b4 .byte      0xe3, 0xa1, 0x00, 0x68
+8010f3b8 .byte      0xe3, 0xc1, 0x00, 0x70
+8010f3bc .byte      0xe3, 0xe1, 0x00, 0x78

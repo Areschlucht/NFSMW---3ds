@@ -1,0 +1,42 @@
+{
+  "method": "BMW body-arch circle fit, not original axle metadata; static front tire mesh reused four times",
+  "common_axle_height": 0.23458012845071308,
+  "arch_fits": [
+    {
+      "side": 1,
+      "end": 1,
+      "center_x": 1.588956354543224,
+      "center_z": 0.21623048236900066,
+      "arch_radius": 0.406229654411822,
+      "outer_y": 0.90966796875,
+      "rms_m": 0.00263400174486849
+    },
+    {
+      "side": 1,
+      "end": -1,
+      "center_x": -1.123555980260265,
+      "center_z": 0.2546213935090363,
+      "arch_radius": 0.4186110572450133,
+      "outer_y": 0.888671875,
+      "rms_m": 0.0027767927554586376
+    },
+    {
+      "side": -1,
+      "end": 1,
+      "center_x": 1.588956354543224,
+      "center_z": 0.21623048236900066,
+      "arch_radius": 0.406229654411822,
+      "outer_y": 0.90966796875,
+      "rms_m": 0.00263400174486849
+    },
+    {
+      "side": -1,
+      "end": -1,
+      "center_x": -1.124027536402848,
+      "center_z": 0.2512381555558147,
+      "arch_radius": 0.42082890463032796,
+      "outer_y": 0.85546875,
+      "rms_m": 0.003050022740860128
+    }
+  ]
+}

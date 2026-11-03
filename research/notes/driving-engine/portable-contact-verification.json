@@ -1,0 +1,22 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "dolphin_commit": "86d554802d7560acf12b5c5a2b3acb344069b5ce",
+  "original_contact_va": "0x80246580",
+  "tire_brake_collections": 82,
+  "full_state_float_bit_cases": 7872,
+  "free_wheel_full_state_float_bit_cases": 1968,
+  "angle_float_bit_cases": 2048,
+  "scale_producer_float_bit_cases": 1284,
+  "runtime_default_force_differences": 0,
+  "runtime_default_field_bit_differences": 0,
+  "runtime_default_discrete_state_mismatches": 0,
+  "runtime_default_max_spin_error": 0,
+  "runtime_default_max_force_error": 0,
+  "runtime_default_max_relative_force_error": 0,
+  "limitations": [
+    "original math callbacks are an independent check; runtime-default parity is reported separately",
+    "runtime default uses original angle quantization and independently implemented Gekko sqrt; target sine checked separately",
+    "synthetic wheel-state producers, not whole-vehicle handling traces"
+  ]
+}

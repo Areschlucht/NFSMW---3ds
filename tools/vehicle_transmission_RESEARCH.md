@@ -2,8 +2,9 @@
 
 The new portable module is `include/mw_physics_transmission.h` and
 `source_bmw/mw_physics_transmission.c`. It is isolated from the live prototype.
-It supplies six original numerical/state stages; it is not a complete automatic
-transmission, engine update, differential or 1:1 vehicle simulation.
+The initial foundation described below has since expanded into six modules and
+a bounded coherent EngineStep; see the current continuation sections below.
+A complete 1:1 vehicle simulation is not yet established.
 
 Source identities:
 
@@ -121,11 +122,8 @@ Strict host C and ASan/UBSan checks cover standalone state/curve boundaries.
 Strict pinned devkitARM ARMv6K hard-float compilation passes; no physical3DS
 performance or whole-game behavioral equivalence is claimed.
 
-Remaining integration gates: automatic/manual request policy and its generated
-shift tables, complete clutch-state producers/transitions, torque/speed differential
-selection/distribution, full actual shaft update and limiter, source-derived
-suspension/contact/load inputs and cross-system timestep/order. Root owns live
-controller integration and shared build/package files.
+The later continuation sections supersede this initial integration-gate list.
+Root owns live controller integration and shared build/package files.
 
 ## Recovered continuation, 2026-11-03
 
@@ -238,3 +236,83 @@ rev modulation+1AC and optional tuned induction; exact pvehicle upgrade-index
 selection. Existing shaft/sync primitives do not silently supply defaults for
 these. All engine steps must receive actual dt; a guessed60Hz tick is not proven
 by a60FPS render counter. Root owns runtime integration and packaging.
+
+## Coherent EngineStep continuation, 2026-11-03
+
+`include/mw_physics_transmission_engine.h` now supplies persistent parameters,
+state and input/output contracts, rather than requiring root to assemble the
+numerical leaves. `mw_physics_transmission_engine_step` follows original order:
+
+1. Raw input throttle or zero when original rev-block boolean+1A8 is active.
+2. Timed NOS state and original torque multiplier+100.
+3. Disabled-induction class resets amount+94, display+98 and boost+9C.
+4. Automatic policy/accepted gear commit and post-input timers.
+5. Converter/shaft target, clutch countdown/engagement, torque and engine braking,
+   clutch numerical core, launch stabilization, actual shaft update, wheel
+   sync/cap, final torque/efficiency, reported RPM and next shift classification.
+
+The independent `vehicle_transmission_step_verify.py` executes **the whole
+original EngineRacer8025762C..802584A8**, including its actual nested call graph,
+and compares all owned persistent state and wheel spin writes with this API.
+**1536 complete cases pass, including512 persistent continuation steps**, across
+both BMW physical collections. This is broader than comparing a sequence of
+separately recovered leaves. External raw input/automatic-enabled, optional
+entity recharge gate, tuningNULL, event-dispatch gate and boost scalar are
+explicit; they are not claimed to be the wider game/scheduler implementation.
+
+The API supports the canonical careerstart/default-induction/empty-SPEED_LIMITER
+subset. Positive induction boost, nonempty RPM limiter and active rev-modulation
+deadline reject transactionally. The source raw rev-block boolean is supported;
+the timed sine modulation/event branch is not. Unsupported input does not quietly
+fall through to approximated behavior. Source physical upgrade selection and
+actual spawn/reset initialization must still be closed before deploying it as a
+complete original controller.
+
+### Mechanical continuation
+
+`mw_physics_transmission_engine_mechanical_step` is also usable separately when
+the caller already supplies the original preceding timed/input stage outputs.
+It matches **2560 complete original802577A8..8025845C state cases**, including512
+persistent continuation steps. This includes the full launch-reaction branch.
+The curve object's correct address is **8048A0EC**; an earlier research checkpoint
+mistyped it as8049A0EC. Executing startup80265EB0..80265EE4 establishes its pointer
+to five original pairs at8041F65C:
+
+```
+(-10,1), (-7.5,0.96), (-3.5,0.925), (-0.3,0.875), (-0.05,0)
+```
+
+The original samples retain their exact binary32 source values in code. The
+argument is `(net torque + reaction)*1000`, not a guessed normalization. The
+launch branch adds curve*total*CLUTCH_SLIP to reaction. At the upper shaft limit,
+original positive drive torque is cleared while negative reaction/braking torque
+is retained; this distinction is covered by whole-phase comparisons.
+
+### Timed NOS and automatic policy
+
+`mw_physics_transmission_nos.h/.c` ports complete80256D9C..802571FC:
+**2304 original full-state cases across all6 NOS collections pass**, including768
+persistent continuation steps. It covers original activation hysteresis (start
+at10mph, continue at5mph), charge drain by dt/NOS_CAPACITY, mode6/unlimited drain
+bypass, disengage timer, speed-interpolated recharge time, optional boost effects
+and optional source tuning. Schema FLOW_RATE is not substituted for the actual
+NOS_CAPACITY denominator. Raw request, recharge inhibit, tuning/global values
+and physical NOS upgrade choice remain explicit.
+
+`mw_physics_transmission_auto.h/.c` ports80255AD4, accepted commit state from
+8025617C, and post-input timers8025750C: **4096 complete original cases pass**,
+including17 accepted shifts. It retains neutral1→first2 direct assignment,
+source multi-downshift RPM prediction against the original current gear, signed
+four-wheel slip<4 upshift gate, shift-delay inhibit and cooldown state. Cooldown
+is `max(0,cooldown-dt*(2-raw input throttle))`, not dt*(1-throttle). Automatic
+commits reset the pending request and set original committed state+188.
+
+Optional original event allocation/dispatch is disabled in the reference; the
+portable API returns accepted/previous/new/automatic event data for the caller.
+Neutral's direct assignment produces no accepted-shift event. This does not send
+messages or publish anything. Manual request wrapper/event-side integration
+remains separate.
+
+All six drivetrain C modules pass strict host tests, ASan/UBSan and pinned
+ARMv6K hard-float compilation. `validation.json` records source/report/object
+hashes and current totals. The live controller/build/package remain untouched.

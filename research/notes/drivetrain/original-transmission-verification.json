@@ -1,0 +1,68 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "engine_collections": 78,
+  "float_bit_cases": {
+    "torque": 5616,
+    "engine_braking": 1872,
+    "reported_rpm": 480,
+    "gear_commit": 11250,
+    "inertia": 312,
+    "clutch_core": 1592,
+    "clutch_update": 2916,
+    "differential": 23040,
+    "wheel_omega": 4096,
+    "driven_omega": 1024
+  },
+  "additional_psq_abi": {
+    "80256264": "f3c10018",
+    "80256268": "f3e10020",
+    "80256474": "e3c10018",
+    "80256478": "e3e10020",
+    "80255474": "f3e10010",
+    "802554e8": "e3e10010",
+    "802557f0": "f3c10028",
+    "802557f4": "f3e10030",
+    "802559fc": "e3c10028",
+    "80255a00": "e3e10030"
+  },
+  "external_callback": "Vehicle mode is explicitly supplied; body is not emulated",
+  "bmw_braking_trace": [
+    {
+      "rpm": -200.0,
+      "torque_argument": 500,
+      "braking_result": -350.0
+    },
+    {
+      "rpm": 800.0,
+      "torque_argument": 500,
+      "braking_result": -350.0
+    },
+    {
+      "rpm": 4650.0,
+      "torque_argument": 500,
+      "braking_result": -394.25286865234375
+    },
+    {
+      "rpm": 8500.0,
+      "torque_argument": 500,
+      "braking_result": -438.5057373046875
+    },
+    {
+      "rpm": 10500.0,
+      "torque_argument": 500,
+      "braking_result": -438.5057373046875
+    },
+    {
+      "rpm": 1234.8521728515625,
+      "torque_argument": 500,
+      "braking_result": -354.998291015625
+    }
+  ],
+  "limitations": [
+    "isolated numerical/state stages and clutch core, not the complete engine update or whole-car integration",
+    "boost/state scale producers, Vehicle mode labels and broader clutch-mode transitions remain separate",
+    "automatic/manual request policy, generated shift tables, final wheel distribution and engine angular update remain unported",
+    "engine braking argument keeps caller units; original invalid-array fallback is rejected safely"
+  ]
+}

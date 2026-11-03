@@ -1,0 +1,61 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "entries": [
+    {
+      "name_candidate": "GLOBAL\\INGAMEMEMORYFILE.BIN",
+      "hash": "96d2d5dd",
+      "archive": "1",
+      "offset_bytes": "279310336",
+      "size_bytes": "79599",
+      "role": "Originalbootloader constructsInGameMemoryFile thenloads via801FDEA0; cachedbankheader membershipunknownuntilreceived",
+      "code": {
+        "start": "801fe06c",
+        "end_exclusive": "801fe078",
+        "file_offset": 2076780,
+        "sha256": "ea1a916e887de60ee7070d467682208bc6d7b24992af82f0a32a1a0474de4b97"
+      }
+    },
+    {
+      "name_candidate": "GLOBAL\\INGAMEB.BUN",
+      "hash": "5aa35c92",
+      "archive": "1",
+      "offset_bytes": "270989312",
+      "size_bytes": "115832",
+      "role": "Originalbootloader loadsINGAMEB.LZC thenassigns logicalfilenameINGAMEB.BUN; uncompressed original avoidsduplicate decode",
+      "code": {
+        "start": "801fe31c",
+        "end_exclusive": "801fe368",
+        "file_offset": 2077468,
+        "sha256": "de7b5ccd6190607dede06efe6f27554ed681947232ffd11b54125e16c235715d"
+      }
+    },
+    {
+      "name_candidate": "GLOBAL\\INGAMEB_VM_NGC.BUN",
+      "hash": "0e1075eb",
+      "archive": "1",
+      "offset_bytes": "271106048",
+      "size_bytes": "657088",
+      "role": "Explicit originalnativebank load via801FD2A4",
+      "code": {
+        "start": "801fe2a8",
+        "end_exclusive": "801fe2bc",
+        "file_offset": 2077352,
+        "sha256": "0b6222c9f107ab91e8741b9307febc61da56bb49b760418f32da5c1327d3ac7d"
+      }
+    },
+    {
+      "name_candidate": "GLOBAL\\INGAMEA.BUN",
+      "hash": "5a914411",
+      "archive": "1",
+      "offset_bytes": "279433216",
+      "size_bytes": "200704",
+      "role": "Indexedpairedingamebankcandidate; directliteralDOLload notidentified, MemoryFilemembershipmustbechecked"
+    }
+  ],
+  "total_bytes": 1053223,
+  "limitations": [
+    "No claim that thesefiles contain missingkeys beforetheirheaders are inspected",
+    "Allcurrentlyavailable13banksandGlobalMemoryFileembeddedTPKheadersauditedwithoutmatches",
+    "No invented texture,placeholderorbuilding omissionintroduced"
+  ]
+}

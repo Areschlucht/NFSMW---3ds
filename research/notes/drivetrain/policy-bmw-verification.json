@@ -1,0 +1,45 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "vehicle_collections": 1,
+  "cases": {
+    "induction": 45,
+    "shift_tables": 1,
+    "shift_request": 216
+  },
+  "traces": [
+    {
+      "name": "bmwm3gtre46",
+      "up": [
+        0.0,
+        0.0,
+        8400.0,
+        8400.0,
+        8400.0,
+        8400.0,
+        8400.0,
+        8500.0,
+        0.0,
+        0.0
+      ],
+      "down": [
+        0.0,
+        0.0,
+        0.0,
+        5183.41455078125,
+        5544.6640625,
+        6186.82666015625,
+        6829.26806640625,
+        6972.0,
+        0.0,
+        0.0
+      ],
+      "original_instructions": 170998
+    }
+  ],
+  "limitations": [
+    "induction optional tuning/output pointers areNULL in this checkpoint",
+    "gear-request classification is not the caller inhibit/manual/airborne wrapper",
+    "startup original induction argument order is preserved, not corrected"
+  ]
+}

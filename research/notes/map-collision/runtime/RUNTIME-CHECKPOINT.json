@@ -1,0 +1,25 @@
+{
+  "stage": "Bounded runtime section activation and native contact queries",
+  "source_files": {
+    "include/world_collision_runtime.h": "fab22bd87d4d54d731ae270ceec1ac5da80071120619b484af63635821a2b505",
+    "source_bmw/world_collision_runtime.c": "2b1065831daa9f53fd0f7b025ef860ccf3d6c8533bc5b015af5e026d60547c4a",
+    "include/world_collision_query.h": "172f525d57c0ab9b3b664483cfffdae5904fc9ed641f986da5581a1ba8bf1f6d",
+    "source_bmw/world_collision_query.c": "8b18cd89ab1dc5f30e610d8d2df17ac2794060f008699b88da7e960a73f69f38",
+    "tools/world_collision_pack.py": "c3e1b9180e7e7764dc832311b66d1df03457b37f2be4db097d0e0f8cd93079ac",
+    "tools/map_recovery_contact_reference.py": "de946b9d5a6a1aaa11cec14b90d51fd4d7b02465e395bc1eaa5219b2125d8a5d",
+    "tests/test_world_collision_runtime.c": "c73e43447130828e5ac0a8832d64bfc69c8f155c45282878cc85750f46797c13",
+    "tests/test_world_collision_runtime.py": "8601e3a5b52dabff8ec3afacbe0b97b453215274700157cb8d2ef6b62fd48f4a"
+  },
+  "tests": {
+    "python_collision_tests": 15,
+    "host_runtime_asan_ubsan": "pass",
+    "full390_package_load_asan_ubsan": "pass",
+    "devkitarm_armv6k_warnings_as_errors": "pass"
+  },
+  "runtime_original_reference": "/workspace/port-research/map-collision/runtime/runtime-original-differential.json",
+  "cache_budget": "/workspace/port-research/map-collision/runtime/collision-cache-budget.json",
+  "root_road_bridge": "/workspace/port-research/rockport/v0.18-dev/world-runtime-bridge.json",
+  "runtime_data": "/workspace/port-research/map-collision/runtime/rockport-collision.nwc",
+  "runtime_data_sha256": "3db8a855c9b862d02d6095cc89c85736dfcd5534a00602b3a66680cfbc9acc7d",
+  "limitations": "Ground query normal is not yet linked to wheel force producer. Original scene spatial-list tie order, dynamic props and rigid-body response remain unproven. No main/controller/build changes."
+}

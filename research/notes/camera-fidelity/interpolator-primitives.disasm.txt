@@ -1,0 +1,201 @@
+80207e04  lmw r26, 8(r1)
+80207e08  .gekko e3a10020
+80207e0c  .gekko e3c10028
+80207e10  .gekko e3e10030
+80207e14  addi r1, r1, 0x38
+80207e18  blr 
+80207e1c  stwu r1, -0x28(r1)
+80207e20  mflr r0
+80207e24  xxsldwi vs29, vs1, vs0, 0
+80207e28  xscmpeqdp vs30, f1, f0
+80207e2c  .gekko f3e10020
+80207e30  stmw r30, 8(r1)
+80207e34  stw r0, 0x2c(r1)
+80207e38  mr r30, r3
+80207e3c  fmr f29, f1
+80207e40  lwz r31, 0(r30)
+80207e44  fmr f31, f2
+80207e48  fmr f30, f3
+80207e4c  li r3, 0
+80207e50  cmpwi r31, 0
+80207e54  beq 0x80207e98
+80207e58  mr r3, r31
+80207e5c  bl 0x80207c0c
+80207e60  cmpwi r3, 0
+80207e64  beq 0x80207e94
+80207e68  lha r0, 0xe(r31)
+80207e6c  mr r3, r31
+80207e70  cmpwi r0, 0
+80207e74  ble 0x80207e98
+80207e78  mr r3, r30
+80207e7c  mr r4, r31
+80207e80  fmr f1, f29
+80207e84  fmr f2, f31
+80207e88  fmr f3, f30
+80207e8c  bl 0x80207d44
+80207e90  b 0x80207e98
+80207e94  li r3, 0
+80207e98  lwz r0, 0x2c(r1)
+80207e9c  mtlr r0
+80207ea0  lmw r30, 8(r1)
+80207ea4  .gekko e3a10010
+80207ea8  .gekko e3c10018
+80207eac  .gekko e3e10020
+80207eb0  addi r1, r1, 0x28
+80207eb4  blr 
+80207eb8  lfs f11, 0(r3)
+80207ebc  lis r9, -0x7fc1
+80207ec0  lfs f13, 8(r3)
+80207ec4  lfs f0, 4(r3)
+80207ec8  fsubs f13, f13, f11
+80207ecc  lfs f12, 0xc(r3)
+80207ed0  lfs f8, 0x60d8(r9)
+80207ed4  fadds f10, f13, f13
+80207ed8  fadds f9, f0, f0
+80207edc  stfs f0, 0x18(r3)
+80207ee0  fmsubs f13, f13, f8, f12
+80207ee4  stfs f11, 0x1c(r3)
+80207ee8  fadds f0, f0, f12
+80207eec  fsubs f0, f0, f10
+80207ef0  fsubs f13, f13, f9
+80207ef4  stfs f0, 0x10(r3)
+80207ef8  stfs f13, 0x14(r3)
+80207efc  blr 
+80207f00  lfs f0, 0x10(r3)
+80207f04  lfs f13, 0x14(r3)
+80207f08  lfs f11, 0x18(r3)
+80207f0c  fmadds f0, f0, f1, f13
+80207f10  lfs f12, 0x1c(r3)
+80207f14  fmadds f0, f0, f1, f11
+80207f18  fmadds f1, f0, f1, f12
+80207f1c  blr 
+80207f20  lis r9, -0x7fc1
+80207f24  lfs f0, 0x14(r3)
+80207f28  lfs f12, 0x60dc(r9)
+80207f2c  lfs f13, 0x10(r3)
+80207f30  fadds f0, f0, f0
+80207f34  fmuls f12, f1, f12
+80207f38  lfs f11, 0x18(r3)
+80207f3c  fmadds f13, f13, f12, f0
+80207f40  fmadds f1, f13, f1, f11
+80207f44  blr 
+80207f48  lis r9, -0x7fc1
+80207f4c  lfs f0, 0x14(r3)
+80207f50  lfs f13, 0x60e0(r9)
+80207f54  lfs f12, 0x10(r3)
+80207f58  fadds f0, f0, f0
+80207f5c  fmuls f1, f1, f13
+80207f60  fmadds f1, f12, f1, f0
+80207f64  blr 
+80207f68  stwu r1, -0x10(r1)
+80207f6c  mflr r0
+80207f70  xsmaddasp f31, f1, f0
+80207f74  stw r0, 0x14(r1)
+80207f78  mr r11, r3
+80207f7c  lis r9, -0x7fc1
+80207f80  lfs f31, 0x60e4(r9)
+80207f84  lfs f0, 0x24(r11)
+80207f88  fdivs f31, f31, f0
+80207f8c  fmuls f1, f1, f31
+80207f90  bl 0x80207f20
+80207f94  fmuls f1, f1, f31
+80207f98  lwz r0, 0x14(r1)
+80207f9c  mtlr r0
+80207fa0  .gekko e3e10008
+80207fa4  addi r1, r1, 0x10
+80207fa8  blr 
+80207fac  stwu r1, -0x10(r1)
+80207fb0  mflr r0
+80207fb4  xsmaddasp f31, f1, f0
+80207fb8  stw r0, 0x14(r1)
+80207fbc  mr r11, r3
+80207fc0  lis r9, -0x7fc1
+80207fc4  lfs f31, 0x60e8(r9)
+80207fc8  lfs f0, 0x24(r11)
+80207fcc  fdivs f31, f31, f0
+80207fd0  fmuls f1, f1, f31
+80207fd4  bl 0x80207f48
+80207fd8  fmuls f31, f31, f31
+80207fdc  fmuls f1, f1, f31
+80207fe0  lwz r0, 0x14(r1)
+80207fe4  mtlr r0
+80207fe8  .gekko e3e10008
+80207fec  addi r1, r1, 0x10
+80207ff0  blr 
+80207ff4  stwu r1, -0x18(r1)
+80207ff8  mflr r0
+80207ffc  xxsldwi vs31, vs1, vs0, 0
+80208000  stw r31, 0xc(r1)
+80208004  stw r0, 0x1c(r1)
+80208008  mr r31, r3
+8020800c  fmr f31, f1
+80208010  lfs f1, 0x24(r31)
+80208014  bl 0x80207f68
+80208018  fabs f0, f1
+8020801c  fcmpu cr0, f0, f31
+80208020  cror cr0un, cr0eq, cr0lt
+80208024  bso 0x8020803c
+80208028  fdivs f0, f0, f1
+8020802c  lfs f13, 0x24(r31)
+80208030  fmuls f0, f0, f31
+80208034  fmuls f0, f0, f13
+80208038  stfs f0, 0xc(r31)
+8020803c  lwz r0, 0x1c(r1)
+80208040  mtlr r0
+80208044  lwz r31, 0xc(r1)
+80208048  .gekko e3e10010
+8020804c  addi r1, r1, 0x18
+80208050  blr 
+80208054  stwu r1, -0x28(r1)
+80208058  mflr r0
+8020805c  xxsldwi vs29, vs1, vs0, 0
+80208060  xscmpeqdp vs30, f1, f0
+80208064  .gekko f3e10020
+80208068  stw r31, 0xc(r1)
+8020806c  stw r0, 0x2c(r1)
+80208070  lis r9, -0x7fc1
+80208074  fmr f30, f1
+80208078  mr r31, r3
+8020807c  lfs f1, 0x60ec(r9)
+80208080  bl 0x80207fac
+80208084  fmr f31, f1
+80208088  mr r3, r31
+8020808c  lfs f1, 0x24(r31)
+80208090  fabs f29, f31
+80208094  bl 0x80207fac
+80208098  li r0, 0
+8020809c  fabs f13, f1
+802080a0  fcmpu cr0, f29, f30
+802080a4  cror cr0un, cr0eq, cr0lt
+802080a8  bso 0x802080b8
+802080ac  fdivs f0, f29, f31
+802080b0  li r0, 1
+802080b4  fmuls f31, f0, f30
+802080b8  fcmpu cr0, f13, f30
+802080bc  cror cr0un, cr0eq, cr0lt
+802080c0  bso 0x802080d0
+802080c4  fdivs f0, f13, f1
+802080c8  li r0, 1
+802080cc  fmuls f1, f0, f30
+802080d0  cmpwi r0, 0
+802080d4  beq 0x80208108
+802080d8  lfs f0, 0x24(r31)
+802080dc  lis r9, -0x7fc1
+802080e0  lis r11, -0x7fc1
+802080e4  lfs f13, 0x60f0(r9)
+802080e8  fmuls f0, f0, f0
+802080ec  lfs f12, 0x60f4(r11)
+802080f0  fmuls f31, f31, f0
+802080f4  fmsubs f0, f1, f0, f31
+802080f8  fmuls f0, f0, f12
+802080fc  fmuls f13, f31, f13
+80208100  stfs f0, 0x10(r31)
+80208104  stfs f13, 0x14(r31)
+80208108  lwz r0, 0x2c(r1)
+8020810c  mtlr r0
+80208110  lwz r31, 0xc(r1)
+80208114  .gekko e3a10010
+80208118  .gekko e3c10018
+8020811c  .gekko e3e10020
+80208120  addi r1, r1, 0x28
+80208124  blr 

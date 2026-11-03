@@ -1,0 +1,10 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "address": "0x80193498",
+  "bytes": 84,
+  "routine_sha256": "bcb79f7e2b013f81cd1234380b58c7fba1478ca10e8194a53079e55e55594557",
+  "original_instance_cases": 9326,
+  "synthetic_exact_dyadic_affine_cases": 10000,
+  "max_original_instance_vs_binary64_affine_difference": 0.00023651123046875,
+  "limitations": "Bounded instruction interpretation with binary64 intermediates rounded binary32 per paired op; not exact Gekko FMA/FPSCR emulation. Source CI orientations all identity; nonzero orientation flags rejected."
+}

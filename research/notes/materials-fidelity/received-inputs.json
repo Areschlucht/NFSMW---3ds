@@ -1,0 +1,72 @@
+[
+  {
+    "name": "GLOBAL-DYNTEX-266086400.BIN",
+    "path": "/workspace/attachments/04491c7a-49d8-4bf8-99fa-1ca503b60c96/GLOBAL-DYNTEX-266086400.BIN",
+    "bytes": 1274240,
+    "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+    "first32": "000030b378711300000000003000000000000000000000000000000000000000",
+    "chunks": [
+      {
+        "kind": "b3300000",
+        "offset": 0,
+        "bytes": 1274240
+      }
+    ]
+  },
+  {
+    "name": "GLOBAL-DYNTEX-279683072.BIN",
+    "path": "/workspace/attachments/761ae068-9824-40a3-9bf3-80fd71d5d6bc/GLOBAL-DYNTEX-279683072.BIN",
+    "bytes": 1274240,
+    "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+    "first32": "000030b378711300000000003000000000000000000000000000000000000000",
+    "chunks": [
+      {
+        "kind": "b3300000",
+        "offset": 0,
+        "bytes": 1274240
+      }
+    ]
+  },
+  {
+    "name": "GLOBAL-DYNTEX-299415552.BIN",
+    "path": "/workspace/attachments/24ed84d3-a9eb-425d-8bcb-e2cb7e2d4835/GLOBAL-DYNTEX-299415552.BIN",
+    "bytes": 1274240,
+    "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+    "first32": "000030b378711300000000003000000000000000000000000000000000000000",
+    "chunks": [
+      {
+        "kind": "b3300000",
+        "offset": 0,
+        "bytes": 1274240
+      }
+    ]
+  },
+  {
+    "name": "BMWM3GTRE46-PREVINYL.BIN",
+    "path": "/workspace/attachments/b504371c-2aea-46c9-bf67-e12d997ad2c6/BMWM3GTRE46-PREVINYL.BIN",
+    "bytes": 8192,
+    "sha256": "194f13af8e6af56c07467cbf470aabeab31aad6f24de7c7cfe7ef308f624be15",
+    "first32": "000030b3f81f0000000000003000000000000000000000000000000000000000",
+    "chunks": [
+      {
+        "kind": "b3300000",
+        "offset": 0,
+        "bytes": 8192
+      }
+    ]
+  },
+  {
+    "name": "BMWM3GTRE46-VINYLS.BIN",
+    "path": "/workspace/attachments/50397e41-410f-4912-b8e0-e08e3f188dcc/BMWM3GTRE46-VINYLS.BIN",
+    "bytes": 2187392,
+    "sha256": "6fd7ab0722a59d16ccac59b896e76afab50b76681af67db2bb1ff338cfdef925",
+    "first32": "000030b378602100000000003000000000000000000000000000000000000000",
+    "chunks": [
+      {
+        "kind": "b3300000",
+        "offset": 0,
+        "bytes": 2187392
+      }
+    ]
+  }
+]

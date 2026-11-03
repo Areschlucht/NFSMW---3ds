@@ -1,0 +1,170 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "original_lookup": "800fd4a0",
+  "original_model_fixup": "800f6e10",
+  "effective_fallback_hash": "66994f4a",
+  "fallback_registration": "800fc670..800fc688",
+  "original_fallback_global": "8041ab74",
+  "known_cache_hashes": [
+    "c904085c",
+    "c95fe138",
+    "9ebb788a",
+    "764dea79",
+    "438cc032",
+    "d85a1224",
+    "b72aa8d3",
+    "c567bac7",
+    "fd8270ee"
+  ],
+  "registry_assumptions": {
+    "ordinary_bank_list": "empty",
+    "render_target_matching_keys": 0,
+    "streaming_alias_count": 0,
+    "model_fixup_guard": 0,
+    "registered_default": "66994f4a"
+  },
+  "limitation": "Final-miss policy under these explicit registry inputs; live runtime aliases and regular providers take precedence.",
+  "direct_lookup_cases": [
+    {
+      "requested_hash": "8de70662",
+      "fallback_enabled": false,
+      "returned_pointer": "00000000",
+      "matched": true
+    },
+    {
+      "requested_hash": "8de70662",
+      "fallback_enabled": true,
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "6dc61680",
+      "fallback_enabled": false,
+      "returned_pointer": "00000000",
+      "matched": true
+    },
+    {
+      "requested_hash": "6dc61680",
+      "fallback_enabled": true,
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "7e2734a8",
+      "fallback_enabled": false,
+      "returned_pointer": "00000000",
+      "matched": true
+    },
+    {
+      "requested_hash": "7e2734a8",
+      "fallback_enabled": true,
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "7e2734a9",
+      "fallback_enabled": false,
+      "returned_pointer": "00000000",
+      "matched": true
+    },
+    {
+      "requested_hash": "7e2734a9",
+      "fallback_enabled": true,
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "8b335c76",
+      "fallback_enabled": false,
+      "returned_pointer": "00000000",
+      "matched": true
+    },
+    {
+      "requested_hash": "8b335c76",
+      "fallback_enabled": true,
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "61a56b42",
+      "fallback_enabled": false,
+      "returned_pointer": "00000000",
+      "matched": true
+    },
+    {
+      "requested_hash": "61a56b42",
+      "fallback_enabled": true,
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "c904085c",
+      "fallback_enabled": false,
+      "returned_pointer": "90006000",
+      "matched": true
+    },
+    {
+      "requested_hash": "c904085c",
+      "fallback_enabled": true,
+      "returned_pointer": "90006000",
+      "matched": true
+    }
+  ],
+  "model_fixup_cases": [
+    {
+      "requested_hash": "c904085c",
+      "returned_pointer": "90006000",
+      "matched": true
+    },
+    {
+      "requested_hash": "c95fe138",
+      "returned_pointer": "90006080",
+      "matched": true
+    },
+    {
+      "requested_hash": "9ebb788a",
+      "returned_pointer": "90006100",
+      "matched": true
+    },
+    {
+      "requested_hash": "764dea79",
+      "returned_pointer": "90006180",
+      "matched": true
+    },
+    {
+      "requested_hash": "438cc032",
+      "returned_pointer": "90006200",
+      "matched": true
+    },
+    {
+      "requested_hash": "d85a1224",
+      "returned_pointer": "90006280",
+      "matched": true
+    },
+    {
+      "requested_hash": "b72aa8d3",
+      "returned_pointer": "90006300",
+      "matched": true
+    },
+    {
+      "requested_hash": "c567bac7",
+      "returned_pointer": "90006380",
+      "matched": true
+    },
+    {
+      "requested_hash": "7e2734a8",
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "7e2734a9",
+      "returned_pointer": "90001000",
+      "matched": true
+    },
+    {
+      "requested_hash": "fd8270ee",
+      "returned_pointer": "90006400",
+      "matched": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "source": "/workspace/attachments/070803c9-d831-4cd3-a650-db514bc6c16c/FRONTEND-FRONTB.LZC",
+    "source_sha256": "73e02dffe3cc874a5a8b11958ffc0ed01a885441a6477e8cc220dc29119e2db0",
+    "decoded": "/workspace/port-research/v018-decoded/FRONTEND-FRONTB.BUN",
+    "bytes": 1702400,
+    "sha256": "bc3c7c33d8b2620deaa5506da8c43c7cecd6fa5ea3d3f369d8baf4bbee753920"
+  },
+  {
+    "source": "/workspace/attachments/0289e6c2-c5f3-4d86-900b-8afb8860d0f2/FRONTEND-FRONTB_VM_NGC.LZC",
+    "source_sha256": "e60ccab5357228811af6d873cafbc749b4c3f18727180de871b76b7c4cc6cab1",
+    "decoded": "/workspace/port-research/v018-decoded/FRONTEND-FRONTB_VM_NGC.BUN",
+    "bytes": 1222584,
+    "sha256": "6a815221485bca9ea44c16ab9729255f816167606ba4fdd0873e583ecbbdc1c8"
+  },
+  {
+    "source": "/workspace/attachments/f3e66a0d-4da4-46cc-8649-2dd2b8365c52/GLOBAL-GLOBALB_VM_NGC.LZC",
+    "source_sha256": "4033c81a7838ed263d19ef27eae2a4b01300aeda7d910c12031a66a4d6e7bdec",
+    "decoded": "/workspace/port-research/v018-decoded/GLOBAL-GLOBALB_VM_NGC.BUN",
+    "bytes": 453068,
+    "sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b"
+  }
+]

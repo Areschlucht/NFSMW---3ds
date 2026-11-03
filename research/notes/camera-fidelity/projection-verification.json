@@ -1,0 +1,34 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "original_ranges": [
+    {
+      "start": "801000ec",
+      "end": "80100210",
+      "sha256": "c06db5c4bbf4e9109ed2a1e8b162779604f465daec53f1337dd95a1758a45a95"
+    },
+    {
+      "start": "80329cc0",
+      "end": "80329d90",
+      "sha256": "b92d8663c9144ba762b779b12e7c4680119ce1f8611ebda113ec73ea2bec5668"
+    }
+  ],
+  "projection_argument_float_bit_cases": 315,
+  "instructions_patched": 0,
+  "examples": [
+    {
+      "raw_fov": 14199,
+      "viewport": [
+        640,
+        480
+      ],
+      "vertical_fov": 77.9974365234375,
+      "aspect": 1.0666667222976685
+    }
+  ],
+  "proof": "OriginalSDK storescot/aspect in00 andcot in11, provingvertical-FOVargument afterexplicitviewportYfactor",
+  "limitations": [
+    "Projection argument path only; matrixtrig/depth conversion not reproduced",
+    "GC aspect correction not automatically appropriate for3DS",
+    "Actual single-player viewport record/runtimeglobal changes not yet traced"
+  ]
+}

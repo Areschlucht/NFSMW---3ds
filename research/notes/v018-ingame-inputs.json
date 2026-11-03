@@ -1,0 +1,54 @@
+[
+  {
+    "Entry": "GLOBAL\\INGAMEA.BUN",
+    "EntryHash": "5a914411",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 279433216,
+    "Bytes": 200704,
+    "EntryBytes": 200704,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 11544,
+    "Output": "GLOBAL-INGAMEA.BUN",
+    "SHA256": "0e3543f534cb94b113168a1b5f6b7a7224b32d12986fb18253b937f16c293d79",
+    "path": "/workspace/attachments/3716fced-9974-45db-bfd3-3d43e8d65ca1/GLOBAL-INGAMEA.BUN"
+  },
+  {
+    "Entry": "GLOBAL\\INGAMEB.BUN",
+    "EntryHash": "5aa35c92",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 270989312,
+    "Bytes": 115832,
+    "EntryBytes": 115832,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 11568,
+    "Output": "GLOBAL-INGAMEB.BUN",
+    "SHA256": "040eee391c818842b6dab39f2fa546fd97421311e312b0f4cbac2226127f1506",
+    "path": "/workspace/attachments/03d43516-a501-4217-aca3-3713a3cbaf39/GLOBAL-INGAMEB.BUN"
+  },
+  {
+    "Entry": "GLOBAL\\INGAMEB_VM_NGC.BUN",
+    "EntryHash": "0e1075eb",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 271106048,
+    "Bytes": 657088,
+    "EntryBytes": 657088,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 1800,
+    "Output": "GLOBAL-INGAMEB_VM_NGC.BUN",
+    "SHA256": "4164d8be4fd215d682b803202055abc10ffcb28a56942645e6554b3e7dac57fc",
+    "path": "/workspace/attachments/5eb50459-e78b-4b4a-83bf-9026bd60c9f9/GLOBAL-INGAMEB_VM_NGC.BUN"
+  },
+  {
+    "Entry": "GLOBAL\\INGAMEMEMORYFILE.BIN",
+    "EntryHash": "96d2d5dd",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 279310336,
+    "Bytes": 79599,
+    "EntryBytes": 79599,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 19080,
+    "Output": "GLOBAL-INGAMEMEMORYFILE.BIN",
+    "SHA256": "2b0f10340f8f3fa0849d4aa463bfcbfb4993ed1db94c400136676407ce919da2",
+    "path": "/workspace/attachments/46e2fcd5-c36a-4605-ab91-27da56fd730e/GLOBAL-INGAMEMEMORYFILE.BIN"
+  }
+]

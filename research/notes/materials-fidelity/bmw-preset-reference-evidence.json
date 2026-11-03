@@ -1,0 +1,52 @@
+{
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "class": "pvehicle",
+  "collection": "bmwm3gtre46",
+  "fields": {
+    "DefaultPresetRide": {
+      "field_key": 2854741788,
+      "field_name": "DefaultPresetRide",
+      "type": "EA::Reflection::Text",
+      "value": "",
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 193648,
+      "file_offset": 193776,
+      "original_bytes": "00000000"
+    },
+    "frontend": {
+      "field_key": 2240304930,
+      "field_name": "frontend",
+      "type": "Attrib::RefSpec",
+      "value": {
+        "class_key": 2240304930,
+        "collection_key": 600590926,
+        "class_name": "frontend",
+        "collection_name": "m3_gtre46",
+        "runtime_pointer": 0
+      },
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 193884,
+      "file_offset": 194012,
+      "original_bytes": "8588572223cc4a4e00000000"
+    },
+    "MODEL": {
+      "field_key": 2420623840,
+      "field_name": "MODEL",
+      "type": "Attrib::StringKey",
+      "value": {
+        "text": "BMWM3GTRE46",
+        "hash32": 3403933237,
+        "hash64": 12788995710974845846
+      },
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 193632,
+      "file_offset": 193760,
+      "original_bytes": "b17ba3d712a66396cae3e63500000000"
+    }
+  },
+  "frontend_reference_present_in_this_image": false,
+  "interpretation": "DefaultPresetRide contains null original pointer; no canonical visual paint preset established. frontend reference is not a defined collection in this image. A missing external collection is not evidence for its contents or a parser failure."
+}

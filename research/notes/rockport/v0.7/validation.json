@@ -1,0 +1,41 @@
+{
+  "version": "0.7",
+  "hardware_report": {
+    "build": "0.6",
+    "system": "New 3DS",
+    "overclocking": "disabled per user",
+    "result": "runs very well per user",
+    "fps": "not measured"
+  },
+  "new_hardware_test": false,
+  "instances": 73,
+  "world_triangles": 11944,
+  "world_textures": 64,
+  "max_instance_bounds_error_m": 0.00662994384765625,
+  "ground_world_coordinate_error_m": 4.57763671875e-05,
+  "python_tests": 39,
+  "strict_arm_build": "pass",
+  "native_asan_ubsan": "pass",
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "checked": [
+    "startup",
+    "textured scenery",
+    "acceleration",
+    "braking",
+    "reverse",
+    "steering",
+    "reset viewport identical",
+    "return to menu",
+    "garage",
+    "controls",
+    "exit"
+  ],
+  "sha256": "4a4c86e6e49b5fc201f880cd3aad16bf6291995f3c6f2b9e70eba7d33e5d5157",
+  "remaining": [
+    "wheel attachment placement",
+    "faithful road materials",
+    "complete scenery/activation conditions",
+    "scenery collision",
+    "full game systems"
+  ]
+}

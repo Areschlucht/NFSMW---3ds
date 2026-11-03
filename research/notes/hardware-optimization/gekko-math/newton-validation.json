@@ -1,0 +1,9 @@
+{
+  "vectors_per_stage": 85542,
+  "newton1_bit_mismatches": 0,
+  "newton2_bit_mismatches": 0,
+  "examples1": [],
+  "examples2": [],
+  "original_dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "oracle": "Original scalarPPC, onlyfrsqrte estimate externalpinnedDolphin. Validfinitepositivefloatdomain plus signedzero. NoFPUflags emulation."
+}

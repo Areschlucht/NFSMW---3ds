@@ -1,0 +1,15 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "camera_collections": 66,
+  "profile_cache_bit_cases": 3234,
+  "selector_cases": 7,
+  "original_profile_fragment": "800688DC..80068AF0",
+  "instructions_patched": 0,
+  "limitations": [
+    "profile selection/cache only; not full chase camera dynamics",
+    "array index follows original view state; semantic identity of state3 not yet established",
+    "FOV rawwholeturn conversion proven; horizontal/vertical projection meaning remains open",
+    "cameraScale runtime producer and original smoothing remain open"
+  ]
+}

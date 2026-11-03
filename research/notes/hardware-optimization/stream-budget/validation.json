@@ -1,0 +1,10 @@
+{
+  "audit_sha256": "f4689e96c01628410c87add349597081aa6a2dc023d8922692ee10dba22037fe",
+  "sections": 997,
+  "regions": 435,
+  "category_totals_match": true,
+  "embedded_collision_not_added_twice": true,
+  "texture_collision_converted_costs_unknown": true,
+  "physical_hardware_memory_measured": false,
+  "runtime_modified": false
+}

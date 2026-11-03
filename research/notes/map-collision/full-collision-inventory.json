@@ -1,0 +1,4536 @@
+{
+  "source_sha256": "58fdd0adb8bdf1ebc3545ee679076c768acb3c52308c4b916ca960b4a0ac5552",
+  "totals": {
+    "packs": 450,
+    "assets": 9326,
+    "instances": 9326,
+    "quantized_parts": 49022,
+    "triangle_candidates": 308132,
+    "wall_records": 57075
+  },
+  "material_keys": {
+    "00000000": 2383,
+    "02fc0fc9": 99,
+    "121453e7": 12,
+    "19db2f1e": 3871,
+    "1a20e734": 263,
+    "1d5f6d70": 1,
+    "33199393": 2,
+    "35187254": 1215,
+    "3830babb": 881,
+    "3e25caab": 400,
+    "4bb72bd3": 1,
+    "52e42012": 402,
+    "58ec09dd": 1044,
+    "6ca26f9b": 2830,
+    "772fb736": 1832,
+    "999acd78": 124,
+    "a3840311": 79,
+    "ba404853": 158,
+    "c1c577d6": 299,
+    "d929e923": 98
+  },
+  "packages": [
+    {
+      "id": 101,
+      "source_offset": 24596384,
+      "source_bytes": 7200,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 47,
+      "triangle_candidates": 330,
+      "wall_records": 45
+    },
+    {
+      "id": 102,
+      "source_offset": 24811616,
+      "source_bytes": 15136,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 126,
+      "triangle_candidates": 625,
+      "wall_records": 100
+    },
+    {
+      "id": 103,
+      "source_offset": 24948784,
+      "source_bytes": 5408,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 25,
+      "triangle_candidates": 304,
+      "wall_records": 30
+    },
+    {
+      "id": 104,
+      "source_offset": 25043376,
+      "source_bytes": 2848,
+      "assets": 4,
+      "instances": 4,
+      "quantized_parts": 4,
+      "triangle_candidates": 120,
+      "wall_records": 28
+    },
+    {
+      "id": 105,
+      "source_offset": 25202832,
+      "source_bytes": 7968,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 60,
+      "triangle_candidates": 400,
+      "wall_records": 37
+    },
+    {
+      "id": 106,
+      "source_offset": 25323776,
+      "source_bytes": 14112,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 77,
+      "triangle_candidates": 587,
+      "wall_records": 134
+    },
+    {
+      "id": 107,
+      "source_offset": 25438384,
+      "source_bytes": 13088,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 119,
+      "triangle_candidates": 560,
+      "wall_records": 74
+    },
+    {
+      "id": 108,
+      "source_offset": 25554784,
+      "source_bytes": 6176,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 45,
+      "triangle_candidates": 297,
+      "wall_records": 32
+    },
+    {
+      "id": 109,
+      "source_offset": 25725792,
+      "source_bytes": 18464,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 134,
+      "triangle_candidates": 903,
+      "wall_records": 117
+    },
+    {
+      "id": 110,
+      "source_offset": 25917920,
+      "source_bytes": 27936,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 206,
+      "triangle_candidates": 1123,
+      "wall_records": 224
+    },
+    {
+      "id": 111,
+      "source_offset": 26027120,
+      "source_bytes": 6432,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 30,
+      "triangle_candidates": 282,
+      "wall_records": 42
+    },
+    {
+      "id": 112,
+      "source_offset": 26204384,
+      "source_bytes": 37408,
+      "assets": 47,
+      "instances": 47,
+      "quantized_parts": 247,
+      "triangle_candidates": 1570,
+      "wall_records": 311
+    },
+    {
+      "id": 113,
+      "source_offset": 26337440,
+      "source_bytes": 7968,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 53,
+      "triangle_candidates": 405,
+      "wall_records": 47
+    },
+    {
+      "id": 114,
+      "source_offset": 26467888,
+      "source_bytes": 21024,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 130,
+      "triangle_candidates": 996,
+      "wall_records": 181
+    },
+    {
+      "id": 116,
+      "source_offset": 26626512,
+      "source_bytes": 10528,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 54,
+      "triangle_candidates": 267,
+      "wall_records": 116
+    },
+    {
+      "id": 117,
+      "source_offset": 26728512,
+      "source_bytes": 15136,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 114,
+      "triangle_candidates": 683,
+      "wall_records": 99
+    },
+    {
+      "id": 118,
+      "source_offset": 26885776,
+      "source_bytes": 3360,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 28,
+      "triangle_candidates": 116,
+      "wall_records": 12
+    },
+    {
+      "id": 119,
+      "source_offset": 27051968,
+      "source_bytes": 9248,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 44,
+      "triangle_candidates": 269,
+      "wall_records": 127
+    },
+    {
+      "id": 120,
+      "source_offset": 27213408,
+      "source_bytes": 11552,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 86,
+      "triangle_candidates": 560,
+      "wall_records": 60
+    },
+    {
+      "id": 121,
+      "source_offset": 27365136,
+      "source_bytes": 9248,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 54,
+      "triangle_candidates": 416,
+      "wall_records": 73
+    },
+    {
+      "id": 122,
+      "source_offset": 27609408,
+      "source_bytes": 8736,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 62,
+      "triangle_candidates": 316,
+      "wall_records": 73
+    },
+    {
+      "id": 123,
+      "source_offset": 27715280,
+      "source_bytes": 5664,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 46,
+      "triangle_candidates": 255,
+      "wall_records": 24
+    },
+    {
+      "id": 124,
+      "source_offset": 27817088,
+      "source_bytes": 8992,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 58,
+      "triangle_candidates": 460,
+      "wall_records": 49
+    },
+    {
+      "id": 125,
+      "source_offset": 27917808,
+      "source_bytes": 11040,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 77,
+      "triangle_candidates": 446,
+      "wall_records": 71
+    },
+    {
+      "id": 127,
+      "source_offset": 28158272,
+      "source_bytes": 23072,
+      "assets": 34,
+      "instances": 34,
+      "quantized_parts": 169,
+      "triangle_candidates": 941,
+      "wall_records": 159
+    },
+    {
+      "id": 128,
+      "source_offset": 28366304,
+      "source_bytes": 11296,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 85,
+      "triangle_candidates": 541,
+      "wall_records": 56
+    },
+    {
+      "id": 129,
+      "source_offset": 28559728,
+      "source_bytes": 12320,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 104,
+      "triangle_candidates": 479,
+      "wall_records": 84
+    },
+    {
+      "id": 130,
+      "source_offset": 28697840,
+      "source_bytes": 5920,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 13,
+      "triangle_candidates": 144,
+      "wall_records": 89
+    },
+    {
+      "id": 131,
+      "source_offset": 28828416,
+      "source_bytes": 6432,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 25,
+      "triangle_candidates": 278,
+      "wall_records": 57
+    },
+    {
+      "id": 132,
+      "source_offset": 28866128,
+      "source_bytes": 5408,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 37,
+      "triangle_candidates": 307,
+      "wall_records": 21
+    },
+    {
+      "id": 134,
+      "source_offset": 29396096,
+      "source_bytes": 28448,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 152,
+      "triangle_candidates": 1309,
+      "wall_records": 262
+    },
+    {
+      "id": 136,
+      "source_offset": 29640512,
+      "source_bytes": 6688,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 27,
+      "triangle_candidates": 223,
+      "wall_records": 68
+    },
+    {
+      "id": 201,
+      "source_offset": 29700672,
+      "source_bytes": 5664,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 48,
+      "triangle_candidates": 189,
+      "wall_records": 46
+    },
+    {
+      "id": 202,
+      "source_offset": 29760912,
+      "source_bytes": 5920,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 57,
+      "triangle_candidates": 211,
+      "wall_records": 36
+    },
+    {
+      "id": 203,
+      "source_offset": 29879456,
+      "source_bytes": 21024,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 125,
+      "triangle_candidates": 662,
+      "wall_records": 208
+    },
+    {
+      "id": 204,
+      "source_offset": 30014928,
+      "source_bytes": 21792,
+      "assets": 34,
+      "instances": 34,
+      "quantized_parts": 145,
+      "triangle_candidates": 794,
+      "wall_records": 184
+    },
+    {
+      "id": 207,
+      "source_offset": 30185024,
+      "source_bytes": 14880,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 107,
+      "triangle_candidates": 499,
+      "wall_records": 140
+    },
+    {
+      "id": 208,
+      "source_offset": 30304592,
+      "source_bytes": 8480,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 55,
+      "triangle_candidates": 260,
+      "wall_records": 63
+    },
+    {
+      "id": 209,
+      "source_offset": 30408512,
+      "source_bytes": 15392,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 100,
+      "triangle_candidates": 591,
+      "wall_records": 116
+    },
+    {
+      "id": 210,
+      "source_offset": 30461984,
+      "source_bytes": 7200,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 36,
+      "triangle_candidates": 299,
+      "wall_records": 66
+    },
+    {
+      "id": 211,
+      "source_offset": 30510160,
+      "source_bytes": 11040,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 43,
+      "triangle_candidates": 285,
+      "wall_records": 125
+    },
+    {
+      "id": 212,
+      "source_offset": 30574736,
+      "source_bytes": 5920,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 38,
+      "triangle_candidates": 222,
+      "wall_records": 41
+    },
+    {
+      "id": 213,
+      "source_offset": 30620640,
+      "source_bytes": 3616,
+      "assets": 4,
+      "instances": 4,
+      "quantized_parts": 7,
+      "triangle_candidates": 133,
+      "wall_records": 42
+    },
+    {
+      "id": 214,
+      "source_offset": 30755968,
+      "source_bytes": 2848,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 12,
+      "triangle_candidates": 17,
+      "wall_records": 41
+    },
+    {
+      "id": 216,
+      "source_offset": 30994128,
+      "source_bytes": 16160,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 63,
+      "triangle_candidates": 729,
+      "wall_records": 158
+    },
+    {
+      "id": 217,
+      "source_offset": 31118064,
+      "source_bytes": 8992,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 70,
+      "triangle_candidates": 311,
+      "wall_records": 50
+    },
+    {
+      "id": 220,
+      "source_offset": 31367168,
+      "source_bytes": 10016,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 62,
+      "triangle_candidates": 455,
+      "wall_records": 84
+    },
+    {
+      "id": 222,
+      "source_offset": 31549536,
+      "source_bytes": 22048,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 187,
+      "triangle_candidates": 881,
+      "wall_records": 164
+    },
+    {
+      "id": 224,
+      "source_offset": 31807440,
+      "source_bytes": 6688,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 53,
+      "triangle_candidates": 370,
+      "wall_records": 26
+    },
+    {
+      "id": 301,
+      "source_offset": 31940320,
+      "source_bytes": 6944,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 31,
+      "triangle_candidates": 348,
+      "wall_records": 49
+    },
+    {
+      "id": 302,
+      "source_offset": 32022784,
+      "source_bytes": 2080,
+      "assets": 2,
+      "instances": 2,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 42
+    },
+    {
+      "id": 305,
+      "source_offset": 32167312,
+      "source_bytes": 7456,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 60,
+      "triangle_candidates": 310,
+      "wall_records": 39
+    },
+    {
+      "id": 306,
+      "source_offset": 32259408,
+      "source_bytes": 2336,
+      "assets": 2,
+      "instances": 2,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 52
+    },
+    {
+      "id": 307,
+      "source_offset": 32372016,
+      "source_bytes": 13088,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 88,
+      "triangle_candidates": 475,
+      "wall_records": 102
+    },
+    {
+      "id": 308,
+      "source_offset": 32449408,
+      "source_bytes": 4128,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 21,
+      "triangle_candidates": 178,
+      "wall_records": 26
+    },
+    {
+      "id": 310,
+      "source_offset": 32600528,
+      "source_bytes": 1568,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 30
+    },
+    {
+      "id": 312,
+      "source_offset": 32676736,
+      "source_bytes": 1312,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 23
+    },
+    {
+      "id": 313,
+      "source_offset": 32770704,
+      "source_bytes": 7200,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 47,
+      "triangle_candidates": 323,
+      "wall_records": 40
+    },
+    {
+      "id": 314,
+      "source_offset": 32884912,
+      "source_bytes": 13344,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 89,
+      "triangle_candidates": 386,
+      "wall_records": 116
+    },
+    {
+      "id": 315,
+      "source_offset": 32987872,
+      "source_bytes": 9760,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 71,
+      "triangle_candidates": 341,
+      "wall_records": 79
+    },
+    {
+      "id": 316,
+      "source_offset": 33092000,
+      "source_bytes": 5664,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 20,
+      "triangle_candidates": 299,
+      "wall_records": 46
+    },
+    {
+      "id": 317,
+      "source_offset": 33198896,
+      "source_bytes": 10272,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 85,
+      "triangle_candidates": 434,
+      "wall_records": 55
+    },
+    {
+      "id": 318,
+      "source_offset": 33250272,
+      "source_bytes": 5152,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 19,
+      "triangle_candidates": 154,
+      "wall_records": 54
+    },
+    {
+      "id": 401,
+      "source_offset": 33568784,
+      "source_bytes": 58656,
+      "assets": 66,
+      "instances": 66,
+      "quantized_parts": 440,
+      "triangle_candidates": 2530,
+      "wall_records": 471
+    },
+    {
+      "id": 402,
+      "source_offset": 33768688,
+      "source_bytes": 18464,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 98,
+      "triangle_candidates": 754,
+      "wall_records": 178
+    },
+    {
+      "id": 403,
+      "source_offset": 33925824,
+      "source_bytes": 6688,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 35,
+      "triangle_candidates": 263,
+      "wall_records": 51
+    },
+    {
+      "id": 404,
+      "source_offset": 33984752,
+      "source_bytes": 12320,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 85,
+      "triangle_candidates": 493,
+      "wall_records": 110
+    },
+    {
+      "id": 406,
+      "source_offset": 34100464,
+      "source_bytes": 19744,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 154,
+      "triangle_candidates": 683,
+      "wall_records": 175
+    },
+    {
+      "id": 409,
+      "source_offset": 34336784,
+      "source_bytes": 12576,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 99,
+      "triangle_candidates": 462,
+      "wall_records": 89
+    },
+    {
+      "id": 411,
+      "source_offset": 34520384,
+      "source_bytes": 13600,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 75,
+      "triangle_candidates": 565,
+      "wall_records": 128
+    },
+    {
+      "id": 412,
+      "source_offset": 34674832,
+      "source_bytes": 16416,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 126,
+      "triangle_candidates": 685,
+      "wall_records": 125
+    },
+    {
+      "id": 413,
+      "source_offset": 34757408,
+      "source_bytes": 8224,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 53,
+      "triangle_candidates": 360,
+      "wall_records": 56
+    },
+    {
+      "id": 414,
+      "source_offset": 34874608,
+      "source_bytes": 15904,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 106,
+      "triangle_candidates": 708,
+      "wall_records": 128
+    },
+    {
+      "id": 415,
+      "source_offset": 35022704,
+      "source_bytes": 15136,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 74,
+      "triangle_candidates": 557,
+      "wall_records": 167
+    },
+    {
+      "id": 419,
+      "source_offset": 35389328,
+      "source_bytes": 10528,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 40,
+      "triangle_candidates": 376,
+      "wall_records": 111
+    },
+    {
+      "id": 420,
+      "source_offset": 35530736,
+      "source_bytes": 28448,
+      "assets": 37,
+      "instances": 37,
+      "quantized_parts": 176,
+      "triangle_candidates": 1077,
+      "wall_records": 276
+    },
+    {
+      "id": 422,
+      "source_offset": 35743168,
+      "source_bytes": 8224,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 39,
+      "triangle_candidates": 386,
+      "wall_records": 64
+    },
+    {
+      "id": 424,
+      "source_offset": 35858976,
+      "source_bytes": 6944,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 53,
+      "triangle_candidates": 294,
+      "wall_records": 47
+    },
+    {
+      "id": 426,
+      "source_offset": 35950432,
+      "source_bytes": 9504,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 48,
+      "triangle_candidates": 332,
+      "wall_records": 87
+    },
+    {
+      "id": 427,
+      "source_offset": 36175520,
+      "source_bytes": 13344,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 67,
+      "triangle_candidates": 616,
+      "wall_records": 105
+    },
+    {
+      "id": 428,
+      "source_offset": 36222736,
+      "source_bytes": 3104,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 18,
+      "triangle_candidates": 171,
+      "wall_records": 3
+    },
+    {
+      "id": 429,
+      "source_offset": 36343200,
+      "source_bytes": 10784,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 82,
+      "triangle_candidates": 346,
+      "wall_records": 76
+    },
+    {
+      "id": 430,
+      "source_offset": 36477168,
+      "source_bytes": 3616,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 30,
+      "triangle_candidates": 92,
+      "wall_records": 24
+    },
+    {
+      "id": 431,
+      "source_offset": 36541056,
+      "source_bytes": 8736,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 62,
+      "triangle_candidates": 329,
+      "wall_records": 73
+    },
+    {
+      "id": 432,
+      "source_offset": 36674320,
+      "source_bytes": 6944,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 59,
+      "triangle_candidates": 307,
+      "wall_records": 37
+    },
+    {
+      "id": 433,
+      "source_offset": 36750656,
+      "source_bytes": 1056,
+      "assets": 2,
+      "instances": 2,
+      "quantized_parts": 1,
+      "triangle_candidates": 1,
+      "wall_records": 7
+    },
+    {
+      "id": 434,
+      "source_offset": 36863968,
+      "source_bytes": 8480,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 52,
+      "triangle_candidates": 385,
+      "wall_records": 60
+    },
+    {
+      "id": 435,
+      "source_offset": 37225232,
+      "source_bytes": 20512,
+      "assets": 30,
+      "instances": 30,
+      "quantized_parts": 153,
+      "triangle_candidates": 627,
+      "wall_records": 198
+    },
+    {
+      "id": 437,
+      "source_offset": 37430432,
+      "source_bytes": 1056,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 16
+    },
+    {
+      "id": 438,
+      "source_offset": 37595280,
+      "source_bytes": 15136,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 118,
+      "triangle_candidates": 502,
+      "wall_records": 147
+    },
+    {
+      "id": 501,
+      "source_offset": 37729248,
+      "source_bytes": 21024,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 167,
+      "triangle_candidates": 930,
+      "wall_records": 135
+    },
+    {
+      "id": 502,
+      "source_offset": 37971392,
+      "source_bytes": 49440,
+      "assets": 68,
+      "instances": 68,
+      "quantized_parts": 351,
+      "triangle_candidates": 1943,
+      "wall_records": 404
+    },
+    {
+      "id": 503,
+      "source_offset": 38322496,
+      "source_bytes": 62752,
+      "assets": 60,
+      "instances": 60,
+      "quantized_parts": 315,
+      "triangle_candidates": 2959,
+      "wall_records": 640
+    },
+    {
+      "id": 504,
+      "source_offset": 38605872,
+      "source_bytes": 14112,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 97,
+      "triangle_candidates": 428,
+      "wall_records": 147
+    },
+    {
+      "id": 505,
+      "source_offset": 38823888,
+      "source_bytes": 47392,
+      "assets": 67,
+      "instances": 67,
+      "quantized_parts": 274,
+      "triangle_candidates": 2063,
+      "wall_records": 394
+    },
+    {
+      "id": 506,
+      "source_offset": 38979392,
+      "source_bytes": 21280,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 112,
+      "triangle_candidates": 1091,
+      "wall_records": 178
+    },
+    {
+      "id": 507,
+      "source_offset": 39113872,
+      "source_bytes": 28960,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 194,
+      "triangle_candidates": 1359,
+      "wall_records": 248
+    },
+    {
+      "id": 508,
+      "source_offset": 39303056,
+      "source_bytes": 29216,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 132,
+      "triangle_candidates": 1236,
+      "wall_records": 324
+    },
+    {
+      "id": 510,
+      "source_offset": 39394080,
+      "source_bytes": 1312,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 25
+    },
+    {
+      "id": 604,
+      "source_offset": 40160064,
+      "source_bytes": 16928,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 73,
+      "triangle_candidates": 746,
+      "wall_records": 143
+    },
+    {
+      "id": 609,
+      "source_offset": 40417456,
+      "source_bytes": 21024,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 139,
+      "triangle_candidates": 972,
+      "wall_records": 163
+    },
+    {
+      "id": 610,
+      "source_offset": 40599136,
+      "source_bytes": 21280,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 142,
+      "triangle_candidates": 1151,
+      "wall_records": 130
+    },
+    {
+      "id": 611,
+      "source_offset": 40850912,
+      "source_bytes": 23072,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 119,
+      "triangle_candidates": 893,
+      "wall_records": 232
+    },
+    {
+      "id": 612,
+      "source_offset": 41019008,
+      "source_bytes": 18976,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 118,
+      "triangle_candidates": 843,
+      "wall_records": 157
+    },
+    {
+      "id": 613,
+      "source_offset": 41234064,
+      "source_bytes": 25632,
+      "assets": 43,
+      "instances": 43,
+      "quantized_parts": 107,
+      "triangle_candidates": 825,
+      "wall_records": 303
+    },
+    {
+      "id": 702,
+      "source_offset": 41465632,
+      "source_bytes": 44832,
+      "assets": 38,
+      "instances": 38,
+      "quantized_parts": 454,
+      "triangle_candidates": 2666,
+      "wall_records": 102
+    },
+    {
+      "id": 703,
+      "source_offset": 41765360,
+      "source_bytes": 45344,
+      "assets": 53,
+      "instances": 53,
+      "quantized_parts": 275,
+      "triangle_candidates": 1893,
+      "wall_records": 433
+    },
+    {
+      "id": 704,
+      "source_offset": 42052432,
+      "source_bytes": 14880,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 80,
+      "triangle_candidates": 672,
+      "wall_records": 146
+    },
+    {
+      "id": 706,
+      "source_offset": 42300064,
+      "source_bytes": 36896,
+      "assets": 39,
+      "instances": 39,
+      "quantized_parts": 314,
+      "triangle_candidates": 2099,
+      "wall_records": 138
+    },
+    {
+      "id": 707,
+      "source_offset": 42469904,
+      "source_bytes": 18976,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 124,
+      "triangle_candidates": 948,
+      "wall_records": 113
+    },
+    {
+      "id": 709,
+      "source_offset": 42819472,
+      "source_bytes": 16160,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 67,
+      "triangle_candidates": 638,
+      "wall_records": 194
+    },
+    {
+      "id": 710,
+      "source_offset": 43060144,
+      "source_bytes": 46624,
+      "assets": 59,
+      "instances": 59,
+      "quantized_parts": 328,
+      "triangle_candidates": 2314,
+      "wall_records": 302
+    },
+    {
+      "id": 711,
+      "source_offset": 43168816,
+      "source_bytes": 13344,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 95,
+      "triangle_candidates": 767,
+      "wall_records": 57
+    },
+    {
+      "id": 712,
+      "source_offset": 43486944,
+      "source_bytes": 27936,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 287,
+      "triangle_candidates": 1416,
+      "wall_records": 124
+    },
+    {
+      "id": 713,
+      "source_offset": 43682320,
+      "source_bytes": 23840,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 230,
+      "triangle_candidates": 1251,
+      "wall_records": 89
+    },
+    {
+      "id": 714,
+      "source_offset": 43866416,
+      "source_bytes": 22560,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 145,
+      "triangle_candidates": 1146,
+      "wall_records": 146
+    },
+    {
+      "id": 715,
+      "source_offset": 44091072,
+      "source_bytes": 18976,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 142,
+      "triangle_candidates": 1097,
+      "wall_records": 90
+    },
+    {
+      "id": 716,
+      "source_offset": 44181296,
+      "source_bytes": 6432,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 39,
+      "triangle_candidates": 287,
+      "wall_records": 50
+    },
+    {
+      "id": 717,
+      "source_offset": 44395376,
+      "source_bytes": 38688,
+      "assets": 55,
+      "instances": 55,
+      "quantized_parts": 302,
+      "triangle_candidates": 1383,
+      "wall_records": 325
+    },
+    {
+      "id": 718,
+      "source_offset": 44555248,
+      "source_bytes": 5920,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 22,
+      "triangle_candidates": 75,
+      "wall_records": 83
+    },
+    {
+      "id": 719,
+      "source_offset": 44675104,
+      "source_bytes": 9504,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 40,
+      "triangle_candidates": 368,
+      "wall_records": 92
+    },
+    {
+      "id": 720,
+      "source_offset": 44863168,
+      "source_bytes": 62496,
+      "assets": 53,
+      "instances": 53,
+      "quantized_parts": 654,
+      "triangle_candidates": 3596,
+      "wall_records": 164
+    },
+    {
+      "id": 721,
+      "source_offset": 44983600,
+      "source_bytes": 4640,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 22,
+      "triangle_candidates": 205,
+      "wall_records": 42
+    },
+    {
+      "id": 722,
+      "source_offset": 45057552,
+      "source_bytes": 26912,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 276,
+      "triangle_candidates": 1579,
+      "wall_records": 57
+    },
+    {
+      "id": 727,
+      "source_offset": 45391472,
+      "source_bytes": 14368,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 92,
+      "triangle_candidates": 801,
+      "wall_records": 86
+    },
+    {
+      "id": 728,
+      "source_offset": 45455712,
+      "source_bytes": 7968,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 34,
+      "triangle_candidates": 277,
+      "wall_records": 69
+    },
+    {
+      "id": 729,
+      "source_offset": 45671872,
+      "source_bytes": 10528,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 58,
+      "triangle_candidates": 301,
+      "wall_records": 140
+    },
+    {
+      "id": 730,
+      "source_offset": 45772704,
+      "source_bytes": 26144,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 234,
+      "triangle_candidates": 1525,
+      "wall_records": 74
+    },
+    {
+      "id": 731,
+      "source_offset": 45938896,
+      "source_bytes": 12064,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 90,
+      "triangle_candidates": 462,
+      "wall_records": 99
+    },
+    {
+      "id": 732,
+      "source_offset": 46016576,
+      "source_bytes": 1056,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 14
+    },
+    {
+      "id": 801,
+      "source_offset": 46371936,
+      "source_bytes": 28192,
+      "assets": 34,
+      "instances": 34,
+      "quantized_parts": 167,
+      "triangle_candidates": 1301,
+      "wall_records": 235
+    },
+    {
+      "id": 802,
+      "source_offset": 46480704,
+      "source_bytes": 16160,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 91,
+      "triangle_candidates": 730,
+      "wall_records": 159
+    },
+    {
+      "id": 803,
+      "source_offset": 46703888,
+      "source_bytes": 19744,
+      "assets": 30,
+      "instances": 30,
+      "quantized_parts": 145,
+      "triangle_candidates": 749,
+      "wall_records": 146
+    },
+    {
+      "id": 804,
+      "source_offset": 46915136,
+      "source_bytes": 35872,
+      "assets": 41,
+      "instances": 41,
+      "quantized_parts": 229,
+      "triangle_candidates": 2052,
+      "wall_records": 194
+    },
+    {
+      "id": 805,
+      "source_offset": 47038336,
+      "source_bytes": 5408,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 12,
+      "triangle_candidates": 216,
+      "wall_records": 63
+    },
+    {
+      "id": 806,
+      "source_offset": 47151904,
+      "source_bytes": 21792,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 150,
+      "triangle_candidates": 1053,
+      "wall_records": 151
+    },
+    {
+      "id": 807,
+      "source_offset": 47267968,
+      "source_bytes": 15136,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 102,
+      "triangle_candidates": 426,
+      "wall_records": 157
+    },
+    {
+      "id": 808,
+      "source_offset": 47404816,
+      "source_bytes": 9504,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 41,
+      "triangle_candidates": 339,
+      "wall_records": 98
+    },
+    {
+      "id": 809,
+      "source_offset": 47559872,
+      "source_bytes": 30240,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 210,
+      "triangle_candidates": 1170,
+      "wall_records": 293
+    },
+    {
+      "id": 811,
+      "source_offset": 47851360,
+      "source_bytes": 28704,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 247,
+      "triangle_candidates": 1281,
+      "wall_records": 182
+    },
+    {
+      "id": 812,
+      "source_offset": 48100688,
+      "source_bytes": 24096,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 218,
+      "triangle_candidates": 1088,
+      "wall_records": 145
+    },
+    {
+      "id": 813,
+      "source_offset": 48287824,
+      "source_bytes": 15136,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 78,
+      "triangle_candidates": 388,
+      "wall_records": 176
+    },
+    {
+      "id": 815,
+      "source_offset": 48567456,
+      "source_bytes": 34080,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 329,
+      "triangle_candidates": 1500,
+      "wall_records": 196
+    },
+    {
+      "id": 816,
+      "source_offset": 48776304,
+      "source_bytes": 16928,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 144,
+      "triangle_candidates": 713,
+      "wall_records": 102
+    },
+    {
+      "id": 817,
+      "source_offset": 48832512,
+      "source_bytes": 3616,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 13,
+      "triangle_candidates": 40,
+      "wall_records": 45
+    },
+    {
+      "id": 819,
+      "source_offset": 48972064,
+      "source_bytes": 14368,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 161,
+      "triangle_candidates": 668,
+      "wall_records": 36
+    },
+    {
+      "id": 820,
+      "source_offset": 49053920,
+      "source_bytes": 5408,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 24,
+      "triangle_candidates": 312,
+      "wall_records": 32
+    },
+    {
+      "id": 821,
+      "source_offset": 49187360,
+      "source_bytes": 8480,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 79,
+      "triangle_candidates": 365,
+      "wall_records": 40
+    },
+    {
+      "id": 822,
+      "source_offset": 49236160,
+      "source_bytes": 4640,
+      "assets": 4,
+      "instances": 4,
+      "quantized_parts": 18,
+      "triangle_candidates": 217,
+      "wall_records": 43
+    },
+    {
+      "id": 901,
+      "source_offset": 49491088,
+      "source_bytes": 25632,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 143,
+      "triangle_candidates": 1200,
+      "wall_records": 234
+    },
+    {
+      "id": 903,
+      "source_offset": 49755568,
+      "source_bytes": 12832,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 97,
+      "triangle_candidates": 634,
+      "wall_records": 75
+    },
+    {
+      "id": 904,
+      "source_offset": 50029456,
+      "source_bytes": 32800,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 129,
+      "triangle_candidates": 1311,
+      "wall_records": 416
+    },
+    {
+      "id": 905,
+      "source_offset": 50158944,
+      "source_bytes": 14624,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 107,
+      "triangle_candidates": 680,
+      "wall_records": 97
+    },
+    {
+      "id": 906,
+      "source_offset": 50255904,
+      "source_bytes": 5920,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 41,
+      "triangle_candidates": 330,
+      "wall_records": 19
+    },
+    {
+      "id": 908,
+      "source_offset": 50622800,
+      "source_bytes": 18208,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 93,
+      "triangle_candidates": 701,
+      "wall_records": 200
+    },
+    {
+      "id": 909,
+      "source_offset": 50777856,
+      "source_bytes": 27424,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 176,
+      "triangle_candidates": 1202,
+      "wall_records": 209
+    },
+    {
+      "id": 910,
+      "source_offset": 50901488,
+      "source_bytes": 13600,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 80,
+      "triangle_candidates": 274,
+      "wall_records": 158
+    },
+    {
+      "id": 912,
+      "source_offset": 51158080,
+      "source_bytes": 8224,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 39,
+      "triangle_candidates": 306,
+      "wall_records": 82
+    },
+    {
+      "id": 913,
+      "source_offset": 51242352,
+      "source_bytes": 11552,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 70,
+      "triangle_candidates": 400,
+      "wall_records": 98
+    },
+    {
+      "id": 914,
+      "source_offset": 51373872,
+      "source_bytes": 8992,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 56,
+      "triangle_candidates": 420,
+      "wall_records": 74
+    },
+    {
+      "id": 915,
+      "source_offset": 51541728,
+      "source_bytes": 37920,
+      "assets": 50,
+      "instances": 50,
+      "quantized_parts": 318,
+      "triangle_candidates": 1684,
+      "wall_records": 215
+    },
+    {
+      "id": 916,
+      "source_offset": 51758048,
+      "source_bytes": 25376,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 131,
+      "triangle_candidates": 935,
+      "wall_records": 309
+    },
+    {
+      "id": 917,
+      "source_offset": 51919008,
+      "source_bytes": 4896,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 18,
+      "triangle_candidates": 214,
+      "wall_records": 41
+    },
+    {
+      "id": 918,
+      "source_offset": 51997152,
+      "source_bytes": 9248,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 41,
+      "triangle_candidates": 459,
+      "wall_records": 76
+    },
+    {
+      "id": 920,
+      "source_offset": 52289520,
+      "source_bytes": 17440,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 150,
+      "triangle_candidates": 868,
+      "wall_records": 90
+    },
+    {
+      "id": 921,
+      "source_offset": 52392864,
+      "source_bytes": 10272,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 50,
+      "triangle_candidates": 483,
+      "wall_records": 85
+    },
+    {
+      "id": 922,
+      "source_offset": 52652880,
+      "source_bytes": 43808,
+      "assets": 45,
+      "instances": 45,
+      "quantized_parts": 209,
+      "triangle_candidates": 1948,
+      "wall_records": 456
+    },
+    {
+      "id": 923,
+      "source_offset": 52741584,
+      "source_bytes": 4384,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 17,
+      "triangle_candidates": 200,
+      "wall_records": 25
+    },
+    {
+      "id": 925,
+      "source_offset": 52958288,
+      "source_bytes": 17696,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 123,
+      "triangle_candidates": 655,
+      "wall_records": 146
+    },
+    {
+      "id": 926,
+      "source_offset": 53089520,
+      "source_bytes": 10784,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 77,
+      "triangle_candidates": 420,
+      "wall_records": 73
+    },
+    {
+      "id": 927,
+      "source_offset": 53210800,
+      "source_bytes": 18720,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 149,
+      "triangle_candidates": 753,
+      "wall_records": 146
+    },
+    {
+      "id": 928,
+      "source_offset": 53405232,
+      "source_bytes": 6688,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 13,
+      "triangle_candidates": 291,
+      "wall_records": 84
+    },
+    {
+      "id": 929,
+      "source_offset": 53538736,
+      "source_bytes": 7712,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 52,
+      "triangle_candidates": 248,
+      "wall_records": 79
+    },
+    {
+      "id": 930,
+      "source_offset": 53639104,
+      "source_bytes": 5920,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 41,
+      "triangle_candidates": 302,
+      "wall_records": 30
+    },
+    {
+      "id": 931,
+      "source_offset": 53810304,
+      "source_bytes": 8480,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 69,
+      "triangle_candidates": 353,
+      "wall_records": 52
+    },
+    {
+      "id": 932,
+      "source_offset": 53976000,
+      "source_bytes": 28192,
+      "assets": 29,
+      "instances": 29,
+      "quantized_parts": 238,
+      "triangle_candidates": 1157,
+      "wall_records": 220
+    },
+    {
+      "id": 933,
+      "source_offset": 54106928,
+      "source_bytes": 13856,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 117,
+      "triangle_candidates": 621,
+      "wall_records": 87
+    },
+    {
+      "id": 934,
+      "source_offset": 54157200,
+      "source_bytes": 5664,
+      "assets": 4,
+      "instances": 4,
+      "quantized_parts": 44,
+      "triangle_candidates": 287,
+      "wall_records": 28
+    },
+    {
+      "id": 1002,
+      "source_offset": 54250720,
+      "source_bytes": 9760,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 59,
+      "triangle_candidates": 456,
+      "wall_records": 75
+    },
+    {
+      "id": 1009,
+      "source_offset": 54480720,
+      "source_bytes": 25632,
+      "assets": 29,
+      "instances": 29,
+      "quantized_parts": 186,
+      "triangle_candidates": 1059,
+      "wall_records": 219
+    },
+    {
+      "id": 1011,
+      "source_offset": 54660160,
+      "source_bytes": 6944,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 45,
+      "triangle_candidates": 254,
+      "wall_records": 64
+    },
+    {
+      "id": 1012,
+      "source_offset": 54781296,
+      "source_bytes": 13600,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 87,
+      "triangle_candidates": 568,
+      "wall_records": 107
+    },
+    {
+      "id": 1013,
+      "source_offset": 55025360,
+      "source_bytes": 22816,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 101,
+      "triangle_candidates": 1095,
+      "wall_records": 219
+    },
+    {
+      "id": 1020,
+      "source_offset": 55132496,
+      "source_bytes": 13856,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 106,
+      "triangle_candidates": 712,
+      "wall_records": 76
+    },
+    {
+      "id": 1205,
+      "source_offset": 57527360,
+      "source_bytes": 9760,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 70,
+      "triangle_candidates": 239,
+      "wall_records": 79
+    },
+    {
+      "id": 1210,
+      "source_offset": 57597520,
+      "source_bytes": 18976,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 144,
+      "triangle_candidates": 1053,
+      "wall_records": 97
+    },
+    {
+      "id": 1311,
+      "source_offset": 57711728,
+      "source_bytes": 7456,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 44,
+      "triangle_candidates": 295,
+      "wall_records": 66
+    },
+    {
+      "id": 1312,
+      "source_offset": 57835920,
+      "source_bytes": 8736,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 72,
+      "triangle_candidates": 330,
+      "wall_records": 63
+    },
+    {
+      "id": 1313,
+      "source_offset": 57940240,
+      "source_bytes": 14368,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 124,
+      "triangle_candidates": 604,
+      "wall_records": 92
+    },
+    {
+      "id": 1314,
+      "source_offset": 58005648,
+      "source_bytes": 4640,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 26,
+      "triangle_candidates": 200,
+      "wall_records": 30
+    },
+    {
+      "id": 1501,
+      "source_offset": 59753280,
+      "source_bytes": 9504,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 67,
+      "triangle_candidates": 202,
+      "wall_records": 97
+    },
+    {
+      "id": 1502,
+      "source_offset": 59842496,
+      "source_bytes": 5664,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 45,
+      "triangle_candidates": 320,
+      "wall_records": 23
+    },
+    {
+      "id": 1505,
+      "source_offset": 60155216,
+      "source_bytes": 14112,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 80,
+      "triangle_candidates": 449,
+      "wall_records": 134
+    },
+    {
+      "id": 1506,
+      "source_offset": 60255792,
+      "source_bytes": 11296,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 82,
+      "triangle_candidates": 357,
+      "wall_records": 88
+    },
+    {
+      "id": 1509,
+      "source_offset": 60516208,
+      "source_bytes": 14880,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 110,
+      "triangle_candidates": 768,
+      "wall_records": 79
+    },
+    {
+      "id": 1510,
+      "source_offset": 60702176,
+      "source_bytes": 31008,
+      "assets": 57,
+      "instances": 57,
+      "quantized_parts": 214,
+      "triangle_candidates": 870,
+      "wall_records": 292
+    },
+    {
+      "id": 1511,
+      "source_offset": 60790576,
+      "source_bytes": 10016,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 44,
+      "triangle_candidates": 336,
+      "wall_records": 87
+    },
+    {
+      "id": 1512,
+      "source_offset": 60886896,
+      "source_bytes": 11296,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 63,
+      "triangle_candidates": 486,
+      "wall_records": 92
+    },
+    {
+      "id": 1513,
+      "source_offset": 60971168,
+      "source_bytes": 16672,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 118,
+      "triangle_candidates": 610,
+      "wall_records": 105
+    },
+    {
+      "id": 1514,
+      "source_offset": 61056368,
+      "source_bytes": 6944,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 38,
+      "triangle_candidates": 245,
+      "wall_records": 43
+    },
+    {
+      "id": 1515,
+      "source_offset": 61156880,
+      "source_bytes": 2848,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 18,
+      "triangle_candidates": 32,
+      "wall_records": 15
+    },
+    {
+      "id": 1518,
+      "source_offset": 61320896,
+      "source_bytes": 5408,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 28,
+      "triangle_candidates": 226,
+      "wall_records": 43
+    },
+    {
+      "id": 1519,
+      "source_offset": 61358336,
+      "source_bytes": 5920,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 29,
+      "triangle_candidates": 185,
+      "wall_records": 53
+    },
+    {
+      "id": 1520,
+      "source_offset": 61444096,
+      "source_bytes": 10528,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 44,
+      "triangle_candidates": 416,
+      "wall_records": 95
+    },
+    {
+      "id": 1521,
+      "source_offset": 61654064,
+      "source_bytes": 7712,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 38,
+      "triangle_candidates": 378,
+      "wall_records": 51
+    },
+    {
+      "id": 1522,
+      "source_offset": 61723328,
+      "source_bytes": 9504,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 58,
+      "triangle_candidates": 291,
+      "wall_records": 82
+    },
+    {
+      "id": 1523,
+      "source_offset": 61838112,
+      "source_bytes": 7712,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 43,
+      "triangle_candidates": 257,
+      "wall_records": 67
+    },
+    {
+      "id": 1524,
+      "source_offset": 61987952,
+      "source_bytes": 10016,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 62,
+      "triangle_candidates": 404,
+      "wall_records": 76
+    },
+    {
+      "id": 1525,
+      "source_offset": 62104432,
+      "source_bytes": 10528,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 62,
+      "triangle_candidates": 431,
+      "wall_records": 85
+    },
+    {
+      "id": 1526,
+      "source_offset": 62188384,
+      "source_bytes": 11040,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 43,
+      "triangle_candidates": 578,
+      "wall_records": 81
+    },
+    {
+      "id": 1527,
+      "source_offset": 62312880,
+      "source_bytes": 7968,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 40,
+      "triangle_candidates": 274,
+      "wall_records": 61
+    },
+    {
+      "id": 1529,
+      "source_offset": 62510768,
+      "source_bytes": 12064,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 63,
+      "triangle_candidates": 426,
+      "wall_records": 100
+    },
+    {
+      "id": 1530,
+      "source_offset": 62781936,
+      "source_bytes": 16160,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 103,
+      "triangle_candidates": 432,
+      "wall_records": 146
+    },
+    {
+      "id": 1531,
+      "source_offset": 62887456,
+      "source_bytes": 7200,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 56,
+      "triangle_candidates": 221,
+      "wall_records": 55
+    },
+    {
+      "id": 1532,
+      "source_offset": 63018176,
+      "source_bytes": 19744,
+      "assets": 30,
+      "instances": 30,
+      "quantized_parts": 143,
+      "triangle_candidates": 631,
+      "wall_records": 180
+    },
+    {
+      "id": 1533,
+      "source_offset": 63142432,
+      "source_bytes": 11296,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 77,
+      "triangle_candidates": 278,
+      "wall_records": 105
+    },
+    {
+      "id": 1534,
+      "source_offset": 63275040,
+      "source_bytes": 4896,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 15,
+      "triangle_candidates": 195,
+      "wall_records": 41
+    },
+    {
+      "id": 1537,
+      "source_offset": 63469088,
+      "source_bytes": 1824,
+      "assets": 3,
+      "instances": 3,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 30
+    },
+    {
+      "id": 1538,
+      "source_offset": 63611920,
+      "source_bytes": 7712,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 41,
+      "triangle_candidates": 297,
+      "wall_records": 61
+    },
+    {
+      "id": 1602,
+      "source_offset": 63929344,
+      "source_bytes": 13600,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 61,
+      "triangle_candidates": 714,
+      "wall_records": 94
+    },
+    {
+      "id": 1603,
+      "source_offset": 64064624,
+      "source_bytes": 800,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 3,
+      "triangle_candidates": 4,
+      "wall_records": 0
+    },
+    {
+      "id": 1605,
+      "source_offset": 64443088,
+      "source_bytes": 40736,
+      "assets": 50,
+      "instances": 50,
+      "quantized_parts": 294,
+      "triangle_candidates": 1856,
+      "wall_records": 288
+    },
+    {
+      "id": 1606,
+      "source_offset": 64657968,
+      "source_bytes": 17184,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 91,
+      "triangle_candidates": 720,
+      "wall_records": 148
+    },
+    {
+      "id": 1607,
+      "source_offset": 64922768,
+      "source_bytes": 42784,
+      "assets": 45,
+      "instances": 45,
+      "quantized_parts": 341,
+      "triangle_candidates": 1531,
+      "wall_records": 409
+    },
+    {
+      "id": 1609,
+      "source_offset": 65123152,
+      "source_bytes": 15136,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 122,
+      "triangle_candidates": 813,
+      "wall_records": 65
+    },
+    {
+      "id": 1610,
+      "source_offset": 65385552,
+      "source_bytes": 27424,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 152,
+      "triangle_candidates": 1199,
+      "wall_records": 257
+    },
+    {
+      "id": 1611,
+      "source_offset": 65505168,
+      "source_bytes": 13600,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 86,
+      "triangle_candidates": 843,
+      "wall_records": 49
+    },
+    {
+      "id": 1612,
+      "source_offset": 65589824,
+      "source_bytes": 12064,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 88,
+      "triangle_candidates": 492,
+      "wall_records": 74
+    },
+    {
+      "id": 1613,
+      "source_offset": 65880192,
+      "source_bytes": 25376,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 205,
+      "triangle_candidates": 1300,
+      "wall_records": 146
+    },
+    {
+      "id": 1614,
+      "source_offset": 66001856,
+      "source_bytes": 12320,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 80,
+      "triangle_candidates": 593,
+      "wall_records": 74
+    },
+    {
+      "id": 1616,
+      "source_offset": 66209328,
+      "source_bytes": 7712,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 36,
+      "triangle_candidates": 346,
+      "wall_records": 75
+    },
+    {
+      "id": 1617,
+      "source_offset": 66373344,
+      "source_bytes": 17184,
+      "assets": 29,
+      "instances": 29,
+      "quantized_parts": 113,
+      "triangle_candidates": 616,
+      "wall_records": 133
+    },
+    {
+      "id": 1618,
+      "source_offset": 66454400,
+      "source_bytes": 11552,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 54,
+      "triangle_candidates": 598,
+      "wall_records": 66
+    },
+    {
+      "id": 1619,
+      "source_offset": 66554064,
+      "source_bytes": 5664,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 25,
+      "triangle_candidates": 346,
+      "wall_records": 19
+    },
+    {
+      "id": 1620,
+      "source_offset": 66690464,
+      "source_bytes": 17952,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 98,
+      "triangle_candidates": 640,
+      "wall_records": 182
+    },
+    {
+      "id": 1622,
+      "source_offset": 66856944,
+      "source_bytes": 1312,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 22
+    },
+    {
+      "id": 1623,
+      "source_offset": 66934064,
+      "source_bytes": 8736,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 61,
+      "triangle_candidates": 369,
+      "wall_records": 61
+    },
+    {
+      "id": 1624,
+      "source_offset": 66993888,
+      "source_bytes": 6944,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 44,
+      "triangle_candidates": 291,
+      "wall_records": 50
+    },
+    {
+      "id": 1625,
+      "source_offset": 67090336,
+      "source_bytes": 12832,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 100,
+      "triangle_candidates": 533,
+      "wall_records": 79
+    },
+    {
+      "id": 1626,
+      "source_offset": 67349424,
+      "source_bytes": 15136,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 82,
+      "triangle_candidates": 527,
+      "wall_records": 165
+    },
+    {
+      "id": 1627,
+      "source_offset": 67440992,
+      "source_bytes": 6944,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 53,
+      "triangle_candidates": 317,
+      "wall_records": 32
+    },
+    {
+      "id": 1628,
+      "source_offset": 67595440,
+      "source_bytes": 7200,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 53,
+      "triangle_candidates": 154,
+      "wall_records": 65
+    },
+    {
+      "id": 1629,
+      "source_offset": 67699536,
+      "source_bytes": 14112,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 77,
+      "triangle_candidates": 448,
+      "wall_records": 138
+    },
+    {
+      "id": 1630,
+      "source_offset": 68145440,
+      "source_bytes": 23584,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 151,
+      "triangle_candidates": 826,
+      "wall_records": 209
+    },
+    {
+      "id": 1631,
+      "source_offset": 68227472,
+      "source_bytes": 4640,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 17,
+      "triangle_candidates": 229,
+      "wall_records": 35
+    },
+    {
+      "id": 1632,
+      "source_offset": 68334400,
+      "source_bytes": 5152,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 22,
+      "triangle_candidates": 273,
+      "wall_records": 28
+    },
+    {
+      "id": 1633,
+      "source_offset": 68536224,
+      "source_bytes": 13856,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 114,
+      "triangle_candidates": 527,
+      "wall_records": 116
+    },
+    {
+      "id": 1634,
+      "source_offset": 68643440,
+      "source_bytes": 6432,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 39,
+      "triangle_candidates": 261,
+      "wall_records": 44
+    },
+    {
+      "id": 1635,
+      "source_offset": 68951152,
+      "source_bytes": 11040,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 65,
+      "triangle_candidates": 243,
+      "wall_records": 152
+    },
+    {
+      "id": 1636,
+      "source_offset": 69074464,
+      "source_bytes": 13856,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 129,
+      "triangle_candidates": 525,
+      "wall_records": 80
+    },
+    {
+      "id": 1637,
+      "source_offset": 69191248,
+      "source_bytes": 16160,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 110,
+      "triangle_candidates": 772,
+      "wall_records": 90
+    },
+    {
+      "id": 1638,
+      "source_offset": 69266048,
+      "source_bytes": 7200,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 33,
+      "triangle_candidates": 321,
+      "wall_records": 62
+    },
+    {
+      "id": 1639,
+      "source_offset": 69313984,
+      "source_bytes": 6432,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 27,
+      "triangle_candidates": 239,
+      "wall_records": 56
+    },
+    {
+      "id": 1701,
+      "source_offset": 69622128,
+      "source_bytes": 26400,
+      "assets": 35,
+      "instances": 35,
+      "quantized_parts": 146,
+      "triangle_candidates": 1292,
+      "wall_records": 198
+    },
+    {
+      "id": 1702,
+      "source_offset": 70024816,
+      "source_bytes": 44320,
+      "assets": 60,
+      "instances": 60,
+      "quantized_parts": 319,
+      "triangle_candidates": 1677,
+      "wall_records": 385
+    },
+    {
+      "id": 1703,
+      "source_offset": 70223648,
+      "source_bytes": 16928,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 91,
+      "triangle_candidates": 835,
+      "wall_records": 121
+    },
+    {
+      "id": 1704,
+      "source_offset": 70372256,
+      "source_bytes": 10016,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 70,
+      "triangle_candidates": 452,
+      "wall_records": 69
+    },
+    {
+      "id": 1705,
+      "source_offset": 70639088,
+      "source_bytes": 27424,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 219,
+      "triangle_candidates": 1162,
+      "wall_records": 205
+    },
+    {
+      "id": 1706,
+      "source_offset": 70799008,
+      "source_bytes": 9248,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 45,
+      "triangle_candidates": 484,
+      "wall_records": 78
+    },
+    {
+      "id": 1707,
+      "source_offset": 71046208,
+      "source_bytes": 15136,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 94,
+      "triangle_candidates": 581,
+      "wall_records": 126
+    },
+    {
+      "id": 1708,
+      "source_offset": 71229888,
+      "source_bytes": 19488,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 69,
+      "triangle_candidates": 665,
+      "wall_records": 261
+    },
+    {
+      "id": 1709,
+      "source_offset": 71302512,
+      "source_bytes": 5920,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 15,
+      "triangle_candidates": 253,
+      "wall_records": 71
+    },
+    {
+      "id": 1711,
+      "source_offset": 71601840,
+      "source_bytes": 9760,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 34,
+      "triangle_candidates": 486,
+      "wall_records": 103
+    },
+    {
+      "id": 1712,
+      "source_offset": 71822816,
+      "source_bytes": 21024,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 125,
+      "triangle_candidates": 818,
+      "wall_records": 164
+    },
+    {
+      "id": 1714,
+      "source_offset": 72135248,
+      "source_bytes": 17952,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 104,
+      "triangle_candidates": 896,
+      "wall_records": 135
+    },
+    {
+      "id": 1715,
+      "source_offset": 72181104,
+      "source_bytes": 2592,
+      "assets": 2,
+      "instances": 2,
+      "quantized_parts": 5,
+      "triangle_candidates": 79,
+      "wall_records": 37
+    },
+    {
+      "id": 1718,
+      "source_offset": 72802240,
+      "source_bytes": 24864,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 155,
+      "triangle_candidates": 950,
+      "wall_records": 260
+    },
+    {
+      "id": 1721,
+      "source_offset": 73026208,
+      "source_bytes": 7456,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 41,
+      "triangle_candidates": 307,
+      "wall_records": 72
+    },
+    {
+      "id": 1722,
+      "source_offset": 73112096,
+      "source_bytes": 2592,
+      "assets": 2,
+      "instances": 2,
+      "quantized_parts": 9,
+      "triangle_candidates": 92,
+      "wall_records": 26
+    },
+    {
+      "id": 1723,
+      "source_offset": 73380416,
+      "source_bytes": 12064,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 85,
+      "triangle_candidates": 315,
+      "wall_records": 164
+    },
+    {
+      "id": 1801,
+      "source_offset": 73554512,
+      "source_bytes": 19744,
+      "assets": 34,
+      "instances": 34,
+      "quantized_parts": 144,
+      "triangle_candidates": 728,
+      "wall_records": 134
+    },
+    {
+      "id": 1802,
+      "source_offset": 73696128,
+      "source_bytes": 13600,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 105,
+      "triangle_candidates": 492,
+      "wall_records": 110
+    },
+    {
+      "id": 1803,
+      "source_offset": 73977984,
+      "source_bytes": 27168,
+      "assets": 38,
+      "instances": 38,
+      "quantized_parts": 209,
+      "triangle_candidates": 1085,
+      "wall_records": 196
+    },
+    {
+      "id": 1804,
+      "source_offset": 74213632,
+      "source_bytes": 17440,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 105,
+      "triangle_candidates": 670,
+      "wall_records": 150
+    },
+    {
+      "id": 1805,
+      "source_offset": 74345808,
+      "source_bytes": 13088,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 89,
+      "triangle_candidates": 679,
+      "wall_records": 63
+    },
+    {
+      "id": 1806,
+      "source_offset": 74439136,
+      "source_bytes": 10784,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 55,
+      "triangle_candidates": 466,
+      "wall_records": 107
+    },
+    {
+      "id": 1808,
+      "source_offset": 74626128,
+      "source_bytes": 21280,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 116,
+      "triangle_candidates": 1080,
+      "wall_records": 150
+    },
+    {
+      "id": 1809,
+      "source_offset": 74689392,
+      "source_bytes": 9504,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 58,
+      "triangle_candidates": 204,
+      "wall_records": 98
+    },
+    {
+      "id": 1810,
+      "source_offset": 74814144,
+      "source_bytes": 18208,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 117,
+      "triangle_candidates": 545,
+      "wall_records": 176
+    },
+    {
+      "id": 1811,
+      "source_offset": 74909904,
+      "source_bytes": 15136,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 131,
+      "triangle_candidates": 555,
+      "wall_records": 106
+    },
+    {
+      "id": 1812,
+      "source_offset": 75013392,
+      "source_bytes": 14624,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 101,
+      "triangle_candidates": 563,
+      "wall_records": 113
+    },
+    {
+      "id": 1813,
+      "source_offset": 75160352,
+      "source_bytes": 22304,
+      "assets": 35,
+      "instances": 35,
+      "quantized_parts": 135,
+      "triangle_candidates": 779,
+      "wall_records": 208
+    },
+    {
+      "id": 1814,
+      "source_offset": 75277872,
+      "source_bytes": 11552,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 74,
+      "triangle_candidates": 353,
+      "wall_records": 111
+    },
+    {
+      "id": 1815,
+      "source_offset": 75407248,
+      "source_bytes": 12832,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 83,
+      "triangle_candidates": 403,
+      "wall_records": 116
+    },
+    {
+      "id": 1816,
+      "source_offset": 75631392,
+      "source_bytes": 37920,
+      "assets": 43,
+      "instances": 43,
+      "quantized_parts": 285,
+      "triangle_candidates": 1567,
+      "wall_records": 315
+    },
+    {
+      "id": 1817,
+      "source_offset": 75848016,
+      "source_bytes": 16928,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 91,
+      "triangle_candidates": 623,
+      "wall_records": 184
+    },
+    {
+      "id": 1818,
+      "source_offset": 76075616,
+      "source_bytes": 34336,
+      "assets": 41,
+      "instances": 41,
+      "quantized_parts": 195,
+      "triangle_candidates": 1477,
+      "wall_records": 324
+    },
+    {
+      "id": 1819,
+      "source_offset": 76163568,
+      "source_bytes": 6432,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 30,
+      "triangle_candidates": 294,
+      "wall_records": 50
+    },
+    {
+      "id": 1820,
+      "source_offset": 76236640,
+      "source_bytes": 11552,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 66,
+      "triangle_candidates": 469,
+      "wall_records": 89
+    },
+    {
+      "id": 1821,
+      "source_offset": 76363072,
+      "source_bytes": 14368,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 88,
+      "triangle_candidates": 484,
+      "wall_records": 128
+    },
+    {
+      "id": 1822,
+      "source_offset": 76445264,
+      "source_bytes": 15136,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 108,
+      "triangle_candidates": 693,
+      "wall_records": 116
+    },
+    {
+      "id": 1823,
+      "source_offset": 76579152,
+      "source_bytes": 10784,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 69,
+      "triangle_candidates": 446,
+      "wall_records": 69
+    },
+    {
+      "id": 1824,
+      "source_offset": 76795200,
+      "source_bytes": 6944,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 45,
+      "triangle_candidates": 207,
+      "wall_records": 50
+    },
+    {
+      "id": 1825,
+      "source_offset": 76858784,
+      "source_bytes": 13344,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 94,
+      "triangle_candidates": 404,
+      "wall_records": 115
+    },
+    {
+      "id": 1826,
+      "source_offset": 77328960,
+      "source_bytes": 51488,
+      "assets": 84,
+      "instances": 84,
+      "quantized_parts": 370,
+      "triangle_candidates": 1902,
+      "wall_records": 394
+    },
+    {
+      "id": 1827,
+      "source_offset": 77463744,
+      "source_bytes": 10272,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 70,
+      "triangle_candidates": 295,
+      "wall_records": 73
+    },
+    {
+      "id": 1828,
+      "source_offset": 77649424,
+      "source_bytes": 14112,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 63,
+      "triangle_candidates": 667,
+      "wall_records": 118
+    },
+    {
+      "id": 1829,
+      "source_offset": 77808592,
+      "source_bytes": 13600,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 96,
+      "triangle_candidates": 577,
+      "wall_records": 83
+    },
+    {
+      "id": 1830,
+      "source_offset": 77881744,
+      "source_bytes": 13344,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 111,
+      "triangle_candidates": 391,
+      "wall_records": 111
+    },
+    {
+      "id": 1832,
+      "source_offset": 78054912,
+      "source_bytes": 17440,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 103,
+      "triangle_candidates": 570,
+      "wall_records": 147
+    },
+    {
+      "id": 1834,
+      "source_offset": 78335712,
+      "source_bytes": 8480,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 66,
+      "triangle_candidates": 416,
+      "wall_records": 40
+    },
+    {
+      "id": 1835,
+      "source_offset": 78464640,
+      "source_bytes": 13856,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 91,
+      "triangle_candidates": 740,
+      "wall_records": 73
+    },
+    {
+      "id": 1836,
+      "source_offset": 78672544,
+      "source_bytes": 18976,
+      "assets": 30,
+      "instances": 30,
+      "quantized_parts": 124,
+      "triangle_candidates": 846,
+      "wall_records": 110
+    },
+    {
+      "id": 1837,
+      "source_offset": 78906064,
+      "source_bytes": 24352,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 185,
+      "triangle_candidates": 1184,
+      "wall_records": 149
+    },
+    {
+      "id": 1839,
+      "source_offset": 79122944,
+      "source_bytes": 6432,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 26,
+      "triangle_candidates": 199,
+      "wall_records": 52
+    },
+    {
+      "id": 1901,
+      "source_offset": 79213504,
+      "source_bytes": 3616,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 4,
+      "triangle_candidates": 4,
+      "wall_records": 62
+    },
+    {
+      "id": 1902,
+      "source_offset": 79304784,
+      "source_bytes": 800,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 3,
+      "triangle_candidates": 3,
+      "wall_records": 0
+    },
+    {
+      "id": 1903,
+      "source_offset": 79452416,
+      "source_bytes": 6432,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 31,
+      "triangle_candidates": 241,
+      "wall_records": 64
+    },
+    {
+      "id": 1904,
+      "source_offset": 79516464,
+      "source_bytes": 6432,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 36,
+      "triangle_candidates": 231,
+      "wall_records": 33
+    },
+    {
+      "id": 1905,
+      "source_offset": 79573424,
+      "source_bytes": 3360,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 16,
+      "triangle_candidates": 34,
+      "wall_records": 34
+    },
+    {
+      "id": 1906,
+      "source_offset": 79657200,
+      "source_bytes": 4640,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 16,
+      "triangle_candidates": 212,
+      "wall_records": 39
+    },
+    {
+      "id": 1907,
+      "source_offset": 79692320,
+      "source_bytes": 3360,
+      "assets": 3,
+      "instances": 3,
+      "quantized_parts": 14,
+      "triangle_candidates": 97,
+      "wall_records": 43
+    },
+    {
+      "id": 1908,
+      "source_offset": 79761184,
+      "source_bytes": 5152,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 16,
+      "triangle_candidates": 128,
+      "wall_records": 33
+    },
+    {
+      "id": 1910,
+      "source_offset": 79834416,
+      "source_bytes": 4128,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 17,
+      "triangle_candidates": 194,
+      "wall_records": 32
+    },
+    {
+      "id": 1911,
+      "source_offset": 79942496,
+      "source_bytes": 12064,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 75,
+      "triangle_candidates": 271,
+      "wall_records": 128
+    },
+    {
+      "id": 1912,
+      "source_offset": 80060656,
+      "source_bytes": 10784,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 72,
+      "triangle_candidates": 379,
+      "wall_records": 76
+    },
+    {
+      "id": 1913,
+      "source_offset": 80177584,
+      "source_bytes": 10016,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 55,
+      "triangle_candidates": 483,
+      "wall_records": 67
+    },
+    {
+      "id": 1914,
+      "source_offset": 80376208,
+      "source_bytes": 10784,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 59,
+      "triangle_candidates": 413,
+      "wall_records": 91
+    },
+    {
+      "id": 1915,
+      "source_offset": 80426528,
+      "source_bytes": 4896,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 46,
+      "triangle_candidates": 190,
+      "wall_records": 25
+    },
+    {
+      "id": 1916,
+      "source_offset": 80549280,
+      "source_bytes": 5920,
+      "assets": 6,
+      "instances": 6,
+      "quantized_parts": 25,
+      "triangle_candidates": 302,
+      "wall_records": 50
+    },
+    {
+      "id": 1917,
+      "source_offset": 80708384,
+      "source_bytes": 18208,
+      "assets": 34,
+      "instances": 34,
+      "quantized_parts": 102,
+      "triangle_candidates": 556,
+      "wall_records": 174
+    },
+    {
+      "id": 1918,
+      "source_offset": 80804976,
+      "source_bytes": 9248,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 84,
+      "triangle_candidates": 313,
+      "wall_records": 63
+    },
+    {
+      "id": 1919,
+      "source_offset": 80871456,
+      "source_bytes": 4896,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 23,
+      "triangle_candidates": 202,
+      "wall_records": 39
+    },
+    {
+      "id": 1920,
+      "source_offset": 80896304,
+      "source_bytes": 2080,
+      "assets": 2,
+      "instances": 2,
+      "quantized_parts": 4,
+      "triangle_candidates": 80,
+      "wall_records": 19
+    },
+    {
+      "id": 2001,
+      "source_offset": 81017232,
+      "source_bytes": 18464,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 105,
+      "triangle_candidates": 765,
+      "wall_records": 165
+    },
+    {
+      "id": 2004,
+      "source_offset": 81238288,
+      "source_bytes": 6176,
+      "assets": 8,
+      "instances": 8,
+      "quantized_parts": 29,
+      "triangle_candidates": 283,
+      "wall_records": 46
+    },
+    {
+      "id": 2005,
+      "source_offset": 81343456,
+      "source_bytes": 6432,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 36,
+      "triangle_candidates": 306,
+      "wall_records": 34
+    },
+    {
+      "id": 2007,
+      "source_offset": 81452896,
+      "source_bytes": 14368,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 109,
+      "triangle_candidates": 669,
+      "wall_records": 85
+    },
+    {
+      "id": 2008,
+      "source_offset": 81580272,
+      "source_bytes": 18720,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 149,
+      "triangle_candidates": 842,
+      "wall_records": 122
+    },
+    {
+      "id": 2009,
+      "source_offset": 81761216,
+      "source_bytes": 38432,
+      "assets": 45,
+      "instances": 45,
+      "quantized_parts": 287,
+      "triangle_candidates": 1662,
+      "wall_records": 288
+    },
+    {
+      "id": 2010,
+      "source_offset": 81909104,
+      "source_bytes": 12576,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 107,
+      "triangle_candidates": 588,
+      "wall_records": 83
+    },
+    {
+      "id": 2013,
+      "source_offset": 82144592,
+      "source_bytes": 26400,
+      "assets": 37,
+      "instances": 37,
+      "quantized_parts": 212,
+      "triangle_candidates": 1048,
+      "wall_records": 179
+    },
+    {
+      "id": 2016,
+      "source_offset": 82339552,
+      "source_bytes": 5920,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 41,
+      "triangle_candidates": 257,
+      "wall_records": 36
+    },
+    {
+      "id": 2019,
+      "source_offset": 82457696,
+      "source_bytes": 10784,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 70,
+      "triangle_candidates": 356,
+      "wall_records": 96
+    },
+    {
+      "id": 2022,
+      "source_offset": 82651504,
+      "source_bytes": 25632,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 200,
+      "triangle_candidates": 1247,
+      "wall_records": 160
+    },
+    {
+      "id": 2023,
+      "source_offset": 82734880,
+      "source_bytes": 7968,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 48,
+      "triangle_candidates": 400,
+      "wall_records": 47
+    },
+    {
+      "id": 2024,
+      "source_offset": 82807888,
+      "source_bytes": 14112,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 104,
+      "triangle_candidates": 639,
+      "wall_records": 101
+    },
+    {
+      "id": 2029,
+      "source_offset": 83098752,
+      "source_bytes": 6432,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 45,
+      "triangle_candidates": 305,
+      "wall_records": 43
+    },
+    {
+      "id": 126,
+      "source_offset": 83291712,
+      "source_bytes": 20512,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 181,
+      "triangle_candidates": 820,
+      "wall_records": 144
+    },
+    {
+      "id": 135,
+      "source_offset": 83387024,
+      "source_bytes": 11296,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 57,
+      "triangle_candidates": 564,
+      "wall_records": 103
+    },
+    {
+      "id": 205,
+      "source_offset": 83774112,
+      "source_bytes": 13088,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 71,
+      "triangle_candidates": 574,
+      "wall_records": 109
+    },
+    {
+      "id": 219,
+      "source_offset": 84034464,
+      "source_bytes": 33824,
+      "assets": 45,
+      "instances": 45,
+      "quantized_parts": 153,
+      "triangle_candidates": 930,
+      "wall_records": 465
+    },
+    {
+      "id": 221,
+      "source_offset": 84139280,
+      "source_bytes": 23072,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 119,
+      "triangle_candidates": 1181,
+      "wall_records": 208
+    },
+    {
+      "id": 223,
+      "source_offset": 84247936,
+      "source_bytes": 9504,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 53,
+      "triangle_candidates": 532,
+      "wall_records": 60
+    },
+    {
+      "id": 304,
+      "source_offset": 84374848,
+      "source_bytes": 1312,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 24
+    },
+    {
+      "id": 309,
+      "source_offset": 84507280,
+      "source_bytes": 23328,
+      "assets": 43,
+      "instances": 43,
+      "quantized_parts": 152,
+      "triangle_candidates": 727,
+      "wall_records": 214
+    },
+    {
+      "id": 311,
+      "source_offset": 84630528,
+      "source_bytes": 11296,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 81,
+      "triangle_candidates": 544,
+      "wall_records": 61
+    },
+    {
+      "id": 405,
+      "source_offset": 85459952,
+      "source_bytes": 7968,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 59,
+      "triangle_candidates": 258,
+      "wall_records": 43
+    },
+    {
+      "id": 407,
+      "source_offset": 85578112,
+      "source_bytes": 10016,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 65,
+      "triangle_candidates": 371,
+      "wall_records": 74
+    },
+    {
+      "id": 416,
+      "source_offset": 85879552,
+      "source_bytes": 42528,
+      "assets": 67,
+      "instances": 67,
+      "quantized_parts": 240,
+      "triangle_candidates": 1455,
+      "wall_records": 435
+    },
+    {
+      "id": 417,
+      "source_offset": 86088880,
+      "source_bytes": 29472,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 197,
+      "triangle_candidates": 1193,
+      "wall_records": 291
+    },
+    {
+      "id": 418,
+      "source_offset": 86283264,
+      "source_bytes": 18720,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 94,
+      "triangle_candidates": 967,
+      "wall_records": 158
+    },
+    {
+      "id": 421,
+      "source_offset": 86393728,
+      "source_bytes": 11040,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 66,
+      "triangle_candidates": 401,
+      "wall_records": 85
+    },
+    {
+      "id": 423,
+      "source_offset": 86484720,
+      "source_bytes": 19488,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 111,
+      "triangle_candidates": 976,
+      "wall_records": 157
+    },
+    {
+      "id": 425,
+      "source_offset": 86577008,
+      "source_bytes": 14368,
+      "assets": 15,
+      "instances": 15,
+      "quantized_parts": 120,
+      "triangle_candidates": 647,
+      "wall_records": 90
+    },
+    {
+      "id": 606,
+      "source_offset": 86752256,
+      "source_bytes": 25632,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 191,
+      "triangle_candidates": 1292,
+      "wall_records": 162
+    },
+    {
+      "id": 701,
+      "source_offset": 86809440,
+      "source_bytes": 4640,
+      "assets": 5,
+      "instances": 5,
+      "quantized_parts": 10,
+      "triangle_candidates": 232,
+      "wall_records": 43
+    },
+    {
+      "id": 708,
+      "source_offset": 86859376,
+      "source_bytes": 20000,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 118,
+      "triangle_candidates": 848,
+      "wall_records": 171
+    },
+    {
+      "id": 810,
+      "source_offset": 86982624,
+      "source_bytes": 30240,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 139,
+      "triangle_candidates": 1616,
+      "wall_records": 239
+    },
+    {
+      "id": 814,
+      "source_offset": 87124608,
+      "source_bytes": 23072,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 219,
+      "triangle_candidates": 1076,
+      "wall_records": 118
+    },
+    {
+      "id": 818,
+      "source_offset": 87229840,
+      "source_bytes": 21792,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 201,
+      "triangle_candidates": 903,
+      "wall_records": 151
+    },
+    {
+      "id": 902,
+      "source_offset": 87467024,
+      "source_bytes": 39456,
+      "assets": 44,
+      "instances": 44,
+      "quantized_parts": 313,
+      "triangle_candidates": 1731,
+      "wall_records": 284
+    },
+    {
+      "id": 907,
+      "source_offset": 87795904,
+      "source_bytes": 23328,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 203,
+      "triangle_candidates": 885,
+      "wall_records": 182
+    },
+    {
+      "id": 911,
+      "source_offset": 87887808,
+      "source_bytes": 14880,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 113,
+      "triangle_candidates": 494,
+      "wall_records": 125
+    },
+    {
+      "id": 919,
+      "source_offset": 88045232,
+      "source_bytes": 26400,
+      "assets": 37,
+      "instances": 37,
+      "quantized_parts": 197,
+      "triangle_candidates": 1017,
+      "wall_records": 210
+    },
+    {
+      "id": 924,
+      "source_offset": 88142432,
+      "source_bytes": 9760,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 64,
+      "triangle_candidates": 366,
+      "wall_records": 65
+    },
+    {
+      "id": 1010,
+      "source_offset": 88328112,
+      "source_bytes": 18720,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 152,
+      "triangle_candidates": 779,
+      "wall_records": 146
+    },
+    {
+      "id": 407,
+      "source_offset": 88424512,
+      "source_bytes": 10016,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 65,
+      "triangle_candidates": 371,
+      "wall_records": 74
+    },
+    {
+      "id": 421,
+      "source_offset": 88497472,
+      "source_bytes": 11040,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 66,
+      "triangle_candidates": 401,
+      "wall_records": 85
+    },
+    {
+      "id": 429,
+      "source_offset": 88576640,
+      "source_bytes": 10784,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 82,
+      "triangle_candidates": 346,
+      "wall_records": 76
+    },
+    {
+      "id": 435,
+      "source_offset": 88798656,
+      "source_bytes": 20512,
+      "assets": 30,
+      "instances": 30,
+      "quantized_parts": 153,
+      "triangle_candidates": 627,
+      "wall_records": 198
+    },
+    {
+      "id": 438,
+      "source_offset": 88911456,
+      "source_bytes": 15136,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 118,
+      "triangle_candidates": 502,
+      "wall_records": 147
+    },
+    {
+      "id": 604,
+      "source_offset": 89110048,
+      "source_bytes": 16928,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 73,
+      "triangle_candidates": 746,
+      "wall_records": 143
+    },
+    {
+      "id": 611,
+      "source_offset": 89211760,
+      "source_bytes": 23072,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 119,
+      "triangle_candidates": 893,
+      "wall_records": 232
+    },
+    {
+      "id": 613,
+      "source_offset": 89296800,
+      "source_bytes": 25632,
+      "assets": 43,
+      "instances": 43,
+      "quantized_parts": 107,
+      "triangle_candidates": 825,
+      "wall_records": 303
+    },
+    {
+      "id": 702,
+      "source_offset": 89416336,
+      "source_bytes": 44832,
+      "assets": 38,
+      "instances": 38,
+      "quantized_parts": 454,
+      "triangle_candidates": 2666,
+      "wall_records": 102
+    },
+    {
+      "id": 703,
+      "source_offset": 89638816,
+      "source_bytes": 45344,
+      "assets": 53,
+      "instances": 53,
+      "quantized_parts": 275,
+      "triangle_candidates": 1893,
+      "wall_records": 433
+    },
+    {
+      "id": 704,
+      "source_offset": 89839856,
+      "source_bytes": 14880,
+      "assets": 14,
+      "instances": 14,
+      "quantized_parts": 80,
+      "triangle_candidates": 672,
+      "wall_records": 146
+    },
+    {
+      "id": 708,
+      "source_offset": 89900688,
+      "source_bytes": 20000,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 118,
+      "triangle_candidates": 848,
+      "wall_records": 171
+    },
+    {
+      "id": 709,
+      "source_offset": 90128224,
+      "source_bytes": 16160,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 67,
+      "triangle_candidates": 638,
+      "wall_records": 194
+    },
+    {
+      "id": 710,
+      "source_offset": 90256144,
+      "source_bytes": 46624,
+      "assets": 59,
+      "instances": 59,
+      "quantized_parts": 328,
+      "triangle_candidates": 2314,
+      "wall_records": 302
+    },
+    {
+      "id": 712,
+      "source_offset": 90510240,
+      "source_bytes": 27936,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 287,
+      "triangle_candidates": 1416,
+      "wall_records": 124
+    },
+    {
+      "id": 714,
+      "source_offset": 90638800,
+      "source_bytes": 22560,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 145,
+      "triangle_candidates": 1146,
+      "wall_records": 146
+    },
+    {
+      "id": 715,
+      "source_offset": 90746560,
+      "source_bytes": 18976,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 142,
+      "triangle_candidates": 1097,
+      "wall_records": 90
+    },
+    {
+      "id": 720,
+      "source_offset": 90883040,
+      "source_bytes": 62496,
+      "assets": 53,
+      "instances": 53,
+      "quantized_parts": 654,
+      "triangle_candidates": 3596,
+      "wall_records": 164
+    },
+    {
+      "id": 722,
+      "source_offset": 90992032,
+      "source_bytes": 26912,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 276,
+      "triangle_candidates": 1579,
+      "wall_records": 57
+    },
+    {
+      "id": 729,
+      "source_offset": 91137664,
+      "source_bytes": 10528,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 58,
+      "triangle_candidates": 301,
+      "wall_records": 140
+    },
+    {
+      "id": 730,
+      "source_offset": 91197136,
+      "source_bytes": 26144,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 234,
+      "triangle_candidates": 1525,
+      "wall_records": 74
+    },
+    {
+      "id": 802,
+      "source_offset": 91265728,
+      "source_bytes": 16160,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 91,
+      "triangle_candidates": 730,
+      "wall_records": 159
+    },
+    {
+      "id": 803,
+      "source_offset": 91383760,
+      "source_bytes": 19744,
+      "assets": 30,
+      "instances": 30,
+      "quantized_parts": 145,
+      "triangle_candidates": 749,
+      "wall_records": 146
+    },
+    {
+      "id": 804,
+      "source_offset": 91494080,
+      "source_bytes": 35872,
+      "assets": 41,
+      "instances": 41,
+      "quantized_parts": 229,
+      "triangle_candidates": 2052,
+      "wall_records": 194
+    },
+    {
+      "id": 810,
+      "source_offset": 91577568,
+      "source_bytes": 30240,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 139,
+      "triangle_candidates": 1616,
+      "wall_records": 239
+    },
+    {
+      "id": 811,
+      "source_offset": 91696032,
+      "source_bytes": 28704,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 247,
+      "triangle_candidates": 1281,
+      "wall_records": 182
+    },
+    {
+      "id": 813,
+      "source_offset": 91801328,
+      "source_bytes": 15136,
+      "assets": 28,
+      "instances": 28,
+      "quantized_parts": 78,
+      "triangle_candidates": 388,
+      "wall_records": 176
+    },
+    {
+      "id": 815,
+      "source_offset": 91918608,
+      "source_bytes": 34080,
+      "assets": 36,
+      "instances": 36,
+      "quantized_parts": 329,
+      "triangle_candidates": 1500,
+      "wall_records": 196
+    },
+    {
+      "id": 818,
+      "source_offset": 92018480,
+      "source_bytes": 21792,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 201,
+      "triangle_candidates": 903,
+      "wall_records": 151
+    },
+    {
+      "id": 907,
+      "source_offset": 92232160,
+      "source_bytes": 23328,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 203,
+      "triangle_candidates": 885,
+      "wall_records": 182
+    },
+    {
+      "id": 913,
+      "source_offset": 92297360,
+      "source_bytes": 11552,
+      "assets": 20,
+      "instances": 20,
+      "quantized_parts": 70,
+      "triangle_candidates": 400,
+      "wall_records": 98
+    },
+    {
+      "id": 919,
+      "source_offset": 92401744,
+      "source_bytes": 26400,
+      "assets": 37,
+      "instances": 37,
+      "quantized_parts": 197,
+      "triangle_candidates": 1017,
+      "wall_records": 210
+    },
+    {
+      "id": 920,
+      "source_offset": 92515904,
+      "source_bytes": 17440,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 150,
+      "triangle_candidates": 868,
+      "wall_records": 90
+    },
+    {
+      "id": 922,
+      "source_offset": 92611600,
+      "source_bytes": 43808,
+      "assets": 45,
+      "instances": 45,
+      "quantized_parts": 209,
+      "triangle_candidates": 1948,
+      "wall_records": 456
+    },
+    {
+      "id": 931,
+      "source_offset": 92726704,
+      "source_bytes": 8480,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 69,
+      "triangle_candidates": 353,
+      "wall_records": 52
+    },
+    {
+      "id": 932,
+      "source_offset": 92816768,
+      "source_bytes": 28192,
+      "assets": 29,
+      "instances": 29,
+      "quantized_parts": 238,
+      "triangle_candidates": 1157,
+      "wall_records": 220
+    },
+    {
+      "id": 1009,
+      "source_offset": 92971648,
+      "source_bytes": 25632,
+      "assets": 29,
+      "instances": 29,
+      "quantized_parts": 186,
+      "triangle_candidates": 1059,
+      "wall_records": 219
+    },
+    {
+      "id": 1010,
+      "source_offset": 93107856,
+      "source_bytes": 18720,
+      "assets": 19,
+      "instances": 19,
+      "quantized_parts": 152,
+      "triangle_candidates": 779,
+      "wall_records": 146
+    },
+    {
+      "id": 1509,
+      "source_offset": 93194848,
+      "source_bytes": 14880,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 110,
+      "triangle_candidates": 768,
+      "wall_records": 79
+    },
+    {
+      "id": 1316,
+      "source_offset": 93252832,
+      "source_bytes": 17184,
+      "assets": 24,
+      "instances": 24,
+      "quantized_parts": 151,
+      "triangle_candidates": 740,
+      "wall_records": 88
+    },
+    {
+      "id": 1604,
+      "source_offset": 93334368,
+      "source_bytes": 20000,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 150,
+      "triangle_candidates": 1074,
+      "wall_records": 110
+    },
+    {
+      "id": 1605,
+      "source_offset": 93528400,
+      "source_bytes": 40736,
+      "assets": 50,
+      "instances": 50,
+      "quantized_parts": 294,
+      "triangle_candidates": 1856,
+      "wall_records": 288
+    },
+    {
+      "id": 1607,
+      "source_offset": 93699632,
+      "source_bytes": 42784,
+      "assets": 45,
+      "instances": 45,
+      "quantized_parts": 341,
+      "triangle_candidates": 1531,
+      "wall_records": 409
+    },
+    {
+      "id": 1610,
+      "source_offset": 93836752,
+      "source_bytes": 27424,
+      "assets": 32,
+      "instances": 32,
+      "quantized_parts": 152,
+      "triangle_candidates": 1199,
+      "wall_records": 257
+    },
+    {
+      "id": 1617,
+      "source_offset": 93947104,
+      "source_bytes": 17184,
+      "assets": 29,
+      "instances": 29,
+      "quantized_parts": 113,
+      "triangle_candidates": 616,
+      "wall_records": 133
+    },
+    {
+      "id": 1622,
+      "source_offset": 94003296,
+      "source_bytes": 1312,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 22
+    },
+    {
+      "id": 1633,
+      "source_offset": 94105248,
+      "source_bytes": 13856,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 114,
+      "triangle_candidates": 527,
+      "wall_records": 116
+    },
+    {
+      "id": 1703,
+      "source_offset": 94192576,
+      "source_bytes": 16928,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 91,
+      "triangle_candidates": 835,
+      "wall_records": 121
+    },
+    {
+      "id": 1705,
+      "source_offset": 94338304,
+      "source_bytes": 27424,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 219,
+      "triangle_candidates": 1162,
+      "wall_records": 205
+    },
+    {
+      "id": 1710,
+      "source_offset": 94494496,
+      "source_bytes": 23072,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 110,
+      "triangle_candidates": 916,
+      "wall_records": 230
+    },
+    {
+      "id": 1712,
+      "source_offset": 94624352,
+      "source_bytes": 21024,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 125,
+      "triangle_candidates": 818,
+      "wall_records": 164
+    },
+    {
+      "id": 1716,
+      "source_offset": 94809696,
+      "source_bytes": 34592,
+      "assets": 38,
+      "instances": 38,
+      "quantized_parts": 186,
+      "triangle_candidates": 1483,
+      "wall_records": 359
+    },
+    {
+      "id": 1723,
+      "source_offset": 94986288,
+      "source_bytes": 12064,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 85,
+      "triangle_candidates": 315,
+      "wall_records": 164
+    },
+    {
+      "id": 1801,
+      "source_offset": 95071392,
+      "source_bytes": 19744,
+      "assets": 34,
+      "instances": 34,
+      "quantized_parts": 144,
+      "triangle_candidates": 728,
+      "wall_records": 134
+    },
+    {
+      "id": 1803,
+      "source_offset": 95188112,
+      "source_bytes": 27168,
+      "assets": 38,
+      "instances": 38,
+      "quantized_parts": 209,
+      "triangle_candidates": 1085,
+      "wall_records": 196
+    },
+    {
+      "id": 1804,
+      "source_offset": 95320240,
+      "source_bytes": 17440,
+      "assets": 27,
+      "instances": 27,
+      "quantized_parts": 105,
+      "triangle_candidates": 670,
+      "wall_records": 150
+    },
+    {
+      "id": 1807,
+      "source_offset": 95439968,
+      "source_bytes": 34848,
+      "assets": 48,
+      "instances": 48,
+      "quantized_parts": 231,
+      "triangle_candidates": 1339,
+      "wall_records": 309
+    },
+    {
+      "id": 1816,
+      "source_offset": 95609632,
+      "source_bytes": 37920,
+      "assets": 43,
+      "instances": 43,
+      "quantized_parts": 285,
+      "triangle_candidates": 1567,
+      "wall_records": 315
+    },
+    {
+      "id": 1818,
+      "source_offset": 95727792,
+      "source_bytes": 34336,
+      "assets": 41,
+      "instances": 41,
+      "quantized_parts": 195,
+      "triangle_candidates": 1477,
+      "wall_records": 324
+    },
+    {
+      "id": 1826,
+      "source_offset": 95994736,
+      "source_bytes": 51488,
+      "assets": 84,
+      "instances": 84,
+      "quantized_parts": 370,
+      "triangle_candidates": 1902,
+      "wall_records": 394
+    },
+    {
+      "id": 1833,
+      "source_offset": 96103680,
+      "source_bytes": 31264,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 207,
+      "triangle_candidates": 1383,
+      "wall_records": 276
+    },
+    {
+      "id": 1504,
+      "source_offset": 96163680,
+      "source_bytes": 9248,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 62,
+      "triangle_candidates": 459,
+      "wall_records": 62
+    },
+    {
+      "id": 1508,
+      "source_offset": 96216000,
+      "source_bytes": 8224,
+      "assets": 10,
+      "instances": 10,
+      "quantized_parts": 58,
+      "triangle_candidates": 365,
+      "wall_records": 52
+    },
+    {
+      "id": 1528,
+      "source_offset": 96350144,
+      "source_bytes": 10784,
+      "assets": 18,
+      "instances": 18,
+      "quantized_parts": 78,
+      "triangle_candidates": 385,
+      "wall_records": 74
+    },
+    {
+      "id": 1535,
+      "source_offset": 96447888,
+      "source_bytes": 17696,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 96,
+      "triangle_candidates": 822,
+      "wall_records": 147
+    },
+    {
+      "id": 1536,
+      "source_offset": 96568192,
+      "source_bytes": 2848,
+      "assets": 4,
+      "instances": 4,
+      "quantized_parts": 16,
+      "triangle_candidates": 74,
+      "wall_records": 30
+    },
+    {
+      "id": 1604,
+      "source_offset": 97137888,
+      "source_bytes": 20000,
+      "assets": 22,
+      "instances": 22,
+      "quantized_parts": 150,
+      "triangle_candidates": 1074,
+      "wall_records": 110
+    },
+    {
+      "id": 1608,
+      "source_offset": 97332576,
+      "source_bytes": 7456,
+      "assets": 11,
+      "instances": 11,
+      "quantized_parts": 58,
+      "triangle_candidates": 212,
+      "wall_records": 65
+    },
+    {
+      "id": 1615,
+      "source_offset": 97399696,
+      "source_bytes": 10784,
+      "assets": 16,
+      "instances": 16,
+      "quantized_parts": 56,
+      "triangle_candidates": 539,
+      "wall_records": 72
+    },
+    {
+      "id": 1710,
+      "source_offset": 97629728,
+      "source_bytes": 23072,
+      "assets": 33,
+      "instances": 33,
+      "quantized_parts": 110,
+      "triangle_candidates": 916,
+      "wall_records": 230
+    },
+    {
+      "id": 1716,
+      "source_offset": 97869664,
+      "source_bytes": 34592,
+      "assets": 38,
+      "instances": 38,
+      "quantized_parts": 186,
+      "triangle_candidates": 1483,
+      "wall_records": 359
+    },
+    {
+      "id": 1807,
+      "source_offset": 98102304,
+      "source_bytes": 34848,
+      "assets": 48,
+      "instances": 48,
+      "quantized_parts": 231,
+      "triangle_candidates": 1339,
+      "wall_records": 309
+    },
+    {
+      "id": 1831,
+      "source_offset": 98244544,
+      "source_bytes": 6944,
+      "assets": 12,
+      "instances": 12,
+      "quantized_parts": 52,
+      "triangle_candidates": 280,
+      "wall_records": 41
+    },
+    {
+      "id": 1833,
+      "source_offset": 98311264,
+      "source_bytes": 31264,
+      "assets": 31,
+      "instances": 31,
+      "quantized_parts": 207,
+      "triangle_candidates": 1383,
+      "wall_records": 276
+    },
+    {
+      "id": 1909,
+      "source_offset": 99128720,
+      "source_bytes": 10272,
+      "assets": 17,
+      "instances": 17,
+      "quantized_parts": 49,
+      "triangle_candidates": 253,
+      "wall_records": 123
+    },
+    {
+      "id": 2006,
+      "source_offset": 99313408,
+      "source_bytes": 18976,
+      "assets": 25,
+      "instances": 25,
+      "quantized_parts": 109,
+      "triangle_candidates": 741,
+      "wall_records": 179
+    },
+    {
+      "id": 2011,
+      "source_offset": 99417728,
+      "source_bytes": 8736,
+      "assets": 13,
+      "instances": 13,
+      "quantized_parts": 37,
+      "triangle_candidates": 364,
+      "wall_records": 73
+    },
+    {
+      "id": 2017,
+      "source_offset": 99521664,
+      "source_bytes": 18976,
+      "assets": 23,
+      "instances": 23,
+      "quantized_parts": 167,
+      "triangle_candidates": 716,
+      "wall_records": 140
+    },
+    {
+      "id": 2020,
+      "source_offset": 99619536,
+      "source_bytes": 17952,
+      "assets": 21,
+      "instances": 21,
+      "quantized_parts": 127,
+      "triangle_candidates": 851,
+      "wall_records": 119
+    },
+    {
+      "id": 2021,
+      "source_offset": 99791024,
+      "source_bytes": 6432,
+      "assets": 7,
+      "instances": 7,
+      "quantized_parts": 20,
+      "triangle_candidates": 264,
+      "wall_records": 72
+    },
+    {
+      "id": 2026,
+      "source_offset": 99984032,
+      "source_bytes": 20000,
+      "assets": 26,
+      "instances": 26,
+      "quantized_parts": 137,
+      "triangle_candidates": 983,
+      "wall_records": 123
+    },
+    {
+      "id": 2027,
+      "source_offset": 100046368,
+      "source_bytes": 8992,
+      "assets": 9,
+      "instances": 9,
+      "quantized_parts": 68,
+      "triangle_candidates": 431,
+      "wall_records": 59
+    },
+    {
+      "id": 2030,
+      "source_offset": 100182160,
+      "source_bytes": 544,
+      "assets": 1,
+      "instances": 1,
+      "quantized_parts": 0,
+      "triangle_candidates": 0,
+      "wall_records": 3
+    }
+  ],
+  "limitations": "Original collision geometry/metadata only; query flags, full transform/reference and collision response are not yet implemented in the 3DS app."
+}

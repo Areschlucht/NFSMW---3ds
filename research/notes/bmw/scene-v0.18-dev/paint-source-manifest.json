@@ -1,0 +1,41 @@
+{
+  "status": "development-only source-derived logical diffuse preview; original GX final skin not established",
+  "target_alias": "BMWM3GTRE46_SKIN1",
+  "target_hash": "de3ad3c6",
+  "width": 512,
+  "height": 512,
+  "preset": "M3GTRCAREERSTART",
+  "preset_offset": 385560,
+  "preset_record_sha256": "a2a8886ffa182bf66b6fb21e215ef7182870bf2ca7333c227655589f96372369",
+  "bundle_sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+  "base_part": "METAL_L1_COLOR41",
+  "base_part_key": "c7f288d1",
+  "base_attributes": {
+    "RED": 183,
+    "GREEN": 183,
+    "BLUE": 183,
+    "GLOSS": 128
+  },
+  "vinyl_part": "PSRTEST",
+  "vinyl_part_key": "e9886d54",
+  "source_name": "BMWM3GTRE46_PSRTEST",
+  "source_hash": "849ff2f5",
+  "mask_hash": "02c984a0",
+  "source_rgba_sha256": "7e0736720566b870032ba7c6bb8432d57dcd3a44784e552dfe805fc34eed8c5c",
+  "mask_rgba_sha256": "dcffc9bba6c3764802a4f3f72252d0f9bb0c4cdba3dd88f80d2e8b6008c071be",
+  "remap": 0,
+  "logical_blend": "separate mask>=128: source; otherwise separately truncate source*mask/128 and base*(128-mask)/128 per byte",
+  "diffuse_png": "de3ad3c6-logical-diffuse.png",
+  "diffuse_rgba_sha256": "480a4c5fe23c866c7b9d33b3374dd9cf16b4ea7ca04e4c1dc8cf4487345786a9",
+  "fourth_byte_png": "de3ad3c6-fourth-byte.png",
+  "fourth_byte_sha256": "bfb69474fd5cc5616f34e50e1fc156b05d6c74d778a53273ab8571bfe1f644ce",
+  "native_word_bytes_sha256": "2496f326bd172debe12f043329110510d3f2deb66c934a9b838ac6fe8db1d7ee",
+  "unique_logical_words": 41,
+  "opacity": "Diffuse preview alpha forced255 because body paint is opaque; original source alpha is never used as visibility",
+  "fourth_byte_scope": "Base byte is original GLOSS128; source byte retains decoded native RGB5A3 alpha. Their logical interpolation is preserved separately; final GX gloss adapter is unproven.",
+  "limitations": [
+    "Original CPU/native palette conversion and indexed edge quantization are unresolved",
+    "No reflection, specular, Fresnel, body material composition or original lighting is baked",
+    "This is a reviewable diffuse preview, not a claim of an exact final GameCube skin"
+  ]
+}

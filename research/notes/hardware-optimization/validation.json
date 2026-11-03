@@ -1,0 +1,26 @@
+{
+  "status": "Research checkpoint; runtime integration owned by parent",
+  "native_encoder": "ASan/UBSan pass including real scene decode-back, 65536 unique boundary and overflow fallback",
+  "python_tests": 6,
+  "armv6k_strict_compile": "pass; 888 text bytes",
+  "expanded_vertices": 112077,
+  "unique_vertices": 50176,
+  "expanded_gpu_bytes": 4034772,
+  "indexed_gpu_bytes": 2030490,
+  "allocation_reduction_percent": 49.67522328399225,
+  "visible_profiles_match": 24,
+  "cache_model": "FIFO/LRU8/16/32, reset per actual merged visible run; no PICA/FPS claim",
+  "native_attribute_opportunity": {
+    "corners": 112077,
+    "exact_rgba8_reconstructable": 112077,
+    "exact_original_s16_q12_uv_reconstructable": 112077,
+    "proposed_stride": 20,
+    "unique_compact_records": 50176,
+    "proposed_gpu_bytes_with_u16": 1227674,
+    "status": "Source-equivalent CPU representation only; shader conversion/pixel/hardware equivalence untested."
+  },
+  "emulator_hardware_test": "not performed by this specialist; parent owns emulator validation",
+  "sdk_base_vertex_reset": "C3D_DrawElements explicitly writes zero to GPUREG_VERTEX_OFFSET0x022A before indexed draws",
+  "largest_all_visible_draw_index_count": 10707,
+  "maximum_actual_vertex_index": 50175
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "package": "INGAME",
+    "name": "SKY_REFSKYSPECULARB",
+    "hash": "2d5ad26a",
+    "width": 64,
+    "height": 64,
+    "native_format": "0000000e",
+    "pixel_offset": 72192,
+    "compression": null,
+    "alpha_test_mode": 0,
+    "blend_mode": 0,
+    "image_bytes": 2048,
+    "palette_bytes": 0,
+    "source_path": "/workspace/attachments/3716fced-9974-45db-bfd3-3d43e8d65ca1/GLOBAL-INGAMEA.BUN",
+    "source_sha256": "0e3543f534cb94b113168a1b5f6b7a7224b32d12986fb18253b937f16c293d79",
+    "rgba_sha256": "f772dcd930f4f34b4e2bc88975baa16da038ddda4211277f25c9fbea4e8a0e24"
+  },
+  {
+    "package": "INGAME",
+    "name": "GRAY_MID_A",
+    "hash": "8c58916b",
+    "width": 32,
+    "height": 32,
+    "native_format": "0000000e",
+    "pixel_offset": 93312,
+    "compression": null,
+    "alpha_test_mode": 0,
+    "blend_mode": 0,
+    "image_bytes": 512,
+    "palette_bytes": 0,
+    "source_path": "/workspace/attachments/3716fced-9974-45db-bfd3-3d43e8d65ca1/GLOBAL-INGAMEA.BUN",
+    "source_sha256": "0e3543f534cb94b113168a1b5f6b7a7224b32d12986fb18253b937f16c293d79",
+    "rgba_sha256": "8b323152b1221efc3ffeb07aafa7e39b307f5d22b527fd2a96c3d86338b5e2ca"
+  }
+]

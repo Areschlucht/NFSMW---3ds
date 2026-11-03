@@ -1,0 +1,74 @@
+[
+  {
+    "address": "0x800183e0",
+    "high_address": "0x800183d8",
+    "target": "0x803c9c24",
+    "name": "Physics"
+  },
+  {
+    "address": "0x80042a60",
+    "high_address": "0x80042a5c",
+    "target": "0x803c8e34",
+    "name": "VehicleParams"
+  },
+  {
+    "address": "0x800c636c",
+    "high_address": "0x800c6364",
+    "target": "0x803d8894",
+    "name": "Drivetrain"
+  },
+  {
+    "address": "0x802165f0",
+    "high_address": "0x802165ec",
+    "target": "0x803f6f90",
+    "name": "Physics"
+  },
+  {
+    "address": "0x80216b9c",
+    "high_address": "0x80216b98",
+    "target": "0x803f6f90",
+    "name": "Physics"
+  },
+  {
+    "address": "0x8021a0b4",
+    "high_address": "0x8021a0b0",
+    "target": "0x803f6f90",
+    "name": "Physics"
+  },
+  {
+    "address": "0x8022db40",
+    "high_address": "0x8022db3c",
+    "target": "0x803f6b4c",
+    "name": "SuspensionParams"
+  },
+  {
+    "address": "0x8023d110",
+    "high_address": "0x8023d108",
+    "target": "0x803fad64",
+    "name": "Physics"
+  },
+  {
+    "address": "0x80241e94",
+    "high_address": "0x80241e84",
+    "target": "0x803fad64",
+    "name": "Physics"
+  },
+  {
+    "address": "0x8025eef0",
+    "high_address": "0x8025eee8",
+    "target": "0x803fad64",
+    "name": "Physics"
+  },
+  {
+    "address": "0x802621d8",
+    "high_address": "0x802621cc",
+    "target": "0x803fad64",
+    "name": "Physics"
+  },
+  {
+    "address": "0x80265998",
+    "high_address": "0x80265990",
+    "target": "0x803fb49c",
+    "name": "SuspensionRacer"
+  }
+]

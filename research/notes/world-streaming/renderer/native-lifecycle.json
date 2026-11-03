@@ -1,0 +1,34 @@
+{
+  "merged": {
+    "region": 103,
+    "objects": 18,
+    "runs": 39,
+    "triangles": 2221,
+    "normal_bytes": 2456224,
+    "linear_bytes": 943104,
+    "model_uploads": 15,
+    "texture_uploads": 21,
+    "steady_frame_reads": 0,
+    "steady_frame_allocations": 0,
+    "missing_asset_rollback": true,
+    "gpu_allocation_failure_rollback": true,
+    "nearest_rollback": true,
+    "ordered_gpu_stream_hash": "6c29528717b5bd31"
+  },
+  "unmerged": {
+    "region": 103,
+    "objects": 18,
+    "runs": 396,
+    "triangles": 2221,
+    "normal_bytes": 2456224,
+    "linear_bytes": 943104,
+    "model_uploads": 15,
+    "texture_uploads": 21,
+    "steady_frame_reads": 0,
+    "steady_frame_allocations": 0,
+    "missing_asset_rollback": true,
+    "gpu_allocation_failure_rollback": true,
+    "nearest_rollback": true,
+    "ordered_gpu_stream_hash": "6c29528717b5bd31"
+  }
+}

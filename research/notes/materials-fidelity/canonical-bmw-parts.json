@@ -1,0 +1,195 @@
+{
+  "source_sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+  "parts_count": 11925,
+  "attributes_count": 1751,
+  "parts": [
+    {
+      "key": "c7f288d1",
+      "name": "METAL_L1_COLOR41",
+      "file_offset": 137430,
+      "raw_record": "d188f2c74c400016950d870affff",
+      "fields": {
+        "55706": {
+          "value": 183,
+          "file_offset": 65584,
+          "original_bytes": "9ad90000b7000000"
+        },
+        "1271559": {
+          "value": 183,
+          "file_offset": 65504,
+          "original_bytes": "07671300b7000000"
+        },
+        "47885063": {
+          "value": 128,
+          "file_offset": 64800,
+          "original_bytes": "07abda0280000000"
+        },
+        "48089328": {
+          "value": 183,
+          "file_offset": 65448,
+          "original_bytes": "f0c8dd02b7000000"
+        },
+        "1805659141": {
+          "value": 2478893814,
+          "file_offset": 66184,
+          "original_bytes": "052ca06bf6eac093"
+        },
+        "3599399851": {
+          "value": 2046169108,
+          "file_offset": 64864,
+          "original_bytes": "ab7b8ad61410f679"
+        },
+        "3954196070": {
+          "value": 54753874,
+          "file_offset": 66192,
+          "original_bytes": "663eb0eb527a4303"
+        }
+      },
+      "decoded": {
+        "TEXTURE": null,
+        "RED": 183,
+        "GREEN": 183,
+        "BLUE": 183,
+        "GLOSS": 128,
+        "NUMCOLOURS": null,
+        "REMAP": null
+      }
+    },
+    {
+      "key": "e9886d54",
+      "name": "PSRTEST",
+      "file_offset": 148882,
+      "raw_record": "546d88e94f08001bc311ef01ffff",
+      "fields": {
+        "60675860": {
+          "value": 0,
+          "file_offset": 61152,
+          "original_bytes": "14d79d0300000000"
+        },
+        "281641104": {
+          "value": 3918032212,
+          "file_offset": 61160,
+          "original_bytes": "9080c910546d88e9"
+        },
+        "1194514951": {
+          "value": 30943702,
+          "file_offset": 61168,
+          "original_bytes": "07da3247d629d801"
+        },
+        "1447791798": {
+          "value": 64,
+          "file_offset": 61176,
+          "original_bytes": "b68c4b5640000000"
+        },
+        "1645373483": {
+          "value": 0,
+          "file_offset": 61184,
+          "original_bytes": "2b68126200000000"
+        },
+        "3954196070": {
+          "value": 1539,
+          "file_offset": 61192,
+          "original_bytes": "663eb0eb03060000"
+        },
+        "4248174192": {
+          "value": 4547,
+          "file_offset": 61200,
+          "original_bytes": "70fe35fdc3110000"
+        }
+      },
+      "decoded": {
+        "TEXTURE": "PSRTEST",
+        "RED": null,
+        "GREEN": null,
+        "BLUE": null,
+        "GLOSS": null,
+        "NUMCOLOURS": 64,
+        "REMAP": 0
+      }
+    },
+    {
+      "key": "d0561e8c",
+      "name": "VINYL_L1_COLOR01",
+      "file_offset": 138578,
+      "raw_record": "8c1e56d04d200016240c170dffff",
+      "fields": {
+        "55706": {
+          "value": 255,
+          "file_offset": 60840,
+          "original_bytes": "9ad90000ff000000"
+        },
+        "1271559": {
+          "value": 255,
+          "file_offset": 60848,
+          "original_bytes": "07671300ff000000"
+        },
+        "47885063": {
+          "value": 100,
+          "file_offset": 66648,
+          "original_bytes": "07abda0264000000"
+        },
+        "48089328": {
+          "value": 255,
+          "file_offset": 60856,
+          "original_bytes": "f0c8dd02ff000000"
+        },
+        "3954196070": {
+          "value": 65565169,
+          "file_offset": 66656,
+          "original_bytes": "663eb0ebf171e803"
+        }
+      },
+      "decoded": {
+        "TEXTURE": null,
+        "RED": 255,
+        "GREEN": 255,
+        "BLUE": 255,
+        "GLOSS": 100,
+        "NUMCOLOURS": null,
+        "REMAP": null
+      }
+    },
+    {
+      "key": "d0561e8e",
+      "name": "VINYL_L1_COLOR03",
+      "file_offset": 138606,
+      "raw_record": "8e1e56d04d2000161a0c230dffff",
+      "fields": {
+        "55706": {
+          "value": 255,
+          "file_offset": 60840,
+          "original_bytes": "9ad90000ff000000"
+        },
+        "1271559": {
+          "value": 224,
+          "file_offset": 66664,
+          "original_bytes": "07671300e0000000"
+        },
+        "47885063": {
+          "value": 100,
+          "file_offset": 66648,
+          "original_bytes": "07abda0264000000"
+        },
+        "48089328": {
+          "value": 251,
+          "file_offset": 66672,
+          "original_bytes": "f0c8dd02fb000000"
+        },
+        "3954196070": {
+          "value": 65565169,
+          "file_offset": 66656,
+          "original_bytes": "663eb0ebf171e803"
+        }
+      },
+      "decoded": {
+        "TEXTURE": null,
+        "RED": 255,
+        "GREEN": 251,
+        "BLUE": 224,
+        "GLOSS": 100,
+        "NUMCOLOURS": null,
+        "REMAP": null
+      }
+    }
+  ]
+}

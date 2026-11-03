@@ -1,0 +1,12 @@
+{
+  "drive_reset": null,
+  "garage_reset": null,
+  "wheel_roll": [
+    158,
+    118,
+    278,
+    171
+  ],
+  "shader_vs_v015": null,
+  "dense_shader_vs_v015": null
+}

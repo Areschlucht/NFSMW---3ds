@@ -1,0 +1,40 @@
+{
+  "bytes": 6018304,
+  "entries": [
+    {
+      "Source": "ZZDATA1.BIN",
+      "ArchiveSize": 340240384,
+      "Name": "BMWM3GTRE46-PREVINYL.BIN",
+      "Offset": 128509952,
+      "Size": 8192
+    },
+    {
+      "Source": "ZZDATA1.BIN",
+      "ArchiveSize": 340240384,
+      "Name": "BMWM3GTRE46-VINYLS.BIN",
+      "Offset": 128591872,
+      "Size": 2187392
+    },
+    {
+      "Source": "ZZDATA1.BIN",
+      "ArchiveSize": 340240384,
+      "Name": "GLOBAL-DYNTEX-266086400.BIN",
+      "Offset": 266086400,
+      "Size": 1274240
+    },
+    {
+      "Source": "ZZDATA1.BIN",
+      "ArchiveSize": 340240384,
+      "Name": "GLOBAL-DYNTEX-279683072.BIN",
+      "Offset": 279683072,
+      "Size": 1274240
+    },
+    {
+      "Source": "ZZDATA1.BIN",
+      "ArchiveSize": 340240384,
+      "Name": "GLOBAL-DYNTEX-299415552.BIN",
+      "Offset": 299415552,
+      "Size": 1274240
+    }
+  ]
+}

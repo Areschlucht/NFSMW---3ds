@@ -1,0 +1,86 @@
+{
+  "zdir_sha256": "d5726a00d086edb5f8a47ff4bffa4715f84b44441987fd323141a6dfaf1ba333",
+  "entries": [
+    {
+      "name": "GLOBAL\\DYNTEX.BIN",
+      "hash": "29ee288f",
+      "directory_row": 215,
+      "archive": 1,
+      "offset_bytes": 279683072,
+      "size_bytes": 1274240,
+      "record_words": [
+        "29ee288f",
+        "00000001",
+        "00021574",
+        "00046ec1",
+        "00137180",
+        "421a66da"
+      ]
+    },
+    {
+      "name": "GLOBAL\\DYNTEX.BIN",
+      "hash": "29ee288f",
+      "directory_row": 216,
+      "archive": 1,
+      "offset_bytes": 299415552,
+      "size_bytes": 1274240,
+      "record_words": [
+        "29ee288f",
+        "00000001",
+        "00023b17",
+        "00049464",
+        "00137180",
+        "421a66da"
+      ]
+    },
+    {
+      "name": "GLOBAL\\DYNTEX.BIN",
+      "hash": "29ee288f",
+      "directory_row": 217,
+      "archive": 1,
+      "offset_bytes": 266086400,
+      "size_bytes": 1274240,
+      "record_words": [
+        "29ee288f",
+        "00000001",
+        "0001fb85",
+        "000454d2",
+        "00137180",
+        "421a66da"
+      ]
+    },
+    {
+      "name": "CARS\\BMWM3GTRE46\\PREVINYL.BIN",
+      "hash": "21552362",
+      "directory_row": 176,
+      "archive": 1,
+      "offset_bytes": 128509952,
+      "size_bytes": 8192,
+      "record_words": [
+        "21552362",
+        "00000001",
+        "0000f51d",
+        "00034e6a",
+        "00002000",
+        "a3ddb5ee"
+      ]
+    },
+    {
+      "name": "CARS\\BMWM3GTRE46\\VINYLS.BIN",
+      "hash": "13bd8bee",
+      "directory_row": 102,
+      "archive": 1,
+      "offset_bytes": 128591872,
+      "size_bytes": 2187392,
+      "record_words": [
+        "13bd8bee",
+        "00000001",
+        "0000f545",
+        "00034e92",
+        "00216080",
+        "a77beb64"
+      ]
+    }
+  ],
+  "duplicate_policy": "All DYNTEX candidates retained; active precedence/content equality is not assumed"
+}

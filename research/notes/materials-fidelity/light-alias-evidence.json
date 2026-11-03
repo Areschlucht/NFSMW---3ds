@@ -1,0 +1,482 @@
+{
+  "car_name": "BMWM3GTRE46",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "hash_function": "80062ecc",
+  "seeded_hash_function": "80062efc",
+  "selector_function": "802caa44",
+  "selector_bytes_sha256": "3cedeac0fc5bc9019c3523f31ba835fff79ff56d66fb85100c66800d59cc8ca3",
+  "skin1": {
+    "name": "BMWM3GTRE46_SKIN1",
+    "key": "de3ad3c6",
+    "status": "runtime-generated paint output; compositor not recovered"
+  },
+  "source_headlights": {
+    "_OFF": "ab02274b",
+    "_ON": "e626da6d",
+    "_DAMAGE0": "c943f49f",
+    "_GLASS_OFF": "3d870864",
+    "_GLASS_ON": "ea977c66",
+    "_GLASS_DAMAGE0": "e715ba38"
+  },
+  "source_brakelights": {
+    "_OFF": "051ae6de",
+    "_ON": "938c73a0",
+    "_DAMAGE0": "fa0845b2",
+    "_GLASS_OFF": "b0a3ea37",
+    "_GLASS_ON": "33e5efd9",
+    "_GLASS_DAMAGE0": "7ea54d8b"
+  },
+  "aliases": {
+    "HEADLIGHT_LEFT": "a7e6ea53",
+    "HEADLIGHT_RIGHT": "a532fc46",
+    "BRAKELIGHT_LEFT": "d947f346",
+    "BRAKELIGHT_RIGHT": "02b52399",
+    "BRAKELIGHT_CENTRE": "3617dcfc",
+    "HEADLIGHT_GLASS_LEFT": "267d188c",
+    "HEADLIGHT_GLASS_RIGHT": "f68ef19f",
+    "BRAKELIGHT_GLASS_LEFT": "000bcbbf",
+    "BRAKELIGHT_GLASS_RIGHT": "01f40b32",
+    "BRAKELIGHT_GLASS_CENTRE": "1d33b7b5"
+  },
+  "vinyl_loader": {
+    "branch_start": "802defc4",
+    "existence_check": "802df030",
+    "load": "802df04c",
+    "request_byte_0": "skip",
+    "request_byte_2": "CARS\\BMWM3GTRE46\\PREVINYL.BIN",
+    "other_nonzero": "CARS\\BMWM3GTRE46\\VINYLS.BIN",
+    "global_force_previnyl": "804388e4",
+    "mode_producer": "unrecovered; canonical mode is not assumed"
+  },
+  "strings": [
+    {
+      "address": 2151721356,
+      "offset": 4225420,
+      "text": "WINDOW_FRONT"
+    },
+    {
+      "address": 2151723872,
+      "offset": 4227936,
+      "text": "CARS\\%s\\VINYLS.BIN"
+    },
+    {
+      "address": 2151724448,
+      "offset": 4228512,
+      "text": "%s_SKIN1"
+    },
+    {
+      "address": 2151724460,
+      "offset": 4228524,
+      "text": "%s_SKIN1B"
+    },
+    {
+      "address": 2151724540,
+      "offset": 4228604,
+      "text": "%s_SKIN2"
+    },
+    {
+      "address": 2151724552,
+      "offset": 4228616,
+      "text": "%s_SKIN3"
+    },
+    {
+      "address": 2151724564,
+      "offset": 4228628,
+      "text": "%s_SKIN4"
+    },
+    {
+      "address": 2151724576,
+      "offset": 4228640,
+      "text": "%s_KIT00_HEADLIGHT"
+    },
+    {
+      "address": 2151724596,
+      "offset": 4228660,
+      "text": "%s_KIT00_BRAKELIGHT"
+    },
+    {
+      "address": 2151724616,
+      "offset": 4228680,
+      "text": "HEADLIGHT_LEFT"
+    },
+    {
+      "address": 2151724632,
+      "offset": 4228696,
+      "text": "HEADLIGHT_RIGHT"
+    },
+    {
+      "address": 2151724648,
+      "offset": 4228712,
+      "text": "HEADLIGHT_GLASS_LEFT"
+    },
+    {
+      "address": 2151724672,
+      "offset": 4228736,
+      "text": "HEADLIGHT_GLASS_RIGHT"
+    },
+    {
+      "address": 2151724696,
+      "offset": 4228760,
+      "text": "BRAKELIGHT_LEFT"
+    },
+    {
+      "address": 2151724712,
+      "offset": 4228776,
+      "text": "BRAKELIGHT_RIGHT"
+    },
+    {
+      "address": 2151724732,
+      "offset": 4228796,
+      "text": "BRAKELIGHT_CENTRE"
+    },
+    {
+      "address": 2151724752,
+      "offset": 4228816,
+      "text": "BRAKELIGHT_GLASS_LEFT"
+    },
+    {
+      "address": 2151724776,
+      "offset": 4228840,
+      "text": "BRAKELIGHT_GLASS_RIGHT"
+    },
+    {
+      "address": 2151724800,
+      "offset": 4228864,
+      "text": "BRAKELIGHT_GLASS_CENTRE"
+    },
+    {
+      "address": 2151724824,
+      "offset": 4228888,
+      "text": "_OFF"
+    },
+    {
+      "address": 2151724832,
+      "offset": 4228896,
+      "text": "_ON"
+    },
+    {
+      "address": 2151724836,
+      "offset": 4228900,
+      "text": "_DAMAGE0"
+    },
+    {
+      "address": 2151724848,
+      "offset": 4228912,
+      "text": "_GLASS_OFF"
+    },
+    {
+      "address": 2151724860,
+      "offset": 4228924,
+      "text": "_GLASS_ON"
+    },
+    {
+      "address": 2151724872,
+      "offset": 4228936,
+      "text": "_GLASS_DAMAGE0"
+    },
+    {
+      "address": 2151729912,
+      "offset": 4233976,
+      "text": "CARS\\%s\\PREVINYL.BIN"
+    }
+  ],
+  "constant_xrefs": [
+    {
+      "instruction": 2150400460,
+      "origin": 2150400456,
+      "target": 2151721356,
+      "register": 24
+    },
+    {
+      "instruction": 2150400464,
+      "origin": 2150400456,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150400596,
+      "origin": 2150400456,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150403560,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 30
+    },
+    {
+      "instruction": 2150403564,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150403600,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150403636,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150403672,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150403708,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150403744,
+      "origin": 2150403556,
+      "target": 2151721356,
+      "register": 3
+    },
+    {
+      "instruction": 2150404880,
+      "origin": 2150404876,
+      "target": 2151721356,
+      "register": 29
+    },
+    {
+      "instruction": 2150479900,
+      "origin": 2150479892,
+      "target": 2151724448,
+      "register": 4
+    },
+    {
+      "instruction": 2150479932,
+      "origin": 2150479928,
+      "target": 2151724460,
+      "register": 4
+    },
+    {
+      "instruction": 2150480508,
+      "origin": 2150480500,
+      "target": 2151724540,
+      "register": 4
+    },
+    {
+      "instruction": 2150480544,
+      "origin": 2150480536,
+      "target": 2151724552,
+      "register": 4
+    },
+    {
+      "instruction": 2150480580,
+      "origin": 2150480572,
+      "target": 2151724564,
+      "register": 4
+    },
+    {
+      "instruction": 2150480716,
+      "origin": 2150480712,
+      "target": 2151724576,
+      "register": 4
+    },
+    {
+      "instruction": 2150480752,
+      "origin": 2150480748,
+      "target": 2151724596,
+      "register": 4
+    },
+    {
+      "instruction": 2150480936,
+      "origin": 2150480932,
+      "target": 2151724632,
+      "register": 3
+    },
+    {
+      "instruction": 2150480952,
+      "origin": 2150480948,
+      "target": 2151724648,
+      "register": 3
+    },
+    {
+      "instruction": 2150480968,
+      "origin": 2150480964,
+      "target": 2151724672,
+      "register": 3
+    },
+    {
+      "instruction": 2150480984,
+      "origin": 2150480980,
+      "target": 2151724696,
+      "register": 3
+    },
+    {
+      "instruction": 2150481000,
+      "origin": 2150480996,
+      "target": 2151724712,
+      "register": 3
+    },
+    {
+      "instruction": 2150481016,
+      "origin": 2150481012,
+      "target": 2151724732,
+      "register": 3
+    },
+    {
+      "instruction": 2150481032,
+      "origin": 2150481028,
+      "target": 2151724752,
+      "register": 3
+    },
+    {
+      "instruction": 2150481048,
+      "origin": 2150481044,
+      "target": 2151724776,
+      "register": 3
+    },
+    {
+      "instruction": 2150481064,
+      "origin": 2150481060,
+      "target": 2151724800,
+      "register": 3
+    },
+    {
+      "instruction": 2150481080,
+      "origin": 2150481072,
+      "target": 2151724824,
+      "register": 25
+    },
+    {
+      "instruction": 2150481092,
+      "origin": 2150481072,
+      "target": 2151724824,
+      "register": 3
+    },
+    {
+      "instruction": 2150481108,
+      "origin": 2150481100,
+      "target": 2151724832,
+      "register": 26
+    },
+    {
+      "instruction": 2150481116,
+      "origin": 2150481100,
+      "target": 2151724832,
+      "register": 3
+    },
+    {
+      "instruction": 2150481132,
+      "origin": 2150481124,
+      "target": 2151724836,
+      "register": 27
+    },
+    {
+      "instruction": 2150481140,
+      "origin": 2150481124,
+      "target": 2151724836,
+      "register": 3
+    },
+    {
+      "instruction": 2150481156,
+      "origin": 2150481148,
+      "target": 2151724848,
+      "register": 28
+    },
+    {
+      "instruction": 2150481164,
+      "origin": 2150481148,
+      "target": 2151724848,
+      "register": 3
+    },
+    {
+      "instruction": 2150481180,
+      "origin": 2150481172,
+      "target": 2151724860,
+      "register": 29
+    },
+    {
+      "instruction": 2150481188,
+      "origin": 2150481172,
+      "target": 2151724860,
+      "register": 3
+    },
+    {
+      "instruction": 2150481204,
+      "origin": 2150481196,
+      "target": 2151724872,
+      "register": 30
+    },
+    {
+      "instruction": 2150481212,
+      "origin": 2150481196,
+      "target": 2151724872,
+      "register": 3
+    },
+    {
+      "instruction": 2150481228,
+      "origin": 2150481072,
+      "target": 2151724824,
+      "register": 3
+    },
+    {
+      "instruction": 2150481244,
+      "origin": 2150481100,
+      "target": 2151724832,
+      "register": 3
+    },
+    {
+      "instruction": 2150481260,
+      "origin": 2150481124,
+      "target": 2151724836,
+      "register": 3
+    },
+    {
+      "instruction": 2150481276,
+      "origin": 2150481148,
+      "target": 2151724848,
+      "register": 3
+    },
+    {
+      "instruction": 2150481292,
+      "origin": 2150481172,
+      "target": 2151724860,
+      "register": 3
+    },
+    {
+      "instruction": 2150481308,
+      "origin": 2150481196,
+      "target": 2151724872,
+      "register": 3
+    },
+    {
+      "instruction": 2150494196,
+      "origin": 2150494192,
+      "target": 2151729912,
+      "register": 4
+    },
+    {
+      "instruction": 2150494232,
+      "origin": 2150494228,
+      "target": 2151723872,
+      "register": 4
+    }
+  ],
+  "limitations": [
+    "Only the target-key subset of the light update is reproduced",
+    "Actual flag generation, damage rendering, live window/tint target and part selection remain separate systems",
+    "No guessed livery/paint output is generated",
+    "Duplicate DYNTEX archive entries have unresolved active-load precedence"
+  ],
+  "original_hash_verification": {
+    "cases": 26,
+    "matched": 26
+  },
+  "original_selector_verification": {
+    "cases": 128,
+    "matched": 128,
+    "scope": "All 3-bit enable/suppress combinations with side override off/on"
+  }
+}

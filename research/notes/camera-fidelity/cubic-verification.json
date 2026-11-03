@@ -1,0 +1,31 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "whole_channel_bit_cases": 2074,
+  "scalar_psq_abi": {
+    "80208130": "f3a10010",
+    "80208134": "f3c10018",
+    "80208138": "f3e10020",
+    "80208258": "e3a10010",
+    "8020825c": "e3c10018",
+    "80208260": "e3e10020",
+    "80207ffc": "f3e10010",
+    "80207f70": "f3e10008",
+    "80207fa0": "e3e10008",
+    "80208048": "e3e10010",
+    "8020805c": "f3a10010",
+    "80208060": "f3c10018",
+    "80208064": "f3e10020",
+    "80207fb4": "f3e10008",
+    "80207fe8": "e3e10008",
+    "80208114": "e3a10010",
+    "80208118": "e3c10018",
+    "8020811c": "e3e10020"
+  },
+  "instructions_patched": 0,
+  "original_step": "80208128..80208268",
+  "limitations": [
+    "Original scalar channel numerical state only; authored camera durations/modes and scheduler still need consumer closure",
+    "PSQ stack saves model scalar float32 only; no paired arithmetic executed",
+    "Invalid/nonfinite or singular limit metadata rejected by portable API"
+  ]
+}

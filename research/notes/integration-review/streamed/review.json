@@ -1,0 +1,65 @@
+{
+  "verdict": "No blocking ownership, refcount, GPU-fence, pointer-rebase or camera-rollback defect found for the explicitly gated reference-slot0 diagnostic.",
+  "scope": "Read-only source review and independent native ASan/UBSan tests. No Docker/emulator/build mutation.",
+  "source_sha256": {
+    "include/streamed_world.h": "eed98364d8fa3625ffdca2d9543c6876f797db8504cf1084a1a21eae9136ee4f",
+    "source_rockport/streamed_world.c": "1ac822372b6236d6b86064e30546a6e0b6547ae28e9040c72284cf28789a6783",
+    "source_rockport/streamed_world_texture.c": "5d6258d9e277538ebe529add32c14193baeb2b086e470522aa0c2b0342a7c28b",
+    "source_rockport/rockport_main.c": "d7b578ef68d7e163e7fb711a613645e9d6e637bf6685535823ac15c3242e9990",
+    "source_bmw/world_streaming_scene.c": "86dd8bad8794c117c0309e840a91f6f3d11484878db1ed59134cbb2220736d41",
+    "tests/world_streaming_mock/citro3d.c": "d20d62c027289f38e0a11eba3af226f5d3aaa53cf6897e866a275181ff50d5b5"
+  },
+  "independent_stress": {
+    "test": "section_rollback.c",
+    "cycles": 40,
+    "active_region": 103,
+    "attempted_region": 101,
+    "injected_failure": "IO on second newly read section after partial allocations and shared-section owner increments",
+    "assertions": [
+      "old region/object/run counts retained",
+      "normal arena usage exactly restored",
+      "linear usage exactly restored",
+      "old ordered vertex/matrix/texture/alpha/depth/blend GPU stream retained",
+      "original view recoverable each cycle",
+      "all mock GPU allocations freed after destroy"
+    ],
+    "ordered_gpu_stream_hash": "7a9d72ee1bec1c3f",
+    "result": "PASS under ASan/UBSan"
+  },
+  "fixed_during_review": {
+    "issue": "Constructor conflated short metadata fread with normal-arena budget failure.",
+    "owner": "world_streaming agent fixed source after report; reviewer did not edit shared sources.",
+    "test": "metadata_io.c via linker --wrap=fread",
+    "result": "PASS: injected short read returns STREAMED_WORLD_IO, output NULL and no GPU allocations."
+  },
+  "reviewed_invariants": [
+    "Same-section frames borrow provider tables; ownership transfers only after successful stage. Failure does not free active tables.",
+    "Section owner counts and per-frame cache reference dedup preserve active resources during partial model/texture failures.",
+    "Model view retains offsets with data rebased to arena-owned payload; texture data is copied out of scratch into owned GPU data.",
+    "Eviction and destroy occur after FrameSync outside active frame; GPU allocations are not freed while referenced/in-flight.",
+    "Model vertex/index suffix128-byte alignment and full upload flush retain index range semantics.",
+    "Explicit source XYZ-to-viewer matrix and camera-relative double origin compensation match row-vector instance transforms.",
+    "Root restores car shader, projection/model matrices, attributes, alpha test0, alpha blend and depth state after streamed world draw.",
+    "World env0 reset preserves root colour-grade env1.",
+    "Root initial/reset prepare failure stops drive rendering; ordinary failure restores car/height/wheels/pose/chase matching retained world view."
+  ],
+  "nonblocking_gaps": [
+    {
+      "severity": "release-readiness",
+      "where": "rockport_main.c prepare failure branch",
+      "detail": "Persistent ordinary load failure can retry blocking staged IO every drive frame; root logs cause but sets generic road-edge UI status. Gate/pause/backoff and truthful map-load status are advisable before whole-map gameplay claims."
+    },
+    {
+      "severity": "API limitation",
+      "where": "stage_draws/world_frustum",
+      "detail": "Header accepts arbitrary nonparallel up/forward; vertical forward with valid nonstandard up is rejected by the standard-world-up frustum helper. Current root always uses +Y up, so this is not a current adapter blocker."
+    }
+  ],
+  "not_certified": [
+    "Complete asset coverage, including root-known missing texture7E2734A8",
+    "Full original LOD/view-state producer behavior; reference-slot0 is diagnostic",
+    "Actual GPU correctness/performance or stock-clock frame rate; root owns hardware/emulator checks",
+    "Asynchronous streaming, deadline guarantees, teleport/reset availability when active+next sets exceed total budget",
+    "Original collision/gameplay/engine fidelity"
+  ]
+}

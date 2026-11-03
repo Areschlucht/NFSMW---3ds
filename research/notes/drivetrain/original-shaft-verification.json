@@ -1,0 +1,13 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "original_range": "8025817C..80258298",
+  "float_bit_cases": 3904,
+  "branches": {
+    "reaction_unchanged": 3763,
+    "launch_reaction_attenuated": 141
+  },
+  "limitations": [
+    "Caller supplies explicit original live-ins including pre-integration engine RPM, peak-power RPM and upper-limit selector",
+    "Whole-engine torque/shaft synchronization, event policy and cadence are separate"
+  ]
+}

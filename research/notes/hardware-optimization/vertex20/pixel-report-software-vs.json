@@ -1,0 +1,38 @@
+{
+  "container": "nfsmw-vertex20-emulator",
+  "accurate_multiply": true,
+  "images": {
+    "software-vs-baseline-project-start.png": "4e091319ebbe8f712d61dcc519fdfcdfcd7d56128af00adfbc9f8806cbb7f50d",
+    "software-vs-candidate-project-start.png": "85a404d5c75a4978c21307a743b1bdc88a41c144aef9cde33dcae16b32d6600e",
+    "software-vs-baseline-project-dense.png": "732eba679547c221f87f05fe27c79f50df89f574fc37d6c33da04b1e882e8801",
+    "software-vs-candidate-project-dense.png": "b4018b767303895051181e8e0377ba0f0ea6b3a5ffbc031620e7022a6edd29ad"
+  },
+  "comparisons": {
+    "software-vs-start": {
+      "bbox": [
+        66,
+        68,
+        248,
+        232
+      ],
+      "changed_pixels": 3,
+      "total_pixels": 96000,
+      "max_channel_difference": 1,
+      "mean_absolute_channel_difference": 1.0416666666666666e-05
+    },
+    "software-vs-dense": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    }
+  },
+  "hardware_fps_claim": false,
+  "crop": [
+    312,
+    192,
+    712,
+    432
+  ]
+}

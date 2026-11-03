@@ -1,0 +1,75 @@
+{
+  "container": "nfsmw-vertex20-emulator",
+  "accurate_multiply": true,
+  "images": {
+    "interpreter-vs-baseline-project-start.png": "28edee14a693c5d2a36b7af66035840bf311b1b6834e4672696c7154839c2338",
+    "interpreter-vs-candidate-project-start.png": "771ae3c449eda56600f8daf2452e05584ffa9f604deb6056ef01fc77df098387",
+    "interpreter-vs-uv32-project-start.png": "59d89da2f68f32a058c44f7723c62405a5155d570fde2872485d0c383ee9fd1c",
+    "interpreter-vs-color24-project-start.png": "0a4cd0725d0c05fc7760a1bf469e1a0b14db934e86310412426641af54c347d8",
+    "interpreter-vs-baseline-project-dense.png": "00439aadbd7f224d7ca7fabf8400e077c553f74da418cc42f19cd828e840acf4",
+    "interpreter-vs-candidate-project-dense.png": "98340e35d53138244551a3469fcee08630c707c43c9823ff88e87869437048a9",
+    "interpreter-vs-uv32-project-dense.png": "046444031da9e15b8ae8790d520a136c106776442a58710bdacc71a6d57dd9d2",
+    "interpreter-vs-color24-project-dense.png": "caefb190f369218ad47ecba408e8d1978093efa4c42843f9448111c595af84ad"
+  },
+  "comparisons": {
+    "interpreter-vs-start-candidate-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "interpreter-vs-start-uv32-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "interpreter-vs-start-color24-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "interpreter-vs-dense-candidate-project": {
+      "bbox": [
+        226,
+        98,
+        227,
+        99
+      ],
+      "changed_pixels": 1,
+      "total_pixels": 96000,
+      "max_channel_difference": 1,
+      "mean_absolute_channel_difference": 3.4722222222222224e-06
+    },
+    "interpreter-vs-dense-uv32-project": {
+      "bbox": null,
+      "changed_pixels": 0,
+      "total_pixels": 96000,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0
+    },
+    "interpreter-vs-dense-color24-project": {
+      "bbox": [
+        226,
+        98,
+        227,
+        99
+      ],
+      "changed_pixels": 1,
+      "total_pixels": 96000,
+      "max_channel_difference": 1,
+      "mean_absolute_channel_difference": 3.4722222222222224e-06
+    }
+  },
+  "hardware_fps_claim": false,
+  "crop": [
+    312,
+    192,
+    712,
+    432
+  ]
+}

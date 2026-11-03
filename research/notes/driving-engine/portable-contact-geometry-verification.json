@@ -1,0 +1,36 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "original_range": [
+    "0x80247724",
+    "0x80247838"
+  ],
+  "vehicle_collections": 84,
+  "float_bit_cases": 336,
+  "bmw_mounts_at_dimension_y_zero": [
+    [
+      -0.6765000224113464,
+      -0.0,
+      1.4299999475479126
+    ],
+    [
+      0.6765000224113464,
+      -0.0,
+      1.4299999475479126
+    ],
+    [
+      -0.6740000247955322,
+      -0.0,
+      -1.3000000715255737
+    ],
+    [
+      0.6740000247955322,
+      -0.0,
+      -1.3000000715255737
+    ]
+  ],
+  "limitations": [
+    "body dimensionY is an explicit argument; its bodyshape/parameter producer remains separate",
+    "original initialized physical wheel geometry; visualTireOffsets remain distinct"
+  ]
+}

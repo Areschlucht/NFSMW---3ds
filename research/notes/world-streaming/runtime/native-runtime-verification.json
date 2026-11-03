@@ -1,0 +1,10 @@
+{
+  "native_selector_and_plan_cases": 563,
+  "metadata_bytes": 102718,
+  "selector_state_bytes": 1026,
+  "residency_state_bytes": 5128,
+  "original_request_gather_cases": 4,
+  "vector_sha256": "a331f195f8f99a5878114f41c2f413ef36cc48419b0b76c8177d22354d7a8bd8",
+  "metadata_sha256": "7bd3af44c6617586325f7269b4caf0695a19dbe3d973e7eae48b8cbabdca4d95",
+  "limits": "Contained-region normal-mode planning only; no async IO, geometry upload, nearest fallback or automatic eviction"
+}

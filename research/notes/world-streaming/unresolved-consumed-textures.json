@@ -1,0 +1,110 @@
+{
+  "8de70662": {
+    "draws": 56,
+    "model_count": 3,
+    "model_examples": [
+      "XO_PHOTORADAR_1B_MD_00",
+      "XO_PHOTORADAR_1C_MD_00",
+      "XO_PHOTORADAR_1Z_MD_00"
+    ],
+    "sections": [
+      2100,
+      2400
+    ]
+  },
+  "2d5ad26a": {
+    "draws": 44,
+    "model_count": 1,
+    "model_examples": [
+      "SKY_SPECULAR"
+    ],
+    "sections": [
+      2100,
+      2400
+    ]
+  },
+  "8c58916b": {
+    "draws": 838,
+    "model_count": 7,
+    "model_examples": [
+      "COURTLIGHTA_1B_FRAG01",
+      "COURTLIGHTA_1B_FRAG02",
+      "XO_COURTLIGHTA_1B_00",
+      "XO_COURTLIGHTA_1C_00",
+      "XO_COURTLIGHTA_1Z_00",
+      "XS_CAUTIONAHEAD_1B_00",
+      "XS_NOPARKANYTIME_1B_00"
+    ],
+    "sections": [
+      902,
+      1572,
+      1677,
+      2115,
+      2120,
+      2123,
+      2158,
+      2162,
+      2415,
+      2420,
+      2423,
+      2458,
+      2462
+    ]
+  },
+  "6dc61680": {
+    "draws": 5,
+    "model_count": 1,
+    "model_examples": [
+      "XO_CAMPUS_GLASSCOVER01_1B_00"
+    ],
+    "sections": [
+      2415,
+      2419,
+      2420,
+      2423,
+      2462
+    ]
+  },
+  "7e2734a8": {
+    "draws": 2,
+    "model_count": 1,
+    "model_examples": [
+      "XB_CT_TIRESHOP02_1B_00"
+    ],
+    "sections": [
+      142
+    ]
+  },
+  "7e2734a9": {
+    "draws": 2,
+    "model_count": 1,
+    "model_examples": [
+      "XB_CT_TIRESHOP02_1B_00"
+    ],
+    "sections": [
+      142
+    ]
+  },
+  "8b335c76": {
+    "draws": 6,
+    "model_count": 3,
+    "model_examples": [
+      "XO_LIGHTPOLEB_1B_00",
+      "XO_LIGHTPOLEB_1C_00",
+      "XO_LIGHTPOLEB_1Z_00"
+    ],
+    "sections": [
+      154
+    ]
+  },
+  "61a56b42": {
+    "draws": 2,
+    "model_count": 1,
+    "model_examples": [
+      "FISHMARKETRAMPB_CHOP_S17_R0"
+    ],
+    "sections": [
+      1957
+    ]
+  }
+}

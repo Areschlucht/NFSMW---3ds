@@ -1,0 +1,220 @@
+8010e200 li         r3, 9
+8010e204 li         r4, 2
+8010e208 bl         0x8033b6c0
+8010e20c li         r3, 0xb
+8010e210 li         r4, 2
+8010e214 b          0x8010e298
+8010e218 li         r3, 9
+8010e21c li         r4, 3
+8010e220 bl         0x8033b6c0
+8010e224 li         r3, 0xb
+8010e228 li         r4, 2
+8010e22c b          0x8010e298
+8010e230 li         r3, 9
+8010e234 li         r4, 3
+8010e238 bl         0x8033b6c0
+8010e23c li         r3, 0xb
+8010e240 li         r4, 2
+8010e244 b          0x8010e298
+8010e248 li         r3, 9
+8010e24c li         r4, 3
+8010e250 bl         0x8033b6c0
+8010e254 li         r3, 0xb
+8010e258 li         r4, 2
+8010e25c b          0x8010e2e4
+8010e260 li         r3, 9
+8010e264 li         r4, 2
+8010e268 b          0x8010e28c
+8010e26c li         r3, 9
+8010e270 li         r4, 2
+8010e274 bl         0x8033b6c0
+8010e278 li         r3, 0xb
+8010e27c li         r4, 2
+8010e280 b          0x8010e2e4
+8010e284 li         r3, 9
+8010e288 li         r4, 3
+8010e28c bl         0x8033b6c0
+8010e290 li         r3, 0xb
+8010e294 li         r4, 3
+8010e298 bl         0x8033b6c0
+8010e29c li         r3, 0xd
+8010e2a0 li         r4, 2
+8010e2a4 bl         0x8033b6c0
+8010e2a8 b          0x8010e31c
+8010e2ac li         r3, 9
+8010e2b0 li         r4, 3
+8010e2b4 bl         0x8033b6c0
+8010e2b8 li         r3, 0xb
+8010e2bc li         r4, 2
+8010e2c0 b          0x8010e2e4
+8010e2c4 li         r3, 9
+8010e2c8 li         r4, 3
+8010e2cc b          0x8010e2d8
+8010e2d0 li         r3, 9
+8010e2d4 li         r4, 2
+8010e2d8 bl         0x8033b6c0
+8010e2dc li         r3, 0xb
+8010e2e0 li         r4, 3
+8010e2e4 bl         0x8033b6c0
+8010e2e8 li         r3, 0xd
+8010e2ec li         r4, 3
+8010e2f0 bl         0x8033b6c0
+8010e2f4 b          0x8010e31c
+8010e2f8 li         r3, 9
+8010e2fc li         r4, 3
+8010e300 bl         0x8033b6c0
+8010e304 li         r3, 0xb
+8010e308 li         r4, 3
+8010e30c bl         0x8033b6c0
+8010e310 li         r3, 0xd
+8010e314 li         r4, 3
+8010e318 bl         0x8033b6c0
+8010e31c lis        r9, -0x7fba
+8010e320 lis        r11, -0x7fba
+8010e324 stw        r30, -0x1318(r9)
+8010e328 mr         r3, r29
+8010e32c stw        r31, -0x1314(r11)
+8010e330 lwz        r0, 0x1c(r1)
+8010e334 mtlr       r0
+8010e338 lmw        r29, 0xc(r1)
+8010e33c addi       r1, r1, 0x18
+8010e340 blr        
+8010e344 stwu       r1, -8(r1)
+8010e348 mflr       r0
+8010e34c stw        r0, 0xc(r1)
+8010e350 lis        r9, -0x7fbe
+8010e354 li         r0, 2
+8010e358 stw        r0, -0x4b68(r9)
+8010e35c bl         0x8033bf48
+8010e360 li         r3, 9
+8010e364 li         r4, 1
+8010e368 bl         0x8033b6c0
+8010e36c li         r3, 0xb
+8010e370 li         r4, 1
+8010e374 bl         0x8033b6c0
+8010e378 li         r3, 0xd
+8010e37c li         r4, 1
+8010e380 bl         0x8033b6c0
+8010e384 li         r3, 0xe
+8010e388 li         r4, 1
+8010e38c bl         0x8033b6c0
+8010e390 li         r3, 6
+8010e394 lwz        r0, 0xc(r1)
+8010e398 mtlr       r0
+8010e39c addi       r1, r1, 8
+8010e3a0 blr        
+8010e3a4 stwu       r1, -8(r1)
+8010e3a8 mflr       r0
+8010e3ac stw        r0, 0xc(r1)
+8010e3b0 li         r3, 0
+8010e3b4 li         r4, 9
+8010e3b8 li         r5, 1
+8010e3bc li         r6, 4
+8010e3c0 li         r7, 0
+8010e3c4 bl         0x8033bf80
+8010e3c8 li         r3, 0
+8010e3cc li         r4, 0xb
+8010e3d0 li         r5, 1
+8010e3d4 li         r6, 5
+8010e3d8 li         r7, 0
+8010e3dc bl         0x8033bf80
+8010e3e0 li         r3, 0
+8010e3e4 li         r4, 0xd
+8010e3e8 li         r5, 1
+8010e3ec li         r6, 4
+8010e3f0 li         r7, 0
+8010e3f4 bl         0x8033bf80
+8010e3f8 li         r3, 1
+8010e3fc li         r4, 9
+8010e400 li         r5, 1
+8010e404 li         r6, 4
+8010e408 li         r7, 0
+8010e40c bl         0x8033bf80
+8010e410 li         r3, 1
+8010e414 li         r4, 0xb
+8010e418 li         r5, 1
+8010e41c li         r6, 5
+8010e420 li         r7, 0
+8010e424 bl         0x8033bf80
+8010e428 li         r3, 1
+8010e42c li         r4, 0xd
+8010e430 li         r5, 1
+8010e434 li         r6, 3
+8010e438 li         r7, 0xc
+8010e43c bl         0x8033bf80
+8010e440 li         r3, 2
+8010e444 li         r4, 9
+8010e448 li         r5, 1
+8010e44c li         r6, 3
+8010e450 li         r7, 0xb
+8010e454 bl         0x8033bf80
+8010e458 li         r3, 2
+8010e45c li         r4, 0xa
+8010e460 li         r5, 0
+8010e464 li         r6, 1
+8010e468 li         r7, 6
+8010e46c bl         0x8033bf80
+8010e470 li         r3, 2
+8010e474 li         r4, 0xb
+8010e478 li         r5, 1
+8010e47c li         r6, 5
+8010e480 li         r7, 0
+8010e484 bl         0x8033bf80
+8010e488 li         r3, 2
+8010e48c li         r4, 0xc
+8010e490 li         r5, 1
+8010e494 li         r6, 5
+8010e498 li         r7, 0
+8010e49c bl         0x8033bf80
+8010e4a0 li         r3, 2
+8010e4a4 li         r4, 0xd
+8010e4a8 li         r5, 1
+8010e4ac li         r6, 3
+8010e4b0 li         r7, 0xc
+8010e4b4 bl         0x8033bf80
+8010e4b8 li         r3, 3
+8010e4bc li         r4, 9
+8010e4c0 li         r5, 1
+8010e4c4 li         r6, 3
+8010e4c8 li         r7, 8
+8010e4cc bl         0x8033bf80
+8010e4d0 li         r3, 3
+8010e4d4 li         r4, 0xb
+8010e4d8 li         r5, 1
+8010e4dc li         r6, 5
+8010e4e0 li         r7, 0
+8010e4e4 bl         0x8033bf80
+8010e4e8 li         r3, 3
+8010e4ec li         r4, 0xd
+8010e4f0 li         r5, 1
+8010e4f4 li         r6, 3
+8010e4f8 li         r7, 0xc
+8010e4fc bl         0x8033bf80
+8010e500 li         r3, 4
+8010e504 li         r4, 9
+8010e508 li         r5, 1
+8010e50c li         r6, 4
+8010e510 li         r7, 0
+8010e514 bl         0x8033bf80
+8010e518 li         r3, 4
+8010e51c li         r4, 0xa
+8010e520 li         r5, 0
+8010e524 li         r6, 4
+8010e528 li         r7, 0
+8010e52c bl         0x8033bf80
+8010e530 li         r3, 4
+8010e534 li         r4, 0xb
+8010e538 li         r5, 1
+8010e53c li         r6, 3
+8010e540 li         r7, 0
+8010e544 bl         0x8033bf80
+8010e548 li         r3, 4
+8010e54c li         r4, 0xd
+8010e550 li         r5, 1
+8010e554 li         r6, 3
+8010e558 li         r7, 0xc
+8010e55c bl         0x8033bf80
+8010e560 li         r3, 5
+8010e564 li         r4, 9
+8010e568 li         r5, 1
+8010e56c li         r6, 4

@@ -1,0 +1,9 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "reference_region": "802e12b4..802e1314",
+  "blend_leaf": "802e0890",
+  "cases": 384,
+  "matched": 384,
+  "scope": "All128partialmaskbytes times3nativewordpairs; fullmaskbranch128..255directassigns source at802e1294..1298",
+  "notes": "Maskis separate texturegrayscale; sourceGLOSSbyteis never usedas opacity here"
+}

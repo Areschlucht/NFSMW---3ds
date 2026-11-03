@@ -1,0 +1,3026 @@
+{
+  "source_sha256": "b1329f35739503b13cff4838766f511b1f5e8fec28d37112da9efbc63cb0438a",
+  "record_count": 156,
+  "selected_materials": [
+    {
+      "key": "b57ab98e",
+      "name": "CARBONFIBER2",
+      "file_offset": 199912,
+      "record_sha256": "04f63c5f47ff55ea3f65839c78cfca6b624f35dd8602c3b3e928225217ac67e8",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 0.6000000834465027,
+          "original_bytes": "9b99193f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.40000003576278687,
+          "original_bytes": "cecccc3e"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 0.9000000953674316,
+          "original_bytes": "6866663f"
+        },
+        {
+          "offset": "68",
+          "value": 0.8500000834465027,
+          "original_bytes": "9b99593f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 0.9000000953674316,
+          "original_bytes": "6866663f"
+        },
+        {
+          "offset": "78",
+          "value": 0.8500000834465027,
+          "original_bytes": "9b99593f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "80",
+          "value": 3.0,
+          "original_bytes": "00004040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "4c95c6f8",
+      "name": "LICENSEPLATE",
+      "file_offset": 208008,
+      "record_sha256": "677f766edcd173581be2d1ae88e74a89974a1156221d7d636837f0a81064c479",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 2.5,
+          "original_bytes": "00002040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "78743ca1",
+      "name": "RUBBER",
+      "file_offset": 216808,
+      "record_sha256": "2c5748cfe0ed2cda2404308e0aa601170bee3b9ef27e58564d51d4d5d98db5b3",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 0.9500000476837158,
+          "original_bytes": "3433733f"
+        },
+        {
+          "offset": "3c",
+          "value": 0.9000000953674316,
+          "original_bytes": "6866663f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 0.9500000476837158,
+          "original_bytes": "3433733f"
+        },
+        {
+          "offset": "4c",
+          "value": 0.9000000953674316,
+          "original_bytes": "6866663f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 1.5,
+          "original_bytes": "0000c03f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "22719fa9",
+      "name": "MAGSILVER",
+      "file_offset": 208536,
+      "record_sha256": "4dd1421432726881cf8b3e4071c854749d4ce7262e4b16631b76e04e7d667222",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "80",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "2787edab",
+      "name": "INTERIOR",
+      "file_offset": 207832,
+      "record_sha256": "f1a8f48e77bf888fff877ca897bdae73824e2b3ce33559d35a661ffe53bce905",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 0.9230000972747803,
+          "original_bytes": "bc496c3f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.08500000834465027,
+          "original_bytes": "7c14ae3d"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0690000131726265,
+          "original_bytes": "e14f8d3d"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "52bf4c34",
+      "name": "BOTTOM",
+      "file_offset": 198504,
+      "record_sha256": "1a9d8e672d6b3a1689969bc688421d41bd6da63ab0b88bec4645be49a3737c94",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 0.8330000638961792,
+          "original_bytes": "7e3f553f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 0.8400000929832458,
+          "original_bytes": "3f0a573f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 3.888000011444092,
+          "original_bytes": "fed47840"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "12c9453c",
+      "name": "MOLDINGS",
+      "file_offset": 210824,
+      "record_sha256": "a9d916b5d77ce4dc8bafa8e6db08885927d1303b6bb950e9c84d3d01e026caee",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 2.200000047683716,
+          "original_bytes": "cdcc0c40"
+        },
+        {
+          "offset": "5c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "05bc3a3c",
+      "name": "BRAKELIGHT",
+      "file_offset": 198856,
+      "record_sha256": "eb81f092ce9fb480ed021dfd6b557d0d7b6949b534aab1c3ca839ff9da1c4233",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 1.7599999904632568,
+          "original_bytes": "ae47e13f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "60",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "64",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "68",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.2500000298023224,
+          "original_bytes": "0100803e"
+        },
+        {
+          "offset": "70",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "74",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "78",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "80",
+          "value": 2.5,
+          "original_bytes": "00002040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "0fedee40",
+      "name": "DULLPLASTIC",
+      "file_offset": 206248,
+      "record_sha256": "a89d105fe2f1bb99f694b56576b6e55fd17092b9823b1005147e234e6837d1bb",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.2000000476837158,
+          "original_bytes": "9a99993f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.2000000476837158,
+          "original_bytes": "9a99993f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "3ed70c43",
+      "name": "WINDOWMASK",
+      "file_offset": 220152,
+      "record_sha256": "8572eb849fc6c673ec7be285f280929853a12a39d2a9d2bbda7abc2bdb911cd3",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 0.40000003576278687,
+          "original_bytes": "cecccc3e"
+        },
+        {
+          "offset": "54",
+          "value": 0.40000003576278687,
+          "original_bytes": "cecccc3e"
+        },
+        {
+          "offset": "58",
+          "value": 2.5,
+          "original_bytes": "00002040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 1.100000023841858,
+          "original_bytes": "cdcc8c3f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "80",
+          "value": 3.0,
+          "original_bytes": "00004040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "471a1dca",
+      "name": "WINDSHIELD",
+      "file_offset": 220328,
+      "record_sha256": "e879286d804dcedef92f4acd0a7119686c8f31041ee8debc2498ea4ed7fcc277",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 0.40000003576278687,
+          "original_bytes": "cecccc3e"
+        },
+        {
+          "offset": "54",
+          "value": 0.40000003576278687,
+          "original_bytes": "cecccc3e"
+        },
+        {
+          "offset": "58",
+          "value": 2.5,
+          "original_bytes": "00002040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 1.100000023841858,
+          "original_bytes": "cdcc8c3f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "80",
+          "value": 3.0,
+          "original_bytes": "00004040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "010cb64a",
+      "name": "PLAINNOTHING",
+      "file_offset": 212760,
+      "record_sha256": "d4f7f38f310db99f5120988a30f5ef1c472384608f0d059a037a403a982081c0",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "34",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "38",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "3c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "40",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "44",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "48",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "4c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "64",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "68",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "70",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "74",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "78",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "88",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "8c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "98",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "9c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "b51b3acf",
+      "name": "HEADLIGHTREFLECTOR",
+      "file_offset": 207480,
+      "record_sha256": "4159502e8d5f788e08f1869a1d9b8b087f4eecdff86f66b3090ad1d65fe17e2a",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "dcd01662",
+      "name": "DIABLOHP",
+      "file_offset": 205544,
+      "record_sha256": "7a0fbcabf4412ccc3f3e62ed08667c342b08fcb5f79c193409439e90c711642e",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "54",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "58",
+          "value": 1.25,
+          "original_bytes": "0000a03f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "a6348ee3",
+      "name": "HEADLIGHTGLASS",
+      "file_offset": 207304,
+      "record_sha256": "7edc15f4e1ed6a1a18c0f64b936a66a62e37d75ab80a7929290ac72769ba3ea5",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 0.3500000238418579,
+          "original_bytes": "3433b33e"
+        },
+        {
+          "offset": "58",
+          "value": 2.5,
+          "original_bytes": "00002040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "80",
+          "value": 3.0,
+          "original_bytes": "00004040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 3.0,
+          "original_bytes": "00004040"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "2e65e067",
+      "name": "ALUMINUM",
+      "file_offset": 198328,
+      "record_sha256": "08aae8bb34657110bd2afbc30e02073a06bbe52b06e5519eb181762efd9cec89",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "38",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "3c",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "48",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "4c",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 1.690000057220459,
+          "original_bytes": "ec51d83f"
+        },
+        {
+          "offset": "5c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "60",
+          "value": 0.6000000834465027,
+          "original_bytes": "9b99193f"
+        },
+        {
+          "offset": "64",
+          "value": 0.6000000834465027,
+          "original_bytes": "9b99193f"
+        },
+        {
+          "offset": "68",
+          "value": 0.6600000858306885,
+          "original_bytes": "c4f5283f"
+        },
+        {
+          "offset": "6c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "70",
+          "value": 0.6000000834465027,
+          "original_bytes": "9b99193f"
+        },
+        {
+          "offset": "74",
+          "value": 0.6000000834465027,
+          "original_bytes": "9b99193f"
+        },
+        {
+          "offset": "78",
+          "value": 0.6600000858306885,
+          "original_bytes": "c4f5283f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.13200001418590546,
+          "original_bytes": "032b073e"
+        },
+        {
+          "offset": "80",
+          "value": 0.0010000001639127731,
+          "original_bytes": "7012833a"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0010000001639127731,
+          "original_bytes": "7012833a"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "02a05578",
+      "name": "DECAL",
+      "file_offset": 205192,
+      "record_sha256": "92495d35a5aa9b62f4590b46a1596dd92ca418595eddad900225327126659100",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.2000000476837158,
+          "original_bytes": "9a99993f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.2000000476837158,
+          "original_bytes": "9a99993f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 4.5,
+          "original_bytes": "00009040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.10000000894069672,
+          "original_bytes": "cecccc3d"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "80",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "54949afd",
+      "name": "CHROME",
+      "file_offset": 201320,
+      "record_sha256": "71e789057aa53fda7acc8dfd31d59d4d1c239a02234e80c209db9ef78f8e6f83",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 1.5,
+          "original_bytes": "0000c03f"
+        },
+        {
+          "offset": "5c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.5000000596046448,
+          "original_bytes": "0100003f"
+        },
+        {
+          "offset": "80",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 2.0,
+          "original_bytes": "00000040"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 0.0,
+          "original_bytes": "00000000"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    },
+    {
+      "key": "93c0eaf6",
+      "name": "METPAINTSILVER",
+      "file_offset": 210296,
+      "record_sha256": "03126f678cb004b852543808877fd05538b4960699cf579c8a9bc64db41d3728",
+      "fields": [
+        {
+          "offset": "30",
+          "value": 0.7500000596046448,
+          "original_bytes": "0100403f"
+        },
+        {
+          "offset": "34",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "38",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "3c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "40",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "44",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "48",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "4c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "50",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "54",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "58",
+          "value": 3.0,
+          "original_bytes": "00004040"
+        },
+        {
+          "offset": "5c",
+          "value": 0.7000000476837158,
+          "original_bytes": "3433333f"
+        },
+        {
+          "offset": "60",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "64",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "68",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "6c",
+          "value": 0.30000004172325134,
+          "original_bytes": "9b99993e"
+        },
+        {
+          "offset": "70",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "74",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "78",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "7c",
+          "value": 0.15000002086162567,
+          "original_bytes": "9b99193e"
+        },
+        {
+          "offset": "80",
+          "value": 3.5,
+          "original_bytes": "00006040"
+        },
+        {
+          "offset": "84",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "88",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "8c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "90",
+          "value": 0.20000001788139343,
+          "original_bytes": "cecc4c3e"
+        },
+        {
+          "offset": "94",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "98",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "9c",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a0",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        },
+        {
+          "offset": "a4",
+          "value": 1.0,
+          "original_bytes": "0000803f"
+        }
+      ]
+    }
+  ],
+  "unresolved_geometry_shaders": [
+    "d6d6080a"
+  ],
+  "canonical_skin_selection": {
+    "geometry_alias": "CARSKIN",
+    "geometry_alias_hash": "d6d6080a",
+    "paint_part": "METAL_L1_COLOR41",
+    "part_attribute_key": "6ba02c05",
+    "selected_material": "METPAINTSILVER",
+    "selected_material_hash": "93c0eaf6",
+    "original_consumer": "802c8968..802c899c",
+    "car_render_info_material_pointer_offset": "cc"
+  },
+  "limitations": [
+    "Float values retained by original offsets; precise lighting/TEV meanings not guessed",
+    "Current NFM texture batches can contain multiple original material hashes",
+    "Original GCcachedmaterial coefficient/combiner consumers still tracing"
+  ]
+}

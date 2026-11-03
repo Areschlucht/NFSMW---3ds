@@ -1,0 +1,9 @@
+{
+  "corners": 112077,
+  "exact_rgba8_reconstructable": 112077,
+  "exact_original_s16_q12_uv_reconstructable": 112077,
+  "unique_compact_records": 50176,
+  "proposed_stride": 20,
+  "proposed_allocation_bytes": 1227674,
+  "hardware_shader_rounding_validation": "not done; no integration or pixel-equivalence claim"
+}

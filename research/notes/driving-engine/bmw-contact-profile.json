@@ -1,0 +1,164 @@
+{
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "collection": "bmwm3gtre46",
+  "surface": "unknown",
+  "parameters": {
+    "static_grip": [
+      2.200000047683716,
+      2.299999952316284
+    ],
+    "dynamic_grip": [
+      2.0,
+      2.0
+    ],
+    "grip_scale": [
+      1.1749999523162842,
+      1.225000023841858
+    ],
+    "normal_brakes": [
+      475.0,
+      600.0
+    ],
+    "handbrake": 925.0,
+    "brake_lock": [
+      1.0,
+      3.0
+    ],
+    "calibration": [
+      4.0,
+      10.0,
+      1.2000000476837158,
+      100.0,
+      10.0
+    ],
+    "surface_lateral_grip": 1.0,
+    "surface_drive_grip": 1.0,
+    "surface_rolling_resistance": 1.0
+  },
+  "provenance": {
+    "tires/bmwm3gtre46/STATIC_GRIP": {
+      "field_key": 3960037734,
+      "field_name": "STATIC_GRIP",
+      "type": "AxlePair",
+      "value": [
+        2.200000047683716,
+        2.299999952316284
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 139944,
+      "file_offset": 140072,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "400ccccd40133333"
+    },
+    "tires/bmwm3gtre46/DYNAMIC_GRIP": {
+      "field_key": 2868642227,
+      "field_name": "DYNAMIC_GRIP",
+      "type": "AxlePair",
+      "value": [
+        2.0,
+        2.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 139920,
+      "file_offset": 140048,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "4000000040000000"
+    },
+    "tires/bmwm3gtre46/GRIP_SCALE": {
+      "field_key": 4051156507,
+      "field_name": "GRIP_SCALE",
+      "type": "AxlePair",
+      "value": [
+        1.1749999523162842,
+        1.225000023841858
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 139912,
+      "file_offset": 140040,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f9666663f9ccccd"
+    },
+    "brakes/bmwm3gtre46/BRAKES": {
+      "field_key": 976712449,
+      "field_name": "BRAKES",
+      "type": "AxlePair",
+      "value": [
+        475.0,
+        600.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 148780,
+      "file_offset": 148908,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "43ed800044160000"
+    },
+    "brakes/bmwm3gtre46/EBRAKE": {
+      "field_key": 3700840972,
+      "field_name": "EBRAKE",
+      "type": "EA::Reflection::Float",
+      "value": 925.0,
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 148788,
+      "file_offset": 148916,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "44674000"
+    },
+    "brakes/bmwm3gtre46/BRAKE_LOCK": {
+      "field_key": 4122919485,
+      "field_name": "BRAKE_LOCK",
+      "type": "AxlePair",
+      "value": [
+        1.0,
+        3.0
+      ],
+      "source_collection": 1309171635,
+      "stream": "bin",
+      "stream_offset": 148772,
+      "file_offset": 148900,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f80000040400000"
+    },
+    "simsurface/unknown/LATERAL_GRIP": {
+      "field_key": 1558698920,
+      "field_name": "LATERAL_GRIP",
+      "type": "EA::Reflection::Float",
+      "value": 1.0,
+      "source_collection": 1510626493,
+      "stream": "bin",
+      "stream_offset": 346316,
+      "file_offset": 346444,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f800000"
+    },
+    "simsurface/unknown/DRIVE_GRIP": {
+      "field_key": 3331266498,
+      "field_name": "DRIVE_GRIP",
+      "type": "EA::Reflection::Float",
+      "value": 1.0,
+      "source_collection": 1510626493,
+      "stream": "bin",
+      "stream_offset": 346312,
+      "file_offset": 346440,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f800000"
+    },
+    "simsurface/unknown/ROLLING_RESISTANCE": {
+      "field_key": 2670395794,
+      "field_name": "ROLLING_RESISTANCE",
+      "type": "EA::Reflection::Float",
+      "value": 1.0,
+      "source_collection": 1510626493,
+      "stream": "bin",
+      "stream_offset": 346304,
+      "file_offset": 346432,
+      "source_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+      "original_bytes": "3f800000"
+    }
+  }
+}

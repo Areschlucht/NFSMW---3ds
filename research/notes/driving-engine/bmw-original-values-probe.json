@@ -1,0 +1,1968 @@
+[
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "chassis",
+    "parent": "default",
+    "fields": {
+      "WHEEL_BASE": {
+        "value": 2.7300000190734863,
+        "bin_offset": "0x84b8",
+        "type": "EA::Reflection::Float"
+      },
+      "DRAG_COEFFICIENT": {
+        "value": 0.3199999928474426,
+        "bin_offset": "0x84d4",
+        "type": "EA::Reflection::Float"
+      },
+      "SHOCK_VALVING": {
+        "value": [
+          20.0,
+          20.0
+        ],
+        "bin_offset": "0x84a4",
+        "type": "AxlePair"
+      },
+      "RIDE_HEIGHT": {
+        "value": [
+          6.0,
+          6.0
+        ],
+        "bin_offset": "0x847c",
+        "type": "AxlePair"
+      },
+      "SHOCK_STIFFNESS": {
+        "value": [
+          60.0,
+          50.0
+        ],
+        "bin_offset": "0x8494",
+        "type": "AxlePair"
+      },
+      "SHOCK_BLOWOUT": {
+        "value": 5.0,
+        "bin_offset": "0x84bc",
+        "type": "EA::Reflection::Float"
+      },
+      "SHOCK_EXT_STIFFNESS": {
+        "value": [
+          75.0,
+          77.0
+        ],
+        "bin_offset": "0x848c",
+        "type": "AxlePair"
+      },
+      "SWAYBAR_STIFFNESS": {
+        "value": [
+          200.0,
+          200.0
+        ],
+        "bin_offset": "0x84ac",
+        "type": "AxlePair"
+      },
+      "ROLL_CENTER": {
+        "value": 9.0,
+        "bin_offset": "0x84b4",
+        "type": "EA::Reflection::Float"
+      },
+      "TRAVEL": {
+        "value": [
+          8.0,
+          8.0
+        ],
+        "bin_offset": "0x8474",
+        "type": "AxlePair"
+      },
+      "SPRING_STIFFNESS": {
+        "value": [
+          650.0,
+          600.0
+        ],
+        "bin_offset": "0x849c",
+        "type": "AxlePair"
+      },
+      "AERO_CG": {
+        "value": 47.75,
+        "bin_offset": "0x84c0",
+        "type": "EA::Reflection::Float"
+      },
+      "SPRING_PROGRESSION": {
+        "value": [
+          7.5,
+          7.5
+        ],
+        "bin_offset": "0x846c",
+        "type": "AxlePair"
+      },
+      "TRACK_WIDTH": {
+        "value": [
+          1.6080000400543213,
+          1.6030000448226929
+        ],
+        "bin_offset": "0x8484",
+        "type": "AxlePair"
+      },
+      "SHOCK_DIGRESSION": {
+        "value": [
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "bin_offset": "0x8464",
+        "type": "AxlePair"
+      },
+      "RENDER_MOTION": {
+        "value": 1.0,
+        "bin_offset": "0x84c4",
+        "type": "EA::Reflection::Float"
+      },
+      "AERO_COEFFICIENT": {
+        "value": 0.30000001192092896,
+        "bin_offset": "0x84cc",
+        "type": "EA::Reflection::Float"
+      },
+      "FRONT_AXLE": {
+        "value": 1.4299999475479126,
+        "bin_offset": "0x84c8",
+        "type": "EA::Reflection::Float"
+      },
+      "FRONT_WEIGHT_BIAS": {
+        "value": 54.0,
+        "bin_offset": "0x84d0",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "chassis",
+    "parent": "bmwm3gtre46",
+    "fields": {
+      "WHEEL_BASE": {
+        "value": 2.7249999046325684,
+        "bin_offset": "0xa5cc",
+        "type": "EA::Reflection::Float"
+      },
+      "DRAG_COEFFICIENT": {
+        "value": 0.3199999928474426,
+        "bin_offset": "0xa5e8",
+        "type": "EA::Reflection::Float"
+      },
+      "SHOCK_VALVING": {
+        "value": [
+          17.0,
+          17.0
+        ],
+        "bin_offset": "0xa5b8",
+        "type": "AxlePair"
+      },
+      "RIDE_HEIGHT": {
+        "value": [
+          7.5,
+          7.5
+        ],
+        "bin_offset": "0xa590",
+        "type": "AxlePair"
+      },
+      "SHOCK_STIFFNESS": {
+        "value": [
+          40.0,
+          40.0
+        ],
+        "bin_offset": "0xa5a8",
+        "type": "AxlePair"
+      },
+      "SHOCK_BLOWOUT": {
+        "value": 5.0,
+        "bin_offset": "0xa5d0",
+        "type": "EA::Reflection::Float"
+      },
+      "SHOCK_EXT_STIFFNESS": {
+        "value": [
+          50.0,
+          50.0
+        ],
+        "bin_offset": "0xa5a0",
+        "type": "AxlePair"
+      },
+      "SWAYBAR_STIFFNESS": {
+        "value": [
+          275.0,
+          200.0
+        ],
+        "bin_offset": "0xa5c0",
+        "type": "AxlePair"
+      },
+      "ROLL_CENTER": {
+        "value": 9.0,
+        "bin_offset": "0xa5c8",
+        "type": "EA::Reflection::Float"
+      },
+      "TRAVEL": {
+        "value": [
+          7.0,
+          7.0
+        ],
+        "bin_offset": "0xa588",
+        "type": "AxlePair"
+      },
+      "SPRING_STIFFNESS": {
+        "value": [
+          400.0,
+          400.0
+        ],
+        "bin_offset": "0xa5b0",
+        "type": "AxlePair"
+      },
+      "AERO_CG": {
+        "value": 47.0,
+        "bin_offset": "0xa5d4",
+        "type": "EA::Reflection::Float"
+      },
+      "SPRING_PROGRESSION": {
+        "value": [
+          7.5,
+          6.0
+        ],
+        "bin_offset": "0xa580",
+        "type": "AxlePair"
+      },
+      "TRACK_WIDTH": {
+        "value": [
+          1.6080000400543213,
+          1.6030000448226929
+        ],
+        "bin_offset": "0xa598",
+        "type": "AxlePair"
+      },
+      "SHOCK_DIGRESSION": {
+        "value": [
+          0.30000001192092896,
+          0.30000001192092896
+        ],
+        "bin_offset": "0xa578",
+        "type": "AxlePair"
+      },
+      "RENDER_MOTION": {
+        "value": 1.0,
+        "bin_offset": "0xa5d8",
+        "type": "EA::Reflection::Float"
+      },
+      "AERO_COEFFICIENT": {
+        "value": 0.23999999463558197,
+        "bin_offset": "0xa5e0",
+        "type": "EA::Reflection::Float"
+      },
+      "FRONT_AXLE": {
+        "value": 1.5,
+        "bin_offset": "0xa5dc",
+        "type": "EA::Reflection::Float"
+      },
+      "FRONT_WEIGHT_BIAS": {
+        "value": 54.0,
+        "bin_offset": "0xa5e4",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "induction",
+    "parent": "default",
+    "fields": {
+      "SPOOL_TIME_DOWN": {
+        "value": 0.25,
+        "bin_offset": "0x11cf0",
+        "type": "EA::Reflection::Float"
+      },
+      "HIGH_BOOST": {
+        "value": 0.20000000298023224,
+        "bin_offset": "0x11d04",
+        "type": "EA::Reflection::Float"
+      },
+      "LOW_BOOST": {
+        "value": 0.20000000298023224,
+        "bin_offset": "0x11cec",
+        "type": "EA::Reflection::Float"
+      },
+      "SPOOL_TIME_UP": {
+        "value": 2.0,
+        "bin_offset": "0x11cfc",
+        "type": "EA::Reflection::Float"
+      },
+      "PSI": {
+        "value": 12.0,
+        "bin_offset": "0x11d00",
+        "type": "EA::Reflection::Float"
+      },
+      "SPOOL": {
+        "value": 0.20000000298023224,
+        "bin_offset": "0x11cf8",
+        "type": "EA::Reflection::Float"
+      },
+      "VACUUM": {
+        "value": -0.05000000074505806,
+        "bin_offset": "0x11cf4",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "engine",
+    "parent": "default",
+    "fields": {
+      "ENGINE_BRAKING": {
+        "value": {
+          "capacity": 3,
+          "count": 3,
+          "element_size": 4,
+          "values": [
+            0.699999988079071,
+            0.800000011920929,
+            0.8999999761581421
+          ]
+        },
+        "bin_offset": "0x131cc",
+        "type": "EA::Reflection::Float"
+      },
+      "IDLE": {
+        "value": 800.0,
+        "bin_offset": "0x131ec",
+        "type": "EA::Reflection::Float"
+      },
+      "SPEED_LIMITER": {
+        "value": {
+          "capacity": 2,
+          "count": 0,
+          "element_size": 4,
+          "values": []
+        },
+        "bin_offset": "0x131bc",
+        "type": "EA::Reflection::Float"
+      },
+      "TORQUE": {
+        "value": {
+          "capacity": 9,
+          "count": 9,
+          "element_size": 4,
+          "values": [
+            170.0,
+            251.0,
+            340.0,
+            428.0,
+            467.0,
+            452.0,
+            411.0,
+            375.0,
+            350.0
+          ]
+        },
+        "bin_offset": "0x13190",
+        "type": "EA::Reflection::Float"
+      },
+      "MAX_RPM": {
+        "value": 9500.0,
+        "bin_offset": "0x131e4",
+        "type": "EA::Reflection::Float"
+      },
+      "FLYWHEEL_MASS": {
+        "value": 10.0,
+        "bin_offset": "0x131e0",
+        "type": "EA::Reflection::Float"
+      },
+      "RED_LINE": {
+        "value": 8500.0,
+        "bin_offset": "0x131e8",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "engine",
+    "parent": "default",
+    "fields": {
+      "ENGINE_BRAKING": {
+        "value": {
+          "capacity": 3,
+          "count": 3,
+          "element_size": 4,
+          "values": [
+            0.699999988079071,
+            0.800000011920929,
+            0.8999999761581421
+          ]
+        },
+        "bin_offset": "0x1358c",
+        "type": "EA::Reflection::Float"
+      },
+      "IDLE": {
+        "value": 800.0,
+        "bin_offset": "0x135ac",
+        "type": "EA::Reflection::Float"
+      },
+      "SPEED_LIMITER": {
+        "value": {
+          "capacity": 2,
+          "count": 0,
+          "element_size": 4,
+          "values": []
+        },
+        "bin_offset": "0x1357c",
+        "type": "EA::Reflection::Float"
+      },
+      "TORQUE": {
+        "value": {
+          "capacity": 9,
+          "count": 9,
+          "element_size": 4,
+          "values": [
+            149.0,
+            179.0,
+            222.0,
+            266.0,
+            283.0,
+            275.0,
+            255.0,
+            235.0,
+            228.0
+          ]
+        },
+        "bin_offset": "0x13550",
+        "type": "EA::Reflection::Float"
+      },
+      "MAX_RPM": {
+        "value": 9500.0,
+        "bin_offset": "0x135a4",
+        "type": "EA::Reflection::Float"
+      },
+      "FLYWHEEL_MASS": {
+        "value": 10.0,
+        "bin_offset": "0x135a0",
+        "type": "EA::Reflection::Float"
+      },
+      "RED_LINE": {
+        "value": 8500.0,
+        "bin_offset": "0x135a8",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "transmission",
+    "parent": "default",
+    "fields": {
+      "GEAR_RATIO": {
+        "value": {
+          "capacity": 9,
+          "count": 8,
+          "element_size": 4,
+          "values": [
+            3.200000047683716,
+            0.0,
+            4.099999904632568,
+            2.5299999713897705,
+            1.6699999570846558,
+            1.2300000190734863,
+            1.0,
+            0.8299999833106995
+          ]
+        },
+        "bin_offset": "0x1e8a4",
+        "type": "EA::Reflection::Float"
+      },
+      "DIFFERENTIAL": {
+        "value": {
+          "capacity": 3,
+          "count": 3,
+          "element_size": 4,
+          "values": [
+            0.800000011920929,
+            0.800000011920929,
+            0.0
+          ]
+        },
+        "bin_offset": "0x1e8d0",
+        "type": "EA::Reflection::Float"
+      },
+      "GEAR_EFFICIENCY": {
+        "value": {
+          "capacity": 9,
+          "count": 9,
+          "element_size": 4,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bin_offset": "0x1e8e4",
+        "type": "EA::Reflection::Float"
+      },
+      "TORQUE_CONVERTER": {
+        "value": 0.30000001192092896,
+        "bin_offset": "0x1e910",
+        "type": "EA::Reflection::Float"
+      },
+      "TORQUE_SPLIT": {
+        "value": 0.0,
+        "bin_offset": "0x1e914",
+        "type": "EA::Reflection::Float"
+      },
+      "OPTIMAL_SHIFT": {
+        "value": 500.0,
+        "bin_offset": "0x1e91c",
+        "type": "EA::Reflection::Float"
+      },
+      "CLUTCH_SLIP": {
+        "value": 0.800000011920929,
+        "bin_offset": "0x1e918",
+        "type": "EA::Reflection::Float"
+      },
+      "SHIFT_SPEED": {
+        "value": 0.25,
+        "bin_offset": "0x1e920",
+        "type": "EA::Reflection::Float"
+      },
+      "FINAL_GEAR": {
+        "value": 3.4000000953674316,
+        "bin_offset": "0x1e924",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "transmission",
+    "parent": "default",
+    "fields": {
+      "GEAR_RATIO": {
+        "value": {
+          "capacity": 9,
+          "count": 8,
+          "element_size": 4,
+          "values": [
+            3.7899999618530273,
+            0.0,
+            3.4000000953674316,
+            2.0850000381469727,
+            1.5,
+            1.25,
+            1.090000033378601,
+            0.9100000262260437
+          ]
+        },
+        "bin_offset": "0x1f270",
+        "type": "EA::Reflection::Float"
+      },
+      "DIFFERENTIAL": {
+        "value": {
+          "capacity": 3,
+          "count": 3,
+          "element_size": 4,
+          "values": [
+            0.800000011920929,
+            0.800000011920929,
+            0.0
+          ]
+        },
+        "bin_offset": "0x1f29c",
+        "type": "EA::Reflection::Float"
+      },
+      "GEAR_EFFICIENCY": {
+        "value": {
+          "capacity": 9,
+          "count": 9,
+          "element_size": 4,
+          "values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bin_offset": "0x1f2b0",
+        "type": "EA::Reflection::Float"
+      },
+      "TORQUE_CONVERTER": {
+        "value": 0.20000000298023224,
+        "bin_offset": "0x1f2dc",
+        "type": "EA::Reflection::Float"
+      },
+      "TORQUE_SPLIT": {
+        "value": 0.0,
+        "bin_offset": "0x1f2e0",
+        "type": "EA::Reflection::Float"
+      },
+      "OPTIMAL_SHIFT": {
+        "value": 500.0,
+        "bin_offset": "0x1f2e8",
+        "type": "EA::Reflection::Float"
+      },
+      "CLUTCH_SLIP": {
+        "value": 0.800000011920929,
+        "bin_offset": "0x1f2e4",
+        "type": "EA::Reflection::Float"
+      },
+      "SHIFT_SPEED": {
+        "value": 0.25,
+        "bin_offset": "0x1f2ec",
+        "type": "EA::Reflection::Float"
+      },
+      "FINAL_GEAR": {
+        "value": 3.8499999046325684,
+        "bin_offset": "0x1f2f0",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "tires",
+    "parent": "default",
+    "fields": {
+      "SECTION_WIDTH": {
+        "value": [
+          255.0,
+          255.0
+        ],
+        "bin_offset": "0x222b0",
+        "type": "AxlePair"
+      },
+      "YAW_CONTROL": {
+        "value": {
+          "capacity": 4,
+          "count": 4,
+          "element_size": 4,
+          "values": [
+            0.30000001192092896,
+            0.6499999761581421,
+            1.0,
+            1.2000000476837158
+          ]
+        },
+        "bin_offset": "0x22270",
+        "type": "EA::Reflection::Float"
+      },
+      "DYNAMIC_GRIP": {
+        "value": [
+          2.0,
+          2.0
+        ],
+        "bin_offset": "0x22290",
+        "type": "AxlePair"
+      },
+      "RIM_SIZE": {
+        "value": [
+          19.0,
+          19.0
+        ],
+        "bin_offset": "0x222a0",
+        "type": "AxlePair"
+      },
+      "YAW_SPEED": {
+        "value": 0.25,
+        "bin_offset": "0x222bc",
+        "type": "EA::Reflection::Float"
+      },
+      "ASPECT_RATIO": {
+        "value": [
+          40.0,
+          40.0
+        ],
+        "bin_offset": "0x22298",
+        "type": "AxlePair"
+      },
+      "STATIC_GRIP": {
+        "value": [
+          2.200000047683716,
+          2.299999952316284
+        ],
+        "bin_offset": "0x222a8",
+        "type": "AxlePair"
+      },
+      "GRIP_SCALE": {
+        "value": [
+          1.1749999523162842,
+          1.225000023841858
+        ],
+        "bin_offset": "0x22288",
+        "type": "AxlePair"
+      },
+      "STEERING": {
+        "value": 0.8999999761581421,
+        "bin_offset": "0x222b8",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "tires",
+    "parent": "default",
+    "fields": {
+      "SECTION_WIDTH": {
+        "value": [
+          255.0,
+          255.0
+        ],
+        "bin_offset": "0x22cb0",
+        "type": "AxlePair"
+      },
+      "YAW_CONTROL": {
+        "value": {
+          "capacity": 4,
+          "count": 4,
+          "element_size": 4,
+          "values": [
+            0.10000000149011612,
+            0.4000000059604645,
+            0.6000000238418579,
+            1.0
+          ]
+        },
+        "bin_offset": "0x22c70",
+        "type": "EA::Reflection::Float"
+      },
+      "DYNAMIC_GRIP": {
+        "value": [
+          1.7000000476837158,
+          1.7000000476837158
+        ],
+        "bin_offset": "0x22c90",
+        "type": "AxlePair"
+      },
+      "RIM_SIZE": {
+        "value": [
+          19.0,
+          19.0
+        ],
+        "bin_offset": "0x22ca0",
+        "type": "AxlePair"
+      },
+      "YAW_SPEED": {
+        "value": 0.30000001192092896,
+        "bin_offset": "0x22cbc",
+        "type": "EA::Reflection::Float"
+      },
+      "ASPECT_RATIO": {
+        "value": [
+          35.0,
+          35.0
+        ],
+        "bin_offset": "0x22c98",
+        "type": "AxlePair"
+      },
+      "STATIC_GRIP": {
+        "value": [
+          1.7999999523162842,
+          2.0
+        ],
+        "bin_offset": "0x22ca8",
+        "type": "AxlePair"
+      },
+      "GRIP_SCALE": {
+        "value": [
+          1.0,
+          1.0
+        ],
+        "bin_offset": "0x22c88",
+        "type": "AxlePair"
+      },
+      "STEERING": {
+        "value": 1.0,
+        "bin_offset": "0x22cb8",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "brakes",
+    "parent": "default",
+    "fields": {
+      "BRAKES": {
+        "value": [
+          475.0,
+          600.0
+        ],
+        "bin_offset": "0x2452c",
+        "type": "AxlePair"
+      },
+      "EBRAKE": {
+        "value": 925.0,
+        "bin_offset": "0x24534",
+        "type": "EA::Reflection::Float"
+      },
+      "BRAKE_LOCK": {
+        "value": [
+          1.0,
+          3.0
+        ],
+        "bin_offset": "0x24524",
+        "type": "AxlePair"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "brakes",
+    "parent": "default",
+    "fields": {
+      "BRAKES": {
+        "value": [
+          375.0,
+          500.0
+        ],
+        "bin_offset": "0x246a8",
+        "type": "AxlePair"
+      },
+      "EBRAKE": {
+        "value": 850.0,
+        "bin_offset": "0x246b0",
+        "type": "EA::Reflection::Float"
+      },
+      "BRAKE_LOCK": {
+        "value": [
+          1.0,
+          3.5
+        ],
+        "bin_offset": "0x246a0",
+        "type": "AxlePair"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "pvehicle",
+    "parent": "racers",
+    "fields": {
+      "TrafficEngType": {
+        "value": 0,
+        "bin_offset": "0x2f49d",
+        "type": "EA::Reflection::UInt8"
+      },
+      "VerbalType": {
+        "value": {
+          "raw": "00000040"
+        },
+        "bin_offset": "0x2f490",
+        "type": "Csis::Type_car_type"
+      },
+      "MASS": {
+        "value": 1300.0,
+        "bin_offset": "0x2f488",
+        "type": "EA::Reflection::Float"
+      },
+      "brakes_upgrades": {
+        "value": 0,
+        "bin_offset": "0x2f484",
+        "type": "EA::Reflection::Int32"
+      },
+      "induction_upgrades": {
+        "value": 0,
+        "bin_offset": "0x2f494",
+        "type": "EA::Reflection::Int32"
+      },
+      "tires_upgrades": {
+        "value": 0,
+        "bin_offset": "0x2f48c",
+        "type": "EA::Reflection::Int32"
+      },
+      "engine_upgrades": {
+        "value": 0,
+        "bin_offset": "0x2f478",
+        "type": "EA::Reflection::Int32"
+      },
+      "transmission_upgrades": {
+        "value": 0,
+        "bin_offset": "0x2f47c",
+        "type": "EA::Reflection::Int32"
+      },
+      "TENSOR_SCALE": {
+        "value": [
+          1.0,
+          2.0,
+          1.0,
+          0.0
+        ],
+        "bin_offset": "0x2f450",
+        "type": "Attrib::Types::Vector4"
+      },
+      "MODEL": {
+        "value": {
+          "raw": "b17ba3d712a66396cae3e635000044ad"
+        },
+        "bin_offset": "0x2f460",
+        "type": "Attrib::StringKey"
+      },
+      "CollectionName": {
+        "value": "bmwm3gtre46",
+        "bin_offset": "0x2f474",
+        "type": "EA::Reflection::Text"
+      },
+      "nos_upgrades": {
+        "value": 3,
+        "bin_offset": "0x2f480",
+        "type": "EA::Reflection::Int32"
+      },
+      "HornType": {
+        "value": 5,
+        "bin_offset": "0x2f49c",
+        "type": "EA::Reflection::UInt8"
+      },
+      "DefaultPresetRide": {
+        "value": "",
+        "bin_offset": "0x2f470",
+        "type": "EA::Reflection::Text"
+      },
+      "chassis_upgrades": {
+        "value": 0,
+        "bin_offset": "0x2f498",
+        "type": "EA::Reflection::Int32"
+      },
+      "nos": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xb1669f64",
+              "class_name": "nos",
+              "key": "0x1efbd807",
+              "name": "nos_base",
+              "unknown": 0
+            },
+            {
+              "class_key": "0xb1669f64",
+              "class_name": "nos",
+              "key": "0x40826f5e",
+              "name": "nos_top",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f4a0",
+        "type": "Attrib::RefSpec"
+      },
+      "RandomOpponent": {
+        "value": 0,
+        "stream": "vlt",
+        "offset": "0x19348",
+        "type": "EA::Reflection::Bool"
+      },
+      "HandlingRating": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            75.0,
+            100.0
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f4c0",
+        "type": "EA::Reflection::Float"
+      },
+      "chassis": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xafa210f0",
+              "class_name": "chassis",
+              "key": "0x4e085fb3",
+              "name": "bmwm3gtre46",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f4d0",
+        "type": "Attrib::RefSpec"
+      },
+      "ShiftSND": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 16,
+          "values": [
+            {
+              "raw": "db01b7544013b45d0000000000000000"
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f4e4",
+        "type": "UpgradeSpecs"
+      },
+      "transmission": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0x7a7a3e5",
+              "class_name": "transmission",
+              "key": "0x4e085fb3",
+              "name": "bmwm3gtre46",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f4fc",
+        "type": "Attrib::RefSpec"
+      },
+      "engine": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xf1f5fbc7",
+              "class_name": "engine",
+              "key": "0x4e085fb3",
+              "name": "bmwm3gtre46",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f510",
+        "type": "Attrib::RefSpec"
+      },
+      "induction": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xc92a0142",
+              "class_name": "induction",
+              "key": "0xeec2271a",
+              "name": "default",
+              "unknown": 0
+            },
+            {
+              "class_key": "0xc92a0142",
+              "class_name": "induction",
+              "key": "0x4e085fb3",
+              "name": "bmwm3gtre46",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f524",
+        "type": "Attrib::RefSpec"
+      },
+      "TurboSND": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 16,
+          "values": [
+            {
+              "raw": "55624a85eec2271a0000000000000000"
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f544",
+        "type": "UpgradeSpecs"
+      },
+      "frontend": {
+        "value": {
+          "class_key": "0x85885722",
+          "class_name": "frontend",
+          "key": "0x23cc4a4e",
+          "name": "m3_gtre46",
+          "unknown": 0
+        },
+        "stream": "bin",
+        "offset": "0x2f55c",
+        "type": "Attrib::RefSpec"
+      },
+      "brakes": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0x36350867",
+              "class_name": "brakes",
+              "key": "0x4e085fb3",
+              "name": "bmwm3gtre46",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f568",
+        "type": "Attrib::RefSpec"
+      },
+      "engineaudio": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0x50eab0e6",
+              "class_name": "engineaudio",
+              "key": "0x799fb9ea",
+              "name": "tvr_cerb",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f57c",
+        "type": "Attrib::RefSpec"
+      },
+      "tires": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xbd38d1ca",
+              "class_name": "tires",
+              "key": "0x4e085fb3",
+              "name": "bmwm3gtre46",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x2f590",
+        "type": "Attrib::RefSpec"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "pvehicle",
+    "parent": "racers",
+    "fields": {
+      "TrafficEngType": {
+        "value": 0,
+        "bin_offset": "0x3095d",
+        "type": "EA::Reflection::UInt8"
+      },
+      "VerbalType": {
+        "value": {
+          "raw": "00000040"
+        },
+        "bin_offset": "0x30950",
+        "type": "Csis::Type_car_type"
+      },
+      "MASS": {
+        "value": 1350.0,
+        "bin_offset": "0x30948",
+        "type": "EA::Reflection::Float"
+      },
+      "brakes_upgrades": {
+        "value": 0,
+        "bin_offset": "0x30944",
+        "type": "EA::Reflection::Int32"
+      },
+      "induction_upgrades": {
+        "value": 0,
+        "bin_offset": "0x30954",
+        "type": "EA::Reflection::Int32"
+      },
+      "tires_upgrades": {
+        "value": 0,
+        "bin_offset": "0x3094c",
+        "type": "EA::Reflection::Int32"
+      },
+      "engine_upgrades": {
+        "value": 0,
+        "bin_offset": "0x30938",
+        "type": "EA::Reflection::Int32"
+      },
+      "transmission_upgrades": {
+        "value": 0,
+        "bin_offset": "0x3093c",
+        "type": "EA::Reflection::Int32"
+      },
+      "TENSOR_SCALE": {
+        "value": [
+          1.0,
+          2.0,
+          1.0,
+          0.0
+        ],
+        "bin_offset": "0x30910",
+        "type": "Attrib::Types::Vector4"
+      },
+      "MODEL": {
+        "value": {
+          "raw": "637cb2c8d4a7b2b320d3071f00004492"
+        },
+        "bin_offset": "0x30920",
+        "type": "Attrib::StringKey"
+      },
+      "CollectionName": {
+        "value": "bmwm3gtr",
+        "bin_offset": "0x30934",
+        "type": "EA::Reflection::Text"
+      },
+      "nos_upgrades": {
+        "value": 3,
+        "bin_offset": "0x30940",
+        "type": "EA::Reflection::Int32"
+      },
+      "HornType": {
+        "value": 5,
+        "bin_offset": "0x3095c",
+        "type": "EA::Reflection::UInt8"
+      },
+      "DefaultPresetRide": {
+        "value": "",
+        "bin_offset": "0x30930",
+        "type": "EA::Reflection::Text"
+      },
+      "chassis_upgrades": {
+        "value": 0,
+        "bin_offset": "0x30958",
+        "type": "EA::Reflection::Int32"
+      },
+      "nos": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xb1669f64",
+              "class_name": "nos",
+              "key": "0x1efbd807",
+              "name": "nos_base",
+              "unknown": 0
+            },
+            {
+              "class_key": "0xb1669f64",
+              "class_name": "nos",
+              "key": "0x40826f5e",
+              "name": "nos_top",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x30960",
+        "type": "Attrib::RefSpec"
+      },
+      "HandlingRating": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            82.0,
+            100.0
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x30980",
+        "type": "EA::Reflection::Float"
+      },
+      "tires": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xbd38d1ca",
+              "class_name": "tires",
+              "key": "0xcd88083f",
+              "name": "bmwm3gtr",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x30990",
+        "type": "Attrib::RefSpec"
+      },
+      "ShiftSND": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 16,
+          "values": [
+            {
+              "raw": "db01b7546eb870400000000000000000"
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x309a4",
+        "type": "UpgradeSpecs"
+      },
+      "chassis": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xafa210f0",
+              "class_name": "chassis",
+              "key": "0xcd88083f",
+              "name": "bmwm3gtr",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x309bc",
+        "type": "Attrib::RefSpec"
+      },
+      "transmission": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0x7a7a3e5",
+              "class_name": "transmission",
+              "key": "0xcd88083f",
+              "name": "bmwm3gtr",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x309d0",
+        "type": "Attrib::RefSpec"
+      },
+      "engine": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0xf1f5fbc7",
+              "class_name": "engine",
+              "key": "0xcd88083f",
+              "name": "bmwm3gtr",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x309e4",
+        "type": "Attrib::RefSpec"
+      },
+      "TurboSND": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 16,
+          "values": [
+            {
+              "raw": "55624a85eec2271a0000000000000000"
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x309f8",
+        "type": "UpgradeSpecs"
+      },
+      "frontend": {
+        "value": {
+          "class_key": "0x85885722",
+          "class_name": "frontend",
+          "key": "0x81c2fea6",
+          "name": "m3_gtr",
+          "unknown": 0
+        },
+        "stream": "bin",
+        "offset": "0x30a10",
+        "type": "Attrib::RefSpec"
+      },
+      "brakes": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0x36350867",
+              "class_name": "brakes",
+              "key": "0xcd88083f",
+              "name": "bmwm3gtr",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x30a1c",
+        "type": "Attrib::RefSpec"
+      },
+      "engineaudio": {
+        "value": {
+          "capacity": 1,
+          "count": 1,
+          "element_size": 12,
+          "values": [
+            {
+              "class_key": "0x50eab0e6",
+              "class_name": "engineaudio",
+              "key": "0x799fb9ea",
+              "name": "tvr_cerb",
+              "unknown": 0
+            }
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x30a30",
+        "type": "Attrib::RefSpec"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtre46",
+    "class_name": "ecar",
+    "parent": "racers",
+    "fields": {
+      "SlipFX": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            1.0,
+            1.0
+          ]
+        },
+        "bin_offset": "0x3da34",
+        "type": "EA::Reflection::Float"
+      },
+      "BodyDive": {
+        "value": {
+          "raw": "40e000003f80000040a00000"
+        },
+        "bin_offset": "0x3da28",
+        "type": "CarBodyMotion"
+      },
+      "RideHeight": {
+        "value": -3.25,
+        "bin_offset": "0x3da6c",
+        "type": "EA::Reflection::Float"
+      },
+      "TireOffsets": {
+        "value": {
+          "capacity": 4,
+          "count": 4,
+          "element_size": 16,
+          "values": [
+            [
+              1.600000023841858,
+              0.9100000262260437,
+              0.0,
+              0.33000001311302185
+            ],
+            [
+              1.600000023841858,
+              -0.9100000262260437,
+              0.0,
+              0.33000001311302185
+            ],
+            [
+              -1.1299999952316284,
+              -0.9100000262260437,
+              0.0,
+              0.33000001311302185
+            ],
+            [
+              -1.1299999952316284,
+              0.9100000262260437,
+              0.0,
+              0.33000001311302185
+            ]
+          ]
+        },
+        "bin_offset": "0x3d970",
+        "type": "Attrib::Types::Vector4"
+      },
+      "BodySquat": {
+        "value": {
+          "raw": "40a000003f80000040600000"
+        },
+        "bin_offset": "0x3da1c",
+        "type": "CarBodyMotion"
+      },
+      "TireSkidWidthKitScale": {
+        "value": {
+          "capacity": 7,
+          "count": 7,
+          "element_size": 8,
+          "values": [
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            }
+          ]
+        },
+        "bin_offset": "0x3d9c0",
+        "type": "Attrib::Types::Vector2"
+      },
+      "CamberRear": {
+        "value": 0.25,
+        "bin_offset": "0x3da68",
+        "type": "EA::Reflection::Float"
+      },
+      "CamberFront": {
+        "value": 0.3499999940395355,
+        "bin_offset": "0x3da60",
+        "type": "EA::Reflection::Float"
+      },
+      "TireSkidWidth": {
+        "value": {
+          "capacity": 4,
+          "count": 4,
+          "element_size": 4,
+          "values": [
+            0.2750000059604645,
+            0.2750000059604645,
+            0.3149999976158142,
+            0.3149999976158142
+          ]
+        },
+        "bin_offset": "0x3da44",
+        "type": "EA::Reflection::Float"
+      },
+      "WheelSpokeCount": {
+        "value": {
+          "raw": "08"
+        },
+        "bin_offset": "0x3da8c",
+        "type": "EA::Reflection::Int8"
+      },
+      "CollectionName": {
+        "value": "bmwm3gtre46",
+        "bin_offset": "0x3da5c",
+        "type": "EA::Reflection::Text"
+      },
+      "SkidFX": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            0.10000000149011612,
+            1.0
+          ]
+        },
+        "bin_offset": "0x3da00",
+        "type": "EA::Reflection::Float"
+      },
+      "ReflectionOffset": {
+        "value": 0.0,
+        "bin_offset": "0x3da64",
+        "type": "EA::Reflection::Float"
+      },
+      "KitWheelOffsetRear": {
+        "value": {
+          "capacity": 6,
+          "count": 6,
+          "element_size": 1,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "bin_offset": "0x3da70",
+        "type": "EA::Reflection::UInt8"
+      },
+      "BodyRoll": {
+        "value": {
+          "raw": "403000003f80000040800000"
+        },
+        "bin_offset": "0x3da10",
+        "type": "CarBodyMotion"
+      },
+      "KitWheelOffsetFront": {
+        "value": {
+          "capacity": 6,
+          "count": 6,
+          "element_size": 1,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "bin_offset": "0x3da7e",
+        "type": "EA::Reflection::UInt8"
+      },
+      "EngineRevAngle": {
+        "value": 0.800000011920929,
+        "stream": "vlt",
+        "offset": "0x2085c",
+        "type": "EA::Reflection::Float"
+      },
+      "EngineVibrationMax": {
+        "value": 0.15000000596046448,
+        "stream": "vlt",
+        "offset": "0x20868",
+        "type": "EA::Reflection::Float"
+      },
+      "WheelHopScale": {
+        "value": 0.75,
+        "stream": "vlt",
+        "offset": "0x20874",
+        "type": "EA::Reflection::Float"
+      },
+      "0xd74c1435": {
+        "value": {
+          "class_key": "0x93c171e4",
+          "class_name": "camerainfo",
+          "key": "0xfda6aa80",
+          "name": "bmwm3gtre46_hood",
+          "unknown": 0
+        },
+        "stream": "bin",
+        "offset": "0x3da90",
+        "type": "Attrib::RefSpec"
+      },
+      "EngineRevSpeed": {
+        "value": 12.0,
+        "stream": "vlt",
+        "offset": "0x2088c",
+        "type": "EA::Reflection::Float"
+      },
+      "RoadNoise": {
+        "value": 0.5,
+        "stream": "vlt",
+        "offset": "0x20898",
+        "type": "EA::Reflection::Float"
+      },
+      "EngineRev": {
+        "value": 0.5,
+        "stream": "vlt",
+        "offset": "0x208a4",
+        "type": "EA::Reflection::Float"
+      },
+      "WheelWell": {
+        "value": 24.0,
+        "stream": "vlt",
+        "offset": "0x208b0",
+        "type": "EA::Reflection::Float"
+      },
+      "EngineVibrationMin": {
+        "value": 0.0,
+        "stream": "vlt",
+        "offset": "0x208bc",
+        "type": "EA::Reflection::Float"
+      },
+      "EngineVibrationFreq": {
+        "value": 10.0,
+        "stream": "vlt",
+        "offset": "0x208c8",
+        "type": "EA::Reflection::Float"
+      },
+      "ExtraPitch": {
+        "value": -0.5,
+        "stream": "vlt",
+        "offset": "0x208d4",
+        "type": "EA::Reflection::Float"
+      },
+      "FECompressions": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            0.27000001072883606,
+            0.27000001072883606
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x3da9c",
+        "type": "EA::Reflection::Float"
+      }
+    }
+  },
+  {
+    "name": "bmwm3gtr",
+    "class_name": "ecar",
+    "parent": "racers",
+    "fields": {
+      "SlipFX": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            1.0,
+            1.0
+          ]
+        },
+        "bin_offset": "0x3e7d4",
+        "type": "EA::Reflection::Float"
+      },
+      "BodyDive": {
+        "value": {
+          "raw": "410000003f80000040c00000"
+        },
+        "bin_offset": "0x3e7c8",
+        "type": "CarBodyMotion"
+      },
+      "RideHeight": {
+        "value": -2.0,
+        "bin_offset": "0x3e80c",
+        "type": "EA::Reflection::Float"
+      },
+      "TireOffsets": {
+        "value": {
+          "capacity": 4,
+          "count": 4,
+          "element_size": 16,
+          "values": [
+            [
+              1.6150000095367432,
+              0.8799999952316284,
+              0.0,
+              0.33000001311302185
+            ],
+            [
+              1.6150000095367432,
+              -0.8799999952316284,
+              0.0,
+              0.33000001311302185
+            ],
+            [
+              -1.1200000047683716,
+              -0.8899999856948853,
+              0.0,
+              0.33000001311302185
+            ],
+            [
+              -1.1200000047683716,
+              0.8899999856948853,
+              0.0,
+              0.33000001311302185
+            ]
+          ]
+        },
+        "bin_offset": "0x3e710",
+        "type": "Attrib::Types::Vector4"
+      },
+      "BodySquat": {
+        "value": {
+          "raw": "410000003f80000040c00000"
+        },
+        "bin_offset": "0x3e7bc",
+        "type": "CarBodyMotion"
+      },
+      "TireSkidWidthKitScale": {
+        "value": {
+          "capacity": 7,
+          "count": 7,
+          "element_size": 8,
+          "values": [
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            },
+            {
+              "raw": "3f8000003f800000"
+            }
+          ]
+        },
+        "bin_offset": "0x3e760",
+        "type": "Attrib::Types::Vector2"
+      },
+      "CamberRear": {
+        "value": 0.20000000298023224,
+        "bin_offset": "0x3e808",
+        "type": "EA::Reflection::Float"
+      },
+      "CamberFront": {
+        "value": 0.2800000011920929,
+        "bin_offset": "0x3e800",
+        "type": "EA::Reflection::Float"
+      },
+      "TireSkidWidth": {
+        "value": {
+          "capacity": 4,
+          "count": 4,
+          "element_size": 4,
+          "values": [
+            0.23499999940395355,
+            0.23499999940395355,
+            0.2549999952316284,
+            0.2549999952316284
+          ]
+        },
+        "bin_offset": "0x3e7e4",
+        "type": "EA::Reflection::Float"
+      },
+      "WheelSpokeCount": {
+        "value": {
+          "raw": "08"
+        },
+        "bin_offset": "0x3e82c",
+        "type": "EA::Reflection::Int8"
+      },
+      "CollectionName": {
+        "value": "bmwm3gtr",
+        "bin_offset": "0x3e7fc",
+        "type": "EA::Reflection::Text"
+      },
+      "SkidFX": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            0.10000000149011612,
+            1.0
+          ]
+        },
+        "bin_offset": "0x3e7a0",
+        "type": "EA::Reflection::Float"
+      },
+      "ReflectionOffset": {
+        "value": 0.0,
+        "bin_offset": "0x3e804",
+        "type": "EA::Reflection::Float"
+      },
+      "KitWheelOffsetRear": {
+        "value": {
+          "capacity": 6,
+          "count": 6,
+          "element_size": 1,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "bin_offset": "0x3e810",
+        "type": "EA::Reflection::UInt8"
+      },
+      "BodyRoll": {
+        "value": {
+          "raw": "402000003f80000040800000"
+        },
+        "bin_offset": "0x3e7b0",
+        "type": "CarBodyMotion"
+      },
+      "KitWheelOffsetFront": {
+        "value": {
+          "capacity": 6,
+          "count": 6,
+          "element_size": 1,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "bin_offset": "0x3e81e",
+        "type": "EA::Reflection::UInt8"
+      },
+      "FECompressions": {
+        "value": {
+          "capacity": 2,
+          "count": 2,
+          "element_size": 4,
+          "values": [
+            0.20999999344348907,
+            0.20999999344348907
+          ]
+        },
+        "stream": "bin",
+        "offset": "0x3e830",
+        "type": "EA::Reflection::Float"
+      },
+      "0xd74c1435": {
+        "value": {
+          "class_key": "0x93c171e4",
+          "class_name": "camerainfo",
+          "key": "0x64334574",
+          "name": "bmwm3gtr_hood",
+          "unknown": 0
+        },
+        "stream": "bin",
+        "offset": "0x3e840",
+        "type": "Attrib::RefSpec"
+      }
+    }
+  }
+]

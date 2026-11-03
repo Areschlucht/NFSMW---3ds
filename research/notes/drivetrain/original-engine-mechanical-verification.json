@@ -1,0 +1,30 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "original_range": "802577A8..8025845C",
+  "full_mechanical_state_cases": 2560,
+  "stateful_continuation_steps": 512,
+  "profiles": [
+    {
+      "name": "bmwm3gtre46",
+      "peak": 467.0,
+      "peak_rpm": 5150.0
+    },
+    {
+      "name": "m3gtre46careerstart",
+      "peak": 239.0,
+      "peak_rpm": 5150.0
+    }
+  ],
+  "launch_curve": {
+    "initializer": "80265EB0..80265EE4",
+    "object": "8048A0EC",
+    "samples": "8041F65C",
+    "count": 5
+  },
+  "limitations": [
+    "Earlier raw-input/throttle/timed virtual phases57708..577A4 are explicit supplied producers",
+    "Active rev-modulation deadline is rejected pending original timer/sine/event port",
+    "Actual scheduler, event/manual/automatic gear commit wrapper, profile upgrade selection are separate"
+  ]
+}

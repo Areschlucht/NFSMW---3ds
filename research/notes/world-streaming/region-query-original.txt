@@ -1,0 +1,720 @@
+802c0e20 lmw        r17, 0xc(r1)
+802c0e24 addi       r1, r1, 0x48
+802c0e28 blr        
+802c0e2c lis        r0, -0x7ffd
+802c0e30 lwz        r9, 0(r4)
+802c0e34 ori        r0, r0, 0x4150
+802c0e38 mr         r8, r3
+802c0e3c cmpw       r9, r0
+802c0e40 bne        0x802c0e80
+802c0e44 addi       r9, r8, 8
+802c0e48 addi       r11, r8, 0x20
+802c0e4c addi       r10, r8, 0x10
+802c0e50 li         r0, 0
+802c0e54 stw        r0, 0x54(r8)
+802c0e58 li         r3, 1
+802c0e5c stw        r9, 0xc(r8)
+802c0e60 stw        r11, 0x24(r8)
+802c0e64 stw        r10, 0x14(r8)
+802c0e68 stw        r8, 0(r8)
+802c0e6c stw        r8, 4(r8)
+802c0e70 stw        r9, 8(r8)
+802c0e74 stw        r11, 0x20(r8)
+802c0e78 stw        r10, 0x10(r8)
+802c0e7c blr        
+802c0e80 lis        r0, 3
+802c0e84 ori        r0, r0, 0x4158
+802c0e88 cmpw       r9, r0
+802c0e8c beq        0x802c0e98
+802c0e90 li         r3, 0
+802c0e94 blr        
+802c0e98 lwz        r11, 0xc(r4)
+802c0e9c li         r3, 1
+802c0ea0 lwz        r9, 8(r4)
+802c0ea4 stw        r9, 0(r11)
+802c0ea8 stw        r11, 4(r9)
+802c0eac blr        
+802c0eb0 mr         r9, r3
+802c0eb4 lwz        r3, 0(r9)
+802c0eb8 cmpw       r3, r9
+802c0ebc beq        0x802c0ed4
+802c0ec0 lha        r0, 8(r3)
+802c0ec4 cmpw       r0, r4
+802c0ec8 beqlr      
+802c0ecc lwz        r3, 0(r3)
+802c0ed0 b          0x802c0eb8
+802c0ed4 lwz        r3, 8(r9)
+802c0ed8 addi       r9, r9, 8
+802c0edc cmpw       r3, r9
+802c0ee0 beq        0x802c0ef8
+802c0ee4 lha        r0, 8(r3)
+802c0ee8 cmpw       r0, r4
+802c0eec beqlr      
+802c0ef0 lwz        r3, 0(r3)
+802c0ef4 b          0x802c0edc
+802c0ef8 li         r3, 0
+802c0efc blr        
+802c0f00 stwu       r1, -0x28(r1)
+802c0f04 mflr       r0
+802c0f08 .byte      0xf3, 0xe1, 0x00, 0x20
+802c0f0c stmw       r26, 8(r1)
+802c0f10 stw        r0, 0x2c(r1)
+802c0f14 mr         r29, r3
+802c0f18 lis        r9, -0x7fbf
+802c0f1c lfs        f31, -0x644c(r9)
+802c0f20 mr         r28, r4
+802c0f24 lwz        r31, 0(r29)
+802c0f28 mr         r27, r5
+802c0f2c li         r30, 0
+802c0f30 lis        r26, -0x7fbf
+802c0f34 cmpw       r31, r29
+802c0f38 beq        0x802c0fc4
+802c0f3c mr         r3, r31
+802c0f40 mr         r4, r28
+802c0f44 bl         0x802bfff8
+802c0f48 cmpwi      r3, 0
+802c0f4c beq        0x802c0f80
+802c0f50 mr         r30, r31
+802c0f54 lfs        f31, -0x6448(r26)
+802c0f58 lwz        r9, 0(r30)
+802c0f5c lwz        r11, 4(r30)
+802c0f60 stw        r9, 0(r11)
+802c0f64 stw        r11, 4(r9)
+802c0f68 lwz        r10, 0(r29)
+802c0f6c stw        r30, 0(r29)
+802c0f70 stw        r30, 4(r10)
+802c0f74 stw        r29, 4(r30)
+802c0f78 stw        r10, 0(r30)
+802c0f7c b          0x802c0fc4
+802c0f80 mr         r3, r31
+802c0f84 mr         r4, r28
+802c0f88 fmr        f1, f31
+802c0f8c bl         0x802c0060
+802c0f90 cmpwi      r30, 0
+802c0f94 beq        0x802c0fb4
+802c0f98 fcmpu      cr0, f1, f31
+802c0f9c blt        0x802c0fb4
+802c0fa0 bne        0x802c0fbc
+802c0fa4 lha        r9, 8(r31)
+802c0fa8 lha        r0, 8(r30)
+802c0fac cmpw       r9, r0
+802c0fb0 bge        0x802c0fbc
+802c0fb4 fmr        f31, f1
+802c0fb8 mr         r30, r31
+802c0fbc lwz        r31, 0(r31)
+802c0fc0 b          0x802c0f34
+802c0fc4 cmpwi      r27, 0
+802c0fc8 beq        0x802c0fd0
+802c0fcc stfs       f31, 0(r27)
+802c0fd0 mr         r3, r30
+802c0fd4 lwz        r0, 0x2c(r1)
+802c0fd8 mtlr       r0
+802c0fdc lmw        r26, 8(r1)
+802c0fe0 .byte      0xe3, 0xe1, 0x00, 0x20
+802c0fe4 addi       r1, r1, 0x28
+802c0fe8 blr        
+802c0fec stwu       r1, -0x20(r1)
+802c0ff0 mflr       r0
+802c0ff4 stmw       r29, 0x14(r1)
+802c0ff8 stw        r0, 0x24(r1)
+802c0ffc mr         r30, r3
+802c1000 mr         r29, r4
+802c1004 lwz        r31, 0(r30)
+802c1008 cmpw       r31, r30
+802c100c beq        0x802c1058
+802c1010 mr         r3, r31
+802c1014 mr         r4, r29
+802c1018 bl         0x802bfff8
+802c101c cmpwi      r3, 0
+802c1020 beq        0x802c1050
+802c1024 lwz        r9, 0(r31)
+802c1028 mr         r3, r31
+802c102c lwz        r11, 4(r31)
+802c1030 stw        r9, 0(r11)
+802c1034 stw        r11, 4(r9)
+802c1038 lwz        r10, 0(r30)
+802c103c stw        r31, 0(r30)
+802c1040 stw        r31, 4(r10)
+802c1044 stw        r30, 4(r31)
+802c1048 stw        r10, 0(r31)
+802c104c b          0x802c1080
+802c1050 lwz        r31, 0(r31)
+802c1054 b          0x802c1008
+802c1058 mr         r3, r30
+802c105c mr         r4, r29
+802c1060 addi       r5, r1, 8
+802c1064 bl         0x802c0f00
+802c1068 lis        r9, -0x7fbf
+802c106c lfs        f13, 8(r1)
+802c1070 lfs        f0, -0x6444(r9)
+802c1074 fcmpu      cr0, f13, f0
+802c1078 blt        0x802c1080
+802c107c li         r3, 0
+802c1080 lwz        r0, 0x24(r1)
+802c1084 mtlr       r0
+802c1088 lmw        r29, 0x14(r1)
+802c108c addi       r1, r1, 0x20
+802c1090 blr        
+802c1094 stwu       r1, -0x20(r1)
+802c1098 mflr       r0
+802c109c stmw       r28, 0x10(r1)
+802c10a0 stw        r0, 0x24(r1)
+802c10a4 mr         r29, r3
+802c10a8 mr         r30, r4
+802c10ac lwz        r31, 0x10(r29)
+802c10b0 addi       r28, r29, 0x10
+802c10b4 cmpw       r31, r28
+802c10b8 beq        0x802c10d8
+802c10bc lwz        r3, 8(r31)
+802c10c0 mr         r4, r30
+802c10c4 bl         0x802bfff8
+802c10c8 cmpwi      r3, 0
+802c10cc bne        0x802c1104
+802c10d0 lwz        r31, 0(r31)
+802c10d4 b          0x802c10b4
+802c10d8 mr         r4, r30
+802c10dc mr         r3, r29
+802c10e0 addi       r5, r1, 8
+802c10e4 bl         0x802c0f00
+802c10e8 lis        r9, -0x7fbf
+802c10ec lfs        f0, 8(r1)
+802c10f0 lfs        f13, -0x6440(r9)
+802c10f4 fcmpu      cr0, f0, f13
+802c10f8 blt        0x802c1130
+802c10fc li         r3, 0
+802c1100 b          0x802c113c
+802c1104 lwz        r9, 0(r31)
+802c1108 mr         r3, r31
+802c110c lwz        r11, 4(r31)
+802c1110 stw        r9, 0(r11)
+802c1114 stw        r11, 4(r9)
+802c1118 lwz        r10, 0x10(r29)
+802c111c stw        r31, 0x10(r29)
+802c1120 stw        r31, 4(r10)
+802c1124 stw        r28, 4(r31)
+802c1128 stw        r10, 0(r31)
+802c112c b          0x802c113c
+802c1130 lha        r4, 8(r3)
+802c1134 mr         r3, r29
+802c1138 bl         0x802c1150
+802c113c lwz        r0, 0x24(r1)
+802c1140 mtlr       r0
+802c1144 lmw        r28, 0x10(r1)
+802c1148 addi       r1, r1, 0x20
+802c114c blr        
+802c1150 addi       r9, r3, 0x10
+802c1154 lwz        r3, 0x10(r3)
+802c1158 cmpw       r3, r9
+802c115c beq        0x802c1174
+802c1160 lha        r0, 0xc(r3)
+802c1164 cmpw       r0, r4
+802c1168 beqlr      
+802c116c lwz        r3, 0(r3)
+802c1170 b          0x802c1158
+802c1174 li         r3, 0
+802c1178 blr        
+802c117c stwu       r1, -0x20(r1)
+802c1180 mflr       r0
+802c1184 stmw       r27, 0xc(r1)
+802c1188 stw        r0, 0x24(r1)
+802c118c lis        r9, -0x7fbd
+802c1190 mr         r27, r3
+802c1194 addi       r28, r9, 0x707c
+802c1198 li         r31, 0
+802c119c slwi       r0, r31, 3
+802c11a0 lwzx       r30, r28, r0
+802c11a4 add        r29, r0, r28
+802c11a8 mr         r3, r30
+802c11ac bl         0x80062f2c
+802c11b0 mr         r5, r3
+802c11b4 mr         r4, r30
+802c11b8 mr         r3, r27
+802c11bc bl         0x800631d0
+802c11c0 cmpwi      r3, 0
+802c11c4 bne        0x802c11d0
+802c11c8 mr         r3, r29
+802c11cc b          0x802c11e0
+802c11d0 addi       r31, r31, 1
+802c11d4 cmpwi      r31, 4
+802c11d8 ble        0x802c119c
+802c11dc li         r3, 0
+802c11e0 lwz        r0, 0x24(r1)
+802c11e4 mtlr       r0
+802c11e8 lmw        r27, 0xc(r1)
+802c11ec addi       r1, r1, 0x20
+802c11f0 blr        
+802c11f4 addi       r3, r3, 0x6430
+802c11f8 li         r11, 0
+802c11fc slwi       r9, r11, 2
+802c1200 lwzx       r0, r3, r9
+802c1204 cmpwi      r0, 0
+802c1208 bne        0x802c1214
+802c120c stwx       r4, r3, r9
+802c1210 blr        
+802c1214 addi       r11, r11, 1
+802c1218 cmpwi      r11, 0xff
+802c121c ble        0x802c11fc
+802c1220 blr        
+802c1224 stwu       r1, -0x18(r1)
+802c1228 mflr       r0
+802c122c stmw       r29, 0xc(r1)
+802c1230 stw        r0, 0x1c(r1)
+802c1234 lis        r0, 3
+802c1238 lwz        r9, 0(r3)
+802c123c ori        r0, r0, 0x4250
+802c1240 cmpw       r9, r0
+802c1244 beq        0x802c1250
+802c1248 li         r3, 0
+802c124c b          0x802c1334
+802c1250 addi       r0, r3, 0x17
+802c1254 rlwinm     r31, r0, 0, 0, 0x1b
+802c1258 ori        r3, r31, 8
+802c125c bl         0x8005cb10
+802c1260 ori        r3, r31, 0xc
+802c1264 bl         0x8005cb10
+802c1268 lwz        r0, 8(r31)
+802c126c cmpwi      r0, 2
+802c1270 bne        0x802c1330
+802c1274 lwz        r29, 0xc(r31)
+802c1278 li         r30, 0
+802c127c addi       r31, r31, 0x10
+802c1280 cmpw       r30, r29
+802c1284 bge        0x802c1330
+802c1288 addi       r3, r31, 0x84
+802c128c addi       r30, r30, 1
+802c1290 bl         0x8005cb10
+802c1294 addi       r3, r31, 0x88
+802c1298 bl         0x8005cb10
+802c129c addi       r3, r31, 0x48
+802c12a0 bl         0x8005cb10
+802c12a4 addi       r3, r31, 0x4c
+802c12a8 bl         0x8005cb10
+802c12ac addi       r3, r31, 0x50
+802c12b0 bl         0x8005cb10
+802c12b4 addi       r3, r31, 0x54
+802c12b8 bl         0x8005cb10
+802c12bc addi       r3, r31, 0x58
+802c12c0 bl         0x8005cb10
+802c12c4 addi       r3, r31, 0x5c
+802c12c8 bl         0x8005cb10
+802c12cc addi       r3, r31, 0x60
+802c12d0 bl         0x8005cb10
+802c12d4 addi       r3, r31, 0x64
+802c12d8 bl         0x8005cb10
+802c12dc addi       r3, r31, 0x68
+802c12e0 bl         0x8005cb10
+802c12e4 addi       r3, r31, 0x6c
+802c12e8 bl         0x8005cb10
+802c12ec addi       r3, r31, 0x70
+802c12f0 bl         0x8005cb10
+802c12f4 addi       r3, r31, 0x74
+802c12f8 bl         0x8005cb10
+802c12fc addi       r3, r31, 0x78
+802c1300 bl         0x8005cb10
+802c1304 addi       r3, r31, 0x8c
+802c1308 bl         0x8005cb10
+802c130c addi       r3, r31, 0x90
+802c1310 bl         0x8005cb10
+802c1314 addi       r3, r31, 0x94
+802c1318 bl         0x8005cb10
+802c131c mr         r3, r31
+802c1320 bl         0x802c13cc
+802c1324 addi       r31, r31, 0xa4
+802c1328 cmpw       r30, r29
+802c132c blt        0x802c1288
+802c1330 li         r3, 1
+802c1334 lwz        r0, 0x1c(r1)
+802c1338 mtlr       r0
+802c133c lmw        r29, 0xc(r1)
+802c1340 addi       r1, r1, 0x18
+802c1344 blr        
+802c1348 stwu       r1, -0x18(r1)
+802c134c mflr       r0
+802c1350 stmw       r29, 0xc(r1)
+802c1354 stw        r0, 0x1c(r1)
+802c1358 lis        r0, 3
+802c135c lwz        r9, 0(r3)
+802c1360 ori        r0, r0, 0x4250
+802c1364 cmpw       r9, r0
+802c1368 beq        0x802c1374
+802c136c li         r3, 0
+802c1370 b          0x802c13b8
+802c1374 addi       r0, r3, 0x17
+802c1378 rlwinm     r3, r0, 0, 0, 0x1b
+802c137c lwz        r9, 8(r3)
+802c1380 cmpwi      r9, 2
+802c1384 bne        0x802c13b4
+802c1388 lwz        r29, 0xc(r3)
+802c138c li         r30, 0
+802c1390 addi       r31, r3, 0x10
+802c1394 cmpw       r30, r29
+802c1398 bge        0x802c13b4
+802c139c mr         r3, r31
+802c13a0 addi       r30, r30, 1
+802c13a4 bl         0x802c1440
+802c13a8 addi       r31, r31, 0xa4
+802c13ac cmpw       r30, r29
+802c13b0 blt        0x802c139c
+802c13b4 li         r3, 1
+802c13b8 lwz        r0, 0x1c(r1)
+802c13bc mtlr       r0
+802c13c0 lmw        r29, 0xc(r1)
+802c13c4 addi       r1, r1, 0x18
+802c13c8 blr        
+802c13cc lwz        r7, 0x48(r3)
+802c13d0 cmpwi      r7, 0
+802c13d4 bne        0x802c13f8
+802c13d8 lis        r9, -0x7fbf
+802c13dc lfs        f13, 0x68(r3)
+802c13e0 lfs        f0, -0x63f0(r9)
+802c13e4 fcmpu      cr0, f13, f0
+802c13e8 bne        0x802c13f8
+802c13ec li         r0, 5
+802c13f0 li         r7, 5
+802c13f4 stw        r0, 0x48(r3)
+802c13f8 cmplwi     r7, 8
+802c13fc bgtlr      
+802c1400 lis        r9, -0x7fb6
+802c1404 slwi       r11, r7, 3
+802c1408 addi       r9, r9, 0x4cb0
+802c140c lis        r10, -0x7fbd
+802c1410 add        r11, r11, r9
+802c1414 addi       r10, r10, 0x70a4
+802c1418 lwz        r8, 4(r11)
+802c141c slwi       r0, r7, 2
+802c1420 stw        r3, 0(r8)
+802c1424 stw        r3, 4(r11)
+802c1428 stw        r11, 0(r3)
+802c142c stw        r8, 4(r3)
+802c1430 lwzx       r9, r10, r0
+802c1434 addi       r9, r9, 1
+802c1438 stwx       r9, r10, r0
+802c143c blr        
+802c1440 lwz        r11, 4(r3)
+802c1444 lwz        r9, 0(r3)
+802c1448 stw        r9, 0(r11)
+802c144c stw        r11, 4(r9)
+802c1450 blr        
+802c1454 stwu       r1, -0x58(r1)
+802c1458 mflr       r0
+802c145c xxmrghd    vs31, vs1, vs0
+802c1460 stmw       r30, 0x48(r1)
+802c1464 stw        r0, 0x5c(r1)
+802c1468 lfs        f0, 0x58(r3)
+802c146c addi       r30, r1, 8
+802c1470 lfs        f13, 0x5c(r3)
+802c1474 lis        r9, -0x7fb6
+802c1478 lfs        f10, 0x60(r3)
+802c147c addi       r11, r9, 0x4cf8
+802c1480 stfs       f0, 8(r1)
+802c1484 mr         r31, r4
+802c1488 stfs       f13, 0xc(r1)
+802c148c addi       r3, r1, 0x18
+802c1490 stfs       f10, 8(r30)
+802c1494 addi       r4, r1, 0x28
+802c1498 lfs        f9, 0x4cf8(r9)
+802c149c lfs        f12, 8(r11)
+802c14a0 lfs        f11, 4(r11)
+802c14a4 lfs        f0, 8(r1)
+802c14a8 fsubs      f10, f10, f12
+802c14ac lfs        f13, 0xc(r1)
+802c14b0 fsubs      f0, f0, f9
+802c14b4 stfs       f10, 0x30(r1)
+802c14b8 fsubs      f13, f13, f11
+802c14bc stfs       f0, 0x28(r1)
+802c14c0 stfs       f13, 0x2c(r1)
+802c14c4 bl         0x80041b14
+802c14c8 lfs        f0, 0x1c(r1)
+802c14cc lis        r9, -0x7fbf
+802c14d0 lfs        f13, 0x18(r1)
+802c14d4 lis        r11, -0x7fbf
+802c14d8 fmuls      f0, f0, f0
+802c14dc lfs        f12, 0x20(r1)
+802c14e0 lfs        f11, -0x63ec(r9)
+802c14e4 fmadds     f13, f13, f13, f0
+802c14e8 fmadds     f12, f12, f12, f13
+802c14ec lis        r9, -0x7fbf
+802c14f0 lfs        f9, -0x63e8(r9)
+802c14f4 fcmpu      cr0, f12, f11
+802c14f8 lfs        f10, -0x63e4(r11)
+802c14fc cror       cr0un, cr0eq, cr0lt
+802c1500 bso        0x802c1530
+802c1504 frsqrte    f31, f12
+802c1508 fmuls      f0, f31, f31
+802c150c fmuls      f13, f31, f9
+802c1510 fnmsubs    f0, f12, f0, f10
+802c1514 fmadds     f31, f0, f13, f31
+802c1518 fmuls      f0, f31, f31
+802c151c fmuls      f13, f31, f9
+802c1520 fnmsubs    f0, f12, f0, f10
+802c1524 fmadds     f31, f0, f13, f31
+802c1528 fmuls      f31, f31, f12
+802c152c b          0x802c1538
+802c1530 lis        r9, -0x7fbf
+802c1534 lfs        f31, -0x63e0(r9)
+802c1538 lfs        f8, 0x5c(r31)
+802c153c lis        r9, -0x7fb6
+802c1540 lfs        f7, 0x58(r31)
+802c1544 addi       r11, r9, 0x4cf8
+802c1548 stfs       f8, 0xc(r1)
+802c154c addi       r3, r1, 0x28
+802c1550 stfs       f7, 8(r1)
+802c1554 addi       r4, r1, 0x38
+802c1558 lfs        f9, 0x4cf8(r9)
+802c155c fmr        f13, f8
+802c1560 lfs        f11, 4(r11)
+802c1564 fmr        f0, f7
+802c1568 lfs        f10, 0x60(r31)
+802c156c fsubs      f0, f0, f9
+802c1570 lfs        f12, 8(r11)
+802c1574 fsubs      f13, f13, f11
+802c1578 stfs       f10, 8(r30)
+802c157c fsubs      f12, f10, f12
+802c1580 stfs       f0, 0x38(r1)
+802c1584 stfs       f13, 0x3c(r1)
+802c1588 stfs       f12, 0x40(r1)
+802c158c stfs       f8, 0x2c(r1)
+802c1590 stfs       f10, 0x30(r1)
+802c1594 stfs       f7, 0x28(r1)
+802c1598 bl         0x80041b14
+802c159c lfs        f11, 0x2c(r1)
+802c15a0 lis        r9, -0x7fbf
+802c15a4 lfs        f12, 0x28(r1)
+802c15a8 lis        r11, -0x7fbf
+802c15ac lfs        f13, 0x30(r1)
+802c15b0 fmuls      f0, f11, f11
+802c15b4 lfs        f10, -0x63ec(r9)
+802c15b8 fmadds     f0, f12, f12, f0
+802c15bc fmadds     f9, f13, f13, f0
+802c15c0 lis        r9, -0x7fbf
+802c15c4 fcmpu      cr0, f9, f10
+802c15c8 lfs        f8, -0x63e8(r11)
+802c15cc lfs        f10, -0x63e4(r9)
+802c15d0 stfs       f12, 0x18(r1)
+802c15d4 stfs       f11, 0x1c(r1)
+802c15d8 stfs       f13, 0x20(r1)
+802c15dc cror       cr0un, cr0eq, cr0lt
+802c15e0 bso        0x802c1610
+802c15e4 frsqrte    f0, f9
+802c15e8 fmuls      f13, f0, f0
+802c15ec fmuls      f12, f0, f8
+802c15f0 fnmsubs    f13, f9, f13, f10
+802c15f4 fmadds     f0, f13, f12, f0
+802c15f8 fmuls      f13, f0, f0
+802c15fc fmuls      f12, f0, f8
+802c1600 fnmsubs    f13, f9, f13, f10
+802c1604 fmadds     f0, f13, f12, f0
+802c1608 fmuls      f0, f0, f9
+802c160c b          0x802c1618
+802c1610 lis        r9, -0x7fbf
+802c1614 lfs        f0, -0x63e0(r9)
+802c1618 fcmpu      cr7, f31, f0
+802c161c cror       cr7un, cr7eq, cr7lt
+802c1620 mfcr       r3
+802c1624 clrlwi     r3, r3, 0x1f
+802c1628 lwz        r0, 0x5c(r1)
+802c162c mtlr       r0
+802c1630 lmw        r30, 0x48(r1)
+802c1634 .byte      0xe3, 0xe1, 0x00, 0x50
+802c1638 addi       r1, r1, 0x58
+802c163c blr        
+802c1640 stwu       r1, -0x38(r1)
+802c1644 stmw       r30, 0x30(r1)
+802c1648 lwz        r11, 0x38(r4)
+802c164c lis        r9, -0x7fbc
+802c1650 lwz        r0, -0x7554(r9)
+802c1654 li         r31, 0
+802c1658 lfs        f12, 0x48(r11)
+802c165c li         r12, 0
+802c1660 lfs        f0, 0x40(r11)
+802c1664 cmpwi      r0, 0
+802c1668 lfs        f13, 0x44(r11)
+802c166c li         r4, 0
+802c1670 stfs       f0, 8(r1)
+802c1674 stfs       f13, 0xc(r1)
+802c1678 stfs       f12, 0x10(r1)
+802c167c beq        0x802c1724
+802c1680 lis        r9, -0x7fbd
+802c1684 lis        r10, -0x7fbd
+802c1688 lwz        r11, 0x70e8(r9)
+802c168c lis        r8, -0x7fbd
+802c1690 lwz        r0, 0x70e4(r10)
+802c1694 lis        r9, -0x7fbd
+802c1698 lwz        r10, 0x70e0(r8)
+802c169c slwi       r11, r11, 0x10
+802c16a0 slwi       r0, r0, 8
+802c16a4 lfs        f11, 0x70dc(r9)
+802c16a8 or         r11, r11, r0
+802c16ac lis        r8, -0x7fbd
+802c16b0 or         r11, r11, r10
+802c16b4 lis        r7, -0x7fbd
+802c16b8 lis        r10, -0x7fbd
+802c16bc lis        r6, -0x7fbd
+802c16c0 lis        r9, -0x7fbd
+802c16c4 lwz        r0, 0x7100(r10)
+802c16c8 lfs        f10, 0x70d8(r9)
+802c16cc clrlwi     r11, r11, 8
+802c16d0 lfs        f12, 0x70cc(r8)
+802c16d4 oris       r11, r11, 0x8000
+802c16d8 lfs        f13, 0x70d0(r7)
+802c16dc lis        r10, -0x7fbd
+802c16e0 lfs        f0, 0x70d4(r6)
+802c16e4 cmpw       r0, r11
+802c16e8 stfs       f11, 0xc(r3)
+802c16ec stfs       f12, 0(r3)
+802c16f0 stfs       f13, 4(r3)
+802c16f4 stfs       f0, 8(r3)
+802c16f8 stfs       f10, 0x10(r3)
+802c16fc stw        r11, 0x14(r3)
+802c1700 bne        0x802c1ac4
+802c1704 lis        r9, -0x7fbd
+802c1708 lfs        f0, 0x7104(r9)
+802c170c fcmpu      cr0, f0, f10
+802c1710 bne        0x802c1ac4
+802c1714 lfs        f0, 0x7108(r10)
+802c1718 fcmpu      cr0, f0, f11
+802c171c beq        0x802c1abc
+802c1720 b          0x802c1ac4
+802c1724 lis        r9, -0x7fbf
+802c1728 lis        r11, -0x7fb6
+802c172c lfs        f0, -0x63cc(r9)
+802c1730 slwi       r0, r5, 3
+802c1734 addi       r11, r11, 0x4cb0
+802c1738 lis        r9, -0x7fbf
+802c173c stfs       f0, 0xc(r3)
+802c1740 lis        r10, -0x7fbf
+802c1744 stfs       f0, 0x10(r3)
+802c1748 lis        r8, -0x7fbf
+802c174c stfs       f0, 0(r3)
+802c1750 fmr        f7, f0
+802c1754 stfs       f0, 4(r3)
+802c1758 add        r7, r0, r11
+802c175c stfs       f0, 8(r3)
+802c1760 fmr        f6, f7
+802c1764 lfs        f4, -0x63c4(r9)
+802c1768 lis        r30, -0x7fbf
+802c176c lwzx       r5, r11, r0
+802c1770 li         r6, 1
+802c1774 lfs        f5, -0x63bc(r8)
+802c1778 li         r9, 2
+802c177c lfs        f8, -0x63c8(r10)
+802c1780 li         r0, 4
+802c1784 cmpw       r5, r7
+802c1788 beq        0x802c1874
+802c178c lfs        f12, 0x58(r5)
+802c1790 lfs        f0, 8(r1)
+802c1794 lfs        f13, 0xc(r1)
+802c1798 fsubs      f12, f12, f0
+802c179c stfs       f12, 0x18(r1)
+802c17a0 lfs        f0, 0x5c(r5)
+802c17a4 fsubs      f0, f0, f13
+802c17a8 stfs       f0, 0x1c(r1)
+802c17ac fmuls      f0, f0, f0
+802c17b0 lfs        f13, 0x64(r5)
+802c17b4 fmadds     f11, f12, f12, f0
+802c17b8 fmuls      f13, f13, f13
+802c17bc fcmpu      cr0, f11, f13
+802c17c0 cror       cr0un, cr0eq, cr0gt
+802c17c4 bso        0x802c1864
+802c17c8 lfs        f9, -0x63c0(r30)
+802c17cc fcmpu      cr0, f11, f4
+802c17d0 lfs        f10, -0x63bc(r8)
+802c17d4 cror       cr0un, cr0eq, cr0lt
+802c17d8 bso        0x802c1808
+802c17dc frsqrte    f13, f11
+802c17e0 fmuls      f0, f13, f13
+802c17e4 fmuls      f12, f13, f9
+802c17e8 fnmsubs    f0, f11, f0, f10
+802c17ec fmadds     f13, f0, f12, f13
+802c17f0 fmuls      f0, f13, f13
+802c17f4 fmuls      f12, f13, f9
+802c17f8 fnmsubs    f0, f11, f0, f10
+802c17fc fmadds     f13, f0, f12, f13
+802c1800 fmuls      f13, f13, f11
+802c1804 b          0x802c180c
+802c1808 fmr        f13, f6
+802c180c lfs        f12, 0x6c(r5)
+802c1810 fcmpu      cr0, f13, f12
+802c1814 blt        0x802c182c
+802c1818 lfs        f0, 0x64(r5)
+802c181c fsubs      f13, f13, f12
+802c1820 fsubs      f0, f0, f12
+802c1824 fdivs      f13, f13, f0
+802c1828 b          0x802c1830
+802c182c fmr        f13, f6
+802c1830 fsubs      f0, f5, f13
+802c1834 stfs       f0, 0x9c(r5)
+802c1838 fcmpu      cr0, f13, f7
+802c183c bne        0x802c185c
+802c1840 lfs        f0, 0x64(r5)
+802c1844 stw        r6, 0x98(r5)
+802c1848 fcmpu      cr0, f0, f8
+802c184c cror       cr0un, cr0eq, cr0gt
+802c1850 bso        0x802c186c
+802c1854 fmr        f8, f0
+802c1858 b          0x802c186c
+802c185c stw        r9, 0x98(r5)
+802c1860 b          0x802c186c
+802c1864 stw        r0, 0x98(r5)
+802c1868 stfs       f7, 0x9c(r5)
+802c186c lwz        r5, 0(r5)
+802c1870 b          0x802c1784
+802c1874 lis        r9, -0x7fbf
+802c1878 lwz        r11, 0(r7)
+802c187c lfs        f6, -0x63cc(r9)
+802c1880 cmpw       r11, r7
+802c1884 beq        0x802c18a4
+802c1888 lfs        f13, 0x9c(r11)
+802c188c lfs        f0, 0x94(r11)
+802c1890 fmuls      f13, f13, f0
+802c1894 stfs       f13, 0x9c(r11)
+802c1898 fadds      f6, f6, f13
+802c189c lwz        r11, 0(r11)
+802c18a0 b          0x802c1880
+802c18a4 lis        r11, -0x7fbf
+802c18a8 lis        r9, -0x7fbf
+802c18ac lfs        f4, -0x63cc(r9)
+802c18b0 lis        r10, -0x7fbf
+802c18b4 lfd        f7, -0x63b8(r11)
+802c18b8 lis        r6, 0x4330
+802c18bc lfd        f8, -0x63b0(r10)
+802c18c0 fmr        f5, f4
+802c18c4 lwz        r11, 0(r7)
+802c18c8 cmpw       r11, r7
+802c18cc beq        0x802c1a6c
+802c18d0 fcmpu      cr0, f6, f5
+802c18d4 bne        0x802c18e0
+802c18d8 stfs       f5, 0x9c(r11)
+802c18dc b          0x802c18ec
+802c18e0 lfs        f0, 0x9c(r11)
+802c18e4 fdivs      f0, f0, f6
+802c18e8 stfs       f0, 0x9c(r11)
+802c18ec lfs        f11, 0x9c(r11)
+802c18f0 fcmpu      cr0, f11, f4
+802c18f4 beq        0x802c1a64
+802c18f8 lfs        f0, 0x70(r11)
+802c18fc lfs        f13, 0(r3)
+802c1900 lfs        f12, 4(r3)
+802c1904 fmadds     f0, f0, f11, f13
+802c1908 lfs        f10, 0xc(r3)
+802c190c stfs       f0, 0(r3)
+802c1910 lfs        f11, 8(r3)
+802c1914 lfs        f0, 0x9c(r11)
+802c1918 lfs        f13, 0x74(r11)
+802c191c lfs        f9, 0x10(r3)
+802c1920 fmadds     f13, f13, f0, f12
+802c1924 stfs       f13, 4(r3)
+802c1928 lfs        f13, 0x9c(r11)
+802c192c lfs        f0, 0x78(r11)
+802c1930 fmadds     f0, f0, f13, f11
+802c1934 stfs       f0, 8(r3)
+802c1938 lfs        f0, 0x9c(r11)
+802c193c lfs        f13, 0x50(r11)
+802c1940 fmadds     f13, f13, f0, f10
+802c1944 stfs       f13, 0xc(r3)
+802c1948 lfs        f13, 0x9c(r11)
+802c194c lfs        f0, 0x68(r11)
+802c1950 fmadds     f0, f0, f13, f9
+802c1954 stfs       f0, 0x10(r3)
+802c1958 lwz        r0, 0x4c(r11)
+802c195c lfs        f13, 0x9c(r11)

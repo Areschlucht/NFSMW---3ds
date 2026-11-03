@@ -1,0 +1,63 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "function_va": "0x802555CC",
+  "vehicle_collections": 77,
+  "float_bit_cases": 4808,
+  "comparison": "exact IEEE754 float32 bits",
+  "bmw_trace": [
+    {
+      "gear_slot": 0,
+      "speed_mps": 20.0,
+      "rpm": 6283.1259765625,
+      "float32_be": "45c45902"
+    },
+    {
+      "gear_slot": 1,
+      "speed_mps": 20.0,
+      "rpm": 800.0000610351562,
+      "float32_be": "44480001"
+    },
+    {
+      "gear_slot": 2,
+      "speed_mps": 20.0,
+      "rpm": 7825.25634765625,
+      "float32_be": "45f48a0d"
+    },
+    {
+      "gear_slot": 3,
+      "speed_mps": 20.0,
+      "rpm": 5135.0966796875,
+      "float32_be": "45a078c6"
+    },
+    {
+      "gear_slot": 4,
+      "speed_mps": 20.0,
+      "rpm": 3661.50634765625,
+      "float32_be": "4564d81a"
+    },
+    {
+      "gear_slot": 5,
+      "speed_mps": 20.0,
+      "rpm": 2907.576904296875,
+      "float32_be": "4535b93b"
+    },
+    {
+      "gear_slot": 6,
+      "speed_mps": 20.0,
+      "rpm": 2513.476806640625,
+      "float32_be": "451d17a1"
+    },
+    {
+      "gear_slot": 7,
+      "speed_mps": 20.0,
+      "rpm": 2222.185791015625,
+      "float32_be": "450ae2f9"
+    }
+  ],
+  "limitations": [
+    "requested RPM scalar stage only; actual engine RPM integration and clutch are separate",
+    "original invalid-array-index fallback is not reproduced",
+    "input speed unit follows proven metre tire dimensions and angular conversions"
+  ]
+}

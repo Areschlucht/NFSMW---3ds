@@ -1,0 +1,27 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "dolphin_commit": "86d554802d7560acf12b5c5a2b3acb344069b5ce",
+  "physical_profiles": [
+    {
+      "name": "bmwm3gtre46",
+      "key": 1309171635
+    },
+    {
+      "name": "m3gtre46careerstart",
+      "key": 970645752
+    }
+  ],
+  "stateful_wheel_steps": 1024,
+  "contact_steps": 640,
+  "free_steps": 384,
+  "compressed_free_steps": 60,
+  "locked_steps": 105,
+  "float_bit_mismatches": 0,
+  "limitations": [
+    "stage-chain comparison with persistent state, not uninterrupted whole-car trace",
+    "explicit synthetic query/steering/torque/input producers; no scheduler inference",
+    "pow/sine/sqrt callbacks execute original math; default pow precision remains separately reported",
+    "body force integration, bottomout chassis correction, material persistence and source gameplay mode transitions remain external"
+  ]
+}

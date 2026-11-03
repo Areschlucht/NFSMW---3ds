@@ -1,0 +1,34 @@
+{
+  "version": "0.11",
+  "python_tests": 48,
+  "native_map_asan_ubsan": "pass",
+  "strict_arm_build": "pass",
+  "map_source": "original loaded road triangles, 2930 triangles",
+  "map_coverage_pixels": 10656,
+  "map_meters_per_pixel": 1.91,
+  "framebuffer": "rotated RGB565, bounds-checked blit",
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "rolling": [
+      159,
+      118,
+      278,
+      171
+    ],
+    "map_reference_max_error": 7
+  },
+  "emulator": "Azahar 2126.2 / Mesa software OpenGL",
+  "checked": [
+    "map matches native reference within RGB565 quantization",
+    "gold heading arrow/cyan start marker",
+    "scrolling with accepted travel",
+    "ahead warning then edge stop",
+    "reverse",
+    "driving and garage reset",
+    "wheel rolling",
+    "controls/menu/exit"
+  ],
+  "hardware_test": "not requested; user remains on phone",
+  "sha256": "4fb1f11186235e30d1709b5a98b2c2e60eef3bb4ad3644c7593cf1c35fcab714"
+}

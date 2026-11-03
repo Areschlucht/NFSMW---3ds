@@ -1,0 +1,18 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "routine_sha256": "0918f93c11e01423a2899f1878aae84a59ef8bfd01b62641ae7171877f319554",
+  "routine_address": "0x802ef290",
+  "cases": 10460,
+  "hits": 9117,
+  "strip_flags": {
+    "1": 6570,
+    "0": 3815,
+    "2": 75
+  },
+  "maximum_output_vertex_error": 0,
+  "failures": [],
+  "failure_count": 0,
+  "limitations": "Local candidate primitive only; sample centroid/masks/height differential, not exact boundary/NaN/FPSCR validation or full scene collision query/response.",
+  "implementation_sha256": "966701d679f9479257379887a33c710d6988ca78f889fca3bba862a5f5e8d6e2",
+  "header_sha256": "0edcc05fa7c4c0d7fa7c55816faf928dba34d613303fac1df21ee62cbcc47371"
+}

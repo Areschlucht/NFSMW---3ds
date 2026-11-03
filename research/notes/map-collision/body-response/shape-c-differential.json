@@ -1,0 +1,204 @@
+{
+  "source_sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "decoded_bounds": 1034,
+  "primitive_cases": 2068,
+  "produced": 1208,
+  "float_bit_or_flag_failures": 0,
+  "examples": [],
+  "bmw_static_children": [
+    {
+      "bound_index": 1,
+      "kind": 1,
+      "runtime_flags": 3,
+      "source_flags": 70,
+      "center": [
+        -0.004000000189989805,
+        -0.24400001764297485,
+        -0.0010000000474974513
+      ],
+      "half_extents": [
+        0.9340000152587891,
+        0.3760000169277191,
+        2.2890000343322754
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 2.289632797241211,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 2,
+      "kind": 1,
+      "runtime_flags": 3,
+      "source_flags": 70,
+      "center": [
+        0.0,
+        0.3840000033378601,
+        -0.968000054359436
+      ],
+      "half_extents": [
+        0.5980000495910645,
+        0.23200000822544098,
+        1.308000087738037
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 1.3084553480148315,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 3,
+      "kind": 2,
+      "runtime_flags": 17,
+      "source_flags": 130,
+      "center": [
+        0.7470000386238098,
+        -0.4400000274181366,
+        2.1050000190734863
+      ],
+      "half_extents": [
+        0.32859736680984497,
+        0.32859736680984497,
+        0.32859736680984497
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 0.32859736680984497,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 5,
+      "kind": 2,
+      "runtime_flags": 17,
+      "source_flags": 130,
+      "center": [
+        -0.7590000629425049,
+        -0.4400000274181366,
+        2.1070001125335693
+      ],
+      "half_extents": [
+        0.32859736680984497,
+        0.32859736680984497,
+        0.32859736680984497
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 0.32859736680984497,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 6,
+      "kind": 2,
+      "runtime_flags": 17,
+      "source_flags": 130,
+      "center": [
+        0.7470000386238098,
+        -0.05000000074505806,
+        2.1050000190734863
+      ],
+      "half_extents": [
+        0.32859736680984497,
+        0.32859736680984497,
+        0.32859736680984497
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 0.32859736680984497,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 7,
+      "kind": 2,
+      "runtime_flags": 17,
+      "source_flags": 130,
+      "center": [
+        -0.7590000629425049,
+        -0.05000000074505806,
+        2.1070001125335693
+      ],
+      "half_extents": [
+        0.32859736680984497,
+        0.32859736680984497,
+        0.32859736680984497
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 0.32859736680984497,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 8,
+      "kind": 2,
+      "runtime_flags": 17,
+      "source_flags": 130,
+      "center": [
+        0.4660000205039978,
+        0.48600003123283386,
+        0.2070000171661377
+      ],
+      "half_extents": [
+        0.23659002780914307,
+        0.23659002780914307,
+        0.23659002780914307
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 0.23659002780914307,
+      "material_key": "0x99da6531"
+    },
+    {
+      "bound_index": 9,
+      "kind": 2,
+      "runtime_flags": 17,
+      "source_flags": 130,
+      "center": [
+        -0.4690000116825104,
+        0.48600003123283386,
+        0.20800000429153442
+      ],
+      "half_extents": [
+        0.23659002780914307,
+        0.23659002780914307,
+        0.23659002780914307
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 0.23659002780914307,
+      "material_key": "0x99da6531"
+    }
+  ],
+  "limitations": "Original primitive arguments verified with allocator/list insertion intercepted. Static children preserve original detailed-child and world-loop flag filtering. No body pose/swept SAT/effective-mass response integration claim."
+}

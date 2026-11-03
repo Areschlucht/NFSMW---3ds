@@ -1,0 +1,293 @@
+{
+  "parts": [
+    {
+      "name": "BMWM3GTRE46_BASE_B",
+      "triangles": 202
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_BODY_B",
+      "triangles": 3640
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_FRONT_LEFT_WINDOW_B",
+      "triangles": 7
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_FRONT_RIGHT_WINDOW_B",
+      "triangles": 7
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_FRONT_WINDOW_B",
+      "triangles": 56
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_INTERIOR_B",
+      "triangles": 726
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_LEFT_BRAKELIGHT_B",
+      "triangles": 80
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_B",
+      "triangles": 128
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_LEFT_HEADLIGHT_GLASS_B",
+      "triangles": 31
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_REAR_LEFT_WINDOW_B",
+      "triangles": 33
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_REAR_RIGHT_WINDOW_B",
+      "triangles": 33
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_REAR_WINDOW_B",
+      "triangles": 66
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_RIGHT_BRAKELIGHT_B",
+      "triangles": 80
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_B",
+      "triangles": 128
+    },
+    {
+      "name": "BMWM3GTRE46_KIT00_RIGHT_HEADLIGHT_GLASS_B",
+      "triangles": 31
+    },
+    {
+      "name": "PROVISIONAL_TIRE_FRONT_LEFT",
+      "triangles": 614
+    },
+    {
+      "name": "PROVISIONAL_TIRE_REAR_LEFT",
+      "triangles": 614
+    },
+    {
+      "name": "PROVISIONAL_TIRE_FRONT_RIGHT",
+      "triangles": 614
+    },
+    {
+      "name": "PROVISIONAL_TIRE_REAR_RIGHT",
+      "triangles": 614
+    }
+  ],
+  "textures": [
+    {
+      "hash": "02b52399",
+      "name": "UNRESOLVED_02b52399",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "03c906ef",
+      "name": "TREAD",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "1b049702",
+      "name": "WINDOW_MASK",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "23ef5d6c",
+      "name": "BMWM3GTRE46_BADGING",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 3
+    },
+    {
+      "hash": "2590276c",
+      "name": "BMWM3GTRE46_INTERIOR",
+      "missing": false,
+      "width": 256,
+      "height": 256,
+      "flags": 0
+    },
+    {
+      "hash": "267d188c",
+      "name": "UNRESOLVED_267d188c",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "4c95c6f8",
+      "name": "LICENSEPLATE",
+      "missing": false,
+      "width": 128,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "721aff7c",
+      "name": "CARBONFIBRE",
+      "missing": false,
+      "width": 64,
+      "height": 64,
+      "flags": 0
+    },
+    {
+      "hash": "7b220ddf",
+      "name": "WINDOW_FRONT",
+      "missing": false,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "a532fc46",
+      "name": "UNRESOLVED_a532fc46",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "a7e6ea53",
+      "name": "UNRESOLVED_a7e6ea53",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "bd1f0e0a",
+      "name": "CARBOTTOM",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 0
+    },
+    {
+      "hash": "cc772afb",
+      "name": "DOORLINE",
+      "missing": false,
+      "width": 32,
+      "height": 16,
+      "flags": 3
+    },
+    {
+      "hash": "d947f346",
+      "name": "UNRESOLVED_d947f346",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "de3ad3c6",
+      "name": "UNRESOLVED_de3ad3c6",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    },
+    {
+      "hash": "e38806e3",
+      "name": "TIRE_BACK",
+      "missing": false,
+      "width": 32,
+      "height": 32,
+      "flags": 3
+    },
+    {
+      "hash": "e7b0e36c",
+      "name": "BMWM3GTRE46_MISC",
+      "missing": false,
+      "width": 256,
+      "height": 256,
+      "flags": 0
+    },
+    {
+      "hash": "e7b4b9f4",
+      "name": "BMWM3GTRE46_TIRE",
+      "missing": false,
+      "width": 128,
+      "height": 128,
+      "flags": 0
+    },
+    {
+      "hash": "f68ef19f",
+      "name": "UNRESOLVED_f68ef19f",
+      "missing": true,
+      "width": 8,
+      "height": 8,
+      "flags": 0
+    }
+  ],
+  "vertices": 23112,
+  "triangles": 7704,
+  "source_bounds": [
+    [
+      -2.1083984375,
+      -0.09305659029928692,
+      -0.92578125
+    ],
+    [
+      2.43017578125,
+      1.22509765625,
+      0.92578125
+    ]
+  ],
+  "unresolved": "Generated BMWM3GTRE46_SKIN1, some lights, wheel/driver placement and game materials",
+  "scene": "Body/interior/windows/lights; provisional wheel groups",
+  "wheel_placement": {
+    "method": "BMW body-arch circle fit, not original axle metadata; front tire mesh reused four times",
+    "common_axle_height": 0.23458012845071308,
+    "arch_fits": [
+      {
+        "side": 1,
+        "end": 1,
+        "center_x": 1.588956354543224,
+        "center_z": 0.21623048236900066,
+        "arch_radius": 0.406229654411822,
+        "outer_y": 0.90966796875,
+        "rms_m": 0.00263400174486849
+      },
+      {
+        "side": 1,
+        "end": -1,
+        "center_x": -1.123555980260265,
+        "center_z": 0.2546213935090363,
+        "arch_radius": 0.4186110572450133,
+        "outer_y": 0.888671875,
+        "rms_m": 0.0027767927554586376
+      },
+      {
+        "side": -1,
+        "end": 1,
+        "center_x": 1.588956354543224,
+        "center_z": 0.21623048236900066,
+        "arch_radius": 0.406229654411822,
+        "outer_y": 0.90966796875,
+        "rms_m": 0.00263400174486849
+      },
+      {
+        "side": -1,
+        "end": -1,
+        "center_x": -1.124027536402848,
+        "center_z": 0.2512381555558147,
+        "arch_radius": 0.42082890463032796,
+        "outer_y": 0.85546875,
+        "rms_m": 0.003050022740860128
+      }
+    ]
+  },
+  "wheel_animation": "wheels.nwa"
+}

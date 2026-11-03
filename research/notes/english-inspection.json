@@ -1,0 +1,19 @@
+{
+  "file": "english-textonly.bin",
+  "bytes": 212136,
+  "sha256": "fda4935491869ddaa3eba335c3425aa9cbc8fcbd82a58a20f7334ecbbbd8fa4a",
+  "chunks": [
+    {
+      "offset": 0,
+      "id": "00039000",
+      "payload_bytes": 212128
+    }
+  ],
+  "language": {
+    "entries": 4464,
+    "table_file_offset": 6172,
+    "strings_file_offset": 41884,
+    "string_boundaries_validated": 4464,
+    "unique_keys": 4464
+  }
+}

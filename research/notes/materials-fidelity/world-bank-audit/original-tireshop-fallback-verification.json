@@ -1,0 +1,51 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "model_hash": "5fbb194f",
+  "model_name": "XB_CT_TIRESHOP02_1B_00",
+  "model_source_sha256": "2bbd22caa427edc45d1b4e4cca5aebb52b9ba7727c272825fa24360f9633d356",
+  "model_keys": [
+    "c904085c",
+    "c95fe138",
+    "9ebb788a",
+    "764dea79",
+    "438cc032",
+    "d85a1224",
+    "b72aa8d3",
+    "c567bac7",
+    "7e2734a8",
+    "7e2734a9",
+    "fd8270ee"
+  ],
+  "matched_model_fixup_references": 11,
+  "direct_lookup_cases": [
+    {
+      "hash": "7e2734a8",
+      "fallback_enabled": false,
+      "returned": "00000000"
+    },
+    {
+      "hash": "7e2734a8",
+      "fallback_enabled": true,
+      "returned": "90001000"
+    },
+    {
+      "hash": "7e2734a9",
+      "fallback_enabled": false,
+      "returned": "00000000"
+    },
+    {
+      "hash": "7e2734a9",
+      "fallback_enabled": true,
+      "returned": "90001000"
+    }
+  ],
+  "fallback_source_hash": "66994f4a",
+  "fallback_source_name": "DEFAULTALPHA",
+  "fallback_global": "8041ab74",
+  "fallback_registration": "800fc670..800fc688",
+  "original_fixup": "800f6e10..800f6e94",
+  "original_fixup_loader_call": "800f824c",
+  "original_lookup": "800fd4a0..800fd620",
+  "state_precondition": "Nine known Tireshop resources registered in original fast cache; ordinary bank list empty, no matching 17 standard RT keys, streaming alias count 0, model fixup guard 0. Original functions execute without stubs or patches.",
+  "limitation": "This proves original absent-resource policy and model call arguments under explicit registry state. Any newly identified live runtime alias must supersede fallback exactly as original lookup does."
+}

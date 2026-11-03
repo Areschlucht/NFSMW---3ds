@@ -1,0 +1,30 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "original_direction_range": "80073028..80073100",
+  "original_curve_startup": "80080F8C..80081004",
+  "original_curve_raw": "4100000000000000415000003f800000",
+  "source_points": [
+    [
+      8,
+      0
+    ],
+    [
+      13,
+      1
+    ]
+  ],
+  "direction_float_bit_cases": 960,
+  "patched_instructions": 0,
+  "hardware_semantic_adapter": "Onlyfrsqrte usesexistingexternalpinnedDolphinoracle;allremainingPPCunchanged",
+  "oracle_commit": "86d554802d7560acf12b5c5a2b3acb344069b5ce",
+  "oracle_source_hashes": {
+    "FloatUtils.cpp": "e7bcd6a48701a361a84a9c0dfbf2ddb0c5c5219a1370838c05f99a5e8dff9dbb",
+    "FloatUtils.h": "8aad8c06eac7e14ac2876ddd56edc0562d28cd8c906ca6bfd9c72808810dbbe5",
+    "CommonTypes.h": "b714ae37337b4f9cd6e1863073bdd92fda8648e606c91657b104fdc856199b94"
+  },
+  "limitations": [
+    "Direction target only; later timer/vertical attenuation and persistent interpolation not included",
+    "Actual original body-basis/controller frame must be supplied; no viewer-axis guess",
+    "Full camera collision,preset transitions,noise and finalmatrix output remain unported"
+  ]
+}

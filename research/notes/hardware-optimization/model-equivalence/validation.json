@@ -1,0 +1,16 @@
+{
+  "schema": 2,
+  "summary": {
+    "decoded_variants": 4975,
+    "full_guard_equivalent": 1782,
+    "rejected_variants": 5,
+    "unresolved_decode": 2,
+    "ambiguous_hash_groups": 1784
+  },
+  "original_signed_statistic_guarded": true,
+  "mutation_validation": "passed: RGB/fourthmetadata/UV/matrix/materialref/headerstatistic",
+  "files": {
+    "catalog.json": "a67d0a142d0d6fd20fe17be7753858cbec52af72808c54b438527a9cc5246bb1",
+    "audit.json": "fd3492bbeafed875d82ef639a15f6921190039bfd321836e896ff9a0f639f5be"
+  }
+}

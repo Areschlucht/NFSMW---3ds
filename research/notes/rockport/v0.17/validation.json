@@ -1,0 +1,59 @@
+{
+  "version": "0.17",
+  "python_tests_pass": 113,
+  "native_sanitizers": [
+    "UI framebuffer/touch bounds",
+    "exact world indexing incl u16 boundary/fallback",
+    "driving",
+    "camera",
+    "frustum visibility",
+    "road spatial index",
+    "road pose",
+    "road map",
+    "wheel motion"
+  ],
+  "strict_arm_builds": [
+    "default indexed",
+    "NFS_DISABLE_WORLD_INDEX expanded reference"
+  ],
+  "emulator": "Azahar 2126.2 / llvmpipe",
+  "emulator_checked": [
+    "touch drive/menu/garage/controls/exit",
+    "help/stats toggling and held touch",
+    "driving/braking/steering/handbrake/reverse/edge",
+    "exact drive and garage reset",
+    "wheel rolling",
+    "default view exact vs v0.16",
+    "dense indexed vs expanded exact"
+  ],
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "garage_wheel_motion": [
+      158,
+      118,
+      278,
+      171
+    ],
+    "start_vs_v016": null,
+    "help_preserves_stationary_view": null,
+    "stats_preserves_stationary_view": null,
+    "driving_changes_view": [
+      0,
+      0,
+      400,
+      240
+    ],
+    "dense_indexed_vs_expanded": null
+  },
+  "world_gpu_bytes": {
+    "v016": 4034772,
+    "v017_aligned": 2030592
+  },
+  "hardware_fps_measured": false,
+  "original_physics_integrated": false,
+  "original_collision_integrated": false,
+  "full_world_streaming_integrated": false,
+  "zip_sha256": "b19a7e85a6e9ae3d340c02056e366eb0577490470284ae0b4e9fd5c14d5f84d0",
+  "binary_sha256": "a6d3128728ffc96b52bcb6cabffc56e0859700fca42ed9f17061c33fed2d6a96"
+}

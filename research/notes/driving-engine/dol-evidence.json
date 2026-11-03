@@ -1,0 +1,631 @@
+{
+  "sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "sections": [
+    {
+      "name": "text0",
+      "offset": 256,
+      "address": 2147496192,
+      "size": 928
+    },
+    {
+      "name": "text1",
+      "offset": 1184,
+      "address": 2147497120,
+      "size": 3954368
+    },
+    {
+      "name": "data0",
+      "offset": 3955552,
+      "address": 2151451488,
+      "size": 256
+    },
+    {
+      "name": "data1",
+      "offset": 3955808,
+      "address": 2151451744,
+      "size": 312608
+    },
+    {
+      "name": "data2",
+      "offset": 4268416,
+      "address": 2151764352,
+      "size": 267232
+    },
+    {
+      "name": "data3",
+      "offset": 4535648,
+      "address": 2152721856,
+      "size": 2816
+    },
+    {
+      "name": "data4",
+      "offset": 4538464,
+      "address": 2152726336,
+      "size": 3424
+    }
+  ],
+  "entry": 2147496192,
+  "strings": [
+    {
+      "address": 2151443636,
+      "offset": 3947700,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151452212,
+      "offset": 3956276,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151452704,
+      "offset": 3956768,
+      "text": "SuspensionParams"
+    },
+    {
+      "address": 2151452724,
+      "offset": 3956788,
+      "text": "EngineParams"
+    },
+    {
+      "address": 2151453460,
+      "offset": 3957524,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151455648,
+      "offset": 3959712,
+      "text": "Attrib::Gen::chassis"
+    },
+    {
+      "address": 2151455672,
+      "offset": 3959736,
+      "text": "Attrib::Gen::tires"
+    },
+    {
+      "address": 2151455692,
+      "offset": 3959756,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151455720,
+      "offset": 3959784,
+      "text": "Attrib::Gen::nos"
+    },
+    {
+      "address": 2151455780,
+      "offset": 3959844,
+      "text": "Physics"
+    },
+    {
+      "address": 2151457348,
+      "offset": 3961412,
+      "text": "SuspensionSimple"
+    },
+    {
+      "address": 2151479088,
+      "offset": 3983152,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151480692,
+      "offset": 3984756,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151488316,
+      "offset": 3992380,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151489628,
+      "offset": 3993692,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151490000,
+      "offset": 3994064,
+      "text": "Attrib::Gen::chassis"
+    },
+    {
+      "address": 2151506092,
+      "offset": 4010156,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151506764,
+      "offset": 4010828,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151518916,
+      "offset": 4022980,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151521652,
+      "offset": 4025716,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151538248,
+      "offset": 4042312,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151544796,
+      "offset": 4048860,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151549192,
+      "offset": 4053256,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151564788,
+      "offset": 4068852,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151565664,
+      "offset": 4069728,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151596736,
+      "offset": 4100800,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151597052,
+      "offset": 4101116,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151605288,
+      "offset": 4109352,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151605412,
+      "offset": 4109476,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151610468,
+      "offset": 4114532,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151611080,
+      "offset": 4115144,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151611220,
+      "offset": 4115284,
+      "text": "SuspensionParams"
+    },
+    {
+      "address": 2151611240,
+      "offset": 4115304,
+      "text": "EngineParams"
+    },
+    {
+      "address": 2151611880,
+      "offset": 4115944,
+      "text": "SuspensionSimple"
+    },
+    {
+      "address": 2151612588,
+      "offset": 4116652,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151617120,
+      "offset": 4121184,
+      "text": "Attrib::Gen::nos"
+    },
+    {
+      "address": 2151617140,
+      "offset": 4121204,
+      "text": "Attrib::Gen::chassis"
+    },
+    {
+      "address": 2151617548,
+      "offset": 4121612,
+      "text": "Attrib::Gen::transmission"
+    },
+    {
+      "address": 2151617688,
+      "offset": 4121752,
+      "text": "Attrib::Gen::tires"
+    },
+    {
+      "address": 2151617708,
+      "offset": 4121772,
+      "text": "Attrib::Gen::brakes"
+    },
+    {
+      "address": 2151632076,
+      "offset": 4136140,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151639676,
+      "offset": 4143740,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151639884,
+      "offset": 4143948,
+      "text": "SuspensionParams"
+    },
+    {
+      "address": 2151639904,
+      "offset": 4143968,
+      "text": "EngineParams"
+    },
+    {
+      "address": 2151640404,
+      "offset": 4144468,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151640696,
+      "offset": 4144760,
+      "text": "SuspensionSpline"
+    },
+    {
+      "address": 2151640816,
+      "offset": 4144880,
+      "text": "SuspensionSimple"
+    },
+    {
+      "address": 2151640976,
+      "offset": 4145040,
+      "text": "Physics"
+    },
+    {
+      "address": 2151641060,
+      "offset": 4145124,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151642384,
+      "offset": 4146448,
+      "text": "Attrib::Gen::chassis"
+    },
+    {
+      "address": 2151642408,
+      "offset": 4146472,
+      "text": "Attrib::Gen::transmission"
+    },
+    {
+      "address": 2151642436,
+      "offset": 4146500,
+      "text": "Attrib::Gen::tires"
+    },
+    {
+      "address": 2151642480,
+      "offset": 4146544,
+      "text": "Attrib::Gen::nos"
+    },
+    {
+      "address": 2151642500,
+      "offset": 4146564,
+      "text": "Attrib::Gen::brakes"
+    },
+    {
+      "address": 2151655652,
+      "offset": 4159716,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151655724,
+      "offset": 4159788,
+      "text": "Attrib::Gen::tires"
+    },
+    {
+      "address": 2151655744,
+      "offset": 4159808,
+      "text": "Attrib::Gen::chassis"
+    },
+    {
+      "address": 2151655768,
+      "offset": 4159832,
+      "text": "Attrib::Gen::brakes"
+    },
+    {
+      "address": 2151655788,
+      "offset": 4159852,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151655808,
+      "offset": 4159872,
+      "text": "Attrib::Gen::transmission"
+    },
+    {
+      "address": 2151655860,
+      "offset": 4159924,
+      "text": "Attrib::Gen::nos"
+    },
+    {
+      "address": 2151655924,
+      "offset": 4159988,
+      "text": "SuspensionParams"
+    },
+    {
+      "address": 2151655944,
+      "offset": 4160008,
+      "text": "EngineParams"
+    },
+    {
+      "address": 2151655976,
+      "offset": 4160040,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151656804,
+      "offset": 4160868,
+      "text": "Physics"
+    },
+    {
+      "address": 2151658652,
+      "offset": 4162716,
+      "text": "SuspensionRacer"
+    },
+    {
+      "address": 2151659204,
+      "offset": 4163268,
+      "text": "SuspensionTraffic"
+    },
+    {
+      "address": 2151659404,
+      "offset": 4163468,
+      "text": "SuspensionSimple"
+    },
+    {
+      "address": 2151659688,
+      "offset": 4163752,
+      "text": "SuspensionTrailer"
+    },
+    {
+      "address": 2151659796,
+      "offset": 4163860,
+      "text": "SuspensionSpline"
+    },
+    {
+      "address": 2151659988,
+      "offset": 4164052,
+      "text": "EngineRacer"
+    },
+    {
+      "address": 2151687036,
+      "offset": 4191100,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151694532,
+      "offset": 4198596,
+      "text": "SuspensionParams"
+    },
+    {
+      "address": 2151694552,
+      "offset": 4198616,
+      "text": "EngineParams"
+    },
+    {
+      "address": 2151694584,
+      "offset": 4198648,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151695064,
+      "offset": 4199128,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151695792,
+      "offset": 4199856,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151702672,
+      "offset": 4206736,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151702848,
+      "offset": 4206912,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151716184,
+      "offset": 4220248,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151719064,
+      "offset": 4223128,
+      "text": "Attrib::Gen::engine"
+    },
+    {
+      "address": 2151719780,
+      "offset": 4223844,
+      "text": "VehicleParams"
+    },
+    {
+      "address": 2151720320,
+      "offset": 4224384,
+      "text": "Attrib::Gen::tires"
+    },
+    {
+      "address": 2151735832,
+      "offset": 4239896,
+      "text": "SuspensionParams"
+    },
+    {
+      "address": 2151735852,
+      "offset": 4239916,
+      "text": "EngineParams"
+    },
+    {
+      "address": 2151735884,
+      "offset": 4239948,
+      "text": "Attrib::Gen::rigidbodyspecs"
+    },
+    {
+      "address": 2151736736,
+      "offset": 4240800,
+      "text": "VehicleParams"
+    }
+  ],
+  "xrefs": [
+    {
+      "instruction": 2147582944,
+      "origin": 2147582936,
+      "target": 2151455780,
+      "register": 3
+    },
+    {
+      "instruction": 2147756640,
+      "origin": 2147756636,
+      "target": 2151452212,
+      "register": 3
+    },
+    {
+      "instruction": 2149413304,
+      "origin": 2149413292,
+      "target": 2151611880,
+      "register": 3
+    },
+    {
+      "instruction": 2149656860,
+      "origin": 2149656856,
+      "target": 2151640696,
+      "register": 3
+    },
+    {
+      "instruction": 2149657516,
+      "origin": 2149657512,
+      "target": 2151640816,
+      "register": 3
+    },
+    {
+      "instruction": 2149672432,
+      "origin": 2149672428,
+      "target": 2151640976,
+      "register": 30
+    },
+    {
+      "instruction": 2149672436,
+      "origin": 2149672428,
+      "target": 2151640976,
+      "register": 3
+    },
+    {
+      "instruction": 2149672484,
+      "origin": 2149672428,
+      "target": 2151640976,
+      "register": 4
+    },
+    {
+      "instruction": 2149673884,
+      "origin": 2149673880,
+      "target": 2151640976,
+      "register": 3
+    },
+    {
+      "instruction": 2149687476,
+      "origin": 2149687472,
+      "target": 2151640976,
+      "register": 3
+    },
+    {
+      "instruction": 2149768000,
+      "origin": 2149767996,
+      "target": 2151639884,
+      "register": 3
+    },
+    {
+      "instruction": 2149768100,
+      "origin": 2149768096,
+      "target": 2151639904,
+      "register": 3
+    },
+    {
+      "instruction": 2149830928,
+      "origin": 2149830920,
+      "target": 2151656804,
+      "register": 3
+    },
+    {
+      "instruction": 2149850772,
+      "origin": 2149850756,
+      "target": 2151656804,
+      "register": 3
+    },
+    {
+      "instruction": 2149872824,
+      "origin": 2149872652,
+      "target": 2151658652,
+      "register": 5
+    },
+    {
+      "instruction": 2149900932,
+      "origin": 2149900760,
+      "target": 2151659404,
+      "register": 5
+    },
+    {
+      "instruction": 2149969648,
+      "origin": 2149969640,
+      "target": 2151656804,
+      "register": 3
+    },
+    {
+      "instruction": 2149982680,
+      "origin": 2149982668,
+      "target": 2151656804,
+      "register": 3
+    },
+    {
+      "instruction": 2149996952,
+      "origin": 2149996944,
+      "target": 2151658652,
+      "register": 3
+    },
+    {
+      "instruction": 2149997968,
+      "origin": 2149997960,
+      "target": 2151659204,
+      "register": 3
+    },
+    {
+      "instruction": 2149998020,
+      "origin": 2149998012,
+      "target": 2151659404,
+      "register": 3
+    },
+    {
+      "instruction": 2149998136,
+      "origin": 2149998128,
+      "target": 2151659688,
+      "register": 3
+    },
+    {
+      "instruction": 2149998188,
+      "origin": 2149998180,
+      "target": 2151659796,
+      "register": 3
+    },
+    {
+      "instruction": 2149998244,
+      "origin": 2149998236,
+      "target": 2151659988,
+      "register": 3
+    }
+  ]
+}

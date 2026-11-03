@@ -1,0 +1,68 @@
+802c0600 stw       r29, 0x6428(r31)
+802c0604 stw       r30, 0x50(r31)
+802c0608 stw       r30, 0x54(r31)
+802c060c stw       r30, 0x58(r31)
+802c0610 stw       r30, 0x5c(r31)
+802c0614 stw       r8, 0x2c(r31)
+802c0618 stw       r8, 0x28(r31)
+802c061c stw       r0, 0xc(r31)
+802c0620 stw       r9, 0x14(r31)
+802c0624 stw       r11, 0x1c(r31)
+802c0628 stw       r10, 0x24(r31)
+802c062c stw       r7, 0x34(r31)
+802c0630 stw       r6, 0x3c(r31)
+802c0634 stw       r28, 0x44(r31)
+802c0638 stw       r27, 0x4c(r31)
+802c063c stw       r0, 8(r31)
+802c0640 stw       r9, 0x10(r31)
+802c0644 stw       r11, 0x18(r31)
+802c0648 stw       r10, 0x20(r31)
+802c064c stw       r7, 0x30(r31)
+802c0650 stw       r6, 0x38(r31)
+802c0654 stw       r28, 0x40(r31)
+802c0658 stw       r27, 0x48(r31)
+802c065c bl        0x8005e168
+802c0660 stw       r30, 0x2c20(r31)
+802c0664 li        r8, 0
+802c0668 mulli     r9, r8, 0x1c
+802c066c lwz       r10, 0x6428(r31)
+802c0670 addi      r8, r8, 1
+802c0674 cmpwi     r8, 0x1ff
+802c0678 addi      r9, r9, 0x2c24
+802c067c add       r11, r31, r9
+802c0680 stw       r11, 0(r10)
+802c0684 stw       r11, 0x6428(r31)
+802c0688 stw       r10, 4(r11)
+802c068c stwx      r29, r31, r9
+802c0690 ble       0x802c0668
+802c0694 li        r0, 0
+802c0698 addi      r3, r31, 0x6430
+802c069c stw       r0, 0x642c(r31)
+802c06a0 li        r4, 0
+802c06a4 li        r5, 0x400
+802c06a8 bl        0x8005e168
+802c06ac mr        r3, r31
+802c06b0 lwz       r0, 0x24(r1)
+802c06b4 mtlr      r0
+802c06b8 lmw       r27, 0xc(r1)
+802c06bc addi      r1, r1, 0x20
+802c06c0 blr       
+802c06c4 stwu      r1, -0x18(r1)
+802c06c8 mflr      r0
+802c06cc stmw      r29, 0xc(r1)
+802c06d0 stw       r0, 0x1c(r1)
+802c06d4 slwi      r29, r4, 2
+802c06d8 addi      r30, r3, 0x60
+802c06dc lwzx      r31, r30, r29
+802c06e0 cmpwi     r31, 0
+802c06e4 bne       0x802c0720
+802c06e8 lwz       r9, 0x2c20(r3)
+802c06ec li        r4, 0
+802c06f0 lwz       r11, 0x6424(r3)
+802c06f4 li        r5, 0x1c
+802c06f8 addi      r9, r9, 1
+802c06fc stw       r9, 0x2c20(r3)
+802c0700 mr        r31, r11
+802c0704 mr        r3, r31
+802c0708 lwz       r10, 0(r11)
+802c070c lwz       r9, 4(r11)

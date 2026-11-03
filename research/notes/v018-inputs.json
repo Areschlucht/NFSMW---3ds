@@ -1,0 +1,67 @@
+[
+  {
+    "Entry": "FRONTEND\\FRONTB.LZC",
+    "EntryHash": "14c5a53d",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 84987904,
+    "Bytes": 639119,
+    "EntryBytes": 639119,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 2616,
+    "Output": "FRONTEND-FRONTB.LZC",
+    "SHA256": "73e02dffe3cc874a5a8b11958ffc0ed01a885441a6477e8cc220dc29119e2db0",
+    "path": "/workspace/attachments/070803c9-d831-4cd3-a650-db514bc6c16c/FRONTEND-FRONTB.LZC"
+  },
+  {
+    "Entry": "FRONTEND\\FRONTB_VM_NGC.LZC",
+    "EntryHash": "d9c760b6",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 86851584,
+    "Bytes": 1095657,
+    "EntryBytes": 1095657,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 27768,
+    "Output": "FRONTEND-FRONTB_VM_NGC.LZC",
+    "SHA256": "e60ccab5357228811af6d873cafbc749b4c3f18727180de871b76b7c4cc6cab1",
+    "path": "/workspace/attachments/0289e6c2-c5f3-4d86-900b-8afb8860d0f2/FRONTEND-FRONTB_VM_NGC.LZC"
+  },
+  {
+    "Entry": "GLOBAL\\FE_ATTRIB.BIN",
+    "EntryHash": "80be7b63",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 83941376,
+    "Bytes": 116352,
+    "EntryBytes": 116352,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 15864,
+    "Output": "GLOBAL-FE_ATTRIB.BIN",
+    "SHA256": "adbb364d58f348ee95d2b59e99d0312b1bd8079d77be7bc76bd40461ee2cc9c2",
+    "path": "/workspace/attachments/430e54cf-3f7e-4284-81a1-67743e30a796/GLOBAL-FE_ATTRIB.BIN"
+  },
+  {
+    "Entry": "GLOBAL\\GLOBALMEMORYFILE.BIN",
+    "EntryHash": "84d0d95d",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 82886656,
+    "Bytes": 1007232,
+    "EntryBytes": 1007232,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 16560,
+    "Output": "GLOBAL-GLOBALMEMORYFILE.BIN",
+    "SHA256": "41dc51b9564f5fc147bdf9c4cb00729c4ac4809630ec651bb0366476a0d31716",
+    "path": "/workspace/attachments/f1c9941c-64ce-4433-8b65-18e32843727d/GLOBAL-GLOBALMEMORYFILE.BIN"
+  },
+  {
+    "Entry": "GLOBAL\\GLOBALB_VM_NGC.LZC",
+    "EntryHash": "75b7c48f",
+    "Source": "ZZDATA1.BIN",
+    "ArchiveOffset": 270235648,
+    "Bytes": 266516,
+    "EntryBytes": 266516,
+    "PartOffset": 0,
+    "DirectoryRecordOffset": 14496,
+    "Output": "GLOBAL-GLOBALB_VM_NGC.LZC",
+    "SHA256": "4033c81a7838ed263d19ef27eae2a4b01300aeda7d910c12031a66a4d6e7bdec",
+    "path": "/workspace/attachments/f3e66a0d-4da4-46cc-8649-2dd2b8365c52/GLOBAL-GLOBALB_VM_NGC.LZC"
+  }
+]

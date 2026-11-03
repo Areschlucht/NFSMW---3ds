@@ -1,0 +1,22 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "wall_selection_address": "0x802f3e6c",
+  "stop_before_response_address": "0x802f4000",
+  "selection_sha256": "85025fe24de5d5f47a64a602450e8a5fbde83af63756f35d79e709ea3d4302f5",
+  "intersection_address": "0x803078e4",
+  "intersection_sha256": "feaae02f51f6a5ea5788fe5c7317860d5426282eab9abe041cbf7f254d089f61",
+  "cases": 3225,
+  "hits": 1427,
+  "source_wall_flags": {
+    "2": 3110,
+    "18": 55,
+    "6": 60
+  },
+  "failure_count": 0,
+  "failures": [],
+  "maximum_point_error": 0,
+  "maximum_reference_instructions": 3393,
+  "limitations": "Original wall-bank selection only, stopped before contact/response output assembly. Source identity transforms; runtime activation/load-time wallflag mutation and body response are not implemented.",
+  "implementation_sha256": "966701d679f9479257379887a33c710d6988ca78f889fca3bba862a5f5e8d6e2",
+  "header_sha256": "0edcc05fa7c4c0d7fa7c55816faf928dba34d613303fac1df21ee62cbcc47371"
+}

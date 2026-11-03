@@ -1,0 +1,36 @@
+802efb20 stfs      f0, 0x24(r12)
+802efb24 lha       r0, 0x14(r8)
+802efb28 lfs       f13, 8(r29)
+802efb2c xoris     r0, r0, 0x8000
+802efb30 stw       r0, 0x1c(r1)
+802efb34 stw       r3, 0x18(r1)
+802efb38 lfd       f0, 0x18(r1)
+802efb3c fsub      f0, f0, f2
+802efb40 frsp      f0, f0
+802efb44 fmadds    f0, f0, f1, f13
+802efb48 stfs      f0, 0x28(r12)
+802efb4c lbz       r0, 0x16(r8)
+802efb50 stb       r0, 0xe(r1)
+802efb54 lbz       r9, 0x17(r8)
+802efb58 stb       r9, 1(r28)
+802efb5c lhz       r0, 0xe(r1)
+802efb60 sth       r0, 0x2c(r12)
+802efb64 b         0x802ef8f8
+802efb68 li        r3, 0
+802efb6c lmw       r21, 0x24(r1)
+802efb70 .byte     0xe3, 0xe1, 0x00, 0x50
+802efb74 addi      r1, r1, 0x58
+802efb78 blr       
+802efb7c stwu      r1, -0x40(r1)
+802efb80 mflr      r0
+802efb84 stmw      r30, 0x38(r1)
+802efb88 stw       r0, 0x44(r1)
+802efb8c mr        r9, r4
+802efb90 addi      r30, r1, 0x28
+802efb94 lfs       f10, 0(r9)
+802efb98 mr        r31, r3
+802efb9c lfs       f11, 4(r9)
+802efba0 addi      r3, r1, 0x18
+802efba4 lfs       f0, 0x10(r9)
+802efba8 addi      r4, r1, 8
+802efbac lfs       f12, 0x14(r9)

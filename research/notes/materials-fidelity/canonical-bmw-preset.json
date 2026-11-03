@@ -1,0 +1,850 @@
+{
+  "source_sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "record": {
+    "file_offset": 385560,
+    "model_name": "BMWM3GTRE46",
+    "preset_name": "M3GTRCAREERSTART",
+    "unknown_48": "4e4acc2300000000f8e0da39000000000000000000000000",
+    "part_keys": [
+      "e7aab93b",
+      "fe09a24d",
+      "2a945e5b",
+      "a46da7b9",
+      "00000000",
+      "45c188aa",
+      "6ba54b74",
+      "394b6c27",
+      "04541f61",
+      "0a8f75b4",
+      "2a97a9f7",
+      "ea05f072",
+      "cde61880",
+      "018b697e",
+      "b9694f27",
+      "7e67cf21",
+      "aec38c41",
+      "e37980b8",
+      "ed088c57",
+      "b8c72c8a",
+      "7d56ad0b",
+      "e7b7130b",
+      "1d14380a",
+      "804da255",
+      "658042cd",
+      "e510b7ca",
+      "b1d4c65d",
+      "45e919e0",
+      "2590276c",
+      "dcb5fe27",
+      "b5a56b40",
+      "c1efc7b4",
+      "c1256a8d",
+      "d1ee8e89",
+      "53dee80e",
+      "76a089cb",
+      "755ed87e",
+      "001c6741",
+      "cc72753a",
+      "8b31a493",
+      "7ba02867",
+      "a8964580",
+      "b939e7fc",
+      "8316bb8c",
+      "6452f99e",
+      "e10512d0",
+      "30a2891e",
+      "6308c3c9",
+      "c490047c",
+      "dab5f2ff",
+      "5a90362a",
+      "ad05c2fd",
+      "c857b619",
+      "c857b61a",
+      "c857b61b",
+      "c857b61c",
+      "c857b61d",
+      "c857b61e",
+      "c857b61f",
+      "c857b620",
+      "c857b621",
+      "c857b622",
+      "0b70e285",
+      "ed928091",
+      "00000000",
+      "00000000",
+      "de817e95",
+      "00000000",
+      "00000000",
+      "53a38e68",
+      "1d4df540",
+      "a0568921",
+      "0cecd66a",
+      "0639679d",
+      "4c94a25a",
+      "a1ff8aad",
+      "c7f288d1",
+      "e9886d54",
+      "00000000",
+      "d0561e8c",
+      "d0561e8e",
+      "00000000",
+      "d0561e8c",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "00000000",
+      "3d263938",
+      "03b83203",
+      "713e201b",
+      "713e201b",
+      "03f9e820",
+      "00000000",
+      "00000000",
+      "00000000"
+    ],
+    "unknown_28c": "00000000",
+    "record_sha256": "a2a8886ffa182bf66b6fb21e215ef7182870bf2ca7333c227655589f96372369"
+  },
+  "parts": [
+    {
+      "slot": 0,
+      "name": "BASE",
+      "key": "e7aab93b"
+    },
+    {
+      "slot": 1,
+      "name": "DAMAGE_FRONT_WINDOW",
+      "key": "fe09a24d"
+    },
+    {
+      "slot": 2,
+      "name": "DAMAGE_BODY",
+      "key": "2a945e5b"
+    },
+    {
+      "slot": 3,
+      "name": "DAMAGE_COP_LIGHTS",
+      "key": "a46da7b9"
+    },
+    {
+      "slot": 4,
+      "name": "DAMAGE_COP_SPOILER",
+      "key": "00000000"
+    },
+    {
+      "slot": 5,
+      "name": "DAMAGE_FRONT_WHEEL",
+      "key": "45c188aa"
+    },
+    {
+      "slot": 6,
+      "name": "DAMAGE_LEFT_BRAKELIGHT",
+      "key": "6ba54b74"
+    },
+    {
+      "slot": 7,
+      "name": "DAMAGE_RIGHT_BRAKELIGHT",
+      "key": "394b6c27"
+    },
+    {
+      "slot": 8,
+      "name": "DAMAGE_LEFT_HEADLIGHT",
+      "key": "04541f61"
+    },
+    {
+      "slot": 9,
+      "name": "DAMAGE_RIGHT_HEADLIGHT",
+      "key": "0a8f75b4"
+    },
+    {
+      "slot": 10,
+      "name": "DAMAGE_HOOD",
+      "key": "2a97a9f7"
+    },
+    {
+      "slot": 11,
+      "name": "DAMAGE_BUSHGUARD",
+      "key": "ea05f072"
+    },
+    {
+      "slot": 12,
+      "name": "DAMAGE_FRONT_BUMPER",
+      "key": "cde61880"
+    },
+    {
+      "slot": 13,
+      "name": "DAMAGE_RIGHT_DOOR",
+      "key": "018b697e"
+    },
+    {
+      "slot": 14,
+      "name": "DAMAGE_RIGHT_REAR_DOOR",
+      "key": "b9694f27"
+    },
+    {
+      "slot": 15,
+      "name": "DAMAGE_TRUNK",
+      "key": "7e67cf21"
+    },
+    {
+      "slot": 16,
+      "name": "DAMAGE_REAR_BUMPER",
+      "key": "aec38c41"
+    },
+    {
+      "slot": 17,
+      "name": "DAMAGE_REAR_LEFT_WINDOW",
+      "key": "e37980b8"
+    },
+    {
+      "slot": 18,
+      "name": "DAMAGE_FRONT_LEFT_WINDOW",
+      "key": "ed088c57"
+    },
+    {
+      "slot": 19,
+      "name": "DAMAGE_FRONT_RIGHT_WINDOW",
+      "key": "b8c72c8a"
+    },
+    {
+      "slot": 20,
+      "name": "DAMAGE_REAR_RIGHT_WINDOW",
+      "key": "7d56ad0b"
+    },
+    {
+      "slot": 21,
+      "name": "DAMAGE_LEFT_DOOR",
+      "key": "e7b7130b"
+    },
+    {
+      "slot": 22,
+      "name": "DAMAGE_LEFT_REAR_DOOR",
+      "key": "1d14380a"
+    },
+    {
+      "slot": 23,
+      "name": "BODY",
+      "key": "804da255"
+    },
+    {
+      "slot": 24,
+      "name": "FRONT_BRAKE",
+      "key": "658042cd"
+    },
+    {
+      "slot": 25,
+      "name": "FRONT_LEFT_WINDOW",
+      "key": "e510b7ca"
+    },
+    {
+      "slot": 26,
+      "name": "FRONT_RIGHT_WINDOW",
+      "key": "b1d4c65d"
+    },
+    {
+      "slot": 27,
+      "name": "FRONT_WINDOW",
+      "key": "45e919e0"
+    },
+    {
+      "slot": 28,
+      "name": "INTERIOR",
+      "key": "2590276c"
+    },
+    {
+      "slot": 29,
+      "name": "LEFT_BRAKELIGHT",
+      "key": "dcb5fe27"
+    },
+    {
+      "slot": 30,
+      "name": "LEFT_BRAKELIGHT_GLASS",
+      "key": "b5a56b40"
+    },
+    {
+      "slot": 31,
+      "name": "LEFT_HEADLIGHT",
+      "key": "c1efc7b4"
+    },
+    {
+      "slot": 32,
+      "name": "LEFT_HEADLIGHT_GLASS",
+      "key": "c1256a8d"
+    },
+    {
+      "slot": 33,
+      "name": "LEFT_SIDE_MIRROR",
+      "key": "d1ee8e89"
+    },
+    {
+      "slot": 34,
+      "name": "REAR_BRAKE",
+      "key": "53dee80e"
+    },
+    {
+      "slot": 35,
+      "name": "REAR_LEFT_WINDOW",
+      "key": "76a089cb"
+    },
+    {
+      "slot": 36,
+      "name": "REAR_RIGHT_WINDOW",
+      "key": "755ed87e"
+    },
+    {
+      "slot": 37,
+      "name": "REAR_WINDOW",
+      "key": "001c6741"
+    },
+    {
+      "slot": 38,
+      "name": "RIGHT_BRAKELIGHT",
+      "key": "cc72753a"
+    },
+    {
+      "slot": 39,
+      "name": "RIGHT_BRAKELIGHT_GLASS",
+      "key": "8b31a493"
+    },
+    {
+      "slot": 40,
+      "name": "RIGHT_HEADLIGHT",
+      "key": "7ba02867"
+    },
+    {
+      "slot": 41,
+      "name": "RIGHT_HEADLIGHT_GLASS",
+      "key": "a8964580"
+    },
+    {
+      "slot": 42,
+      "name": "RIGHT_SIDE_MIRROR",
+      "key": "b939e7fc"
+    },
+    {
+      "slot": 43,
+      "name": "DRIVER",
+      "key": "8316bb8c"
+    },
+    {
+      "slot": 44,
+      "name": "SPOILER",
+      "key": "6452f99e"
+    },
+    {
+      "slot": 45,
+      "name": "UNIVERSAL_SPOILER_BASE",
+      "key": "e10512d0"
+    },
+    {
+      "slot": 46,
+      "name": "DAMAGE0_FRONT",
+      "key": "30a2891e"
+    },
+    {
+      "slot": 47,
+      "name": "DAMAGE0_FRONTLEFT",
+      "key": "6308c3c9"
+    },
+    {
+      "slot": 48,
+      "name": "DAMAGE0_FRONTRIGHT",
+      "key": "c490047c"
+    },
+    {
+      "slot": 49,
+      "name": "DAMAGE0_REAR",
+      "key": "dab5f2ff"
+    },
+    {
+      "slot": 50,
+      "name": "DAMAGE0_REARLEFT",
+      "key": "5a90362a"
+    },
+    {
+      "slot": 51,
+      "name": "DAMAGE0_REARRIGHT",
+      "key": "ad05c2fd"
+    },
+    {
+      "slot": 52,
+      "name": "ATTACHMENT0",
+      "key": "c857b619"
+    },
+    {
+      "slot": 53,
+      "name": "ATTACHMENT1",
+      "key": "c857b61a"
+    },
+    {
+      "slot": 54,
+      "name": "ATTACHMENT2",
+      "key": "c857b61b"
+    },
+    {
+      "slot": 55,
+      "name": "ATTACHMENT3",
+      "key": "c857b61c"
+    },
+    {
+      "slot": 56,
+      "name": "ATTACHMENT4",
+      "key": "c857b61d"
+    },
+    {
+      "slot": 57,
+      "name": "ATTACHMENT5",
+      "key": "c857b61e"
+    },
+    {
+      "slot": 58,
+      "name": "ATTACHMENT6",
+      "key": "c857b61f"
+    },
+    {
+      "slot": 59,
+      "name": "ATTACHMENT7",
+      "key": "c857b620"
+    },
+    {
+      "slot": 60,
+      "name": "ATTACHMENT8",
+      "key": "c857b621"
+    },
+    {
+      "slot": 61,
+      "name": "ATTACHMENT9",
+      "key": "c857b622"
+    },
+    {
+      "slot": 62,
+      "name": "ROOF",
+      "key": "0b70e285"
+    },
+    {
+      "slot": 63,
+      "name": "HOOD",
+      "key": "ed928091"
+    },
+    {
+      "slot": 64,
+      "name": "HEADLIGHT",
+      "key": "00000000"
+    },
+    {
+      "slot": 65,
+      "name": "BRAKELIGHT",
+      "key": "00000000"
+    },
+    {
+      "slot": 66,
+      "name": "FRONT_WHEEL",
+      "key": "de817e95"
+    },
+    {
+      "slot": 67,
+      "name": "REAR_WHEEL",
+      "key": "00000000"
+    },
+    {
+      "slot": 68,
+      "name": "SPINNER",
+      "key": "00000000"
+    },
+    {
+      "slot": 69,
+      "name": "LICENSE_PLATE",
+      "key": "53a38e68"
+    },
+    {
+      "slot": 70,
+      "name": "DECAL_FRONT_WINDOW_WIDE_MEDIUM",
+      "key": "1d4df540"
+    },
+    {
+      "slot": 71,
+      "name": "DECAL_REAR_WINDOW_WIDE_MEDIUM",
+      "key": "a0568921"
+    },
+    {
+      "slot": 72,
+      "name": "DECAL_LEFT_DOOR_RECT_MEDIUM",
+      "key": "0cecd66a"
+    },
+    {
+      "slot": 73,
+      "name": "DECAL_RIGHT_DOOR_RECT_MEDIUM",
+      "key": "0639679d"
+    },
+    {
+      "slot": 74,
+      "name": "DECAL_LEFT_QUARTER_RECT_MEDIUM",
+      "key": "4c94a25a"
+    },
+    {
+      "slot": 75,
+      "name": "DECAL_RIGHT_QUARTER_RECT_MEDIUM",
+      "key": "a1ff8aad"
+    },
+    {
+      "slot": 76,
+      "name": "BASE_PAINT",
+      "key": "c7f288d1"
+    },
+    {
+      "slot": 77,
+      "name": "VINYL_LAYER0",
+      "key": "e9886d54"
+    },
+    {
+      "slot": 78,
+      "name": "PAINT_RIM",
+      "key": "00000000"
+    },
+    {
+      "slot": 79,
+      "name": "VINYL_COLOUR0_0",
+      "key": "d0561e8c"
+    },
+    {
+      "slot": 80,
+      "name": "VINYL_COLOUR0_1",
+      "key": "d0561e8e"
+    },
+    {
+      "slot": 81,
+      "name": "VINYL_COLOUR0_2",
+      "key": "00000000"
+    },
+    {
+      "slot": 82,
+      "name": "VINYL_COLOUR0_3",
+      "key": "d0561e8c"
+    },
+    {
+      "slot": 83,
+      "name": "DECAL_FRONT_WINDOW_TEX0",
+      "key": "00000000"
+    },
+    {
+      "slot": 84,
+      "name": "DECAL_FRONT_WINDOW_TEX1",
+      "key": "00000000"
+    },
+    {
+      "slot": 85,
+      "name": "DECAL_FRONT_WINDOW_TEX2",
+      "key": "00000000"
+    },
+    {
+      "slot": 86,
+      "name": "DECAL_FRONT_WINDOW_TEX3",
+      "key": "00000000"
+    },
+    {
+      "slot": 87,
+      "name": "DECAL_FRONT_WINDOW_TEX4",
+      "key": "00000000"
+    },
+    {
+      "slot": 88,
+      "name": "DECAL_FRONT_WINDOW_TEX5",
+      "key": "00000000"
+    },
+    {
+      "slot": 89,
+      "name": "DECAL_FRONT_WINDOW_TEX6",
+      "key": "00000000"
+    },
+    {
+      "slot": 90,
+      "name": "DECAL_FRONT_WINDOW_TEX7",
+      "key": "00000000"
+    },
+    {
+      "slot": 91,
+      "name": "DECAL_REAR_WINDOW_TEX0",
+      "key": "00000000"
+    },
+    {
+      "slot": 92,
+      "name": "DECAL_REAR_WINDOW_TEX1",
+      "key": "00000000"
+    },
+    {
+      "slot": 93,
+      "name": "DECAL_REAR_WINDOW_TEX2",
+      "key": "00000000"
+    },
+    {
+      "slot": 94,
+      "name": "DECAL_REAR_WINDOW_TEX3",
+      "key": "00000000"
+    },
+    {
+      "slot": 95,
+      "name": "DECAL_REAR_WINDOW_TEX4",
+      "key": "00000000"
+    },
+    {
+      "slot": 96,
+      "name": "DECAL_REAR_WINDOW_TEX5",
+      "key": "00000000"
+    },
+    {
+      "slot": 97,
+      "name": "DECAL_REAR_WINDOW_TEX6",
+      "key": "00000000"
+    },
+    {
+      "slot": 98,
+      "name": "DECAL_REAR_WINDOW_TEX7",
+      "key": "00000000"
+    },
+    {
+      "slot": 99,
+      "name": "DECAL_LEFT_DOOR_TEX0",
+      "key": "00000000"
+    },
+    {
+      "slot": 100,
+      "name": "DECAL_LEFT_DOOR_TEX1",
+      "key": "00000000"
+    },
+    {
+      "slot": 101,
+      "name": "DECAL_LEFT_DOOR_TEX2",
+      "key": "00000000"
+    },
+    {
+      "slot": 102,
+      "name": "DECAL_LEFT_DOOR_TEX3",
+      "key": "00000000"
+    },
+    {
+      "slot": 103,
+      "name": "DECAL_LEFT_DOOR_TEX4",
+      "key": "00000000"
+    },
+    {
+      "slot": 104,
+      "name": "DECAL_LEFT_DOOR_TEX5",
+      "key": "00000000"
+    },
+    {
+      "slot": 105,
+      "name": "DECAL_LEFT_DOOR_TEX6",
+      "key": "00000000"
+    },
+    {
+      "slot": 106,
+      "name": "DECAL_LEFT_DOOR_TEX7",
+      "key": "00000000"
+    },
+    {
+      "slot": 107,
+      "name": "DECAL_RIGHT_DOOR_TEX0",
+      "key": "00000000"
+    },
+    {
+      "slot": 108,
+      "name": "DECAL_RIGHT_DOOR_TEX1",
+      "key": "00000000"
+    },
+    {
+      "slot": 109,
+      "name": "DECAL_RIGHT_DOOR_TEX2",
+      "key": "00000000"
+    },
+    {
+      "slot": 110,
+      "name": "DECAL_RIGHT_DOOR_TEX3",
+      "key": "00000000"
+    },
+    {
+      "slot": 111,
+      "name": "DECAL_RIGHT_DOOR_TEX4",
+      "key": "00000000"
+    },
+    {
+      "slot": 112,
+      "name": "DECAL_RIGHT_DOOR_TEX5",
+      "key": "00000000"
+    },
+    {
+      "slot": 113,
+      "name": "DECAL_RIGHT_DOOR_TEX6",
+      "key": "00000000"
+    },
+    {
+      "slot": 114,
+      "name": "DECAL_RIGHT_DOOR_TEX7",
+      "key": "00000000"
+    },
+    {
+      "slot": 115,
+      "name": "DECAL_LEFT_QUARTER_TEX0",
+      "key": "00000000"
+    },
+    {
+      "slot": 116,
+      "name": "DECAL_LEFT_QUARTER_TEX1",
+      "key": "00000000"
+    },
+    {
+      "slot": 117,
+      "name": "DECAL_LEFT_QUARTER_TEX2",
+      "key": "00000000"
+    },
+    {
+      "slot": 118,
+      "name": "DECAL_LEFT_QUARTER_TEX3",
+      "key": "00000000"
+    },
+    {
+      "slot": 119,
+      "name": "DECAL_LEFT_QUARTER_TEX4",
+      "key": "00000000"
+    },
+    {
+      "slot": 120,
+      "name": "DECAL_LEFT_QUARTER_TEX5",
+      "key": "00000000"
+    },
+    {
+      "slot": 121,
+      "name": "DECAL_LEFT_QUARTER_TEX6",
+      "key": "00000000"
+    },
+    {
+      "slot": 122,
+      "name": "DECAL_LEFT_QUARTER_TEX7",
+      "key": "00000000"
+    },
+    {
+      "slot": 123,
+      "name": "DECAL_RIGHT_QUARTER_TEX0",
+      "key": "00000000"
+    },
+    {
+      "slot": 124,
+      "name": "DECAL_RIGHT_QUARTER_TEX1",
+      "key": "00000000"
+    },
+    {
+      "slot": 125,
+      "name": "DECAL_RIGHT_QUARTER_TEX2",
+      "key": "00000000"
+    },
+    {
+      "slot": 126,
+      "name": "DECAL_RIGHT_QUARTER_TEX3",
+      "key": "00000000"
+    },
+    {
+      "slot": 127,
+      "name": "DECAL_RIGHT_QUARTER_TEX4",
+      "key": "00000000"
+    },
+    {
+      "slot": 128,
+      "name": "DECAL_RIGHT_QUARTER_TEX5",
+      "key": "00000000"
+    },
+    {
+      "slot": 129,
+      "name": "DECAL_RIGHT_QUARTER_TEX6",
+      "key": "00000000"
+    },
+    {
+      "slot": 130,
+      "name": "DECAL_RIGHT_QUARTER_TEX7",
+      "key": "00000000"
+    },
+    {
+      "slot": 131,
+      "name": "WINDOW_TINT",
+      "key": "3d263938"
+    },
+    {
+      "slot": 132,
+      "name": "CUSTOM_HUD",
+      "key": "03b83203"
+    },
+    {
+      "slot": 133,
+      "name": "HUD_BACKING_COLOUR",
+      "key": "713e201b"
+    },
+    {
+      "slot": 134,
+      "name": "HUD_NEEDLE_COLOUR",
+      "key": "713e201b"
+    },
+    {
+      "slot": 135,
+      "name": "HUD_CHARACTER_COLOUR",
+      "key": "03f9e820"
+    },
+    {
+      "slot": 136,
+      "name": "CV",
+      "key": "00000000"
+    },
+    {
+      "slot": 137,
+      "name": "WHEEL_MANUFACTURER",
+      "key": "00000000"
+    },
+    {
+      "slot": 138,
+      "name": "MISC",
+      "key": "00000000"
+    }
+  ]
+}

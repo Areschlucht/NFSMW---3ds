@@ -1,0 +1,12 @@
+{
+  "purpose": "offline dense-view QA only; not packaged",
+  "source": "existing specialist dense-view fixture",
+  "road_payload_unchanged": true,
+  "spawn_heading": [
+    -445.6927185058594,
+    -3.9585132598876953,
+    -220.58082580566406,
+    0.9516662359237671
+  ],
+  "sha256": "f38ebe94e5b3fc13123b177c4fc261a8488ce6d24a35ba69af78e016b0c1c3a7"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "path": "/workspace/port-research/v018-decoded/FRONTEND-FRONTB.BUN",
+    "sha256": "bc3c7c33d8b2620deaa5506da8c43c7cecd6fa5ea3d3f369d8baf4bbee753920",
+    "bytes": 1702400,
+    "textures": 394,
+    "matched": []
+  },
+  {
+    "path": "/workspace/port-research/v018-decoded/FRONTEND-FRONTB_VM_NGC.BUN",
+    "sha256": "6a815221485bca9ea44c16ab9729255f816167606ba4fdd0873e583ecbbdc1c8",
+    "bytes": 1222584,
+    "textures": 0,
+    "matched": []
+  },
+  {
+    "path": "/workspace/port-research/v018-decoded/GLOBAL-GLOBALB_VM_NGC.BUN",
+    "sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+    "bytes": 453068,
+    "textures": 0,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/04491c7a-49d8-4bf8-99fa-1ca503b60c96/GLOBAL-DYNTEX-266086400.BIN",
+    "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+    "bytes": 1274240,
+    "textures": 151,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/08cb88f7-f8af-42f8-bea5-aed87a82be5f/L2RA.BUN",
+    "sha256": "73d4a98efcd366e6dc1e13a3fdc1f1494e8763edac05b7f911dc66b62c2c072d",
+    "bytes": 982848,
+    "textures": 0,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/104b935b-3c82-4ddf-9475-0ea710d1c73b/CARS-TEXTURES.BIN",
+    "sha256": "45a9cdc518570b9cea172c42ef373b358602ef2baa191a7f0da43a38a8a9d4fa",
+    "bytes": 424832,
+    "textures": 465,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/24ed84d3-a9eb-425d-8bcb-e2cb7e2d4835/GLOBAL-DYNTEX-299415552.BIN",
+    "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+    "bytes": 1274240,
+    "textures": 151,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/4b15153a-80b3-408a-95f7-37cc27d98aca/BMWM3GTRE46-TEXTURES.BIN",
+    "sha256": "d7f09c97bc11e2ddb78e3153faa7ea71d0e2ad6ff4778b3254a03b37e7f3f914",
+    "bytes": 73152,
+    "textures": 8,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/59fc5d64-689c-4124-86c0-92f55f3980c0/WHEELS-TEXTURES.BIN",
+    "sha256": "696e2408d207f10e8f8cbcdd2da200e270dc78ae13d0e4a42e7f079534bff5f7",
+    "bytes": 344704,
+    "textures": 82,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/747309ca-6443-4119-8b61-2e36ee3bf586/GLOBAL-GLOBALA.BUN",
+    "sha256": "980351c79b54ea5f4f4d368a0a4e542b44a74f30c48386c1b60858a4fe5e50e2",
+    "bytes": 89588,
+    "textures": 5,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/761ae068-9824-40a3-9bf3-80fd71d5d6bc/GLOBAL-DYNTEX-279683072.BIN",
+    "sha256": "519ef3ece5ed45ec28341982770cbb0f2cc254b10b325835f83a60eb193191fa",
+    "bytes": 1274240,
+    "textures": 151,
+    "matched": []
+  },
+  {
+    "path": "/workspace/attachments/85875135-c339-4aea-9553-be7e652717b8/GLOBAL-GLOBALB.BUN",
+    "sha256": "b1329f35739503b13cff4838766f511b1f5e8fec28d37112da9efbc63cb0438a",
+    "bytes": 225776,
+    "textures": 117,
+    "matched": []
+  }
+]

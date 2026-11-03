@@ -1,0 +1,50 @@
+[
+  {
+    "package": "VINYL",
+    "name": "BMWM3GTRE46_PRECOM_TEST",
+    "hash": "3e9cae05",
+    "width": 256,
+    "height": 256,
+    "native_format": "00000009",
+    "pixel_offset": 0,
+    "compression": "HUFF",
+    "alpha_test_mode": 2,
+    "blend_mode": 1,
+    "image_bytes": 65536,
+    "palette_bytes": 512,
+    "png": "000_3e9cae05.png",
+    "rgba_sha256": "bc53e388250d9eb56877183213e623e72c664f758b0b8d95380e6a0bd58af959"
+  },
+  {
+    "package": "VINYL",
+    "name": "BMWM3GTRE46_PRECOM_FLAM",
+    "hash": "41e511eb",
+    "width": 256,
+    "height": 256,
+    "native_format": "00000009",
+    "pixel_offset": 0,
+    "compression": "HUFF",
+    "alpha_test_mode": 2,
+    "blend_mode": 1,
+    "image_bytes": 65536,
+    "palette_bytes": 512,
+    "png": "001_41e511eb.png",
+    "rgba_sha256": "2e2e82ba7d95089fcbf5ab6687e37aaea4a7dd7f7b8c8d09fc43b15535738d19"
+  },
+  {
+    "package": "VINYL",
+    "name": "BMWM3GTRE46_PRECOM_FLAM",
+    "hash": "41e511ec",
+    "width": 256,
+    "height": 256,
+    "native_format": "00000009",
+    "pixel_offset": 0,
+    "compression": "HUFF",
+    "alpha_test_mode": 2,
+    "blend_mode": 1,
+    "image_bytes": 65536,
+    "palette_bytes": 512,
+    "png": "002_41e511ec.png",
+    "rgba_sha256": "479fbcc2917b062a91ec9b1056ebf31bbe1b0939965124dd283126178d84b112"
+  }
+]

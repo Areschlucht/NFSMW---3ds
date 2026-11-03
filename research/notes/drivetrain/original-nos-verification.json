@@ -1,0 +1,12 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "nos_collections": 6,
+  "whole_function_float_state_cases": 2304,
+  "stateful_continuation_steps": 768,
+  "original_range": "80256D9C..802571FC",
+  "limitations": [
+    "Optional vehicle-object recharge-inhibit callback is explicitly supplied",
+    "Physical profile NOS upgrade selection and broader request input producer remain separate"
+  ]
+}

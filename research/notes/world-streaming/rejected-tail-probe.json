@@ -1,0 +1,1178 @@
+[
+  {
+    "name": "XO_PHOTORADAR_1Z_MD_00",
+    "want": 80,
+    "sum": 100,
+    "reason": "Triangle count mismatch: decoded 77, header 80",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XO_PHOTORADAR_1C_MD_00",
+    "want": 132,
+    "sum": 156,
+    "reason": "Triangle count mismatch: decoded 129, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XO_PHOTORADAR_1B_MD_00",
+    "want": 232,
+    "sum": 264,
+    "reason": "Triangle count mismatch: decoded 229, header 232",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_SY_OFFICEB_1C_00",
+    "want": 118,
+    "sum": 121,
+    "reason": "Triangle count mismatch: decoded 117, header 118",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HYDROPLANTBLDA_1Z_RB_00",
+    "want": 46,
+    "sum": 46,
+    "reason": "Triangle count mismatch: decoded 45, header 46",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_TERRAIN_CITYCENTER_01_CHOP_A10_R2",
+    "want": 264,
+    "sum": 307,
+    "reason": "Triangle count mismatch: decoded 263, header 264",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_JUNCTION_01_CHOP_A14_R2",
+    "want": 252,
+    "sum": 308,
+    "reason": "Triangle count mismatch: decoded 248, header 252",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_TERRAIN_COLONIAL_02_CHOP_A18_R0",
+    "want": 98,
+    "sum": 122,
+    "reason": "Triangle count mismatch: decoded 58, header 98",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_TY_TRUCKDEPOTA_1Z_WH_00",
+    "want": 19,
+    "sum": 23,
+    "reason": "Triangle count mismatch: decoded 18, header 19",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_INDUSTRIALHIGHWAYA_CHOP_B18_1",
+    "want": 56,
+    "sum": 71,
+    "reason": "Triangle count mismatch: decoded 55, header 56",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_INDUSTRIALHIGHWAYA_CHOP_B18_3",
+    "want": 55,
+    "sum": 66,
+    "reason": "Triangle count mismatch: decoded 54, header 55",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_INDUSTRIALHIGHWAYA_CHOP_B18_5",
+    "want": 54,
+    "sum": 58,
+    "reason": "Triangle count mismatch: decoded 53, header 54",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_INDUSTRIALHIGHWAYA_CHOP_B18_8",
+    "want": 62,
+    "sum": 74,
+    "reason": "Triangle count mismatch: decoded 61, header 62",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_CITYCENTER_PLANTERA_CHOP_C9_R0",
+    "want": 159,
+    "sum": 195,
+    "reason": "Triangle count mismatch: decoded 157, header 159",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_D6_R1",
+    "want": 328,
+    "sum": 364,
+    "reason": "Triangle count mismatch: decoded 326, header 328",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_GASSTATIONBA_CHOP_D30_R0",
+    "want": 223,
+    "sum": 267,
+    "reason": "Triangle count mismatch: decoded 221, header 223",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R3",
+    "want": 61,
+    "sum": 73,
+    "reason": "Triangle count mismatch: decoded 48, header 61",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_STRIPMALLC_1B_RB_00",
+    "want": 175,
+    "sum": 207,
+    "reason": "Triangle count mismatch: decoded 173, header 175",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_E2_R6",
+    "want": 101,
+    "sum": 129,
+    "reason": "Triangle count mismatch: decoded 96, header 101",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_E2_R7",
+    "want": 185,
+    "sum": 185,
+    "reason": "Triangle count mismatch: decoded 184, header 185",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_STADIUMOUT_TC_1Z_00",
+    "want": 64,
+    "sum": 68,
+    "reason": "Triangle count mismatch: decoded 62, header 64",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_STADIUM_PROPSA_CHOP_E5_R3",
+    "want": 166,
+    "sum": 173,
+    "reason": "Triangle count mismatch: decoded 165, header 166",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_E5_R12",
+    "want": 289,
+    "sum": 289,
+    "reason": "Triangle count mismatch: decoded 287, header 289",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADB_CHOP_E7_R3",
+    "want": 409,
+    "sum": 409,
+    "reason": "Triangle count mismatch: decoded 405, header 409",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHLANDS_02_CHOP_F9_17",
+    "want": 48,
+    "sum": 56,
+    "reason": "Triangle count mismatch: decoded 46, header 48",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_PARKTRAILS_01_CHOP_F12_R3",
+    "want": 65,
+    "sum": 77,
+    "reason": "Triangle count mismatch: decoded 63, header 65",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_PARKTRAILS_01_CHOP_F12_R5",
+    "want": 129,
+    "sum": 161,
+    "reason": "Triangle count mismatch: decoded 125, header 129",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_GOLFCOURSE_01_CHOP_G20_R12",
+    "want": 167,
+    "sum": 207,
+    "reason": "Triangle count mismatch: decoded 165, header 167",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_TERRAIN_HIGHLANDS_02_CHOP_G29_R0",
+    "want": 98,
+    "sum": 122,
+    "reason": "Triangle count mismatch: decoded 72, header 98",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H4_R2",
+    "want": 48,
+    "sum": 56,
+    "reason": "Triangle count mismatch: decoded 42, header 48",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_CLUBHOUSE_01_CHOP_H4_R1",
+    "want": 95,
+    "sum": 95,
+    "reason": "Triangle count mismatch: decoded 93, header 95",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_H9_R4",
+    "want": 206,
+    "sum": 238,
+    "reason": "Triangle count mismatch: decoded 180, header 206",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_2",
+    "want": 173,
+    "sum": 197,
+    "reason": "Triangle count mismatch: decoded 169, header 173",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R3",
+    "want": 108,
+    "sum": 128,
+    "reason": "Triangle count mismatch: decoded 107, header 108",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R4",
+    "want": 123,
+    "sum": 159,
+    "reason": "Triangle count mismatch: decoded 122, header 123",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R6",
+    "want": 227,
+    "sum": 259,
+    "reason": "Triangle count mismatch: decoded 224, header 227",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CAMPUS_01_CHOP_H16_9",
+    "want": 73,
+    "sum": 93,
+    "reason": "Triangle count mismatch: decoded 69, header 73",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CAMPUS_01_CHOP_H16_10",
+    "want": 46,
+    "sum": 54,
+    "reason": "Triangle count mismatch: decoded 45, header 46",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CAMPUS_01_CHOP_H16_16",
+    "want": 42,
+    "sum": 50,
+    "reason": "Triangle count mismatch: decoded 41, header 42",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I4_R2",
+    "want": 195,
+    "sum": 231,
+    "reason": "Triangle count mismatch: decoded 194, header 195",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HOSPITAL_01_CHOP_I9_R5",
+    "want": 44,
+    "sum": 56,
+    "reason": "Triangle count mismatch: decoded 43, header 44",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_COLONIAL_01_CHOP_I17_R2",
+    "want": 80,
+    "sum": 92,
+    "reason": "Triangle count mismatch: decoded 64, header 80",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R0",
+    "want": 107,
+    "sum": 111,
+    "reason": "Triangle count mismatch: decoded 106, header 107",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R5",
+    "want": 190,
+    "sum": 202,
+    "reason": "Triangle count mismatch: decoded 188, header 190",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_CT_BBD04_1Z_00",
+    "want": 30,
+    "sum": 30,
+    "reason": "Triangle count mismatch: decoded 19, header 30",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_TERRAIN_BUSSTATION_02_CHOP_I29_R0",
+    "want": 180,
+    "sum": 212,
+    "reason": "Triangle count mismatch: decoded 132, header 180",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_STADIUM_01_CHOP_J9_14",
+    "want": 57,
+    "sum": 73,
+    "reason": "Triangle count mismatch: decoded 55, header 57",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_TERRAIN_HIGHLANDS_02_CHOP_G29_R0",
+    "want": 98,
+    "sum": 122,
+    "reason": "Triangle count mismatch: decoded 72, header 98",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H4_R2",
+    "want": 48,
+    "sum": 56,
+    "reason": "Triangle count mismatch: decoded 42, header 48",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_2",
+    "want": 173,
+    "sum": 197,
+    "reason": "Triangle count mismatch: decoded 169, header 173",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R3",
+    "want": 108,
+    "sum": 128,
+    "reason": "Triangle count mismatch: decoded 107, header 108",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R4",
+    "want": 123,
+    "sum": 159,
+    "reason": "Triangle count mismatch: decoded 122, header 123",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R6",
+    "want": 227,
+    "sum": 259,
+    "reason": "Triangle count mismatch: decoded 224, header 227",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R0",
+    "want": 107,
+    "sum": 111,
+    "reason": "Triangle count mismatch: decoded 106, header 107",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R5",
+    "want": 190,
+    "sum": 202,
+    "reason": "Triangle count mismatch: decoded 188, header 190",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_STADIUM_01_CHOP_J9_14",
+    "want": 57,
+    "sum": 73,
+    "reason": "Triangle count mismatch: decoded 55, header 57",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_STADIUMA_01_CHOP_M16_R0",
+    "want": 105,
+    "sum": 121,
+    "reason": "Triangle count mismatch: decoded 103, header 105",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_STADIUMA_01_CHOP_M16_R2",
+    "want": 97,
+    "sum": 116,
+    "reason": "Triangle count mismatch: decoded 95, header 97",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_11_CHOP_O21_0",
+    "want": 57,
+    "sum": 69,
+    "reason": "Triangle count mismatch: decoded 55, header 57",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_O26_R1",
+    "want": 98,
+    "sum": 114,
+    "reason": "Triangle count mismatch: decoded 96, header 98",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_07_CHOP_O30_R0",
+    "want": 18,
+    "sum": 18,
+    "reason": "Triangle count mismatch: decoded 16, header 18",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_02_CHOP_O30_R0",
+    "want": 102,
+    "sum": 118,
+    "reason": "Triangle count mismatch: decoded 99, header 102",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_09_CHOP_O34_R0",
+    "want": 120,
+    "sum": 140,
+    "reason": "Triangle count mismatch: decoded 118, header 120",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_09_CHOP_O34_R1",
+    "want": 142,
+    "sum": 174,
+    "reason": "Triangle count mismatch: decoded 140, header 142",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_TERRAIN_A_17_CHOP_O35_0",
+    "want": 18,
+    "sum": 18,
+    "reason": "Triangle count mismatch: decoded 16, header 18",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_11_CHOP_O39_0",
+    "want": 17,
+    "sum": 17,
+    "reason": "Triangle count mismatch: decoded 16, header 17",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_HYDROPLANT_ROADA_CHOP_P5_R0",
+    "want": 27,
+    "sum": 27,
+    "reason": "Triangle count mismatch: decoded 21, header 27",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R0",
+    "want": 84,
+    "sum": 96,
+    "reason": "Triangle count mismatch: decoded 69, header 84",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R1",
+    "want": 54,
+    "sum": 62,
+    "reason": "Triangle count mismatch: decoded 36, header 54",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R2",
+    "want": 108,
+    "sum": 112,
+    "reason": "Triangle count mismatch: decoded 88, header 108",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R4",
+    "want": 299,
+    "sum": 363,
+    "reason": "Triangle count mismatch: decoded 270, header 299",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R8",
+    "want": 175,
+    "sum": 219,
+    "reason": "Triangle count mismatch: decoded 158, header 175",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_TRAILER02A_CHOP_P6_R1",
+    "want": 92,
+    "sum": 104,
+    "reason": "Triangle count mismatch: decoded 91, header 92",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_WHITETRASH_ROADA_CHOP_P6_R5",
+    "want": 54,
+    "sum": 62,
+    "reason": "Triangle count mismatch: decoded 52, header 54",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_HYDROPLANT_01_CHOP_P15_R3",
+    "want": 59,
+    "sum": 59,
+    "reason": "Triangle count mismatch: decoded 58, header 59",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_CLUBHOUSE_01_CHOP_P16_R2",
+    "want": 96,
+    "sum": 112,
+    "reason": "Triangle count mismatch: decoded 94, header 96",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_CLUBHOUSE_01_CHOP_P16_R4",
+    "want": 68,
+    "sum": 80,
+    "reason": "Triangle count mismatch: decoded 64, header 68",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_IT_ROAD_A_15_CHOP_P20_R0",
+    "want": 164,
+    "sum": 176,
+    "reason": "Triangle count mismatch: decoded 162, header 164",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_TERRAIN_A_18_CHOP_P24_R0",
+    "want": 46,
+    "sum": 54,
+    "reason": "Triangle count mismatch: decoded 45, header 46",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_IL_ROAD_A_11_CHOP_P30_1",
+    "want": 58,
+    "sum": 66,
+    "reason": "Triangle count mismatch: decoded 57, header 58",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_IL_ROAD_A_05_CHOP_P30_R2",
+    "want": 63,
+    "sum": 73,
+    "reason": "Triangle count mismatch: decoded 61, header 63",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_IT_TERRAIN_A_07_CHOP_P38_1",
+    "want": 43,
+    "sum": 43,
+    "reason": "Triangle count mismatch: decoded 42, header 43",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_IT_TERRAIN_A_02B_CHOP_P38_R1",
+    "want": 30,
+    "sum": 29,
+    "reason": "Triangle count mismatch: decoded 28, header 30",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NORTHJUNCTIONA_CHOP_Q1_10",
+    "want": 25,
+    "sum": 25,
+    "reason": "Triangle count mismatch: decoded 24, header 25",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NORTHJUNCTIONA_CHOP_Q1_R3",
+    "want": 180,
+    "sum": 208,
+    "reason": "Triangle count mismatch: decoded 178, header 180",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_CANNERYSHORESA_CHOP_Q2_R11",
+    "want": 80,
+    "sum": 84,
+    "reason": "Triangle count mismatch: decoded 79, header 80",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_CANNERYSHORESA_CHOP_Q2_R21",
+    "want": 78,
+    "sum": 82,
+    "reason": "Triangle count mismatch: decoded 77, header 78",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_TRAILER02A_CHOP_Q7_R7",
+    "want": 131,
+    "sum": 147,
+    "reason": "Triangle count mismatch: decoded 127, header 131",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_WHITETRASH_ROADA_CHOP_Q8_R2",
+    "want": 95,
+    "sum": 95,
+    "reason": "Triangle count mismatch: decoded 93, header 95",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_WHITETRASH_ROADA_CHOP_Q8_R3",
+    "want": 67,
+    "sum": 75,
+    "reason": "Triangle count mismatch: decoded 65, header 67",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_WHITETRASH_ROADA_CHOP_Q14_R0",
+    "want": 75,
+    "sum": 75,
+    "reason": "Triangle count mismatch: decoded 73, header 75",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_CR_ROAD_A_04_CHOP_R2_R1",
+    "want": 174,
+    "sum": 210,
+    "reason": "Triangle count mismatch: decoded 170, header 174",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NS_ROAD_A_02_CHOP_R8_R0",
+    "want": 109,
+    "sum": 137,
+    "reason": "Triangle count mismatch: decoded 107, header 109",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_TERRAIN_A_06_CHOP_R11_R0",
+    "want": 56,
+    "sum": 64,
+    "reason": "Triangle count mismatch: decoded 55, header 56",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_TERRAIN_A_06_CHOP_R11_R1",
+    "want": 91,
+    "sum": 111,
+    "reason": "Triangle count mismatch: decoded 89, header 91",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_CR_ROAD_A_01_CHOP_R20_R0",
+    "want": 257,
+    "sum": 309,
+    "reason": "Triangle count mismatch: decoded 255, header 257",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_TERRAIN_A_18_CHOP_R22_R0",
+    "want": 89,
+    "sum": 93,
+    "reason": "Triangle count mismatch: decoded 88, header 89",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_02_CHOP_R24_R0",
+    "want": 5,
+    "sum": 5,
+    "reason": "Triangle count mismatch: decoded 4, header 5",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BW_TERRAIN_A_01_CHOP_R25_R0",
+    "want": 65,
+    "sum": 81,
+    "reason": "Triangle count mismatch: decoded 64, header 65",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_OILREFINERYA_CHOP_R32_R3",
+    "want": 75,
+    "sum": 87,
+    "reason": "Triangle count mismatch: decoded 74, header 75",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_OILREFINERYA02_CHOP_R32_R0",
+    "want": 19,
+    "sum": 19,
+    "reason": "Triangle count mismatch: decoded 17, header 19",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_OILREFINERYFENCE_01_CHOP_R32_0",
+    "want": 22,
+    "sum": 22,
+    "reason": "Triangle count mismatch: decoded 20, header 22",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NS_ROAD_A_02_CHOP_R35_R0",
+    "want": 149,
+    "sum": 153,
+    "reason": "Triangle count mismatch: decoded 147, header 149",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NS_ROAD_A_02_CHOP_R35_R1",
+    "want": 67,
+    "sum": 67,
+    "reason": "Triangle count mismatch: decoded 65, header 67",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NS_TERRAIN_A_03_CHOP_R37_R1",
+    "want": 146,
+    "sum": 170,
+    "reason": "Triangle count mismatch: decoded 145, header 146",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BW_TERRAIN_A_14_CHOP_S9_R0",
+    "want": 28,
+    "sum": 28,
+    "reason": "Triangle count mismatch: decoded 27, header 28",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_23_CHOP_S9_R1",
+    "want": 46,
+    "sum": 62,
+    "reason": "Triangle count mismatch: decoded 44, header 46",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_NS_TERRAIN_A_09_CHOP_S11_R0",
+    "want": 47,
+    "sum": 55,
+    "reason": "Triangle count mismatch: decoded 44, header 47",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_ROAD_A_09_CHOP_S14_R0",
+    "want": 90,
+    "sum": 94,
+    "reason": "Triangle count mismatch: decoded 86, header 90",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BD_TERRAIN_A_18_CHOP_S16_R3",
+    "want": 33,
+    "sum": 33,
+    "reason": "Triangle count mismatch: decoded 32, header 33",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_AIRPORTMWPARTA_1B_EA_00",
+    "want": 182,
+    "sum": 220,
+    "reason": "Triangle count mismatch: decoded 180, header 182",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_WESTPARKA_05_CHOP_T6_R1",
+    "want": 142,
+    "sum": 166,
+    "reason": "Triangle count mismatch: decoded 141, header 142",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_WESTPARKA_02_CHOP_T7_R1",
+    "want": 42,
+    "sum": 42,
+    "reason": "Triangle count mismatch: decoded 41, header 42",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T9_R2",
+    "want": 186,
+    "sum": 234,
+    "reason": "Triangle count mismatch: decoded 185, header 186",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T13_R2",
+    "want": 151,
+    "sum": 159,
+    "reason": "Triangle count mismatch: decoded 133, header 151",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T23_R0",
+    "want": 109,
+    "sum": 125,
+    "reason": "Triangle count mismatch: decoded 108, header 109",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_06_CHOP_A21_0",
+    "want": 33,
+    "sum": 37,
+    "reason": "Triangle count mismatch: decoded 32, header 33",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY4_06_CHOP_I16_0",
+    "want": 58,
+    "sum": 70,
+    "reason": "Triangle count mismatch: decoded 57, header 58",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_CT_BBD04_1Z_00",
+    "want": 30,
+    "sum": 30,
+    "reason": "Triangle count mismatch: decoded 19, header 30",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_CT_BBD04_1Z_00",
+    "want": 30,
+    "sum": 30,
+    "reason": "Triangle count mismatch: decoded 19, header 30",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADC_CHOP_D23_R3",
+    "want": 111,
+    "sum": 135,
+    "reason": "Triangle count mismatch: decoded 109, header 111",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_PROPS_HIGHWAY1_03_CHOP_G25_3",
+    "want": 28,
+    "sum": 36,
+    "reason": "Triangle count mismatch: decoded 26, header 28",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R3",
+    "want": 61,
+    "sum": 73,
+    "reason": "Triangle count mismatch: decoded 48, header 61",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_GOLFCOURSE_01_CHOP_G20_R12",
+    "want": 167,
+    "sum": 207,
+    "reason": "Triangle count mismatch: decoded 165, header 167",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CT_ROAD_CLUBHOUSE_01_CHOP_H4_R1",
+    "want": 95,
+    "sum": 95,
+    "reason": "Triangle count mismatch: decoded 93, header 95",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_HYDROPLANT_ROADA_CHOP_P5_R0",
+    "want": 27,
+    "sum": 27,
+    "reason": "Triangle count mismatch: decoded 21, header 27",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R0",
+    "want": 84,
+    "sum": 96,
+    "reason": "Triangle count mismatch: decoded 69, header 84",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R1",
+    "want": 54,
+    "sum": 62,
+    "reason": "Triangle count mismatch: decoded 36, header 54",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R2",
+    "want": 108,
+    "sum": 112,
+    "reason": "Triangle count mismatch: decoded 88, header 108",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R4",
+    "want": 299,
+    "sum": 363,
+    "reason": "Triangle count mismatch: decoded 270, header 299",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_ASYLUM_ROADA_CHOP_P5_R8",
+    "want": 175,
+    "sum": 219,
+    "reason": "Triangle count mismatch: decoded 158, header 175",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_FISHINGVILLAGE_ROADA_CHOP_Q16_R1",
+    "want": 117,
+    "sum": 145,
+    "reason": "Triangle count mismatch: decoded 101, header 117",
+    "nonzero_tails": []
+  },
+  {
+    "name": "BLUESTRIPGASPILLAR_FRAG03",
+    "want": 132,
+    "sum": 143,
+    "reason": "Triangle count mismatch: decoded 130, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_TY_TRUCKDEPOTA_1Z_WH_00",
+    "want": 19,
+    "sum": 23,
+    "reason": "Triangle count mismatch: decoded 18, header 19",
+    "nonzero_tails": []
+  },
+  {
+    "name": "DRIVEINSCREEN_FRAG03",
+    "want": 19,
+    "sum": 18,
+    "reason": "Triangle count mismatch: decoded 6, header 19",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_FISHINGVILLAGE_ROADA_CHOP_Q16_R1",
+    "want": 117,
+    "sum": 145,
+    "reason": "Triangle count mismatch: decoded 101, header 117",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_CP_BE_TERRAIN_A_17_CHOP_O19_0",
+    "want": 23,
+    "sum": 23,
+    "reason": "Triangle count mismatch: decoded 21, header 23",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_OCEAN_A",
+    "want": 459,
+    "sum": 569,
+    "reason": "Triangle count mismatch: decoded 453, header 459",
+    "nonzero_tails": []
+  },
+  {
+    "name": "PAN_CONDOSBOARDWALK",
+    "want": 769,
+    "sum": 780,
+    "reason": "Triangle count mismatch: decoded 768, header 769",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T17_R0",
+    "want": 305,
+    "sum": 397,
+    "reason": "Triangle count mismatch: decoded 263, header 305",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T17_R1",
+    "want": 57,
+    "sum": 61,
+    "reason": "Triangle count mismatch: decoded 53, header 57",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T17_R2",
+    "want": 146,
+    "sum": 164,
+    "reason": "Triangle count mismatch: decoded 124, header 146",
+    "nonzero_tails": []
+  },
+  {
+    "name": "TRN_TC_ROADA_CHOP_T17_R5",
+    "want": 391,
+    "sum": 461,
+    "reason": "Triangle count mismatch: decoded 373, header 391",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XO_PHOTORADAR_1Z_MD_00",
+    "want": 80,
+    "sum": 100,
+    "reason": "Triangle count mismatch: decoded 77, header 80",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XO_PHOTORADAR_1C_MD_00",
+    "want": 132,
+    "sum": 156,
+    "reason": "Triangle count mismatch: decoded 129, header 132",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XO_PHOTORADAR_1B_MD_00",
+    "want": 232,
+    "sum": 264,
+    "reason": "Triangle count mismatch: decoded 229, header 232",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_HAPARTMENT2_1Z_JG_00",
+    "want": 40,
+    "sum": 52,
+    "reason": "Triangle count mismatch: decoded 38, header 40",
+    "nonzero_tails": []
+  },
+  {
+    "name": "XB_SY_OFFICEB_1C_00",
+    "want": 118,
+    "sum": 121,
+    "reason": "Triangle count mismatch: decoded 117, header 118",
+    "nonzero_tails": []
+  }
+]

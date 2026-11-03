@@ -1,0 +1,46 @@
+{
+  "file": "/workspace/port-research/rockport/samples/STREAML2RA-full.BUN",
+  "bytes": 109279744,
+  "sha256": "58fdd0adb8bdf1ebc3545ee679076c768acb3c52308c4b916ca960b4a0ac5552",
+  "parts": [
+    {
+      "file": "STREAML2RA-first24MiB.BUN",
+      "bytes": 25165824,
+      "sha256": "a85f07f64f7e1f2538ae0544b1c531925073251a4ad07d6d8c366f9e1f3915eb"
+    },
+    {
+      "file": "STREAML2RA-24-52MiB.bin",
+      "bytes": 29360128,
+      "sha256": "9a0b44966230e058cd5b2e2897d0dddd6585f8e741034a0bc68bab8a94bc3e2e"
+    },
+    {
+      "file": "STREAML2RA-52-80MiB.bin",
+      "bytes": 29360128,
+      "sha256": "cdacb237dec527c9a6673af2ed669ae75819620ac65638a01eb2e4a3426f1a79"
+    },
+    {
+      "file": "STREAML2RA-80MiB-end.bin",
+      "bytes": 25393664,
+      "sha256": "1ed3da96070b10d9df893f6dc13de716b293da6c2091554fafe857792a985e0c"
+    }
+  ],
+  "all_prior_sector_samples_match": [
+    "STREAML2RA-sectors141-160.BUN",
+    "STREAML2RA-sectors1141-1160.BUN",
+    "STREAML2RA-sectors161-176.BUN",
+    "STREAML2RA-sectors1161-1176.BUN"
+  ],
+  "top_level_chunks": {
+    "00000000": 6238,
+    "80134000": 3858,
+    "80034100": 1067,
+    "b3300000": 838,
+    "b0300100": 11,
+    "80036000": 475,
+    "00034159": 495,
+    "00034027": 409,
+    "0003b801": 450,
+    "0003bc00": 337
+  },
+  "indexed_sections": 997
+}

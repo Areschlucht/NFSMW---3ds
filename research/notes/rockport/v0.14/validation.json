@@ -1,0 +1,211 @@
+{
+  "version": "0.14",
+  "new_uploads": [
+    {
+      "name": "STREAML2RA-first24MiB.BUN",
+      "size": 25165824,
+      "sha256": "a85f07f64f7e1f2538ae0544b1c531925073251a4ad07d6d8c366f9e1f3915eb",
+      "complete_prefix": 25165740,
+      "models": 2090,
+      "rejected": [
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XO_PHOTORADAR_1Z_MD_00",
+          "offset": 31128,
+          "reason": "Triangle count mismatch: decoded 77, header 80"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XO_PHOTORADAR_1C_MD_00",
+          "offset": 44600,
+          "reason": "Triangle count mismatch: decoded 129, header 132"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XO_PHOTORADAR_1B_MD_00",
+          "offset": 91132,
+          "reason": "Triangle count mismatch: decoded 229, header 232"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XB_HAPARTMENT2_1Z_JG_00",
+          "offset": 14215108,
+          "reason": "Triangle count mismatch: decoded 38, header 40"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XB_HAPARTMENT2_1Z_JG_00",
+          "offset": 15449796,
+          "reason": "Triangle count mismatch: decoded 38, header 40"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XB_HAPARTMENT2_1Z_JG_00",
+          "offset": 17867816,
+          "reason": "Triangle count mismatch: decoded 38, header 40"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XB_HAPARTMENT2_1Z_JG_00",
+          "offset": 20000580,
+          "reason": "Triangle count mismatch: decoded 38, header 40"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XB_SY_OFFICEB_1C_00",
+          "offset": 20673388,
+          "reason": "Triangle count mismatch: decoded 117, header 118"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "SOUND_TUNNEL_OVERPASS_00",
+          "offset": 21519456,
+          "reason": "Invalid geometry metadata/bounds"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "SOUND_TUNNEL_TURBINE_00",
+          "offset": 21519784,
+          "reason": "Invalid geometry metadata/bounds"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "SOUND_TUNNEL_WALKWAY_00",
+          "offset": 21520072,
+          "reason": "Invalid geometry metadata/bounds"
+        },
+        {
+          "source": "STREAML2RA-first24MiB.BUN",
+          "name": "XB_HYDROPLANTBLDA_1Z_RB_00",
+          "offset": 21881936,
+          "reason": "Triangle count mismatch: decoded 45, header 46"
+        }
+      ]
+    },
+    {
+      "name": "STREAML2RA-sectors161-176.BUN",
+      "size": 2421088,
+      "sha256": "9a5100cfb10e2e08265a0b6d937d43c95e1dea277663e5286528b1f2d4ff83a6",
+      "complete_prefix": 2421088,
+      "models": 569,
+      "rejected": []
+    },
+    {
+      "name": "STREAML2RA-sectors1161-1176.BUN",
+      "size": 969408,
+      "sha256": "5e4278fd16150c0d4d1dec1af5a384064b6b7e577f0c676f202ff427c6fb1824",
+      "complete_prefix": 969408,
+      "models": 320,
+      "rejected": [
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H4_R2",
+          "offset": 190568,
+          "reason": "Triangle count mismatch: decoded 42, header 48"
+        },
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_2",
+          "offset": 276796,
+          "reason": "Triangle count mismatch: decoded 169, header 173"
+        },
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R3",
+          "offset": 298380,
+          "reason": "Triangle count mismatch: decoded 107, header 108"
+        },
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R4",
+          "offset": 301232,
+          "reason": "Triangle count mismatch: decoded 122, header 123"
+        },
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_CLUBHOUSE_01_CHOP_H10_R6",
+          "offset": 306996,
+          "reason": "Triangle count mismatch: decoded 224, header 227"
+        },
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R0",
+          "offset": 830532,
+          "reason": "Triangle count mismatch: decoded 106, header 107"
+        },
+        {
+          "source": "STREAML2RA-sectors1161-1176.BUN",
+          "name": "TRN_CT_PROPS_HIGHWAY4_05_CHOP_I22_R5",
+          "offset": 843148,
+          "reason": "Triangle count mismatch: decoded 188, header 190"
+        }
+      ]
+    }
+  ],
+  "python_tests": 63,
+  "strict_rockport_arm_build": "pass",
+  "strict_legacy_bmw_arm_build": "pass",
+  "native_scene_asan_ubsan": "pass; additive/unknown/inconsistent texture flags checked",
+  "native_contact_pose_map_asan_ubsan": "pass",
+  "native_expansion_asan_ubsan": "pass; 2930 old triangles and spawn retained within 1mm; 48 seam probe traversals",
+  "sectors": [
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    160,
+    163,
+    164,
+    165,
+    168,
+    169,
+    170
+  ],
+  "world_triangles": 37359,
+  "road_triangles": 5483,
+  "scenery_instances": 294,
+  "buildings": 58,
+  "world_textures": 128,
+  "scenery_omissions": {
+    "race_barrier": 137,
+    "texture_budget": 157,
+    "triangle_budget": 200,
+    "missing_texture": 0
+  },
+  "max_instance_bounds_error_m": 0.005828857421875,
+  "emulator": "Azahar 2126.2 / Mesa llvmpipe",
+  "captured_fps": "58\u201361 FPS in inspected captures; driving capture reports 60 FPS at full speed",
+  "checked": [
+    "startup and expanded world rendering",
+    "acceleration/edge/reverse",
+    "exact drive reset",
+    "garage rolling and exact reset",
+    "controls/menu/exit",
+    "new northwest area rendering and acceleration with temporary inspection spawn"
+  ],
+  "image_checks": {
+    "drive_reset": null,
+    "garage_reset": null,
+    "wheel_roll": [
+      158,
+      118,
+      278,
+      171
+    ]
+  },
+  "inspection_spawn": "Temporary NW spawn used only for added-area inspection. ZIP and virtual SD restored to validated default spawn.",
+  "physical_console": "No v0.14 hardware test yet; prior v0.12 stock New 3DS feedback retained",
+  "limitations": [
+    "Partial city; budget-limited scenery",
+    "Original full engine/material/physics/collision unresolved",
+    "No scenery collision, traffic, races, audio",
+    "No Old 3DS validation"
+  ],
+  "zip_sha256": "f48870b2c8b05532298fb44a5d1e7ae92336b23a7744366096f01a8cb81f8e1b",
+  "tested_binary_sha256": "2a8aa31e9e42d156850dddfa9f311d2d9a3e6aae3e456ab659de3554cb250cbc",
+  "zip_payload_verification": "pass"
+}

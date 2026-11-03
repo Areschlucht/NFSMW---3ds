@@ -1,0 +1,13 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "source_sha256": "58fdd0adb8bdf1ebc3545ee679076c768acb3c52308c4b916ca960b4a0ac5552",
+  "original_slice_start": "0x80308c18",
+  "original_slice_end": "0x80308d8c",
+  "slice_sha256": "5e5946160ab30f6f8baf7f35e08065a6d8d7f8a695ee1230f731737b4c1aef3a",
+  "cases": 2092,
+  "float_bit_mismatches": 0,
+  "examples": [],
+  "maximum_normal_error": 0,
+  "maximum_relative_plane_scalar_error": 0,
+  "limitations": "Actual world-triangle plane output producer only, using independentGekko newton2. Query cache/selector and physicalwheel point/upstream producer are separate; no suspension/response integration claim."
+}

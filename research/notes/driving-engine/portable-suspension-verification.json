@@ -1,0 +1,23 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "original_conversion_range": [
+    "0x8024A730",
+    "0x8024A7B4"
+  ],
+  "original_force_range": [
+    "0x8024AAC4",
+    "0x8024AC8C"
+  ],
+  "chassis_collections": 89,
+  "full_output_float_bit_cases": 4272,
+  "antiroll_float_bit_cases": 1424,
+  "runtime_default_force_differences": 32,
+  "runtime_default_contact_differences": 0,
+  "runtime_default_max_force_error": 0.015625,
+  "limitations": [
+    "exact force comparisons use original powf callback; defaulttargetpowf differences reported separately",
+    "normal/body-up dot is supplied after original0..1 clamp",
+    "wheelquery/basis/bodyhalfextents andvehicleupdatescheduler are separate"
+  ]
+}

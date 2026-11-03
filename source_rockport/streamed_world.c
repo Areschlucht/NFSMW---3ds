@@ -61,7 +61,7 @@ typedef struct {
     Provider *models,*textures;uint32_t model_count,texture_count;
     Object *objects;Run *runs;uint32_t object_count,run_count,triangles;
     uint8_t *references;uint16_t *reference_slots;uint32_t reference_count;
-    uint32_t region;StreamedWorldView view;bool borrowed_providers;
+    uint32_t region;StreamedWorldView view;bool borrowed_providers;uint32_t fallback_bindings;
 } Frame;
 struct StreamedWorld {
     Arena arena;StreamedWorldConfig config;char asset_root[PATH_LIMIT];
@@ -156,7 +156,7 @@ static void release_frame(StreamedWorld *w,Frame *f){
         Section *s=f->sections[i];if(--s->owners==0){arena_free(&w->arena,s->bytes);arena_free(&w->arena,s);}
     }
     f->section_count=0;if(!f->borrowed_providers){arena_free(&w->arena,f->models);arena_free(&w->arena,f->textures);}f->models=NULL;f->textures=NULL;f->borrowed_providers=false;
-    f->model_count=f->texture_count=f->object_count=f->run_count=f->triangles=f->region=0;
+    f->model_count=f->texture_count=f->object_count=f->run_count=f->triangles=f->region=f->fallback_bindings=0;
 }
 static void own_reference(StreamedWorld *w,Frame *f,size_t slot){
     if(f->references[slot]){world_streaming_scene_cache_release(&w->cache,slot);return;}
@@ -210,6 +210,14 @@ failed:
 }
 static StreamedWorldResult texture_resource(StreamedWorld *w,Frame *f,uint32_t hash,size_t *slot){
     const Provider *p=provider(f->textures,f->texture_count,hash);
+    if(!p&&w->config.original_missing_texture_hash){
+        /* Original generic model fixup requests bTextureLookup(hash,1,0).
+           Final lookup miss returns the actual registered DEFAULTALPHA. A
+           declared provider with broken bytes must NEVER enter this branch. */
+        p=provider(f->textures,f->texture_count,w->config.original_missing_texture_hash);
+        if(!p)return error(w,STREAMED_WORLD_MISSING,"Original default provider absent",hash);
+        f->fallback_bindings++;hash=p->hash;
+    }
     if(!p)return error(w,STREAMED_WORLD_MISSING,"No active texture provider",hash);
     if(cache_exact(w,WORLD_SCENE_TEXTURE,p)>=0)return acquire_existing(w,f,WORLD_SCENE_TEXTURE,p,slot);
     size_t bytes;StreamedWorldResult result=scratch_asset(w,STREAMED_WORLD_TEXTURE,hash,p->identity,&bytes);if(result)return result;
@@ -253,6 +261,10 @@ static bool visible_instance(const WorldStreamingSceneInstance *instance,const S
 static StreamedWorldResult stage_sections(StreamedWorld *w,Frame *f,uint16_t dependency_index){
     uint16_t ids[SECTION_LIMIT];size_t count=0;
     if(world_streaming_plan(&w->database,&dependency_index,1,ids,SECTION_LIMIT,&count)!=WORLD_STREAMING_OK)return error(w,STREAMED_WORLD_CAPACITY,"Section request limit",0);
+    if(w->config.boot_global_provider_bank){
+        if(count>=SECTION_LIMIT)return error(w,STREAMED_WORLD_CAPACITY,"Boot provider bank limit",0);
+        ids[count++]=0; /* Export-only global namespace: do not query WST for0. */
+    }
     Frame *old=&w->frames[w->active];
     bool same=count==old->section_count;
     for(size_t i=0;same&&i<count;i++)if(old->sections[i]->id!=ids[i])same=false;
@@ -327,7 +339,9 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
     return STREAMED_WORLD_OK;
 }
 static void update_stats(StreamedWorld *w){
-    Frame *f=&w->frames[w->active];w->stats.region=f->region;w->stats.source_sections=f->section_count;w->stats.visible_instances=f->object_count;w->stats.draw_runs=f->run_count;w->stats.triangles=f->triangles;
+    Frame *f=&w->frames[w->active];w->stats.region=f->region;w->stats.boot_provider_banks=w->config.boot_global_provider_bank&&f->section_count?1:0;
+    w->stats.source_sections=f->section_count-w->stats.boot_provider_banks;w->stats.visible_instances=f->object_count;w->stats.draw_runs=f->run_count;w->stats.triangles=f->triangles;
+    w->stats.texture_fallback_bindings=f->fallback_bindings;
     w->stats.normal_used=(uint32_t)arena_used(&w->arena);w->stats.normal_budget=w->config.normal_bytes;w->stats.linear_used=w->cache.linear_used;w->stats.linear_budget=w->config.linear_bytes;w->stats.scratch_bytes=w->config.scratch_bytes;
     w->stats.arena_allocations=w->arena.allocations;
     w->stats.resident_models=w->stats.resident_textures=0;
@@ -338,7 +352,8 @@ StreamedWorldResult streamed_world_create(const StreamedWorldConfig *config,Stre
     *out=NULL;
     if(!config||!config->metadata_path||(!config->asset_root&&!config->read_asset)||config->normal_bytes<1024*1024||config->normal_bytes>128*1024*1024||!config->linear_bytes||config->scratch_bytes<256||config->scratch_bytes>32*1024*1024||
        !config->cache_entries||config->cache_entries>65535||!config->object_capacity||config->object_capacity>65535||!config->run_capacity||config->run_capacity>1000000||
-       !isfinite(config->render_scale)||config->render_scale<=0||(config->lod_mode!=STREAMED_WORLD_REFERENCE_SLOT0&&config->lod_mode!=STREAMED_WORLD_SOURCE_LOD_COMPONENTS))return STREAMED_WORLD_INVALID;
+       !isfinite(config->render_scale)||config->render_scale<=0||(config->lod_mode!=STREAMED_WORLD_REFERENCE_SLOT0&&config->lod_mode!=STREAMED_WORLD_SOURCE_LOD_COMPONENTS)||
+       (config->original_missing_texture_hash&&config->original_missing_texture_hash!=0x66994f4au))return STREAMED_WORLD_INVALID;
     void *memory=memalign(NORMAL_ALIGN,config->normal_bytes);if(!memory)return STREAMED_WORLD_BUDGET;
     Arena arena={memory,config->normal_bytes,0};*(ArenaBlock *)memory=(ArenaBlock){config->normal_bytes-block_header(),NULL,true};
     StreamedWorld *w=arena_alloc(&arena,sizeof(*w));if(!w){free(memory);return STREAMED_WORLD_BUDGET;}w->arena=arena;w->config=*config;

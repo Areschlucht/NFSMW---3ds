@@ -1,0 +1,203 @@
+{
+  "total_triangles": 37359,
+  "total_batches": 1046,
+  "cell_size_m": 64,
+  "samples": [
+    {
+      "location": "start",
+      "heading_offset_deg": 0,
+      "drawn_triangles": 10488,
+      "drawn_batches": 306,
+      "merged_draw_calls": 84,
+      "culled_percent": 71.9
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 30,
+      "drawn_triangles": 7151,
+      "drawn_batches": 194,
+      "merged_draw_calls": 79,
+      "culled_percent": 80.9
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 60,
+      "drawn_triangles": 2535,
+      "drawn_batches": 59,
+      "merged_draw_calls": 31,
+      "culled_percent": 93.2
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 90,
+      "drawn_triangles": 2583,
+      "drawn_batches": 70,
+      "merged_draw_calls": 44,
+      "culled_percent": 93.1
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 120,
+      "drawn_triangles": 3297,
+      "drawn_batches": 78,
+      "merged_draw_calls": 46,
+      "culled_percent": 91.2
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 150,
+      "drawn_triangles": 6827,
+      "drawn_batches": 140,
+      "merged_draw_calls": 69,
+      "culled_percent": 81.7
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 180,
+      "drawn_triangles": 11480,
+      "drawn_batches": 294,
+      "merged_draw_calls": 132,
+      "culled_percent": 69.3
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 210,
+      "drawn_triangles": 17429,
+      "drawn_batches": 430,
+      "merged_draw_calls": 142,
+      "culled_percent": 53.3
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 240,
+      "drawn_triangles": 23101,
+      "drawn_batches": 572,
+      "merged_draw_calls": 132,
+      "culled_percent": 38.2
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 270,
+      "drawn_triangles": 19854,
+      "drawn_batches": 488,
+      "merged_draw_calls": 151,
+      "culled_percent": 46.9
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 300,
+      "drawn_triangles": 17919,
+      "drawn_batches": 430,
+      "merged_draw_calls": 164,
+      "culled_percent": 52.0
+    },
+    {
+      "location": "start",
+      "heading_offset_deg": 330,
+      "drawn_triangles": 13246,
+      "drawn_batches": 372,
+      "merged_draw_calls": 111,
+      "culled_percent": 64.5
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 0,
+      "drawn_triangles": 23423,
+      "drawn_batches": 574,
+      "merged_draw_calls": 204,
+      "culled_percent": 37.3
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 30,
+      "drawn_triangles": 32709,
+      "drawn_batches": 827,
+      "merged_draw_calls": 169,
+      "culled_percent": 12.4
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 60,
+      "drawn_triangles": 27906,
+      "drawn_batches": 716,
+      "merged_draw_calls": 168,
+      "culled_percent": 25.3
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 90,
+      "drawn_triangles": 15020,
+      "drawn_batches": 387,
+      "merged_draw_calls": 168,
+      "culled_percent": 59.8
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 120,
+      "drawn_triangles": 5013,
+      "drawn_batches": 131,
+      "merged_draw_calls": 70,
+      "culled_percent": 86.6
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 150,
+      "drawn_triangles": 2973,
+      "drawn_batches": 92,
+      "merged_draw_calls": 42,
+      "culled_percent": 92.0
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 180,
+      "drawn_triangles": 2328,
+      "drawn_batches": 80,
+      "merged_draw_calls": 35,
+      "culled_percent": 93.8
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 210,
+      "drawn_triangles": 1985,
+      "drawn_batches": 66,
+      "merged_draw_calls": 32,
+      "culled_percent": 94.7
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 240,
+      "drawn_triangles": 1842,
+      "drawn_batches": 53,
+      "merged_draw_calls": 36,
+      "culled_percent": 95.1
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 270,
+      "drawn_triangles": 1857,
+      "drawn_batches": 52,
+      "merged_draw_calls": 34,
+      "culled_percent": 95.0
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 300,
+      "drawn_triangles": 2255,
+      "drawn_batches": 65,
+      "merged_draw_calls": 34,
+      "culled_percent": 94.0
+    },
+    {
+      "location": "northwest",
+      "heading_offset_deg": 330,
+      "drawn_triangles": 11339,
+      "drawn_batches": 274,
+      "merged_draw_calls": 123,
+      "culled_percent": 69.6
+    }
+  ],
+  "min_drawn": 1842,
+  "max_drawn": 32709,
+  "mean_drawn": 11023,
+  "geometry_and_contact_lossless": true
+}

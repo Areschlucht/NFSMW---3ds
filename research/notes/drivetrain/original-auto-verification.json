@@ -1,0 +1,15 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "attributes_sha256": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+  "whole_automatic_post_update_cases": 4096,
+  "accepted_shifts": 17,
+  "original_ranges": [
+    "80255AD4..80255DE0",
+    "8025617C..8025625C",
+    "8025750C..8025762C"
+  ],
+  "limitations": [
+    "Optional game event allocation/dispatch callback is disabled in original reference; accepted gear-event data is returned to caller",
+    "Actual automatic-enabled/raw input providers and scheduler remain explicit"
+  ]
+}

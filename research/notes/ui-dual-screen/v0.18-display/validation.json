@@ -1,0 +1,19 @@
+{
+  "scope": "UI-only Display page; not a runtime shader verification",
+  "host": "strict C11 -O2 -Wall -Wextra -Werror, ASan+UBSan passed",
+  "arm": "strict ARMv6K hard-float -O2 -Wall -Wextra -Werror object compile passed",
+  "default": "false -> OFF / NEUTRAL COLOURS",
+  "menu_order": [
+    "Drive",
+    "Garage",
+    "Controls",
+    "Display",
+    "Quit"
+  ],
+  "touch_tests": "all five row corners/gaps/exclusive boundaries, Display toggle corners/gaps, back, invalid mode, framebuffer guards",
+  "sources": {
+    "include/mw_ui.h": "802d2cd8c10b6d06440e87a8a340212accd2559ae292bacaef3d0c41efbaafae",
+    "source_bmw/mw_ui.c": "7c8f44f143f6823958801ff9a12406a675e04b2c0876d511bdbcb775b9bfd13b",
+    "tools/ui_preview.c": "79d392fdd8e291b2f1873aac65255a87263c5a3fc48e5c3cc6ad670930afbcf5"
+  }
+}

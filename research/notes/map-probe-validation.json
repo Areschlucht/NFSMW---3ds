@@ -1,0 +1,14 @@
+[
+  {
+    "file": "BMWM3GTRE46-GEOMETRY.BIN",
+    "bytes": 407680,
+    "top_level_chunks": 3,
+    "prefix_checked": 1024
+  },
+  {
+    "file": "GLOBAL-GLOBALB.BUN",
+    "bytes": 225776,
+    "top_level_chunks": 163,
+    "prefix_checked": 1024
+  }
+]

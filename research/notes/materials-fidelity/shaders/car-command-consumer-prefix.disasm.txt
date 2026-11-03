@@ -1,0 +1,140 @@
+80116aa0 li         r0, 0
+80116aa4 lwz        r11, 0(r9)
+80116aa8 stw        r0, 0x34(r11)
+80116aac lwz        r0, 0x1c(r1)
+80116ab0 mtlr       r0
+80116ab4 lmw        r28, 8(r1)
+80116ab8 addi       r1, r1, 0x18
+80116abc blr        
+80116ac0 stwu       r1, -0x140(r1)
+80116ac4 mflr       r0
+80116ac8 mfcr       r12
+80116acc .byte      0xf2, 0xa1, 0x00, 0xe8
+80116ad0 xxsel      vs22, vs1, vs0, vs3
+80116ad4 xxsel      vs23, vs1, vs0, v3
+80116ad8 xsadddp    f24, f1, f0
+80116adc xsmaddadp  f25, f1, f0
+80116ae0 xxsldwi    vs26, vs1, vs0, 1
+80116ae4 .byte      0xf3, 0x61, 0x01, 0x18
+80116ae8 .byte      0xf3, 0x81, 0x01, 0x20
+80116aec .byte      0xf3, 0xa1, 0x01, 0x28
+80116af0 xxsel      vs30, vs1, vs0, vs4
+80116af4 xxsel      vs31, vs1, vs0, v4
+80116af8 stmw       r14, 0xa0(r1)
+80116afc stw        r0, 0x144(r1)
+80116b00 stw        r12, 0x9c(r1)
+80116b04 lis        r9, -0x7fbe
+80116b08 mr         r26, r3
+80116b0c lwz        r0, -0x4f64(r9)
+80116b10 mr         r27, r4
+80116b14 cmpwi      r0, 0
+80116b18 beq        0x80116bf4
+80116b1c lis        r9, -0x7fbe
+80116b20 lwz        r11, 0x20(r26)
+80116b24 lwz        r9, -0x4f58(r9)
+80116b28 cmpw       r11, r9
+80116b2c beq        0x80116bf4
+80116b30 cmpwi      r9, 0
+80116b34 beq        0x80116bf4
+80116b38 lfs        f13, 0(r11)
+80116b3c lfs        f0, 0(r9)
+80116b40 fcmpu      cr0, f13, f0
+80116b44 beq        0x80116bf4
+80116b48 lfs        f13, 4(r11)
+80116b4c lfs        f0, 4(r9)
+80116b50 fcmpu      cr0, f13, f0
+80116b54 beq        0x80116bf4
+80116b58 lfs        f13, 8(r11)
+80116b5c lfs        f0, 8(r9)
+80116b60 fcmpu      cr0, f13, f0
+80116b64 beq        0x80116bf4
+80116b68 lfs        f13, 0xc(r11)
+80116b6c lfs        f0, 0xc(r9)
+80116b70 fcmpu      cr0, f13, f0
+80116b74 beq        0x80116bf4
+80116b78 lfs        f13, 0x10(r11)
+80116b7c lfs        f0, 0x10(r9)
+80116b80 fcmpu      cr0, f13, f0
+80116b84 beq        0x80116bf4
+80116b88 lfs        f13, 0x14(r11)
+80116b8c lfs        f0, 0x14(r9)
+80116b90 fcmpu      cr0, f13, f0
+80116b94 beq        0x80116bf4
+80116b98 lfs        f13, 0x18(r11)
+80116b9c lfs        f0, 0x18(r9)
+80116ba0 fcmpu      cr0, f13, f0
+80116ba4 beq        0x80116bf4
+80116ba8 lfs        f13, 0x1c(r11)
+80116bac lfs        f0, 0x1c(r9)
+80116bb0 fcmpu      cr0, f13, f0
+80116bb4 beq        0x80116bf4
+80116bb8 lfs        f13, 0x20(r11)
+80116bbc lfs        f0, 0x20(r9)
+80116bc0 fcmpu      cr0, f13, f0
+80116bc4 beq        0x80116bf4
+80116bc8 lfs        f13, 0x24(r11)
+80116bcc lfs        f0, 0x24(r9)
+80116bd0 fcmpu      cr0, f13, f0
+80116bd4 beq        0x80116bf4
+80116bd8 lfs        f13, 0x28(r11)
+80116bdc lfs        f0, 0x28(r9)
+80116be0 fcmpu      cr0, f13, f0
+80116be4 beq        0x80116bf4
+80116be8 lfs        f13, 0x2c(r11)
+80116bec lfs        f0, 0x2c(r9)
+80116bf0 fcmpu      cr0, f13, f0
+80116bf4 lis        r9, -0x7fbe
+80116bf8 lwz        r11, 0x10(r26)
+80116bfc lwz        r0, -0x4f60(r9)
+80116c00 li         r10, 0
+80116c04 cmpw       r11, r0
+80116c08 bne        0x80116c34
+80116c0c lis        r9, -0x7fbe
+80116c10 lwz        r11, 0xc(r26)
+80116c14 lwz        r0, -0x4f5c(r9)
+80116c18 cmpw       r11, r0
+80116c1c bne        0x80116c34
+80116c20 lis        r9, -0x7fbe
+80116c24 lwz        r11, 0x20(r26)
+80116c28 lwz        r0, -0x4f58(r9)
+80116c2c cmpw       r11, r0
+80116c30 beq        0x80116c38
+80116c34 li         r10, 1
+80116c38 cmpwi      r10, 0
+80116c3c beq        0x80116dec
+80116c40 lis        r9, -0x7fbe
+80116c44 lwz        r4, 0xc(r26)
+80116c48 lwz        r0, -0x4f5c(r9)
+80116c4c lis        r28, -0x7fbe
+80116c50 cmpw       r4, r0
+80116c54 bne        0x80116c68
+80116c58 lwz        r9, -0x4f58(r28)
+80116c5c lwz        r0, 0x20(r26)
+80116c60 cmpw       r0, r9
+80116c64 beq        0x80116d2c
+80116c68 lwz        r31, 0(r4)
+80116c6c addi       r30, r1, 8
+80116c70 lwz        r4, 0x20(r26)
+80116c74 mr         r3, r30
+80116c78 mr         r5, r31
+80116c7c bl         0x8010ab28
+80116c80 mr         r3, r30
+80116c84 li         r4, 0
+80116c88 bl         0x8010b7e8
+80116c8c lwz        r0, 0x18(r26)
+80116c90 cmpwi      r0, 0
+80116c94 beq        0x80116d2c
+80116c98 lwz        r9, 0x10(r26)
+80116c9c lwz        r11, 0(r9)
+80116ca0 lhz        r0, 2(r11)
+80116ca4 andi.      r8, r0, 0x80
+80116ca8 beq        0x80116d2c
+80116cac lwz        r0, 0x24(r26)
+80116cb0 cmpwi      r0, 0
+80116cb4 beq        0x80116cfc
+80116cb8 lis        r30, -0x7fba
+80116cbc lis        r29, -0x7fba
+80116cc0 addi       r30, r30, 0x7018
+80116cc4 addi       r29, r29, 0x6fa8
+80116cc8 mr         r3, r30
+80116ccc mr         r4, r31

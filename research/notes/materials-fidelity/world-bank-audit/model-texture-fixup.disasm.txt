@@ -1,0 +1,148 @@
+800f68a0 cmpwi      r31, 0
+800f68a4 extsb      r26, r0
+800f68a8 beq        0x800f6994
+800f68ac cmpwi      r28, 0
+800f68b0 beq        0x800f6994
+800f68b4 cmpwi      r29, 0
+800f68b8 beq        0x800f6994
+800f68bc li         r30, 0
+800f68c0 cmpw       r30, r29
+800f68c4 bge        0x800f6904
+800f68c8 li         r25, 0
+800f68cc slwi       r0, r30, 2
+800f68d0 stwx       r25, r27, r0
+800f68d4 lwz        r9, 8(r31)
+800f68d8 cmpwi      r9, -1
+800f68dc bne        0x800f68f4
+800f68e0 lwz        r3, 4(r31)
+800f68e4 li         r4, 1
+800f68e8 li         r5, 0
+800f68ec bl         0x800fd4a0
+800f68f0 stw        r3, 8(r31)
+800f68f4 addi       r30, r30, 1
+800f68f8 addi       r31, r31, 0xc
+800f68fc cmpw       r30, r29
+800f6900 blt        0x800f68cc
+800f6904 li         r9, 0
+800f6908 cmpw       r9, r26
+800f690c bge        0x800f6994
+800f6910 lwz        r8, 0x2c(r28)
+800f6914 slwi       r10, r9, 3
+800f6918 li         r11, 0
+800f691c addi       r5, r9, 1
+800f6920 lwzx       r6, r10, r8
+800f6924 mr         r31, r24
+800f6928 cmpw       r11, r29
+800f692c bge        0x800f6988
+800f6930 mr         r7, r10
+800f6934 add        r9, r7, r8
+800f6938 lwz        r0, 4(r31)
+800f693c cmpwi      r0, 0
+800f6940 beq        0x800f6978
+800f6944 lwz        r0, 0(r31)
+800f6948 cmpw       r0, r6
+800f694c bne        0x800f6978
+800f6950 lwz        r0, 8(r31)
+800f6954 slwi       r11, r11, 2
+800f6958 lwz        r10, 4(r9)
+800f695c stw        r0, 4(r9)
+800f6960 lwz        r9, 0x2c(r28)
+800f6964 add        r9, r9, r7
+800f6968 addi       r9, r9, 4
+800f696c stwx       r9, r11, r27
+800f6df0 lfs        f11, 0x34(r3)
+800f6df4 stfs       f0, 8(r4)
+800f6df8 stfs       f9, 0(r4)
+800f6dfc stfs       f10, 4(r4)
+800f6e00 stfs       f13, 8(r5)
+800f6e04 stfs       f12, 0(r5)
+800f6e08 stfs       f11, 4(r5)
+800f6e0c blr        
+800f6e10 stwu       r1, -0x18(r1)
+800f6e14 mflr       r0
+800f6e18 stmw       r29, 0xc(r1)
+800f6e1c stw        r0, 0x1c(r1)
+800f6e20 lis        r9, -0x7fbe
+800f6e24 mr         r29, r3
+800f6e28 lwz        r0, -0x19b0(r9)
+800f6e2c li         r9, 1
+800f6e30 cmpwi      r0, 0
+800f6e34 bne        0x800f6e3c
+800f6e38 li         r9, 0
+800f6e3c cmpwi      r9, 0
+800f6e40 bne        0x800f6e84
+800f6e44 lbz        r0, 0x19(r29)
+800f6e48 li         r31, 0
+800f6e4c b          0x800f6e78
+800f6e50 lwz        r30, 0x2c(r29)
+800f6e54 slwi       r9, r31, 3
+800f6e58 li         r4, 1
+800f6e5c li         r5, 0
+800f6e60 lwzx       r3, r30, r9
+800f6e64 addi       r31, r31, 1
+800f6e68 add        r30, r30, r9
+800f6e6c bl         0x800fd4a0
+800f6e70 stw        r3, 4(r30)
+800f6e74 lbz        r0, 0x19(r29)
+800f6e78 extsb      r0, r0
+800f6e7c cmpw       r31, r0
+800f6e80 blt        0x800f6e50
+800f6e84 lwz        r0, 0x1c(r1)
+800f6e88 mtlr       r0
+800f6e8c lmw        r29, 0xc(r1)
+800f6e90 addi       r1, r1, 0x18
+800f6e94 blr        
+800f6e98 stwu       r1, -0x18(r1)
+800f6e9c mflr       r0
+800f6ea0 stmw       r29, 0xc(r1)
+800f6ea4 stw        r0, 0x1c(r1)
+800f6ea8 lbz        r0, 0x1a(r3)
+800f6eac lwz        r31, 0x3c(r3)
+800f6eb0 extsb      r29, r0
+800f6eb4 cmpwi      r29, 0
+800f6eb8 beq        0x800f6ee4
+800f6ebc li         r30, 0
+800f6ec0 cmpw       r30, r29
+800f6ec4 bge        0x800f6ee4
+800f6ec8 lwz        r3, 0(r31)
+800f6ecc addi       r30, r30, 1
+800fdad0 mflr       r0
+800fdad4 stmw       r30, 8(r1)
+800fdad8 stw        r0, 0x14(r1)
+800fdadc bl         0x800fda3c
+800fdae0 lis        r3, 0x47be
+800fdae4 li         r4, 1
+800fdae8 li         r5, 0
+800fdaec ori        r3, r3, 0xb4b6
+800fdaf0 bl         0x800fd4a0
+800fdaf4 lis        r30, -0x7fb9
+800fdaf8 li         r4, 1
+800fdafc stw        r3, -0x59c0(r30)
+800fdb00 li         r5, 0
+800fdb04 lis        r3, -0x2b2e
+800fdb08 addi       r30, r30, -0x59c0
+800fdb0c ori        r3, r3, 0x6c59
+800fdb10 bl         0x800fd4a0
+800fdb14 stw        r3, 4(r30)
+800fdb18 li         r4, 1
+800fdb1c lis        r3, 0x1744
+800fdb20 li         r5, 0
+800fdb24 ori        r3, r3, 0xb82d
+800fdb28 bl         0x800fd4a0
+800fdb2c stw        r3, 8(r30)
+800fdb30 li         r4, 1
+800fdb34 lis        r3, -0x52c4
+800fdb38 li         r5, 0
+800fdb3c ori        r3, r3, 0x5239
+800fdb40 bl         0x800fd4a0
+800fdb44 stw        r3, 0xc(r30)
+800fdb48 li         r4, 1
+800fdb4c lis        r3, -0x2b28
+800fdb50 li         r5, 0
+800fdb54 ori        r3, r3, 0xa65
+800fdb58 bl         0x800fd4a0
+800fdb5c stw        r3, 0x10(r30)
+800fdb60 lwz        r0, 0x14(r1)
+800fdb64 mtlr       r0
+800fdb68 lmw        r30, 8(r1)
+800fdb6c addi       r1, r1, 0x10

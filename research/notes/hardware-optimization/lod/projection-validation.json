@@ -1,0 +1,10 @@
+{
+  "vectors": 65536,
+  "bit_exact_mismatches": 0,
+  "examples": [],
+  "original_dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "abi_only_skipped": {
+    "0x800fff1c": "0xf3e10010",
+    "0x800fff78": "0xe3e10010"
+  }
+}

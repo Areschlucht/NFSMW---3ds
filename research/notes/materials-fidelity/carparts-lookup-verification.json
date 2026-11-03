@@ -1,0 +1,8 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "source_sha256": "da02353de70dea3a8a51d6231e4efde15ab8c5c72eed6119a49bc9dad20b770b",
+  "lookup_function": "802d9b14",
+  "cases": 28,
+  "matched": 28,
+  "scope": "Original selectedattribute lookup over loader-endian-transformed original carpart/group/attribute bytes; does not execute the whole carparts loader"
+}
