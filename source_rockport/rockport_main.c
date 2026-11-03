@@ -419,10 +419,13 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
         .assets=ui_assets,.piss_filter=piss_filter,.fps=measured_fps,.triangles=world_triangles_drawn,.draw_calls=world_draw_calls,
         .gpu_ms=C3D_GetDrawingTime(),.draw_ms=C3D_GetProcessingTime(),.logic_ms=simulation_ms,
         .slip_degrees=atan2f(car->lateral_speed,fmaxf(fabsf(car->speed),.01f))*57.29578f};
+#ifdef NFS_STREAMED_WORLD
+    (void)height;
+    ui.streamed_map=true;
+    if (screen==DRIVE && stream_blocked) ui.road_status=MW_UI_MAP_PAUSED;
+#else
     if (screen==DRIVE && !edge && road_edge_ahead(&road,car,height))
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
-#ifdef NFS_STREAMED_WORLD
-    if (screen==DRIVE && stream_blocked) ui.road_status=MW_UI_MAP_PAUSED;
 #endif
     return ui;
 }

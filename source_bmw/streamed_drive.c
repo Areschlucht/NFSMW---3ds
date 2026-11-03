@@ -26,10 +26,11 @@ bool streamed_drive_surface(const void *context,float x,float z,float reference,
 }
 int streamed_drive_step(const StreamedDriveSurface *surface,DriveState *car,float *height,DriveInput input,float seconds)
 {
-    if(!surface||!surface->collision||!surface->collision->ready||!car||!height||!isfinite(seconds)||seconds<=0||seconds>.1f)return WORLD_COLLISION_INVALID;
+    if(!surface||!surface->road||!surface->collision||!surface->collision->ready||!car||!height||!isfinite(*height)||!isfinite(seconds)||seconds<=0||seconds>.1f)return WORLD_COLLISION_INVALID;
     unsigned steps=(unsigned)ceilf(seconds*120);
     for(unsigned i=0;i<steps;i++){
         DriveState next=*car;if(!drive_step(&next,input,seconds/steps))return WORLD_COLLISION_INVALID;
+        if(next.x==car->x && next.z==car->z){*car=next;continue;}
         float start_view[3]={car->x,*height+.65f,car->z},end_view[3]={next.x,*height+.65f,next.z},a[3],b[3];
         world_collision_viewer_to_native(start_view,surface->road->origin,a);world_collision_viewer_to_native(end_view,surface->road->origin,b);
         WorldCollisionContact hit;int wall=world_collision_runtime_wall(surface->collision,a,b,0,&hit);

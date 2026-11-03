@@ -28,7 +28,7 @@ typedef struct {
     MwUiRoadStatus road_status;
     unsigned selected, fps, triangles, draw_calls;
     float speed_mps, slip_degrees, gpu_ms, draw_ms, logic_ms;
-    bool handbrake, piss_filter;
+    bool handbrake, piss_filter, streamed_map;
     const MwUiAssets *assets;
 } MwUiModel;
 

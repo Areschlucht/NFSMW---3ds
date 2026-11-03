@@ -250,8 +250,9 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
             }
         } else text(c,140,94,"MAP UNAVAILABLE",1,MUTED);
         static const char *messages[]={"COLONIAL - LOADED ROAD","ROAD EDGE AHEAD","ROAD EDGE BEHIND","EDGE REACHED - REVERSE OR RESET","MAP LOAD FAILED - X RESET","LOADING ORIGINAL ROCKPORT"};
-        text(c,8,179,messages[m->road_status],1,m->road_status?ALERT:TEXT);
-        text(c,8,194,"PARTIAL MAP / PROTOTYPE PHYSICS",1,MUTED);
+        const char *status=m->road_status==MW_UI_ROAD_LOADED&&m->streamed_map?"ROCKPORT - ORIGINAL COLLISION":messages[m->road_status];
+        text(c,8,179,status,1,m->road_status?ALERT:TEXT);
+        text(c,8,194,m->streamed_map?"COLONIAL MINIMAP / PROTOTYPE PHYSICS":"PARTIAL MAP / PROTOTYPE PHYSICS",1,MUTED);
         button(c,6,96,"MENU",false);button(c,108,100,"HELP",m->panel==MW_UI_HELP);
         button(c,214,100,"STATS",m->panel==MW_UI_DIAGNOSTICS);
     } else if (m->mode==MW_UI_MENU) {
@@ -260,10 +261,10 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
             bool selected=i==m->selected;
             if (m->assets) angled(fb,12,54+(int)i*24,296,21,selected?ACCENT:PANEL);
             else rect(fb,12,54+(int)i*24,296,21,selected?ACCENT:PANEL);
-            title_text(c,24,54+(int)i*24,items[i],m->assets?2:1,selected?BG:TEXT);
+            title_text(c,24,54+(int)i*24,i==0&&m->streamed_map?"DRIVE ROCKPORT":items[i],m->assets?2:1,selected?BG:TEXT);
         }
-        text(c,12,178,"ORIGINAL ROCKPORT / COLONIAL SAMPLE",1,MUTED);
-        text(c,12,194,"PARTIAL MAP / PROTOTYPE PHYSICS",1,MUTED);
+        text(c,12,178,m->streamed_map?"ORIGINAL ROCKPORT / COLONIAL START":"ORIGINAL ROCKPORT / COLONIAL SAMPLE",1,MUTED);
+        text(c,12,194,m->streamed_map?"STREAMED MAP / PROTOTYPE PHYSICS":"PARTIAL MAP / PROTOTYPE PHYSICS",1,MUTED);
         text(c,12,218,"TOUCH OR PAD + A TO SELECT",1,TEXT);
     } else if (m->mode==MW_UI_CONTROLS) {
         title_text(c,12,36,"DRIVING CONTROLS",2,TEXT);help(c,16,62);
