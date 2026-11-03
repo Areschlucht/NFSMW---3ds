@@ -463,6 +463,9 @@ static void upload_ui(void)
 static void present_ui(void)
 {
     if (!ui_to_present) return;
+    /* C2D screen targets include a depth buffer. Never let uninitialized or
+       previously written depth mask portions of the complete HUD image. */
+    C3D_RenderTargetClear(ui_target,C3D_CLEAR_ALL,0x000000ff,0);
     C2D_Prepare();C2D_SceneBegin(ui_target);
     C2D_Image image={.tex=&ui_texture,.subtex=&ui_subtexture};
     C2D_DrawImageAt(image,0,0,0,NULL,1,1);C2D_Flush();ui_to_present=false;
