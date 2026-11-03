@@ -183,7 +183,7 @@ static bool valid(const MwUiModel *m)
 {
     return m && (unsigned)m->mode<=MW_UI_DISPLAY &&
         (unsigned)m->panel<=MW_UI_DIAGNOSTICS &&
-        (unsigned)m->road_status<=MW_UI_EDGE_REACHED;
+        (unsigned)m->road_status<=MW_UI_MAP_LOADING;
 }
 static void button(UiCanvas *c,int x,int width,const char *label,bool active)
 {
@@ -249,7 +249,7 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
                 pixel(fb,(int)x+135,(int)y+36,c);
             }
         } else text(c,140,94,"MAP UNAVAILABLE",1,MUTED);
-        static const char *messages[]={"COLONIAL - LOADED ROAD","ROAD EDGE AHEAD","ROAD EDGE BEHIND","EDGE REACHED - REVERSE OR RESET"};
+        static const char *messages[]={"COLONIAL - LOADED ROAD","ROAD EDGE AHEAD","ROAD EDGE BEHIND","EDGE REACHED - REVERSE OR RESET","MAP LOAD FAILED - X RESET","LOADING ORIGINAL ROCKPORT"};
         text(c,8,179,messages[m->road_status],1,m->road_status?ALERT:TEXT);
         text(c,8,194,"PARTIAL MAP / PROTOTYPE PHYSICS",1,MUTED);
         button(c,6,96,"MENU",false);button(c,108,100,"HELP",m->panel==MW_UI_HELP);

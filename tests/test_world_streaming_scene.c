@@ -25,7 +25,15 @@ static void cache_tests(void){
     uint32_t newer;
     assert(world_streaming_scene_cache_acquire(&c,WORLD_SCENE_MODEL,7,a,100,1000,&again,&newer)==WORLD_SCENE_OK&&again==first&&newer!=ga);
     assert(world_streaming_scene_cache_ready(&c,again,ga,(void *)3)==WORLD_SCENE_STATE);
+    assert(world_streaming_scene_cache_retain(&c,again,newer)==WORLD_SCENE_STATE);
     assert(world_streaming_scene_cache_ready(&c,again,newer,(void *)3)==WORLD_SCENE_OK);
+    assert(world_streaming_scene_cache_retain(&c,again,ga)==WORLD_SCENE_STATE);
+    assert(world_streaming_scene_cache_retain(&c,again,newer)==WORLD_SCENE_OK);
+    assert(entries[again].references==2);
+    assert(world_streaming_scene_cache_release(&c,again)==WORLD_SCENE_OK);
+    entries[again].references=UINT32_MAX;
+    assert(world_streaming_scene_cache_retain(&c,again,newer)==WORLD_SCENE_STATE);
+    entries[again].references=1;
     assert(world_streaming_scene_cache_acquire(&c,WORLD_SCENE_MODEL,8,a,60000,1,&first,&ga)==WORLD_SCENE_BUDGET);
     /* Explicit512-slot support and no implicit eviction. */
     world_streaming_scene_cache_init(&c,entries,512,51200,512000);

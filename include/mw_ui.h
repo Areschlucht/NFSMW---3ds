@@ -16,7 +16,7 @@ typedef enum { MW_UI_NONE, MW_UI_OPEN_MENU, MW_UI_SELECT_DRIVE,
     MW_UI_TOGGLE_HELP, MW_UI_TOGGLE_DIAGNOSTICS, MW_UI_SELECT_DISPLAY,
     MW_UI_TOGGLE_PISS_FILTER } MwUiAction;
 typedef enum { MW_UI_ROAD_LOADED, MW_UI_EDGE_AHEAD, MW_UI_EDGE_BEHIND,
-               MW_UI_EDGE_REACHED } MwUiRoadStatus;
+               MW_UI_EDGE_REACHED, MW_UI_MAP_PAUSED, MW_UI_MAP_LOADING } MwUiRoadStatus;
 typedef struct MwUiAssets MwUiAssets;
 /* NUI2 converted-art pack; malformed input returns NULL. Source may be freed
    after decode. Assets own one bounded allocation; NULL uses built-in fallback. */

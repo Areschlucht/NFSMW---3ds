@@ -17,19 +17,19 @@ static bool solve(float a[3][4],float result[3])
     for (unsigned i=0;i<3;++i) { result[i]=a[i][3];if (!isfinite(result[i])) return false; }
     return true;
 }
-bool road_pose_sample(const RoadWorld *w,const WheelRig *rig,const DriveState *car,float reference,RoadPose *out)
+bool road_pose_sample_with_surface(const RoadWorld *w,const WheelRig *rig,const DriveState *car,float reference,RoadPose *out,RoadSurfaceQuery surface,const void *context)
 {
-    if (!w || !rig || !car || !out || !isfinite(car->x) || !isfinite(car->z) ||
+    if (!w || !rig || !car || !out || !surface || !isfinite(car->x) || !isfinite(car->z) ||
         !isfinite(car->heading) || !isfinite(reference) || !isfinite(w->car_half_extent) ||
         w->car_half_extent<1 || w->car_half_extent>4) return false;
     RoadPose pose={0};float center_normal[3];
-    if (!road_surface(w,car->x,car->z,reference,&pose.height,center_normal)) return false;
+    if (!surface(context,car->x,car->z,reference,&pose.height,center_normal)) return false;
     float s=sinf(car->heading),c=cosf(car->heading),equations[3][4]={{0}};
     for (unsigned i=0;i<4;++i) {
         float x=rig->wheels[i].pivot[0]*w->car_half_extent,z=rig->wheels[i].pivot[2]*w->car_half_extent;
         if (!isfinite(x) || !isfinite(z) || fabsf(x)>5 || fabsf(z)>5) return false;
         float y;
-        if (!road_height(w,car->x+s*x-c*z,car->z+c*x+s*z,reference,&y)) continue;
+        if (!surface(context,car->x+s*x-c*z,car->z+c*x+s*z,reference,&y,NULL)) continue;
         float row[3]={1,x,z};
         for (unsigned a=0;a<3;++a) {
             for (unsigned b=0;b<3;++b) equations[a][b]+=row[a]*row[b];
@@ -51,3 +51,7 @@ bool road_pose_sample(const RoadWorld *w,const WheelRig *rig,const DriveState *c
     if (!isfinite(pose.height)) return false;
     *out=pose;return true;
 }
+static bool road_query(const void *context,float x,float z,float reference,float *height,float normal[3])
+{ return road_surface(context,x,z,reference,height,normal); }
+bool road_pose_sample(const RoadWorld *w,const WheelRig *rig,const DriveState *car,float reference,RoadPose *out)
+{ return road_pose_sample_with_surface(w,rig,car,reference,out,road_query,w); }

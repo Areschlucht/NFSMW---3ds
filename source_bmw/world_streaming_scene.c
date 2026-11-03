@@ -159,6 +159,12 @@ WorldStreamingSceneResult world_streaming_scene_cache_release(WorldStreamingScen
     if(!c||!c->entries||i>=c->capacity)return WORLD_SCENE_INVALID;
     WorldStreamingSceneCacheEntry *e=c->entries+i;if(!e->state||!e->references)return WORLD_SCENE_STATE;e->references--;return WORLD_SCENE_OK;
 }
+WorldStreamingSceneResult world_streaming_scene_cache_retain(WorldStreamingSceneCache *c,size_t i,uint32_t generation){
+    if(!c||!c->entries||i>=c->capacity)return WORLD_SCENE_INVALID;
+    WorldStreamingSceneCacheEntry *e=c->entries+i;
+    if(e->state!=2||e->generation!=generation||e->references==UINT32_MAX)return WORLD_SCENE_STATE;
+    e->references++;return WORLD_SCENE_OK;
+}
 WorldStreamingSceneResult world_streaming_scene_cache_pin(WorldStreamingSceneCache *c,size_t i,bool pin){
     if(!c||!c->entries||i>=c->capacity)return WORLD_SCENE_INVALID;
     WorldStreamingSceneCacheEntry *e=c->entries+i;if(!e->state||(pin&&e->pins==UINT32_MAX)||(!pin&&!e->pins))return WORLD_SCENE_STATE;

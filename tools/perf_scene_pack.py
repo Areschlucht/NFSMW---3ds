@@ -30,7 +30,8 @@ def pack(scene,output,report=None):
     if len(source)!=32:raise ValueError('Expected original source SHA256')
     assets=[]
     patterns={1:r'models/([0-9a-f]{8})\.wsm',2:r'sections/([0-9]+)\.wsi',3:r'textures/([0-9a-f]{8})-([0-9a-f]{64})\.wtx'}
-    for kind,collection in ((1,manifest['models'].values()),(2,manifest['sections']),(3,manifest['textures'].values())):
+    sections=list(manifest['sections'])+list(manifest.get('global_banks',[]))
+    for kind,collection in ((1,manifest['models'].values()),(2,sections),(3,manifest['textures'].values())):
         for row in collection:
             path=row['path'];match=re.fullmatch(patterns[kind],path)
             if not match:raise ValueError('Unexpected asset path:'+path)

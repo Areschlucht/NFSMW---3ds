@@ -43,6 +43,13 @@ class ScenePackTests(unittest.TestCase):
         path=self.dir/name;path.write_bytes(data);return path
     def test_exact_and_deterministic(self):
         self.invoke(self.archive,self.scene);other=self.dir/'other.mwp';pack(self.scene,other);self.assertEqual(self.archive.read_bytes(),other.read_bytes())
+    def test_explicit_boot_provider_bank_included(self):
+        data=b'boot-provider-bank';path=self.scene/'sections/0.wsi';path.write_bytes(data)
+        self.manifest['global_banks']=[{'path':'sections/0.wsi','bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}]
+        (self.scene/'manifest.json').write_text(json.dumps(self.manifest))
+        output=self.dir/'boot.mwp';report=pack(self.scene,output)
+        self.assertEqual(report['kind_counts']['2'],3)
+        self.invoke(output,self.scene)
     def test_refuse_overwrite_and_duplicate_key(self):
         with self.assertRaises(FileExistsError):pack(self.scene,self.archive)
         self.manifest['sections'].append(self.manifest['sections'][0]);(self.scene/'manifest.json').write_text(json.dumps(self.manifest))

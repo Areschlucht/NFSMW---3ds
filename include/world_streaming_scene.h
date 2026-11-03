@@ -82,6 +82,8 @@ WorldStreamingSceneResult world_streaming_scene_cache_acquire(WorldStreamingScen
    flight; cancellation releases that pin only after the producer has stopped. */
 WorldStreamingSceneResult world_streaming_scene_cache_ready(WorldStreamingSceneCache *,size_t,uint32_t generation,void *);
 WorldStreamingSceneResult world_streaming_scene_cache_release(WorldStreamingSceneCache *,size_t);
+/* O(1) retain after an exact, generation-checked immutable resource lookup. */
+WorldStreamingSceneResult world_streaming_scene_cache_retain(WorldStreamingSceneCache *,size_t,uint32_t generation);
 WorldStreamingSceneResult world_streaming_scene_cache_pin(WorldStreamingSceneCache *,size_t,bool);
 /* No implicit eviction. Caller frees the returned resource after ensuring GPU
    ownership is released. Eviction is legal only with zero references AND pins. */

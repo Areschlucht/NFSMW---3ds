@@ -20,11 +20,13 @@
 #include "mw_color_grade.h"
 #ifdef NFS_STREAMED_WORLD
 #include "streamed_world.h"
+#include "streamed_drive.h"
+#include "streamed_world_pack.h"
 #endif
 #include "rockport_vshader_shbin.h"
 #include "world_vshader_shbin.h"
 #define ROOT "sdmc:/3ds/nfsmw-rockport/"
-#define BUILD_VERSION "0.18-dev"
+#define BUILD_VERSION "0.18"
 #ifdef NFS_STREAMED_WORLD_PROBE
 #ifndef NFS_STREAMED_WORLD
 #error "Streamed probe requires NFS_STREAMED_WORLD"
@@ -39,7 +41,16 @@ typedef enum { MENU,DRIVE,GARAGE,CONTROLS,QUIT,DISPLAY } Screen;
 static Mesh world,body;
 #ifdef NFS_STREAMED_WORLD
 static StreamedWorld *stream_world;
+static MwScenePack scene_pack;
 static bool stream_has_frame;
+/* A failed stage retains the complete old view. Pause until explicit reset or
+   menu navigation; never repeat blocking SD work every frame on a bad asset. */
+static bool stream_blocked;
+static WorldCollisionRuntime collision_world;
+static unsigned char collision_arena[1024*1024];
+static uint16_t collision_sections[147];
+static size_t collision_section_count;
+static int stream_collision_error;
 #endif
 static RoadWorld road;
 static WheelRig wheel_rig;
@@ -50,6 +61,10 @@ static float simulation_ms;
 static MwUiAssets *ui_assets;
 static bool piss_filter; /* Neutral by default; an optional artistic grade. */
 static unsigned char map_rgb[152*128*3];
+/* Rasterize off-screen. The displayed bottom buffer must never be cleared or
+   repainted during LCD scanout, even when HUD updates are throttled. */
+static unsigned char ui_pixels[MW_UI_BYTES];
+static bool ui_pending;
 static C3D_RenderTarget *target;
 static DVLB_s *shader,*world_shader;
 static shaderProgram_s program,world_program;
@@ -208,16 +223,26 @@ static bool initialize(void)
     for (uint32_t i=0;i<body.scene.vertex_count;++i)
         car_ground_offset=fmaxf(car_ground_offset,-body.vertices[i].position[1]*road.car_half_extent);
 #ifdef NFS_STREAMED_WORLD
-    StreamedWorldConfig stream_config={.asset_root=ROOT "world-stream",
+    snprintf(error,sizeof(error),"Cannot read/validate world.mwp archive");
+    if (mw_scene_pack_open(&scene_pack,ROOT "world.mwp",2*1024*1024)!=MW_SCENE_PACK_OK) return false;
+    StreamedWorldConfig stream_config={.read_asset=streamed_world_pack_read,.read_context=&scene_pack,
         .metadata_path=ROOT "world-streaming.bin",.normal_bytes=12*1024*1024,
         .linear_bytes=20*1024*1024,.scratch_bytes=4*1024*1024,.cache_entries=2048,
         .object_capacity=4096,.run_capacity=32768,.render_scale=road.scale,
-        .lod_mode=STREAMED_WORLD_REFERENCE_SLOT0,.alpha_reference=40,
-        .comparison_zero_transparent_rgb=false};
+        .lod_mode=STREAMED_WORLD_SOURCE_LOD_COMPONENTS,.alpha_reference=40,
+        .comparison_zero_transparent_rgb=false,
+        .boot_global_provider_bank=true,.original_missing_texture_hash=0x66994f4a};
     StreamedWorldResult stream_result=streamed_world_create(&stream_config,&stream_world);
     if (stream_result!=STREAMED_WORLD_OK) {
         snprintf(error,sizeof(error),"Cannot initialize streamed map (%d)",(int)stream_result);return false;
     }
+    snprintf(error,sizeof(error),"Cannot read/validate original world.nwc collision");
+    if (world_collision_runtime_open(&collision_world,ROOT "world.nwc",collision_arena,sizeof(collision_arena))) return false;
+    raw=read_file(ROOT "world-streaming.bin",&size);
+    bool same_source=raw && size>=96 && !memcmp(raw+64,collision_world.source_sha256,32) &&
+        !memcmp(raw+64,scene_pack.source_sha256,32);
+    free(raw);
+    if (!same_source) { snprintf(error,sizeof(error),"Map/collision source identity mismatch");return false; }
 #endif
     C3D_CullFace(GPU_CULL_NONE);
     C3D_AlphaTest(true,GPU_GREATER,0);
@@ -358,14 +383,30 @@ static StreamedWorldResult prepare_streamed_world(const DriveState *car)
     }
     length=sqrtf(length);if (!(length>0)) return STREAMED_WORLD_INVALID;
     for (unsigned a=0;a<3;++a) view.forward_viewer[a]/=length;
-    /* Slot0 mode is an explicit geometry/upload diagnostic. Source LOD/view
-       producers will be wired separately; no guessed source view-state here. */
+    /* Ordinary main driving view uses source normal-context LOD components.
+       Special race/replay view-state producers remain outside this prototype. */
+    stream_collision_error=0;
 #ifdef NFS_STREAMED_WORLD_PROBE
-    (void)car;return streamed_world_prepare(stream_world,360,2410,&view);
+    (void)car;StreamedWorldResult result=streamed_world_prepare(stream_world,360,2410,&view);
 #else
-    return streamed_world_prepare(stream_world,car->x+road.origin[0],
+    StreamedWorldResult result=streamed_world_prepare(stream_world,car->x+road.origin[0],
                                   -(car->z+road.origin[2]),&view);
 #endif
+    if (result!=STREAMED_WORLD_OK) return result;
+    uint16_t sections[147];size_t count=0;
+    result=streamed_world_sections(stream_world,sections,147,&count);
+    if (result!=STREAMED_WORLD_OK) { stream_has_frame=false;return result; }
+    if (collision_world.ready && count==collision_section_count &&
+        !memcmp(sections,collision_sections,count*sizeof(*sections))) return STREAMED_WORLD_OK;
+    WorldCollisionAdmission admission;
+    stream_collision_error=world_collision_runtime_activate(&collision_world,sections,count,&admission);
+    if (stream_collision_error) {
+        /* Renderer has staged its new view, but collision is not ready. Do not
+           present either consumer as playable; reset/menu remains available. */
+        stream_has_frame=false;return STREAMED_WORLD_IO;
+    }
+    memcpy(collision_sections,sections,count*sizeof(*sections));collision_section_count=count;
+    return STREAMED_WORLD_OK;
 }
 #endif
 static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
@@ -380,6 +421,9 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
         .slip_degrees=atan2f(car->lateral_speed,fmaxf(fabsf(car->speed),.01f))*57.29578f};
     if (screen==DRIVE && !edge && road_edge_ahead(&road,car,height))
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
+#ifdef NFS_STREAMED_WORLD
+    if (screen==DRIVE && stream_blocked) ui.road_status=MW_UI_MAP_PAUSED;
+#endif
     return ui;
 }
 static void draw_ui(const MwUiModel *ui,const DriveState *car)
@@ -387,9 +431,21 @@ static void draw_ui(const MwUiModel *ui,const DriveState *car)
     const unsigned char *map=NULL;
     if (ui->mode==MW_UI_DRIVE && ui->panel==MW_UI_NAVIGATION &&
         road_map_render(&navigation,&road,car,map_rgb,152,128)) map=map_rgb;
+    if (mw_ui_render(ui_pixels,sizeof(ui_pixels),ui,map)) ui_pending=true;
+}
+static void present_ui(void)
+{
+    if (!ui_pending) return;
+    /* Complete the preceding bottom swap before reusing its old front buffer.
+       SYNCDRAW fences GPU work, and is not a bottom-screen VBlank contract. */
+    gspWaitForVBlank();
     u16 width,height_px;u8 *framebuffer=gfxGetFramebuffer(GFX_BOTTOM,GFX_LEFT,&width,&height_px);
     if (!framebuffer || width!=240 || height_px!=320 || gfxGetScreenFormat(GFX_BOTTOM)!=GSP_RGB565_OES) return;
-    (void)mw_ui_render(framebuffer,(size_t)width*height_px*2,ui,map);
+    memcpy(framebuffer,ui_pixels,sizeof(ui_pixels));
+    GSPGPU_FlushDataCache(framebuffer,sizeof(ui_pixels));
+    /* Citro3D swaps only its linked TOP render target. Bottom is CPU-rendered
+       and swapped exactly once here; never flip an untouched stale buffer. */
+    gfxScreenSwapBuffers(GFX_BOTTOM,false);ui_pending=false;
 }
 int main(void)
 {
@@ -398,7 +454,10 @@ int main(void)
     DriveState car;drive_reset(&car,road.spawn[0],road.spawn[2],road.heading);float height=road.spawn[1];bool edge=false;
     RoadPose pose={.height=height,.normal={0,1,0}};
     MwUiPanel panel=MW_UI_NAVIGATION;
-    if (ok) { MwUiModel ui=ui_model(screen,selected,&car,height,edge,panel,0);draw_ui(&ui,&car); }
+    if (ok) {
+        gfxSetDoubleBuffering(GFX_BOTTOM,true);
+        MwUiModel ui=ui_model(screen,selected,&car,height,edge,panel,0);draw_ui(&ui,&car);
+    }
     else printf("NFS MW Rockport v%s\n\n%s\n\nExtract the complete ZIP\nto the SD card root.\n\nSTART: exit\n",BUILD_VERSION,error);
     WheelMotion motion={0},garage_motion={0},stationary={0};float garage_steering=0;bool orbit=true;
     u64 previous=osGetTime(),last_status=previous,fps_start=previous;unsigned fps_frames=0;float rotation=.65f;
@@ -439,7 +498,7 @@ int main(void)
         if (screen==QUIT) break;
         if (screen==DRIVE && (before!=DRIVE || (down&KEY_X))) {
 #ifdef NFS_STREAMED_WORLD
-            stream_has_frame=false;
+            stream_has_frame=false;stream_blocked=false;
 #endif
             drive_reset(&car,road.spawn[0],road.spawn[2],road.heading);height=road.spawn[1];edge=false;
             wheel_motion_reset(&motion);
@@ -452,22 +511,37 @@ int main(void)
         DriveState saved_car=car;float saved_height=height;
         WheelMotion saved_motion=motion;RoadPose saved_pose=pose;ChaseCamera saved_chase=chase;
 #endif
-        if (screen==DRIVE && before==DRIVE && dt>0 && !(down&KEY_X)) {
+        bool advance_drive=screen==DRIVE && before==DRIVE && dt>0 && !(down&KEY_X);
+#ifdef NFS_STREAMED_WORLD
+        advance_drive=advance_drive && !stream_blocked;
+#endif
+        if (advance_drive) {
             circlePosition pad;hidCircleRead(&pad);
             float steering=abs(pad.dx)>15?pad.dx/156.0f:0;
             steering+=!!(held&KEY_RIGHT)-!!(held&KEY_LEFT);
             DriveInput input={.throttle=!!(held&KEY_A)-!!(held&KEY_Y),.brake=!!(held&KEY_B),.steering=-steering,.handbrake=held&KEY_R};
             DriveState previous_car=car;float previous_height=height;
+#ifdef NFS_STREAMED_WORLD
+            StreamedDriveSurface surface={&collision_world,&road};
+            int advanced=streamed_drive_step(&surface,&car,&height,input,dt);
+            edge=advanced!=1;
+            if (advanced<0) { stream_blocked=true;stream_has_frame=false;ui_changed=true; }
+#else
             edge=!road_drive_step(&road,&car,&height,input,dt);
+#endif
             WheelMotion previous_motion=motion;
             if (!wheel_motion_update(&wheel_rig,&motion,&previous_car,&car)) wheel_motion_reset(&motion);
             else if (input.handbrake) (void)wheel_motion_lock_rear(&wheel_rig,&previous_motion,&motion);
             if (car.x!=previous_car.x || car.z!=previous_car.z || car.heading!=previous_car.heading || height!=previous_height) {
                 pose=(RoadPose){.height=height,.normal={0,1,0}};
+#ifdef NFS_STREAMED_WORLD
+                (void)road_pose_sample_with_surface(&road,&wheel_rig,&car,height,&pose,streamed_drive_surface,&surface);
+#else
                 (void)road_pose_sample(&road,&wheel_rig,&car,height,&pose);
+#endif
             }
         }
-        if (screen==DRIVE && before==DRIVE && dt>0 && !(down&KEY_X)) (void)chase_step(&chase,&car,height,dt);
+        if (advance_drive) (void)chase_step(&chase,&car,height,dt);
         if (screen==GARAGE && before==GARAGE) {
             if (down&KEY_Y) orbit=!orbit;
             circlePosition pad;hidCircleRead(&pad);
@@ -489,19 +563,20 @@ int main(void)
         }
 #endif
 #ifdef NFS_STREAMED_WORLD
-        if (screen==DRIVE) {
+        if (screen==DRIVE && !stream_blocked) {
+            if (!stream_has_frame) {
+                MwUiModel loading=ui_model(screen,selected,&car,height,edge,panel,held);
+                loading.road_status=MW_UI_MAP_LOADING;draw_ui(&loading,&car);present_ui();
+            }
             StreamedWorldResult result=prepare_streamed_world(&car);
             if (result==STREAMED_WORLD_OK) stream_has_frame=true;
             else {
                 StreamedWorldStats stats={0};streamed_world_stats(stream_world,&stats);
-                snprintf(error,sizeof(error),"Map load (%d): %.110s",(int)result,stats.detail);
+                if (stream_collision_error) snprintf(error,sizeof(error),"Collision load (%d)",stream_collision_error);
+                else snprintf(error,sizeof(error),"Map load (%d): %.110s",(int)result,stats.detail);
                 svcOutputDebugString(error,(s32)strlen(error));
-                if (!stream_has_frame) {
-                    ok=false;consoleClear();printf("Streamed map unavailable\n\n%s\n\nSTART: exit\n",error);
-                    continue;
-                }
                 car=saved_car;height=saved_height;motion=saved_motion;pose=saved_pose;
-                chase=saved_chase;edge=true;ui_changed=true;
+                chase=saved_chase;stream_blocked=true;ui_changed=true;
             }
         }
 #endif
@@ -513,12 +588,23 @@ int main(void)
         const WheelMotion *display_motion=screen==DRIVE?&motion:screen==GARAGE?&garage_motion:&stationary;
         float logic_ms=(float)(svcGetSystemTick()-cpu_begin)*(1000.0f/SYSCLOCK_ARM11);
         simulation_ms+=(logic_ms-simulation_ms)*.1f;
-        if (C3D_FrameBegin(C3D_FRAME_SYNCDRAW)) { render(screen,&car,height,rotation,display_motion,screen==GARAGE?garage_steering:0,&pose);gfxFlushBuffers();C3D_FrameEnd(0);++fps_frames; }
+        Screen render_screen=screen;
+#ifdef NFS_STREAMED_WORLD
+        /* No completed world exists after a failed initial load/reset. Keep
+           menu preview above the actionable bottom-screen load status. */
+        if (screen==DRIVE && !stream_has_frame) render_screen=MENU;
+#endif
+        if (C3D_FrameBegin(C3D_FRAME_SYNCDRAW)) {
+            render(render_screen,&car,height,rotation,display_motion,screen==GARAGE?garage_steering:0,&pose);
+            present_ui();C3D_FrameEnd(0);++fps_frames;
+        }
         u64 fps_now=osGetTime();
         if (fps_now-fps_start>=1000) { measured_fps=(unsigned)((fps_frames*1000ULL+(fps_now-fps_start)/2)/(fps_now-fps_start));fps_start=fps_now;fps_frames=0; }
     }
 #ifdef NFS_STREAMED_WORLD
+    world_collision_runtime_close(&collision_world);
     streamed_world_destroy(stream_world);
+    mw_scene_pack_close(&scene_pack);
 #endif
     if (gpu_ready) C3D_Fini();
     free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);

@@ -49,7 +49,7 @@ typedef struct {
     uint32_t linear_used,linear_budget,scratch_bytes;
     uint32_t asset_queries,asset_reads,model_uploads,texture_uploads,arena_allocations;
     uint32_t boot_provider_banks;
-    uint32_t texture_fallback_bindings; /* Visible original-batch lookup misses. */
+    uint32_t texture_fallback_bindings; /* Visible coalesced-span lookup misses. */
     StreamedWorldResult result;
     char detail[160];
 } StreamedWorldStats;
@@ -67,5 +67,8 @@ StreamedWorldResult streamed_world_prepare(StreamedWorld *,float render_source_x
    Projection belongs to the same camera used for successful prepare. */
 void streamed_world_draw(StreamedWorld *,shaderProgram_s *,int projection_location,int model_view_location,const C3D_Mtx *projection);
 void streamed_world_stats(const StreamedWorld *,StreamedWorldStats *);
+/* Copy the active original source-section IDs for collision admission. Export
+   boot providers are excluded. Capacity failure reports count without writes. */
+StreamedWorldResult streamed_world_sections(const StreamedWorld *,uint16_t *,size_t,size_t *);
 void streamed_world_destroy(StreamedWorld *); /* Outside frame, before C3D_Fini. */
 #endif

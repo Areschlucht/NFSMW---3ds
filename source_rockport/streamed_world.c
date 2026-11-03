@@ -44,10 +44,12 @@ static size_t arena_used(const Arena *a){size_t n=0;for(const ArenaBlock *b=(con
 static uint32_t word(const uint8_t *p){return (uint32_t)p[0]|(uint32_t)p[1]<<8|(uint32_t)p[2]<<16|(uint32_t)p[3]<<24;}
 static float real(const uint8_t *p){uint32_t bits=word(p);float x;memcpy(&x,&bits,4);return x;}
 static int16_t signed_half(const uint8_t *p){uint16_t bits=(uint16_t)(p[0]|(uint16_t)p[1]<<8);int16_t x;memcpy(&x,&bits,2);return x;}
-typedef struct { uint32_t hash;uint8_t identity[32]; } Provider;
+typedef struct { uint32_t hash;uint8_t identity[32];int32_t cache_slot,base_slot; } Provider;
 typedef struct { uint16_t id;uint32_t owners;void *bytes;WorldStreamingSceneSection view; } Section;
+typedef struct { uint32_t first,count,texture_hash; } ModelBatch;
 typedef struct {
     void *bytes,*gpu;uint16_t *indices;WorldStreamingSceneModel view;
+    ModelBatch *batches;uint32_t batch_count;
     C3D_BufInfo buffer;float origin[3];
 } Model;
 typedef struct { C3D_Tex texture;uint32_t alpha_test,blend;bool initialized; } Texture;
@@ -104,7 +106,7 @@ static StreamedWorldResult scratch_asset(StreamedWorld *w,StreamedWorldAssetKind
 static int compare_provider(const void *left,const void *right){
     const Provider *a=left,*b=right;if(a->hash<b->hash)return -1;if(a->hash>b->hash)return 1;return memcmp(a->identity,b->identity,32);
 }
-static const Provider *provider(const Provider *p,uint32_t count,uint32_t hash){
+static Provider *provider(Provider *p,uint32_t count,uint32_t hash){
     uint32_t low=0,high=count;while(low<high){uint32_t mid=low+(high-low)/2;if(p[mid].hash<hash)low=mid+1;else high=mid;}
     return low<count&&p[low].hash==hash?p+low:NULL;
 }
@@ -124,7 +126,7 @@ static StreamedWorldResult provider_table(StreamedWorld *w,Frame *f,bool texture
             WorldStreamingSceneBinding binding;
             bool ok=textures?world_streaming_scene_texture_binding(s,j,&binding):world_streaming_scene_model_binding(s,j,&binding);
             if(!ok){arena_free(&w->arena,table);return error(w,STREAMED_WORLD_FORMAT,"Invalid provider record",s->id);}
-            table[used].hash=binding.hash;memcpy(table[used].identity,binding.identity,32);used++;
+            table[used].hash=binding.hash;memcpy(table[used].identity,binding.identity,32);table[used].cache_slot=-1;table[used].base_slot=-1;used++;
         }
     }
     if(total)qsort(table,total,sizeof(*table),compare_provider);
@@ -145,7 +147,7 @@ static void collect_unused(StreamedWorld *w){
         if(!entry->state||entry->references||entry->pins)continue;
         unsigned kind=entry->kind;void *resource=NULL;
         if(world_streaming_scene_cache_evict(&w->cache,i,&resource)!=WORLD_SCENE_OK||!resource)continue;
-        if(kind==WORLD_SCENE_MODEL){Model *m=resource;if(m->gpu)linearFree(m->gpu);arena_free(&w->arena,m->bytes);arena_free(&w->arena,m);}
+        if(kind==WORLD_SCENE_MODEL){Model *m=resource;if(m->gpu)linearFree(m->gpu);arena_free(&w->arena,m->batches);arena_free(&w->arena,m->bytes);arena_free(&w->arena,m);}
         else {Texture *t=resource;if(t->initialized)C3D_TexDelete(&t->texture);arena_free(&w->arena,t);}
     }
 }
@@ -162,20 +164,26 @@ static void own_reference(StreamedWorld *w,Frame *f,size_t slot){
     if(f->references[slot]){world_streaming_scene_cache_release(&w->cache,slot);return;}
     f->references[slot]=1;f->reference_slots[f->reference_count++]=(uint16_t)slot;
 }
-static int cache_exact(StreamedWorld *w,WorldStreamingSceneKind kind,const Provider *p){
+static int cache_exact(StreamedWorld *w,WorldStreamingSceneKind kind,Provider *p){
+    if(p->cache_slot>=0&&(size_t)p->cache_slot<w->cache.capacity){
+        const WorldStreamingSceneCacheEntry *e=w->cache.entries+p->cache_slot;
+        if(e->state==2&&e->kind==kind&&e->hash==p->hash&&!memcmp(e->identity,p->identity,32))return p->cache_slot;
+    }
     for(size_t i=0;i<w->cache.capacity;i++){
         const WorldStreamingSceneCacheEntry *e=w->cache.entries+i;
-        if(e->state==2&&e->kind==kind&&e->hash==p->hash&&!memcmp(e->identity,p->identity,32))return (int)i;
+        if(e->state==2&&e->kind==kind&&e->hash==p->hash&&!memcmp(e->identity,p->identity,32)){p->cache_slot=(int32_t)i;return (int)i;}
     }
     return -1;
 }
 static StreamedWorldResult acquire_existing(StreamedWorld *w,Frame *f,WorldStreamingSceneKind kind,const Provider *p,size_t *slot){
-    uint32_t generation;
-    if(world_streaming_scene_cache_acquire(&w->cache,kind,p->hash,p->identity,0,0,slot,&generation)!=WORLD_SCENE_OK)return error(w,STREAMED_WORLD_FORMAT,"Invalid cache reference",p->hash);
+    (void)kind;*slot=(size_t)p->cache_slot;
+    if(f->references[*slot])return STREAMED_WORLD_OK;
+    uint32_t generation=w->cache.entries[*slot].generation;
+    if(world_streaming_scene_cache_retain(&w->cache,*slot,generation)!=WORLD_SCENE_OK)return error(w,STREAMED_WORLD_FORMAT,"Invalid cache reference",p->hash);
     own_reference(w,f,*slot);return STREAMED_WORLD_OK;
 }
 static StreamedWorldResult model_resource(StreamedWorld *w,Frame *f,uint32_t hash,size_t *slot){
-    const Provider *p=provider(f->models,f->model_count,hash);
+    Provider *p=provider(f->models,f->model_count,hash);
     if(!p)return error(w,STREAMED_WORLD_MISSING,"No active model provider",hash);
     if(cache_exact(w,WORLD_SCENE_MODEL,p)>=0)return acquire_existing(w,f,WORLD_SCENE_MODEL,p,slot);
     size_t bytes;StreamedWorldResult result=scratch_asset(w,STREAMED_WORLD_MODEL,hash,p->identity,&bytes);if(result)return result;
@@ -184,12 +192,38 @@ static StreamedWorldResult model_resource(StreamedWorld *w,Frame *f,uint32_t has
     Model *m=arena_alloc(&w->arena,sizeof(*m));void *payload=arena_alloc(&w->arena,bytes);
     if(!m||!payload){arena_free(&w->arena,m);arena_free(&w->arena,payload);return error(w,STREAMED_WORLD_BUDGET,"Normal model budget",hash);}
     memcpy(payload,w->scratch,bytes);m->bytes=payload;m->view=source;m->view.data=payload;
+    /* Immutable source batch spans need decoding only once. Coalesce only
+       adjacent identical texture hashes; original descriptors stay in payload.
+       Stage-time GPU-state merging still handles effective fallback aliases. */
+    ModelBatch previous={0};uint32_t spans=0;bool merge_batches=true;
+#ifdef STREAMED_WORLD_DISABLE_RUN_MERGE
+    merge_batches=false;
+#endif
+    for(uint32_t i=0;i<source.batch_count;i++){
+        WorldStreamingSceneBatch b;
+        if(!world_streaming_scene_model_batch(&m->view,i,&b)){
+            arena_free(&w->arena,payload);arena_free(&w->arena,m);return error(w,STREAMED_WORLD_FORMAT,"Invalid immutable batch",hash);
+        }
+        if(!b.index_count)continue;
+        if(merge_batches&&spans&&previous.texture_hash==b.texture_hash&&previous.first+previous.count==b.first_index)previous.count+=b.index_count;
+        else {previous=(ModelBatch){b.first_index,b.index_count,b.texture_hash};spans++;}
+    }
+    if(spans){
+        m->batches=arena_alloc(&w->arena,(size_t)spans*sizeof(*m->batches));
+        if(!m->batches){arena_free(&w->arena,payload);arena_free(&w->arena,m);return error(w,STREAMED_WORLD_BUDGET,"Normal batch budget",hash);}
+        for(uint32_t i=0;i<source.batch_count;i++){
+            WorldStreamingSceneBatch b;world_streaming_scene_model_batch(&m->view,i,&b);if(!b.index_count)continue;
+            ModelBatch *last=m->batch_count?m->batches+m->batch_count-1:NULL;
+            if(merge_batches&&last&&last->texture_hash==b.texture_hash&&last->first+last->count==b.first_index)last->count+=b.index_count;
+            else m->batches[m->batch_count++]=(ModelBatch){b.first_index,b.index_count,b.texture_hash};
+        }
+    }
     for(unsigned a=0;a<3;a++)m->origin[a]=(float)(((double)source.bounds[a]+source.bounds[a+3])*.5);
     size_t index_offset=padded((size_t)source.vertex_count*sizeof(WorldVertex),128);
     size_t linear_bytes=padded(index_offset+(size_t)source.index_count*2,128);
-    size_t normal_bytes=arena_charge(m)+arena_charge(payload);uint32_t generation;
+    size_t normal_bytes=arena_charge(m)+arena_charge(payload)+arena_charge(m->batches);uint32_t generation;
     WorldStreamingSceneResult acquired=world_streaming_scene_cache_acquire(&w->cache,WORLD_SCENE_MODEL,hash,p->identity,(uint32_t)normal_bytes,(uint32_t)linear_bytes,slot,&generation);
-    if(acquired!=WORLD_SCENE_OK){arena_free(&w->arena,payload);arena_free(&w->arena,m);return error(w,acquired==WORLD_SCENE_CAPACITY?STREAMED_WORLD_CAPACITY:STREAMED_WORLD_BUDGET,"Model cache budget",hash);}
+    if(acquired!=WORLD_SCENE_OK){arena_free(&w->arena,m->batches);arena_free(&w->arena,payload);arena_free(&w->arena,m);return error(w,acquired==WORLD_SCENE_CAPACITY?STREAMED_WORLD_CAPACITY:STREAMED_WORLD_BUDGET,"Model cache budget",hash);}
     if(!source.index_count){
         if(world_streaming_scene_cache_ready(&w->cache,*slot,generation,m)!=WORLD_SCENE_OK){result=error(w,STREAMED_WORLD_FORMAT,"Empty model ready transition",hash);goto failed;}
         own_reference(w,f,*slot);return STREAMED_WORLD_OK;
@@ -205,11 +239,11 @@ static StreamedWorldResult model_resource(StreamedWorld *w,Frame *f,uint32_t has
     own_reference(w,f,*slot);return STREAMED_WORLD_OK;
 failed:
     if(m->gpu)linearFree(m->gpu);
-    arena_free(&w->arena,payload);arena_free(&w->arena,m);
+    arena_free(&w->arena,m->batches);arena_free(&w->arena,payload);arena_free(&w->arena,m);
     world_streaming_scene_cache_release(&w->cache,*slot);void *unused=NULL;world_streaming_scene_cache_evict(&w->cache,*slot,&unused);return result;
 }
 static StreamedWorldResult texture_resource(StreamedWorld *w,Frame *f,uint32_t hash,size_t *slot){
-    const Provider *p=provider(f->textures,f->texture_count,hash);
+    Provider *p=provider(f->textures,f->texture_count,hash);
     if(!p&&w->config.original_missing_texture_hash){
         /* Original generic model fixup requests bTextureLookup(hash,1,0).
            Final lookup miss returns the actual registered DEFAULTALPHA. A
@@ -239,22 +273,26 @@ failed:
     world_streaming_scene_cache_release(&w->cache,*slot);void *unused=NULL;world_streaming_scene_cache_evict(&w->cache,*slot,&unused);return result;
 }
 static StreamedWorldResult base_info(StreamedWorld *w,Frame *f,uint32_t hash,BaseInfo *out){
-    memset(out,0,sizeof(*out));const Provider *p=provider(f->models,f->model_count,hash);if(!p)return STREAMED_WORLD_OK;
-    for(uint32_t i=0;i<w->config.cache_entries;i++)if(w->base_info[i].valid&&w->base_info[i].hash==hash&&!memcmp(w->base_info[i].identity,p->identity,32)){*out=w->base_info[i];return STREAMED_WORLD_OK;}
+    memset(out,0,sizeof(*out));Provider *p=provider(f->models,f->model_count,hash);if(!p)return STREAMED_WORLD_OK;
+    if(p->base_slot>=0&&(uint32_t)p->base_slot<w->config.cache_entries){
+        BaseInfo *b=w->base_info+p->base_slot;
+        if(b->valid&&b->hash==hash&&!memcmp(b->identity,p->identity,32)){*out=*b;return STREAMED_WORLD_OK;}
+    }
+    for(uint32_t i=0;i<w->config.cache_entries;i++)if(w->base_info[i].valid&&w->base_info[i].hash==hash&&!memcmp(w->base_info[i].identity,p->identity,32)){p->base_slot=(int32_t)i;*out=w->base_info[i];return STREAMED_WORLD_OK;}
     size_t bytes;StreamedWorldResult result=scratch_asset(w,STREAMED_WORLD_MODEL,hash,p->identity,&bytes);if(result)return result;
     WorldStreamingSceneModel m;
     if(world_streaming_scene_model_open(w->scratch,bytes,&m)!=WORLD_SCENE_OK||m.hash!=hash||memcmp((uint8_t *)w->scratch+184,p->identity,32))return error(w,STREAMED_WORLD_FORMAT,"Invalid base LOD model",hash);
     out->hash=hash;memcpy(out->identity,p->identity,32);out->triangles=signed_half(m.data+m.source_header+20);out->metric=real(m.data+m.source_header+156);out->mesh=m.index_count!=0;out->valid=true;
     if(!isfinite(out->metric))return error(w,STREAMED_WORLD_FORMAT,"Invalid source LOD metric",hash);
-    w->base_info[w->base_next++%w->config.cache_entries]=*out;return STREAMED_WORLD_OK;
+    p->base_slot=(int32_t)(w->base_next++%w->config.cache_entries);w->base_info[p->base_slot]=*out;return STREAMED_WORLD_OK;
 }
 static float lod_sqrt(float squared,void *context){(void)context;return mw_gekko_sqrt_newton2(squared);}
-static bool visible_instance(const WorldStreamingSceneInstance *instance,const StreamedWorldView *view,const WorldFrustum *frustum){
+static bool visible_bounds(const float bounds[6],const StreamedWorldView *view,const WorldFrustum *frustum){
     WorldBounds b;unsigned source_axis[3]={0,2,1};
     for(unsigned a=0;a<3;a++){
-        unsigned s=source_axis[a];double center=((double)instance->bounds[s]+instance->bounds[s+3])*.5;
+        unsigned s=source_axis[a];double center=((double)bounds[s]+bounds[s+3])*.5;
         if(a==2)center=-center;
-        b.center[a]=(float)(center-view->camera_viewer[a]);b.extent[a]=(instance->bounds[s+3]-instance->bounds[s])*.5f;
+        b.center[a]=(float)(center-view->camera_viewer[a]);b.extent[a]=(bounds[s+3]-bounds[s])*.5f;
     }
     return world_visible(frustum,&b);
 }
@@ -295,11 +333,18 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
     float camera[3]={(float)f->view.camera_viewer[0],(float)-f->view.camera_viewer[2],(float)f->view.camera_viewer[1]};
     float forward[3]={f->view.forward_viewer[0],-f->view.forward_viewer[2],f->view.forward_viewer[1]};
     float projection=mw_lod_projection_raw(f->view.original_fov_turn);
+    bool standard_up=fabsf(f->view.up_viewer[0])<1e-6f&&fabsf(f->view.up_viewer[2])<1e-6f&&f->view.up_viewer[1]>0;
     for(uint32_t s=0;s<f->section_count;s++)for(uint32_t i=0;i<f->sections[s]->view.instance_count;i++){
+        /* Section open has validated these immutable records. Reject by the
+           exact same bounds before decoding nine matrix elements/four LODs. */
+        if(standard_up){
+            const WorldStreamingSceneSection *section=&f->sections[s]->view;
+            const uint8_t *record=section->data+section->instances+i*144+8;
+            float bounds[6];for(unsigned a=0;a<6;a++)bounds[a]=real(record+a*4);
+            if(!visible_bounds(bounds,&f->view,&frustum))continue;
+        }
         WorldStreamingSceneInstance instance;
         if(!world_streaming_scene_instance(&f->sections[s]->view,i,&instance))return error(w,STREAMED_WORLD_FORMAT,"Invalid instance",f->sections[s]->id);
-        bool standard_up=fabsf(f->view.up_viewer[0])<1e-6f&&fabsf(f->view.up_viewer[2])<1e-6f&&f->view.up_viewer[1]>0;
-        if(standard_up&&!visible_instance(&instance,&f->view,&frustum))continue;
         int slot=0;
         if(w->config.lod_mode==STREAMED_WORLD_SOURCE_LOD_COMPONENTS){
             MwLodSelectInput input={0};input.instance_flags=word(instance.original_instance+24);input.context_flags=f->view.original_context_flags;input.original_view_state=f->view.original_view_state;
@@ -315,10 +360,9 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
         if(f->object_count>=w->config.object_capacity)return error(w,STREAMED_WORLD_CAPACITY,"Visible instance limit",0);
         uint32_t object=f->object_count++;
         f->objects[object]=(Object){(uint16_t)s,(uint16_t)model_slot,i};
-        for(uint32_t b=0;b<m->view.batch_count;b++){
-            WorldStreamingSceneBatch batch;if(!world_streaming_scene_model_batch(&m->view,b,&batch))return error(w,STREAMED_WORLD_FORMAT,"Invalid model batch",m->view.hash);
-            if(!batch.index_count)continue;
-            size_t texture_slot;result=texture_resource(w,f,batch.texture_hash,&texture_slot);if(result)return result;
+        for(uint32_t b=0;b<m->batch_count;b++){
+            const ModelBatch *batch=m->batches+b;
+            size_t texture_slot;result=texture_resource(w,f,batch->texture_hash,&texture_slot);if(result)return result;
             /* WSM retains every original descriptor/material record. The current
                shader consumes no per-descriptor state beyond the resolved WTX;
                merge only this adjacent identical GPU state, preserving indices.
@@ -328,12 +372,12 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
 #ifdef STREAMED_WORLD_DISABLE_RUN_MERGE
             merge_allowed=false; /* Offline ordered-state reference only. */
 #endif
-            if(merge_allowed&&previous&&previous->object==object&&previous->texture==texture_slot&&previous->first+previous->count==batch.first_index)previous->count+=batch.index_count;
+            if(merge_allowed&&previous&&previous->object==object&&previous->texture==texture_slot&&previous->first+previous->count==batch->first)previous->count+=batch->count;
             else {
                 if(f->run_count>=w->config.run_capacity)return error(w,STREAMED_WORLD_CAPACITY,"Draw run limit",0);
-                f->runs[f->run_count++]=(Run){batch.first_index,batch.index_count,(uint16_t)object,(uint16_t)texture_slot};
+                f->runs[f->run_count++]=(Run){batch->first,batch->count,(uint16_t)object,(uint16_t)texture_slot};
             }
-            f->triangles+=batch.index_count/3;
+            f->triangles+=batch->count/3;
         }
     }
     return STREAMED_WORLD_OK;
@@ -379,17 +423,31 @@ StreamedWorldResult streamed_world_create(const StreamedWorldConfig *config,Stre
     world_streaming_selector_init(&w->database,&w->selector);AttrInfo_Init(&w->attributes);AttrInfo_AddLoader(&w->attributes,0,GPU_FLOAT,3);AttrInfo_AddLoader(&w->attributes,1,GPU_FLOAT,2);AttrInfo_AddLoader(&w->attributes,2,GPU_FLOAT,4);
     *out=w;update_stats(w);return STREAMED_WORLD_OK;
 }
+static bool same_view(const StreamedWorldView *a,const StreamedWorldView *b){
+    for(unsigned i=0;i<3;i++)if(a->camera_viewer[i]!=b->camera_viewer[i]||a->forward_viewer[i]!=b->forward_viewer[i]||a->up_viewer[i]!=b->up_viewer[i])return false;
+    return a->vertical_fov_radians==b->vertical_fov_radians&&a->aspect==b->aspect&&
+        a->near_world==b->near_world&&a->far_world==b->far_world&&
+        a->original_fov_turn==b->original_fov_turn&&a->original_view_state==b->original_view_state&&
+        a->original_context_flags==b->original_context_flags;
+}
 StreamedWorldResult streamed_world_prepare(StreamedWorld *w,float source_x,float source_y,const StreamedWorldView *view){
     if(!w||!view||!isfinite(source_x)||!isfinite(source_y))return STREAMED_WORLD_INVALID;
     for(unsigned a=0;a<3;a++)if(!isfinite(view->camera_viewer[a])||fabs(view->camera_viewer[a])>1e7||!isfinite(view->forward_viewer[a])||!isfinite(view->up_viewer[a]))return error(w,STREAMED_WORLD_INVALID,"Invalid camera",0);
     float forward_length=0,up_length=0,dot=0;
     for(unsigned a=0;a<3;a++){forward_length+=view->forward_viewer[a]*view->forward_viewer[a];up_length+=view->up_viewer[a]*view->up_viewer[a];dot+=view->forward_viewer[a]*view->up_viewer[a];}
     if(forward_length<.9f||forward_length>1.1f||up_length<.9f||up_length>1.1f||dot*dot>forward_length*up_length-.0001f)return error(w,STREAMED_WORLD_INVALID,"Invalid camera basis",0);
-    C3D_FrameSync();Frame *next=&w->frames[1-w->active];release_frame(w,next);collect_unused(w);next->view=*view;
     WorldStreamingSelector candidate=w->selector;uint16_t selected;
     WorldStreamingResult selection=world_streaming_select(&w->database,&candidate,source_x,source_y,&selected);
     if(selection!=WORLD_STREAMING_OK){update_stats(w);return error(w,selection==WORLD_STREAMING_NEAREST_REQUIRED?STREAMED_WORLD_NEAREST_REQUIRED:STREAMED_WORLD_FORMAT,"Original region selection",0);}
-    next->region=(uint32_t)(w->database.data[w->database.dependencies+selected*12]|(uint16_t)w->database.data[w->database.dependencies+selected*12+1]<<8);
+    uint32_t region=(uint32_t)(w->database.data[w->database.dependencies+selected*12]|(uint16_t)w->database.data[w->database.dependencies+selected*12+1]<<8);
+    Frame *current=&w->frames[w->active];
+    if(current->section_count&&current->region==region&&same_view(&current->view,view)){
+        /* Immutable resources and exact same camera/context: preserve the
+           complete draw plan, without touching references or GPU ownership. */
+        w->selector=candidate;w->stats.result=STREAMED_WORLD_OK;w->stats.detail[0]=0;return STREAMED_WORLD_OK;
+    }
+    C3D_FrameSync();Frame *next=&w->frames[1-w->active];release_frame(w,next);collect_unused(w);next->view=*view;
+    next->region=region;
     StreamedWorldResult result=stage_sections(w,next,selected);if(!result)result=stage_draws(w,next);
     if(result){release_frame(w,next);collect_unused(w);update_stats(w);return result;}
     unsigned old=w->active;if(next->borrowed_providers){w->frames[old].models=NULL;w->frames[old].textures=NULL;next->borrowed_providers=false;}
@@ -429,6 +487,14 @@ void streamed_world_draw(StreamedWorld *w,shaderProgram_s *program,int projectio
     }
 }
 void streamed_world_stats(const StreamedWorld *w,StreamedWorldStats *out){if(w&&out)*out=w->stats;}
+StreamedWorldResult streamed_world_sections(const StreamedWorld *w,uint16_t *ids,size_t capacity,size_t *count){
+    if(!w||!count||(!ids&&capacity))return STREAMED_WORLD_INVALID;
+    const Frame *f=&w->frames[w->active];size_t needed=0;
+    for(uint32_t i=0;i<f->section_count;i++)if(f->sections[i]->id)needed++;
+    *count=needed;if(capacity<needed)return STREAMED_WORLD_CAPACITY;
+    size_t used=0;for(uint32_t i=0;i<f->section_count;i++)if(f->sections[i]->id)ids[used++]=f->sections[i]->id;
+    return STREAMED_WORLD_OK;
+}
 void streamed_world_destroy(StreamedWorld *w){
     if(!w)return;
     C3D_FrameSync();release_frame(w,w->frames);release_frame(w,w->frames+1);collect_unused(w);void *scratch=w->scratch,*memory=w->arena.base;free(scratch);free(memory);
