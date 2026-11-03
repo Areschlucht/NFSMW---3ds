@@ -1,0 +1,101 @@
+{
+  "version": "0.18",
+  "scope": "Playable native asset-based prototype; original full-car physics and full-city validation remain incomplete",
+  "zip": {
+    "path": "/workspace/NFSMW---3ds/dist/nfsmw-rockport-prototype-v0.18.zip",
+    "bytes": 39240033,
+    "sha256": "579fc9b57b3dd3c682da5cce42f6d8250ce4bce610ffb91c2d0e856f898a24ba",
+    "files": 30,
+    "entry_sha256_verified": true
+  },
+  "binary_sha256": "469ddc8438849067093b343d171585469829ac85769e1003abce98f466579905",
+  "local_source_commit": "b8c7c146134cd2258632cbe281fce9dee46665ed",
+  "fault_test_program_segments_match_release": true,
+  "program_segments_sha256": "aee7cf71bcfb893d8290cea87e4eaaf6fc36957d25797e9639c6c911f3ed65c1",
+  "sdk_image": "devkitpro/devkitarm@sha256:116afba8df8453961de2936ffab20dd441edf4d682856c1ec8b0e53d7ed0bbf5",
+  "native_checks": {
+    "asan_ubsan": true,
+    "integrated_frames": 600,
+    "distance_m": 51.63,
+    "blocked_frames": 391,
+    "packed_payloads_compared_to_source": 17260,
+    "source_normals_preserved": 23112,
+    "normals_outside_previous_unit_window": 1713,
+    "changed_region_failure_recovery_cycles": 40,
+    "ordered_gpu_reference_hash": "6c29528717b5bd31",
+    "rollback_gpu_reference_hash": "7a9d72ee1bec1c3f",
+    "hud_texture_texels_checked": 131072,
+    "steady_view_asset_reads": 0,
+    "steady_view_arena_allocations": 0
+  },
+  "python_regressions": {
+    "tests": 18,
+    "result": "PASS",
+    "modules": [
+      "test_perf_scene_pack",
+      "test_world_collision_runtime",
+      "test_world_collision_response",
+      "test_mw_transmission",
+      "test_camera_recovery_profile",
+      "test_camera_recovery_direction",
+      "test_camera_recovery_cubic",
+      "test_camera_recovery_tuning"
+    ]
+  },
+  "failure_recovery_emulator": {
+    "fault": "CRC error injected into copied mandatory section2500 payload; original archive and ZIP unmodified",
+    "paused_frames": 12,
+    "speed_panel_variants": 1,
+    "all_labels_present": true,
+    "menu_return_visually_verified": true,
+    "final_program_tested": true,
+    "final_program_sampled_frames": 3
+  },
+  "hardware_fps_verified": false,
+  "hardware_lcd_verified": false,
+  "clean_sd_install_file_hashes_verified": 29,
+  "emulator_modes": {
+    "reset_difference": null,
+    "garage_reset_difference": null,
+    "neutral_restored_difference": null,
+    "driving_difference": [
+      0,
+      0,
+      400,
+      240
+    ],
+    "wheel_difference": [
+      158,
+      118,
+      278,
+      171
+    ],
+    "filter_difference": [
+      0,
+      0,
+      400,
+      240
+    ],
+    "missing_hud_labels": [],
+    "menu_frames": 20,
+    "menu_image_variants": 1,
+    "hardware_validated": false
+  },
+  "reset_stress": {
+    "frames": 80,
+    "resets": 5,
+    "speed_panel_variants": 1,
+    "all_labels_present": true
+  },
+  "release_accepted": true,
+  "shipping_install_checks": {
+    "fresh_zip_install": true,
+    "manifest_file_hashes_matched": 29,
+    "frames": 32,
+    "resets": 2,
+    "speed_panel_variants": 1,
+    "all_labels_present": true
+  },
+  "capture_checker_negative_fixture_rejected": true,
+  "source_checkpoint_branch": "codex/v018-checkpoint-20261103"
+}
