@@ -92,11 +92,22 @@ int main(int argc,char **argv)
     assert(mw_ui_touch(&m,160,220)==MW_UI_OPEN_MENU);
     m.piss_filter=true;assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"display-on",fb);
     assert(mw_ui_touch(&m,160,90)==MW_UI_TOGGLE_PISS_FILTER);
-    m.mode=(MwUiMode)(MW_UI_DISPLAY+1);
+    m.mode=MW_UI_TITLE;assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"frontend-title",fb);
+    m.mode=MW_UI_FRONTEND;m.frontend_title="ALIAS MANAGER";m.alias_name="ROCKPORT";
+    m.frontend_count=3;m.selected=1;m.frontend_rows[0]="CREATE ALIAS";
+    m.frontend_rows[1]="ROCKPORT";m.frontend_rows[2]="DRIVER 2";
+    m.frontend_hint="A: LOAD  X: RENAME  Y: DELETE";
+    assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"frontend-alias",fb);
+    m.frontend_title="MAIN MENU";m.frontend_count=6;m.selected=0;
+    const char *main_items[]={"CAREER","CHALLENGE SERIES","QUICK RACE","MY CARS","ALIAS MANAGER","OPTIONS"};
+    for(unsigned i=0;i<6;i++)m.frontend_rows[i]=main_items[i];
+    m.frontend_hint="A: SELECT  Y: FREE ROAM";
+    assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"frontend-main",fb);
+    m.mode=(MwUiMode)(MW_UI_FRONTEND+1);
     unsigned char first=fb[0];assert(!mw_ui_render(fb,MW_UI_BYTES,&m,NULL));assert(fb[0]==first);
     assert(mw_ui_touch(&m,160,90)==MW_UI_NONE);
     for (unsigned i=0;i<16;++i) assert(guarded[i]==0xa5 && guarded[MW_UI_BYTES+16+i]==0xa5);
     mw_ui_assets_free(assets);mw_ui_assets_free(NULL);
-    puts("UI framebuffer bounds, five menu rows and Display toggle/back checks passed; nine previews written.");
+    puts("UI framebuffer bounds, five menu rows and Display toggle/back checks passed; twelve previews written.");
     return 0;
 }

@@ -53,3 +53,12 @@ Native BMW lamp bank and complete music extraction/decoder checks are reproducib
 from new tools and private originals. Car candidate geometry coverage and failures
 are measured without relaxing strict decoding. Do not claim audio/lights/cars are
 integrated from read-only exports. No new release ZIP was published in this pass.
+
+Latest user steering: NO NEW BUILD. Prioritize cars, original menu/Alias flow,
+races, story and cutscenes. See docs/research/frontend-race-story-source-pass.md.
+App source now includes Press Start/Alias/main navigation; portable Alias save
+codec and race progress scaffold have host tests. Career/races/cutscene playback
+are not playable yet. No SDK build/emulator run/release in this pass. All83 car
+packages have private expanded exports (74complete/9partial); all32 movies and99
+FNG layouts recovered;216 ordered route arrays +source story/bin refs available.
+Do not ask for these files again. Original media/meshes remain private.

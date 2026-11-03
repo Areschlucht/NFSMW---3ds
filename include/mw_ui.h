@@ -9,7 +9,7 @@
 enum { MW_UI_WIDTH=320, MW_UI_HEIGHT=240, MW_UI_BYTES=320*240*2,
        MW_UI_MAP_WIDTH=152, MW_UI_MAP_HEIGHT=128 };
 typedef enum { MW_UI_MENU, MW_UI_DRIVE, MW_UI_GARAGE, MW_UI_CONTROLS,
-               MW_UI_DISPLAY } MwUiMode;
+               MW_UI_DISPLAY, MW_UI_TITLE, MW_UI_FRONTEND } MwUiMode;
 typedef enum { MW_UI_NAVIGATION, MW_UI_HELP, MW_UI_DIAGNOSTICS } MwUiPanel;
 typedef enum { MW_UI_NONE, MW_UI_OPEN_MENU, MW_UI_SELECT_DRIVE,
     MW_UI_SELECT_GARAGE, MW_UI_SELECT_CONTROLS, MW_UI_QUIT,
@@ -30,6 +30,9 @@ typedef struct {
     float speed_mps, slip_degrees, gpu_ms, draw_ms, logic_ms;
     bool handbrake, piss_filter, streamed_map;
     const MwUiAssets *assets;
+    const char *frontend_title,*alias_name,*frontend_hint;
+    const char *frontend_rows[6];
+    unsigned frontend_count;
 } MwUiModel;
 
 /* Optional map is tightly packed RGB8 at exactly MAP_WIDTH x MAP_HEIGHT.

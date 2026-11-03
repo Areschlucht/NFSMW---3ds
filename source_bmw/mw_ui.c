@@ -181,7 +181,7 @@ static void title_text(UiCanvas *c,int x,int y,const char *s,unsigned scale,unsi
 }
 static bool valid(const MwUiModel *m)
 {
-    return m && (unsigned)m->mode<=MW_UI_DISPLAY &&
+    return m && (unsigned)m->mode<=MW_UI_FRONTEND && m->frontend_count<=6 &&
         (unsigned)m->panel<=MW_UI_DIAGNOSTICS &&
         (unsigned)m->road_status<=MW_UI_MAP_LOADING;
 }
@@ -217,15 +217,30 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
     UiCanvas canvas={.fb=fb,.assets=m->assets};UiCanvas *c=&canvas;
     if (m->assets) memcpy(fb,m->assets->background,MW_UI_BYTES);
     else rect(fb,0,0,320,240,BG);
-    if (m->assets && m->mode==MW_UI_MENU) {
+    if(m->mode==MW_UI_TITLE) {
+        /* Press Start uses its full-screen artwork, without a duplicate header. */
+    } else if (m->assets && m->mode==MW_UI_MENU) {
         logo(c,12,0,192);text(c,224,12,"3DS",1,TEXT);text(c,224,25,"PROTOTYPE",1,MUTED);
     } else {
         rect(fb,0,0,320,24,PANEL);rect(fb,0,23,320,1,ACCENT);
         if (m->assets) logo(c,6,0,96);
         else text(c,8,8,"NFS MOST WANTED",1,TEXT);
-        text(c,206,8,"3DS PROTOTYPE",1,MUTED);
+        if(m->mode!=MW_UI_FRONTEND)text(c,206,8,"3DS PROTOTYPE",1,MUTED);
     }
-    if (m->mode==MW_UI_DRIVE) {
+    if (m->mode==MW_UI_TITLE) {
+        if(m->assets) logo(c,24,48,272);
+        else title_text(c,25,72,"MOST WANTED",2,TEXT);
+        title_text(c,55,162,"PRESS START",2,TEXT);
+    } else if (m->mode==MW_UI_FRONTEND) {
+        title_text(c,12,33,m->frontend_title?m->frontend_title:"MAIN MENU",2,TEXT);
+        text(c,12,56,m->alias_name?m->alias_name:"NO ALIAS",1,MUTED);
+        for(unsigned i=0;i<m->frontend_count;i++) {
+            bool active=i==m->selected;
+            angled(fb,12,73+(int)i*22,296,20,active?ACCENT:PANEL);
+            text(c,24,76+(int)i*22,m->frontend_rows[i]?m->frontend_rows[i]:"",1,active?BG:TEXT);
+        }
+        text(c,12,218,m->frontend_hint?m->frontend_hint:"A: SELECT  B: BACK",1,TEXT);
+    } else if (m->mode==MW_UI_DRIVE) {
         rect(fb,6,30,96,140,PANEL);rect(fb,108,30,206,140,PANEL);
         text(c,14,38,"SPEED",1,MUTED);
         float speed=isfinite(m->speed_mps)?fabsf(m->speed_mps)*3.6f:0;

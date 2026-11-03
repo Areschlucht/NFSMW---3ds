@@ -18,6 +18,7 @@
 #include "world_vertex.h"
 #include "world_index.h"
 #include "mw_ui.h"
+#include "mw_alias.h"
 #include "mw_ui_texture.h"
 #include "mw_color_grade.h"
 #ifdef NFS_STREAMED_WORLD
@@ -41,6 +42,14 @@
 typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc;C3D_BufInfo buffer; } Mesh;
 typedef enum { MENU,DRIVE,GARAGE,CONTROLS,QUIT,DISPLAY } Screen;
 static Mesh world,body;
+typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE } FrontendPage;
+static FrontendPage frontend_page=FE_TITLE;
+static MwAliasStore aliases;
+static unsigned frontend_selected;
+static uint32_t alias_delete_id;
+static bool alias_storage_blocked;
+static const char *frontend_notice;
+static const char *frontend_main_items[]={"CAREER","CHALLENGE SERIES","QUICK RACE","MY CARS","ALIAS MANAGER","OPTIONS"};
 #ifdef NFS_STREAMED_WORLD
 static StreamedWorld *stream_world;
 static MwScenePack scene_pack;
@@ -92,6 +101,80 @@ static uint8_t *read_file(const char *path,size_t *size)
     bool ok=fread(data,1,(size_t)n,f)==(size_t)n && !ferror(f);fclose(f);
     if (!ok) { free(data);return NULL; }
     *size=(size_t)n;return data;
+}
+static void load_aliases(void)
+{
+    const char *paths[]={ROOT "aliases.sav",ROOT "aliases.bak"};
+    for(unsigned i=0;i<2;i++) {
+        FILE *check=fopen(paths[i],"rb");if(!check)continue;fclose(check);
+        size_t n=0;unsigned char *raw=read_file(paths[i],&n);
+        bool valid=raw&&mw_alias_decode(&aliases,raw,n);free(raw);
+        if(valid){frontend_notice=i?"RECOVERED SAVED ALIASES":NULL;return;}
+        alias_storage_blocked=true;
+    }
+    if(alias_storage_blocked)frontend_notice="ALIAS SAVE COULD NOT BE READ";
+}
+static bool save_aliases(const MwAliasStore *next)
+{
+    if(alias_storage_blocked){frontend_notice="ALIAS SAVE COULD NOT BE READ";return false;}
+    unsigned char data[MW_ALIAS_SAVE_BYTES];
+    if(!mw_alias_encode(next,data,sizeof(data)))return false;
+    FILE *f=fopen(ROOT "aliases.pending","wb");if(!f){frontend_notice="COULD NOT SAVE ALIAS";return false;}
+    bool ok=fwrite(data,1,sizeof(data),f)==sizeof(data);
+    if(fflush(f))ok=false;
+    if(fclose(f))ok=false;
+    if(!ok){frontend_notice="COULD NOT SAVE ALIAS";return false;}
+    FILE *old=fopen(ROOT "aliases.sav","rb");bool previous=old!=NULL;if(old)fclose(old);
+    if(previous&&rename(ROOT "aliases.sav",ROOT "aliases.bak")){frontend_notice="COULD NOT SAVE ALIAS";return false;}
+    if(rename(ROOT "aliases.pending",ROOT "aliases.sav")) {
+        if(previous)(void)rename(ROOT "aliases.bak",ROOT "aliases.sav");
+        frontend_notice="COULD NOT SAVE ALIAS";return false;
+    }
+    aliases=*next;frontend_notice=NULL;return true;
+}
+static void edit_alias(bool rename_existing)
+{
+    if(alias_storage_blocked){frontend_notice="ALIAS SAVE COULD NOT BE READ";return;}
+    if(!rename_existing&&aliases.count==MW_ALIAS_CAPACITY){frontend_notice="ALIAS LIST IS FULL";return;}
+    SwkbdState keyboard;char name[MW_ALIAS_NAME_BYTES]={0};
+    swkbdInit(&keyboard,SWKBD_TYPE_NORMAL,2,MW_ALIAS_NAME_BYTES-1);
+    swkbdSetHintText(&keyboard,rename_existing?"Rename alias":"Create alias");
+    swkbdSetValidation(&keyboard,SWKBD_NOTEMPTY_NOTBLANK,0,0);
+    if(rename_existing&&frontend_selected>0&&frontend_selected<=aliases.count)
+        swkbdSetInitialText(&keyboard,aliases.aliases[frontend_selected-1].name);
+    C3D_FrameSync();
+    if(swkbdInputText(&keyboard,name,sizeof(name))!=SWKBD_BUTTON_RIGHT)return;
+    MwAliasStore next=aliases;
+    bool valid=rename_existing?mw_alias_rename(&next,aliases.aliases[frontend_selected-1].id,name):mw_alias_create(&next,name);
+    if(!valid){frontend_notice="INVALID OR DUPLICATE ALIAS";return;}
+    if(save_aliases(&next)){frontend_page=FE_MAIN;frontend_selected=0;}
+}
+static unsigned frontend_rows(void)
+{
+    if(frontend_page==FE_TITLE)return 0;
+    if(frontend_page==FE_ALIASES)return aliases.count+1;
+    if(frontend_page==FE_MAIN)return 6;
+    if(frontend_page==FE_DELETE)return 2;
+    return frontend_page==FE_OPTIONS?3:1;
+}
+static void frontend_model(MwUiModel *ui)
+{
+    ui->mode=frontend_page==FE_TITLE?MW_UI_TITLE:MW_UI_FRONTEND;
+    ui->alias_name=mw_alias_selected_name(&aliases);
+    if(frontend_page==FE_DELETE)for(unsigned i=0;i<aliases.count;i++)if(aliases.aliases[i].id==alias_delete_id)ui->alias_name=aliases.aliases[i].name;
+    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?"}[frontend_page];
+    unsigned rows=frontend_rows(),base=frontend_selected>=6?frontend_selected-5:0;
+    ui->selected=frontend_selected-base;ui->frontend_count=rows-base>6?6:rows-base;
+    for(unsigned i=0;i<ui->frontend_count;i++){
+        unsigned row=base+i;
+        ui->frontend_rows[i]=frontend_page==FE_ALIASES?(row?aliases.aliases[row-1].name:"CREATE ALIAS"):
+            frontend_page==FE_MAIN?frontend_main_items[row]:
+            frontend_page==FE_OPTIONS?(const char*[]){"CONTROLS","BACK","EXIT"}[row]:
+            frontend_page==FE_DELETE?(row?"CANCEL":"DELETE"):
+            "NOT AVAILABLE IN THIS VERSION";
+    }
+    ui->frontend_hint=frontend_notice?frontend_notice:frontend_page==FE_ALIASES?"A: LOAD  X: RENAME  Y: DELETE":
+        frontend_page==FE_MAIN?"A: SELECT  Y: FREE ROAM":"A: SELECT  B: BACK";
 }
 static bool load_mesh(Mesh *mesh,const char *name,const char *texture_dir)
 {
@@ -442,6 +525,7 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
     if (screen==DRIVE && !edge && road_edge_ahead(&road,car,height))
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
 #endif
+    if(screen==MENU)frontend_model(&ui);
     return ui;
 }
 static void draw_ui(const MwUiModel *ui,const DriveState *car)
@@ -477,7 +561,7 @@ static void present_ui(void)
 int main(void)
 {
     gfxInitDefault();gfxSet3D(false);consoleInit(GFX_BOTTOM,NULL);gfxSetDoubleBuffering(GFX_BOTTOM,false);
-    bool ok=initialize();Screen screen=MENU;unsigned selected=0;
+    bool ok=initialize();load_aliases();Screen screen=MENU;unsigned selected=0;
     DriveState car;drive_reset(&car,road.spawn[0],road.spawn[2],road.heading);float height=road.spawn[1];bool edge=false;
     RoadPose pose={.height=height,.normal={0,1,0}};
     MwUiPanel panel=MW_UI_NAVIGATION;
@@ -494,10 +578,40 @@ int main(void)
         hidScanInput();u32 down=hidKeysDown(),held=hidKeysHeld();Screen before=screen;bool ui_changed=false;
         if (!ok) { if (down&KEY_START) break;gfxFlushBuffers();gfxSwapBuffers();gspWaitForVBlank();continue; }
         if (screen==MENU) {
-            if (down&KEY_START) break;
-            if (down&(KEY_UP|KEY_CPAD_UP)) selected=(selected+4)%5;
-            if (down&(KEY_DOWN|KEY_CPAD_DOWN)) selected=(selected+1)%5;
-            if (down&KEY_A) screen=(Screen[]){DRIVE,GARAGE,CONTROLS,DISPLAY,QUIT}[selected];
+            bool accept=!!(down&KEY_A);
+            if(down&KEY_TOUCH){
+                touchPosition touch;hidTouchRead(&touch);
+                if(frontend_page==FE_TITLE)accept=true;
+                else if(touch.px>=12&&touch.px<308&&touch.py>=73&&touch.py<205){
+                    unsigned base=frontend_selected>=6?frontend_selected-5:0;
+                    unsigned row=base+(touch.py-73)/22;
+                    if(row<frontend_rows()){frontend_selected=row;accept=true;}
+                }
+            }
+            unsigned rows=frontend_rows();
+            if(rows&&(down&(KEY_UP|KEY_CPAD_UP)))frontend_selected=(frontend_selected+rows-1)%rows;
+            if(rows&&(down&(KEY_DOWN|KEY_CPAD_DOWN)))frontend_selected=(frontend_selected+1)%rows;
+            if(frontend_page==FE_TITLE&&(accept||(down&KEY_START))){frontend_page=aliases.count?FE_MAIN:FE_ALIASES;frontend_selected=0;}
+            else if(frontend_page==FE_MAIN&&(down&KEY_Y))screen=DRIVE;
+            else if(frontend_page==FE_ALIASES&&(down&KEY_X)&&frontend_selected)edit_alias(true);
+            else if(frontend_page==FE_ALIASES&&(down&KEY_Y)&&frontend_selected){alias_delete_id=aliases.aliases[frontend_selected-1].id;frontend_page=FE_DELETE;frontend_selected=1;}
+            else if(down&KEY_B){frontend_page=aliases.count?FE_MAIN:FE_TITLE;frontend_selected=0;frontend_notice=NULL;}
+            else if(accept){
+                if(frontend_page==FE_ALIASES){
+                    if(!frontend_selected)edit_alias(false);
+                    else {MwAliasStore next=aliases;if(mw_alias_select(&next,next.aliases[frontend_selected-1].id)&&save_aliases(&next)){frontend_page=FE_MAIN;frontend_selected=0;}}
+                }else if(frontend_page==FE_MAIN){
+                    if(frontend_selected==3)screen=GARAGE;
+                    else {frontend_page=(FrontendPage[]){FE_CAREER,FE_CHALLENGE,FE_QUICK,FE_MAIN,FE_ALIASES,FE_OPTIONS}[frontend_selected];frontend_selected=0;}
+                }else if(frontend_page==FE_DELETE){
+                    if(!frontend_selected){MwAliasStore next=aliases;if(mw_alias_remove(&next,alias_delete_id))save_aliases(&next);}
+                    frontend_page=FE_ALIASES;frontend_selected=0;
+                }else if(frontend_page==FE_OPTIONS){
+                    if(!frontend_selected)screen=CONTROLS;
+                    else if(frontend_selected==2)screen=QUIT;
+                    else {frontend_page=FE_MAIN;frontend_selected=0;}
+                }else {frontend_page=FE_MAIN;frontend_selected=0;}
+            }
         } else if (screen==DRIVE) {
             if (down&(KEY_START|KEY_SELECT)) screen=MENU;
         } else if (down&(KEY_B|KEY_START) || (screen==CONTROLS && (down&KEY_A))) screen=MENU;
@@ -505,7 +619,7 @@ int main(void)
             piss_filter=!piss_filter;ui_changed=true;
         }
         /* A controller-driven screen transition takes precedence over touch. */
-        if ((down&KEY_TOUCH) && screen==before && !(down&(KEY_A|KEY_B|KEY_START|KEY_SELECT))) {
+        if (before!=MENU && (down&KEY_TOUCH) && screen==before && !(down&(KEY_A|KEY_B|KEY_START|KEY_SELECT))) {
             touchPosition touch;hidTouchRead(&touch);
             MwUiModel ui=ui_model(screen,selected,&car,height,edge,panel,held);
             MwUiAction action=mw_ui_touch(&ui,touch.px,touch.py);
