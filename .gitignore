@@ -1,0 +1,14 @@
+build/
+build-bmw/
+build-rockport/
+build-rockport-reference/
+dist/
+*.elf
+*.3dsx
+*.smdh
+*.map
+__pycache__/
+build-rockport-*/
+
+# Generated compiler intermediates for diagnostic targets.
+/build-*/
