@@ -1,0 +1,28 @@
+{
+  "build": "nfsmw-race-menu-preview.3dsx",
+  "alias_created_in_emulator": true,
+  "alias_save_crc_verified": true,
+  "alias_count": 1,
+  "stable_menu_captures": 5,
+  "stable_menu_image_variants": 1,
+  "native_race_start_enabled": false,
+  "hardware_tested": false,
+  "screenshots": [
+    {
+      "name": "title",
+      "sha256": "75b8c0e99b27a266cdd67f2751e7afad2316f4fa760ff9169e987bcea3ee0b1a"
+    },
+    {
+      "name": "main-final",
+      "sha256": "94965851116f92e939069f6348805b4cf681eafad221a6f440ca9a1fa42be222"
+    },
+    {
+      "name": "courses",
+      "sha256": "c2fef2c778443f581248bcb3665e1c85a3256a851ba03bc4e8f84d8547405d64"
+    },
+    {
+      "name": "driving-ready",
+      "sha256": "32e25dadd81560b5b139f22a704280a5bc5903f81317ecd9b1186ecbd01ed984"
+    }
+  ]
+}

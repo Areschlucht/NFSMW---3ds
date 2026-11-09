@@ -110,3 +110,11 @@ python tools/race_gate_containment_reference.py \
 
 The private report pins the DOL SHA, exact code-window digests, scalar counts,
 boundary outcomes and the complete mismatch list. No raw game payload is emitted.
+
+## Subsequent resolution for the aligned diagnostic
+
+The14/160 differences are now explained by the original routine's directed
+face-contact generation and source tie order, with2,320 original comparisons.
+See race-gate-reference-resolution.md. This supersedes the earlier uncertainty
+for those aligned inputs; it does not establish a general rotated trigger test,
+actual vehicle provider or playable race detector.

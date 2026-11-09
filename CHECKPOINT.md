@@ -73,3 +73,22 @@ Alias codec nowwritesversion2 with monotonic IDs and v1 migration; unreadable
 save handling and touch/controller precedence fixed in app source. NO SDKbuild,
 emulator run or release this pass. Original trigger narrowphase mismatch remains
 an open gate before playable race integration. Original media remain private.
+
+Latest source checkpoint: docs/research/race-session-source-pass.md. Current
+private localized event pack is events-v3.nre; the app expects events.nre onSD
+when a future package is authorized. Do not overwrite old private pack versions.
+Source Quick Race browsing now uses79 genuine localized preparation candidates,
+Alias-bound MwRaceSession, and explicit unavailable start; this is NOT the original
+unlock/eligibility list or playable races. All3 admission domains gate readiness.
+Host tests cover82 lifecycle simulations and v2/v3 compatibility. The aligned
+collision reference discrepancy is resolved as directedcontact, not symmetricSAT;
+rotated actor/motion/notifications stillopen. Preserve legitimate career gates:
+profile BinIndex determines original reset/apply plan. No SDKbuild/release yet.
+
+Latest user instruction authorized a preview build and screenshots after this
+checkpoint. The new nfsmw-race-menu-preview.3dsx compiled/linked and was run in
+Azahar; see docs/research/race-menu-preview-validation.md. Actual public docs
+captures under docs/previews/race-menu show main menu, source-named course browser
+and existing free roam. Test Alias creation/saved CRC checked; race start remains
+unavailable. Original region-lock plans now traced through profileBinIndex and
+reset/apply. No publicbinary/releaseZIP; raworiginalassets/media stayprivate.

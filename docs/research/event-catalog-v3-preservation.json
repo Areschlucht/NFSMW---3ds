@@ -1,0 +1,8 @@
+{
+  "source_definitions_unchanged": 277,
+  "spatial_nodes_byte_identical": 2462,
+  "ordered_references_byte_identical": 1990,
+  "source_strings_and_types_preserved": true,
+  "old_sha256": "d446e44729b1e57bc223a5881803e0770d39c5849e07ea0a0381b6230f200df5",
+  "new_sha256": "89c89c47f341d08a8b1e3ed21efce1dd4bd91e777ef79948389f7d081e3c4c6b"
+}

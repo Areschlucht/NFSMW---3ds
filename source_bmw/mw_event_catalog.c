@@ -23,7 +23,7 @@ bool mw_event_catalog_get(const MwEventCatalog *c,uint32_t index,MwEventDefiniti
     MwEventDefinition e={.key=word(p),.laps=word(p+12),.first=word(p+16),.count=word(p+20),.start=word(p+24),.finish=word(p+28)};
     uint32_t type_bits=word(p+44);memcpy(&e.original_type,&type_bits,4);
     e.name=(const char*)c->data+c->string_at+word(p+4);e.region=(const char*)c->data+c->string_at+word(p+8);
-    e.intro_movie=(const char*)c->data+c->string_at+word(p+32);e.outro_movie=(const char*)c->data+c->string_at+word(p+36);e.source_id=(const char*)c->data+c->string_at+word(p+40);*out=e;return true;
+    e.intro_movie=(const char*)c->data+c->string_at+word(p+32);e.outro_movie=(const char*)c->data+c->string_at+word(p+36);e.source_id=(const char*)c->data+c->string_at+word(p+40);e.display_title=(const char*)c->data+c->string_at+(c->version==3?word(p+48):0);*out=e;return true;
 }
 bool mw_event_catalog_find(const MwEventCatalog *c,uint32_t key,MwEventDefinition *out)
 {
@@ -36,8 +36,8 @@ bool mw_event_catalog_open(MwEventCatalog *out,const void *data,size_t bytes)
 {
     if(!out||!data||bytes<128||bytes>4*1024*1024)return false;
     const unsigned char *p=data;
-    if(memcmp(p,"NRE1",4)||word(p+4)!=2||word(p+8)!=bytes||word(p+12)!=crc(p+16,bytes-16))return false;
-    MwEventCatalog c={.data=p,.bytes=bytes,.events=word(p+16),.nodes=word(p+20),.refs=word(p+24),.strings=word(p+28),.event_at=word(p+32),.node_at=word(p+36),.ref_at=word(p+40),.string_at=word(p+44)};
+    if(memcmp(p,"NRE1",4)||(word(p+4)!=2&&word(p+4)!=3)||word(p+8)!=bytes||word(p+12)!=crc(p+16,bytes-16))return false;
+    MwEventCatalog c={.data=p,.bytes=bytes,.version=word(p+4),.events=word(p+16),.nodes=word(p+20),.refs=word(p+24),.strings=word(p+28),.event_at=word(p+32),.node_at=word(p+36),.ref_at=word(p+40),.string_at=word(p+44)};
     if(!c.events||c.events>4096||c.nodes>65536||c.refs>65536||!c.strings||c.event_at!=128||c.node_at!=128+(uint64_t)c.events*64||c.ref_at!=c.node_at+(uint64_t)c.nodes*40||c.string_at!=c.ref_at+(uint64_t)c.refs*4||bytes!=c.string_at+(uint64_t)c.strings)return false;
     for(unsigned i=48;i<64;i++)if(p[i])return false;
     if(p[c.string_at]||p[bytes-1])return false;
@@ -56,7 +56,8 @@ bool mw_event_catalog_open(MwEventCatalog *out,const void *data,size_t bytes)
         if(!key||key<=previous||first!=next||count>c.refs-next)return false;
         previous=key;next+=count;
         if(word(e+44)>10&&word(e+44)!=UINT32_MAX)return false;
-        for(unsigned j=48;j<64;j++)if(e[j])return false;
+        if(c.version==3&&!text_valid(&c,word(e+48)))return false;
+        for(unsigned j=c.version==3?52:48;j<64;j++)if(e[j])return false;
         const unsigned offsets[]={4,8,32,36,40};for(unsigned j=0;j<5;j++)if(!text_valid(&c,word(e+offsets[j])))return false;
         for(unsigned j=24;j<=28;j+=4)if(word(e+j)&&!mw_event_catalog_node(&c,word(e+j),&node))return false;
     }

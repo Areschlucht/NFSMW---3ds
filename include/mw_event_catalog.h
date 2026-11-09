@@ -5,8 +5,8 @@
 #include <stdint.h>
 #include "mw_race_progress.h"
 #include "mw_story_tutorial.h"
-typedef struct { const unsigned char *data; size_t bytes; uint32_t events,nodes,refs,strings,event_at,node_at,ref_at,string_at; } MwEventCatalog;
-typedef struct { uint32_t key,laps,first,count,start,finish; int32_t original_type; const char *name,*region,*intro_movie,*outro_movie,*source_id; } MwEventDefinition;
+typedef struct { const unsigned char *data; size_t bytes; uint32_t version,events,nodes,refs,strings,event_at,node_at,ref_at,string_at; } MwEventCatalog;
+typedef struct { uint32_t key,laps,first,count,start,finish; int32_t original_type; const char *name,*region,*intro_movie,*outro_movie,*source_id,*display_title; } MwEventDefinition;
 typedef struct { uint32_t key,present; float position[3],rotation,dimensions[3],radius; } MwEventNode;
 /* All views borrow validated immutable bytes. Failed decode leaves output intact. */
 bool mw_event_catalog_open(MwEventCatalog *,const void *,size_t);

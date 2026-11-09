@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "events": 277,
+  "nodes": 2462,
+  "checkpoint_references": 1990,
+  "bytes": 138094,
+  "sha256": "89c89c47f341d08a8b1e3ed21efce1dd4bd91e777ef79948389f7d081e3c4c6b",
+  "source_sha256": {
+    "gameplay": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6",
+    "attributes": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+    "dol": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166"
+  },
+  "format_version": 3,
+  "localized_titles": 175,
+  "english_sha256": "fda4935491869ddaa3eba335c3425aa9cbc8fcbd82a58a20f7334ecbbbd8fa4a",
+  "limits": [
+    "Source definitions include templates/challenges; not a playable event count",
+    "Coordinates/rotation/dimensions stay in source form; absent fields are explicit mask bits",
+    "Movie strings are data references, not automatically executed transitions",
+    "No progression unlocks or field consumer meanings are invented"
+  ]
+}

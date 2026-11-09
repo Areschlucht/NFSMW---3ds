@@ -168,7 +168,9 @@ static void text(UiCanvas *c,int x,int y,const char *s,unsigned scale,unsigned c
         return;
     }
     for (;*s;++s,x+=(int)(6*scale)) {
-        const char *g=strchr(alphabet,*s);
+        unsigned char ch=(unsigned char)*s;
+        if(ch>='a'&&ch<='z')ch-=32;
+        const char *g=strchr(alphabet,ch);
         if (!g) continue;
         const unsigned char *columns=glyphs[g-alphabet];
         for (unsigned a=0;a<5;++a) for (unsigned b=0;b<7;++b)
@@ -232,7 +234,9 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
         else title_text(c,25,72,"MOST WANTED",2,TEXT);
         title_text(c,55,162,"PRESS START",2,TEXT);
     } else if (m->mode==MW_UI_FRONTEND) {
-        title_text(c,12,33,m->frontend_title?m->frontend_title:"MAIN MENU",2,TEXT);
+        const char *heading=m->frontend_title?m->frontend_title:"MAIN MENU";
+        if(m->frontend_title_body)text(c,12,36,heading,1,TEXT);
+        else title_text(c,12,33,heading,2,TEXT);
         text(c,12,56,m->alias_name?m->alias_name:"NO ALIAS",1,MUTED);
         for(unsigned i=0;i<m->frontend_count;i++) {
             bool active=i==m->selected;

@@ -19,6 +19,7 @@
 #include "world_index.h"
 #include "mw_ui.h"
 #include "mw_alias.h"
+#include "mw_race_session.h"
 #include "mw_ui_texture.h"
 #include "mw_color_grade.h"
 #ifdef NFS_STREAMED_WORLD
@@ -42,11 +43,16 @@
 typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc;C3D_BufInfo buffer; } Mesh;
 typedef enum { MENU,DRIVE,GARAGE,CONTROLS,QUIT,DISPLAY } Screen;
 static Mesh world,body;
-typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE } FrontendPage;
+typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE,FE_RACE_SETUP } FrontendPage;
 static FrontendPage frontend_page=FE_TITLE;
 static MwAliasStore aliases;
 static unsigned frontend_selected;
 static uint32_t alias_delete_id;
+static unsigned char *event_catalog_bytes;
+static MwEventCatalog event_catalog;
+static MwRaceSession race_session;
+static uint32_t quick_event_keys[512];
+static size_t quick_event_count;
 static bool alias_storage_blocked;
 static const char *frontend_notice;
 static const char *frontend_main_items[]={"CAREER","CHALLENGE SERIES","QUICK RACE","MY CARS","ALIAS MANAGER","OPTIONS"};
@@ -157,6 +163,7 @@ static unsigned frontend_rows(void)
     if(frontend_page==FE_ALIASES)return aliases.count+1;
     if(frontend_page==FE_MAIN)return 6;
     if(frontend_page==FE_DELETE)return 2;
+    if(frontend_page==FE_QUICK)return quick_event_count?(unsigned)quick_event_count:1;
     return frontend_page==FE_OPTIONS?3:1;
 }
 static void frontend_model(MwUiModel *ui)
@@ -164,7 +171,7 @@ static void frontend_model(MwUiModel *ui)
     ui->mode=frontend_page==FE_TITLE?MW_UI_TITLE:MW_UI_FRONTEND;
     ui->alias_name=mw_alias_selected_name(&aliases);
     if(frontend_page==FE_DELETE)for(unsigned i=0;i<aliases.count;i++)if(aliases.aliases[i].id==alias_delete_id)ui->alias_name=aliases.aliases[i].name;
-    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?"}[frontend_page];
+    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?","RACE SETUP"}[frontend_page];
     unsigned rows=frontend_rows(),base=frontend_selected>=6?frontend_selected-5:0;
     ui->selected=frontend_selected-base;ui->frontend_count=rows-base>6?6:rows-base;
     for(unsigned i=0;i<ui->frontend_count;i++){
@@ -173,9 +180,11 @@ static void frontend_model(MwUiModel *ui)
             frontend_page==FE_MAIN?frontend_main_items[row]:
             frontend_page==FE_OPTIONS?(const char*[]){"CONTROLS","BACK","EXIT"}[row]:
             frontend_page==FE_DELETE?(row?"CANCEL":"DELETE"):
-            "NOT AVAILABLE IN THIS VERSION";
+            frontend_page==FE_RACE_SETUP?"BACK":"NOT AVAILABLE IN THIS VERSION";
+        if(frontend_page==FE_QUICK&&quick_event_count){MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,quick_event_keys[row],&event))ui->frontend_rows[i]=event.display_title;}
     }
-    ui->frontend_hint=frontend_notice?frontend_notice:frontend_page==FE_ALIASES?"A: LOAD  X: RENAME  Y: DELETE":
+    if(frontend_page==FE_RACE_SETUP){ui->frontend_title_body=true;MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,race_session.event_key,&event))ui->frontend_title=event.display_title;}
+    ui->frontend_hint=frontend_page==FE_RACE_SETUP?"RACE NOT AVAILABLE IN THIS VERSION":frontend_notice?frontend_notice:frontend_page==FE_ALIASES?"A: LOAD  X: RENAME  Y: DELETE":
         frontend_page==FE_MAIN?"A: SELECT  Y: FREE ROAM":"A: SELECT  B: BACK";
 }
 static bool load_mesh(Mesh *mesh,const char *name,const char *texture_dir)
@@ -312,6 +321,14 @@ static bool initialize(void)
     } else if (errno!=ENOENT) {
         snprintf(error,sizeof(error),"Cannot inspect ui.nui artwork pack");return false;
     }
+    struct stat event_info;
+    if(!stat(ROOT "events.nre",&event_info)){
+        event_catalog_bytes=read_file(ROOT "events.nre",&size);
+        if(!event_catalog_bytes||!mw_event_catalog_open(&event_catalog,event_catalog_bytes,size)||
+           !mw_race_session_courses(&event_catalog,true,quick_event_keys,512,&quick_event_count)){
+            snprintf(error,sizeof(error),"Invalid/unreadable events.nre");return false;
+        }
+    }else if(errno!=ENOENT){snprintf(error,sizeof(error),"Cannot inspect events.nre");return false;}
     for (uint32_t i=0;i<body.scene.vertex_count;++i)
         car_ground_offset=fmaxf(car_ground_offset,-body.vertices[i].position[1]*road.car_half_extent);
 #ifdef NFS_STREAMED_WORLD
@@ -597,7 +614,7 @@ int main(void)
             else if(frontend_page==FE_MAIN&&(down&KEY_Y))screen=DRIVE;
             else if(frontend_page==FE_ALIASES&&(down&KEY_X)&&frontend_selected)edit_alias(true);
             else if(frontend_page==FE_ALIASES&&(down&KEY_Y)&&frontend_selected){alias_delete_id=aliases.aliases[frontend_selected-1].id;frontend_page=FE_DELETE;frontend_selected=1;}
-            else if(down&KEY_B){frontend_page=aliases.count?FE_MAIN:FE_TITLE;frontend_selected=0;frontend_notice=NULL;}
+            else if(down&KEY_B){if(frontend_page==FE_RACE_SETUP)(void)mw_race_session_cancel(&race_session);frontend_page=aliases.count?FE_MAIN:FE_TITLE;frontend_selected=0;frontend_notice=NULL;}
             else if(accept){
                 if(frontend_page==FE_ALIASES){
                     if(!frontend_selected)edit_alias(false);
@@ -605,6 +622,12 @@ int main(void)
                 }else if(frontend_page==FE_MAIN){
                     if(frontend_selected==3)screen=GARAGE;
                     else {frontend_page=(FrontendPage[]){FE_CAREER,FE_CHALLENGE,FE_QUICK,FE_MAIN,FE_ALIASES,FE_OPTIONS}[frontend_selected];frontend_selected=0;}
+                }else if(frontend_page==FE_QUICK&&quick_event_count){
+                    if(mw_race_session_prepare(&race_session,&event_catalog,quick_event_keys[frontend_selected],&aliases,(uintptr_t)&car)){
+                        frontend_page=FE_RACE_SETUP;frontend_selected=0;frontend_notice=NULL;
+                    }else frontend_notice="SELECT AN ALIAS FIRST";
+                }else if(frontend_page==FE_RACE_SETUP){
+                    (void)mw_race_session_cancel(&race_session);frontend_page=FE_QUICK;frontend_selected=0;
                 }else if(frontend_page==FE_DELETE){
                     if(!frontend_selected){MwAliasStore next=aliases;if(mw_alias_remove(&next,alias_delete_id))save_aliases(&next);}
                     frontend_page=FE_ALIASES;frontend_selected=0;
@@ -759,7 +782,7 @@ int main(void)
         if (ui_gpu_ready) C2D_Fini();
         C3D_Fini();
     }
-    free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);
+    free(event_catalog_bytes);free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);
     if (program_ready) shaderProgramFree(&program);
     if (world_program_ready) shaderProgramFree(&world_program);
     if (shader) DVLB_Free(shader);

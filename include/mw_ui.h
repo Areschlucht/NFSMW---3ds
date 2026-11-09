@@ -33,6 +33,7 @@ typedef struct {
     const char *frontend_title,*alias_name,*frontend_hint;
     const char *frontend_rows[6];
     unsigned frontend_count;
+    bool frontend_title_body; /* Localized route names need the full body atlas. */
 } MwUiModel;
 
 /* Optional map is tightly packed RGB8 at exactly MAP_WIDTH x MAP_HEIGHT.
