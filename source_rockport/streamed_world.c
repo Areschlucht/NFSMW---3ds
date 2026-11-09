@@ -337,7 +337,11 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
     for(uint32_t s=0;s<f->section_count;s++)for(uint32_t i=0;i<f->sections[s]->view.instance_count;i++){
         const uint8_t *source_instance=f->sections[s]->view.data+
             f->sections[s]->view.instances+i*144+8;
-        if(!mw_lod_instance_visible(word(source_instance+24),f->view.original_context_flags))continue;
+        uint32_t effective_flags=word(source_instance+24);
+        if(w->config.instance_state&&!w->config.instance_state(w->config.instance_state_context,
+            word(source_instance-8),effective_flags,&effective_flags))
+            return error(w,STREAMED_WORLD_FORMAT,"Source activation flags differ",word(source_instance-8));
+        if(!mw_lod_instance_visible(effective_flags,f->view.original_context_flags))continue;
         /* Section open has validated these immutable records. Reject by the
            exact same bounds before decoding nine matrix elements/four LODs. */
         if(standard_up){
@@ -350,7 +354,7 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
         if(!world_streaming_scene_instance(&f->sections[s]->view,i,&instance))return error(w,STREAMED_WORLD_FORMAT,"Invalid instance",f->sections[s]->id);
         int slot=0;
         if(w->config.lod_mode==STREAMED_WORLD_SOURCE_LOD_COMPONENTS){
-            MwLodSelectInput input={0};input.instance_flags=word(instance.original_instance+24);input.context_flags=f->view.original_context_flags;input.original_view_state=f->view.original_view_state;
+            MwLodSelectInput input={0};input.instance_flags=effective_flags;input.context_flags=f->view.original_context_flags;input.original_view_state=f->view.original_view_state;
             for(unsigned k=0;k<4;k++)if(instance.bound_slots[k])input.bound_slot_mask|=1u<<k;
             if(!mw_lod_projected_score(instance.translation,camera,forward,real(instance.original_object+56),projection,lod_sqrt,NULL,&input.projected_score))return error(w,STREAMED_WORLD_FORMAT,"Invalid original LOD operands",instance.source_instance_offset);
             if(input.projected_score<=1)continue;

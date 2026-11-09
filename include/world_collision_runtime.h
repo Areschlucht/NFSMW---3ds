@@ -26,6 +26,8 @@ typedef struct {
     WorldCollisionPackageIndex packages[WORLD_COLLISION_MAX_PACKAGES];
     WorldCollisionAssociation associations[WORLD_COLLISION_MAX_ASSOCIATIONS];
     WorldCollisionLoaded active[WORLD_COLLISION_MAX_PACKAGES];
+    int (*group_active)(void *,uint16_t);
+    void *group_context;
 } WorldCollisionRuntime;
 typedef struct {
     size_t required_bytes,required_read_bytes;
@@ -36,7 +38,7 @@ typedef struct {
     float triangle_native[3][3]; /* ground only; wall leaves zero */
     float height_gap,distance_squared;
     uint32_t material_key,source_ci_offset,source_asset_offset;
-    uint16_t section_id,collision_id,asset_index,primitive_index,node_index,instance_flags;
+    uint16_t section_id,collision_id,asset_index,primitive_index,node_index,instance_flags,group_id;
     uint8_t material_index,primitive_flags,strip_flags,kind; /* kind1 ground,2 wall */
 } WorldCollisionContact;
 /* Open validates version, finite counts/ranges and exact file length.
@@ -45,6 +47,9 @@ typedef struct {
  */
 int world_collision_runtime_open(WorldCollisionRuntime *world,const char *path,void *arena,size_t capacity);
 void world_collision_runtime_close(WorldCollisionRuntime *world);
+/* Bind before activation. Original CI+24 group0 bypass; callback returns1/0,
+   negative for malformed identity. Apply identically to ground and walls. */
+int world_collision_runtime_bind_groups(WorldCollisionRuntime *,int (*)(void *,uint16_t),void *);
 /* Pure admission leaves old ready set untouched. Unknown/noncollision stream
  * IDs have no collision association and are counted, not mapped by arithmetic.
  */

@@ -28,12 +28,13 @@ typedef struct {
     MwUiRoadStatus road_status;
     unsigned selected, fps, triangles, draw_calls;
     float speed_mps, slip_degrees, gpu_ms, draw_ms, logic_ms;
-    bool handbrake, piss_filter, streamed_map;
+    bool handbrake, piss_filter, streamed_map,exploration;
     const MwUiAssets *assets;
     const char *frontend_title,*alias_name,*frontend_hint;
     const char *frontend_rows[6];
     unsigned frontend_count;
     bool frontend_title_body; /* Localized route names need the full body atlas. */
+    const char *interaction_prompt;
 } MwUiModel;
 
 /* Optional map is tightly packed RGB8 at exactly MAP_WIDTH x MAP_HEIGHT.

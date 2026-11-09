@@ -78,6 +78,11 @@ bool road_map_render(const RoadMap *map,const RoadWorld *world,const DriveState 
         int x=(int)lroundf(startx),y=(int)lroundf(starty);
         for (int a=-2;a<=2;++a) for (int b=-2;b<=2;++b) pixel(rgb,w,h,x+a,y+b,30,205,240);
     }
+    return road_map_player_overlay(car,rgb,w,h);
+}
+bool road_map_player_overlay(const DriveState *car,unsigned char *rgb,unsigned w,unsigned h)
+{
+    if(!car||!rgb||w<20||w>320||h<20||h>240||!isfinite(car->heading))return false;
     float s=sinf(car->heading),c=cosf(car->heading);int x=(int)w/2,y=(int)h/2;
     int tx=x-(int)lroundf(s*8),ty=y-(int)lroundf(c*8);
     int ax=x+(int)lroundf(s*4+c*4),ay=y+(int)lroundf(c*4-s*4);

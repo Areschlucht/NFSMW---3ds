@@ -34,6 +34,10 @@ typedef struct {
         original boot-global resources, never original tracksection0. */
     uint32_t original_missing_texture_hash; /* 0disabled or actual66994F4A
         DEFAULTALPHA only; applies to final registryLOOKUPmiss, never bad IO/CRC. */
+    /* Immutable state shared with collision admission. Null retains raw flags.
+       False means source provenance mismatch and aborts the staged frame. */
+    bool (*instance_state)(void *,uint32_t source_offset,uint32_t source_flags,uint32_t *effective);
+    void *instance_state_context;
 } StreamedWorldConfig;
 typedef struct {
     double camera_viewer[3]; /* Absolute unscaled VIEWER=(sourceX,sourceZ,-sourceY). */

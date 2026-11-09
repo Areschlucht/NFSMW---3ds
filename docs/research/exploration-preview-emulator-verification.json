@@ -1,0 +1,31 @@
+{
+  "emulator": "Azahar2126.2",
+  "sdk_image": "devkitpro/devkitarm@sha256:116afba8df8453961de2936ffab20dd441edf4d682856c1ec8b0e53d7ed0bbf5",
+  "binary_sha256": "86f98d3e4e0ccf76bb10752a9dede368a1ce674ddcc96d6fb79eed375f20f976",
+  "actual_emulator_capture": true,
+  "crop": [
+    312,
+    192,
+    400,
+    480
+  ],
+  "generated_or_reconstructed_images": false,
+  "production_destination_probe_enabled": false,
+  "separate_original_coordinate_probes": {
+    "parts_shop": "eb9e71eb",
+    "race_entry": "5d93bf20"
+  },
+  "hardware_performance_validated": false,
+  "playable_races": false,
+  "shop_purchases": false,
+  "images": {
+    "main-menu": "46268a83fe2aa63f56c651df3471f851a21b71ad2217e967225f97f80d8ee6ed",
+    "free-roam": "76562362d02d349b4858580c22cfeb60154835f01571f4fc2d9d9b3aa612f5a9",
+    "past-former-barrier": "cfd332f67cf83b055a6a73f189b1ba2b1211e04bf2a7e4c21b835f827c321938",
+    "safe-house": "c1fea6a885671e88b9df4b43240a245147992403d846470a5f851e3a02bb8602",
+    "parts-shop": "d8298f6b8f0f45e0b7e4062f56a948fe08d442c63b3f4074ce508e8fac28b9bf",
+    "race-entry": "9c0f88aaab81bfefd89602c0a7a2b2b40fcc464aa60c2af9817891680bd9f119",
+    "original-shop-location": "8884aaf6c202e8c528f2f0d5f5e31df773a7a20faa36266eb3df2c9482ab4995",
+    "original-race-entry-location": "b7f573bbde066fd578f236d508562c385d1fee294535b86d9ac324312e100f05"
+  }
+}

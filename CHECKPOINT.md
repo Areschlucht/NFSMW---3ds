@@ -1,5 +1,31 @@
 # v0.18 prototype source checkpoint
 
+## Active checkpoint: unlocked exploration and two-screen destinations
+
+The newer integration in docs/research/exploration-preview-validation.md
+supersedes the historical no-build/context-zero status below. The user authorized
+a preview build and screenshots, and requested inactive race arrows removed from
+free roam while preserving their ability to activate in races.
+
+The streamed app now loads one source-bound exploration.nws for both renderer
+flags and collision group admission. Normal draw context is0x10; the cold Bin1
+exploration plan suppresses inactive race arrows without deleting source assets.
+Actual career-bin plans remain separate; this shortcut is unlocked exploration,
+not a simulated career save. Four original safehouse regions pass bounded
+renderer/collision admission; this does not establish every city route drivable.
+
+free-roam.nfd supplies original destination positions and explicit actions.
+D-pad Up opens race preparation, parts-shop or safehouse navigation when nearby;
+Start opens pause/Jump to Safe House. Returning from those screens preserves the
+car pose. Race starts, purchases, upgrades and original actor triggers remain
+unfinished. frontend-top.nut adds original artwork and a live car above the
+bottom navigation. This is a two-screen adaptation, not an exact DS replica.
+
+Private preview assets and binary must travel together. Do not replace the public
+main README or commit original archives, converted assets or the runtime ZIP.
+
+## Historical checkpoints
+
 This branch preserves the recovered project and ongoing native port source.
 The public main README and its history are preserved. The former project README
 is available as docs/DEVELOPMENT.md on the GitHub checkpoint branch.

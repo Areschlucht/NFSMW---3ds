@@ -86,6 +86,10 @@ int world_collision_runtime_open(WorldCollisionRuntime *w,const char *path,void 
 corrupt:world_collision_runtime_close(w);return WORLD_COLLISION_CORRUPT;
 }
 void world_collision_runtime_close(WorldCollisionRuntime *w){if(!w)return;if(w->file)fclose(w->file);memset(w,0,sizeof *w);}
+int world_collision_runtime_bind_groups(WorldCollisionRuntime *w,int (*active)(void *,uint16_t),void *context){
+    if(!w||!w->file||w->ready||!active||!context)return WORLD_COLLISION_INVALID;
+    w->group_active=active;w->group_context=context;return 0;
+}
 static int association(const WorldCollisionRuntime *w,uint16_t id){uint32_t lo=0,hi=w->association_count;while(lo<hi){uint32_t mid=lo+(hi-lo)/2;if(w->associations[mid].section<id)lo=mid+1;else hi=mid;}return lo<w->association_count&&w->associations[lo].section==id?(int)lo:-1;}
 static int plan(const WorldCollisionRuntime *w,const uint16_t *ids,size_t count,WorldCollisionLoaded *out,WorldCollisionAdmission *a){
     if(!w||!w->file||(!ids&&count)||!a)return WORLD_COLLISION_INVALID;
@@ -131,7 +135,7 @@ int world_collision_runtime_activate(WorldCollisionRuntime *w,const uint16_t *id
 static int point_valid(const float p[3]){return p&&isfinite(p[0])&&isfinite(p[1])&&isfinite(p[2]);}
 static uint32_t material(const unsigned char *asset,unsigned index){return be32(asset+16+be16(asset+2)+be16(asset+6)+index*4);}
 static void provenance(WorldCollisionContact *c,const WorldCollisionRuntime *w,const WorldCollisionLoaded *loaded,const unsigned char *rec){
-    c->section_id=loaded->section;c->collision_id=(uint16_t)w->packages[loaded->index].id;c->asset_index=be16(rec+32+26);c->source_ci_offset=le32(rec+8)-w->packages[loaded->index].source_offset+loaded->source_offset;c->source_asset_offset=le32(rec+12)-w->packages[loaded->index].source_offset+loaded->source_offset;c->instance_flags=(uint16_t)le16(rec+16);
+    c->section_id=loaded->section;c->collision_id=(uint16_t)w->packages[loaded->index].id;c->asset_index=be16(rec+32+26);c->source_ci_offset=le32(rec+8)-w->packages[loaded->index].source_offset+loaded->source_offset;c->source_asset_offset=le32(rec+12)-w->packages[loaded->index].source_offset+loaded->source_offset;c->instance_flags=(uint16_t)le16(rec+16);c->group_id=(uint16_t)be16(rec+32+24);
 }
 int world_collision_runtime_ground(const WorldCollisionRuntime *w,const float point[3],uint32_t mask,WorldCollisionContact *out){
     if(!w||!out||!point_valid(point))return WORLD_COLLISION_INVALID;
@@ -140,7 +144,9 @@ int world_collision_runtime_ground(const WorldCollisionRuntime *w,const float po
     for(uint32_t p=0;p<w->active_count;p++){
         const WorldCollisionLoaded *loaded=&w->active[p];const unsigned char *payload=w->arena+loaded->arena_offset;uint32_t count=le32(payload+4);
         for(uint32_t i=0;i<count;i++){
-            const unsigned char *rec=payload+16+i*96,*ci=rec+32,*asset=payload+le32(rec);if(!be16(asset))continue;
+            const unsigned char *rec=payload+16+i*96,*ci=rec+32,*asset=payload+le32(rec);
+            if(w->group_active&&be16(ci+24)){int enabled=w->group_active(w->group_context,(uint16_t)be16(ci+24));if(enabled<0)return WORLD_COLLISION_CORRUPT;if(!enabled)continue;}
+            if(!be16(asset))continue;
             float local[3],extent[3]={bef(ci+12),bef(ci+20),bef(ci+44)},translation[3];for(unsigned a=0;a<3;a++){translation[a]=bef(ci+48+4*a);local[a]=point[a]+translation[a];}
             WorldCollisionMeshHit candidate;int found=world_collision_mesh_point_below(asset,le32(rec+4),local,extent,mask,&candidate);if(found<0)return WORLD_COLLISION_CORRUPT;
             if(!found||candidate.height_gap>=best)continue;
@@ -161,7 +167,9 @@ int world_collision_runtime_wall(const WorldCollisionRuntime *w,const float star
     for(uint32_t p=0;p<w->active_count;p++){
         const WorldCollisionLoaded *loaded=&w->active[p];const unsigned char *payload=w->arena+loaded->arena_offset;uint32_t count=le32(payload+4);
         for(uint32_t i=0;i<count;i++){
-            const unsigned char *rec=payload+16+i*96,*ci=rec+32,*asset=payload+le32(rec);if(!be16(asset+4))continue;
+            const unsigned char *rec=payload+16+i*96,*ci=rec+32,*asset=payload+le32(rec);
+            if(w->group_active&&be16(ci+24)){int enabled=w->group_active(w->group_context,(uint16_t)be16(ci+24));if(enabled<0)return WORLD_COLLISION_CORRUPT;if(!enabled)continue;}
+            if(!be16(asset+4))continue;
             float local_a[3],local_b[3],translation[3];for(unsigned a=0;a<3;a++){translation[a]=bef(ci+48+4*a);local_a[a]=start[a]+translation[a];local_b[a]=end[a]+translation[a];}
             WorldCollisionWallHit candidate;int found=world_collision_wall_bank_segment(asset,le32(rec+4),local_a,local_b,mask,&candidate);if(found<0)return WORLD_COLLISION_CORRUPT;if(!found)continue;
             float dx=candidate.point[0]-local_a[0],dy=candidate.point[1]-local_a[1],dz=candidate.point[2]-local_a[2];float distance=fmaf(dz,dz,dx*dx+dy*dy);if(distance>=best)continue;

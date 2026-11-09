@@ -20,6 +20,10 @@
 #include "mw_ui.h"
 #include "mw_alias.h"
 #include "mw_race_session.h"
+#include "mw_world_state.h"
+#include "mw_frontend_top.h"
+#include "mw_free_roam.h"
+#include "mw_destination_icons.h"
 #include "mw_ui_texture.h"
 #include "mw_color_grade.h"
 #ifdef NFS_STREAMED_WORLD
@@ -43,7 +47,7 @@
 typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc;C3D_BufInfo buffer; } Mesh;
 typedef enum { MENU,DRIVE,GARAGE,CONTROLS,QUIT,DISPLAY } Screen;
 static Mesh world,body;
-typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE,FE_RACE_SETUP } FrontendPage;
+typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE,FE_RACE_SETUP,FE_PAUSE,FE_SAFEHOUSE,FE_SHOP,FE_SHOP_SECTION } FrontendPage;
 static FrontendPage frontend_page=FE_TITLE;
 static MwAliasStore aliases;
 static unsigned frontend_selected;
@@ -53,11 +57,24 @@ static MwEventCatalog event_catalog;
 static MwRaceSession race_session;
 static uint32_t quick_event_keys[512];
 static size_t quick_event_count;
+static MwFreeRoam free_roam;
+static unsigned char *free_roam_bytes;
+static MwDestinationIcons destination_icons;
+static unsigned char *destination_icon_bytes;
+static MwDestination near_destination;
+static bool has_near_destination;
+static uint32_t frontend_event_key;
+static const char *shop_section;
+static bool race_from_drive;
+static FrontendPage career_back=FE_MAIN;
+static const char *shop_categories[]={"PARTS","PERFORMANCE","VISUAL","BACK"};
 static bool alias_storage_blocked;
 static const char *frontend_notice;
 static const char *frontend_main_items[]={"CAREER","CHALLENGE SERIES","QUICK RACE","MY CARS","ALIAS MANAGER","OPTIONS"};
 #ifdef NFS_STREAMED_WORLD
 static StreamedWorld *stream_world;
+static MwWorldState world_state;
+static unsigned char *world_state_bytes;
 static MwScenePack scene_pack;
 static bool stream_has_frame;
 /* A failed stage retains the complete old view. Pause until explicit reset or
@@ -83,7 +100,12 @@ static unsigned char map_rgb[152*128*3];
    repainted during LCD scanout, even when HUD updates are throttled. */
 static unsigned char ui_pixels[MW_UI_BYTES];
 static bool ui_pending,ui_to_present,ui_gpu_ready,ui_texture_ready;
-static C3D_Tex ui_texture;
+static C3D_Tex ui_texture,frontend_texture;
+static MwFrontendTop frontend_art;
+static unsigned char *frontend_art_bytes;
+static unsigned char frontend_pixels[MW_FRONTEND_TOP_BYTES];
+static bool frontend_pending,frontend_texture_ready;
+static Tex3DS_SubTexture frontend_subtexture={.width=400,.height=240,.left=0,.top=1,.right=400.f/512,.bottom=1-240.f/256};
 static Tex3DS_SubTexture ui_subtexture={.width=320,.height=240,
     .left=0,.top=1,.right=320.f/512,.bottom=1-240.f/256};
 static C3D_RenderTarget *ui_target;
@@ -163,6 +185,8 @@ static unsigned frontend_rows(void)
     if(frontend_page==FE_ALIASES)return aliases.count+1;
     if(frontend_page==FE_MAIN)return 6;
     if(frontend_page==FE_DELETE)return 2;
+    if(frontend_page==FE_PAUSE)return 3;
+    if(frontend_page==FE_SAFEHOUSE||frontend_page==FE_SHOP)return 4;
     if(frontend_page==FE_QUICK)return quick_event_count?(unsigned)quick_event_count:1;
     return frontend_page==FE_OPTIONS?3:1;
 }
@@ -171,7 +195,7 @@ static void frontend_model(MwUiModel *ui)
     ui->mode=frontend_page==FE_TITLE?MW_UI_TITLE:MW_UI_FRONTEND;
     ui->alias_name=mw_alias_selected_name(&aliases);
     if(frontend_page==FE_DELETE)for(unsigned i=0;i<aliases.count;i++)if(aliases.aliases[i].id==alias_delete_id)ui->alias_name=aliases.aliases[i].name;
-    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?","RACE SETUP"}[frontend_page];
+    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?","RACE SETUP","PAUSED","SAFE HOUSE","PARTS SHOP","PARTS"}[frontend_page];
     unsigned rows=frontend_rows(),base=frontend_selected>=6?frontend_selected-5:0;
     ui->selected=frontend_selected-base;ui->frontend_count=rows-base>6?6:rows-base;
     for(unsigned i=0;i<ui->frontend_count;i++){
@@ -180,12 +204,17 @@ static void frontend_model(MwUiModel *ui)
             frontend_page==FE_MAIN?frontend_main_items[row]:
             frontend_page==FE_OPTIONS?(const char*[]){"CONTROLS","BACK","EXIT"}[row]:
             frontend_page==FE_DELETE?(row?"CANCEL":"DELETE"):
+            frontend_page==FE_PAUSE?(const char*[]){"RESUME","JUMP TO SAFE HOUSE","MAIN MENU"}[row]:
+            frontend_page==FE_SAFEHOUSE?(const char*[]){"CAREER","MY CARS","RESUME FREE ROAM","MAIN MENU"}[row]:
+            frontend_page==FE_SHOP?shop_categories[row]:
+            frontend_page==FE_SHOP_SECTION?"UPGRADES NOT AVAILABLE YET":
             frontend_page==FE_RACE_SETUP?"BACK":"NOT AVAILABLE IN THIS VERSION";
         if(frontend_page==FE_QUICK&&quick_event_count){MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,quick_event_keys[row],&event))ui->frontend_rows[i]=event.display_title;}
     }
-    if(frontend_page==FE_RACE_SETUP){ui->frontend_title_body=true;MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,race_session.event_key,&event))ui->frontend_title=event.display_title;}
+    if(frontend_page==FE_RACE_SETUP){ui->frontend_title_body=true;MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,frontend_event_key,&event))ui->frontend_title=event.display_title;}
+    if(frontend_page==FE_SHOP_SECTION)ui->frontend_title=shop_section;
     ui->frontend_hint=frontend_page==FE_RACE_SETUP?"RACE NOT AVAILABLE IN THIS VERSION":frontend_notice?frontend_notice:frontend_page==FE_ALIASES?"A: LOAD  X: RENAME  Y: DELETE":
-        frontend_page==FE_MAIN?"A: SELECT  Y: FREE ROAM":"A: SELECT  B: BACK";
+        frontend_page==FE_MAIN?"A: SELECT  Y: EXPLORE ROCKPORT":"A: SELECT  B: BACK";
 }
 static bool load_mesh(Mesh *mesh,const char *name,const char *texture_dir)
 {
@@ -329,9 +358,17 @@ static bool initialize(void)
             snprintf(error,sizeof(error),"Invalid/unreadable events.nre");return false;
         }
     }else if(errno!=ENOENT){snprintf(error,sizeof(error),"Cannot inspect events.nre");return false;}
+    free_roam_bytes=read_file(ROOT "free-roam.nfd",&size);
+    if(!free_roam_bytes||!mw_free_roam_open(&free_roam,free_roam_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate free-roam.nfd");return false;}
+    destination_icon_bytes=read_file(ROOT "destination-icons.nfi",&size);
+    if(!destination_icon_bytes||!mw_destination_icons_open(&destination_icons,destination_icon_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate destination-icons.nfi");return false;}
     for (uint32_t i=0;i<body.scene.vertex_count;++i)
         car_ground_offset=fmaxf(car_ground_offset,-body.vertices[i].position[1]*road.car_half_extent);
 #ifdef NFS_STREAMED_WORLD
+    snprintf(error,sizeof(error),"Cannot read/validate exploration.nws");
+    world_state_bytes=read_file(ROOT "exploration.nws",&size);
+    if(!world_state_bytes||!mw_world_state_open(&world_state,world_state_bytes,size)||world_state.bin!=1)return false;
+    if(memcmp(free_roam.data+32,world_state.data+96,32)||(event_catalog.data&&memcmp(event_catalog.data+64,world_state.data+96,32))){snprintf(error,sizeof(error),"Free-roam gameplay source differs");return false;}
     snprintf(error,sizeof(error),"Cannot read/validate world.mwp archive");
     if (mw_scene_pack_open(&scene_pack,ROOT "world.mwp",2*1024*1024)!=MW_SCENE_PACK_OK) return false;
     StreamedWorldConfig stream_config={.read_asset=streamed_world_pack_read,.read_context=&scene_pack,
@@ -340,13 +377,16 @@ static bool initialize(void)
         .object_capacity=4096,.run_capacity=32768,.render_scale=road.scale,
         .lod_mode=STREAMED_WORLD_SOURCE_LOD_COMPONENTS,.alpha_reference=40,
         .comparison_zero_transparent_rgb=false,
-        .boot_global_provider_bank=true,.original_missing_texture_hash=0x66994f4a};
+        .boot_global_provider_bank=true,.original_missing_texture_hash=0x66994f4a,
+        .instance_state=mw_world_state_instance,.instance_state_context=&world_state};
     StreamedWorldResult stream_result=streamed_world_create(&stream_config,&stream_world);
     if (stream_result!=STREAMED_WORLD_OK) {
         snprintf(error,sizeof(error),"Cannot initialize streamed map (%d)",(int)stream_result);return false;
     }
     snprintf(error,sizeof(error),"Cannot read/validate original world.nwc collision");
     if (world_collision_runtime_open(&collision_world,ROOT "world.nwc",collision_arena,sizeof(collision_arena))) return false;
+    if(!mw_world_state_source_matches(&world_state,collision_world.source_sha256)||
+       world_collision_runtime_bind_groups(&collision_world,mw_world_state_group,&world_state)){snprintf(error,sizeof(error),"Collision activation source differs");return false;}
     raw=read_file(ROOT "world-streaming.bin",&size);
     bool same_source=raw && size>=96 && !memcmp(raw+64,collision_world.source_sha256,32) &&
         !memcmp(raw+64,scene_pack.source_sha256,32);
@@ -360,6 +400,10 @@ static bool initialize(void)
     ui_texture_ready=true;
     C3D_TexSetFilter(&ui_texture,GPU_NEAREST,GPU_NEAREST);
     C3D_TexSetWrap(&ui_texture,GPU_CLAMP_TO_EDGE,GPU_CLAMP_TO_EDGE);
+    snprintf(error,sizeof(error),"Cannot load frontend-top.nut");
+    frontend_art_bytes=read_file(ROOT "frontend-top.nut",&size);
+    if(!frontend_art_bytes||!mw_frontend_top_open(&frontend_art,frontend_art_bytes,size)||!C3D_TexInit(&frontend_texture,512,256,GPU_RGBA8))return false;
+    frontend_texture_ready=true;C3D_TexSetFilter(&frontend_texture,GPU_NEAREST,GPU_NEAREST);C3D_TexSetWrap(&frontend_texture,GPU_CLAMP_TO_EDGE,GPU_CLAMP_TO_EDGE);
     C3D_CullFace(GPU_CULL_NONE);
     C3D_AlphaTest(true,GPU_GREATER,0);
     C3D_AlphaBlend(GPU_BLEND_ADD,GPU_BLEND_ADD,GPU_SRC_ALPHA,GPU_ONE_MINUS_SRC_ALPHA,GPU_ONE,GPU_ONE_MINUS_SRC_ALPHA);
@@ -438,7 +482,12 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
                    const WheelMotion *motion,float garage_steering,const RoadPose *pose)
 {
     C3D_RenderTargetClear(target,C3D_CLEAR_ALL,mw_color_grade_clear(screen==DRIVE?0x718699ff:0x141414ff,piss_filter),0);
-    C3D_FrameDrawOn(target);mw_color_grade_apply(piss_filter);C3D_Mtx projection,model;
+    C3D_FrameDrawOn(target);
+    if(screen!=DRIVE&&frontend_texture_ready){
+        C2D_Prepare();C2D_SceneBegin(target);C3D_DepthTest(false,GPU_ALWAYS,GPU_WRITE_COLOR);C3D_AlphaTest(false,GPU_ALWAYS,0);
+        C2D_Image backdrop={.tex=&frontend_texture,.subtex=&frontend_subtexture};C2D_DrawImageAt(backdrop,0,0,0,NULL,1,1);C2D_Flush();
+    }
+    mw_color_grade_apply(piss_filter);C3D_CullFace(GPU_CULL_NONE);C3D_Mtx projection,model;
     C3D_BindProgram(&program);
     C3D_FVUnifSet(GPU_VERTEX_SHADER,lighting_loc,.5f,.5f,0,0);
     if (screen==DRIVE) {
@@ -490,7 +539,8 @@ static StreamedWorldResult prepare_streamed_world(const DriveState *car)
     StreamedWorldView view={.up_viewer={0,1,0},
         .vertical_fov_radians=C3D_AngleFromDegrees(chase.fov),.aspect=C3D_AspectRatioTop,
         .near_world=.15f,.far_world=DRIVE_FAR_WORLD,
-        .original_fov_turn=(uint16_t)lroundf(chase.fov*(65536.0f/360.0f))};
+        .original_fov_turn=(uint16_t)lroundf(chase.fov*(65536.0f/360.0f)),
+        .original_context_flags=world_state.context};
     float length=0;
     for (unsigned a=0;a<3;++a) {
         view.camera_viewer[a]=(double)chase.eye[a]+road.origin[a];
@@ -537,7 +587,7 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
         .slip_degrees=atan2f(car->lateral_speed,fmaxf(fabsf(car->speed),.01f))*57.29578f};
 #ifdef NFS_STREAMED_WORLD
     (void)height;
-    ui.streamed_map=true;
+    ui.streamed_map=true;ui.exploration=world_state.bin==1;
     if (screen==DRIVE && stream_blocked) ui.road_status=MW_UI_MAP_PAUSED;
     else if (screen==DRIVE && !stream_has_frame) ui.road_status=MW_UI_MAP_LOADING;
 #else
@@ -545,21 +595,43 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
 #endif
     if(screen==MENU)frontend_model(&ui);
+    if(screen==DRIVE&&has_near_destination)ui.interaction_prompt=near_destination.kind==MW_DEST_SAFEHOUSE?"UP: ENTER SAFE HOUSE":near_destination.kind==MW_DEST_SHOP?"UP: ENTER PARTS SHOP":near_destination.kind==MW_DEST_CARLOT?"UP: ENTER CAR LOT":"UP: ENTER RACE";
     return ui;
 }
 static void draw_ui(const MwUiModel *ui,const DriveState *car)
 {
     const unsigned char *map=NULL;
     if (ui->mode==MW_UI_DRIVE && ui->panel==MW_UI_NAVIGATION &&
-        road_map_render(&navigation,&road,car,map_rgb,152,128)) map=map_rgb;
+        road_map_render(&navigation,&road,car,map_rgb,152,128)) {
+        /* Same north-up projection as road_map_render. Authentic source glyphs
+           identify destinations; original unlock availability remains separate. */
+        for(uint32_t i=0;i<free_roam.count;i++){
+            MwDestination d;if(!mw_free_roam_get(&free_roam,i,&d))continue;
+            float x=(car->x-(d.position[0]-road.origin[0]))/navigation.step+76;
+            float y=(car->z-(-d.position[1]-road.origin[2]))/navigation.step+64;
+            if(x < -16 || y < -16 || x > 168 || y > 144)continue;
+            int32_t type=-1;
+            if(d.kind==MW_DEST_RACE){MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,d.event,&event))type=event.original_type;}
+            (void)mw_destination_icon_blit(&destination_icons,d.kind,type,map_rgb,sizeof(map_rgb),152,128,(int)lroundf(x),(int)lroundf(y));
+        }
+        (void)road_map_player_overlay(car,map_rgb,152,128);
+        map=map_rgb;
+    }
     if (mw_ui_render(ui_pixels,sizeof(ui_pixels),ui,map)) ui_pending=true;
+    if(ui->mode!=MW_UI_DRIVE&&frontend_art.data){
+        const char *selection=ui->mode==MW_UI_GARAGE?"BMW M3 GTR":ui->mode==MW_UI_TITLE?"PRESS START":ui->selected<ui->frontend_count?ui->frontend_rows[ui->selected]:"";
+        MwFrontendTopModel top={.page=ui->mode==MW_UI_GARAGE?"MY CARS":ui->frontend_title,.alias=mw_alias_selected_name(&aliases),.selection=selection,.detail=ui->frontend_hint};
+        if(mw_frontend_top_render(&frontend_art,frontend_pixels,sizeof(frontend_pixels),&top))frontend_pending=true;
+    }
 }
 static void upload_ui(void)
 {
-    if (!ui_pending) return;
+    if (!ui_pending&&!frontend_pending) return;
     /* Called outside a frame: never modify the texture while a previous UI
        draw reads it. Both LCD swaps now belong to the GPU completion queue. */
     C3D_FrameSync();
+    if(frontend_pending&&frontend_texture_ready&&mw_frontend_top_pack(frontend_texture.data,frontend_texture.size,frontend_pixels,sizeof(frontend_pixels))){C3D_TexFlush(&frontend_texture);frontend_pending=false;}
+    if (!ui_pending) return;
     if (!mw_ui_texture_pack(ui_texture.data,ui_texture.size,ui_pixels,sizeof(ui_pixels))) return;
     C3D_TexFlush(&ui_texture);ui_pending=false;ui_to_present=true;
 }
@@ -594,8 +666,12 @@ int main(void)
     u64 previous=osGetTime(),last_status=previous,fps_start=previous;unsigned fps_frames=0;float rotation=.65f;
     while (aptMainLoop()) {
         u64 cpu_begin=svcGetSystemTick();
-        hidScanInput();u32 down=hidKeysDown(),held=hidKeysHeld();Screen before=screen;bool ui_changed=false;
+        hidScanInput();u32 down=hidKeysDown(),held=hidKeysHeld();Screen before=screen;bool ui_changed=false,resume_drive=false;
         if (!ok) { if (down&KEY_START) break;gfxFlushBuffers();gfxSwapBuffers();gspWaitForVBlank();continue; }
+        float source_player[3]={car.x+road.origin[0],-(car.z+road.origin[2]),height+road.origin[1]};
+        bool old_near=has_near_destination;uint32_t old_key=near_destination.key;
+        has_near_destination=screen==DRIVE&&mw_free_roam_near(&free_roam,source_player,&near_destination);
+        ui_changed=old_near!=has_near_destination||(has_near_destination&&old_key!=near_destination.key);
         if (screen==MENU) {
             bool accept=!!(down&KEY_A);
             if((down&KEY_TOUCH)&&!(down&(KEY_A|KEY_B|KEY_START|KEY_SELECT|KEY_UP|KEY_DOWN|KEY_CPAD_UP|KEY_CPAD_DOWN|KEY_X|KEY_Y))){
@@ -614,20 +690,47 @@ int main(void)
             else if(frontend_page==FE_MAIN&&(down&KEY_Y))screen=DRIVE;
             else if(frontend_page==FE_ALIASES&&(down&KEY_X)&&frontend_selected)edit_alias(true);
             else if(frontend_page==FE_ALIASES&&(down&KEY_Y)&&frontend_selected){alias_delete_id=aliases.aliases[frontend_selected-1].id;frontend_page=FE_DELETE;frontend_selected=1;}
-            else if(down&KEY_B){if(frontend_page==FE_RACE_SETUP)(void)mw_race_session_cancel(&race_session);frontend_page=aliases.count?FE_MAIN:FE_TITLE;frontend_selected=0;frontend_notice=NULL;}
+            else if(down&KEY_B){
+                if(frontend_page==FE_RACE_SETUP){
+                    (void)mw_race_session_cancel(&race_session);
+                    if(race_from_drive){screen=DRIVE;resume_drive=true;}else frontend_page=FE_QUICK;
+                }else if(frontend_page==FE_CAREER)frontend_page=career_back;
+                else if(frontend_page==FE_PAUSE){screen=DRIVE;resume_drive=true;}
+                else if(frontend_page==FE_SHOP_SECTION)frontend_page=FE_SHOP;
+                else if(frontend_page==FE_SHOP||frontend_page==FE_SAFEHOUSE)frontend_page=FE_PAUSE;
+                else frontend_page=aliases.count?FE_MAIN:FE_TITLE;
+                frontend_selected=0;frontend_notice=NULL;
+            }
             else if(accept){
                 if(frontend_page==FE_ALIASES){
                     if(!frontend_selected)edit_alias(false);
                     else {MwAliasStore next=aliases;if(mw_alias_select(&next,next.aliases[frontend_selected-1].id)&&save_aliases(&next)){frontend_page=FE_MAIN;frontend_selected=0;}}
                 }else if(frontend_page==FE_MAIN){
                     if(frontend_selected==3)screen=GARAGE;
-                    else {frontend_page=(FrontendPage[]){FE_CAREER,FE_CHALLENGE,FE_QUICK,FE_MAIN,FE_ALIASES,FE_OPTIONS}[frontend_selected];frontend_selected=0;}
+                    else {career_back=FE_MAIN;frontend_page=(FrontendPage[]){FE_CAREER,FE_CHALLENGE,FE_QUICK,FE_MAIN,FE_ALIASES,FE_OPTIONS}[frontend_selected];frontend_selected=0;}
                 }else if(frontend_page==FE_QUICK&&quick_event_count){
                     if(mw_race_session_prepare(&race_session,&event_catalog,quick_event_keys[frontend_selected],&aliases,(uintptr_t)&car)){
+                        frontend_event_key=quick_event_keys[frontend_selected];race_from_drive=false;
                         frontend_page=FE_RACE_SETUP;frontend_selected=0;frontend_notice=NULL;
                     }else frontend_notice="SELECT AN ALIAS FIRST";
                 }else if(frontend_page==FE_RACE_SETUP){
-                    (void)mw_race_session_cancel(&race_session);frontend_page=FE_QUICK;frontend_selected=0;
+                    (void)mw_race_session_cancel(&race_session);if(race_from_drive){screen=DRIVE;resume_drive=true;}else frontend_page=FE_QUICK;frontend_selected=0;
+                }else if(frontend_page==FE_PAUSE){
+                    if(frontend_selected==0){screen=DRIVE;resume_drive=true;}
+                    else frontend_page=frontend_selected==1?FE_SAFEHOUSE:FE_MAIN;
+                    frontend_selected=0;
+                }else if(frontend_page==FE_SAFEHOUSE){
+                    if(frontend_selected==0){career_back=FE_SAFEHOUSE;frontend_page=FE_CAREER;}
+                    else if(frontend_selected==1)screen=GARAGE;
+                    else if(frontend_selected==2){screen=DRIVE;resume_drive=true;}
+                    else frontend_page=FE_MAIN;
+                    frontend_selected=0;
+                }else if(frontend_page==FE_SHOP){
+                    if(frontend_selected==3)frontend_page=FE_PAUSE;
+                    else {shop_section=shop_categories[frontend_selected];frontend_page=FE_SHOP_SECTION;}
+                    frontend_selected=0;
+                }else if(frontend_page==FE_CAREER){frontend_page=career_back;frontend_selected=0;
+                }else if(frontend_page==FE_SHOP_SECTION){frontend_page=FE_SHOP;frontend_selected=0;
                 }else if(frontend_page==FE_DELETE){
                     if(!frontend_selected){MwAliasStore next=aliases;if(mw_alias_remove(&next,alias_delete_id))save_aliases(&next);}
                     frontend_page=FE_ALIASES;frontend_selected=0;
@@ -638,7 +741,18 @@ int main(void)
                 }else {frontend_page=FE_MAIN;frontend_selected=0;}
             }
         } else if (screen==DRIVE) {
-            if (down&(KEY_START|KEY_SELECT)) screen=MENU;
+            if(down&(KEY_START|KEY_SELECT)){screen=MENU;frontend_page=FE_PAUSE;frontend_selected=0;}
+            else if((down&KEY_UP)&&has_near_destination){
+                screen=MENU;frontend_selected=0;
+                if(near_destination.kind==MW_DEST_SAFEHOUSE)frontend_page=FE_SAFEHOUSE;
+                else if(near_destination.kind==MW_DEST_SHOP)frontend_page=FE_SHOP;
+                else if(near_destination.kind==MW_DEST_CARLOT){frontend_page=FE_PAUSE;screen=GARAGE;}
+                else {
+                    frontend_event_key=near_destination.event;race_from_drive=true;
+                    (void)mw_race_session_prepare(&race_session,&event_catalog,frontend_event_key,&aliases,(uintptr_t)&car);
+                    frontend_page=FE_RACE_SETUP;
+                }
+            }
         } else if (down&(KEY_B|KEY_START) || (screen==CONTROLS && (down&KEY_A))) screen=MENU;
         if (screen==DISPLAY && before==DISPLAY && (down&KEY_A)) {
             piss_filter=!piss_filter;ui_changed=true;
@@ -649,7 +763,7 @@ int main(void)
             MwUiModel ui=ui_model(screen,selected,&car,height,edge,panel,held);
             MwUiAction action=mw_ui_touch(&ui,touch.px,touch.py);
             switch (action) {
-            case MW_UI_OPEN_MENU:screen=MENU;break;
+            case MW_UI_OPEN_MENU:screen=MENU;if(before==DRIVE){frontend_page=FE_PAUSE;frontend_selected=0;}break;
             case MW_UI_SELECT_DRIVE:selected=0;screen=DRIVE;break;
             case MW_UI_SELECT_GARAGE:selected=1;screen=GARAGE;break;
             case MW_UI_SELECT_CONTROLS:selected=2;screen=CONTROLS;break;
@@ -663,11 +777,20 @@ int main(void)
             ui_changed=ui_changed || action!=MW_UI_NONE;
         }
         if (screen==QUIT) break;
-        if (screen==DRIVE && (before!=DRIVE || (down&KEY_X))) {
+        if (screen==DRIVE && ((before!=DRIVE&&!resume_drive) || (down&KEY_X))) {
 #ifdef NFS_STREAMED_WORLD
             stream_has_frame=false;stream_blocked=false;stream_load_announced=false;
 #endif
             drive_reset(&car,road.spawn[0],road.spawn[2],road.heading);height=road.spawn[1];edge=false;
+#ifdef NFS_DESTINATION_PROBE_KEY
+            /* Emulator admission probe only: start at an actual original
+               destination center. Never enabled in the packaged application. */
+            for(uint32_t i=0;i<free_roam.count;i++){
+                MwDestination d;if(!mw_free_roam_get(&free_roam,i,&d)||d.key!=NFS_DESTINATION_PROBE_KEY)continue;
+                drive_reset(&car,d.position[0]-road.origin[0],-d.position[1]-road.origin[2],road.heading);
+                height=d.position[2]-road.origin[1];break;
+            }
+#endif
             wheel_motion_reset(&motion);
             pose=(RoadPose){.height=height,.normal={0,1,0}};
             (void)road_pose_sample(&road,&wheel_rig,&car,height,&pose);
@@ -774,15 +897,17 @@ int main(void)
 #ifdef NFS_STREAMED_WORLD
     world_collision_runtime_close(&collision_world);
     streamed_world_destroy(stream_world);
+    free(world_state_bytes);
     mw_scene_pack_close(&scene_pack);
 #endif
     if (gpu_ready) {
         C3D_FrameSync();
         if (ui_texture_ready) C3D_TexDelete(&ui_texture);
+        if(frontend_texture_ready)C3D_TexDelete(&frontend_texture);
         if (ui_gpu_ready) C2D_Fini();
         C3D_Fini();
     }
-    free(event_catalog_bytes);free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);
+    free(destination_icon_bytes);free(free_roam_bytes);free(frontend_art_bytes);free(event_catalog_bytes);free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);
     if (program_ready) shaderProgramFree(&program);
     if (world_program_ready) shaderProgramFree(&world_program);
     if (shader) DVLB_Free(shader);
