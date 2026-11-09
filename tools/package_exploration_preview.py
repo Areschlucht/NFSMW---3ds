@@ -9,7 +9,6 @@ import subprocess
 import zipfile
 import zlib
 
-from package_rockport import scene_files
 from package_rockport_v018 import validate_pack, sha
 from wheel_rig import inspect_rig
 
@@ -49,9 +48,27 @@ def package(a):
     inspect_rig((base / 'wheels.nwa').read_bytes(), struct.unpack_from('<I', body, 12)[0],
                 struct.unpack_from('<I', body, 24)[0])
     checked_sidecar(base / 'ui.nui', b'NUI2', 48)
-    files = scene_files(base, 'body.nfm', 'car-textures')
+    # Consume an installed runtime, which intentionally has no scene.json or
+    # extraction-tool directory layout. The prior shipping manifest pins every
+    # reused asset; NFM's own CRC/order selects the exact texture dependencies.
+    magic, version, nv, nb, nt, size, crc, reserved = struct.unpack_from('<4s7I', body)
+    stride = 32 if version == 1 else 48
+    if (magic != b'NFM1' or version not in (1, 2) or reserved or not 0 < nt <= 128 or
+            len(body) != size + 32 or size != nt * 16 + nb * 16 + nv * stride or
+            zlib.crc32(body[32:]) != crc):
+        raise ValueError('Invalid installed car scene')
+    previous = json.loads((base / 'manifest.json').read_text())
+    pinned = {row['path']: row for row in previous['files']}
+    files = [(base / 'body.nfm', 'body.nfm')]
+    for i in range(nt):
+        key = struct.unpack_from('<I', body, 32 + i * 16)[0]
+        name = f'car-textures/{key:08x}.t3x'
+        files.append((base / name, name))
     files += [(base / n, n) for n in ('world.mwp', 'world-streaming.bin', 'world.nwc',
                                       'road.nrd', 'wheels.nwa', 'ui.nui')]
+    for p, n in files:
+        if n not in pinned or p.stat().st_size != pinned[n]['bytes'] or sha(p) != pinned[n]['sha256']:
+            raise ValueError('Installed asset differs from its shipping manifest: ' + n)
     files += [(a.assets / n, n) for n in ('exploration.nws', 'free-roam.nfd',
                                          'frontend-top.nut', 'destination-icons.nfi')]
     files += [(a.events, 'events.nre'), (ROOT / 'EXPLORATION-PREVIEW.md', 'README.md')]

@@ -1,0 +1,14 @@
+{
+  "zip": "dist/nfsmw-rockport-v0.18-exploration-preview.zip",
+  "bytes": 39417391,
+  "sha256": "b9f3b586d0004fb5b05b9402e6d5f696e33406539338b38fdd18fa3097d67bd4",
+  "files": 35,
+  "runtime_source_commit": "1347737439a75c3751849d202397b4970e05c67f",
+  "runtime_github_checkpoint": "a45ab6e52789a09195197d682b11d489c1dd4c99",
+  "all_member_crc_and_sha256_verified": true,
+  "contains_test_alias": false,
+  "emulator_tested_binary_sha256": "86f98d3e4e0ccf76bb10752a9dede368a1ce674ddcc96d6fb79eed375f20f976",
+  "full_game": false,
+  "playable_races": false,
+  "shop_purchases": false
+}
