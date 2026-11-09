@@ -6,7 +6,7 @@
 /* 3DS save-format limits; not claims about original GameCube alias capacity. */
 enum { MW_ALIAS_CAPACITY=16, MW_ALIAS_NAME_BYTES=32, MW_ALIAS_SAVE_BYTES=672 };
 typedef struct { uint32_t id; char name[MW_ALIAS_NAME_BYTES]; } MwAlias;
-typedef struct { unsigned count; uint32_t selected; MwAlias aliases[MW_ALIAS_CAPACITY]; } MwAliasStore;
+typedef struct { unsigned count; uint32_t selected,last_id; MwAlias aliases[MW_ALIAS_CAPACITY]; } MwAliasStore;
 bool mw_alias_create(MwAliasStore *,const char *);
 bool mw_alias_rename(MwAliasStore *,uint32_t,const char *);
 bool mw_alias_select(MwAliasStore *,uint32_t);

@@ -1,0 +1,23 @@
+{
+  "original_lookup_string_cases": 17,
+  "source_events_with_native_original_type_parity": 277,
+  "original_type_counts": {
+    "-1": 7,
+    "0": 52,
+    "1": 35,
+    "10": 1,
+    "2": 12,
+    "3": 21,
+    "4": 69,
+    "5": 32,
+    "6": 1,
+    "7": 1,
+    "8": 45,
+    "9": 1
+  },
+  "limits": [
+    "Original attribute access is supplied synthetically; lookup loop, table and strcmp remain original",
+    "Unknown source types remain -1; no filename-based race classification",
+    "Host component checks only; no SDK build or playable-race claim"
+  ]
+}

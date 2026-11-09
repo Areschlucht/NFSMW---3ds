@@ -62,3 +62,14 @@ are not playable yet. No SDK build/emulator run/release in this pass. All83 car
 packages have private expanded exports (74complete/9partial); all32 movies and99
 FNG layouts recovered;216 ordered route arrays +source story/bin refs available.
 Do not ask for these files again. Original media/meshes remain private.
+
+Resumed after usage interruption: native event catalog/type/tutorial and Alias
+fixes are described in docs/research/native-event-source-pass.md. Current private
+event pack is /workspace/port-research/race-story/events-v2.nre (NRE1/version2);
+older events.nre is previousversion. Host end-to-end tests cover216 source-bound
+routes; event modes match the actual original string table and unknowns stay-1.
+Tutorial selector480 PPC/native matches; no career/movie auto-flow is invented.
+Alias codec nowwritesversion2 with monotonic IDs and v1 migration; unreadable
+save handling and touch/controller precedence fixed in app source. NO SDKbuild,
+emulator run or release this pass. Original trigger narrowphase mismatch remains
+an open gate before playable race integration. Original media remain private.

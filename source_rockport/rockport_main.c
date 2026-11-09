@@ -106,7 +106,7 @@ static void load_aliases(void)
 {
     const char *paths[]={ROOT "aliases.sav",ROOT "aliases.bak"};
     for(unsigned i=0;i<2;i++) {
-        FILE *check=fopen(paths[i],"rb");if(!check)continue;fclose(check);
+        FILE *check=fopen(paths[i],"rb");if(!check){if(errno!=ENOENT)alias_storage_blocked=true;continue;}fclose(check);
         size_t n=0;unsigned char *raw=read_file(paths[i],&n);
         bool valid=raw&&mw_alias_decode(&aliases,raw,n);free(raw);
         if(valid){frontend_notice=i?"RECOVERED SAVED ALIASES":NULL;return;}
@@ -119,12 +119,14 @@ static bool save_aliases(const MwAliasStore *next)
     if(alias_storage_blocked){frontend_notice="ALIAS SAVE COULD NOT BE READ";return false;}
     unsigned char data[MW_ALIAS_SAVE_BYTES];
     if(!mw_alias_encode(next,data,sizeof(data)))return false;
+    FILE *existing=fopen(ROOT "aliases.sav","rb");
+    if(!existing&&errno!=ENOENT){alias_storage_blocked=true;frontend_notice="ALIAS SAVE COULD NOT BE READ";return false;}
+    bool previous=existing!=NULL;if(existing)fclose(existing);
     FILE *f=fopen(ROOT "aliases.pending","wb");if(!f){frontend_notice="COULD NOT SAVE ALIAS";return false;}
     bool ok=fwrite(data,1,sizeof(data),f)==sizeof(data);
     if(fflush(f))ok=false;
     if(fclose(f))ok=false;
     if(!ok){frontend_notice="COULD NOT SAVE ALIAS";return false;}
-    FILE *old=fopen(ROOT "aliases.sav","rb");bool previous=old!=NULL;if(old)fclose(old);
     if(previous&&rename(ROOT "aliases.sav",ROOT "aliases.bak")){frontend_notice="COULD NOT SAVE ALIAS";return false;}
     if(rename(ROOT "aliases.pending",ROOT "aliases.sav")) {
         if(previous)(void)rename(ROOT "aliases.bak",ROOT "aliases.sav");
@@ -579,7 +581,7 @@ int main(void)
         if (!ok) { if (down&KEY_START) break;gfxFlushBuffers();gfxSwapBuffers();gspWaitForVBlank();continue; }
         if (screen==MENU) {
             bool accept=!!(down&KEY_A);
-            if(down&KEY_TOUCH){
+            if((down&KEY_TOUCH)&&!(down&(KEY_A|KEY_B|KEY_START|KEY_SELECT|KEY_UP|KEY_DOWN|KEY_CPAD_UP|KEY_CPAD_DOWN|KEY_X|KEY_Y))){
                 touchPosition touch;hidTouchRead(&touch);
                 if(frontend_page==FE_TITLE)accept=true;
                 else if(touch.px>=12&&touch.px<308&&touch.py>=73&&touch.py<205){

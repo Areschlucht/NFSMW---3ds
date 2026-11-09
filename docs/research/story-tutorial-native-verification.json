@@ -1,0 +1,8 @@
+{
+  "native_original_ppc_matches": 480,
+  "limits": [
+    "Host compilation of a portable component only; no SDK/app build",
+    "Original outer player/manager/event preconditions are caller responsibilities",
+    "No movie player or career transition is implemented by this selector"
+  ]
+}

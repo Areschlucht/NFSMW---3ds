@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "events": 277,
+  "nodes": 2462,
+  "checkpoint_references": 1990,
+  "bytes": 135218,
+  "sha256": "d446e44729b1e57bc223a5881803e0770d39c5849e07ea0a0381b6230f200df5",
+  "source_sha256": {
+    "gameplay": "7ac98113d931cd90c68dbdb8e6ba94c643eef85a9af076a5f2e71ac4072d9ab6",
+    "attributes": "5b69c44ffcfc7013a3f24900b33617002b1f68f2484a9108daa5bfe5d72ad20c",
+    "dol": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166"
+  },
+  "limits": [
+    "Source definitions include templates/challenges; not a playable event count",
+    "Coordinates/rotation/dimensions stay in source form; absent fields are explicit mask bits",
+    "Movie strings are data references, not automatically executed transitions",
+    "No progression unlocks or field consumer meanings are invented"
+  ]
+}
