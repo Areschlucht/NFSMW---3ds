@@ -127,6 +127,17 @@ bool world_streaming_scene_instance(const WorldStreamingSceneSection *s,uint32_t
     if(!out->bound_slots[0])out->bound_slots[0]=out->bound_slots[1];
     return true;
 }
+bool world_streaming_scene_instance_transform(WorldStreamingSceneInstance *instance,uint32_t flags){
+    if(!instance||!instance->original_instance)return false;
+    const uint8_t *raw=instance->original_instance;uint32_t old=u32(raw+24);
+    /* Decode afresh: repeated application is an absolute state, not a toggle. */
+    for(unsigned a=0;a<9;a++){
+        uint16_t bits=(uint16_t)(raw[44+a*2]|(uint16_t)raw[45+a*2]<<8);
+        if(a<3&&(old&0x00800000u)&&((old^flags)&0x400u))bits=(uint16_t)(0u-bits);
+        int16_t value;memcpy(&value,&bits,2);instance->matrix[a]=(float)value/8192.0f;
+    }
+    return true;
+}
 
 void world_streaming_scene_cache_init(WorldStreamingSceneCache *c,WorldStreamingSceneCacheEntry *e,size_t n,uint32_t normal,uint32_t linear){
     if(!c)return;

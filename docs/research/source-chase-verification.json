@@ -1,0 +1,20 @@
+{
+  "dol_sha256": "33c5eae699f871beac059b6932475cad5e9f610bb2b2298e046d043757b94166",
+  "asset_sha256": "9fdcca1955893e4674aec8b4884f1c8712a8cb3e3e1b7db296f619e6828161d7",
+  "complete_channel_bit_cases": 576,
+  "direction_target_cases": 192,
+  "original_windows": [
+    "80073028..80073100",
+    "80071BB8..80071EC0",
+    "80073EF8..80073F24",
+    "80208128..80208268",
+    "8020836C..802083C0"
+  ],
+  "guest_bytes_patched": 0,
+  "limits": [
+    "Component sequence with explicit native controller inputs, not a full original chase execution",
+    "Duration biases and post-target timer/vertical attenuation explicitly absent in current adapter",
+    "Dolphin reference supplies original frsqrte estimate; scalar PSQ stack ABI model reused",
+    "Original pose providers, placement, input mode policy, collision and timestamp scheduler remain incomplete"
+  ]
+}

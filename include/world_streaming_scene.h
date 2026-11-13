@@ -60,6 +60,9 @@ WorldStreamingSceneResult world_streaming_scene_section_open(const void *,size_t
 bool world_streaming_scene_model_binding(const WorldStreamingSceneSection *,uint32_t,WorldStreamingSceneBinding *);
 bool world_streaming_scene_texture_binding(const WorldStreamingSceneSection *,uint32_t,WorldStreamingSceneBinding *);
 bool world_streaming_scene_instance(const WorldStreamingSceneSection *,uint32_t,WorldStreamingSceneInstance *);
+/* Apply source absolute flag transition to a DECODED COPY. Source bytes and
+   bounds/translation remain immutable. Eligible0x400 flips wrap int16 lanes. */
+bool world_streaming_scene_instance_transform(WorldStreamingSceneInstance *,uint32_t effective_flags);
 
 typedef enum { WORLD_SCENE_MODEL=1,WORLD_SCENE_TEXTURE=2 } WorldStreamingSceneKind;
 typedef struct {

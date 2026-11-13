@@ -53,7 +53,7 @@ typedef struct {
     C3D_BufInfo buffer;float origin[3];
 } Model;
 typedef struct { C3D_Tex texture;uint32_t alpha_test,blend;bool initialized; } Texture;
-typedef struct { uint16_t section,model;uint32_t instance; } Object;
+typedef struct { uint16_t section,model;uint32_t instance,effective_flags; } Object;
 typedef struct { uint32_t first,count;uint16_t object,texture; } Run;
 typedef struct {
     uint32_t hash;uint8_t identity[32];int16_t triangles;float metric;bool mesh,valid;
@@ -63,13 +63,13 @@ typedef struct {
     Provider *models,*textures;uint32_t model_count,texture_count;
     Object *objects;Run *runs;uint32_t object_count,run_count,triangles;
     uint8_t *references;uint16_t *reference_slots;uint32_t reference_count;
-    uint32_t region;StreamedWorldView view;bool borrowed_providers;uint32_t fallback_bindings;
+    uint32_t region,instance_generation;StreamedWorldView view;bool borrowed_providers;uint32_t fallback_bindings;
 } Frame;
 struct StreamedWorld {
     Arena arena;StreamedWorldConfig config;char asset_root[PATH_LIMIT];
     void *scratch,*metadata;WorldStreamingDatabase database;WorldStreamingSelector selector;
     WorldStreamingSceneCache cache;BaseInfo *base_info;uint32_t base_next;
-    Frame frames[2];unsigned active;C3D_AttrInfo attributes;StreamedWorldStats stats;
+    Frame frames[2];unsigned active;uint32_t instance_generation;C3D_AttrInfo attributes;StreamedWorldStats stats;
 };
 
 static StreamedWorldResult error(StreamedWorld *w,StreamedWorldResult result,const char *what,uint32_t id){
@@ -366,7 +366,7 @@ static StreamedWorldResult stage_draws(StreamedWorld *w,Frame *f){
         Model *m=w->cache.entries[model_slot].resource;if(!m->view.index_count)continue;
         if(f->object_count>=w->config.object_capacity)return error(w,STREAMED_WORLD_CAPACITY,"Visible instance limit",0);
         uint32_t object=f->object_count++;
-        f->objects[object]=(Object){(uint16_t)s,(uint16_t)model_slot,i};
+        f->objects[object]=(Object){(uint16_t)s,(uint16_t)model_slot,i,effective_flags};
         for(uint32_t b=0;b<m->batch_count;b++){
             const ModelBatch *batch=m->batches+b;
             size_t texture_slot;result=texture_resource(w,f,batch->texture_hash,&texture_slot);if(result)return result;
@@ -448,20 +448,27 @@ StreamedWorldResult streamed_world_prepare(StreamedWorld *w,float source_x,float
     if(selection!=WORLD_STREAMING_OK){update_stats(w);return error(w,selection==WORLD_STREAMING_NEAREST_REQUIRED?STREAMED_WORLD_NEAREST_REQUIRED:STREAMED_WORLD_FORMAT,"Original region selection",0);}
     uint32_t region=(uint32_t)(w->database.data[w->database.dependencies+selected*12]|(uint16_t)w->database.data[w->database.dependencies+selected*12+1]<<8);
     Frame *current=&w->frames[w->active];
-    if(current->section_count&&current->region==region&&same_view(&current->view,view)){
+    if(current->section_count&&current->instance_generation==w->instance_generation&&current->region==region&&same_view(&current->view,view)){
         /* Immutable resources and exact same camera/context: preserve the
            complete draw plan, without touching references or GPU ownership. */
         w->selector=candidate;w->stats.result=STREAMED_WORLD_OK;w->stats.detail[0]=0;return STREAMED_WORLD_OK;
     }
     C3D_FrameSync();Frame *next=&w->frames[1-w->active];release_frame(w,next);collect_unused(w);next->view=*view;
-    next->region=region;
+    next->region=region;next->instance_generation=w->instance_generation;
     StreamedWorldResult result=stage_sections(w,next,selected);if(!result)result=stage_draws(w,next);
     if(result){release_frame(w,next);collect_unused(w);update_stats(w);return result;}
     unsigned old=w->active;if(next->borrowed_providers){w->frames[old].models=NULL;w->frames[old].textures=NULL;next->borrowed_providers=false;}
     w->active=1-old;w->selector=candidate;release_frame(w,&w->frames[old]);collect_unused(w);update_stats(w);w->stats.result=STREAMED_WORLD_OK;w->stats.detail[0]=0;return STREAMED_WORLD_OK;
 }
+void streamed_world_invalidate_instances(StreamedWorld *w){if(w)w->instance_generation++;}
+void streamed_world_suspend(StreamedWorld *w){
+    if(!w)return;
+    C3D_FrameSync();release_frame(w,w->frames);release_frame(w,w->frames+1);collect_unused(w);
+    w->active=0;w->instance_generation++;update_stats(w);
+}
 static void object_matrix(StreamedWorld *w,const Frame *f,const Object *object,C3D_Mtx *out,const C3D_Mtx *rotation){
     WorldStreamingSceneInstance instance;world_streaming_scene_instance(&f->sections[object->section]->view,object->instance,&instance);
+    (void)world_streaming_scene_instance_transform(&instance,object->effective_flags);
     Model *m=w->cache.entries[object->model].resource;C3D_Mtx local;Mtx_Identity(&local);
     double origin[3];for(unsigned a=0;a<3;a++){origin[a]=instance.translation[a];for(unsigned c=0;c<3;c++)origin[a]+=(double)m->origin[c]*instance.matrix[c*3+a];}
     float *r=instance.matrix;

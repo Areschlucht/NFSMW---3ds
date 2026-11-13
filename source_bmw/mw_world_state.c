@@ -6,15 +6,19 @@ bool mw_world_state_open(MwWorldState *out,const void *data,size_t bytes)
 {
     if(!out||!data||bytes<640||bytes>128*1024)return false;
     const unsigned char *p=data;
-    if(memcmp(p,"NWS1",4)||word(p+4)!=1||word(p+8)!=bytes||word(p+12)!=crc(p+16,bytes-16))return false;
-    MwWorldState s={.data=p,.bytes=bytes,.bin=word(p+16),.context=word(p+20),.count=word(p+24),.groups_at=word(p+28),.overrides_at=word(p+32)};
+    uint32_t version=word(p+4);
+    if(memcmp(p,"NWS1",4)||(version!=1&&version!=2)||word(p+8)!=bytes||word(p+12)!=crc(p+16,bytes-16))return false;
+    MwWorldState s={.data=p,.bytes=bytes,.bin=word(p+16),.context=word(p+20),.count=word(p+24),.groups_at=word(p+28),.overrides_at=word(p+32),.version=version,.event=word(p+36)};
     if(s.bin<1||s.bin>16||s.context!=0x10||s.groups_at!=128||s.overrides_at!=640||s.count>10000||bytes!=640+(uint64_t)s.count*12)return false;
-    for(unsigned i=36;i<64;i++)if(p[i])return false;
+    if((version==1&&s.event)||(version==2&&!s.event))return false;
+    for(unsigned i=40;i<64;i++)if(p[i])return false;
     if(p[128]&1u)return false;
     uint32_t previous=0;
     for(uint32_t i=0;i<s.count;i++){
         const unsigned char *r=p+640+i*12;uint32_t offset=word(r),original=word(r+4),effective=word(r+8);
-        if(!offset||(i&&offset<=previous)||(original^effective)!=0x10||!(original&0x10))return false;
+        uint32_t changed=original^effective;
+        if(!offset||(i&&offset<=previous)||!changed||(changed&~0x410u)||
+           (version==1&&(changed!=0x10||!(original&0x10))))return false;
         previous=offset;
     }
     *out=s;return true;

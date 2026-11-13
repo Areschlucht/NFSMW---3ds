@@ -20,7 +20,7 @@ CODE,SOURCE,OUTPUT,STACK=0x100000,0x200000,0x400000,0x800000
 
 def decode(raw,expected,*,instruction_limit=5000000,timeout_us=3000000):
  if not 1<=instruction_limit<=100000000 or not 1<=timeout_us<=30000000:raise ValueError("HUFF emulation budget")
- if len(raw)<21 or raw[:8]!=b'HUFF\x01\x10\0\0' or struct.unpack_from('<I',raw,8)[0]!=expected or not 184<=expected<=32*1024*1024:raise ValueError('HUFF header')
+ if len(raw)<21 or raw[:8]!=b'HUFF\x01\x10\0\0' or struct.unpack_from('<I',raw,8)[0]!=expected or not 1<=expected<=32*1024*1024:raise ValueError('HUFF header')
  if struct.unpack_from('<I',raw,12)[0]+16!=len(raw):raise ValueError('HUFF compressed-size mismatch')
  uc=Uc(UC_ARCH_X86,UC_MODE_32)
  uc.mem_map(CODE,0x2000,UC_PROT_READ|UC_PROT_EXEC);uc.mem_write(CODE,code)

@@ -66,6 +66,12 @@ StreamedWorldResult streamed_world_create(const StreamedWorldConfig *,StreamedWo
    complete draw/section set. Root must roll camera/physics back coherently on
    failure; this first backend does not pretend blocking IO is asynchronous. */
 StreamedWorldResult streamed_world_prepare(StreamedWorld *,float render_source_x,float render_source_y,const StreamedWorldView *);
+/* Outside a GPU frame, after switching shared instance/group state. Forces a
+   restage even at an unchanged camera; a failed stage preserves the old draw. */
+void streamed_world_invalidate_instances(StreamedWorld *);
+/* Pause/menu memory handoff. Releases world GPU resources after a fence while
+   retaining metadata/arenas; next prepare reloads the selected physical region. */
+void streamed_world_suspend(StreamedWorld *);
 /* Call INSIDE an active frame with the root's existing floatRGB36 world shader.
    It changes GPU bindings/state; root rebinds its car/UI program afterwards.
    Projection belongs to the same camera used for successful prepare. */
