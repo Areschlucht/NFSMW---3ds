@@ -62,3 +62,12 @@ Run SDK build and native asset tests after integration. Verify car browser,
 large models, car changes, movie/phone yield, next-track and failure behavior.
 Do not publish original archives, decoded PCM, converted game models or binaries
 in the source backup. Private runtime staging is not a release ZIP.
+
+
+User priority changed: original complete drivingphysics now takes precedence;
+audio/roster paused. Latestimmutablecar roster all-native-cars/v7 has80native
+models pluspreservedBMW=81roadpackages/all38PlayerUsable;1299sourcepixelbindings.
+Sound sourcecorpus389ABK/GINbanks (2663WAVs),88sourceNGI+103physicalbindings and
+5originalUIcues arepreserved. Nativeaudioadapter is tested butNOTwiredas full
+physics. See PHYSICS-PRIORITY-HANDOFF.md foractivework. Stagercurrentlyv5/v4/v3
+lookup; v7adoption/provenTRAFFIC_TIREoverride deferredwithaudio/carfeatures.

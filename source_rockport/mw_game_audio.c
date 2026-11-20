@@ -5,13 +5,13 @@ static bool engine_stream_update(MwGameAudio*);
 static void release(MwGameAudioClip*c){if(c->pcm)linearFree(c->pcm);memset(c,0,sizeof(*c));}
 static void gain(int channel,float value){float mix[12]={value,value};ndspChnSetMix(channel,mix);}
 static void configure(int channel,uint32_t rate){ndspChnWaveBufClear(channel);ndspChnReset(channel);ndspChnSetInterp(channel,NDSP_INTERP_LINEAR);ndspChnSetRate(channel,(float)rate);ndspChnSetFormat(channel,NDSP_FORMAT_STEREO_PCM16);}
-static bool clip_load(MwGameAudioClip*out,const char*path,size_t cap,bool engine){
+static bool clip_load(MwGameAudioClip*out,const char*path,size_t cap,unsigned mode){
  MwMovie m={0};MwAudioStreamInfo info;
  if(!mw_audio_stream_open(&m,&info,path))return false;
  bool valid=(uint64_t)m.audio_frames*4<=cap;
- if(engine)valid=valid&&(info.flags&1u)&&!(info.flags&2u)&&info.reference_rpm>0;
+ if(mode)valid=valid&&(info.flags&1u)&&!(info.flags&2u)&&(mode!=1||info.reference_rpm>0);
  else valid=valid&&!info.flags;
- uint32_t start=engine?info.loop_start:0,end=engine?info.loop_end:m.audio_frames;
+ uint32_t start=mode?info.loop_start:0,end=mode?info.loop_end:m.audio_frames;
  if(!valid){mw_movie_close(&m);return false;}
  MwGameAudioClip next={.frames=end-start,.rate=m.sample_rate,.info=info};
  next.pcm=linearAlloc((size_t)next.frames*4);if(!next.pcm){mw_movie_close(&m);return false;}
@@ -56,12 +56,21 @@ void mw_game_audio_stop(MwGameAudio*a){
 }
 bool mw_game_audio_load_engine(MwGameAudio*a,const char*path){
  if(!a||!a->active||!a->stream.ndsp_ready||a->stream.failed||a->engine_stream.active||a->engine.wave.status==NDSP_WBUF_QUEUED||a->engine.wave.status==NDSP_WBUF_PLAYING)return false;
- return clip_load(&a->engine,path,MW_GAME_AUDIO_ENGINE_BYTES,true);
+ return clip_load(&a->engine,path,MW_GAME_AUDIO_ENGINE_BYTES,1);
 }
 bool mw_game_audio_load_effect(MwGameAudio*a,unsigned slot,const char*path){
  if(!a||!a->active||slot>=MW_GAME_AUDIO_EFFECTS||!a->stream.ndsp_ready||a->stream.failed)return false;
  MwGameAudioClip*c=a->effects+slot;if(c->wave.status==NDSP_WBUF_QUEUED||c->wave.status==NDSP_WBUF_PLAYING)return false;
- return clip_load(c,path,MW_GAME_AUDIO_EFFECT_BYTES,false);
+ return clip_load(c,path,MW_GAME_AUDIO_EFFECT_BYTES,0);
+}
+bool mw_game_audio_load_loop(MwGameAudio*a,unsigned slot,const char*path){
+ if(!a||!a->active||slot>=MW_GAME_AUDIO_EFFECTS||!a->stream.ndsp_ready||a->stream.failed)return false;
+ MwGameAudioClip*c=a->effects+slot;if(c->wave.status==NDSP_WBUF_QUEUED||c->wave.status==NDSP_WBUF_PLAYING)return false;
+ return clip_load(c,path,MW_GAME_AUDIO_EFFECT_BYTES,2);
+}
+void mw_game_audio_stop_effect(MwGameAudio*a,unsigned slot){
+ if(!a||!a->active||slot>=MW_GAME_AUDIO_EFFECTS||!a->stream.ndsp_ready)return;
+ int channel=2+(int)slot;ndspChnWaveBufClear(channel);ndspChnReset(channel);memset(&a->effects[slot].wave,0,sizeof(ndspWaveBuf));
 }
 bool mw_game_audio_engine(MwGameAudio*a,float rpm,float level,bool enabled){
  if(!a||!a->active||!a->stream.ndsp_ready||a->stream.failed||a->engine_stream.active)return false;
@@ -77,7 +86,7 @@ bool mw_game_audio_engine(MwGameAudio*a,float rpm,float level,bool enabled){
 bool mw_game_audio_effect(MwGameAudio*a,unsigned slot,float level){
  if(!a||!a->active||!a->stream.ndsp_ready||a->stream.failed||a->stream.paused||slot>=MW_GAME_AUDIO_EFFECTS||!isfinite(level)||level<0||level>1)return false;
  MwGameAudioClip*c=a->effects+slot;if(!c->loaded)return false;
- int channel=2+(int)slot;configure(channel,c->rate);memset(&c->wave,0,sizeof(c->wave));c->wave.data_vaddr=c->pcm;c->wave.nsamples=c->frames;gain(channel,level);ndspChnWaveBufAdd(channel,&c->wave);return true;
+ int channel=2+(int)slot;configure(channel,c->rate);memset(&c->wave,0,sizeof(c->wave));c->wave.data_vaddr=c->pcm;c->wave.nsamples=c->frames;c->wave.looping=(c->info.flags&1u)!=0;gain(channel,level);ndspChnWaveBufAdd(channel,&c->wave);return true;
 }
 
 static void engine_worker(void*context){
@@ -116,7 +125,7 @@ bool mw_game_audio_engine_stream_start(MwGameAudio*a,uint32_t rate,MwGameAudioEn
  if(!a||!a->active||!a->stream.ndsp_ready||a->engine.loaded||a->engine_stream.active||!render||rate<8000||rate>48000)return false;
  MwGameAudioEngineQueue*q=&a->engine_stream;memset(q,0,sizeof(*q));q->pcm=linearAlloc(MW_GAME_AUDIO_ENGINE_QUEUES*MW_GAME_AUDIO_ENGINE_FRAMES*2);
  if(!q->pcm)return false;
- q->render=render;q->context=context;q->active=true;q->paused=a->stream.paused;LightLock_Init(&q->lock);LightEvent_Init(&q->wake,RESET_ONESHOT);
+ q->render=render;q->context=context;q->active=true;q->sample_rate=rate;q->rate_ratio=1;q->paused=a->stream.paused;LightLock_Init(&q->lock);LightEvent_Init(&q->wake,RESET_ONESHOT);
  ndspChnWaveBufClear(1);ndspChnReset(1);ndspChnSetInterp(1,NDSP_INTERP_LINEAR);ndspChnSetRate(1,(float)rate);ndspChnSetFormat(1,NDSP_FORMAT_MONO_PCM16);gain(1,1);
  q->worker=threadCreate(engine_worker,q,16*1024,0x38,-2,false);
  if(!q->worker){linearFree(q->pcm);memset(q,0,sizeof(*q));return false;}
@@ -141,4 +150,12 @@ void mw_game_audio_engine_stream_stop(MwGameAudio*a){
  if(a->stream.ndsp_ready){ndspChnWaveBufClear(1);ndspChnReset(1);}
  if(q->pcm)linearFree(q->pcm);
  memset(q,0,sizeof(*q));
+}
+
+bool mw_game_audio_engine_stream_rate(MwGameAudio*a,float ratio){
+ if(!a||!a->active||!a->stream.ndsp_ready||!a->engine_stream.active||!isfinite(ratio)||ratio<=0||ratio>4)return false;
+ float rate=(float)a->engine_stream.sample_rate*ratio;if(!isfinite(rate)||rate<1||rate>192000)return false;
+ LightLock_Lock(&a->engine_stream.lock);bool ready=!a->engine_stream.failed&&!a->engine_stream.stop;LightLock_Unlock(&a->engine_stream.lock);
+ if(!ready)return false;
+ ndspChnSetRate(1,rate);a->engine_stream.rate_ratio=ratio;return true;
 }

@@ -15,6 +15,7 @@ import shutil
 import tempfile
 
 from PIL import Image
+from car_traffic_tires import source_car_usage
 import build_starter_cars as native
 
 FRONTEND_SHA='adbb364d58f348ee95d2b59e99d0312b1bd8079d77be7bc76bd40461ee2cc9c2'
@@ -66,6 +67,48 @@ def source_models(exports,candidates,car):
         omitted_rejected_driver_parts=[r for r in record['rejected'] if '_DRIVER_' in r['name']]),models
 
 
+def coarse_source_models(exports,candidates,car,base_directory):
+    """Use a genuine monolithic coarse body and independently checked wheels.
+
+    Original per-part live LOD selection is NOT asserted by this offline policy.
+    In particular no invalid high-LOD window is dropped from a high-LOD body.
+    """
+    record,body=source_models(exports,candidates,car)
+    if record['selected_offline_lod']!='E' or len(body)!=1 or body[0]['name']!=car+'_KIT00_BODY_E':
+        raise ValueError('Coarse policy requires exactly one intact original E body')
+    # The body must explicitly carry source window coverage and underbody,
+    # rather than treating a shell missing glazing as a complete exterior.
+    textures={strip['texture_hash'] for strip in body[0]['strips']}
+    if f'{texture_hash("WINDOW_MASK"):08x}' not in textures or f'{texture_hash("CARBOTTOM"):08x}' not in textures:
+        raise ValueError('Coarse original body has no explicit source window/underbody coverage')
+    entries=json.loads((candidates/'manifest.json').read_text())['entries']
+    source=next(e for e in entries if e['candidate_name']==record['candidate_name'])
+    raw=(candidates/source['file']).read_bytes()
+    if sha(raw)!=record['source_sha256']:raise ValueError('Coarse wheel source differs')
+    base=next(r for r in json.loads((base_directory/'manifest.json').read_text())['records'] if r['candidate_name']==record['candidate_name'])
+    directory=base_directory/f"{source['hash']}-{source['directory_record_offset']}"
+    wheels=[]
+    for path in sorted(directory.glob('*.mesh.json.gz')):
+        row=json.loads(gzip.decompress(path.read_bytes()))
+        if row['name'] not in {car+'_KIT00_'+part+'_'+base['selected_offline_lod'] for part in ['FRONT_TIRE','FRONT_BRAKE','REAR_BRAKE']}:continue
+        class Cache:
+            def __init__(self):self.index=0
+            def verify(self,descriptor,packet,widths):
+                value=row['descriptor_parity_checks'][self.index];self.index+=1
+                if sha(packet)!=value['source_sha256']:raise ValueError('Verified wheel descriptor changed')
+                return value
+        cache=Cache();actual=decode_part(raw,row['source_model_offset'],row['source_model_offset']+row['source_model_bytes'],cache)
+        if cache.index!=len(row['descriptor_parity_checks']) or any(json.dumps(actual[k],sort_keys=True)!=json.dumps(row[k],sort_keys=True) for k in actual):raise ValueError('Original coarse wheel source differs')
+        row['mesh_export_sha256']=sha(path.read_bytes());wheels.append(row)
+    if sum('_FRONT_TIRE_' in w['name'] for w in wheels)!=1:raise ValueError('Missing original wheel mesh')
+    record=dict(record,native_selection='Original complete E body plus source B wheel/brake meshes; native offline LOD adapter',
+        selected_body_lod='E',selected_wheel_lod=base['selected_offline_lod'],
+        unused_high_detail_rejections=base['rejected'],
+        coarse_mesh_manifest_sha256=sha((exports/'manifest.json').read_bytes()),
+        wheel_mesh_manifest_sha256=sha((base_directory/'manifest.json').read_bytes()))
+    return record,body+wheels
+
+
 def build(a):
     if a.output.exists():raise ValueError('Use a new output directory; originals and prior conversions are never overwritten')
     attributes=a.attributes.read_bytes();parts_raw=a.carparts.read_bytes()
@@ -77,13 +120,28 @@ def build(a):
     palette=parts.part(texture_hash('GLOSS_L1_COLOR01'))
     paint={'name':palette['name'],'key':palette['key'],'source_sha256':parts.sha256,
         'rgba':[parts.value(palette,k) for k in ('RED','GREEN','BLUE')]+[255],'gloss':parts.value(palette,'GLOSS')}
+    usage=source_car_usage(parts_raw)
     shared=native.existing_pixels(a.shared_textures)
     geometry=json.loads((a.meshes/'manifest.json').read_text())['records']
     coverage=[];built=[];a.output.mkdir(parents=True)
     for record in geometry:
         car=record['candidate_name'].split('\\')[1]
+        mesh_directory=a.meshes
+        for alternate in a.alternate_meshes:
+            options=json.loads((alternate/'manifest.json').read_text())['records']
+            matches=[r for r in options if r['candidate_name']==record['candidate_name']]
+            if matches:
+                if len(matches)!=1 or matches[0]['source_sha256']!=record['source_sha256']:raise ValueError('Alternate mesh source differs')
+                mesh_directory=alternate;record=matches[0];break
+        coarse=False
+        for alternate in a.coarse_body_meshes:
+            options=json.loads((alternate/'manifest.json').read_text())['records']
+            matches=[r for r in options if r['candidate_name']==record['candidate_name']]
+            if matches:
+                if len(matches)!=1 or matches[0]['source_sha256']!=record['source_sha256']:raise ValueError('Coarse mesh source differs')
+                mesh_directory=alternate;record=matches[0];coarse=True;break
         status={'id':car,'source_geometry_sha256':record['source_sha256'],
-            'source_lod':record['selected_offline_lod'],'source_rejections':record['rejected'],
+            'source_lod':record['selected_offline_lod'],'source_mesh_manifest_sha256':sha((mesh_directory/'manifest.json').read_bytes()),'source_rejections':record['rejected'],
             'status':'blocked','frontend_collection_key':None,'ecar_collection_key':None}
         try:
             ecar=db.find('ecar',car.lower());status['ecar_collection_key']=f'{ecar["key"]:08x}'
@@ -99,12 +157,15 @@ def build(a):
             # Presenting the source model code is preferable to invented display
             # names when original localization has not been bound by the app.
             native.DISPLAY.setdefault(car,car)
+            tire_binding=usage.get(car) if usage.get(car,{}).get('usage')==2 else None
             cached=None
             for directory in a.reuse_native:
                 scene=directory/car/'scene.json'
                 if scene.is_file():
                     candidate=json.loads(scene.read_text())
                     if candidate['source_geometry']['source_sha256']!=record['source_sha256']:raise ValueError('Cached source geometry differs')
+                    if candidate['source_geometry']['selected_offline_lod']!=record['selected_offline_lod']:continue
+                    if candidate.get('source_traffic_tire_binding')!=tire_binding:continue
                     if sha((directory/car/'body.nfm').read_bytes())!=candidate['body_sha256'] or sha((directory/car/'wheels.nwa').read_bytes())!=candidate['wheel_rig_sha256']:raise ValueError('Cached native body/rig differs')
                     for texture in candidate['textures']:
                         image=Image.open(directory/car/'textures'/(texture['hash']+'.png')).convert('RGBA')
@@ -113,14 +174,15 @@ def build(a):
             if cached:shutil.copytree(cached,a.output/car)
             else:
                 with tempfile.TemporaryDirectory(prefix='.convert-',dir=a.output) as work:
-                    args=copy.copy(a);args.output=Path(work)
-                    result=native.build_car(args,car,db,shared,paint,models_loader=source_models)
+                    args=copy.copy(a);args.output=Path(work);args.meshes=mesh_directory
+                    loader=(lambda exports,candidates,model:coarse_source_models(exports,candidates,model,a.meshes)) if coarse else source_models
+                    result=native.build_car(args,car,db,shared,paint,models_loader=loader,traffic_tire=tire_binding)
                     if not 1<result['half_extent']<a.half_extent_limit:raise ValueError('Native extent exceeds explicit renderer bound')
                     shutil.move(str(args.output/car),str(a.output/car))
             result['player_usable']=bool(status.get('player_usable') and status['player_usable']['value'] is True and status.get('physical_model',{}).get('value',{}).get('text')==car)
-            result['limitations'] += ['Native model browser presence is not career ownership or original unlock availability',
+            result['limitations'] = list(dict.fromkeys(result['limitations'] + ['Native model browser presence is not career ownership or original unlock availability',
                 'Offline source LOD is selected for the 3DS asset budget; original per-frame vehicle LOD transitions are not implemented',
-                'Rejected driver-only geometry is explicitly omitted where listed; no rejected exterior geometry is hidden']
+                'Rejected driver-only geometry is explicitly omitted where listed; no rejected exterior geometry is hidden']))
             (a.output/car/'scene.json').write_text(json.dumps(result,indent=2)+'\n')
             built.append(result);status.update(status='native_mesh_ready',triangles=result['triangles'],textures=len(result['textures']),half_extent=result['half_extent'])
         except (ValueError,KeyError,IndexError,TypeError,AssertionError) as exc:
@@ -146,8 +208,12 @@ def build(a):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('meshes','candidates','attributes','carparts','frontend','output'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--coarse-body-meshes',type=Path,action='append',default=[])
+    p.add_argument('--alternate-meshes',type=Path,action='append',default=[])
     p.add_argument('--half-extent-limit',type=float,default=16);p.add_argument('--reuse-native',type=Path,action='append',default=[])
     p.add_argument('--shared-textures',type=Path,action='append',required=True);p.add_argument('--native-textures',action='store_true')
-    a=p.parse_args();result=build(a)
+    a=p.parse_args()
+    if not 1<a.half_extent_limit<=16:raise ValueError('Explicit native extent bound must be greater than1and at most16metres')
+    result=build(a)
     print(json.dumps({k:v for k,v in result.items() if k!='models'},indent=2))
 if __name__=='__main__':main()

@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import struct
 import wave
@@ -17,6 +18,7 @@ def encode(wav, output, source_sha256, *, loop_start=None, loop_end=None, refere
         pcm=f.readframes(frames)
     if len(pcm)!=frames*channels*2:raise ValueError('Truncated PCM')
     if channels==1:pcm=b''.join(pcm[i:i+2]*2 for i in range(0,len(pcm),2))
+    if not math.isfinite(reference_rpm) or not 0<=reference_rpm<=30000:raise ValueError('Invalid source reference RPM')
     flags=0
     if loop_start is not None or loop_end is not None:
         if loop_start is None or loop_end is None or not 0<=loop_start<loop_end<=frames:raise ValueError('Invalid loop')

@@ -11,6 +11,14 @@ static unsigned stage;
 static bool before(void *c,MwOriginalRigidBody *b,float dt){(void)c;(void)dt;assert(stage++==0);b->flags|=0x400;return true;}
 static bool after(void *c,const MwOriginalRigidBody *old,MwOriginalRigidBody *b,float dt){(void)c;(void)dt;assert(stage++==1);assert(old->velocity[2]==3);assert(b->position[2]>old->position[2]);memset(b->force,0,sizeof(b->force));return true;}
 static bool produce(void *c,const MwVehicleRuntimeParams *p,const MwVehicleRuntimeState *s,const MwVehicleRuntimeInput *i,MwVehicleRuntimeProduced *v){(void)c;(void)p;(void)i;(void)v;assert(stage++==2);assert(s->body.position[2]>0);return false;}
+static bool after_immobile(void *c,const MwOriginalRigidBody *old,MwOriginalRigidBody *b,float dt){
+    (void)c;(void)dt;assert(stage++==1);assert(old->status==2&&b->status==2);
+    assert(!memcmp(old->position,b->position,sizeof(b->position)));
+    assert(!memcmp(old->velocity,b->velocity,sizeof(b->velocity)));
+    assert(!memcmp(old->angular_velocity,b->angular_velocity,sizeof(b->angular_velocity)));
+    assert(b->velocity[2]==3&&b->angular_velocity[1]==.25f);
+    return false; /* Stop after observation; outer trial must still roll back. */
+}
 static bool directions(void *c,const float m[16],float t,float w,float b,MwPhysicsContactVector o[4]){(void)c;(void)m;(void)t;(void)w;(void)b;(void)o;assert(0);return false;}
 static bool query(void *c,unsigned i,const MwPhysicsContactVector *p,const MwPhysicsContactVector *v,MwVehicleDynamicsQuery *q){(void)c;(void)i;(void)p;(void)v;(void)q;assert(0);return false;}
 static float power(float a,float b,void *c){(void)a;(void)b;(void)c;assert(0);return 0;}
@@ -33,6 +41,12 @@ int main(int argc,char **argv){
     MwVehicleRuntimeInput in={.seconds=1.f/60,.source_time=1};MwPhysicsSuspensionMath sm={power,0};MwPhysicsContactMath cm={.sine=sine};MwVehicleRuntimeHooks h={.produce=produce,.steer_directions=directions,.before_body_tick=before,.after_body_tick=after,.query=query,.suspension_math=&sm,.contact_math=&cm};
     assert(!mw_vehicle_runtime_step(&p,&in,&state,&out,&h));assert(stage==3);assert(!memcmp(&state,&saved,sizeof(state)));assert(!memcmp(&out,&unchanged,sizeof(out)));
     stage=0;h.query=0;assert(!mw_vehicle_runtime_step(&p,&in,&state,&out,&h));assert(stage==0);assert(!memcmp(&state,&saved,sizeof(state)));
+    /* Original frozen-state dispatch must not invoke the integrator's
+       velocity-clearing branch, while still admitting the post-body phase. */
+    state=saved;state.body.status=2;state.body.angular_velocity[1]=.25f;
+    MwVehicleRuntimeState frozen=state;stage=0;h.query=query;h.after_body_tick=after_immobile;
+    assert(!mw_vehicle_runtime_step(&p,&in,&state,&out,&h)&&stage==2);
+    assert(!memcmp(&state,&frozen,sizeof(state)));assert(!memcmp(&out,&unchanged,sizeof(out)));
     MwStoryEngine story={5,0};float omega=100;bool blew;
     assert(mw_physics_transmission_sabotage_stage(&omega,&story,5,mw_player_source_sine,&blew)&&blew&&story.blown&&story.deadline==0&&omega==100);
     assert(mw_physics_transmission_sabotage_stage(&omega,&story,6,mw_player_source_sine,&blew)&&!blew);

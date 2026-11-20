@@ -1073,6 +1073,7 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
     if (screen==DRIVE && !edge && road_edge_ahead(&road,car,height))
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
 #endif
+    ui.car_name=active_car_name;
     if(screen==MENU)frontend_model(&ui);
     if(screen==DRIVE)ui.audio_status=story_audio.active?"PHONE CALL":music_failed||mw_game_audio_muted(&game_audio)?"AUDIO UNAVAILABLE":mw_game_audio_issued(&game_audio)?"L: NEXT MUSIC TRACK":NULL;
     if(screen==MOVIE)ui.movie_muted=cinema.audio.muted_fallback;

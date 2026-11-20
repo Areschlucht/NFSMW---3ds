@@ -95,7 +95,11 @@ bool mw_vehicle_runtime_step(const MwVehicleRuntimeParams *p,const MwVehicleRunt
        Producer is called after that phase, as source Physics task is later. */
     if(!h->before_body_tick(h->context,&s.body,raw->seconds))return false;
     MwOriginalRigidBody previous=s.body;
-    if(!mw_original_rigid_body_integrate(&s.body,raw->seconds)||!h->after_body_tick(h->context,&previous,&s.body,raw->seconds))return false;
+    /* Original OnBeginFrame80234A44 skips DoIntegration for state2. The
+       integrator's own nonzero-state branch clears velocity, so calling it
+       unconditionally changes an immobile body's retained source state. */
+    if(s.body.status!=2&&!mw_original_rigid_body_integrate(&s.body,raw->seconds))return false;
+    if(!h->after_body_tick(h->context,&previous,&s.body,raw->seconds))return false;
     if(!h->produce(h->context,p,&s,raw,&v)||(v.present&MW_RUNTIME_REQUIRED_PRODUCERS)!=MW_RUNTIME_REQUIRED_PRODUCERS||!v.body_before_engine||!v.engine_before_suspension)return false;
     if(v.collision_event_count&&!v.collision_events)return false;
     for(size_t event_index=0;event_index<v.collision_event_count;event_index++)if(!mw_player_collision_event(&s.collision,v.collision_events+event_index))return false;

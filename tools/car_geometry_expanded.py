@@ -157,11 +157,12 @@ def decode_part(raw,start,end,reference):
             'source_model_offset':start,'source_model_bytes':end-start,'descriptor_parity_checks':checks}
 
 
-def run(directory,dol,output):
+def run(directory,dol,output,car_names=None,lod_preference=None):
     if output.exists():raise ValueError('Use a new output directory')
     output.mkdir(parents=True);reference=EmitterReference(dol);entries=json.loads((directory/'manifest.json').read_text())['entries'];records=[]
     for entry in entries:
         if not entry['candidate_name'].endswith('\\GEOMETRY.BIN'):continue
+        if car_names and entry['candidate_name'].split('\\')[1] not in car_names:continue
         raw=(directory/entry['file']).read_bytes()
         if sha(raw)!=entry['sha256'] or len(raw)!=entry['bytes']:raise ValueError('Source payload differs')
         row={'candidate_name':entry['candidate_name'],'source_sha256':entry['sha256'],'models_exported':0,'rejected':[]}
@@ -171,7 +172,7 @@ def run(directory,dol,output):
         for key,start,end in chunks(raw,roots[0][1]+8,roots[0][2]):
             if key!=0x80134010:continue
             p=unique_children(raw,start+8,end);h,he=p[0x134011];name=raw[h+168:he].split(b'\0',1)[0].decode('ascii');candidates.append((name,start,end))
-        lods={n.rsplit('_',1)[-1] for n,_,_ in candidates};lod=next((x for x in ('B','C','A','D','E') if x in lods),None);row['selected_offline_lod']=lod;row['available_suffixes']=sorted(lods)
+        lods={n.rsplit('_',1)[-1] for n,_,_ in candidates};lod=next((x for x in (lod_preference or ('B','C','A','D','E')) if x in lods),None);row['selected_offline_lod']=lod;row['available_suffixes']=sorted(lods)
         carout=output/(entry['hash']+'-'+str(entry['directory_record_offset']));carout.mkdir()
         for index,(name,start,end) in enumerate(candidates):
             if lod is not None and not name.endswith('_'+lod):continue
@@ -247,7 +248,8 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('directory','dol','output'):p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--verify-exports',action='store_true')
+    p.add_argument('--car',action='append');p.add_argument('--lod',choices=list('ABCDE'),action='append')
     a=p.parse_args()
     if a.verify_exports:print(json.dumps(verify_exports(a.directory,a.dol.read_bytes(),a.output)))
     else:
-        r=run(a.directory,a.dol.read_bytes(),a.output);print(json.dumps({k:v for k,v in r.items() if k not in ('records','limits')}))
+        r=run(a.directory,a.dol.read_bytes(),a.output,a.car,a.lod);print(json.dumps({k:v for k,v in r.items() if k not in ('records','limits')}))

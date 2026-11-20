@@ -92,7 +92,11 @@ def original_texture_bank(candidates,car,shared):
     return record,result
 
 
-def texture_binding(car,key,bank,paint):
+def texture_binding(car,key,bank,paint,traffic_tire=None):
+    if traffic_tire is not None and key==f'{texture_hash(car+"_TIRE"):08x}':
+        target=f'{texture_hash("TRAFFIC_TIRE"):08x}'
+        if traffic_tire['usage']!=2 or traffic_tire['tire_source']!=key or traffic_tire['tire_target']!=target or target not in bank:raise ValueError('Original traffic tire binding is unavailable')
+        return bank[target],{'adapter':'original CarRenderInfo UsageType2 TIRE replacement','target_hash':target,'source_car_type':traffic_tire,'original_constructor_range':['802c80f8','802c81c8']}
     if key in bank:return bank[key],None
     lights={f'{texture_hash(n):08x}':f'{k:08x}' for n,k in light_targets(car,window_front_target=texture_hash('WINDOW_FRONT')).items()}
     windows={f'{texture_hash(n):08x}' for n in ('WINDOW_LEFT_FRONT','WINDOW_RIGHT_FRONT','WINDOW_LEFT_REAR','WINDOW_RIGHT_REAR','WINDOW_REAR','WINDOW_BACK')}
@@ -109,7 +113,7 @@ def texture_binding(car,key,bank,paint):
     raise ValueError('Unresolved texture; no placeholder emitted '+car+'/'+key)
 
 
-def build_car(args,car,db,shared,paint,models_loader=None):
+def build_car(args,car,db,shared,paint,models_loader=None,traffic_tire=None):
     source,models=(models_loader or geometry_parts)(args.meshes,args.candidates,car);texsource,bank=original_texture_bank(args.candidates,car,shared)
     ecar=db.find('ecar',car.lower());offsets=db.field_value(ecar,'TireOffsets');mounts=offsets['value']['values']
     if len(mounts)!=4:raise ValueError('Four original art mounts required')
@@ -143,7 +147,7 @@ def build_car(args,car,db,shared,paint,models_loader=None):
     out=args.output/car;textures=out/'textures';textures.mkdir(parents=True)
     keys=sorted({k[0] for k in groups});texture_records=[];texmanifest=[]
     for key in keys:
-        (record,image),binding=texture_binding(car,key,bank,paint)
+        (record,image),binding=texture_binding(car,key,bank,paint,traffic_tire)
         if image.width<8 or image.height<8:raise ValueError('Source texture smaller than native minimum')
         hist=image.getchannel('A').histogram();flags=(1 if any(hist[1:255]) else 0)|(2 if sum(hist[:255]) else 0)
         image.save(textures/(key+'.png'));texture_records.append((int(key,16),image.width,image.height,flags))
@@ -157,7 +161,7 @@ def build_car(args,car,db,shared,paint,models_loader=None):
     (out/'body.nfm').write_bytes(body)
     rig=encode_rig([{'pivot':[(m[0]-center[0])/half,(m[2]-center[1])/half,(-m[1]-center[2])/half],'radius':m[3],'front':i<2} for i,m in enumerate(mounts)],batch_groups,zlib.crc32(payload))
     (out/'wheels.nwa').write_bytes(rig);inspect_rig(rig,len(batches),zlib.crc32(payload))
-    result={'id':car,'display_name':DISPLAY.get(car,car),'frontend_collection_key':f'{FE_KEYS.get(car,0):08x}','ecar_collection_key':f'{ecar["key"]:08x}','half_extent':half,'source_bounds_viewer':[low,high],'center_viewer':center,'vertices':len(flat),'triangles':len(flat)//3,'parts':parts,'textures':texmanifest,'body_sha256':sha(body),'wheel_rig_sha256':sha(rig),'source_geometry':source,'source_textures':texsource,'wheel_mounts':offsets,'scene':'native intact KIT00 source mesh adapter','limitations':['Stock part choice follows concrete KIT00 geometry names, not a recovered saved/purchase preset','Exact source TireOffsets are used; complete original hub/body-height/FE compression transform is not established','Original front tire geometry is instanced four times; original rim/kit/tire scaling producer remains separate','Constant original white palette paint is an explicit native preview selection, not original default purchase color','Original source normals/UVs preserved; full paint, tint, reflection, transparency and lamp state producers remain incomplete']}
+    result={'id':car,'display_name':DISPLAY.get(car,car),'frontend_collection_key':f'{FE_KEYS.get(car,0):08x}','ecar_collection_key':f'{ecar["key"]:08x}','half_extent':half,'source_bounds_viewer':[low,high],'center_viewer':center,'vertices':len(flat),'triangles':len(flat)//3,'parts':parts,'textures':texmanifest,'body_sha256':sha(body),'wheel_rig_sha256':sha(rig),'source_geometry':source,'source_textures':texsource,'source_traffic_tire_binding':traffic_tire,'wheel_mounts':offsets,'scene':'native intact KIT00 source mesh adapter','limitations':['Stock part choice follows concrete KIT00 geometry names, not a recovered saved/purchase preset','Exact source TireOffsets are used; complete original hub/body-height/FE compression transform is not established','Original front tire geometry is instanced four times; original rim/kit/tire scaling producer remains separate','Constant original white palette paint is an explicit native preview selection, not original default purchase color','Original source normals/UVs preserved; full paint, tint, reflection, transparency and lamp state producers remain incomplete']}
     (out/'scene.json').write_text(json.dumps(result,indent=2)+'\n');return result
 
 
@@ -179,6 +183,7 @@ def native_textures(output):
 def pack_catalog(directory,catalog,carparts_sha):
     records=[]
     for car in sorted(catalog['cars'],key=lambda r:r['id']):
+        if 'player_usable' in car and not isinstance(car['player_usable'],bool):raise ValueError('PlayerUsable catalog flag must be boolean')
         scene=json.loads((directory/car['id']/'scene.json').read_text())
         body=(directory/car['id']/'body.nfm').read_bytes();rig=(directory/car['id']/'wheels.nwa').read_bytes()
         if sha(body)!=car['body_sha256'] or sha(rig)!=car['wheel_rig_sha256']:raise ValueError('Catalog asset changed')

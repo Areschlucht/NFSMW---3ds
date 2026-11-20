@@ -187,7 +187,7 @@ def stage(base, research, destination, attributes=None):
     sources = [research/'starter-cars/native-v2',
                research/'opening-police-car/v1',
                research/'opening-opponent-assets/v1']
-    expanded = research/'all-native-cars/v3'
+    expanded = next((research/('all-native-cars/'+version) for version in ('v5', 'v4', 'v3') if (research/('all-native-cars/'+version)/'coverage.json').is_file()), research/'all-native-cars/v3')
     extra_path = expanded/'catalog.nvc' if (expanded/'coverage.json').is_file() else None
     catalog, rows = merge_catalogs([p/'catalog.nvc' for p in sources], extra_path)
     if extra_path:

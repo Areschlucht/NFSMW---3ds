@@ -308,7 +308,8 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
         text(c,16,180,"B / START: BACK TO MENU",1,MUTED);
         button(c,6,308,"BACK TO MENU",false);
     } else {
-        title_text(c,12,36,"BMW M3 GTR",2,TEXT);
+        const char *name=m->car_name?m->car_name:"BMW M3 GTR";
+        if(strlen(name)<22)title_text(c,12,36,name,2,TEXT);else text(c,12,36,name,1,TEXT);
         binding(c,16,66,"A","ROLL WHEELS");binding(c,16,86,"PAD","STEER WHEELS");
         binding(c,16,106,"Y","CAMERA ORBIT");binding(c,16,126,"X","RESET VIEW");
         text(c,16,164,"PAINT AND SUSPENSION UNFINISHED",1,MUTED);
