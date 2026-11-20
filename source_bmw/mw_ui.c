@@ -203,7 +203,7 @@ static void help(UiCanvas *c,int x,int y)
     binding(c,x,y+32,"Y","REVERSE");binding(c,x,y+48,"R","HANDBRAKE");
     binding(c,x,y+64,"PAD","STEER");binding(c,x,y+80,"X","RESET CAR");
     binding(c,x,y+96,"UP","ENTER LOCATION");
-    text(c,x,y+112,"TAP R THEN COUNTERSTEER",1,MUTED);
+    binding(c,x,y+112,"L","NEXT MUSIC TRACK");
 }
 static void stat(UiCanvas *c,int y,const char *label,float number)
 {
@@ -281,7 +281,7 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
         const char *status=m->road_status==MW_UI_ROAD_LOADED&&m->streamed_map?(m->exploration?"ROCKPORT - UNLOCKED EXPLORATION":"ROCKPORT - ORIGINAL COLLISION"):messages[m->road_status];
         if(m->road_status==MW_UI_ROAD_LOADED&&m->interaction_prompt)status=m->interaction_prompt;
         text(c,8,179,status,1,m->road_status?ALERT:TEXT);
-        text(c,8,194,"PARTIAL MINIMAP / PROTOTYPE PHYSICS",1,MUTED);
+        text(c,8,194,m->audio_status?m->audio_status:"PARTIAL MINIMAP / PROTOTYPE PHYSICS",1,MUTED);
         button(c,6,96,"MENU",false);button(c,108,100,"HELP",m->panel==MW_UI_HELP);
         button(c,214,100,"STATS",m->panel==MW_UI_DIAGNOSTICS);
     } else if (m->mode==MW_UI_MENU) {

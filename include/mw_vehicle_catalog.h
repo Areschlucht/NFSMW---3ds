@@ -9,6 +9,7 @@ typedef struct {
     const char *id,*display_name;
     uint32_t frontend_key,ecar_key,body_crc,wheel_crc;
     float half_extent;
+    bool player_usable; /* NVC2 source pvehicle.PlayerUsable; not a career unlock. */
 } MwVehicleSpec;
 bool mw_vehicle_catalog_open(MwVehicleCatalog *,const void *,size_t);
 bool mw_vehicle_catalog_get(const MwVehicleCatalog *,uint32_t,MwVehicleSpec *);

@@ -38,6 +38,7 @@
 #include "mw_opening_cinema.h"
 #include "mw_opening_actors.h"
 #include "mw_story_audio.h"
+#include "mw_game_audio.h"
 #include "mw_story_services.h"
 #include "mw_ui_texture.h"
 #include "mw_color_grade.h"
@@ -68,12 +69,14 @@ static float frontend_platform_scale;
 static WheelRig traffic_rig;
 static MwVehicleCatalog vehicle_catalog;
 static unsigned char *vehicle_catalog_bytes,*traffic_world_bytes;
+static uint16_t browser_indices[128];
+static unsigned browser_count;
 static MwTrafficWorld traffic_world;
 static MwTrafficCar street_cars[4];
 static WheelMotion street_wheels[4];
 static float traffic_half_extent,traffic_ground_offset,traffic_accumulator;
 static const char *active_car_id="BMWM3GTRE46";
-typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE,FE_RACE_SETUP,FE_PAUSE,FE_SAFEHOUSE,FE_SHOP,FE_SHOP_SECTION,FE_CAR_CHOICE,FE_PURCHASE,FE_RACE_RESULT } FrontendPage;
+typedef enum { FE_TITLE,FE_ALIASES,FE_MAIN,FE_CAREER,FE_QUICK,FE_CHALLENGE,FE_OPTIONS,FE_DELETE,FE_RACE_SETUP,FE_PAUSE,FE_SAFEHOUSE,FE_SHOP,FE_SHOP_SECTION,FE_CAR_CHOICE,FE_PURCHASE,FE_RACE_RESULT,FE_CAR_BROWSER } FrontendPage;
 static FrontendPage frontend_page=FE_TITLE;
 static MwAliasStore aliases;
 static unsigned frontend_selected;
@@ -92,6 +95,9 @@ static float nis_player_source[16];
 static float camera_up[3]={0,1,0};
 static bool nis_camera_ready;
 static MwStoryAudio story_audio;
+static MwGameAudio game_audio;
+static unsigned music_segment;
+static bool music_failed;
 static MwStoryEngine story_engine;
 static float story_simulation_clock;
 static MwOpeningActors opening_actors;
@@ -248,6 +254,7 @@ static void edit_alias(bool rename_existing)
 static unsigned frontend_rows(void)
 {
     if(frontend_page==FE_TITLE)return 0;
+    if(frontend_page==FE_CAR_BROWSER)return browser_count+1;
     if(frontend_page==FE_ALIASES)return aliases.count+1;
     if(frontend_page==FE_MAIN)return 6;
     if(frontend_page==FE_DELETE)return 2;
@@ -280,7 +287,7 @@ static void frontend_model(MwUiModel *ui)
     if(frontend_icons()){ui->icon_menu=&menu_layout;ui->menu_icons=&menu_icons;}
     ui->alias_name=mw_alias_selected_name(&aliases);
     if(frontend_page==FE_DELETE)for(unsigned i=0;i<aliases.count;i++)if(aliases.aliases[i].id==alias_delete_id)ui->alias_name=aliases.aliases[i].name;
-    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?","RACE SETUP","PAUSED","SAFE HOUSE","PARTS SHOP","PARTS","CHOOSE YOUR CAR","PURCHASE CAR","RACE COMPLETE"}[frontend_page];
+    ui->frontend_title=(const char*[]){"MOST WANTED","ALIAS MANAGER","MAIN MENU","CAREER","QUICK RACE","CHALLENGE SERIES","OPTIONS","DELETE ALIAS?","RACE SETUP","PAUSED","SAFE HOUSE","PARTS SHOP","PARTS","CHOOSE YOUR CAR","PURCHASE CAR","RACE COMPLETE","CAR VIEWER"}[frontend_page];
     unsigned rows=frontend_rows(),base=frontend_selected>=6?frontend_selected-5:0;
     ui->selected=frontend_selected-base;ui->frontend_count=rows-base>6?6:rows-base;
     for(unsigned i=0;i<ui->frontend_count;i++){
@@ -297,6 +304,10 @@ static void frontend_model(MwUiModel *ui)
             frontend_page==FE_PURCHASE?(row?"CANCEL":"BUY THIS CAR"):
             frontend_page==FE_RACE_RESULT?(const char*[]){"CONTINUE","RETRY","MAIN MENU"}[row]:
             frontend_page==FE_RACE_SETUP?(row?"BACK":"START RACE"):"NOT AVAILABLE IN THIS VERSION";
+        if(frontend_page==FE_CAR_BROWSER){
+            MwVehicleSpec spec;
+            ui->frontend_rows[i]=row&&mw_vehicle_catalog_get(&vehicle_catalog,browser_indices[row-1],&spec)?spec.display_name:"BMW M3 GTR";
+        }
         if(frontend_page==FE_CAR_CHOICE){MwCareerCar car;MwVehicleSpec spec;if(mw_career_car(&career_pack,row,&car)&&mw_vehicle_catalog_find_frontend(&vehicle_catalog,car.key,&spec))ui->frontend_rows[i]=spec.display_name;}
         if(frontend_page==FE_QUICK&&quick_event_count){MwEventDefinition event;if(mw_event_catalog_find(&event_catalog,quick_event_keys[row],&event))ui->frontend_rows[i]=event.display_title;}
     }
@@ -304,6 +315,7 @@ static void frontend_model(MwUiModel *ui)
     if(frontend_page==FE_SHOP_SECTION)ui->frontend_title=shop_section;
     ui->frontend_hint=frontend_notice?frontend_notice:frontend_page==FE_ALIASES?"A: LOAD  X: RENAME  Y: DELETE":
         frontend_page==FE_MAIN?"A: SELECT  Y: EXPLORE ROCKPORT":"A: SELECT  B: BACK";
+    if(frontend_page==FE_CAR_BROWSER&&!frontend_notice)ui->frontend_hint="A: VIEW CAR  Y: EXPLORE  B: BACK";
     if(frontend_page==FE_CAR_CHOICE||frontend_page==FE_PURCHASE){
         MwCareerCar choice;uint32_t key=career.selected_car;
         if(frontend_page==FE_CAR_CHOICE&&mw_career_car(&career_pack,frontend_selected,&choice))key=choice.key;
@@ -424,7 +436,7 @@ static bool load_vehicle_origin(Mesh *mesh,const char *path)
     bool ok=bytes==32&&!memcmp(raw,"NVO1",4)&&version==1&&key==mesh->asset_crc&&crc==origin_crc(raw,28);
     if(ok){
         memcpy(&mesh->source_extent,raw+12,4);memcpy(mesh->source_center,raw+16,12);
-        ok=isfinite(mesh->source_extent)&&mesh->source_extent>0&&mesh->source_extent<10;
+        ok=isfinite(mesh->source_extent)&&mesh->source_extent>0&&mesh->source_extent<16;
         for(unsigned a=0;a<3;a++)ok=ok&&isfinite(mesh->source_center[a]);
     }
     free(raw);mesh->source_origin=ok;return ok;
@@ -564,6 +576,29 @@ static int opening_actor_drive(void *context,DriveState *car,float *height,Drive
     return streamed_drive_step(context,car,height,input,dt);
 }
 #endif
+static void update_music(Screen screen,u32 down)
+{
+    bool allowed=screen!=MOVIE&&screen!=QUIT&&!story_audio.active;
+    if(!allowed){if(game_audio.active)mw_game_audio_stop(&game_audio);return;}
+    if(down&KEY_L){music_segment=(music_segment+1)%53;music_failed=false;mw_game_audio_stop(&game_audio);}
+    if(game_audio.active){
+        if(!mw_game_audio_update(&game_audio)){mw_game_audio_stop(&game_audio);music_failed=true;}
+        else if(mw_game_audio_finished(&game_audio)){mw_game_audio_stop(&game_audio);music_segment=(music_segment+1)%53;}
+    }
+    if(!game_audio.active&&!music_failed){
+        char path[160];snprintf(path,sizeof(path),ROOT "music/mw_music_%03u.nag",music_segment);
+        if(!mw_game_audio_start(&game_audio,path)){music_failed=true;return;}
+        /* Cached once per stream admission. Source bank/event bindings must
+           validate at conversion; no disk reads happen on button presses. */
+        if(!mw_game_audio_muted(&game_audio)){
+            (void)mw_game_audio_load_effect(&game_audio,0,ROOT "audio/ui_accept.nag");
+            (void)mw_game_audio_load_effect(&game_audio,1,ROOT "audio/ui_back.nag");
+            (void)mw_game_audio_load_effect(&game_audio,2,ROOT "audio/ui_up.nag");
+            (void)mw_game_audio_load_effect(&game_audio,3,ROOT "audio/ui_wrong.nag");
+            (void)mw_game_audio_load_effect(&game_audio,4,ROOT "audio/ui_left.nag");
+        }
+    }
+}
 static bool scripted_opening(void)
 {
     MwCareerStage stage;
@@ -643,6 +678,10 @@ static bool initialize(void)
     if(!menu_icon_bytes||!mw_menu_icons_open(&menu_icons,menu_icon_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate menu-icons.nmi");return false;}
     vehicle_catalog_bytes=read_file(ROOT "cars/catalog.nvc",&size);
     if(!vehicle_catalog_bytes||!mw_vehicle_catalog_open(&vehicle_catalog,vehicle_catalog_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate cars/catalog.nvc");return false;}
+    for(uint32_t i=0;i<vehicle_catalog.count;i++){
+        MwVehicleSpec spec;
+        if(mw_vehicle_catalog_get(&vehicle_catalog,i,&spec)&&(spec.frontend_key||spec.player_usable)&&strcmp(spec.id,"BMWM3GTRE46"))browser_indices[browser_count++]=(uint16_t)i;
+    }
     career_pack_bytes=read_file(ROOT "opening-career.nfc",&size);
     if(!career_pack_bytes||!mw_career_pack_open(&career_pack,career_pack_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate opening-career.nfc");return false;}
     frontend_scene_bytes=read_file(ROOT "frontend-scene.nfp",&size);
@@ -914,7 +953,7 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
     } else {
         C3D_Mtx environment;
         MwFrontendSceneCamera original_camera;MwFrontendScenePlacement placement;
-        const char *camera_name=screen==GARAGE?"angle19":frontend_platform_id==1?"angle_final_career_safehouse":frontend_platform_id==2?"angle_final_customization_shop":frontend_platform_id==3?"angle_carlot_car_select":frontend_page==FE_CHALLENGE?"angle_challengeseries":frontend_page==FE_QUICK||frontend_page==FE_OPTIONS||frontend_page==FE_ALIASES?"angle99":"angle3";
+        const char *camera_name=screen==GARAGE||frontend_page==FE_CAR_BROWSER?"angle19":frontend_platform_id==1?"angle_final_career_safehouse":frontend_platform_id==2?"angle_final_customization_shop":frontend_platform_id==3?"angle_carlot_car_select":frontend_page==FE_CHALLENGE?"angle_challengeseries":frontend_page==FE_QUICK||frontend_page==FE_OPTIONS||frontend_page==FE_ALIASES?"angle99":"angle3";
         const unsigned garage_types[]={1,2,3,5};
         bool source_view=frontend_platform.loaded&&frontend_platform_id>=0&&frontend_platform_id<4&&
             mw_frontend_scene_camera(&frontend_scene,camera_name,&original_camera)&&
@@ -1035,6 +1074,7 @@ static MwUiModel ui_model(Screen screen,unsigned selected,const DriveState *car,
         ui.road_status=car->speed<0?MW_UI_EDGE_BEHIND:MW_UI_EDGE_AHEAD;
 #endif
     if(screen==MENU)frontend_model(&ui);
+    if(screen==DRIVE)ui.audio_status=story_audio.active?"PHONE CALL":music_failed||mw_game_audio_muted(&game_audio)?"AUDIO UNAVAILABLE":mw_game_audio_issued(&game_audio)?"L: NEXT MUSIC TRACK":NULL;
     if(screen==MOVIE)ui.movie_muted=cinema.audio.muted_fallback;
     if(screen==DRIVE&&has_near_destination)ui.interaction_prompt=near_destination.kind==MW_DEST_SAFEHOUSE?"UP: ENTER SAFE HOUSE":near_destination.kind==MW_DEST_SHOP?"UP: ENTER PARTS SHOP":near_destination.kind==MW_DEST_CARLOT?"UP: ENTER CAR LOT":"UP: ENTER RACE";
     if(screen==DRIVE&&playable_race.phase==MW_PLAYABLE_COUNTDOWN){
@@ -1238,7 +1278,7 @@ static bool present_career_phase(Screen *screen,DriveState *car,float *height,Ro
         const char *name=mw_career_media(&career,&career_pack);if(!name||!*name)return false;
         for(const char *s=name;*s;s++)if(!((*s>='a'&&*s<='z')||(*s>='0'&&*s<='9')||*s=='_'))return false;
         char path[192];snprintf(path,sizeof(path),ROOT "movies/%s.nvm",name);
-        mw_story_audio_stop(&story_audio);mw_cinema_stop(&cinema);
+        mw_game_audio_stop(&game_audio);mw_story_audio_stop(&story_audio);mw_cinema_stop(&cinema);
         if(!mw_cinema_start(&cinema,path))return false;
         *screen=MOVIE;return true;
     }
@@ -1332,6 +1372,8 @@ int main(void)
                     if(row<frontend_rows()){frontend_selected=row;accept=true;}
                 }
             }
+            if(down&(KEY_UP|KEY_CPAD_UP))(void)mw_game_audio_effect(&game_audio,2,.7f);
+            else if(down&(KEY_LEFT|KEY_CPAD_LEFT))(void)mw_game_audio_effect(&game_audio,4,.7f);
             unsigned rows=frontend_rows();
             if(rows&&(down&(KEY_UP|KEY_CPAD_UP)))frontend_selected=(frontend_selected+rows-1)%rows;
             if(rows&&(down&(KEY_DOWN|KEY_CPAD_DOWN)))frontend_selected=(frontend_selected+1)%rows;
@@ -1343,9 +1385,16 @@ int main(void)
             else if(frontend_page==FE_MAIN&&(down&KEY_Y)){
                 cancel_race();race_base_bin=1;(void)restore_exploration();screen=DRIVE;
             }
+            else if(frontend_page==FE_CAR_BROWSER&&(down&KEY_Y)){
+                MwVehicleSpec spec;const char *id="BMWM3GTRE46";
+                if(frontend_selected&&mw_vehicle_catalog_get(&vehicle_catalog,browser_indices[frontend_selected-1],&spec))id=spec.id;
+                if(select_player_vehicle(id)){cancel_race();race_base_bin=1;(void)restore_exploration();screen=DRIVE;frontend_notice=NULL;}
+                else frontend_notice="CAR DATA COULD NOT BE LOADED";
+            }
             else if(frontend_page==FE_ALIASES&&(down&KEY_X)&&frontend_selected)edit_alias(true);
             else if(frontend_page==FE_ALIASES&&(down&KEY_Y)&&frontend_selected){alias_delete_id=aliases.aliases[frontend_selected-1].id;frontend_page=FE_DELETE;frontend_selected=1;}
             else if(down&KEY_B){
+                (void)mw_game_audio_effect(&game_audio,1,.8f);
                 if(frontend_page==FE_RACE_SETUP){
                     (void)mw_race_session_cancel(&race_session);
                     if(race_from_drive){screen=DRIVE;resume_drive=true;}else frontend_page=FE_QUICK;
@@ -1361,12 +1410,18 @@ int main(void)
                 frontend_selected=0;frontend_notice=NULL;
             }
             else if(accept){
+                (void)mw_game_audio_effect(&game_audio,0,.8f);
                 if(frontend_page==FE_ALIASES){
                     if(!frontend_selected)edit_alias(false);
                     else {MwAliasStore next=aliases;if(mw_alias_select(&next,next.aliases[frontend_selected-1].id)&&save_aliases(&next)){frontend_page=FE_MAIN;frontend_selected=0;}}
                 }else if(frontend_page==FE_MAIN){
-                    if(frontend_selected==3)screen=GARAGE;
+                    if(frontend_selected==3){frontend_page=FE_CAR_BROWSER;frontend_selected=0;}
                     else {career_back=FE_MAIN;frontend_page=(FrontendPage[]){FE_CAREER,FE_CHALLENGE,FE_QUICK,FE_MAIN,FE_ALIASES,FE_OPTIONS}[frontend_selected];frontend_selected=0;}
+                }else if(frontend_page==FE_CAR_BROWSER){
+                    MwVehicleSpec spec;const char *id="BMWM3GTRE46";
+                    if(frontend_selected&&mw_vehicle_catalog_get(&vehicle_catalog,browser_indices[frontend_selected-1],&spec))id=spec.id;
+                    if(select_player_vehicle(id)){screen=GARAGE;frontend_notice=NULL;wheel_motion_reset(&garage_motion);}
+                    else frontend_notice="CAR DATA COULD NOT BE LOADED";
                 }else if(frontend_page==FE_QUICK&&quick_event_count){
                     if(mw_race_session_prepare(&race_session,&event_catalog,quick_event_keys[frontend_selected],&aliases,(uintptr_t)&car)){
                         frontend_event_key=quick_event_keys[frontend_selected];race_from_drive=false;
@@ -1609,6 +1664,7 @@ int main(void)
             for(unsigned i=0;i<MW_PURSUIT_COPS;i++)if(opening_actors.pursuit.actors[i].active)(void)wheel_motion_update(&police_visual.rig,police_wheels+i,old_police+i,&opening_actors.pursuit.actors[i].motion);
         }
 #endif
+        update_music(screen,down);
         mw_story_audio_pause(&story_audio,screen!=DRIVE);
         if(story_audio.active&&screen==DRIVE){
             if(!mw_story_audio_update(&story_audio)){frontend_notice="PHONE AUDIO COULD NOT BE PLAYED";mw_story_audio_stop(&story_audio);}
@@ -1701,6 +1757,7 @@ int main(void)
                         mw_playable_race_width_sweep(&node,trigger.width,source_player,p,1,&entry):mw_playable_race_sweep(&node,source_player,p,1,&entry);
                     if(entered&&mw_career_trigger_enter(&career,&career_pack,trigger.key)){
                         if(career.flags&MW_CAREER_CALL_REQUEST){
+                            mw_game_audio_stop(&game_audio);
                             if(!mw_story_audio_start(&story_audio,ROOT "speech/cellcall10.nvs",10))frontend_notice="PHONE AUDIO COULD NOT BE OPENED";
                         }
                         if(career.flags&MW_CAREER_SABOTAGE)(void)mw_story_engine_sabotage(&story_engine,story_simulation_clock,5);
@@ -1743,7 +1800,7 @@ int main(void)
     mw_scene_pack_close(&scene_pack);
 #endif
     if(gpu_ready)C3D_FrameSync();
-    mw_story_audio_stop(&story_audio);mw_cinema_stop(&cinema);
+    mw_game_audio_stop(&game_audio);mw_story_audio_stop(&story_audio);mw_cinema_stop(&cinema);
     reset_opening_actors();free_mesh(&frontend_platform);free_mesh(&traffic_body);
     free_mesh(&pending_body);free_mesh(&world);free_mesh(&body);
     wheel_rig_free(&traffic_rig);wheel_rig_free(&wheel_rig);

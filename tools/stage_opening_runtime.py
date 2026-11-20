@@ -32,7 +32,7 @@ def catalog_rows(data):
     if len(data) < 256:
         raise ValueError('Truncated native vehicle catalog')
     magic, version, size, crc, count, at, stride, reserved = struct.unpack_from('<4s7I', data)
-    if (magic, version, size, at, stride, reserved) != (b'NVC1', 1, len(data), 96, 160, 0):
+    if version not in (1, 2) or (magic, size, at, stride, reserved) != (b'NVC1', len(data), 96, 160, 0):
         raise ValueError('Unsupported native vehicle catalog')
     if not 0 < count <= 128 or size != 96 + count * 160 or zlib.crc32(data[16:]) != crc:
         raise ValueError('Invalid native vehicle catalog extent/CRC')
@@ -46,20 +46,32 @@ def catalog_rows(data):
     return rows
 
 
-def merge_catalogs(paths):
+def merge_catalogs(paths, extra_path=None):
     rows = {}
     provenance = None
-    for path in paths:
+    for path in [*paths, *([extra_path] if extra_path else [])]:
         data = path.read_bytes()
         current = catalog_rows(data)
         if provenance is not None and data[32:96] != provenance:
             raise ValueError('Vehicle attribute/part sources differ')
         provenance = data[32:96]
         for name, row in current.items():
+            flags = struct.unpack_from('<I', row, 20)[0]
+            if flags & ~1 or (struct.unpack_from('<I', data, 4)[0] == 1 and flags):
+                raise ValueError('Unknown source vehicle flags')
             if name in rows and rows[name] != row:
+                if extra_path and path == extra_path:
+                    # Preserve already integrated opening models/materials;
+                    # only augment actual source PlayerUsable metadata.
+                    prior = bytearray(rows[name])
+                    if prior[4:8] != row[4:8]:
+                        raise ValueError('Expanded ecar identity differs ' + name)
+                    struct.pack_into('<I', prior, 20, struct.unpack_from('<I', prior, 20)[0] | flags)
+                    rows[name] = bytes(prior)
+                    continue
                 raise ValueError('Different catalog records for ' + name)
             rows[name] = row
-    if set(rows) != set(MODELS):
+    if not extra_path and set(rows) != set(MODELS):
         raise ValueError('Unexpected merged vehicle coverage: ' + repr(sorted(rows)))
     ecar = set()
     frontend = set()
@@ -71,7 +83,7 @@ def merge_catalogs(paths):
         if fe:
             frontend.add(fe)
     output = bytearray(96) + b''.join(rows[n] for n in sorted(rows))
-    struct.pack_into('<4s7I', output, 0, b'NVC1', 1, len(output), 0, len(rows), 96, 160, 0)
+    struct.pack_into('<4s7I', output, 0, b'NVC1', 2 if extra_path else 1, len(output), 0, len(rows), 96, 160, 0)
     output[32:96] = provenance
     struct.pack_into('<I', output, 12, zlib.crc32(output[16:]))
     return bytes(output), rows
@@ -175,7 +187,12 @@ def stage(base, research, destination, attributes=None):
     sources = [research/'starter-cars/native-v2',
                research/'opening-police-car/v1',
                research/'opening-opponent-assets/v1']
-    catalog, rows = merge_catalogs([p/'catalog.nvc' for p in sources])
+    expanded = research/'all-native-cars/v3'
+    extra_path = expanded/'catalog.nvc' if (expanded/'coverage.json').is_file() else None
+    catalog, rows = merge_catalogs([p/'catalog.nvc' for p in sources], extra_path)
+    if extra_path:
+        sources.append(expanded)
+        add(expanded/'coverage.json', 'cars/coverage.json')
     generated['cars/catalog.nvc'] = catalog
     if attributes is None:
         attributes = Path('/workspace/attachments/857a1856-1b3b-4be1-8a91-42f437324e6f/ATTRIBUTES.BIN')
@@ -199,8 +216,8 @@ def stage(base, research, destination, attributes=None):
         generated['wheels.frontend' if name == 'BMWM3GTRE46' else 'cars/'+name+'/wheels.frontend'] = wheel_data
     for name in sorted(rows):
         parents = [p/name for p in sources if (p/name).is_dir()]
-        if len(parents) != 1:
-            raise ValueError('Ambiguous model source ' + name)
+        if not parents:
+            raise ValueError('Missing model source ' + name)
         source = parents[0]
         for asset in ('body.nfm', 'wheels.nwa'):
             add(source/asset, 'cars/'+name+'/'+asset)
@@ -215,6 +232,14 @@ def stage(base, research, destination, attributes=None):
             json.loads((source/'scene.json').read_text()),struct.unpack_from('<f',rows[name],16)[0])
         origin_sources[origin_name] = {'source_scene_sha256': digest(source/'scene.json'),
                                      'source_body_sha256': digest(source/'body.nfm')}
+    music = research/'game-audio/music/native-v1'
+    if (music/'manifest.json').is_file():
+        tree(music, 'music', '*.nag')
+        add(music/'manifest.json', 'music/manifest.json')
+    effects = research/'game-audio/native-v1'
+    if (effects/'manifest.json').is_file():
+        tree(effects, 'audio', '*.nag')
+        add(effects/'manifest.json', 'audio/manifest.json')
     for suffix in ('ndp', 'mmp'):
         tree(research/'driving-runtime', 'physics', '*.'+suffix)
     tree(research/'driving-runtime-v2', 'physics', '*.nvr')

@@ -35,7 +35,7 @@ typedef struct {
     const char *frontend_rows[6];
     unsigned frontend_count;
     bool frontend_title_body; /* Localized route names need the full body atlas. */
-    const char *interaction_prompt;
+    const char *interaction_prompt,*audio_status;
     const MwMenuLayout *icon_menu;
     const MwMenuIcons *menu_icons;
     const char *car_name;

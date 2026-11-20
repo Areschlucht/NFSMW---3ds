@@ -15,9 +15,9 @@ static void *load(const char *path,size_t *bytes)
 }
 int main(int argc,char **argv)
 {
-    assert(argc==2);char path[1024];size_t bytes;
+    assert(argc==2||argc==3);unsigned expected=argc==3?(unsigned)strtoul(argv[2],NULL,10):12;assert(expected&&expected<=128);char path[1024];size_t bytes;
     snprintf(path,sizeof(path),"%s/cars/catalog.nvc",argv[1]);void *raw=load(path,&bytes);
-    MwVehicleCatalog catalog;assert(mw_vehicle_catalog_open(&catalog,raw,bytes)&&catalog.count==12);
+    MwVehicleCatalog catalog;assert(mw_vehicle_catalog_open(&catalog,raw,bytes)&&catalog.count==expected);
     unsigned selectable=0,police=0,traffic=0,opponents=0,triangles=0,textures=0;
     for(unsigned i=0;i<catalog.count;i++){
         MwVehicleSpec car,found;assert(mw_vehicle_catalog_get(&catalog,i,&car));
@@ -43,7 +43,7 @@ int main(int argc,char **argv)
         printf("%s: %u source triangles, %u texture bindings\n",car.id,scene.vertex_count/3,scene.texture_count);
         wheel_rig_free(&rig);nfs_scene_free(&scene);free(wheel);free(body);
     }
-    assert(selectable==4&&police==1&&traffic==1&&opponents==6);
-    printf("12 actual models validated: %u triangles, %u texture bindings.\n",triangles,textures);
+    if(expected==12)assert(selectable==4&&police==1&&traffic==1&&opponents==6);
+    printf("%u actual models validated: %u triangles, %u texture bindings.\n",catalog.count,triangles,textures);
     free(raw);return 0;
 }

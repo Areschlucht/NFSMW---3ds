@@ -109,8 +109,8 @@ def texture_binding(car,key,bank,paint):
     raise ValueError('Unresolved texture; no placeholder emitted '+car+'/'+key)
 
 
-def build_car(args,car,db,shared,paint):
-    source,models=geometry_parts(args.meshes,args.candidates,car);texsource,bank=original_texture_bank(args.candidates,car,shared)
+def build_car(args,car,db,shared,paint,models_loader=None):
+    source,models=(models_loader or geometry_parts)(args.meshes,args.candidates,car);texsource,bank=original_texture_bank(args.candidates,car,shared)
     ecar=db.find('ecar',car.lower());offsets=db.field_value(ecar,'TireOffsets');mounts=offsets['value']['values']
     if len(mounts)!=4:raise ValueError('Four original art mounts required')
     static=[m for m in models if not any(s in m['name'] for s in ('_TIRE_','_BRAKE_'))]
@@ -139,7 +139,7 @@ def build_car(args,car,db,shared,paint):
     vertices=[v for g in groups.values() for v in g]
     low=[min(v[a] for v in vertices) for a in range(3)];high=[max(v[a] for v in vertices) for a in range(3)]
     half=max(high[a]-low[a] for a in range(3))/2;center=[(low[a]+high[a])/2 for a in range(3)]
-    if not 1<half<4:raise ValueError('Unsupported native car extent')
+    if not 1<half<getattr(args,'half_extent_limit',4):raise ValueError('Unsupported native car extent')
     out=args.output/car;textures=out/'textures';textures.mkdir(parents=True)
     keys=sorted({k[0] for k in groups});texture_records=[];texmanifest=[]
     for key in keys:
@@ -166,7 +166,7 @@ def native_textures(output):
     for k in ('DOCKER_HOST','DOCKER_CONTEXT','DOCKER_TLS','DOCKER_TLS_VERIFY','DOCKER_CERT_PATH'):env.pop(k,None)
     docker=['docker','--host=unix:///var/run/docker.sock']
     subprocess.run(docker+['info','--format','{{.ServerVersion}}'],check=True,env=env,stdout=subprocess.DEVNULL)
-    subprocess.run(docker+['run','--rm','--network','none','--user',f'{os.getuid()}:{os.getgid()}','--mount',f'type=bind,src={output.resolve()},dst=/cars',IMAGE,'bash','-lc','set -e; for p in /cars/*/textures/*.png; do tex3ds -f rgba8 -z none -r -o "${p%.png}.raw" "$p"; tex3ds -f rgba8 -z none -o "${p%.png}.t3x" "$p"; done'],check=True,env=env)
+    subprocess.run(docker+['run','--rm','--network','none','--user',f'{os.getuid()}:{os.getgid()}','--mount',f'type=bind,src={output.resolve()},dst=/cars',IMAGE,'bash','-lc','set -e; for p in /cars/*/textures/*.png; do if [ -f "${p%.png}.raw" ] && [ -f "${p%.png}.t3x" ]; then continue; fi; tex3ds -f rgba8 -z none -r -o "${p%.png}.raw" "$p"; tex3ds -f rgba8 -z none -o "${p%.png}.t3x" "$p"; done'],check=True,env=env)
     total=0
     for png in output.glob('*/textures/*.png'):
         image=Image.open(png).convert('RGBA');expected=tiled_rgba8(image.tobytes(),image.width,image.height)
@@ -184,9 +184,9 @@ def pack_catalog(directory,catalog,carparts_sha):
         if sha(body)!=car['body_sha256'] or sha(rig)!=car['wheel_rig_sha256']:raise ValueError('Catalog asset changed')
         name=car['id'].encode('ascii');display=car['display_name'].encode('ascii')
         if len(name)>31 or len(display)>63:raise ValueError('Catalog text exceeds native bound')
-        records.append(struct.pack('<4IfI32s64s32s8x',int(car['frontend_collection_key'],16),int(car['ecar_collection_key'],16),struct.unpack_from('<I',body,24)[0],struct.unpack_from('<I',rig,20)[0],car['half_extent'],0,name,display,bytes.fromhex(scene['source_geometry']['source_sha256'])))
+        records.append(struct.pack('<4IfI32s64s32s8x',int(car['frontend_collection_key'],16),int(car['ecar_collection_key'],16),struct.unpack_from('<I',body,24)[0],struct.unpack_from('<I',rig,20)[0],car['half_extent'],int(car.get('player_usable',False)),name,display,bytes.fromhex(scene['source_geometry']['source_sha256'])))
     data=bytearray(96)+b''.join(records)
-    struct.pack_into('<4s7I',data,0,b'NVC1',1,len(data),0,len(records),96,160,0)
+    struct.pack_into('<4s7I',data,0,b'NVC1',2 if any(c.get('player_usable',False) for c in catalog['cars']) else 1,len(data),0,len(records),96,160,0)
     data[32:64]=bytes.fromhex(ATTR_SHA);data[64:96]=bytes.fromhex(carparts_sha);struct.pack_into('<I',data,12,zlib.crc32(data[16:]))
     path=directory/'catalog.nvc'
     if path.exists() and path.read_bytes()!=data:raise ValueError('Existing native catalog differs')
