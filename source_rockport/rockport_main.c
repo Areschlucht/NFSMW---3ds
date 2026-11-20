@@ -22,6 +22,7 @@
 #include "mw_race_session.h"
 #include "mw_world_state.h"
 #include "mw_frontend_top.h"
+#include "mw_frontend_scene.h"
 #include "mw_free_roam.h"
 #include "mw_destination_icons.h"
 #include "mw_menu_layout.h"
@@ -58,7 +59,7 @@
 #define DRIVE_FAR_WORLD 700.0f
 #endif
 #define TRANSFER_FLAGS (GX_TRANSFER_FLIP_VERT(0)|GX_TRANSFER_OUT_TILED(0)|GX_TRANSFER_RAW_COPY(0)|GX_TRANSFER_IN_FORMAT(GX_TRANSFER_FMT_RGBA8)|GX_TRANSFER_OUT_FORMAT(GX_TRANSFER_FMT_RGB8)|GX_TRANSFER_SCALING(GX_TRANSFER_SCALE_NO))
-typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc,gpu_vertex_count;C3D_BufInfo buffer;float source_center[3],source_extent;bool source_origin; } Mesh;
+typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc,gpu_vertex_count;C3D_BufInfo buffer;float source_center[3],source_extent,frontend_height,frontend_positions[12];bool source_origin,frontend_stance; } Mesh;
 typedef enum { MENU,DRIVE,GARAGE,CONTROLS,QUIT,DISPLAY,MOVIE,NIS } Screen;
 static Mesh world,body;
 static Mesh pending_body,traffic_body,frontend_platform;
@@ -126,6 +127,8 @@ static MwMenuLayout menu_layout;
 static MwMenuIcons menu_icons;
 static unsigned char *menu_icon_bytes;
 static MwMenuCamera menu_camera;
+static MwFrontendScenePack frontend_scene;
+static unsigned char *frontend_scene_bytes;
 static const char *active_car_name="BMW M3 GTR";
 static const char *shop_categories[]={"PARTS","PERFORMANCE","VISUAL","BACK"};
 static bool alias_storage_blocked;
@@ -426,6 +429,20 @@ static bool load_vehicle_origin(Mesh *mesh,const char *path)
     }
     free(raw);mesh->source_origin=ok;return ok;
 }
+static bool load_frontend_stance(Mesh *mesh,const char *directory,uint32_t ecar)
+{
+    char path[192];snprintf(path,sizeof(path),"%sbody.stance",directory);
+    size_t bytes;unsigned char *raw=read_file(path,&bytes);if(!raw)return false;
+    uint32_t key=0,crc=0;if(bytes==16){memcpy(&key,raw+8,4);memcpy(&crc,raw+12,4);}
+    bool ok=bytes==16&&!memcmp(raw,"NFG1",4)&&key==ecar&&crc==origin_crc(raw,12);
+    if(ok){memcpy(&mesh->frontend_height,raw+4,4);ok=isfinite(mesh->frontend_height)&&fabsf(mesh->frontend_height)<2;}
+    free(raw);if(!ok)return false;
+    snprintf(path,sizeof(path),"%swheels.frontend",directory);raw=read_file(path,&bytes);if(!raw)return false;
+    uint32_t version=0;if(bytes==64){memcpy(&key,raw+4,4);memcpy(&version,raw+56,4);memcpy(&crc,raw+60,4);}
+    ok=bytes==64&&!memcmp(raw,"NFW2",4)&&key==ecar&&version==2&&crc==origin_crc(raw,60);
+    if(ok){memcpy(mesh->frontend_positions,raw+8,48);for(unsigned i=0;i<12;i++)ok=ok&&isfinite(mesh->frontend_positions[i])&&fabsf(mesh->frontend_positions[i])<10;}
+    free(raw);mesh->frontend_stance=ok;return ok;
+}
 static bool load_catalog_vehicle(Mesh *mesh,WheelRig *rig,const MwVehicleSpec *spec)
 {
     char path[160],textures[160];snprintf(path,sizeof(path),"cars/%s/body.nfm",spec->id);
@@ -435,7 +452,9 @@ static bool load_catalog_vehicle(Mesh *mesh,WheelRig *rig,const MwVehicleSpec *s
     size_t size;void *raw=read_file(path,&size);if(!raw)return false;
     bool ok=wheel_rig_decode(raw,size,mesh->scene.batch_count,mesh->asset_crc,rig);free(raw);
     snprintf(path,sizeof(path),ROOT "cars/%s/body.origin",spec->id);
-    return ok&&load_vehicle_origin(mesh,path);
+    if(!ok||!load_vehicle_origin(mesh,path))return false;
+    snprintf(path,sizeof(path),ROOT "cars/%s/",spec->id);
+    return load_frontend_stance(mesh,path,spec->ecar_key);
 }
 static bool select_player_vehicle(const char *id)
 {
@@ -449,7 +468,7 @@ static bool select_player_vehicle(const char *id)
         loaded=load_mesh(&pending_body,"body.nfm","car-textures");
         size_t size=0;void *raw=loaded?read_file(ROOT "wheels.nwa",&size):NULL;
         loaded=raw&&wheel_rig_decode(raw,size,pending_body.scene.batch_count,pending_body.asset_crc,&rig);free(raw);
-        loaded=loaded&&load_vehicle_origin(&pending_body,ROOT "body.origin");
+        loaded=loaded&&load_vehicle_origin(&pending_body,ROOT "body.origin")&&load_frontend_stance(&pending_body,ROOT,0x4e085fb3);
     }else loaded=load_catalog_vehicle(&pending_body,&rig,&spec);
     if(!loaded){
         free_mesh(&pending_body);wheel_rig_free(&rig);return false;
@@ -592,7 +611,7 @@ static bool initialize(void)
     if (!raw) return false;
     bool ok=road_decode(raw,size,&road);free(raw);if (!ok) return false;
     original_bmw_extent=road.car_half_extent;
-    if(!load_vehicle_origin(&body,ROOT "body.origin")){snprintf(error,sizeof(error),"Invalid original vehicle origin");return false;}
+    if(!load_vehicle_origin(&body,ROOT "body.origin")||!load_frontend_stance(&body,ROOT,0x4e085fb3)){snprintf(error,sizeof(error),"Invalid original vehicle origin");return false;}
     snprintf(error,sizeof(error),"Cannot read/validate wheels.nwa");
     raw=read_file(ROOT "wheels.nwa",&size);if (!raw) return false;
     ok=wheel_rig_decode(raw,size,body.scene.batch_count,body.asset_crc,&wheel_rig);free(raw);
@@ -626,6 +645,8 @@ static bool initialize(void)
     if(!vehicle_catalog_bytes||!mw_vehicle_catalog_open(&vehicle_catalog,vehicle_catalog_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate cars/catalog.nvc");return false;}
     career_pack_bytes=read_file(ROOT "opening-career.nfc",&size);
     if(!career_pack_bytes||!mw_career_pack_open(&career_pack,career_pack_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate opening-career.nfc");return false;}
+    frontend_scene_bytes=read_file(ROOT "frontend-scene.nfp",&size);
+    if(!frontend_scene_bytes||!mw_frontend_scene_open(&frontend_scene,frontend_scene_bytes,size)){snprintf(error,sizeof(error),"Invalid frontend-scene.nfp");return false;}
     camera_asset_bytes=read_file(ROOT "camera.ncp",&size);
     if(!camera_asset_bytes||!mw_chase_asset_open(&camera_asset,camera_asset_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate camera.ncp");return false;}
     if(!mw_opening_cinema_open(&opening_cinema,ROOT "opening-nis.nni",ROOT "opening-nis-actors.nna",ROOT "opening-nis-actions.nac")){
@@ -739,7 +760,7 @@ static void draw_mesh(Mesh *mesh,const C3D_Mtx *model,const WorldFrustum *frustu
     }
 }
 #endif
-static void draw_vehicle(Mesh *mesh,const WheelRig *rig,const C3D_Mtx *parent,const WheelMotion *motion,float steering)
+static void draw_vehicle(Mesh *mesh,const WheelRig *rig,const C3D_Mtx *parent,const WheelMotion *motion,float steering,const float *frontend_positions)
 {
     C3D_BindProgram(&program);C3D_SetAttrInfo(&car_attributes);
     C3D_AlphaTest(true,GPU_GREATER,0);
@@ -748,7 +769,19 @@ static void draw_vehicle(Mesh *mesh,const WheelRig *rig,const C3D_Mtx *parent,co
     for (unsigned i=0;i<4;++i) {
         const Wheel *wheel=&rig->wheels[i];const float *p=wheel->pivot;
         C3D_Mtx local;Mtx_Identity(&local);
-        Mtx_Translate(&local,p[0],p[1],p[2],true);
+        float target[3]={p[0],p[1],p[2]};
+        if(frontend_positions){
+            /* Older fitted rigs iterate side then axle; the original ecar
+               providers iterate axle then side. Bind by real front/side,
+               then translate FROM the rig's actual existing art pivot. */
+            unsigned slot=wheel->front?0:2;
+            float source_y=-(p[2]*mesh->source_extent+mesh->source_center[2]);
+            if(fabsf(frontend_positions[slot*3+1]-source_y)>fabsf(frontend_positions[(slot+1)*3+1]-source_y))slot++;
+            target[0]=(frontend_positions[slot*3]-mesh->source_center[0])/mesh->source_extent;
+            target[1]=(frontend_positions[slot*3+2]-mesh->source_center[1])/mesh->source_extent;
+            target[2]=(-frontend_positions[slot*3+1]-mesh->source_center[2])/mesh->source_extent;
+        }
+        Mtx_Translate(&local,target[0],target[1],target[2],true);
         if (wheel->front) Mtx_RotateY(&local,steering,true);
         Mtx_RotateZ(&local,motion->angle[i],true);
         Mtx_Translate(&local,-p[0],-p[1],-p[2],true);
@@ -769,8 +802,8 @@ static void draw_vehicle(Mesh *mesh,const WheelRig *rig,const C3D_Mtx *parent,co
         }
     }
 }
-static void draw_car(const C3D_Mtx *parent,const WheelMotion *motion,float steering)
-{draw_vehicle(&body,&wheel_rig,parent,motion,steering);}
+static void draw_car(const C3D_Mtx *parent,const WheelMotion *motion,float steering,bool frontend)
+{draw_vehicle(&body,&wheel_rig,parent,motion,steering,frontend?body.frontend_positions:NULL);}
 
 static void draw_actor(ActorVisual *visual,const DriveState *car,float height,const WheelMotion *wheels,const C3D_Mtx *view)
 {
@@ -782,7 +815,7 @@ static void draw_actor(ActorVisual *visual,const DriveState *car,float height,co
     Mtx_Identity(&model);Mtx_Translate(&model,car->x*scale,(height+visual->ground)*scale,car->z*scale,true);
     Mtx_RotateY(&model,car->heading-1.5707963f,true);
     Mtx_Scale(&model,visual->extent*scale,visual->extent*scale,visual->extent*scale);
-    Mtx_Multiply(&combined,view,&model);draw_vehicle(&visual->mesh,&visual->rig,&combined,wheels,car->steering);
+    Mtx_Multiply(&combined,view,&model);draw_vehicle(&visual->mesh,&visual->rig,&combined,wheels,car->steering,NULL);
 }
 static bool draw_nis_actor(Mesh *mesh,const WheelRig *rig,const WheelMotion *wheels,unsigned slot,const C3D_Mtx *view)
 {
@@ -803,7 +836,7 @@ static bool draw_nis_actor(Mesh *mesh,const WheelRig *rig,const WheelMotion *whe
         }
         model.r[row].w=(translation-road.origin[row])*road.scale;
     }
-    Mtx_Multiply(&combined,view,&model);draw_vehicle(mesh,rig,&combined,wheels,0);return true;
+    Mtx_Multiply(&combined,view,&model);draw_vehicle(mesh,rig,&combined,wheels,0,NULL);return true;
 }
 static void render(Screen screen,const DriveState *car,float height,float rotation,
                    const WheelMotion *motion,float garage_steering,const RoadPose *pose)
@@ -854,7 +887,7 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
         Mtx_RotateZ(&model,pose->pitch,true);Mtx_RotateX(&model,pose->roll,true);
         Mtx_Scale(&model,road.car_half_extent*scale,road.car_half_extent*scale,road.car_half_extent*scale);
         C3D_Mtx combined;Mtx_Multiply(&combined,&view,&model);
-        if(screen!=NIS||!draw_nis_actor(&body,&wheel_rig,motion,0,&view))draw_car(&combined,motion,car->steering);
+        if(screen!=NIS||!draw_nis_actor(&body,&wheel_rig,motion,0,&view))draw_car(&combined,motion,car->steering,false);
         if(opening_actors.prepared){
             for(unsigned i=0;i<opening_actors.race.count;i++){
                 const MwRaceAIActor *actor=opening_actors.race.actors+i;
@@ -876,16 +909,45 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
             Mtx_Identity(&model);Mtx_Translate(&model,x*scale,(y+traffic_ground_offset)*scale,z*scale,true);
             Mtx_RotateY(&model,atan2f(actor->forward[2],actor->forward[0])-1.5707963f,true);
             Mtx_Scale(&model,traffic_half_extent*scale,traffic_half_extent*scale,traffic_half_extent*scale);
-            Mtx_Multiply(&combined,&view,&model);draw_vehicle(&traffic_body,&traffic_rig,&combined,street_wheels+i,0);
+            Mtx_Multiply(&combined,&view,&model);draw_vehicle(&traffic_body,&traffic_rig,&combined,street_wheels+i,0,NULL);
         }
     } else {
-        MwMenuCameraPose camera=menu_camera.current;
-        Mtx_PerspTilt(&projection,C3D_AngleFromDegrees(camera.fov),C3D_AspectRatioTop,.1f,20,false);
-        C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER,projection_loc,&projection);
-        Mtx_Identity(&model);Mtx_Translate(&model,camera.x,camera.y,-camera.distance,true);Mtx_RotateX(&model,camera.pitch,true);Mtx_RotateY(&model,camera.yaw+(screen==GARAGE?rotation:0),true);Mtx_RotateZ(&model,camera.roll,true);
-        if(frontend_platform.loaded){
-            C3D_Mtx environment=model;Mtx_Translate(&environment,0,-car_ground_offset/road.car_half_extent,0,true);
+        C3D_Mtx environment;
+        MwFrontendSceneCamera original_camera;MwFrontendScenePlacement placement;
+        const char *camera_name=screen==GARAGE?"angle19":frontend_platform_id==1?"angle_final_career_safehouse":frontend_platform_id==2?"angle_final_customization_shop":frontend_platform_id==3?"angle_carlot_car_select":frontend_page==FE_CHALLENGE?"angle_challengeseries":frontend_page==FE_QUICK||frontend_page==FE_OPTIONS||frontend_page==FE_ALIASES?"angle99":"angle3";
+        const unsigned garage_types[]={1,2,3,5};
+        bool source_view=frontend_platform.loaded&&frontend_platform_id>=0&&frontend_platform_id<4&&
+            mw_frontend_scene_camera(&frontend_scene,camera_name,&original_camera)&&
+            mw_frontend_scene_placement(&frontend_scene,garage_types[frontend_platform_id],&placement);
+        if(source_view){
+            C3D_FVec eye=FVec3_New(original_camera.eye[0],original_camera.eye[2],-original_camera.eye[1]);
+            C3D_FVec at=FVec3_New(original_camera.target[0],original_camera.target[2],-original_camera.target[1]);
+            C3D_FVec up=FVec3_New(original_camera.up[0],original_camera.up[2],-original_camera.up[1]);
+            C3D_Mtx view,local;Mtx_LookAt(&view,eye,at,up,false);
+            Mtx_PerspTilt(&projection,C3D_AngleFromDegrees(original_camera.fov_degrees),C3D_AspectRatioTop,.05f,400,false);
+            Mtx_Identity(&local);Mtx_Translate(&local,placement.geometry_position[0],placement.geometry_position[2],-placement.geometry_position[1],true);
+            Mtx_RotateY(&local,C3D_AngleFromDegrees(placement.geometry_z_degrees),true);
+            Mtx_Scale(&local,frontend_platform_scale,frontend_platform_scale,frontend_platform_scale);
+            Mtx_Multiply(&environment,&view,&local);
+            /* Original RenderingCar providers: source tire offsets/radii and
+               FECompressions determine body height and each wheel translation. */
+            float height=body.frontend_height;
+            Mtx_Identity(&local);Mtx_Translate(&local,0,height,0,true);
+            Mtx_RotateY(&local,C3D_AngleFromDegrees(placement.car_rotation_degrees[2])+(screen==GARAGE?rotation:0),true);
+            Mtx_RotateZ(&local,-C3D_AngleFromDegrees(placement.car_rotation_degrees[1]),true);
+            Mtx_RotateX(&local,C3D_AngleFromDegrees(placement.car_rotation_degrees[0]),true);
+            Mtx_Translate(&local,body.source_center[0],body.source_center[1],body.source_center[2],true);
+            Mtx_Scale(&local,road.car_half_extent,road.car_half_extent,road.car_half_extent);
+            Mtx_Multiply(&model,&view,&local);
+        }else{
+            MwMenuCameraPose camera=menu_camera.current;
+            Mtx_PerspTilt(&projection,C3D_AngleFromDegrees(camera.fov),C3D_AspectRatioTop,.1f,20,false);
+            Mtx_Identity(&model);Mtx_Translate(&model,camera.x,camera.y,-camera.distance,true);Mtx_RotateX(&model,camera.pitch,true);Mtx_RotateY(&model,camera.yaw+(screen==GARAGE?rotation:0),true);Mtx_RotateZ(&model,camera.roll,true);
+            environment=model;Mtx_Translate(&environment,0,-car_ground_offset/road.car_half_extent,0,true);
             float scale=frontend_platform_scale/road.car_half_extent;Mtx_Scale(&environment,scale,scale,scale);
+        }
+        C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER,projection_loc,&projection);
+        if(frontend_platform.loaded){
             C3D_SetAttrInfo(&car_attributes);C3D_SetBufInfo(&frontend_platform.buffer);
             C3D_FVUnifMtx4x4(GPU_VERTEX_SHADER,model_loc,&environment);C3D_FVUnifSet(GPU_VERTEX_SHADER,lighting_loc,1,0,0,0);
             C3D_AlphaTest(true,GPU_GREATER,40);
@@ -902,7 +964,7 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
             }
             C3D_FVUnifSet(GPU_VERTEX_SHADER,lighting_loc,.5f,.5f,0,0);
         }
-        draw_car(&model,motion,garage_steering);
+        draw_car(&model,motion,garage_steering,true);
         if(frontend_platform.loaded&&frontend_logo_ready){
             static const Tex3DS_SubTexture sub={.width=256,.height=64,.left=0,.top=1,.right=1,.bottom=0};
             C2D_Prepare();C2D_SceneBegin(target);C3D_DepthTest(false,GPU_ALWAYS,GPU_WRITE_COLOR);C3D_AlphaTest(false,GPU_ALWAYS,0);
@@ -1002,6 +1064,13 @@ static void draw_ui(const MwUiModel *ui,const DriveState *car)
         map=map_rgb;
     }
     if (mw_ui_render(ui_pixels,sizeof(ui_pixels),ui,map)) ui_pending=true;
+#ifdef NFS_CAPTURE_UI
+    static bool captured;
+    if(!captured&&ui->mode==MW_UI_DRIVE&&ui->road_status==MW_UI_ROAD_LOADED){
+        FILE *capture=fopen(ROOT "ui-diagnostic.rgb565","wb");
+        if(capture){(void)fwrite(ui_pixels,1,sizeof(ui_pixels),capture);fclose(capture);captured=true;}
+    }
+#endif
     if(ui->mode!=MW_UI_DRIVE&&ui->mode!=MW_UI_MOVIE&&!frontend_platform.loaded&&frontend_art.data){
         const char *selection=ui->mode==MW_UI_GARAGE?active_car_name:ui->mode==MW_UI_TITLE?"PRESS START":ui->selected<ui->frontend_count?ui->frontend_rows[ui->selected]:"";
         MwFrontendTopModel top={.page=ui->mode==MW_UI_GARAGE?"MY CARS":ui->frontend_title,.alias=mw_alias_selected_name(&aliases),.selection=selection,.detail=ui->frontend_hint};
@@ -1032,6 +1101,7 @@ static void present_ui(void)
        rejection. Do not inherit either test from the car/world passes. */
     C3D_DepthTest(false,GPU_ALWAYS,GPU_WRITE_COLOR);
     C3D_AlphaTest(false,GPU_ALWAYS,0);
+    C3D_AlphaBlend(GPU_BLEND_ADD,GPU_BLEND_ADD,GPU_ONE,GPU_ZERO,GPU_ONE,GPU_ZERO);
     C2D_Image image={.tex=&ui_texture,.subtex=&ui_subtexture};
     C2D_DrawImageAt(image,0,0,0,NULL,1,1);C2D_Flush();
 }
@@ -1121,7 +1191,7 @@ static bool place_race_player(DriveState *car,float *height,RoadPose *pose,Wheel
     if(!ok)return false;
     drive_reset(car,source[0]-road.origin[0],-source[1]-road.origin[2],yaw);*height=source[2]-road.origin[1];
     *pose=(RoadPose){.height=*height,.normal={0,1,0}};wheel_motion_reset(motion);reset_player_camera(car,*height);
-    if(recover)(void)mw_playable_race_relocate(&playable_race,(uintptr_t)car,source);
+    if(recover){(void)mw_playable_race_relocate(&playable_race,(uintptr_t)car,source);(void)mw_opening_actors_relocate(&opening_actors,source);}
     spawn_street_cars(car,*height);return true;
 }
 static bool finish_career_media(void)
@@ -1462,7 +1532,11 @@ int main(void)
             MwNisCamera camera;
             /* Native registry order is explicit: controlled player, then the
                admitted racers. It is not a claim about every source list. */
+#ifdef NFS_STREAMED_WORLD
+            bool stepped=!stream_has_frame||mw_opening_cinema_step(&opening_cinema,dt,NULL,NULL);
+#else
             bool stepped=mw_opening_cinema_step(&opening_cinema,dt,NULL,NULL);
+#endif
             if(opening_cinema.actors[0].present)memcpy(nis_player_source,opening_cinema.actors[0].source_world,sizeof(nis_player_source));
             nis_camera_ready=stepped&&mw_opening_cinema_camera(&opening_cinema,nis_player_source,&camera);
             if(nis_camera_ready){
@@ -1681,7 +1755,7 @@ int main(void)
         C3D_Fini();
     }
     free(opponent_pack_bytes);free(pursuit_pack_bytes);free(career_pack_bytes);
-    free(camera_asset_bytes);mw_opening_cinema_close(&opening_cinema);free(race_state_bytes);
+    free(frontend_scene_bytes);free(camera_asset_bytes);mw_opening_cinema_close(&opening_cinema);free(race_state_bytes);
     free(traffic_world_bytes);free(vehicle_catalog_bytes);free(menu_icon_bytes);
     free(destination_icon_bytes);free(free_roam_bytes);free(frontend_art_bytes);free(event_catalog_bytes);
     road_free(&road);road_map_free(&navigation);

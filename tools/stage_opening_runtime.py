@@ -14,6 +14,7 @@ import re
 import shutil
 import struct
 import zlib
+from build_frontend_scene import build_frontend_scene, build_frontend_stances
 
 MODELS = ('COBALTSS', 'GTI', 'IS300', 'PUNTO', 'TRAFHA', 'COPMIDSIZE',
           'MUSTANGGT', 'SUPRA', 'SLR', 'GTO', 'IMPREZAWRX', 'RX8')
@@ -105,9 +106,11 @@ def body_origin(body, scene, half):
     return packet+struct.pack('<I',zlib.crc32(packet))
 
 
-def stage(base, research, destination):
+def stage(base, research, destination, attributes=None):
     planned = {}
     generated = {}
+    generated['frontend-scene.nfp'] = build_frontend_scene(json.loads(
+        (research/'menu-reference/frontend-source-placement.json').read_text()))
 
     def add(source, name):
         source = Path(source)
@@ -174,6 +177,26 @@ def stage(base, research, destination):
                research/'opening-opponent-assets/v1']
     catalog, rows = merge_catalogs([p/'catalog.nvc' for p in sources])
     generated['cars/catalog.nvc'] = catalog
+    if attributes is None:
+        attributes = Path('/workspace/attachments/857a1856-1b3b-4be1-8a91-42f437324e6f/ATTRIBUTES.BIN')
+    stance_models = {name: struct.unpack_from('<I', row, 4)[0] for name, row in rows.items()}
+    stance_models['BMWM3GTRE46'] = 0x4e085fb3
+    stances, stance_provenance = build_frontend_stances(attributes.read_bytes(), stance_models)
+    for name, data in stances.items():
+        generated['body.stance' if name == 'BMWM3GTRE46' else 'cars/'+name+'/body.stance'] = data
+        values = stance_provenance[name]['stock_fields']['FECompressions']['value']['values']
+        tires = stance_provenance[name]['stock_fields']['TireOffsets']['value']['values']
+        key = int(stance_provenance[name]['ecar_key'], 16)
+        # Source LookupWheelPosition returns TireOffsetsXYZ with one fadds of
+        # FECompressions[wheel>>1] to Z. Encode absolute desired stock mounts;
+        # never add compression blindly to a legacy artwork-fitted NWA pivot.
+        positions = []
+        for i, tire in enumerate(tires):
+            z = struct.unpack('<f', struct.pack('<f', tire[2]+values[i>>1]))[0]
+            positions.extend((tire[0], tire[1], z))
+        wheel_data = struct.pack('<4sI12fI', b'NFW2', key, *positions, 2)
+        wheel_data += struct.pack('<I', zlib.crc32(wheel_data))
+        generated['wheels.frontend' if name == 'BMWM3GTRE46' else 'cars/'+name+'/wheels.frontend'] = wheel_data
     for name in sorted(rows):
         parents = [p/name for p in sources if (p/name).is_dir()]
         if len(parents) != 1:
@@ -245,6 +268,7 @@ def stage(base, research, destination):
     result = {'schema': 1, 'purpose': 'private opening-career integration inputs; not a release',
               'files': sorted(manifest, key=lambda r: r['path']),
               'vehicle_ids': sorted(rows), 'normalization_provenance': origin_sources,
+              'frontend_stance_provenance': stance_provenance,
               'file_count': len(manifest),
               'total_bytes': sum(row['bytes'] for row in manifest),
               'excluded': ['executables', 'player aliases and saves', 'original archives',
@@ -260,9 +284,10 @@ def main():
     p.add_argument('--research', type=Path, default=Path('/workspace/port-research'))
     p.add_argument('--destination', type=Path,
                    default=project/'dist/career-integration-install/3ds/nfsmw-rockport')
+    p.add_argument('--attributes', type=Path, help='Original USA ATTRIBUTES.BIN for actual stock frontend tire providers')
     args = p.parse_args()
-    result = stage(args.base, args.research, args.destination)
-    print(json.dumps({key: value for key, value in result.items() if key not in ('files', 'normalization_provenance')}, indent=2))
+    result = stage(args.base, args.research, args.destination, args.attributes)
+    print(json.dumps({key: value for key, value in result.items() if key not in ('files', 'normalization_provenance', 'frontend_stance_provenance')}, indent=2))
 
 
 if __name__ == '__main__':

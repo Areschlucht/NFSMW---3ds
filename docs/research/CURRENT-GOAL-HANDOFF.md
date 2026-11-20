@@ -100,3 +100,37 @@ Do not claim complete opening-through-purchase emulation or hardware FPS yet.
    justify broad prop deletion. Finish player/civilian/cop body collisions.
 6. Verify through first-car purchase, profile dense views, back up all authored
    changes, then package only validated runtime assets/new executable for release.
+
+
+Latest HUD diagnostic: explicit opaque blend was also necessary after3D passes.
+An internal NFS_CAPTURE_UI build saved the CPU canvas on admitted free-roam;
+actual emulator bottom LCD crop matched75,480pixels exactly (no differingcolour
+channels), excluding only changingFPS glyph area. Do not ship diagnostic dumps.
+Optional debug capture writes ui-diagnostic.rgb565 only with NFS_CAPTURE_UI.
+The main source now pauses NIS actor/scene clocks until a world frame is admitted.
+
+
+## Latest frontend integration
+
+The app now consumes ROOT frontend-scene.nfp for original metre camera positions,
+banked up/FOV and independent garage/car rotations. Native screen-to-camera
+mapping remains explicit; original animation/oscillation/switching is unfinished.
+The stager also emits source-bound16B body.stance and32B wheels.frontend percar:
+actual ecar TireOffsets radii/positions and FECompressions feed source body height
+and perwheel localY translation in menu views only. BMWkey4e085fb3, sourceheight
+0.0350000038743, compressions0.27each. These are rendering providers, not physics
+TIRES substitutions. Eighteen camera/fiveplacement/2240bytecorruption sanitizer
+checks pass; thirteen original stance fragments matchallbits. Latest SDK build
+passes with frontend module and requiredstance loaders. Staging is853nativefiles,
+524149089B; still no releaseZIP. Maininternalexecutable excludes NFS_CAPTURE_UI.
+Original NIS clock now waits for admitted world. Recovery resets police trigger
+sweep history. UIpreview test reflects permanentgrade and validmovieenum.
+
+
+NFW1 additive compression was caught visually as wrong for the legacy fitted
+BMW rig. Latest stager/runtime use NFW2(64B): actual four sourceXYZ wheel
+positions including FECompressions, ecarkey, version2 and CRC. Renderer shifts
+FROM each actual existing NWA artpivot TO source position, mapping axle/side
+explicitly because old BMWrig iterates side-first. This avoids double-applying
+compression and replaces provisional fitted placement in frontend only. NFW1 is
+rejected; do not restore its additive translation. Current853assets524149505B.

@@ -83,15 +83,15 @@ int main(int argc,char **argv)
     assert(mw_ui_touch(&m,100,220)==MW_UI_OPEN_MENU);
     m.mode=MW_UI_DISPLAY;assert(!m.piss_filter);
     assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"display-off",fb);
-    assert(mw_ui_touch(&m,12,70)==MW_UI_TOGGLE_PISS_FILTER);
-    assert(mw_ui_touch(&m,307,121)==MW_UI_TOGGLE_PISS_FILTER);
+    assert(mw_ui_touch(&m,12,70)==MW_UI_NONE);
+    assert(mw_ui_touch(&m,307,121)==MW_UI_NONE);
     assert(mw_ui_touch(&m,11,70)==MW_UI_NONE);
     assert(mw_ui_touch(&m,308,70)==MW_UI_NONE);
     assert(mw_ui_touch(&m,12,69)==MW_UI_NONE);
     assert(mw_ui_touch(&m,12,122)==MW_UI_NONE);
     assert(mw_ui_touch(&m,160,220)==MW_UI_OPEN_MENU);
     m.piss_filter=true;assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"display-on",fb);
-    assert(mw_ui_touch(&m,160,90)==MW_UI_TOGGLE_PISS_FILTER);
+    assert(mw_ui_touch(&m,160,90)==MW_UI_NONE);
     m.mode=MW_UI_TITLE;assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"frontend-title",fb);
     m.mode=MW_UI_FRONTEND;m.frontend_title="ALIAS MANAGER";m.alias_name="ROCKPORT";
     m.frontend_count=3;m.selected=1;m.frontend_rows[0]="CREATE ALIAS";
@@ -103,11 +103,11 @@ int main(int argc,char **argv)
     for(unsigned i=0;i<6;i++)m.frontend_rows[i]=main_items[i];
     m.frontend_hint="A: SELECT  Y: FREE ROAM";
     assert(mw_ui_render(fb,MW_UI_BYTES,&m,NULL));save(argv[2],"frontend-main",fb);
-    m.mode=(MwUiMode)(MW_UI_FRONTEND+1);
+    m.mode=(MwUiMode)(MW_UI_MOVIE+1);
     unsigned char first=fb[0];assert(!mw_ui_render(fb,MW_UI_BYTES,&m,NULL));assert(fb[0]==first);
     assert(mw_ui_touch(&m,160,90)==MW_UI_NONE);
     for (unsigned i=0;i<16;++i) assert(guarded[i]==0xa5 && guarded[MW_UI_BYTES+16+i]==0xa5);
     mw_ui_assets_free(assets);mw_ui_assets_free(NULL);
-    puts("UI framebuffer bounds, five menu rows and Display toggle/back checks passed; twelve previews written.");
+    puts("UI framebuffer bounds, five menu rows and fixed colour grade/back checks passed; twelve previews written.");
     return 0;
 }
