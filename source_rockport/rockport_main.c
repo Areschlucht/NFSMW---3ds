@@ -34,6 +34,10 @@
 #include "mw_cinema.h"
 #include "mw_chase_source.h"
 #include "mw_nis.h"
+#include "mw_opening_cinema.h"
+#include "mw_opening_actors.h"
+#include "mw_story_audio.h"
+#include "mw_story_services.h"
 #include "mw_ui_texture.h"
 #include "mw_color_grade.h"
 #ifdef NFS_STREAMED_WORLD
@@ -54,7 +58,7 @@
 #define DRIVE_FAR_WORLD 700.0f
 #endif
 #define TRANSFER_FLAGS (GX_TRANSFER_FLIP_VERT(0)|GX_TRANSFER_OUT_TILED(0)|GX_TRANSFER_RAW_COPY(0)|GX_TRANSFER_IN_FORMAT(GX_TRANSFER_FMT_RGBA8)|GX_TRANSFER_OUT_FORMAT(GX_TRANSFER_FMT_RGB8)|GX_TRANSFER_SCALING(GX_TRANSFER_SCALE_NO))
-typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc,gpu_vertex_count;C3D_BufInfo buffer; } Mesh;
+typedef struct { NfsScene scene;NfsVertex *vertices;void *gpu_vertices;uint16_t *indices;WorldBounds *bounds;C3D_Tex textures[NFS_MAX_TEXTURES];unsigned loaded;uint32_t asset_crc,gpu_vertex_count;C3D_BufInfo buffer;float source_center[3],source_extent;bool source_origin; } Mesh;
 typedef enum { MENU,DRIVE,GARAGE,CONTROLS,QUIT,DISPLAY,MOVIE,NIS } Screen;
 static Mesh world,body;
 static Mesh pending_body,traffic_body,frontend_platform;
@@ -82,15 +86,24 @@ static MwCareer career;
 static unsigned char *career_pack_bytes,*race_state_bytes,*camera_asset_bytes;
 static MwChaseAsset camera_asset;
 static MwCinema cinema;
-static MwNisPack nis_pack;
-static MwNisTrack nis_track;
-static unsigned char *nis_pack_bytes;
+static MwOpeningCinema opening_cinema;
+static float nis_player_source[16];
+static float camera_up[3]={0,1,0};
 static bool nis_camera_ready;
-static float nis_anchor_source[3],nis_anchor_yaw;
+static MwStoryAudio story_audio;
+static MwStoryEngine story_engine;
+static float story_simulation_clock;
+static MwOpeningActors opening_actors;
+static MwRaceAIPack opponent_pack;
+static MwPursuitPack pursuit_pack;
+static unsigned char *opponent_pack_bytes,*pursuit_pack_bytes;
+typedef struct { Mesh mesh;WheelRig rig;WheelMotion wheels;float extent,ground; } ActorVisual;
+static ActorVisual opponent_visuals[MW_RACE_AI_ACTORS],police_visual;
+static WheelMotion police_wheels[MW_PURSUIT_COPS];
+
 static bool career_playing,race_spawn_pending,career_phase_pending;
 static uint32_t loaded_career_step=UINT32_MAX;
 static MwCareerPhase presented_career_phase=MW_CAREER_INACTIVE;
-static uint64_t nis_elapsed_us;
 static bool career_save_blocked;
 static float original_bmw_extent;
 static unsigned race_base_bin=1;
@@ -142,12 +155,12 @@ static ChaseCamera chase;
 static unsigned world_triangles_drawn,world_draw_calls,measured_fps;
 static float simulation_ms;
 static MwUiAssets *ui_assets;
-static bool piss_filter; /* Neutral by default; an optional artistic grade. */
+static const bool piss_filter=true; /* Original-style warm grade is always enabled. */
 static unsigned char map_rgb[152*128*3];
 /* Rasterize off-screen. The displayed bottom buffer must never be cleared or
    repainted during LCD scanout, even when HUD updates are throttled. */
 static unsigned char ui_pixels[MW_UI_BYTES];
-static bool ui_pending,ui_to_present,ui_gpu_ready,ui_texture_ready;
+static bool ui_pending,ui_gpu_ready,ui_texture_ready;
 static C3D_Tex ui_texture,frontend_texture;
 static C3D_Tex frontend_logo_texture;
 static bool frontend_logo_ready;
@@ -293,7 +306,8 @@ static void frontend_model(MwUiModel *ui)
         if(frontend_page==FE_CAR_CHOICE&&mw_career_car(&career_pack,frontend_selected,&choice))key=choice.key;
         for(unsigned i=0;i<MW_CAREER_CARS;i++)if(mw_career_car(&career_pack,i,&choice)&&choice.key==key){
             snprintf(career_status,sizeof(career_status),"CASH $%lu  PRICE $%lu",(unsigned long)career.cash,(unsigned long)choice.cost);
-            if(!frontend_notice)ui->frontend_hint=career_status;break;
+            if(!frontend_notice)ui->frontend_hint=career_status;
+            break;
         }
     }
     if(frontend_page==FE_RACE_RESULT&&!frontend_notice){
@@ -397,6 +411,21 @@ static void free_mesh(Mesh *mesh)
     nfs_scene_free(&mesh->scene);
     memset(mesh,0,sizeof(*mesh));
 }
+static uint32_t origin_crc(const unsigned char *p,size_t n)
+{uint32_t c=~0u;while(n--){c^=*p++;for(unsigned i=0;i<8;i++)c=(c>>1)^(0xedb88320u&-(c&1u));}return ~c;}
+static bool load_vehicle_origin(Mesh *mesh,const char *path)
+{
+    size_t bytes;unsigned char *raw=read_file(path,&bytes);if(!raw)return false;
+    uint32_t version=0,key=0,crc=0;
+    if(bytes==32){memcpy(&version,raw+4,4);memcpy(&key,raw+8,4);memcpy(&crc,raw+28,4);}
+    bool ok=bytes==32&&!memcmp(raw,"NVO1",4)&&version==1&&key==mesh->asset_crc&&crc==origin_crc(raw,28);
+    if(ok){
+        memcpy(&mesh->source_extent,raw+12,4);memcpy(mesh->source_center,raw+16,12);
+        ok=isfinite(mesh->source_extent)&&mesh->source_extent>0&&mesh->source_extent<10;
+        for(unsigned a=0;a<3;a++)ok=ok&&isfinite(mesh->source_center[a]);
+    }
+    free(raw);mesh->source_origin=ok;return ok;
+}
 static bool load_catalog_vehicle(Mesh *mesh,WheelRig *rig,const MwVehicleSpec *spec)
 {
     char path[160],textures[160];snprintf(path,sizeof(path),"cars/%s/body.nfm",spec->id);
@@ -404,7 +433,9 @@ static bool load_catalog_vehicle(Mesh *mesh,WheelRig *rig,const MwVehicleSpec *s
     if(!load_mesh(mesh,path,textures)||mesh->asset_crc!=spec->body_crc)return false;
     snprintf(path,sizeof(path),ROOT "cars/%s/wheels.nwa",spec->id);
     size_t size;void *raw=read_file(path,&size);if(!raw)return false;
-    bool ok=wheel_rig_decode(raw,size,mesh->scene.batch_count,mesh->asset_crc,rig);free(raw);return ok;
+    bool ok=wheel_rig_decode(raw,size,mesh->scene.batch_count,mesh->asset_crc,rig);free(raw);
+    snprintf(path,sizeof(path),ROOT "cars/%s/body.origin",spec->id);
+    return ok&&load_vehicle_origin(mesh,path);
 }
 static bool select_player_vehicle(const char *id)
 {
@@ -418,6 +449,7 @@ static bool select_player_vehicle(const char *id)
         loaded=load_mesh(&pending_body,"body.nfm","car-textures");
         size_t size=0;void *raw=loaded?read_file(ROOT "wheels.nwa",&size):NULL;
         loaded=raw&&wheel_rig_decode(raw,size,pending_body.scene.batch_count,pending_body.asset_crc,&rig);free(raw);
+        loaded=loaded&&load_vehicle_origin(&pending_body,ROOT "body.origin");
     }else loaded=load_catalog_vehicle(&pending_body,&rig,&spec);
     if(!loaded){
         free_mesh(&pending_body);wheel_rig_free(&rig);return false;
@@ -480,6 +512,44 @@ static void update_street_cars(const DriveState *player,float seconds)
         (void)wheel_motion_update(&traffic_rig,street_wheels+i,&old,&next);*c=candidate;
     }
 }
+static void free_actor_visual(ActorVisual *v)
+{free_mesh(&v->mesh);wheel_rig_free(&v->rig);memset(v,0,sizeof(*v));}
+static bool load_actor_visual(ActorVisual *v,const char *id)
+{
+    MwVehicleSpec spec;if(!mw_vehicle_catalog_find_id(&vehicle_catalog,id,&spec))return false;
+    if(!load_catalog_vehicle(&v->mesh,&v->rig,&spec)){free_actor_visual(v);return false;}
+    v->extent=spec.half_extent;
+    for(uint32_t i=0;i<v->mesh.gpu_vertex_count;i++)v->ground=fmaxf(v->ground,-v->mesh.vertices[i].position[1]*v->extent);
+    return true;
+}
+static void reset_opening_actors(void)
+{
+    mw_opening_actors_reset(&opening_actors);
+    for(unsigned i=0;i<MW_RACE_AI_ACTORS;i++)free_actor_visual(opponent_visuals+i);
+    free_actor_visual(&police_visual);memset(police_wheels,0,sizeof(police_wheels));
+}
+static bool begin_opening_actors(uint32_t event,uintptr_t actor,const float source[3])
+{
+    C3D_FrameSync();reset_opening_actors();
+    if(!mw_opening_actors_begin(&opening_actors,&opponent_pack,&pursuit_pack,&event_catalog,&traffic_world,event,road.origin,actor,source))return false;
+    for(unsigned i=0;i<opening_actors.race.count;i++)
+        if(!load_actor_visual(opponent_visuals+i,opening_actors.race.actors[i].spec.model))return false;
+    if(opening_actors.pursuit.has_event&&!load_actor_visual(&police_visual,"COPMIDSIZE"))return false;
+    return true;
+}
+#ifdef NFS_STREAMED_WORLD
+static int opening_actor_drive(void *context,DriveState *car,float *height,DriveInput input,float dt)
+{
+    /* The same admitted world collision/ground service as the player. Never
+       substitute unchecked kinematic motion when a source section is absent. */
+    return streamed_drive_step(context,car,height,input,dt);
+}
+#endif
+static bool scripted_opening(void)
+{
+    MwCareerStage stage;
+    return career_playing&&career.phase==MW_CAREER_RACING&&mw_career_stage(&career_pack,career.step,&stage)&&stage.flags!=0;
+}
 static bool initialize(void)
 {
     snprintf(error,sizeof(error),"GPU initialization failed");
@@ -522,6 +592,7 @@ static bool initialize(void)
     if (!raw) return false;
     bool ok=road_decode(raw,size,&road);free(raw);if (!ok) return false;
     original_bmw_extent=road.car_half_extent;
+    if(!load_vehicle_origin(&body,ROOT "body.origin")){snprintf(error,sizeof(error),"Invalid original vehicle origin");return false;}
     snprintf(error,sizeof(error),"Cannot read/validate wheels.nwa");
     raw=read_file(ROOT "wheels.nwa",&size);if (!raw) return false;
     ok=wheel_rig_decode(raw,size,body.scene.batch_count,body.asset_crc,&wheel_rig);free(raw);
@@ -557,8 +628,13 @@ static bool initialize(void)
     if(!career_pack_bytes||!mw_career_pack_open(&career_pack,career_pack_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate opening-career.nfc");return false;}
     camera_asset_bytes=read_file(ROOT "camera.ncp",&size);
     if(!camera_asset_bytes||!mw_chase_asset_open(&camera_asset,camera_asset_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate camera.ncp");return false;}
-    nis_pack_bytes=read_file(ROOT "opening-nis.nni",&size);
-    if(!nis_pack_bytes||!mw_nis_open(&nis_pack,nis_pack_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate opening-nis.nni");return false;}
+    if(!mw_opening_cinema_open(&opening_cinema,ROOT "opening-nis.nni",ROOT "opening-nis-actors.nna",ROOT "opening-nis-actions.nac")){
+        snprintf(error,sizeof(error),"Cannot validate opening NIS packs");return false;
+    }
+    opponent_pack_bytes=read_file(ROOT "opponents.nro",&size);
+    if(!opponent_pack_bytes||!mw_race_ai_pack_open(&opponent_pack,opponent_pack_bytes,size)){snprintf(error,sizeof(error),"Cannot validate opponents.nro");return false;}
+    pursuit_pack_bytes=read_file(ROOT "pursuit.npp",&size);
+    if(!pursuit_pack_bytes||!mw_pursuit_pack_open(&pursuit_pack,pursuit_pack_bytes,size)){snprintf(error,sizeof(error),"Cannot validate pursuit.npp");return false;}
     traffic_world_bytes=read_file(ROOT "road-network.mwt",&size);
     if(!traffic_world_bytes||!mw_traffic_open(&traffic_world,traffic_world_bytes,size)){snprintf(error,sizeof(error),"Cannot read/validate road-network.mwt");return false;}
     MwVehicleSpec traffic_spec;
@@ -663,7 +739,7 @@ static void draw_mesh(Mesh *mesh,const C3D_Mtx *model,const WorldFrustum *frustu
     }
 }
 #endif
-static void draw_vehicle(const Mesh *mesh,const WheelRig *rig,const C3D_Mtx *parent,const WheelMotion *motion,float steering)
+static void draw_vehicle(Mesh *mesh,const WheelRig *rig,const C3D_Mtx *parent,const WheelMotion *motion,float steering)
 {
     C3D_BindProgram(&program);C3D_SetAttrInfo(&car_attributes);
     C3D_AlphaTest(true,GPU_GREATER,0);
@@ -696,6 +772,39 @@ static void draw_vehicle(const Mesh *mesh,const WheelRig *rig,const C3D_Mtx *par
 static void draw_car(const C3D_Mtx *parent,const WheelMotion *motion,float steering)
 {draw_vehicle(&body,&wheel_rig,parent,motion,steering);}
 
+static void draw_actor(ActorVisual *visual,const DriveState *car,float height,const WheelMotion *wheels,const C3D_Mtx *view)
+{
+    if(!visual->mesh.loaded)return;
+    float dx=car->x-chase.eye[0],dz=car->z-chase.eye[2];
+    float fx=chase.target[0]-chase.eye[0],fz=chase.target[2]-chase.eye[2];
+    if(dx*dx+dz*dz>180.f*180.f||dx*fx+dz*fz < -8.f)return;
+    C3D_Mtx model,combined;float scale=road.scale;
+    Mtx_Identity(&model);Mtx_Translate(&model,car->x*scale,(height+visual->ground)*scale,car->z*scale,true);
+    Mtx_RotateY(&model,car->heading-1.5707963f,true);
+    Mtx_Scale(&model,visual->extent*scale,visual->extent*scale,visual->extent*scale);
+    Mtx_Multiply(&combined,view,&model);draw_vehicle(&visual->mesh,&visual->rig,&combined,wheels,car->steering);
+}
+static bool draw_nis_actor(Mesh *mesh,const WheelRig *rig,const WheelMotion *wheels,unsigned slot,const C3D_Mtx *view)
+{
+    if(slot>=MW_OPENING_NIS_ACTORS||!opening_cinema.actors[slot].present||!mesh->source_origin)return false;
+    const float *m=opening_cinema.actors[slot].source_world;
+    /* Geometry is normalized viewerXYZ; source row-vector transform is
+       conjugated by viewer=(sourceX,sourceZ,-sourceY). Restore the real art
+       bbox center before applying it. This raw-pose preview deliberately
+       does not render SuspensionSpline's ground+5 temporary body position. */
+    static const unsigned axis[3]={0,2,1};static const float sign[3]={1,1,-1};
+    C3D_Mtx model,combined;Mtx_Identity(&model);
+    for(unsigned row=0;row<3;row++){
+        float translation=sign[row]*m[12+axis[row]];
+        for(unsigned col=0;col<3;col++){
+            float rotation=sign[row]*sign[col]*m[axis[col]*4+axis[row]];
+            model.r[row].c[3-col]=rotation*mesh->source_extent*road.scale;
+            translation+=rotation*mesh->source_center[col];
+        }
+        model.r[row].w=(translation-road.origin[row])*road.scale;
+    }
+    Mtx_Multiply(&combined,view,&model);draw_vehicle(mesh,rig,&combined,wheels,0);return true;
+}
 static void render(Screen screen,const DriveState *car,float height,float rotation,
                    const WheelMotion *motion,float garage_steering,const RoadPose *pose)
 {
@@ -715,7 +824,7 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
         for (unsigned a=0;a<3;++a) { camera_eye[a]=chase.eye[a]*scale;camera_at[a]=chase.target[a]*scale; }
         C3D_FVec eye=FVec3_New(camera_eye[0],camera_eye[1],camera_eye[2]);
         C3D_FVec at=FVec3_New(camera_at[0],camera_at[1],camera_at[2]);
-        C3D_FVec up=FVec3_New(0,1,0);
+        C3D_FVec up=FVec3_New(camera_up[0],camera_up[1],camera_up[2]);
         C3D_Mtx view;Mtx_LookAt(&view,eye,at,up,false);
         float fov=C3D_AngleFromDegrees(chase.fov);
         Mtx_PerspTilt(&projection,fov,C3D_AspectRatioTop,.15f*scale,DRIVE_FAR_WORLD*scale,false);
@@ -744,7 +853,19 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
         Mtx_RotateY(&model,car->heading-1.5707963f,true);
         Mtx_RotateZ(&model,pose->pitch,true);Mtx_RotateX(&model,pose->roll,true);
         Mtx_Scale(&model,road.car_half_extent*scale,road.car_half_extent*scale,road.car_half_extent*scale);
-        C3D_Mtx combined;Mtx_Multiply(&combined,&view,&model);draw_car(&combined,motion,car->steering);
+        C3D_Mtx combined;Mtx_Multiply(&combined,&view,&model);
+        if(screen!=NIS||!draw_nis_actor(&body,&wheel_rig,motion,0,&view))draw_car(&combined,motion,car->steering);
+        if(opening_actors.prepared){
+            for(unsigned i=0;i<opening_actors.race.count;i++){
+                const MwRaceAIActor *actor=opening_actors.race.actors+i;
+                if(screen!=NIS||!draw_nis_actor(&opponent_visuals[i].mesh,&opponent_visuals[i].rig,&opponent_visuals[i].wheels,i+1,&view))draw_actor(opponent_visuals+i,&actor->motion,actor->height,&opponent_visuals[i].wheels,&view);
+            }
+            for(unsigned i=0;i<MW_PURSUIT_COPS;i++){
+                const MwPursuitCar *actor=opening_actors.pursuit.actors+i;
+                if(screen==NIS&&draw_nis_actor(&police_visual.mesh,&police_visual.rig,police_wheels+i,i+8,&view))continue;
+                if(actor->active)draw_actor(&police_visual,&actor->motion,actor->height,police_wheels+i,&view);
+            }
+        }
         /* One cached900-triangle source traffic mesh, shared by at most four
            actors. Cull before model/uniform work; no per-actor asset loads. */
         for(unsigned i=0;i<4;i++){
@@ -792,7 +913,7 @@ static void render(Screen screen,const DriveState *car,float height,float rotati
 #ifdef NFS_STREAMED_WORLD
 static StreamedWorldResult prepare_streamed_world(const DriveState *car)
 {
-    StreamedWorldView view={.up_viewer={0,1,0},
+    StreamedWorldView view={.up_viewer={camera_up[0],camera_up[1],camera_up[2]},
         .vertical_fov_radians=C3D_AngleFromDegrees(chase.fov),.aspect=C3D_AspectRatioTop,
         .near_world=.15f,.far_world=DRIVE_FAR_WORLD,
         .original_fov_turn=(uint16_t)lroundf(chase.fov*(65536.0f/360.0f)),
@@ -827,6 +948,7 @@ static StreamedWorldResult prepare_streamed_world(const DriveState *car)
            present either consumer as playable; reset/menu remains available. */
         stream_has_frame=false;return STREAMED_WORLD_IO;
     }
+    mw_opening_cinema_invalidate_ground(&opening_cinema);
     memcpy(collision_sections,sections,count*sizeof(*sections));collision_section_count=count;
     return STREAMED_WORLD_OK;
 }
@@ -880,7 +1002,7 @@ static void draw_ui(const MwUiModel *ui,const DriveState *car)
         map=map_rgb;
     }
     if (mw_ui_render(ui_pixels,sizeof(ui_pixels),ui,map)) ui_pending=true;
-    if(ui->mode!=MW_UI_DRIVE&&frontend_art.data){
+    if(ui->mode!=MW_UI_DRIVE&&ui->mode!=MW_UI_MOVIE&&!frontend_platform.loaded&&frontend_art.data){
         const char *selection=ui->mode==MW_UI_GARAGE?active_car_name:ui->mode==MW_UI_TITLE?"PRESS START":ui->selected<ui->frontend_count?ui->frontend_rows[ui->selected]:"";
         MwFrontendTopModel top={.page=ui->mode==MW_UI_GARAGE?"MY CARS":ui->frontend_title,.alias=mw_alias_selected_name(&aliases),.selection=selection,.detail=ui->frontend_hint};
         if(mw_frontend_top_render(&frontend_art,frontend_pixels,sizeof(frontend_pixels),&top))frontend_pending=true;
@@ -895,12 +1017,14 @@ static void upload_ui(void)
     if(frontend_pending&&frontend_texture_ready&&mw_frontend_top_pack(frontend_texture.data,frontend_texture.size,frontend_pixels,sizeof(frontend_pixels))){C3D_TexFlush(&frontend_texture);frontend_pending=false;}
     if (!ui_pending) return;
     if (!mw_ui_texture_pack(ui_texture.data,ui_texture.size,ui_pixels,sizeof(ui_pixels))) return;
-    C3D_TexFlush(&ui_texture);ui_pending=false;ui_to_present=true;
+    C3D_TexFlush(&ui_texture);ui_pending=false;
 }
 static void present_ui(void)
 {
-    if (!ui_to_present) return;
-    /* C2D screen targets include a depth buffer. Never let uninitialized or
+    if (!ui_texture_ready||!ui_gpu_ready) return;
+    /* Present the cached HUD every frame so both LCD buffers receive the same
+       complete image. CPU rasterization and texture uploads remain throttled.
+       C2D screen targets include a depth buffer. Never let uninitialized or
        previously written depth mask portions of the complete HUD image. */
     C3D_RenderTargetClear(ui_target,C3D_CLEAR_ALL,0x000000ff,0);
     C2D_Prepare();C2D_SceneBegin(ui_target);
@@ -909,7 +1033,7 @@ static void present_ui(void)
     C3D_DepthTest(false,GPU_ALWAYS,GPU_WRITE_COLOR);
     C3D_AlphaTest(false,GPU_ALWAYS,0);
     C2D_Image image={.tex=&ui_texture,.subtex=&ui_subtexture};
-    C2D_DrawImageAt(image,0,0,0,NULL,1,1);C2D_Flush();ui_to_present=false;
+    C2D_DrawImageAt(image,0,0,0,NULL,1,1);C2D_Flush();
 }
 static void reset_player_camera(const DriveState *car,float height)
 {
@@ -981,6 +1105,13 @@ static bool start_native_race(uint32_t event,bool opening,uintptr_t actor)
     char path[192];const char *base=opening?"intro":race_from_drive&&race_base_bin==15?"career":"exploration";
     snprintf(path,sizeof(path),ROOT "race-state/%s/%08lx.nws",base,(unsigned long)event);
     if(!switch_world_snapshot(path,event)){(void)mw_playable_race_cancel(&playable_race);return false;}
+    if(opening){
+        float source[3],yaw;
+        if(!mw_playable_race_start_pose(&playable_race,source,&yaw)||!begin_opening_actors(event,actor,source)){
+            (void)mw_playable_race_cancel(&playable_race);return false;
+        }
+    }else {C3D_FrameSync();reset_opening_actors();}
+    mw_story_audio_stop(&story_audio);mw_story_engine_reset(&story_engine);story_simulation_clock=0;
     frontend_event_key=event;race_spawn_pending=true;race_finish_position=0;return true;
 }
 static bool place_race_player(DriveState *car,float *height,RoadPose *pose,WheelMotion *motion,bool recover)
@@ -999,14 +1130,28 @@ static bool finish_career_media(void)
     if(!mw_career_media_finished(&next,&career_pack)||!save_career_state(&next))return false;
     career=next;career_phase_pending=true;return true;
 }
-static bool nis_resolve(void *context,uint8_t mode,bool target_mode,const float input[3],float output[3])
+static uint16_t source_heading(float heading)
 {
-    (void)context;(void)target_mode;
-    /* Unsupported original actor/scene providers must not silently become
-       guessed player-relative coordinates. The source resolver is extended
-       only after those actual bindings are recovered. */
-    if(mode!=1)return false;
-    memcpy(output,input,3*sizeof(float));return true;
+    float turns=fmodf(heading*(65536.f/6.283185307179586f),65536.f);
+    if(turns<0)turns+=65536.f;
+    return (uint16_t)turns;
+}
+static void player_source_matrix(const DriveState *car,float height,float matrix[16])
+{
+    float position[3]={car->x+road.origin[0],-(car->z+road.origin[2]),height+road.origin[1]};
+    (void)mw_nis_director_scene_frame(matrix,position,source_heading(car->heading),0);
+}
+static bool nis_ground(void *context,const float source[3],float *height)
+{
+    (void)context;
+#ifdef NFS_STREAMED_WORLD
+    if(!collision_world.ready)return false;
+    float native[3]={-source[1],source[2],source[0]};WorldCollisionContact contact;
+    if(world_collision_runtime_ground(&collision_world,native,0,&contact)!=1)return false;
+    *height=contact.point_native[1];return true;
+#else
+    (void)source;(void)height;return false;
+#endif
 }
 static bool present_career_phase(Screen *screen,DriveState *car,float *height,RoadPose *pose,WheelMotion *motion)
 {
@@ -1023,16 +1168,17 @@ static bool present_career_phase(Screen *screen,DriveState *car,float *height,Ro
         const char *name=mw_career_media(&career,&career_pack);if(!name||!*name)return false;
         for(const char *s=name;*s;s++)if(!((*s>='a'&&*s<='z')||(*s>='0'&&*s<='9')||*s=='_'))return false;
         char path[192];snprintf(path,sizeof(path),ROOT "movies/%s.nvm",name);
-        mw_cinema_stop(&cinema);
+        mw_story_audio_stop(&story_audio);mw_cinema_stop(&cinema);
         if(!mw_cinema_start(&cinema,path))return false;
         *screen=MOVIE;return true;
     }
     if(career.phase==MW_CAREER_INTRO_NIS||career.phase==MW_CAREER_OUTRO_NIS){
-        const char *name=mw_career_media(&career,&career_pack);MwNisScene scene;
-        if(!name||!mw_nis_find(&nis_pack,name,&scene)||!mw_nis_track(&nis_pack,&scene,0,&nis_track))return false;
-        nis_elapsed_us=0;nis_camera_ready=false;
-        nis_anchor_source[0]=car->x+road.origin[0];nis_anchor_source[1]=-(car->z+road.origin[2]);nis_anchor_source[2]=*height+road.origin[1];nis_anchor_yaw=car->heading;
-        *screen=NIS;return true;
+        const char *name=mw_career_media(&career,&career_pack);
+        player_source_matrix(car,*height,nis_player_source);
+        float origin[3]={nis_player_source[12],nis_player_source[13],nis_player_source[14]},ground;
+        if(nis_ground(NULL,origin,&ground))origin[2]=ground;
+        if(!name||!mw_opening_cinema_begin(&opening_cinema,name,nis_player_source,origin,source_heading(car->heading),nis_ground,NULL,NULL,NULL))return false;
+        nis_camera_ready=false;*screen=NIS;return true;
     }
     if(career.phase==MW_CAREER_RACING){race_spawn_pending=true;*screen=DRIVE;return true;}
     if(career.phase==MW_CAREER_CAR_CHOICE){
@@ -1061,7 +1207,7 @@ static bool start_or_resume_career(bool resume)
 }
 static bool race_active(void)
 {
-    return playable_race.phase!=MW_PLAYABLE_EMPTY&&playable_race.phase!=MW_PLAYABLE_CANCELLED&&playable_race.phase!=MW_PLAYABLE_FINISHED;
+    return scripted_opening()||(playable_race.phase!=MW_PLAYABLE_EMPTY&&playable_race.phase!=MW_PLAYABLE_CANCELLED&&playable_race.phase!=MW_PLAYABLE_FINISHED);
 }
 static bool restore_race_base(void)
 {
@@ -1071,6 +1217,8 @@ static bool restore_race_base(void)
 static void cancel_race(void)
 {
     (void)mw_playable_race_cancel(&playable_race);(void)mw_race_session_cancel(&race_session);
+    mw_story_audio_stop(&story_audio);mw_story_engine_reset(&story_engine);
+    C3D_FrameSync();reset_opening_actors();
     career_playing=false;career_phase_pending=false;race_results_showing=false;
     (void)restore_race_base();
 }
@@ -1256,9 +1404,6 @@ int main(void)
         }else if(screen==NIS){
             if((down&KEY_START)&&finish_career_media()){screen=MENU;ui_changed=true;}
         }else if (down&(KEY_B|KEY_START) || (screen==CONTROLS && (down&KEY_A))) screen=MENU;
-        if (screen==DISPLAY && before==DISPLAY && (down&KEY_A)) {
-            piss_filter=!piss_filter;ui_changed=true;
-        }
         /* A controller-driven screen transition takes precedence over touch. */
         if (before!=MENU && (down&KEY_TOUCH) && screen==before && !(down&(KEY_A|KEY_B|KEY_START|KEY_SELECT))) {
             touchPosition touch;hidTouchRead(&touch);
@@ -1270,7 +1415,7 @@ int main(void)
             case MW_UI_SELECT_GARAGE:selected=1;screen=GARAGE;break;
             case MW_UI_SELECT_CONTROLS:selected=2;screen=CONTROLS;break;
             case MW_UI_SELECT_DISPLAY:selected=3;screen=DISPLAY;break;
-            case MW_UI_TOGGLE_PISS_FILTER:piss_filter=!piss_filter;break;
+            case MW_UI_TOGGLE_PISS_FILTER:break;
             case MW_UI_QUIT:selected=4;screen=QUIT;break;
             case MW_UI_TOGGLE_HELP:panel=panel==MW_UI_HELP?MW_UI_NAVIGATION:MW_UI_HELP;break;
             case MW_UI_TOGGLE_DIAGNOSTICS:panel=panel==MW_UI_DIAGNOSTICS?MW_UI_NAVIGATION:MW_UI_DIAGNOSTICS;break;
@@ -1311,10 +1456,15 @@ int main(void)
         }else if(screen==DRIVE&&(down&KEY_X)&&race_active()){
             (void)place_race_player(&car,&height,&pose,&motion,true);
         }
+        if(!refresh_frontend_platform(screen))frontend_notice="GARAGE SCENE COULD NOT BE LOADED";
         u64 now=osGetTime();float dt=(now-previous)*.001f;previous=now;if (dt>.1f) dt=.1f;
         if(screen==NIS){
-            MwNisCamera camera;float seconds=(float)((double)nis_elapsed_us*.000001);
-            nis_camera_ready=mw_nis_camera_sample(&nis_pack,&nis_track,seconds,nis_resolve,NULL,&camera);
+            MwNisCamera camera;
+            /* Native registry order is explicit: controlled player, then the
+               admitted racers. It is not a claim about every source list. */
+            bool stepped=mw_opening_cinema_step(&opening_cinema,dt,NULL,NULL);
+            if(opening_cinema.actors[0].present)memcpy(nis_player_source,opening_cinema.actors[0].source_world,sizeof(nis_player_source));
+            nis_camera_ready=stepped&&mw_opening_cinema_camera(&opening_cinema,nis_player_source,&camera);
             if(nis_camera_ready){
                 for(unsigned a=0;a<3;a++){
                     float eye=a==0?camera.eye[0]:a==1?camera.eye[2]:-camera.eye[1];
@@ -1322,16 +1472,23 @@ int main(void)
                     chase.eye[a]=eye-road.origin[a];chase.target[a]=at-road.origin[a];
                 }
                 chase.fov=camera.fov_turn*(360.f/65536);
-                nis_elapsed_us+=(uint64_t)lroundf(dt*1000000);
-                if(camera.finished&&finish_career_media()){screen=MENU;ui_changed=true;}
+                float f[3],length=0;for(unsigned a=0;a<3;a++){f[a]=chase.target[a]-chase.eye[a];length+=f[a]*f[a];}
+                length=sqrtf(length);if(length>0){
+                    for(unsigned a=0;a<3;a++)f[a]/=length;
+                    float roll=camera.roll_source*6.283185307179586f,co=cosf(roll),si=sinf(roll);
+                    camera_up[0]=-f[2]*si+f[0]*f[1]*(1-co);
+                    camera_up[1]=co+f[1]*f[1]*(1-co);
+                    camera_up[2]=f[0]*si+f[2]*f[1]*(1-co);
+                }
+                if(opening_cinema.finished&&finish_career_media()){screen=MENU;ui_changed=true;}
             }
-        }
+        }else {camera_up[0]=camera_up[2]=0;camera_up[1]=1;}
 #ifdef NFS_STREAMED_WORLD
         DriveState saved_car=car;float saved_height=height;
         WheelMotion saved_motion=motion;RoadPose saved_pose=pose;ChaseCamera saved_chase=chase;
 #endif
         bool advance_drive=screen==DRIVE && before==DRIVE && dt>0 && !(down&KEY_X)&&
-            (!race_active()||playable_race.phase==MW_PLAYABLE_RUNNING);
+            (!race_active()||playable_race.phase==MW_PLAYABLE_RUNNING||(scripted_opening()&&playable_race.phase==MW_PLAYABLE_FINISHED));
 #ifdef NFS_STREAMED_WORLD
         advance_drive=advance_drive && !stream_blocked && stream_has_frame;
 #endif
@@ -1340,6 +1497,7 @@ int main(void)
             float steering=abs(pad.dx)>15?pad.dx/156.0f:0;
             steering+=!!(held&KEY_RIGHT)-!!(held&KEY_LEFT);
             DriveInput input={.throttle=!!(held&KEY_A)-!!(held&KEY_Y),.brake=!!(held&KEY_B),.steering=-steering,.handbrake=held&KEY_R};
+            if(story_engine.blown)input.throttle=0;
             DriveState previous_car=car;float previous_height=height;
 #ifdef NFS_STREAMED_WORLD
             StreamedDriveSurface surface={&collision_world,&road};
@@ -1363,6 +1521,30 @@ int main(void)
         }
         if (advance_drive) (void)chase_step(&chase,&car,height,dt);
         if(advance_drive)update_street_cars(&car,dt);
+#ifdef NFS_STREAMED_WORLD
+        if(advance_drive&&opening_actors.running){
+            StreamedDriveSurface surface={&collision_world,&road};
+            float source[3]={car.x+road.origin[0],-(car.z+road.origin[2]),height+road.origin[1]};
+            DriveState old_racers[MW_RACE_AI_ACTORS],old_police[MW_PURSUIT_COPS];
+            for(unsigned i=0;i<opening_actors.race.count;i++)old_racers[i]=opening_actors.race.actors[i].motion;
+            for(unsigned i=0;i<MW_PURSUIT_COPS;i++)old_police[i]=opening_actors.pursuit.actors[i].motion;
+            MwOpeningActorsWork work={0};
+            (void)mw_opening_actors_pause(&opening_actors,false);
+            (void)mw_opening_actors_update(&opening_actors,&car,height,source,1,(uint64_t)lroundf(dt*1000000),opening_actor_drive,&surface,&work);
+            for(unsigned i=0;i<opening_actors.race.count;i++)(void)wheel_motion_update(&opponent_visuals[i].rig,&opponent_visuals[i].wheels,old_racers+i,&opening_actors.race.actors[i].motion);
+            for(unsigned i=0;i<MW_PURSUIT_COPS;i++)if(opening_actors.pursuit.actors[i].active)(void)wheel_motion_update(&police_visual.rig,police_wheels+i,old_police+i,&opening_actors.pursuit.actors[i].motion);
+        }
+#endif
+        mw_story_audio_pause(&story_audio,screen!=DRIVE);
+        if(story_audio.active&&screen==DRIVE){
+            if(!mw_story_audio_update(&story_audio)){frontend_notice="PHONE AUDIO COULD NOT BE PLAYED";mw_story_audio_stop(&story_audio);}
+            else if(mw_story_audio_issued_playback(&story_audio)) (void)mw_career_call_started(&career);
+            if(mw_story_audio_finished(&story_audio))mw_story_audio_stop(&story_audio);
+        }
+        if(advance_drive){
+            story_simulation_clock+=dt;
+            if(mw_story_engine_tick(&story_engine,story_simulation_clock))(void)mw_career_engine_blown(&career);
+        }
         if (screen==GARAGE && before==GARAGE) {
             if (down&KEY_Y) orbit=!orbit;
             circlePosition pad;hidCircleRead(&pad);
@@ -1410,6 +1592,10 @@ int main(void)
         if(screen==DRIVE&&playable_race.phase==MW_PLAYABLE_LOADING){
 #ifdef NFS_STREAMED_WORLD
             bool admitted=stream_has_frame&&collision_world.ready&&world_state.event==frontend_event_key;
+            if(admitted&&career_playing){
+                for(unsigned i=0;i<opening_actors.race.count;i++)(void)mw_opening_actors_admit_racer(&opening_actors,i,opponent_visuals[i].mesh.loaded!=0);
+                (void)mw_opening_actors_admit_police(&opening_actors,!opening_actors.pursuit.has_event||police_visual.mesh.loaded!=0);
+            }
             if(admitted&&mw_playable_race_admit(&playable_race,true,true,true)){
                 float p[3]={car.x+road.origin[0],-(car.z+road.origin[2]),height+road.origin[1]};
                 /* Explicit native countdown presentation policy. Original race
@@ -1419,11 +1605,19 @@ int main(void)
 #endif
         }
         if(screen==DRIVE&&(playable_race.phase==MW_PLAYABLE_RUNNING||playable_race.phase==MW_PLAYABLE_COUNTDOWN)){
-            float p[3]={car.x+road.origin[0],-(car.z+road.origin[2]),height+road.origin[1]};MwPlayableRaceUpdate update;
-            if(mw_playable_race_update(&playable_race,(uintptr_t)&car,p,(uint64_t)lroundf(dt*1000000),&update)&&update.finished){
+            float p[3]={car.x+road.origin[0],-(car.z+road.origin[2]),height+road.origin[1]};MwPlayableRaceUpdate update={0};
+            if(mw_playable_race_update(&playable_race,(uintptr_t)&car,p,(uint64_t)lroundf(dt*1000000),&update)&&update.finished&&!scripted_opening()){
+                race_finish_position=0;
+                if(career_playing)(void)mw_opening_actors_rank(&opening_actors,&race_session.progress,p,&race_finish_position);
                 race_results_showing=true;screen=MENU;frontend_page=FE_RACE_RESULT;frontend_selected=0;ui_changed=true;
             }
-            if(career_playing&&career.phase==MW_CAREER_RACING){
+            if(update.started&&career_playing&&!mw_opening_actors_start(&opening_actors)){
+                frontend_notice="RACE ACTORS COULD NOT BE ADMITTED";stream_blocked=true;
+            }
+        }
+        if(screen==DRIVE&&career_playing&&career.phase==MW_CAREER_RACING&&advance_drive){
+            float p[3]={car.x+road.origin[0],-(car.z+road.origin[2]),height+road.origin[1]};
+            {
                 MwCareerStage stage;MwCareerTrigger trigger;
                 if(mw_career_stage(&career_pack,career.step,&stage)&&stage.trigger&&
                    mw_career_trigger_get(&career_pack,stage.trigger,&trigger)){
@@ -1432,9 +1626,10 @@ int main(void)
                     double entry;bool entered=trigger.present&16u?
                         mw_playable_race_width_sweep(&node,trigger.width,source_player,p,1,&entry):mw_playable_race_sweep(&node,source_player,p,1,&entry);
                     if(entered&&mw_career_trigger_enter(&career,&career_pack,trigger.key)){
-                        /* Phone and engine lifecycle producers are explicit;
-                           their authentic notifications will be connected with
-                           the full input/engine/audio runtime, not auto-faked. */
+                        if(career.flags&MW_CAREER_CALL_REQUEST){
+                            if(!mw_story_audio_start(&story_audio,ROOT "speech/cellcall10.nvs",10))frontend_notice="PHONE AUDIO COULD NOT BE OPENED";
+                        }
+                        if(career.flags&MW_CAREER_SABOTAGE)(void)mw_story_engine_sabotage(&story_engine,story_simulation_clock,5);
                         ui_changed=true;
                     }
                 }
@@ -1454,7 +1649,6 @@ int main(void)
         float logic_ms=(float)(svcGetSystemTick()-cpu_begin)*(1000.0f/SYSCLOCK_ARM11);
         simulation_ms+=(logic_ms-simulation_ms)*.1f;
         Screen render_screen=screen;
-        if(!refresh_frontend_platform(screen)){frontend_notice="GARAGE SCENE COULD NOT BE LOADED";}
 #ifdef NFS_STREAMED_WORLD
         /* No completed world exists after a failed initial load/reset. Keep
            menu preview above the actionable bottom-screen load status. */
@@ -1474,16 +1668,23 @@ int main(void)
     free(world_state_bytes);
     mw_scene_pack_close(&scene_pack);
 #endif
-    if (gpu_ready) {
-        C3D_FrameSync();
-        if (ui_texture_ready) C3D_TexDelete(&ui_texture);
+    if(gpu_ready)C3D_FrameSync();
+    mw_story_audio_stop(&story_audio);mw_cinema_stop(&cinema);
+    reset_opening_actors();free_mesh(&frontend_platform);free_mesh(&traffic_body);
+    free_mesh(&pending_body);free_mesh(&world);free_mesh(&body);
+    wheel_rig_free(&traffic_rig);wheel_rig_free(&wheel_rig);
+    if(gpu_ready){
+        if(ui_texture_ready)C3D_TexDelete(&ui_texture);
         if(frontend_texture_ready)C3D_TexDelete(&frontend_texture);
         if(frontend_logo_ready)C3D_TexDelete(&frontend_logo_texture);
-        if (ui_gpu_ready) C2D_Fini();
+        if(ui_gpu_ready)C2D_Fini();
         C3D_Fini();
     }
-    free(traffic_world_bytes);free(vehicle_catalog_bytes);free_mesh(&frontend_platform);free_mesh(&traffic_body);wheel_rig_free(&traffic_rig);
-    free(menu_icon_bytes);free(destination_icon_bytes);free(free_roam_bytes);free(frontend_art_bytes);free(event_catalog_bytes);free_mesh(&world);free_mesh(&body);road_free(&road);wheel_rig_free(&wheel_rig);road_map_free(&navigation);
+    free(opponent_pack_bytes);free(pursuit_pack_bytes);free(career_pack_bytes);
+    free(camera_asset_bytes);mw_opening_cinema_close(&opening_cinema);free(race_state_bytes);
+    free(traffic_world_bytes);free(vehicle_catalog_bytes);free(menu_icon_bytes);
+    free(destination_icon_bytes);free(free_roam_bytes);free(frontend_art_bytes);free(event_catalog_bytes);
+    road_free(&road);road_map_free(&navigation);
     if (program_ready) shaderProgramFree(&program);
     if (world_program_ready) shaderProgramFree(&world_program);
     if (shader) DVLB_Free(shader);

@@ -18,6 +18,7 @@ void mw_nis_actions_close(MwNisActions *a);
 int mw_nis_actions_find_scene(const MwNisActions*a,const char*name,MwNisActionScene*out);
 int mw_nis_actions_find_action(const MwNisActions*a,const MwNisActionScene*s,const char*name,MwNisAction*out);
 int mw_nis_actions_action(const MwNisActions*a,uint32_t index,MwNisAction*out);
+int mw_nis_actions_system(const MwNisActions*,uint32_t index,MwNisActionSystem*);
 int mw_nis_actions_find_system(const MwNisActions*a,const MwNisActionScene*s,const char*name,MwNisActionSystem*out);
 int mw_nis_actions_state(const MwNisActions*a,const MwNisActionSystem*s,uint32_t state_hash,MwNisActionState*out);
 int mw_nis_actions_transition(const MwNisActions*a,const MwNisActionState*s,uint32_t stimulus_hash,MwNisActionTransition*out);

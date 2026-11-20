@@ -17,6 +17,7 @@ typedef struct {
     float torque[16],braking[16],ratios[10],efficiency[10];
     MwPhysicsTransmissionShiftTables shifts;
     MwPhysicsTransmissionEngineStepParams powertrain;
+    MwPhysicsTransmissionInductionTiming induction_timing;
 } MwVehicleRuntimeParams;
 typedef struct {
     uint32_t physical_key;
@@ -47,6 +48,8 @@ typedef struct {
     MwVehicleDynamicsInput wheels;
     MwVehicleMechanicalInput mechanical;
     bool engine_before_suspension,body_before_engine,gear_request_authorized;
+    bool induction_tuning_present;
+    float induction_tuning_18;
     const MwPlayerCollisionInput *collision_events;
     size_t collision_event_count;
 } MwVehicleRuntimeProduced;

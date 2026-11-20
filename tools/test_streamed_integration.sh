@@ -16,7 +16,7 @@ sources=(tests/world_streaming_mock/citro3d.c source_rockport/streamed_world.c
  source_bmw/mw_scene_pack.c source_bmw/world_streaming.c source_bmw/world_streaming_scene.c
  source_bmw/world_visibility.c source_bmw/mw_lod_select.c source_bmw/mw_gekko_math.c
  source_bmw/streamed_drive.c source_bmw/world_collision_runtime.c source_bmw/world_collision_query.c
- source_bmw/road_contact.c source_bmw/driving_controller.c source_bmw/chase_camera.c
+ source_bmw/road_contact.c source_bmw/driving_controller.c source_bmw/chase_camera.c source_bmw/mw_chase_source.c source_bmw/mw_original_camera_direction.c source_bmw/mw_original_camera_cubic.c source_bmw/mw_original_camera_tuning.c source_bmw/mw_original_camera_profile.c
  source_bmw/road_pose.c source_bmw/wheel_motion.c)
 objects=()
 for source in "${sources[@]}"; do

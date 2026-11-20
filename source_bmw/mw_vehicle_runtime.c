@@ -19,7 +19,8 @@ static bool bind(MwVehicleRuntimeParams *p){
 bool mw_vehicle_runtime_params_open(MwVehicleRuntimeParams *out,const void *data,size_t size){
     if(!out||!data||size!=1084)return false;
     const unsigned char *p=data;
-    if(memcmp(p,"NVR1",4)||word(p+4)!=1||word(p+8)!=size||word(p+12)!=crc(p+16,size-16)||word(p+20)!=620||word(p+24)!=684||word(p+28)!=812)return false;
+    uint32_t version=word(p+4);
+    if(memcmp(p,"NVR1",4)||(version!=1&&version!=2)||word(p+8)!=size||word(p+12)!=crc(p+16,size-16)||word(p+20)!=620||word(p+24)!=684||word(p+28)!=812)return false;
     static const unsigned char bank[32]={0xda,0x02,0x35,0x3d,0xe7,0x0d,0xea,0x3a,0x8a,0x51,0xd6,0x23,0x1e,0x4e,0xfd,0xe1,0x5a,0xb8,0xc5,0xc7,0x2e,0xed,0x61,0x19,0xa4,0x9b,0xc9,0xda,0xd2,0x0b,0x77,0x0b};
     if(memcmp(p+32,bank,32)||memcmp(p+64,p+192,64)||memcmp(p+64,p+528,64))return false;
     MwVehicleRuntimeParams q={0};
@@ -32,8 +33,8 @@ bool mw_vehicle_runtime_params_open(MwVehicleRuntimeParams *out,const void *data
     q.gravity=real(b+24);q.yaw_speed=real(b+32);q.yaw_count=word(b+48);q.body_bound=true;
     if(!isfinite(q.gravity)||!isfinite(q.yaw_speed)||!q.yaw_count||q.yaw_count>16)return false;
     q.engine_key=word(e);q.transmission_key=word(e+4);q.induction_key=word(e+8);q.nos_key=word(e+12);
-    if(!q.engine_key||q.transmission_key!=q.wheels.transmission_key||!q.induction_key||!q.nos_key||word(e+36))return false;
-    for(unsigned i=120;i<128;i++)if(e[i])return false;
+    if(!q.engine_key||q.transmission_key!=q.wheels.transmission_key||!q.induction_key||!q.nos_key||(version==1&&word(e+36)))return false;
+    if(version==1)for(unsigned i=120;i<128;i++)if(e[i])return false;
     unsigned nt=word(e+16),nb=word(e+20),ng=word(e+24),ne=word(e+28);
     if(nt<2||nt>16||!nb||nb>16||ng<3||ng>10||ne<ng||ne>10)return false;
     float *arrays[]={q.torque,q.braking,q.ratios,q.efficiency,q.yaw_samples};unsigned caps[]={16,16,10,10,16},counts[]={nt,nb,ng,ne,q.yaw_count};unsigned pos=0;
@@ -44,6 +45,10 @@ bool mw_vehicle_runtime_params_open(MwVehicleRuntimeParams *out,const void *data
     q.powertrain.shift_speed=real(e+72);q.powertrain.speed_limiter_count=word(e+32);
     q.powertrain.nos=(MwPhysicsTransmissionNosParams){real(e+76),real(e+80),real(e+84),real(e+88),real(e+92),real(e+96),real(e+100)};
     q.powertrain.induction=(MwPhysicsTransmissionInduction){real(e+104),real(e+108),real(e+112),real(e+116)};
+    if(version==2){
+        q.induction_timing=(MwPhysicsTransmissionInductionTiming){.spool_up=real(e+120),.spool_down=real(e+124),.psi=real(e+36)};
+        if(!isfinite(q.induction_timing.spool_up)||!isfinite(q.induction_timing.spool_down)||!isfinite(q.induction_timing.psi))return false;
+    }else if(q.powertrain.induction.low_boost>0||q.powertrain.induction.high_boost>0)return false;
     for(unsigned i=40;i<120;i+=4)if(!isfinite(real(e+i)))return false;
     if(m->torque_split!=q.wheels.torque_split||!bind(&q))return false;
     *out=q;return bind(out);
@@ -103,7 +108,9 @@ bool mw_vehicle_runtime_step(const MwVehicleRuntimeParams *p,const MwVehicleRunt
     unsigned contacts=s.previous_contact_count;if(contacts>4)return false;MwPhysicsTransmissionSpeedWheel ew[4];
     for(unsigned i=0;i<4;i++){MwPhysicsContactWheel *w=&s.wheels.wheels[i].tire;ew[i]=(MwPhysicsTransmissionSpeedWheel){w->brake.angular_speed,s.wheels.wheels[i].compression,w->traction_factor,w->previous_longitudinal_velocity,w->brake.radius_m,w->brake.locked};v.engine.external.longitudinal_slip[i]=w->longitudinal_slip;}
     v.engine.raw_throttle=throttle;v.engine.external.seconds=raw->seconds;v.engine.external.contact_count=contacts;v.engine.nos.requested=raw->nos_requested;
-    if(!mw_physics_transmission_engine_step_with_story(&p->powertrain,&v.engine,&s.engine,ew,&o.gear_event,&s.story_engine,raw->source_time,mw_player_source_sine,&o.engine_blown_event))return false;
+    MwPhysicsTransmissionInductionTiming induction_timing=p->induction_timing;
+    induction_timing.tuning_present=v.induction_tuning_present;induction_timing.tuning_18=v.induction_tuning_18;
+    if(!mw_physics_transmission_engine_step_complete(&p->powertrain,&v.engine,&s.engine,ew,&o.gear_event,&s.story_engine,raw->source_time,mw_player_source_sine,&o.engine_blown_event,&induction_timing))return false;
     for(unsigned i=0;i<4;i++)s.wheels.wheels[i].tire.brake.angular_speed=ew[i].angular_speed;
     if(!mw_player_collision_begin(&s.collision,raw->seconds))return false;
     v.steering.fade_1ac=s.collision.collision_timer;
@@ -112,11 +119,12 @@ bool mw_vehicle_runtime_step(const MwVehicleRuntimeParams *p,const MwVehicleRunt
     v.wheels.linear_velocity=(MwPhysicsContactVector){s.body.velocity[0],s.body.velocity[1],s.body.velocity[2]};v.wheels.angular_velocity=(MwPhysicsContactVector){s.body.angular_velocity[0],s.body.angular_velocity[1],s.body.angular_velocity[2]};
     MwPhysicsContactVector cg={s.body.local_cg[0],s.body.local_cg[1],s.body.local_cg[2]};mw_physics_contact_rotate_vector(m,&cg,&v.wheels.world_cg_offset);
     v.wheels.body_half_extent_y=p->body.halfextent[1];v.wheels.seconds=raw->seconds;v.wheels.speed_mps=speed;
+    v.wheels.scales.gear_slot=s.engine.mechanical.gear_slot;
     v.wheels.distribution.engine_output_torque=s.engine.mechanical.output_torque;v.wheels.distribution.body_local_lateral_velocity=lateral;v.wheels.distribution.body_local_forward_velocity=forward;v.wheels.distribution.steering=v.steering.raw_steering;
     memcpy(v.mechanical.body_matrix,m,64);v.mechanical.world_velocity=v.wheels.linear_velocity;v.mechanical.local_cg=cg;v.mechanical.speed=speed;v.mechanical.throttle=throttle;v.mechanical.contact_fraction=f32((float)contacts*.25f);
     MwPhysicsContactVector mounts[4];mw_physics_contact_mounts(&p->wheels.dimensions,p->wheels.track_width,p->wheels.front_axle,p->wheels.wheel_base,p->body.halfextent[1],mounts);v.mechanical.front_mount_z=mounts[0].z;v.mechanical.rear_mount_z=mounts[2].z;
     MwPlayerAssistInput *a=&v.assists;MwPlayerRouteInput *r=&a->routing;
-    r->forward_speed=forward;r->slip_angle_9c=forward<1?0:mw_physics_contact_angle_turns(lateral,forward);r->throttle=throttle;r->brake=brake;r->handbrake=handbrake;r->seconds=raw->seconds;r->steering=v.steering.raw_steering;r->body_24=m[9];r->source_speed_bc=speed;r->source_e4_70=p->wheels.torque_split;r->mode_cc=s.engine.mechanical.gear_slot;
+    r->forward_speed=forward;r->slip_angle_9c=forward<1?0:mw_physics_contact_angle_turns(lateral,forward);r->throttle=throttle;r->brake=brake;r->handbrake=handbrake;r->seconds=raw->seconds;r->steering=v.steering.raw_steering;r->body_24=m[9];r->source_speed_bc=speed;r->source_e4_70=p->wheels.torque_split;r->mode_cc=s.engine.mechanical.gear_slot;r->grip_d0=s.engine.scale_100;
     a->yaw_samples=p->yaw_samples;a->yaw_count=p->yaw_count;a->local_angular_y=local(m,s.body.angular_velocity,4);a->source_a4=s.body.inertia[1];a->contact_count=contacts;for(unsigned i=0;i<3;i++)a->body_up[i]=m[4+i];
     PowerContext power_context={h->suspension_math,false};MwPhysicsSuspensionMath suspension_math={source_power,&power_context};
     MwPhysicsContactMath contact_math={.sine=source_sine};

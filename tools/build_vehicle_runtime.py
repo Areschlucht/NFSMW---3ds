@@ -43,10 +43,12 @@ def export(attributes,dol,body_report,bundle,profile,levels):
     torque=field('engine','TORQUE');braking=field('engine','ENGINE_BRAKING');ratios=field('transmission','GEAR_RATIO');efficiency=field('transmission','GEAR_EFFICIENCY');yaw=field('tires','YAW_CONTROL');limiter=field('engine','SPEED_LIMITER')
     for values,capacity in ((torque,16),(braking,16),(ratios,10),(efficiency,10),(yaw,16)):
         if not values or len(values)>capacity:raise ValueError('Unsupported source curve capacity')
-    data=bytearray(1084);struct.pack_into('<4s7I',data,0,b'NVR1',1,len(data),0,physical['key'],620,684,812)
+    data=bytearray(1084);struct.pack_into('<4s7I',data,0,b'NVR1',2,len(data),0,physical['key'],620,684,812)
     data[32:64]=bytes.fromhex(BANK_SHA);data[64:96]=bytes.fromhex(ATTR_SHA);data[96:128]=bytes.fromhex(DOL_SHA256);data[128:464]=wheels;data[464:620]=mechanical
     struct.pack_into('<3h2xf3ffIf3fI',data,620,*half,mass,*tensor,body['gravity']['value'],1,field('tires','YAW_SPEED'),*body['local_cg']['value'][:3],len(yaw))
     struct.pack_into('<10I',data,684,*[rows[n]['key'] for n in ('engine','transmission','induction','nos')],len(torque),len(braking),len(ratios),len(efficiency),len(limiter),0)
+    struct.pack_into('<f',data,720,field('induction','PSI'))
+    struct.pack_into('<2f',data,804,field('induction','SPOOL_TIME_UP'),field('induction','SPOOL_TIME_DOWN'))
     nums=[field('engine',n) for n in ('IDLE','MAX_RPM','RED_LINE','FLYWHEEL_MASS')]+[field('transmission',n) for n in ('FINAL_GEAR','TORQUE_SPLIT','TORQUE_CONVERTER','CLUTCH_SLIP','SHIFT_SPEED')]+[field('nos',n) for n in ('NOS_DISENGAGE','TORQUE_BOOST','NOS_CAPACITY','RECHARGE_MIN','RECHARGE_MAX','RECHARGE_MIN_SPEED','RECHARGE_MAX_SPEED')]+[field('induction',n) for n in ('LOW_BOOST','HIGH_BOOST','VACUUM','SPOOL')]
     struct.pack_into('<20f',data,724,*nums)
     position=812
@@ -54,7 +56,7 @@ def export(attributes,dol,body_report,bundle,profile,levels):
         struct.pack_into('<'+'f'*capacity,data,position,*(values+[0.]*(capacity-len(values))));position+=capacity*4
     assert position==1084
     struct.pack_into('<I',data,12,zlib.crc32(data[16:]))
-    return bytes(data),{'schema':1,'physical_profile':profile,'physical_key':f'{physical["key"]:08x}','sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'component_bindings':bindings,'source_sha256':{'attributes':ATTR_SHA,'dol':DOL_SHA256,'collision_bundle':BANK_SHA},'body':body,'fields':fields,'wheel_parameters':wheel_report,'runtime_gates':['Source task/controller/contact/body-collision providers required','Native original power supports exponents0..2; other exponent domains reject','Positive induction, speed limiter and rev-modulation branches reject in current engine implementation']}
+    return bytes(data),{'schema':2,'physical_profile':profile,'physical_key':f'{physical["key"]:08x}','sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'component_bindings':bindings,'source_sha256':{'attributes':ATTR_SHA,'dol':DOL_SHA256,'collision_bundle':BANK_SHA},'body':body,'fields':fields,'wheel_parameters':wheel_report,'runtime_gates':['Source task/controller/contact/body-collision providers required','Native original power supports exponents0..2; other exponent domains reject','Nonempty speed limiter remains unsupported; active induction and story-owned sabotage use original timed branches']}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)

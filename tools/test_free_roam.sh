@@ -14,7 +14,7 @@ cc -std=c11 -O1 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off \
  source_bmw/mw_scene_pack.c source_bmw/world_streaming.c source_bmw/world_streaming_scene.c \
  source_bmw/world_visibility.c source_bmw/mw_lod_select.c source_bmw/mw_gekko_math.c \
  source_bmw/streamed_drive.c source_bmw/world_collision_runtime.c source_bmw/world_collision_query.c \
- source_bmw/road_contact.c source_bmw/driving_controller.c source_bmw/chase_camera.c source_bmw/mw_world_state.c source_bmw/mw_free_roam.c \
+ source_bmw/road_contact.c source_bmw/driving_controller.c source_bmw/chase_camera.c source_bmw/mw_chase_source.c source_bmw/mw_original_camera_direction.c source_bmw/mw_original_camera_cubic.c source_bmw/mw_original_camera_tuning.c source_bmw/mw_original_camera_profile.c source_bmw/mw_world_state.c source_bmw/mw_free_roam.c \
  -lm -o "$work/drive"
 if [ "$#" -eq 6 ]; then
  "$work/drive" "$1" "$2" "$3" "$5" "$6"

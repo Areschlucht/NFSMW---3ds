@@ -85,7 +85,7 @@ int run(const MwBodyCollisionShape *p,const MwOriginalRigidBody *a,const MwOrigi
 }'''
     with DolphinFrsqrteReference(dolphin) as est,tempfile.TemporaryDirectory(prefix='mw-vehicle-world-') as tmp:
         ref=PrimitiveOriginal(dol.read_bytes(),est);p=Path(tmp);(p/'wrapper.c').write_text(wrapper)
-        subprocess.run(['cc','-std=c11','-O2','-Wall','-Wextra','-Werror','-fno-fast-math','-ffp-contract=off','-shared','-fPIC','-I'+str(ROOT/'include'),str(p/'wrapper.c'),str(ROOT/'source_bmw/mw_vehicle_world.c'),str(ROOT/'source_bmw/mw_body_collision_shapes.c'),'-lm','-o',str(p/'world.so')],check=True)
+        subprocess.run(['cc','-std=c11','-O2','-Wall','-Wextra','-Werror','-fno-fast-math','-ffp-contract=off','-shared','-fPIC','-I'+str(ROOT/'include'),str(p/'wrapper.c'),str(ROOT/'source_bmw/mw_vehicle_world.c'),str(ROOT/'source_bmw/mw_vehicle_world_intersection.c'),str(ROOT/'source_bmw/mw_body_collision_shapes.c'),str(ROOT/'source_bmw/mw_gekko_math.c'),'-lm','-o',str(p/'world.so')],check=True)
         lib=C.CDLL(str(p/'world.so'));lib.run.argtypes=[C.POINTER(Shape),C.POINTER(State),C.POINTER(State),C.POINTER(Geometry),C.POINTER(C.c_float)];lib.run.restype=C.c_int
         for i in range(cases):
             s=Shape();s.kind=1+i%2;s.quaternion[:]=rng.choice([(0,0,0,1),(.6,0,0,.8),(0,.6,0,.8),(0,0,.6,.8)])

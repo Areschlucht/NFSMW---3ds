@@ -5,6 +5,8 @@
 #include <string.h>
 /* Integration-contract tests, not evidence of whole-game parity. These
    deliberately reject providers, checking that trial body ticks never commit. */
+static uint32_t crc(const unsigned char *p,size_t n){uint32_t c=~0u;while(n--){c^=*p++;for(unsigned j=0;j<8;j++)c=(c>>1)^(0xedb88320u&-(c&1u));}return ~c;}
+static void put(unsigned char *p,uint32_t v){for(unsigned i=0;i<4;i++)p[i]=(unsigned char)(v>>(i*8));}
 static unsigned stage;
 static bool before(void *c,MwOriginalRigidBody *b,float dt){(void)c;(void)dt;assert(stage++==0);b->flags|=0x400;return true;}
 static bool after(void *c,const MwOriginalRigidBody *old,MwOriginalRigidBody *b,float dt){(void)c;(void)dt;assert(stage++==1);assert(old->velocity[2]==3);assert(b->position[2]>old->position[2]);memset(b->force,0,sizeof(b->force));return true;}
@@ -17,6 +19,14 @@ int main(int argc,char **argv){
     assert(argc==2);FILE *f=fopen(argv[1],"rb");assert(f);unsigned char bytes[1084];assert(fread(bytes,1,sizeof(bytes),f)==sizeof(bytes));assert(fgetc(f)==EOF);fclose(f);
     MwVehicleRuntimeParams p;assert(mw_vehicle_runtime_params_open(&p,bytes,sizeof(bytes)));assert(p.powertrain.mechanical.torque.torque==p.torque);assert(p.powertrain.mechanical.shift_tables==&p.shifts);assert(p.body.mass==p.wheels.mass);assert(p.body.halfextent[1]>0);
     MwVehicleRuntimeParams sentinel;memset(&sentinel,0xa5,sizeof(sentinel));MwVehicleRuntimeParams original=sentinel;bytes[620]^=1;assert(!mw_vehicle_runtime_params_open(&sentinel,bytes,sizeof(bytes)));assert(!memcmp(&sentinel,&original,sizeof(original)));bytes[620]^=1;
+    /* CRC-valid format changes still reject missing/invalid induction metadata. */
+    unsigned char changed[sizeof(bytes)];memcpy(changed,bytes,sizeof(bytes));put(changed+4,3);assert(!mw_vehicle_runtime_params_open(&sentinel,changed,sizeof(changed)));
+    if(bytes[4]==2){
+        memcpy(changed,bytes,sizeof(bytes));put(changed+804,0x7fc00000);put(changed+12,crc(changed+16,sizeof(changed)-16));assert(!mw_vehicle_runtime_params_open(&sentinel,changed,sizeof(changed)));
+        memcpy(changed,bytes,sizeof(bytes));put(changed+4,1);put(changed+720,0);put(changed+804,0);put(changed+808,0);put(changed+12,crc(changed+16,sizeof(changed)-16));
+        bool active=p.powertrain.induction.low_boost>0||p.powertrain.induction.high_boost>0;
+        assert(mw_vehicle_runtime_params_open(&sentinel,changed,sizeof(changed))==!active);
+    }
     MwOriginalRigidBody b={.inverse_mass=p.body.inverse_mass};memcpy(b.inertia,p.body.inertia,sizeof(b.inertia));memcpy(b.local_cg,p.local_cg,sizeof(b.local_cg));float identity[16]={1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1};assert(mw_original_rigid_body_set_orientation(&b,identity));b.velocity[2]=3;
     MwPhysicsTransmissionEngineStepState engine={0};MwVehicleRuntimeState state;assert(mw_vehicle_runtime_init(&state,&p,&b,&engine));MwVehicleRuntimeState saved=state;
     MwVehicleRuntimeOutput out,unchanged;memset(&out,0x5a,sizeof(out));unchanged=out;

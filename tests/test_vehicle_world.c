@@ -31,5 +31,29 @@ int main(void)
     assert(!mw_vehicle_world_geometry(&a,0,&s,&g));assert(!memcmp(&g,&old,sizeof(g)));
     MwVehicleWorldActor before=a;pack[8]=1;
     assert(mw_vehicle_world_actor_open(pack,sizeof(pack),0x12345678,pad,&a)<0);assert(!memcmp(&a,&before,sizeof(a)));
-    puts("physical compound actor, primitive preparation, world geometry and transactional rejection: PASS");return 0;
+    MwBodyCollisionState response={0};response.inertia[0]=100;response.inertia[1]=200;response.inertia[2]=300;
+    response.local_cg[1]=.5f;response.extra_normal_accumulation=.25f;
+    const float forward[3]={0,0,1},velocity[3]={0,0,20},normal[3]={0,0,-1},scale[3]={1,.4f,2};
+    MwBodyCollisionState npc=response;
+    assert(mw_vehicle_world_modify_collision(&response,true,forward,velocity,normal,scale));
+    near(response.inertia[1],1800);near(response.local_cg[1],0);near(response.extra_normal_accumulation,0);near(response.moment_scale[1],.4f);
+    assert(mw_vehicle_world_modify_collision(&npc,false,forward,velocity,normal,scale));
+    near(npc.inertia[1],200);near(npc.local_cg[1],0);near(npc.extra_normal_accumulation,.25f);
+    MwBodyCollisionState saved=response;float bad[3]={NAN,0,1};
+    assert(!mw_vehicle_world_modify_collision(&response,true,bad,velocity,normal,scale));assert(!memcmp(&response,&saved,sizeof(saved)));
+    MwVehicleWorldGeometry box={0};box.shape=1;box.overlap=-100000;
+    box.position[1]=1;box.position[2]=.1f;
+    for(unsigned i=0;i<3;i++){box.dimension[i]=.5f;box.normal[i][i]=1;box.extent[i][i]=.5f;}
+    WorldCollisionBarrier barrier={0};barrier.endpoint_native[0][0]=-5;barrier.endpoint_native[0][1]=3;
+    barrier.endpoint_native[1][0]=5;barrier.endpoint_native[1][1]=-1;barrier.inverse_local_length=.1f;barrier.flags=16;
+    barrier.material_key=0x1234;barrier.source_ci_offset=0x4567;MwVehicleWorldContact contact;
+    assert(mw_vehicle_world_wall_contact(&box,&barrier,0,false,&contact)==1);
+    assert(contact.material_key==0x1234&&contact.source_ci_offset==0x4567);assert(contact.penetration>=0);
+    old=box;MwVehicleWorldContact previous=contact;
+    assert(mw_vehicle_world_wall_contact(&box,&barrier,16,false,&contact)==0);
+    assert(!memcmp(&box,&old,sizeof(box))&&!memcmp(&contact,&previous,sizeof(contact)));
+    barrier.endpoint_native[0][0]=NAN;
+    assert(mw_vehicle_world_wall_contact(&box,&barrier,0,false,&contact)<0);
+    assert(!memcmp(&box,&old,sizeof(box))&&!memcmp(&contact,&previous,sizeof(contact)));
+    puts("physical compound, primitive geometry, original wall contacts and vehicle collision modifier: PASS");return 0;
 }

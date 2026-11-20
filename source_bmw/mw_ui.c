@@ -301,10 +301,10 @@ bool mw_ui_render(unsigned char *fb,size_t bytes,const MwUiModel *m,const unsign
     } else if (m->mode==MW_UI_DISPLAY) {
         title_text(c,12,36,"DISPLAY",2,TEXT);
         rect(fb,12,70,296,52,PANEL);
-        text(c,24,89,"PISS FILTER",2,TEXT);
-        text(c,248,89,m->piss_filter?"ON":"OFF",2,ACCENT);
-        text(c,16,140,m->piss_filter?"ON: OPTIONAL WARM GRADE":"OFF: NEUTRAL COLOURS",1,TEXT);
-        text(c,16,158,"TOUCH THE ROW OR PRESS A TO TOGGLE",1,MUTED);
+        text(c,24,89,"WORLD COLOUR",2,TEXT);
+        text(c,248,89,"ON",2,ACCENT);
+        text(c,16,140,"ORIGINAL-STYLE WARM COLOURS",1,TEXT);
+        text(c,16,158,"COLOUR GRADE ALWAYS ENABLED",1,MUTED);
         text(c,16,180,"B / START: BACK TO MENU",1,MUTED);
         button(c,6,308,"BACK TO MENU",false);
     } else {
@@ -325,8 +325,6 @@ MwUiAction mw_ui_touch(const MwUiModel *m,unsigned x,unsigned y)
         unsigned row=(y-54)/24;
         if ((y-54)%24<21) return actions[row];
     }
-    if (m->mode==MW_UI_DISPLAY && x>=12 && x<308 && y>=70 && y<122)
-        return MW_UI_TOGGLE_PISS_FILTER;
     if (y<208 || y>=236) return MW_UI_NONE;
     if (m->mode!=MW_UI_DRIVE) return x>=6 && x<314 && m->mode!=MW_UI_MENU?MW_UI_OPEN_MENU:MW_UI_NONE;
     if (x>=6 && x<102) return MW_UI_OPEN_MENU;

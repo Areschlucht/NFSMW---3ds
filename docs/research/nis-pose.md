@@ -53,3 +53,14 @@ cc -std=c99 -Wall -Wextra -Werror -ffp-contract=off -Iinclude tests/test_nis_pos
 ```
 
 The native helper allocates no memory, accesses no files, uses bounded stack matrices and rejects missing/nonfinite inputs. Compile without unsafe fast-math/reassociation; explicit `fmaf` retains original fused matrix operations. No SDK application build or Git operation is performed by this child task.
+
+## Downstream consumer clarification
+
+Followup debug-symbol/vtable tracing identifies the original matrix destination
+as **INISCarControl::SetNISPosition**, concrete
+`SuspensionSpline::SetNISPosition`80252E74. This is not a renderer setter.
+Subsequent poses preserve the live rigid-body Y position and Y velocity while
+replacing X/Z, then the spline suspension computes wheel/ground forces. Applying
+its incoming ground+5 directly to a display matrix bypasses that consumer.
+[Opening integration](opening-cinema-integration.md) documents this source path
+and exposes raw animation poses separately until that suspension is connected.

@@ -27,6 +27,8 @@ bool mw_drive_camera_forward(MwDriveCamera*,const MwDriveCameraAnchor*,int pov_t
  * current interpolation values. No body-yaw or spring approximation. */
 bool mw_drive_camera_space(const MwDriveCamera*,const MwDriveCameraAnchor*,bool outside,float matrix[16]);
 typedef struct { float speed_hug[5][2];uint16_t nos_fov_turns; } MwDriveCameraSourceData;
+/* Actual USA dynamic-initializer values, not a platform preset. */
+void mw_drive_camera_source_data(MwDriveCameraSourceData*);
 typedef struct {
  int pov_type;uint32_t world_timer;
  bool touching_ground,under_vehicle,nos_engaged,snap;
@@ -41,4 +43,26 @@ bool mw_drive_camera_desired(MwDriveCamera*,const MwDriveCameraAnchor*,
  const MwOriginalCameraProfileCache*,const MwOriginalCameraTuning*,
  const MwDriveCameraSourceData*,const MwDriveCameraDesiredInput*,float space[16]);
 float mw_drive_camera_sine_turns(uint16_t);
+/* Original Update80074068..80074378: samples nonlinear acceleration before
+ * stepping the previous frame's cubic targets. Invoke before desired(), not
+ * afterwards. collision_damping/drift are actual CameraAnchor+A4/A8 values;
+ * The source debug override globals are disabled in this ordinary path. */
+bool mw_drive_camera_channels(MwDriveCamera*,const MwDriveCameraAnchor*,
+ const MwOriginalCameraTuning*,int pov_type,float collision_damping,float drift,
+ float delta);
+typedef struct { float eye[3],look[3],up[3];bool lifted_under_vehicle; } MwDriveCameraPlacement;
+/* Original Update80074444..80074B34, before lens conversion, noise and world
+ * constraints. Geometry frame, never a substitute for MinGapTopology/Cars. */
+bool mw_drive_camera_placement(MwDriveCamera*,const MwDriveCameraAnchor*,
+ int pov_type,uint32_t world_timer,bool gear_changing,float delta,
+ const float space[16],MwDriveCameraPlacement*);
+/* Reconstructs the mathematical atan lookup (round(atan(i/256)*65536/2pi));
+ * all257 entries match original. Prepare once, outside the draw/update loop. */
+void mw_drive_camera_lens_table(uint16_t table[257]);
+/* Source Update half-angle integer quantization, bSin/bCos ratio and integer
+ * atan lookup interpolation. Result remains original full-turn units. */
+bool mw_drive_camera_fov_turns(float interpolated,const uint16_t table[257],uint16_t*);
+/* Whole source eCreateLookAtMatrix8010AF38. Output is original view matrix,
+ * not a 3DS projection matrix. Keeps source normalization/degenerate behavior. */
+bool mw_drive_camera_look_at(const float eye[3],const float look[3],const float up[3],float matrix[16]);
 #endif

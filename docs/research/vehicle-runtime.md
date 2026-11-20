@@ -64,13 +64,15 @@ zero initial GameBreaker/CollisionTimer are source-backed, but later dynamic
 providers cannot be frozen to their initial values.
 
 Manual gear requests reject until original policy/side effects are integrated.
-Engine positive induction and nonempty speed limiter still
-reject through the underlying recovered-engine gates. This includes source
-profiles that pack correctly but are not yet supported for full engine stepping.
+Nonempty engine speed-limiter arrays still reject. All six exported stock
+profiles have empty arrays. The complete engine entry point now includes original
+timed turbo/supercharger induction, while legacy entry points intentionally keep
+their disabled-induction-only contract. The producer supplies the current optional
+Tunings.Value[18], rather than freezing it to the constructor value.
 
 ## Source parameter sidecar
 
-`tools/build_vehicle_runtime.py` emits NVR1 version1,1084 bytes, CRC32 over bytes
+`tools/build_vehicle_runtime.py` emits NVR1 version2,1084 bytes, CRC32 over bytes
 16..end. It validates exact original ATTRIBUTES, Speed.dol and collision-bank
 SHA256. Explicit per-component upgrade indices are mandatory. Physical mass,
 TENSOR_SCALE, root signed-short extents, local CG and gravity come from original
@@ -81,7 +83,11 @@ profile156; body64; engine128; bounded torque16, braking16, gear10,
 efficiency10 and yaw16 float arrays. The loader validates nested source digests,
 CRC, keys, finite values, counts and zero padding, computes original inertia and
 startup shift/peak-torque tables, then rebinds internal pointers. The parameter
-object must remain at a stable address while used.
+object must remain at a stable address while used. Version2 uses previously
+reserved engine bytes36 (PSI),120 (SPOOL_TIME_UP) and124 (SPOOL_TIME_DOWN).
+Version1 remains readable for disabled-induction profiles; active-induction
+version1 profiles reject because their required timing was never packed.
+Updated private sidecars are under `/workspace/port-research/driving-runtime-v2`.
 
 Six profiles exported: m3gtre46careerstart, bmwm3gtre46, cobaltss, gti, is300,
 punto. Export success proves binding/packing, not runtime completeness.
@@ -137,3 +143,55 @@ Common wheel velocity and landing angular snapshots remain unchanged by those
 body setters, exactly as in the original. Source tickend clears the wall terms.
 Ground count uses previous valid contact count, independently of compressed-wheel
 count; a steep compressed wheel can have no accepted ground contact.
+
+## Complete stock engine validation
+
+The updated whole-engine comparison selects actual stock component RefSpecs for
+all six physical profiles, rather than pairing every car with the BMW NOS or
+default induction.4608 unchanged original EngineRacer calls match every captured
+state float, wheel angular speed, sabotage deadline/blown flag and emitted Blow
+event, including1488 continuation steps. CobaltSS uses the source supercharger;
+GTI uses its source turbo/spool threshold. Optional induction tuning at values
+-1,-.5,0,.5,1 is exercised through the actual original GetTunings pointer getter.
+The app still needs the actual dynamic provider; the test does not choose its
+gameplay tuning policy. Report: private driving-runtime/engine-complete-verification.json.
+
+After the engine commits inside a trial frame, wheel preparation now receives
+the updated actual gear. Common D0 uses the actual EngineRacer::GetNOSBoost
+getter80269CD4 value (engine+100, the torque multiplier), not activity+104 or a
+guessed normalized charge. The original common-state getter order is preserved
+relative to the earlier engine task.
+
+## Concrete application integration boundary
+
+Keep one stable-address MwVehicleRuntimeParams per selected physical profile and
+one MwVehicleRuntimeState per source vehicle. Initialize body quaternion, pose,
+velocity, force accumulators, flags, gear, clutch and omega from the recovered
+source spawn/constructors. A zeroed body or engine is not a validated replacement.
+Use source simulation scheduling at1/60 second. For every tick, provide actual
+source_time plus normalized pad inputs, then call mw_vehicle_runtime_step once.
+The call order is:
+
+1. before_body_tick: actual OnBeginFrame bookkeeping;
+2. original rigid-body integration using previous forces;
+3. after_body_tick: original primitive refresh, collision resolution, EndFrame
+   force reset/gravity/sleep behavior, with collision events staged privately;
+4. produce: current interface/timer/tuning outputs and ordered collision events;
+5. original engine, common state, aero, drive distribution, steering and four-wheel
+   contacts, then combined wrench/bottomout/landing suffix.
+
+Only after success may the caller commit staged world/event state and apply
+ChargeGameBreaker, gear events, wake and EngineBlown. A failing tick preserves
+vehicle state/output but cannot roll back arbitrary side effects in caller hooks.
+The input-only producer must fill input_present, automatic_enabled, NOS inhibition,
+unlimited/boost/tuning providers, actual cached PVehicle::GetAbsoluteSpeed, staging
+flags/scalar, steering-wheel mode, Handling/settings presence, GameBreaker, driver
+style, damage/wheel-disabled flags, drag-trany boost, yaw/max-speed interfaces,
+differential assist settings, and optional Physics::Tunings. Setting the producer
+mask63 asserts those bindings; it does not prove them. The runtime supplies
+compared body/wheel/raw fields, current engine torque/gear/NOS multiplier and
+physical mounts internally. Do not bypass required world/body hooks with no-ops.
+
+Neither a full source-compatible task/world callback implementation nor a
+whole-vehicle trajectory comparison has been established here. These remain the
+activation gates for replacing the current live driving adapter.

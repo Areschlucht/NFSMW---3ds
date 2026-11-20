@@ -45,12 +45,14 @@ int mw_nis_actions_find_action(const MwNisActions*a,const MwNisActionScene*s,con
     uint32_t i;if(!a||!s||!name||!out||s->first_action>a->actions||s->action_count>a->actions-s->first_action)return 0;
     for(i=0;i<s->action_count;i++){if(!mw_nis_actions_action(a,s->first_action+i,out))return 0;if(!strcmp(name,out->name))return 1;}return 0;
 }
+int mw_nis_actions_system(const MwNisActions*a,uint32_t index,MwNisActionSystem*out){
+    const unsigned char*p=record(a,2,index);if(!p||!out||!memchr(p,0,32))return 0;
+    memset(out,0,sizeof(*out));memcpy(out->name,p,32);out->index=index;out->name_hash=rd(p+32);out->initial_state=rd(p+36);out->default_state=rd(p+40);out->first_state=rd(p+44);out->state_count=rd(p+48);
+    return out->first_state<=a->states&&out->state_count<=a->states-out->first_state;
+}
 int mw_nis_actions_find_system(const MwNisActions*a,const MwNisActionScene*s,const char*name,MwNisActionSystem*out){
-    uint32_t i;const unsigned char*p;if(!a||!s||!name||!out||s->first_system>a->systems||s->system_count>a->systems-s->first_system)return 0;
-    for(i=0;i<s->system_count;i++){p=record(a,2,s->first_system+i);if(!p||!memchr(p,0,32))return 0;if(strcmp(name,(const char*)p))continue;
-        memset(out,0,sizeof(*out));memcpy(out->name,p,32);out->index=s->first_system+i;out->name_hash=rd(p+32);out->initial_state=rd(p+36);out->default_state=rd(p+40);out->first_state=rd(p+44);out->state_count=rd(p+48);
-        return out->first_state<=a->states&&out->state_count<=a->states-out->first_state;
-    }return 0;
+    uint32_t i;if(!a||!s||!name||!out||s->first_system>a->systems||s->system_count>a->systems-s->first_system)return 0;
+    for(i=0;i<s->system_count;i++){if(!mw_nis_actions_system(a,s->first_system+i,out))return 0;if(!strcmp(name,out->name))return 1;}return 0;
 }
 int mw_nis_actions_state(const MwNisActions*a,const MwNisActionSystem*s,uint32_t key,MwNisActionState*out){
     uint32_t i;const unsigned char*p;if(!a||!s||!out||s->first_state>a->states||s->state_count>a->states-s->first_state)return 0;

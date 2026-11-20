@@ -82,7 +82,9 @@ bool mw_physics_transmission_engine_step_with_story(const MwPhysicsTransmissionE
     MwPhysicsTransmissionSpeedWheel [4],MwPhysicsTransmissionGearEvent *,
     MwStoryEngine *,float simulation_clock,float (*source_sine)(float),bool *engine_blown_event);
 typedef struct {float spool_up,spool_down,psi;bool tuning_present;float tuning_18;} MwPhysicsTransmissionInductionTiming;
-/* Original complete timed induction802571FC, all nonempty stockinduction types. */
+/* Original timed induction802571FC. Complete entry point supplies the actual
+ * induction PSI/up/down timing and dynamic Tunings.Value[18] provider. The
+ * legacy entry points preserve their disabled-induction-only ABI. */
 bool mw_physics_transmission_induction_step(const MwPhysicsTransmissionEngineStepParams *,
     const MwPhysicsTransmissionInductionTiming *,float seconds,float throttle,
     MwPhysicsTransmissionEngineStepState *);

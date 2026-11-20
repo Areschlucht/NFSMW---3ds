@@ -15,16 +15,17 @@ from vehicle_transmission_auto_verify import Event
 from vehicle_attributes import VehicleAttributes
 from vehicle_verify_original import ATTR_SHA
 from vehicle_ppc_reference import DOL_SHA256
-for first,base,restore,offset in [(18,0x80257634,0x80258468,0x30),(29,0x80256c40,0x80256d88,0x10),(28,0x80257204,0x80257474,0x20)]:
+for first,base,restore,offset in [(18,0x80257634,0x80258468,0x30),(29,0x80256c40,0x80256d88,0x10),(28,0x80257204,0x80257474,0x20),(26,0x80223db0,0x8022408c,0x18)]:
     for r in range(first,32):
         off=offset+(r-first)*8;EXTRA_ABI[base+(r-first)*4]=0xf0000000|(r<<21)|(1<<16)|off;EXTRA_ABI[restore+(r-first)*4]=0xe0000000|(r<<21)|(1<<16)|off
 class Induction(C.Structure):_fields_=[(n,C.c_float) for n in ['low','high','vacuum','spool']]
 class Params(C.Structure):_fields_=[('mechanical',MechanicalParams),('nos',NosParams),('induction',Induction),('shift_speed',C.c_float),('limiter_count',C.c_size_t)]
 class Input(C.Structure):_fields_=[('external',MechanicalInput),('nos',NosInput),('raw_throttle',C.c_float),('present',C.c_uint),('automatic',C.c_uint),('rev',C.c_uint)]
 class State(C.Structure):_fields_=[('mechanical',MechanicalState),('nos',NosState)]+[(n,C.c_float) for n in ['cooldown','induction_amount','induction_display','induction_boost','scale']]+[('committed',C.c_uint)]
+class Timing(C.Structure):_fields_=[('up',C.c_float),('down',C.c_float),('psi',C.c_float),('tuning_present',C.c_bool),('tuning_18',C.c_float)]
 class StoryState(C.Structure):_fields_=[("deadline",C.c_float),("blown",C.c_uint8)]
 class StepReference(Reference):
-    def full(self,el,tl,il,nl,p,inp,state,wheels,story,clock):
+    def full(self,el,tl,il,nl,p,inp,state,wheels,story,clock,timing=None):
         from unicorn import UC_HOOK_CODE
         from unicorn.ppc_const import UC_PPC_REG_3,UC_PPC_REG_FPR0,UC_PPC_REG_PC,UC_PPC_REG_LR,UC_PPC_REG_13,UC_PPC_REG_2
         self.mechanical(el,tl,p.mechanical,inp.external,state.mechanical,wheels,prepare_only=True)
@@ -40,7 +41,10 @@ class StepReference(Reference):
         u.mem_write(0x81609400,bytes(table));raw=bytearray(0x30);struct.pack_into('>f',raw,0x14,inp.raw_throttle);struct.pack_into('>I',raw,0x24,inp.nos.requested);u.mem_write(0x81609800,bytes(raw))
         u.mem_write(0x81609200,bytes(4)+struct.pack('>I',0x81609600));table=bytearray(0x98);struct.pack_into('>I',table,0x94,self.CALLBACK+0x20);u.mem_write(0x81609600,bytes(table))
         # Original Vehicle table retained except external tuning-pointer getter.
-        vehicle_table=bytearray(self.dol.read(0x803f8728,0x1b0));struct.pack_into('>I',vehicle_table,0x1a4,self.CALLBACK+0x40);u.mem_write(0x8160f000,bytes(vehicle_table));u.mem_write(0x8160e0b8,struct.pack('>I',0x8160f000))
+        vehicle_table=bytearray(self.dol.read(0x803f8728,0x1b0));struct.pack_into('>I',vehicle_table,0x1a4,self.CALLBACK+0x40);u.mem_write(0x8160f000,bytes(vehicle_table));
+        tuning=bytearray(0x20)
+        if timing:struct.pack_into('>f',tuning,0x18,timing.tuning_18)
+        u.mem_write(0x81609a00,bytes(tuning));u.mem_write(0x8160e0b8,struct.pack('>I',0x8160f000))
         for off in [0x10,0x20,0x30,0x34,0x38,0x40]:u.mem_write(self.CALLBACK+off,struct.pack('>I',0x4e800020))
         def callback(uc,a,size,unused):
             if a in (0x801eb8d0,0x801d79c8):
@@ -54,10 +58,11 @@ class StepReference(Reference):
                 if a==self.CALLBACK+0x10:result=0x81609200 if inp.nos.inhibited else 0
                 if a==self.CALLBACK+0x34:result=inp.automatic
                 if a==self.CALLBACK+0x38:result=0x81609800
+                if a==self.CALLBACK+0x40:result=0x81609a00 if timing and timing.tuning_present else 0
                 uc.reg_write(UC_PPC_REG_3,result)
         hook=u.hook_add(UC_HOOK_CODE,callback)
         u.mem_write(0x8041f654,struct.pack('>I',inp.nos.unlimited))
-        self.allowed=((0x8025762c,0x802584a8),(0x8025625c,0x802568a0),(0x80256a08,0x8025762c),(0x80269cdc,0x80269f38),(0x802479a0,0x80247a0c),(0x80268da8,0x80268e14),(0x80268e7c,0x80268ea4),(0x80268ecc,0x80268ed4),(0x8022e0dc,0x8022e0e4),(0x8022e114,0x8022e11c),(0x8022e1d0,0x8022e1d8),(0x802102a8,0x8021031c),(0x80223afc,0x80223c14),(0x80223cd0,0x80223d30),(0x8025546c,0x802554f4),(0x802557e8,0x80255a0c),(0x80255ad4,0x80255fa4),(0x8025607c,0x8025625c),(0x802240ac,0x80224268),(0x80058124,0x8005812c),(0x8005e0c8,0x8005e180),(0x80209080,0x802090a4),(0x801e9c48,0x801e9c54),(self.CALLBACK,self.CALLBACK+0x44))
+        self.allowed=((0x8025762c,0x802584a8),(0x8025625c,0x802568a0),(0x80256a08,0x8025762c),(0x80269cdc,0x80269f38),(0x802479a0,0x80247a0c),(0x80268da8,0x80268e14),(0x80268e7c,0x80268ea4),(0x80268ecc,0x80268ed4),(0x8022e0dc,0x8022e0e4),(0x8022e114,0x8022e11c),(0x8022e1d0,0x8022e1d8),(0x802102a8,0x8021031c),(0x80223afc,0x80223c14),(0x80223d30,0x802240ac),(0x80223cd0,0x80223d30),(0x8025546c,0x802554f4),(0x802557e8,0x80255a0c),(0x80255ad4,0x80255fa4),(0x8025607c,0x8025625c),(0x802240ac,0x80224268),(0x80058124,0x8005812c),(0x8005e0c8,0x8005e180),(0x80209080,0x802090a4),(0x801e9c48,0x801e9c54),(self.CALLBACK,self.CALLBACK+0x44))
         self.allowed+=((0x802782fc,0x80278308),(0x80255360,0x802553c8),(0x801eb8d0,0x801eb8d4),(0x801d79c8,0x801d79cc),(0x8031dad0,0x8031dbd0),(0x8031dcbc,0x8031dd98),(0x8031e4bc,0x8031e654),(0x8031e868,0x8031f4c0),(0x8031dbd0,0x8031dc98),(0x8031e07c,0x8031e1cc))
         before=[bytes(u.mem_read(0x81610000+i*0x1000,0x140)) for i in range(4)];self.write_ranges=((self.OBJECT,self.OBJECT+len(obj)),*[(0x81610000+i*0x1000,0x81610000+i*0x1000+0x140) for i in range(4)])
         try:self._call(0x8025762c,self.OBJECT,inp.external.seconds)
@@ -77,10 +82,10 @@ class StepReference(Reference):
             after=bytes(u.mem_read(0x81610000+i*0x1000,0x140));assert all(x==y for j,(x,y) in enumerate(zip(b,after)) if j not in range(0xd0,0xd4));output[i].omega=struct.unpack_from('>f',after,0xd0)[0]
         return actual,output,StoryState(struct.unpack_from(">f",raw,0x1ac)[0],struct.unpack_from(">I",raw,0x1a8)[0]),self.story_event
 
-def verify(dol,attributes):
+def verify(dol,attributes,cases_per_profile=768):
     from vehicle_vlt_hash import vlt_hash as h
     raw=attributes.read_bytes();assert hashlib.sha256(raw).hexdigest()==ATTR_SHA
-    db=VehicleAttributes(raw);ref=StepReference(dol.read_bytes());ref.initialize_launch();root=Path(__file__).resolve().parents[1];rng=random.Random(802576);cases=0
+    db=VehicleAttributes(raw);ref=StepReference(dol.read_bytes());ref.initialize_launch();root=Path(__file__).resolve().parents[1];rng=random.Random(802576);cases=0;continuations=0;profiles=[]
     def layout(row):return bytes(db.bin[row['layout']:row['layout']+db.classes[row['class_key']]['base_size']])
     def bits(v):return struct.pack('>f',v)
     def flatten(value,prefix=''):
@@ -92,19 +97,25 @@ def verify(dol,attributes):
         return out
     with tempfile.TemporaryDirectory(prefix='mw-fullstep-') as tmp:
         so=Path(tmp)/'step.so';subprocess.run(['cc','-std=c11','-O2','-Wall','-Wextra','-Werror','-fno-fast-math','-ffp-contract=off','-shared','-fPIC','-I'+str(root/'include'),*[str(root/f'source_bmw/{m}.c') for m in ['mw_physics_transmission_engine','mw_physics_transmission','mw_physics_transmission_policy','mw_physics_transmission_auto','mw_physics_transmission_nos','mw_physics_engine','mw_original_player_input','mw_physics_grip','mw_physics_brakes','mw_physics_tires','mw_vehicle_dynamics','mw_physics_ground','mw_physics_suspension','mw_physics_contact_frame','mw_physics_contact_geometry','mw_physics_contact_scale','mw_physics_contact','mw_physics_lateral','mw_physics_friction','mw_physics_transmission_distribution','mw_gekko_math']],'-lm','-o',str(so)],check=True)
-        lib=C.CDLL(str(so));sine=C.CFUNCTYPE(C.c_float,C.c_float)(("mw_player_source_sine",lib));step=lib.mw_physics_transmission_engine_step_with_story;step.argtypes=[C.POINTER(Params),C.POINTER(Input),C.POINTER(State),C.POINTER(Wheel),C.POINTER(Event),C.POINTER(StoryState),C.c_float,type(sine),C.POINTER(C.c_bool)];step.restype=C.c_bool
-        for name in ['bmwm3gtre46','m3gtre46careerstart']:
-            er=db.find('engine',name);tr=db.find('transmission',name);ir=db.find('induction','default');nr=db.find('nos',0x1efbd807);ef=db.fields(er);tf=db.fields(tr);nf=db.fields(nr);el,tl,il,nl=map(layout,[er,tr,ir,nr]);torque=ef['TORQUE']['value']['values'];braking=ef['ENGINE_BRAKING']['value']['values'];ta=(C.c_float*len(torque))(*torque);ba=(C.c_float*len(braking))(*braking);rpm=[ef[k]['value'] for k in ['IDLE','MAX_RPM','RED_LINE']];ratios=tf['GEAR_RATIO']['value']['values'];eff=tf['GEAR_EFFICIENCY']['value']['values'];ra=(C.c_float*len(ratios))(*ratios);ea=(C.c_float*len(eff))(*eff);peak,peakrpm=ref.peak(el,il);_,up,down,_=ref.shift_tables(el,il,tl);tables=Tables((C.c_float*10)(*up),(C.c_float*10)(*down),len(ratios));mp=MechanicalParams(Curve(ta,len(torque),*rpm),Curve(ba,len(braking),*rpm),ra,ea,len(ratios),ef['FLYWHEEL_MASS']['value'],*(tf[k]['value'] for k in ['FINAL_GEAR','TORQUE_SPLIT','TORQUE_CONVERTER','CLUTCH_SLIP']),peak,peakrpm,C.pointer(tables));np=NosParams(*(nf[k]['value'] for k in ['NOS_DISENGAGE','TORQUE_BOOST','NOS_CAPACITY','RECHARGE_MIN','RECHARGE_MAX','RECHARGE_MIN_SPEED','RECHARGE_MAX_SPEED']));p=Params(mp,np,Induction(),tf['SHIFT_SPEED']['value'],0)
-            for i in range(768):
+        lib=C.CDLL(str(so));sine=C.CFUNCTYPE(C.c_float,C.c_float)(("mw_player_source_sine",lib));step=lib.mw_physics_transmission_engine_step_complete;step.argtypes=[C.POINTER(Params),C.POINTER(Input),C.POINTER(State),C.POINTER(Wheel),C.POINTER(Event),C.POINTER(StoryState),C.c_float,type(sine),C.POINTER(C.c_bool),C.POINTER(Timing)];step.restype=C.c_bool
+        for name in ['bmwm3gtre46','m3gtre46careerstart','cobaltss','gti','is300','punto']:
+            from vehicle_export_contact import component_reference
+            physical=db.find('pvehicle',name)
+            er,tr,ir,nr=[component_reference(db,physical,role,0)[0] for role in ['engine','transmission','induction','nos']]
+            induction_fields=db.fields(ir);timing=Timing(*(induction_fields[k]['value'] for k in ['SPOOL_TIME_UP','SPOOL_TIME_DOWN','PSI']),False,0)
+            ef=db.fields(er);tf=db.fields(tr);nf=db.fields(nr);el,tl,il,nl=map(layout,[er,tr,ir,nr]);torque=ef['TORQUE']['value']['values'];braking=ef['ENGINE_BRAKING']['value']['values'];ta=(C.c_float*len(torque))(*torque);ba=(C.c_float*len(braking))(*braking);rpm=[ef[k]['value'] for k in ['IDLE','MAX_RPM','RED_LINE']];ratios=tf['GEAR_RATIO']['value']['values'];eff=tf['GEAR_EFFICIENCY']['value']['values'];ra=(C.c_float*len(ratios))(*ratios);ea=(C.c_float*len(eff))(*eff);peak,peakrpm=ref.peak(el,il);_,up,down,_=ref.shift_tables(el,il,tl);tables=Tables((C.c_float*10)(*up),(C.c_float*10)(*down),len(ratios));mp=MechanicalParams(Curve(ta,len(torque),*rpm),Curve(ba,len(braking),*rpm),ra,ea,len(ratios),ef['FLYWHEEL_MASS']['value'],*(tf[k]['value'] for k in ['FINAL_GEAR','TORQUE_SPLIT','TORQUE_CONVERTER','CLUTCH_SLIP']),peak,peakrpm,C.pointer(tables));np=NosParams(*(nf[k]['value'] for k in ['NOS_DISENGAGE','TORQUE_BOOST','NOS_CAPACITY','RECHARGE_MIN','RECHARGE_MAX','RECHARGE_MIN_SPEED','RECHARGE_MAX_SPEED']));p=Params(mp,np,Induction(*(induction_fields[k]['value'] for k in ['LOW_BOOST','HIGH_BOOST','VACUUM','SPOOL'])),tf['SHIFT_SPEED']['value'],0)
+            profiles.append(dict(physical=name,engine=f'{er["key"]:08x}',transmission=f'{tr["key"]:08x}',induction=f'{ir["key"]:08x}',nos=f'{nr["key"]:08x}'))
+            for i in range(cases_per_profile):
                 w=(Wheel*4)(*(Wheel(rng.uniform(-100,100),rng.choice([0,.1]),rng.choice([0,1]),rng.uniform(-20,20),.3433,0) for _ in range(4)));ms=MechanicalState(rng.randrange(len(ratios)),Clutch(rng.randrange(3),rng.choice([0,.05,.25]),rng.choice([.05,.25])),rng.choice([0,.1]),rng.uniform(0,1000),0,rng.uniform(-200,1500),0,rng.uniform(0,10000),0,0,0,0,rng.choice([0,1,2]));s=State(ms,NosState(rng.choice([0,.1,1]),rng.choice([0,.5,1])),rng.choice([0,.1]),.5,.5,.5,1,0)
                 ext=MechanicalInput(rng.choice([1/120,1/60,.1]),0,0,1,rng.choice([0,6]),rng.randrange(2),rng.choice([0,1]),rng.choice([0,30]),rng.randrange(5),rng.randrange(2),rng.choice([0,.5]),(C.c_float*4)(*[rng.uniform(-5,5) for _ in range(4)]));ni=NosInput();ni.requested=rng.randrange(2);ni.inhibited=rng.randrange(2);ni.unlimited=rng.randrange(2);inp=Input(ext,ni,rng.choice([0,.1,1]),1,rng.randrange(2),0)
-                if i>=512 and i%32:s=State.from_buffer_copy(previous);w=(Wheel*4).from_buffer_copy(previous_wheels)
+                if i>=512 and i%32:s=State.from_buffer_copy(previous);w=(Wheel*4).from_buffer_copy(previous_wheels);continuations+=1
                 clock=C.c_float(i/60).value;deadline=C.c_float(clock+rng.choice([-.1,0,.01,.5,5])).value;story=StoryState(deadline,int(i%19==0));inp.rev=0
-                expected,expectedw,expectedstory,expectedevent=ref.full(el,tl,il,nl,p,inp,s,w,story,clock);actual=State.from_buffer_copy(s);outw=(Wheel*4).from_buffer_copy(w);event=Event();actualstory=StoryState.from_buffer_copy(story);blew=C.c_bool();assert step(C.byref(p),C.byref(inp),C.byref(actual),outw,C.byref(event),C.byref(actualstory),clock,sine,C.byref(blew));a,b=flatten(actual),flatten(expected)
+                timing.tuning_present=i%3==0;timing.tuning_18=rng.choice([-1,-.5,0,.5,1]) if timing.tuning_present else 0;inp.nos.tuning_present=timing.tuning_present
+                expected,expectedw,expectedstory,expectedevent=ref.full(el,tl,il,nl,p,inp,s,w,story,clock,timing);actual=State.from_buffer_copy(s);outw=(Wheel*4).from_buffer_copy(w);event=Event();actualstory=StoryState.from_buffer_copy(story);blew=C.c_bool();assert step(C.byref(p),C.byref(inp),C.byref(actual),outw,C.byref(event),C.byref(actualstory),clock,sine,C.byref(blew),C.byref(timing));a,b=flatten(actual),flatten(expected)
                 assert bits(actualstory.deadline)==bits(expectedstory.deadline) and actualstory.blown==expectedstory.blown and blew.value==expectedevent,(name,i,"story")
                 if a!=b:raise AssertionError((name,i,{k:(a[k],b[k]) for k in a if a[k]!=b[k]}))
                 assert list(map(bits,[v.omega for v in outw]))==list(map(bits,[v.omega for v in expectedw])),(name,i,'wheels')
                 previous=actual;previous_wheels=outw;cases+=1
-    return dict(dol_sha256=DOL_SHA256,attributes_sha256=ATTR_SHA,original_whole_function='8025762C..802584A8',whole_engine_state_cases=cases,stateful_continuation_steps=512,physical_collections=['bmwm3gtre46','m3gtre46careerstart'],nos_collection='1efbd807 (explicit selected test input; upgrade choice not claimed)',limitations=['Only disabled induction and empty RPM limiter supported; positive induction/nonempty limiter rejected','Story sabotage and blown state plus original source sine now exercised; positive induction/nonempty limiter still reject','External raw input/automatic-enabled/tuningNULL/recharge-inhibit/event-dispatch callbacks supplied explicitly','Gear-event allocation disabled; real Blow event allocator/dispatch captured; physical upgrade and scheduler remain gates'])
+    return dict(dol_sha256=DOL_SHA256,attributes_sha256=ATTR_SHA,original_whole_function='8025762C..802584A8',whole_engine_state_cases=cases,stateful_continuation_steps=continuations,physical_collections=['bmwm3gtre46','m3gtre46careerstart','cobaltss','gti','is300','punto'],explicit_stock_component_bindings=profiles,limitations=['Nonempty RPM limiter remains unsupported; all six tested source stock profiles have empty limiter','Active turbo/supercharger and tuning18 plus story sabotage/blown state exercised','External raw input/automatic-enabled/tuning/recharge-inhibit/event-dispatch callbacks supplied explicitly','Gear-event allocation disabled; real Blow event allocator/dispatch captured; physical upgrade and scheduler remain gates'])
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--dol',type=Path,required=True);p.add_argument('--attributes',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();r=verify(a.dol,a.attributes);a.output.write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--dol',type=Path,required=True);p.add_argument('--attributes',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cases-per-profile',type=int,default=768);a=p.parse_args();r=verify(a.dol,a.attributes,a.cases_per_profile);a.output.write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r,indent=2))

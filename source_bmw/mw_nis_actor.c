@@ -15,7 +15,7 @@ void mw_nis_actor_close(MwNisActorBank*b){if(b){if(b->file)fclose(b->file);free(
 int mw_nis_actor_open(MwNisActorBank*b,const char*path){
     unsigned char h[32];long size;if(!b||!path)return 0;memset(b,0,sizeof(*b));
     b->file=fopen(path,"rb");if(!b->file)return 0;
-    if(fseek(b->file,0,SEEK_END)||(size=ftell(b->file))<32||size>MAX_BYTES)goto fail;
+    if(fseek(b->file,0,SEEK_END)||(size=ftell(b->file))<32||(unsigned long)size>MAX_BYTES)goto fail;
     b->file_size=(uint32_t)size;if(!read_at(b,0,h,32)||memcmp(h,"NNA1",4)||u32(h+4)!=1)goto fail;
     b->banks=u32(h+8);b->curves=u32(h+12);b->bank_offset=u32(h+16);b->curve_offset=u32(h+20);
     if(!b->banks||b->banks>8||!b->curves||b->curves>128||b->bank_offset!=32||b->curve_offset!=32+64*b->banks||u32(h+24)!=b->curve_offset+128*b->curves||u32(h+28)!=b->file_size||u32(h+24)>b->file_size)goto fail;

@@ -1,122 +1,102 @@
-# Current opening-career integration handoff
+# Opening-career integration handoff
 
-The user wants original-style GC/DS combined two-screen menus: touchable bottom
-icons, top current car in original garage environments and changing camera views.
-The target milestone is the original opening career through purchasing a first
-car, including movies, in-engine NIS, street traffic, police pursuit and breakable
-props. Original handling/camera fidelity and performance are explicit priorities.
-Make the deliverable build after this milestone is integrated; do not mistake
-component exports/tests for a finished playable game. Commit/push source often.
+## Goal and delivery boundary
 
-## Surviving private assets
+User requests original-style two-screen menus, original movies/NIS, opening
+career through buying the first car, street traffic/police/breakables, source
+handling/camera and strong optimization. Deliver the new release ZIP after this
+milestone is integrated and tested. Current executable is an INTERNAL integration
+build, not a completed release or a1:1 port. Do not publish original assets.
+All supplied archives survive privately; no new uploads are needed.
 
-- All original archives: `/workspace/port-research/original-archives`.
-- Original world/runtime inputs: `dist/v018-shipping-install/3ds/nfsmw-rockport`.
-- Career: `opening-career/native-v3/opening-career.nfc` under port-research.
-- Eight movie clips: `career-movies/native-v1/*.nvm`, approximately357MB, genuine
-  frame counts retained. Native JPEG/PCM and three-buffer NDSP helpers tested.
-- Starter cars and traffic: `starter-cars/native-v2/{COBALTSS,GTI,IS300,PUNTO,TRAFHA}`
-  plus catalog.nvc. Original COPMIDSIZE: `opening-police-car/v1` separate catalog.
-- Menus: `menu-reference/icons-v1/menu-icons.nmi`, original13icons.
-- Five original environments: `menu-reference/platform-native-v1/*`, native NFM,
-  T3X textures, source normalization in scene.json and placement.bin.
-- Source camera: `menu-reference/source-camera-v1/camera.ncp` (five visual ecars).
-- Street graph: `street-systems/native-v1/road-network.mwt`.
-- Pursuit: `opening-pursuit/native-v1/opening-pursuit.npp`.
-- Breakables: `breakable-instances/native-v1/breakables.nbp`.
-- Race absolute states: `race-activation/native-{exploration,career-bin15,career-bin16}`.
-- Source-bound dynamics profiles: `driving-runtime/*.ndp`.
+Root checkout /workspace/NFSMW---3ds branch work. Public backup worktree
+/workspace/nfsmw-github-checkpoint-20261103 branch codex/v018-checkpoint-20261103.
+Preserve public README from8254124; export root README as docs/DEVELOPMENT.md.
+Never reset/recreate/publish the environment or overwrite user saves.
 
-## Proven opening flow
+## Verified source recovery
 
-Original selector801A4CB0 chooses five event IDs in order:
-42938ce2, d348f2cd,6ddd8383,9f60a40e,f7e4440a.
-The intermediate04b06f54 is a NIS shell, not a sixth playable race. Every stage
-uses M3GTRCAREERSTART. First partial uses Mia Width100 trigger40caf8c1, call start,
-8-second fade/AI timer then3-second tail. Final stage uses Width160 sabotage
-triggerf73bbbcb, engine-blown notification,1second, then JumpToCarLot. These are
-not ordinary race wins. The middle three legitimate first-place career results
-award original CashValue10000 each, exactly once. New wallet starts at zero.
-Four first-car options and actual prices: Cobalt26000, Punto27000, IS30027000,
-GTI35000. Do not invent a bonus to make the GTI affordable.
+Matching original private debug ELF lives at
+/workspace/port-research/opening-story-services/original-debug.elf. All initialized
+sections match supplied Speed.dol; DWARF1/symbol reader tools/mw_debug_info.py.
+This is debug metadata, not recovered C++ source. Do not commit the ELF.
 
-Original scripts enable/spawn two copmidsize units in third selector event
-6ddd8383 (second full race after partial), and also final DDay; explicit bail and
-911 events are exported. Native pursuit is a documented adapter, not original AI.
+- Engine:4608original whole calls/1488continuations across six stock profiles,
+  including induction and sabotage; NVRv2 sidecars staged. Source60Hz runtime
+  bridge validates NVR/NDP/MMP/BND and refuses absent world/contact providers.
+- Collision: original swept intersection1024cases; expanded wall contacts1024;
+  geometry2048; vehicle modifier1024 plus earlier2048:zero numeric mismatches.
+  Full ground constraints, material/events and source barrier-cache order remain.
+- Camera:14602numeric cases/entries covering source placement/channel/desired,
+  FOV and look-at. Constructor transitions, actual under-vehicle/Dutch providers,
+  noise/topology/car clearance and final commit remain. Shipping chase adapter
+  remains active; do not claim source camera is fully integrated.
+- NIS: six real camera scenes,32actor slots,6451frames,211commands pass host
+  sanitizer tests. True track selection, mode bindings, source clocks and poses
+  are recovered. Temporary Bond ground+5 feeds SuspensionSpline, never render it
+  directly. Root uses explicitly native player-first registry/raw pose preview;
+  complete source actor binding/spline/effect consumers remain unfinished.
+- Frontend: eighteen original static camera records and five garage placements
+  recovered. See frontend-scene-placement.md; main currently uses native orbit
+  presets until source camera/placement integration lands.
 
-## Integration state
+## Application integration now present
 
-Main source contains partial menu icons/camera/garage loading, active-car loader,
-cached traffic, lossless indexed vehicle draws, and race/career/movie globals and
-helpers. It is NOT yet a completed or verified SDK build. Career main-loop glue,
-movie/NIS phase dispatch, police/breakables rendering and car-choice purchase flow
-remain to finish. Inspect compiler flags/source lists: new modules are not all
-added yet. The last attempted patch failed before application when exec transport
-closed: it would remove restore_exploration's hardcoded700-byte length, make
-save_career accept transactional candidate state, add primary/backup read handling,
-and restore BMW after choosing another car. Do not assume that patch applied.
+rockport_main compiles with SDK/JPEG and new career/movie/NIS/story/actor modules.
+Original bottom touch icons, current car and garage selection, transactional
+Alias-bound career saves/purchases, original movies, source NIS director/camera
+and raw actor transforms are connected. Actors load once per event, share police
+mesh, update at bounded30Hz through admitted collision/ground, render with
+culling, and refuse rank before successful motion. Native AI is NOT original AI.
 
-NWS1/version2 now accepts event key at36 and0x400/0x10 source overrides. Renderer
-stores effective flags per staged object, applies exact wrapped-Q13 reflection,
-and has explicit state invalidation so unchanged-camera transitions restage.
-`streamed_world_suspend` releases world GPU cache for menu memory handoff. Its
-host state-switch/suspend/rollback test passed. Indexing preserves all48-byte
-attributes/order and cuts BMW geometry memory60.8%, traffic48.8%. Full-frame FPS
-has not been validated. Camera source direction/cubic components are compared;
-placement/FOV/eye collision remain documented adapters.
+Mia call10 starts from source Width trigger and CallStarted only after actual PCM
+submission; no fake muted success. Engine loss schedules source5s deadline and
+requires actual blown transition. Special first/final stages cannot award normal
+finish wins. Ordinary results request actual admitted opponent rank. Native
+bicycle driving remains active pending original world/body pipeline. Final engine
+loss currently disables native throttle through recovered story lifecycle.
 
-## Remaining recovery, do not replace with guesses
+Warm grade enabled permanently per latest user instruction, no toggle. This is
+not yet an exact original shader pipeline. GPU meshes/movie/audio are freed
+before C3D shutdown. Both LCDs now draw every frame; CPU HUD raster/texture upload
+remain throttled to avoid the previous blank/flickering cached-bottom behavior.
 
-- NIS source bundles were extracted to `opening-nis/raw`. IntroNisDDba42885e at
-  ZZDATA1offset114737152, GenericStartc91e014b at114182144, IntroNis04234d6fba at
-  114216960, IntroNis0572ac793b at114223104, IntroNis1021118357 at114268160,
-  EndingNis0330185662 at113534976. Containers include ELF32LE animation banks.
-  GLOBAL/INGAMEB_VM_NGC has exact scene paths0x80037050 and camera banks
-  0x8003B200..203; camera0x3B210 records keyed original case-sensitive name hash.
-  GenericStart camera has two tracks and duration6seconds. Decoder still needed;
-  do not call a generic orbit original NIS.
-- Opening opponent source identities are saved in `opening-opponents/source-actors.json`:
-  RAZORMUSTANG→MUSTANGGT, DDAYSUPRA→SUPRA, BL2→SLR; circuit presets map to GTO,
-  IMPREZAWRX,RX8 (OPM_MUSTANG_BOSS actuallyGTO). Actual NPC conversion/AI unfinished.
-- Dynamics four-wheel orchestration exposes required mechanical/input hooks;
-  do not supply no-ops and claim original handling. 802455E0 mechanical stage
-  emits drag then downforce at most two forces. Original common state fields:
-  world velocity+50,speed+BC,contact fraction+6C,local CG+70,throttle+4C;
-  caller f3/f4 are physical front/rear mount Z. DRAG_COEFFICIENT chassis+70;
-  aero80223ADC=2*speed*AERO_COEFFICIENT(+68)*1000; AERO_CG(+5C) interpolates axles.
-  Optional effect/global fields and full native comparisons still needed.
-- Normal player assist802484F8, body/inertia integration, timestep scheduling and
-  full-camera providers remain unported. Existing helper matches are not1:1 car.
-- Breakable exact static bindings/Width shape/proxy query are tested. Damage
-  scalar units, fragment sequencing and debris motion remain unproved; no broad
-  deletion or guessed source damage threshold.
+## Private staging and testing
 
-## Backup workflow
+Reproducible tools/stage_opening_runtime.py creates
+ dist/career-integration-install/3ds/nfsmw-rockport
+with genuine native assets, movies/speech/NIS,12catalog cars plus rootBMW, physics,
+scene platforms and activation snapshots. integration-assets.json lists hashes.
+body.origin sidecars restore true art bbox centers for source NIS matrices.
+No release ZIP is produced by staging. No executable or user/test Alias copied.
 
-Root repo branch work. Linked public backup worktree
-`/workspace/nfsmw-github-checkpoint-20261103`, branch
-`codex/v018-checkpoint-20261103`. Preserve its public main README (original8254124),
-map root README.md to docs/DEVELOPMENT.md on export. Never push raw archives,
-converted assets, binaries or caches. Original public preview backup was e50e666;
-last complete playable exploration ZIP remains under dist. No new goal ZIP yet.
+Internal build: bash tools/build_streamed_rockport.sh.
+SDK Docker image already cached; use explicit unix:///var/run/docker.sock and
+unset only inherited DOCKER_HOST/CONTEXT/TLS/TLS_VERIFY/CERT_PATH for each command.
+Existing emulator container nfsmw-emulator-v2 is running with Xvfb:100.
+Binary /state/data/azahar-emu/sdmc/3ds/nfsmw-rockport/nfsmw-rockport-streamed.3dsx.
+Private staging copied there; existing Alias/career save preserved.
+App log /tmp/nfsmw-career-emulator.log inside container. Desktop1024x768, top400x240
+at312,192; bottom320x240 at352,432. KeyboardA=a/B=s/Start=m; touch needs held
+mousedown~.2s. Current emulator DSP unavailable: video plays with labeled muted
+fallback, but this does not validate actual audio or Mia call progression.
 
+Root host checks: career five-stage flow/purchase/1024save corruptions pass;
+opening actor bridge all5events/police/missingmodel/pause/failure gates pass;
+NIS adapter full six-scene sanitizer check passes; free-roam600frames118.57m,
+max1095runs41948triangles passes with staged exploration assets. SDK build passes.
+Internal emulator reaches original-style menu and original opening movie.
+Do not claim complete opening-through-purchase emulation or hardware FPS yet.
 
-## Resumed integration checkpoint
+## Next concrete integration work
 
-Recovered source work is preserved in this checkpoint, including the debug-ELF
-reader, original rigid-body/input/mechanical/runtime components, NIS camera,
-actors/actions/pose, opening opponents, and the actual call10 audio stream.
-The matching original debug ELF remains private; it supplies symbols and DWARF,
-not recovered C++ source. The application integration is still in progress and
-this commit is not a verified playable milestone or a release.
-
-Some earlier paragraphs above are historical: transactional save writes, variable
-snapshot lengths and BMW restoration are now present in rockport_main.c. NIS
-camera/actor/action packs and opponent models are converted. Source comparisons
-are documented in each component's research note; full live handling/camera and
-world contact must still be integrated and verified. New focused agents resume
-world collision, complete chase camera, engine/runtime, and NIS integration.
-
-Private inputs remain under /workspace/port-research. Do not publish archives,
-original debug executable or converted runtime assets. Preserve the current
-world and save data. Root owns application integration and public backup export.
+1. Finish emulator NIS→drive→actual race result progression and fixes; confirm
+   bottom stability on transitions, not just initial menus. Capture real images.
+2. Correct source FE camera/metre placement and garage/body independent rotations.
+3. Complete actual world/body/contact phases and providers, then activate source
+   runtime and full camera rather than feeding no-op/guessed callbacks.
+4. Wire source NIS effect actions/spline/player registry and true media audio.
+5. Integrate breakable damage/material/fragment lifecycle; bindings alone do not
+   justify broad prop deletion. Finish player/civilian/cop body collisions.
+6. Verify through first-car purchase, profile dense views, back up all authored
+   changes, then package only validated runtime assets/new executable for release.
