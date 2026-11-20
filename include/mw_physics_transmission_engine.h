@@ -3,6 +3,7 @@
 #include "mw_physics_transmission_policy.h"
 #include "mw_physics_transmission_auto.h"
 #include "mw_physics_transmission_nos.h"
+#include "mw_story_services.h"
 /* Mechanical continuation of EngineRacer8025762C, after original input/timed
  * virtual stages. All persistent fields correspond to actual source state.
  * Gear requests/events and the input/timed stages remain caller-owned. */
@@ -10,7 +11,7 @@ typedef struct {
     unsigned gear_slot;
     MwPhysicsTransmissionClutchState clutch;
     float shift_delay,engine_omega,angular_acceleration,shaft_omega,slip_rpm;
-    float reported_rpm,output_torque,applied_throttle,rev_modulation_deadline;
+    float reported_rpm,output_torque,applied_throttle,rev_modulation_deadline; /* legacy name: actual mSabotage */
     unsigned negative_engine_torque,shift_request;
 } MwPhysicsTransmissionEngineState;
 typedef struct {
@@ -69,4 +70,25 @@ typedef struct {
 bool mw_physics_transmission_engine_step(const MwPhysicsTransmissionEngineStepParams *,
     const MwPhysicsTransmissionEngineStepInput *,MwPhysicsTransmissionEngineStepState *,
     MwPhysicsTransmissionSpeedWheel [4],MwPhysicsTransmissionGearEvent *);
+/* Original sabotage stage802580F8..8025817C; omega is engine angular speed
+ * (source+F0), not reported RPM. Callback must be original single sinf. */
+bool mw_physics_transmission_sabotage_stage(float *omega,MwStoryEngine *,float simulation_clock,
+    float (*source_sine)(float),bool *engine_blown_event);
+/* Same engine sequence with the actual story-owned deadline/blown state.
+ * Preserves old API/ABI. Story/event/state/wheels commit only on success.
+ * A blown engine yields source DoThrottle=0 on following frames. */
+bool mw_physics_transmission_engine_step_with_story(const MwPhysicsTransmissionEngineStepParams *,
+    const MwPhysicsTransmissionEngineStepInput *,MwPhysicsTransmissionEngineStepState *,
+    MwPhysicsTransmissionSpeedWheel [4],MwPhysicsTransmissionGearEvent *,
+    MwStoryEngine *,float simulation_clock,float (*source_sine)(float),bool *engine_blown_event);
+typedef struct {float spool_up,spool_down,psi;bool tuning_present;float tuning_18;} MwPhysicsTransmissionInductionTiming;
+/* Original complete timed induction802571FC, all nonempty stockinduction types. */
+bool mw_physics_transmission_induction_step(const MwPhysicsTransmissionEngineStepParams *,
+    const MwPhysicsTransmissionInductionTiming *,float seconds,float throttle,
+    MwPhysicsTransmissionEngineStepState *);
+bool mw_physics_transmission_engine_step_complete(const MwPhysicsTransmissionEngineStepParams *,
+    const MwPhysicsTransmissionEngineStepInput *,MwPhysicsTransmissionEngineStepState *,
+    MwPhysicsTransmissionSpeedWheel [4],MwPhysicsTransmissionGearEvent *,MwStoryEngine *,
+    float simulation_clock,float (*source_sine)(float),bool *engine_blown_event,
+    const MwPhysicsTransmissionInductionTiming *);
 #endif

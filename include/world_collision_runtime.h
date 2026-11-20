@@ -69,6 +69,21 @@ int world_collision_runtime_activate(WorldCollisionRuntime *world,const uint16_t
  */
 int world_collision_runtime_ground(const WorldCollisionRuntime *world,const float native_point[3],uint32_t exclusion_mask,WorldCollisionContact *contact);
 int world_collision_runtime_wall(const WorldCollisionRuntime *world,const float native_start[3],const float native_end[3],uint32_t exclusion_mask,WorldCollisionContact *contact);
+/* Conservative native-world AABB candidates, preserving active package/CI/wall
+   source traversal order. This is a candidate list, not a body intersection.
+   Endpoints retain source Y bounds and stored local inverse horizontal length.
+   Group decisions are snapshotted once per CI; queries allocate/do I/O nowhere.
+   Up to 16384 active CIs are supported per query. On capacity failure only
+   *count receives required size; output records remain untouched. */
+typedef struct {
+    float endpoint_native[2][3],inverse_local_length;
+    uint32_t material_key,source_ci_offset,source_asset_offset;
+    uint16_t section_id,collision_id,asset_index,wall_index,instance_flags,group_id;
+    uint8_t material_index,flags;
+} WorldCollisionBarrier;
+int world_collision_runtime_wall_candidates(const WorldCollisionRuntime *,
+    const float native_minimum[3],const float native_maximum[3],uint32_t exclusion_mask,
+    WorldCollisionBarrier *output,size_t capacity,size_t *count);
 /* NRD1 origin is viewer WORLD=(nativeZ,nativeY,nativeX), before local subtraction.
  * Position conversion includes that origin; vectors use the same axis swap only.
  */

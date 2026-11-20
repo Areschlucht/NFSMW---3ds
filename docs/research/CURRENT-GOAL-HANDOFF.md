@@ -99,3 +99,24 @@ Root repo branch work. Linked public backup worktree
 map root README.md to docs/DEVELOPMENT.md on export. Never push raw archives,
 converted assets, binaries or caches. Original public preview backup was e50e666;
 last complete playable exploration ZIP remains under dist. No new goal ZIP yet.
+
+
+## Resumed integration checkpoint
+
+Recovered source work is preserved in this checkpoint, including the debug-ELF
+reader, original rigid-body/input/mechanical/runtime components, NIS camera,
+actors/actions/pose, opening opponents, and the actual call10 audio stream.
+The matching original debug ELF remains private; it supplies symbols and DWARF,
+not recovered C++ source. The application integration is still in progress and
+this commit is not a verified playable milestone or a release.
+
+Some earlier paragraphs above are historical: transactional save writes, variable
+snapshot lengths and BMW restoration are now present in rockport_main.c. NIS
+camera/actor/action packs and opponent models are converted. Source comparisons
+are documented in each component's research note; full live handling/camera and
+world contact must still be integrated and verified. New focused agents resume
+world collision, complete chase camera, engine/runtime, and NIS integration.
+
+Private inputs remain under /workspace/port-research. Do not publish archives,
+original debug executable or converted runtime assets. Preserve the current
+world and save data. Root owns application integration and public backup export.
